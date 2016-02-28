@@ -27,6 +27,14 @@
 			<include>Window_OpenClose_Animation</include>
 			<visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
 		</control>
+		<control type="image">
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('252')}}</top>
+			<width>{{ScaleX({W})}}</width>
+			<height>{{ScaleY({{ {BackgroundForInfoHeight} + 4 }})}}</height>
+			<texture background="true" >floor.png</texture>
+			<visible>[ Player.HasAudio | Player.HasVideo ] + !Skin.HasSetting(backgroundForInfo)</visible>
+		</control>
 		<!-- Music Info -->
 		<control type="group">
 			<left>{{ScaleX('0')}}</left>
@@ -34,14 +42,6 @@
 			<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
-			<control type="image">
-				<left>{{ScaleX('0')}}</left>
-				<top>{{ScaleY('182')}}</top>
-				<width>{{ScaleX({W})}}</width>
-				<height>{{ScaleY({{ {BackgroundForInfoHeight} + 2 }})}}</height>
-				<texture background="true" >floor.png</texture>
-				<visible>Player.HasAudio + !Skin.HasSetting(backgroundForInfo)</visible>
-			</control>
 			<control type="image">
 				<description>Cover image</description>
 				<left>{{ScaleX('20')}}</left>
@@ -248,14 +248,6 @@
 			<control type="group">
 				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)</visible>
 				<control type="image">
-					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('192')}}</top>
-					<width>{{ScaleX({W})}}</width>
-					<height>{{ScaleY({{ {BackgroundForInfoHeight} + 4 }})}}</height>
-					<texture background="true" >floor.png</texture>
-					<visible>Player.HasVideo + !Skin.HasSetting(backgroundForInfo)</visible>
-				</control>
-				<control type="image">
 					<description>Cover image</description>
 					<left>{{ScaleX('20')}}</left>
 					<top>{{ScaleY('45')}}</top>
@@ -308,10 +300,10 @@
 				</control>
 				<control type="label">
 					<description>Channel label</description>
-					<left>{{ScaleX('160')}}</left>
-					<top>{{ScaleY('265')}}</top>
-					<height>{{ScaleY('25')}}</height>
-					<width>{{ScaleX('660')}}</width>
+					<left>{{ScaleX('170')}}</left>
+					<bottom>{{ScaleY({{ {H} - 235 - 75 }})}}</bottom>
+					<height>{{ScaleY({{ 75 }})}}</height>
+					<width>{{ScaleX('1000')}}</width>
 					<label>$INFO[VideoPlayer.ChannelName]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -321,9 +313,9 @@
 				</control>
 				<control type="label">
 					<description>Title label</description>
-					<left>{{ScaleX('160')}}</left>
-					<top>{{ScaleY('285')}}</top>
-					<height>{{ScaleY('30')}}</height>
+					<left>{{ScaleX('170')}}</left>
+					<top>{{ScaleY({{ 245 }})}}</top>
+					<height>{{ScaleY('75')}}</height>
 					<width>{{ScaleX('1000')}}</width>
 					<label>$INFO[Player.Title]</label>
 					<align>left</align>
@@ -334,8 +326,8 @@
 				</control>
 				<control type="label">
 					<description>Time Label</description>
-					<left>{{ScaleX('160')}}</left>
-					<top>{{ScaleY('310')}}</top>
+					<left>{{ScaleX('170')}}</left>
+					<top>{{ScaleY('300')}}</top>
 					<height>{{ScaleY('30')}}</height>
 					<width>{{ScaleX('300')}}</width>
 					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
@@ -361,9 +353,9 @@
 				</control>
 				<control type="label">
 					<description>Studio label</description>
-					<left>{{ScaleX('160')}}</left>
-					<top>{{ScaleY('265')}}</top>
-					<height>{{ScaleY('25')}}</height>
+					<left>{{ScaleX('170')}}</left>
+					<bottom>{{ScaleY({{ {H} - 235 - 75 }})}}</bottom>
+					<height>{{ScaleY({{ 75 }})}}</height>
 					<width>{{ScaleX('1000')}}</width>
 					<label>$INFO[VideoPlayer.Studio]</label>
 					<align>left</align>
@@ -374,9 +366,9 @@
 				</control>
 				<control type="label">
 					<description>Title label</description>
-					<left>{{ScaleX('160')}}</left>
-					<top>{{ScaleY('285')}}</top>
-					<height>{{ScaleY('30')}}</height>
+					<left>{{ScaleX('170')}}</left>
+					<top>{{ScaleY({{ 245 }})}}</top>
+					<height>{{ScaleY('75')}}</height>
 					<width>{{ScaleX('1000')}}</width>
 					<label>$INFO[Player.Title]$INFO[VideoPlayer.Year,[COLOR=grey] (,)[/COLOR]]</label>
 					<align>left</align>
@@ -387,8 +379,8 @@
 				</control>
 				<control type="label">
 					<description>Time Label</description>
-					<left>{{ScaleX('160')}}</left>
-					<top>{{ScaleY('310')}}</top>
+					<left>{{ScaleX('170')}}</left>
+					<top>{{ScaleY('300')}}</top>
 					<height>{{ScaleY('30')}}</height>
 					<width>{{ScaleX('300')}}</width>
 					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
@@ -414,9 +406,9 @@
 				</control>
 				<control type="label">
 					<description>TV Show Season Ep Label</description>
-					<left>{{ScaleX('210')}}</left>
-					<top>{{ScaleY('265')}}</top>
-					<height>{{ScaleY('25')}}</height>
+					<left>{{ScaleX('170')}}</left>
+					<bottom>{{ScaleY({{ {H} - 235 - 75 }})}}</bottom>
+					<height>{{ScaleY({{ 75 }})}}</height>
 					<width>{{ScaleX('1000')}}</width>
 					<label>$INFO[VideoPlayer.TVShowTitle] ($INFO[VideoPlayer.Season,$LOCALIZE[20373] , - ]$INFO[VideoPlayer.episode,$LOCALIZE[20359] ,])</label>
 					<align>left</align>
@@ -427,9 +419,9 @@
 				</control>
 				<control type="label">
 					<description>Title label</description>
-					<left>{{ScaleX('210')}}</left>
-					<top>{{ScaleY('285')}}</top>
-					<height>{{ScaleY('30')}}</height>
+					<left>{{ScaleX('170')}}</left>
+					<top>{{ScaleY({{ 245 }})}}</top>
+					<height>{{ScaleY('75')}}</height>
 					<width>{{ScaleX('1000')}}</width>
 					<label>$INFO[Player.Title]</label>
 					<align>left</align>
@@ -440,8 +432,8 @@
 				</control>
 				<control type="label">
 					<description>Time Label</description>
-					<left>{{ScaleX('210')}}</left>
-					<top>{{ScaleY('310')}}</top>
+					<left>{{ScaleX('170')}}</left>
+					<top>{{ScaleY('300')}}</top>
 					<height>{{ScaleY('30')}}</height>
 					<width>{{ScaleX('300')}}</width>
 					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
