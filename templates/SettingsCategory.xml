@@ -79,7 +79,7 @@
 			<control type="button" id="20">
 				<description>Setting level button</description>
 				<left>{{ScaleX('10')}}</left>
-				<top>{{ScaleY('562')}}</top>
+				<top>{{ScaleY('545')}}</top>
 				<height>{{ScaleY('60')}}</height>
 				<width>{{ScaleX({{ 260 + {SettingPanelExtraWidthL} }})}}</width>
 				<label>10037</label>
@@ -101,7 +101,7 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('20')}}</left>
-				<top>{{ScaleY('566')}}</top>
+				<top>{{ScaleY('549')}}</top>
 				<height>{{ScaleY('25')}}</height>
 				<width>{{ScaleX({{ 230 + {SettingPanelExtraWidthL} }})}}</width>
 				<label>31142</label>
