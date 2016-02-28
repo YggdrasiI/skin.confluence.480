@@ -3,8 +3,8 @@
 	<defaultcontrol>5</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>290</left>
-		<top>75</top>
+		<left>{{ScaleX('290')}}</left>
+		<top>{{ScaleY('75')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -19,10 +19,10 @@
 		</include>
 		<control type="grouplist" id="5">
 			<description>control area</description>
-			<left>30</left>
-			<top>70</top>
-			<width>640</width>
-			<height>410</height>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('70')}}</top>
+			<width>{{ScaleX('640')}}</width>
+			<height>{{ScaleY('410')}}</height>
 			<itemgap>5</itemgap>
 			<onleft>28</onleft>
 			<onright>29</onright>
@@ -31,9 +31,9 @@
 		</control>
 		<control type="button" id="7">
 			<description>Default Button</description>
-			<left>0</left>
-			<top>0</top>
-			<height>40</height>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('0')}}</top>
+			<height>{{ScaleY('40')}}</height>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -41,9 +41,9 @@
 		</control>
 		<control type="radiobutton" id="8">
 			<description>Default RadioButton</description>
-			<left>0</left>
-			<top>0</top>
-			<height>40</height>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('0')}}</top>
+			<height>{{ScaleY('40')}}</height>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -51,9 +51,9 @@
 		</control>
 		<control type="spincontrolex" id="9">
 			<description>Default SpinControlex</description>
-			<left>0</left>
-			<top>0</top>
-			<height>40</height>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('0')}}</top>
+			<height>{{ScaleY('40')}}</height>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -64,14 +64,14 @@
 		</control>
 		<control type="image" id="11">
 			<description>separator image</description>
-			<height>2</height>
+			<height>{{ScaleY('2')}}</height>
 			<texture>separator2.png</texture>
 		</control>
 		<control type="label" id="14">
 			<description>Default Label</description>
-			<left>0</left>
-			<top>0</top>
-			<height>30</height>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('0')}}</top>
+			<height>{{ScaleY('30')}}</height>
 			<label>-</label>
 			<align>center</align>
 			<aligny>bottom</aligny>
@@ -81,10 +81,10 @@
 		</control>
 		<control type="button" id="28">
 			<description>Ok Button</description>
-			<left>145</left>
-			<top>505</top>
-			<width>200</width>
-			<height>40</height>
+			<left>{{ScaleX('145')}}</left>
+			<top>{{ScaleY('505')}}</top>
+			<width>{{ScaleX('200')}}</width>
+			<height>{{ScaleY('40')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font12_title</font>
@@ -96,10 +96,10 @@
 		</control>
 		<control type="button" id="29">
 			<description>Cancel Button</description>
-			<left>355</left>
-			<top>505</top>
-			<width>200</width>
-			<height>40</height>
+			<left>{{ScaleX('355')}}</left>
+			<top>{{ScaleY('505')}}</top>
+			<width>{{ScaleX('200')}}</width>
+			<height>{{ScaleY('40')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font12_title</font>

@@ -6,17 +6,17 @@
 		<control type="visualisation" id="2">
 			<!-- FIX ME Music Visualization needs to have an id of 2 in this window to be able to lock or change preset -->
 			<description>visualisation</description>
-			<left>0</left>
-			<top>0</top>
-			<width>1280</width>
-			<height>720</height>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('0')}}</top>
+			<width>{{ScaleX('1280')}}</width>
+			<height>{{ScaleY('720')}}</height>
 		</control>
 		<control type="image">
 			<description>Fanart Image for Artist</description>
-			<left>0</left>
-			<top>0</top>
-			<width>1280</width>
-			<height>720</height>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('0')}}</top>
+			<width>{{ScaleX('1280')}}</width>
+			<height>{{ScaleY('720')}}</height>
 			<texture background="true">$INFO[Player.Art(fanart)]</texture>
 			<colordiffuse>AAFFFFFF</colordiffuse>
 			<visible>!IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(HideVisualizationFanart)</visible>
@@ -27,18 +27,18 @@
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<control type="image">
-				<left>0</left>
-				<top>-150</top>
-				<width>1280</width>
-				<height>256</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('-150')}}</top>
+				<width>{{ScaleX('1280')}}</width>
+				<height>{{ScaleY('256')}}</height>
 				<texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
 			</control>
 			<control type="label">
 				<description>Partymode Header label</description>
-				<left>30</left>
-				<top>5</top>
-				<width>800</width>
-				<height>25</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('5')}}</top>
+				<width>{{ScaleX('800')}}</width>
+				<height>{{ScaleY('25')}}</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font13</font>
@@ -49,10 +49,10 @@
 			</control>
 			<control type="label">
 				<description>Normal Header label</description>
-				<left>30</left>
-				<top>5</top>
-				<width>800</width>
-				<height>25</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('5')}}</top>
+				<width>{{ScaleX('800')}}</width>
+				<height>{{ScaleY('25')}}</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font13</font>
@@ -63,59 +63,59 @@
 			</control>
 			<control type="label">
 				<description>Clock label</description>
-				<left>450</left>
-				<top>5</top>
-				<width>800</width>
-				<height>25</height>
+				<left>{{ScaleX('450')}}</left>
+				<top>{{ScaleY('5')}}</top>
+				<width>{{ScaleX('800')}}</width>
+				<height>{{ScaleY('25')}}</height>
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>font13</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[System.Time]</label>
-				<animation effect="slide" start="0,0" end="-30,0" time="0" condition="Window.IsVisible(Mutebug)">conditional</animation>
-				<animation effect="slide" start="0,0" end="-70,0" time="0" condition="Window.IsVisible(MusicOSD)">conditional</animation>
+				<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-30,0')}}" time="0" condition="Window.IsVisible(Mutebug)">conditional</animation>
+				<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-70,0')}}" time="0" condition="Window.IsVisible(MusicOSD)">conditional</animation>
 			</control>
 			<control type="image">
-				<left>0</left>
-				<top>230r</top>
-				<width>1280</width>
-				<height>230</height>
-				<texture border="1">HomeNowPlayingBack.png</texture>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('230r')}}</top>
+				<width>{{ScaleX('1280')}}</width>
+				<height>{{ScaleY('230')}}</height>
+				<texture border="{{ScaleBorder('1')}}">HomeNowPlayingBack.png</texture>
 			</control>
 			<control type="image">
 				<description>cover image</description>
-				<left>20</left>
-				<top>250r</top>
-				<width>300</width>
-				<height>230</height>
+				<left>{{ScaleX('20')}}</left>
+				<top>{{ScaleY('250r')}}</top>
+				<width>{{ScaleX('300')}}</width>
+				<height>{{ScaleY('230')}}</height>
 				<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<bordertexture border="8">ThumbShadow.png</bordertexture>
 				<bordersize>8</bordersize>
 			</control>
 			<control type="group">
-				<left>330</left>
-				<top>185r</top>
+				<left>{{ScaleX('330')}}</left>
+				<top>{{ScaleY('185r')}}</top>
 				<control type="label" id="1">
 					<description>Heading label</description>
-					<left>0</left>
-					<top>0</top>
-					<width>910</width>
-					<height>25</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('910')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<align>left</align>
 					<font>font13</font>
 					<label>$LOCALIZE[31040]</label>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<animation effect="slide" start="0,0" end="0,25" time="0" condition="IsEmpty(MusicPlayer.Artist) + IsEmpty(MusicPlayer.Album)">conditional</animation>
+					<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,25')}}" time="0" condition="IsEmpty(MusicPlayer.Artist) + IsEmpty(MusicPlayer.Album)">conditional</animation>
 				</control>
 				<control type="label" id="1">
 					<description>Artist label</description>
-					<left>20</left>
-					<top>30</top>
-					<width>910</width>
-					<height>25</height>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('30')}}</top>
+					<width>{{ScaleX('910')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<align>left</align>
 					<font>font12</font>
 					<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
@@ -123,15 +123,15 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="grouplist">
-					<left>20</left>
-					<top>60</top>
-					<width>910</width>
-					<height>35</height>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('60')}}</top>
+					<width>{{ScaleX('910')}}</width>
+					<height>{{ScaleY('35')}}</height>
 					<itemgap>5</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="label">
-						<width min="10" max="700">auto</width>
-						<height>30</height>
+						<width min="{{ScaleX('10')}}" max="{{ScaleX('700')}}">{{ScaleX('auto')}}</width>
+						<height>{{ScaleY('30')}}</height>
 						<font>font30</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -141,40 +141,40 @@
 					</control>
 					<control type="image">
 						<description>Audio Codec Image</description>
-						<width>80</width>
-						<height>35</height>
+						<width>{{ScaleX('80')}}</width>
+						<height>{{ScaleY('35')}}</height>
 						<aspectratio align="right">keep</aspectratio>
 						<texture>$INFO[MusicPlayer.Codec,flagging/audio/,.png]</texture>
 					</control>
 					<control type="group">
 						<description>Rating</description>
-						<width>110</width>
-						<height>35</height>
+						<width>{{ScaleX('110')}}</width>
+						<height>{{ScaleY('35')}}</height>
 						<control type="image">
 							<description>rating back</description>
-							<left>0</left>
-							<top>0</top>
-							<width>110</width>
-							<height>35</height>
+							<left>{{ScaleX('0')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('110')}}</width>
+							<height>{{ScaleY('35')}}</height>
 							<aspectratio align="left">stretch</aspectratio>
-							<texture border="5">flagging/blank.png</texture>
+							<texture border="{{ScaleBorder('5')}}">flagging/blank.png</texture>
 						</control>
 						<control type="image">
 							<description>Rating</description>
-							<left>5</left>
-							<top>0</top>
-							<width>100</width>
-							<height>35</height>
+							<left>{{ScaleX('5')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('100')}}</width>
+							<height>{{ScaleY('35')}}</height>
 							<aspectratio align="center">keep</aspectratio>
 							<texture fallback="LeftRating/rating0.png">$INFO[Player.StarRating,LeftRating/]</texture>
 						</control>
 					</control>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>120</top>
-					<width>910</width>
-					<height>25</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('120')}}</top>
+					<width>{{ScaleX('910')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[19031]: $INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -186,13 +186,13 @@
 				</control>
 			</control>
 			<control type="group">
-				<left>330</left>
-				<top>95r</top>
+				<left>{{ScaleX('330')}}</left>
+				<top>{{ScaleY('95r')}}</top>
 				<control type="label">
-					<left>0</left>
-					<top>0</top>
-					<width>100</width>
-					<height>40</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('100')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -200,17 +200,17 @@
 				</control>
 				<control type="progress">
 					<description>Progressbar</description>
-					<left>100</left>
-					<top>15</top>
-					<width>720</width>
-					<height>16</height>
+					<left>{{ScaleX('100')}}</left>
+					<top>{{ScaleY('15')}}</top>
+					<width>{{ScaleX('720')}}</width>
+					<height>{{ScaleY('16')}}</height>
 					<info>Player.Progress</info>
 				</control>
 				<control type="label">
-					<left>820</left>
-					<top>0</top>
-					<width>100</width>
-					<height>40</height>
+					<left>{{ScaleX('820')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('100')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>right</align>
 					<aligny>center</aligny>
@@ -220,23 +220,23 @@
 		</control>
 		<!-- codec & viz infos -->
 		<control type="group" id="0">
-			<left>0</left>
-			<top>50</top>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('50')}}</top>
 			<visible>Player.ShowCodec + ![Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<control type="image">
 				<description>media info background image</description>
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>105</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('1280')}}</width>
+				<height>{{ScaleY('105')}}</height>
 				<colordiffuse>AAFFFFFF</colordiffuse>
 				<texture>black-back.png</texture>
 			</control>
 			<control type="label">
 				<description>row 1 label</description>
-				<left>50</left>
-				<top>10</top>
+				<left>{{ScaleX('50')}}</left>
+				<top>{{ScaleY('10')}}</top>
 				<label>-</label>
 				<align>left</align>
 				<label>$INFO[musicplayer.Codec,$LOCALIZE[21446]: ,]$INFO[musicplayer.Bitrate, · $LOCALIZE[623]: ,kbps]$INFO[musicplayer.bitspersample, · $LOCALIZE[612]: ,]$INFO[musicplayer.Samplerate, · $LOCALIZE[613]: ,kHz]$INFO[musicplayer.Channels, · $LOCALIZE[21444]: ]</label>
@@ -244,8 +244,8 @@
 			</control>
 			<control type="label">
 				<description>row 2 label</description>
-				<left>50</left>
-				<top>40</top>
+				<left>{{ScaleX('50')}}</left>
+				<top>{{ScaleY('40')}}</top>
 				<label>-</label>
 				<align>left</align>
 				<label>$INFO[Visualisation.Name,, [I][COLOR=orange]($LOCALIZE[20166])[/COLOR][/I] · ]fps: $INFO[System.FPS]</label>
@@ -254,8 +254,8 @@
 			</control>
 			<control type="label">
 				<description>Unlocked row 2 label</description>
-				<left>50</left>
-				<top>40</top>
+				<left>{{ScaleX('50')}}</left>
+				<top>{{ScaleY('40')}}</top>
 				<label>-</label>
 				<align>left</align>
 				<label>$INFO[Visualisation.Name,, · ]fps: $INFO[System.FPS]</label>
@@ -264,8 +264,8 @@
 			</control>
 			<control type="label">
 				<description>row 3 label</description>
-				<left>50</left>
-				<top>70</top>
+				<left>{{ScaleX('50')}}</left>
+				<top>{{ScaleY('70')}}</top>
 				<label>-</label>
 				<align>left</align>
 				<label>$INFO[Visualisation.Preset,$LOCALIZE[13388]: ]</label>
@@ -273,21 +273,21 @@
 			</control>
 			<control type="group">
 				<visible>Player.ShowCodec + MusicPlayer.Content(LiveTV) + system.getbool(pvrplayback.signalquality)</visible>
-				<top>185</top>
+				<top>{{ScaleY('185')}}</top>
 				<control type="image">
 					<description>media info background image</description>
-					<left>0</left>
-					<top>0</top>
-					<width>1280</width>
-					<height>220</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('1280')}}</width>
+					<height>{{ScaleY('220')}}</height>
 					<texture>black-back.png</texture>
 				</control>
 				<control type="label">
 					<description>Header</description>
-					<left>50</left>
-					<top>5</top>
-					<width>1200</width>
-					<height>25</height>
+					<left>{{ScaleX('50')}}</left>
+					<top>{{ScaleY('5')}}</top>
+					<width>{{ScaleX('1200')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[19005]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -296,10 +296,10 @@
 				</control>
 				<control type="label">
 					<description>Backend</description>
-					<left>50</left>
-					<top>40</top>
-					<width>165</width>
-					<height>25</height>
+					<left>{{ScaleX('50')}}</left>
+					<top>{{ScaleY('40')}}</top>
+					<width>{{ScaleX('165')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[19012]:</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -308,10 +308,10 @@
 				</control>
 				<control type="label">
 					<description>Backend value</description>
-					<left>220</left>
-					<top>40</top>
-					<width>1000</width>
-					<height>25</height>
+					<left>{{ScaleX('220')}}</left>
+					<top>{{ScaleY('40')}}</top>
+					<width>{{ScaleX('1000')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[PVR.ActStreamClient]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -320,10 +320,10 @@
 				</control>
 				<control type="label">
 					<description>Device</description>
-					<left>50</left>
-					<top>65</top>
-					<width>165</width>
-					<height>25</height>
+					<left>{{ScaleX('50')}}</left>
+					<top>{{ScaleY('65')}}</top>
+					<width>{{ScaleX('165')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[19006]:</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -332,10 +332,10 @@
 				</control>
 				<control type="label">
 					<description>Device value</description>
-					<left>220</left>
-					<top>65</top>
-					<width>1000</width>
-					<height>25</height>
+					<left>{{ScaleX('220')}}</left>
+					<top>{{ScaleY('65')}}</top>
+					<width>{{ScaleX('1000')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[PVR.ActStreamDevice]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -344,10 +344,10 @@
 				</control>
 				<control type="label">
 					<description>Status</description>
-					<left>50</left>
-					<top>90</top>
-					<width>165</width>
-					<height>25</height>
+					<left>{{ScaleX('50')}}</left>
+					<top>{{ScaleY('90')}}</top>
+					<width>{{ScaleX('165')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[19007]:</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -356,10 +356,10 @@
 				</control>
 				<control type="label">
 					<description>Status value</description>
-					<left>220</left>
-					<top>90</top>
-					<width>1000</width>
-					<height>25</height>
+					<left>{{ScaleX('220')}}</left>
+					<top>{{ScaleY('90')}}</top>
+					<width>{{ScaleX('1000')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[PVR.ActStreamStatus]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -368,10 +368,10 @@
 				</control>
 				<control type="label">
 					<description>Signal</description>
-					<left>50</left>
-					<top>115</top>
-					<width>165</width>
-					<height>25</height>
+					<left>{{ScaleX('50')}}</left>
+					<top>{{ScaleY('115')}}</top>
+					<width>{{ScaleX('165')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[19008]:</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -380,18 +380,18 @@
 				</control>
 				<control type="progress">
 					<description>Progressbar</description>
-					<left>220</left>
-					<top>122</top>
-					<width>910</width>
-					<height>14</height>
+					<left>{{ScaleX('220')}}</left>
+					<top>{{ScaleY('122')}}</top>
+					<width>{{ScaleX('910')}}</width>
+					<height>{{ScaleY('14')}}</height>
 					<info>PVR.ActStreamProgrSignal</info>
 				</control>
 				<control type="label">
 					<description>Signal value</description>
-					<left>1200</left>
-					<top>115</top>
-					<width>180</width>
-					<height>25</height>
+					<left>{{ScaleX('1200')}}</left>
+					<top>{{ScaleY('115')}}</top>
+					<width>{{ScaleX('180')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[PVR.ActStreamSignal]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -400,10 +400,10 @@
 				</control>
 				<control type="label">
 					<description>SNR</description>
-					<left>50</left>
-					<top>140</top>
-					<width>165</width>
-					<height>25</height>
+					<left>{{ScaleX('50')}}</left>
+					<top>{{ScaleY('140')}}</top>
+					<width>{{ScaleX('165')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[19009]:</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -412,19 +412,19 @@
 				</control>
 				<control type="progress">
 					<description>Progressbar</description>
-					<left>220</left>
-					<top>147</top>
-					<width>910</width>
-					<height>14</height>
+					<left>{{ScaleX('220')}}</left>
+					<top>{{ScaleY('147')}}</top>
+					<width>{{ScaleX('910')}}</width>
+					<height>{{ScaleY('14')}}</height>
 					<overlaytexture>-</overlaytexture>
 					<info>PVR.ActStreamProgrSNR</info>
 				</control>
 				<control type="label">
 					<description>SNR value</description>
-					<left>1200</left>
-					<top>140</top>
-					<width>180</width>
-					<height>25</height>
+					<left>{{ScaleX('1200')}}</left>
+					<top>{{ScaleY('140')}}</top>
+					<width>{{ScaleX('180')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[PVR.ActStreamSNR]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -433,10 +433,10 @@
 				</control>
 				<control type="label">
 					<description>BER</description>
-					<left>50</left>
-					<top>165</top>
-					<width>165</width>
-					<height>25</height>
+					<left>{{ScaleX('50')}}</left>
+					<top>{{ScaleY('165')}}</top>
+					<width>{{ScaleX('165')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[19010]:</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -445,10 +445,10 @@
 				</control>
 				<control type="label">
 					<description>BER value</description>
-					<left>220</left>
-					<top>165</top>
-					<width>165</width>
-					<height>25</height>
+					<left>{{ScaleX('220')}}</left>
+					<top>{{ScaleY('165')}}</top>
+					<width>{{ScaleX('165')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[PVR.ActStreamBER]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -457,10 +457,10 @@
 				</control>
 				<control type="label">
 					<description>UNC</description>
-					<left>390</left>
-					<top>165</top>
-					<width>165</width>
-					<height>25</height>
+					<left>{{ScaleX('390')}}</left>
+					<top>{{ScaleY('165')}}</top>
+					<width>{{ScaleX('165')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[19011]:</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -469,10 +469,10 @@
 				</control>
 				<control type="label">
 					<description>UNC value</description>
-					<left>560</left>
-					<top>165</top>
-					<width>165</width>
-					<height>25</height>
+					<left>{{ScaleX('560')}}</left>
+					<top>{{ScaleY('165')}}</top>
+					<width>{{ScaleX('165')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[PVR.ActStreamUNC]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -481,10 +481,10 @@
 				</control>
 				<control type="label">
 					<description>Service</description>
-					<left>730</left>
-					<top>165</top>
-					<width>165</width>
-					<height>25</height>
+					<left>{{ScaleX('730')}}</left>
+					<top>{{ScaleY('165')}}</top>
+					<width>{{ScaleX('165')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[19099]:</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -493,10 +493,10 @@
 				</control>
 				<control type="label">
 					<description>Service value</description>
-					<left>900</left>
-					<top>165</top>
-					<width>330</width>
-					<height>25</height>
+					<left>{{ScaleX('900')}}</left>
+					<top>{{ScaleY('165')}}</top>
+					<width>{{ScaleX('330')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[PVR.ActStreamServiceName]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -505,10 +505,10 @@
 				</control>
 				<control type="label">
 					<description>Encryption</description>
-					<left>50</left>
-					<top>190</top>
-					<width>165</width>
-					<height>25</height>
+					<left>{{ScaleX('50')}}</left>
+					<top>{{ScaleY('190')}}</top>
+					<width>{{ScaleX('165')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[19015]:</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -517,10 +517,10 @@
 				</control>
 				<control type="label">
 					<description>Encryption value</description>
-					<left>220</left>
-					<top>190</top>
-					<width>165</width>
-					<height>25</height>
+					<left>{{ScaleX('220')}}</left>
+					<top>{{ScaleY('190')}}</top>
+					<width>{{ScaleX('165')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[PVR.ActStreamEncryptionName]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -529,10 +529,10 @@
 				</control>
 				<control type="label">
 					<description>Provider</description>
-					<left>390</left>
-					<top>190</top>
-					<width>165</width>
-					<height>25</height>
+					<left>{{ScaleX('390')}}</left>
+					<top>{{ScaleY('190')}}</top>
+					<width>{{ScaleX('165')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[19101]:</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -541,10 +541,10 @@
 				</control>
 				<control type="label">
 					<description>Provider value</description>
-					<left>560</left>
-					<top>190</top>
-					<width>165</width>
-					<height>25</height>
+					<left>{{ScaleX('560')}}</left>
+					<top>{{ScaleY('190')}}</top>
+					<width>{{ScaleX('165')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[PVR.ActStreamProviderName]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -553,10 +553,10 @@
 				</control>
 				<control type="label">
 					<description>Mux</description>
-					<left>730</left>
-					<top>190</top>
-					<width>165</width>
-					<height>25</height>
+					<left>{{ScaleX('730')}}</left>
+					<top>{{ScaleY('190')}}</top>
+					<width>{{ScaleX('165')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[19100]:</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -565,10 +565,10 @@
 				</control>
 				<control type="label">
 					<description>Mux value</description>
-					<left>900</left>
-					<top>190</top>
-					<width>330</width>
-					<height>25</height>
+					<left>{{ScaleX('900')}}</left>
+					<top>{{ScaleY('190')}}</top>
+					<width>{{ScaleX('330')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[PVR.ActStreamMux]</label>
 					<align>left</align>
 					<aligny>center</aligny>

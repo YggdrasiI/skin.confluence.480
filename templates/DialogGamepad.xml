@@ -3,8 +3,8 @@
 	<defaultcontrol always="true">1</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>335</left>
-		<top>235</top>
+		<left>{{ScaleX('335')}}</left>
+		<top>{{ScaleY('235')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -19,10 +19,10 @@
 		</include>
 		<control type="label" id="2">
 			<description>dialog line 1</description>
-			<left>30</left>
-			<top>70</top>
-			<width>550</width>
-			<height>30</height>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('70')}}</top>
+			<width>{{ScaleX('550')}}</width>
+			<height>{{ScaleY('30')}}</height>
 			<align>left</align>
 			<aligny>center</aligny>
 			<label>-</label>
@@ -30,10 +30,10 @@
 		</control>
 		<control type="label" id="3">
 			<description>dialog line 2</description>
-			<left>30</left>
-			<top>95</top>
-			<width>550</width>
-			<height>30</height>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('95')}}</top>
+			<width>{{ScaleX('550')}}</width>
+			<height>{{ScaleY('30')}}</height>
 			<align>left</align>
 			<aligny>center</aligny>
 			<label>-</label>
@@ -41,10 +41,10 @@
 		</control>
 		<control type="label" id="4">
 			<description>dialog line 3</description>
-			<left>30</left>
-			<top>130</top>
-			<width>550</width>
-			<height>30</height>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('130')}}</top>
+			<width>{{ScaleX('550')}}</width>
+			<height>{{ScaleY('30')}}</height>
 			<align>left</align>
 			<aligny>center</aligny>
 			<label>-</label>

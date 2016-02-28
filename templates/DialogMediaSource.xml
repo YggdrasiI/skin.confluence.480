@@ -3,8 +3,8 @@
 	<defaultcontrol>10</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>240</left>
-		<top>100</top>
+		<left>{{ScaleX('240')}}</left>
+		<top>{{ScaleY('100')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -19,10 +19,10 @@
 		</include>
 		<control type="label">
 			<description>path label</description>
-			<left>20</left>
-			<top>65</top>
-			<width>760</width>
-			<height>30</height>
+			<left>{{ScaleX('20')}}</left>
+			<top>{{ScaleY('65')}}</top>
+			<width>{{ScaleX('760')}}</width>
+			<height>{{ScaleY('30')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font12</font>
@@ -31,29 +31,29 @@
 			<shadowcolor>black</shadowcolor>
 		</control>
 		<control type="list" id="10">
-			<left>30</left>
-			<top>105</top>
-			<width>525</width>
-			<height>225</height>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('105')}}</top>
+			<width>{{ScaleX('525')}}</width>
+			<height>{{ScaleY('225')}}</height>
 			<onup>9001</onup>
 			<onleft>9000</onleft>
 			<onright>60</onright>
 			<ondown>12</ondown>
 			<pagecontrol>60</pagecontrol>
 			<scrolltime>200</scrolltime>
-			<itemlayout height="45">
+			<itemlayout height="{{ScaleY('45')}}">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>525</width>
-					<height>40</height>
-					<texture border="5">button-nofocus.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('525')}}</width>
+					<height>{{ScaleY('40')}}</height>
+					<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 				</control>
 				<control type="label">
-					<left>10</left>
-					<top>0</top>
-					<width>490</width>
-					<height>40</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('490')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -62,28 +62,28 @@
 					<info>ListItem.Label</info>
 				</control>
 			</itemlayout>
-			<focusedlayout height="45">
+			<focusedlayout height="{{ScaleY('45')}}">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>525</width>
-					<height>40</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('525')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<visible>!Control.HasFocus(10)</visible>
-					<texture border="5">button-nofocus.png</texture>
+					<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>525</width>
-					<height>41</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('525')}}</width>
+					<height>{{ScaleY('41')}}</height>
 					<visible>Control.HasFocus(10)</visible>
-					<texture border="5">button-focus2.png</texture>
+					<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
 				</control>
 				<control type="label">
-					<left>10</left>
-					<top>0</top>
-					<width>490</width>
-					<height>40</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('490')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -93,10 +93,10 @@
 			</focusedlayout>
 		</control>
 		<control type="scrollbar" id="60">
-			<left>555</left>
-			<top>105</top>
-			<width>25</width>
-			<height>225</height>
+			<left>{{ScaleX('555')}}</left>
+			<top>{{ScaleY('105')}}</top>
+			<width>{{ScaleX('25')}}</width>
+			<height>{{ScaleY('225')}}</height>
 			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 			<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 			<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -108,14 +108,14 @@
 			<orientation>vertical</orientation>
 		</control>
 		<control type="group" id="9000">
-			<left>580</left>
-			<top>105</top>
+			<left>{{ScaleX('580')}}</left>
+			<top>{{ScaleY('105')}}</top>
 			<control type="button" id="11">
 				<description>Browse Button</description>
-				<left>0</left>
-				<top>0</top>
-				<width>190</width>
-				<height>40</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('190')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<label>1024</label>
 				<font>font12_title</font>
 				<align>center</align>
@@ -129,10 +129,10 @@
 			</control>
 			<control type="button" id="13">
 				<description>Add Path Button</description>
-				<left>0</left>
-				<top>45</top>
-				<width>190</width>
-				<height>40</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('45')}}</top>
+				<width>{{ScaleX('190')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<label>15019</label>
 				<font>font12_title</font>
 				<align>center</align>
@@ -146,10 +146,10 @@
 			</control>
 			<control type="button" id="14">
 				<description>Remove Path Button</description>
-				<left>0</left>
-				<top>90</top>
-				<width>190</width>
-				<height>40</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('90')}}</top>
+				<width>{{ScaleX('190')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<label>1210</label>
 				<font>font12_title</font>
 				<align>center</align>
@@ -164,10 +164,10 @@
 		</control>
 		<control type="label">
 			<description>Name label</description>
-			<left>30</left>
-			<top>335</top>
-			<width>740</width>
-			<height>30</height>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('335')}}</top>
+			<width>{{ScaleX('740')}}</width>
+			<height>{{ScaleY('30')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font12</font>
@@ -177,10 +177,10 @@
 		</control>
 		<control type="edit" id="12">
 			<description>Name Button</description>
-			<left>30</left>
-			<top>370</top>
-			<width>740</width>
-			<height>40</height>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('370')}}</top>
+			<width>{{ScaleX('740')}}</width>
+			<height>{{ScaleY('40')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<label>-</label>
@@ -193,14 +193,14 @@
 			<ondown>9001</ondown>
 		</control>
 		<control type="group" id="9001">
-			<left>190</left>
-			<top>435</top>
+			<left>{{ScaleX('190')}}</left>
+			<top>{{ScaleY('435')}}</top>
 			<control type="button" id="18">
 				<description>Ok Button</description>
-				<left>0</left>
-				<top>0</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -214,10 +214,10 @@
 			</control>
 			<control type="button" id="19">
 				<description>Cancel Button</description>
-				<left>210</left>
-				<top>0</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('210')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<texturenofocus border="5">button-nofocus.png</texturenofocus>

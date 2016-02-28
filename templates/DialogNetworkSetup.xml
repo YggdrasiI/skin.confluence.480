@@ -3,8 +3,8 @@
 	<defaultcontrol>10</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>240</left>
-		<top>135</top>
+		<left>{{ScaleX('240')}}</left>
+		<top>{{ScaleY('135')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -19,15 +19,15 @@
 		</include>
 		<control type="spincontrolex" id="10">
 			<description>Protocol SpinControl</description>
-			<left>30</left>
-			<top>70</top>
-			<height>40</height>
-			<width>740</width>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('70')}}</top>
+			<height>{{ScaleY('40')}}</height>
+			<width>{{ScaleX('740')}}</width>
 			<texturefocus border="5">button-focus2.png</texturefocus>
 			<texturenofocus border="5">button-nofocus.png</texturenofocus>
 			<textcolor>white</textcolor>
 			<disabledcolor>grey3</disabledcolor>
-			<textoffsetx>12</textoffsetx>
+			<textoffsetx>{{ScaleX('12')}}</textoffsetx>
 			<aligny>center</aligny>
 			<reverse>yes</reverse>
 			<font>font13</font>
@@ -39,11 +39,11 @@
 		</control>
 		<control type="edit" id="11">
 			<description>Server Address Button</description>
-			<left>30</left>
-			<top>115</top>
-			<width>565</width>
-			<height>40</height>
-			<textoffsetx>12</textoffsetx>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('115')}}</top>
+			<width>{{ScaleX('565')}}</width>
+			<height>{{ScaleY('40')}}</height>
+			<textoffsetx>{{ScaleX('12')}}</textoffsetx>
 			<aligny>center</aligny>
 			<texturefocus border="5">button-focus2.png</texturefocus>
 			<font>font13</font>
@@ -55,11 +55,11 @@
 		</control>
 		<control type="button" id="12">
 			<description>Server Browse Button</description>
-			<left>600</left>
-			<top>115</top>
-			<width>170</width>
-			<height>40</height>
-			<textoffsetx>12</textoffsetx>
+			<left>{{ScaleX('600')}}</left>
+			<top>{{ScaleY('115')}}</top>
+			<width>{{ScaleX('170')}}</width>
+			<height>{{ScaleY('40')}}</height>
+			<textoffsetx>{{ScaleX('12')}}</textoffsetx>
 			<font>font12_title</font>
 			<label>1024</label>
 			<align>center</align>
@@ -71,11 +71,11 @@
 		</control>
 		<control type="edit" id="16">
 			<description>Remote path Button</description>
-			<left>30</left>
-			<top>160</top>
-			<width>740</width>
-			<height>40</height>
-			<textoffsetx>12</textoffsetx>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('160')}}</top>
+			<width>{{ScaleX('740')}}</width>
+			<height>{{ScaleY('40')}}</height>
+			<textoffsetx>{{ScaleX('12')}}</textoffsetx>
 			<aligny>center</aligny>
 			<texturefocus border="5">button-focus2.png</texturefocus>
 			<font>font13</font>
@@ -87,11 +87,11 @@
 		</control>
 		<control type="edit" id="13">
 			<description>Port Button</description>
-			<left>30</left>
-			<top>205</top>
-			<width>740</width>
-			<height>40</height>
-			<textoffsetx>12</textoffsetx>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('205')}}</top>
+			<width>{{ScaleX('740')}}</width>
+			<height>{{ScaleY('40')}}</height>
+			<textoffsetx>{{ScaleX('12')}}</textoffsetx>
 			<aligny>center</aligny>
 			<texturefocus border="5">button-focus2.png</texturefocus>
 			<font>font13</font>
@@ -103,11 +103,11 @@
 		</control>
 		<control type="edit" id="14">
 			<description>Username Button</description>
-			<left>30</left>
-			<top>250</top>
-			<width>740</width>
-			<height>40</height>
-			<textoffsetx>12</textoffsetx>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('250')}}</top>
+			<width>{{ScaleX('740')}}</width>
+			<height>{{ScaleY('40')}}</height>
+			<textoffsetx>{{ScaleX('12')}}</textoffsetx>
 			<aligny>center</aligny>
 			<texturefocus border="5">button-focus2.png</texturefocus>
 			<font>font13</font>
@@ -119,11 +119,11 @@
 		</control>
 		<control type="edit" id="15">
 			<description>Password Button</description>
-			<left>30</left>
-			<top>295</top>
-			<width>740</width>
-			<height>40</height>
-			<textoffsetx>12</textoffsetx>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('295')}}</top>
+			<width>{{ScaleX('740')}}</width>
+			<height>{{ScaleY('40')}}</height>
+			<textoffsetx>{{ScaleX('12')}}</textoffsetx>
 			<aligny>center</aligny>
 			<texturefocus border="5">button-focus2.png</texturefocus>
 			<font>font13</font>
@@ -135,10 +135,10 @@
 		</control>
 		<control type="button" id="18">
 			<description>Ok Button</description>
-			<left>195</left>
-			<top>375</top>
-			<width>200</width>
-			<height>40</height>
+			<left>{{ScaleX('195')}}</left>
+			<top>{{ScaleY('375')}}</top>
+			<width>{{ScaleX('200')}}</width>
+			<height>{{ScaleY('40')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font12_title</font>
@@ -150,10 +150,10 @@
 		</control>
 		<control type="button" id="19">
 			<description>Cancel Button</description>
-			<left>405</left>
-			<top>375</top>
-			<width>200</width>
-			<height>40</height>
+			<left>{{ScaleX('405')}}</left>
+			<top>{{ScaleY('375')}}</top>
+			<width>{{ScaleX('200')}}</width>
+			<height>{{ScaleY('40')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font12_title</font>

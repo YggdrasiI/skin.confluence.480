@@ -5,10 +5,10 @@
 			<visible>Control.IsVisible(560)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="list" id="560">
-				<left>70</left>
-				<top>75</top>
-				<width>760</width>
-				<height>561</height>
+				<left>{{ScaleX('70')}}</left>
+				<top>{{ScaleY('75')}}</top>
+				<width>{{ScaleX('760')}}</width>
+				<height>{{ScaleY('561')}}</height>
 				<onleft>2</onleft>
 				<onright>60</onright>
 				<onup>560</onup>
@@ -17,19 +17,19 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<visible>Container.Content(LiveTV)</visible>
-				<itemlayout height="40" width="760">
+				<itemlayout height="{{ScaleY('40')}}" width="{{ScaleX('760')}}">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>760</width>
-						<height>41</height>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('760')}}</width>
+						<height>{{ScaleY('41')}}</height>
+						<texture border="{{ScaleBorder('0,2,0,2')}}">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>730</width>
-						<height>40</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('730')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -38,10 +38,10 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>50</left>
-						<top>0</top>
-						<width>700</width>
-						<height>40</height>
+						<left>{{ScaleX('50')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('700')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -50,38 +50,38 @@
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="40" width="760">
+				<focusedlayout height="{{ScaleY('40')}}" width="{{ScaleX('760')}}">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>760</width>
-						<height>41</height>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('760')}}</width>
+						<height>{{ScaleY('41')}}</height>
+						<texture border="{{ScaleBorder('0,2,0,2')}}">MenuItemNF.png</texture>
 						<visible>!Control.HasFocus(560)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>760</width>
-						<height>41</height>
-						<texture border="0,2,0,2">MenuItemFO.png</texture>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('760')}}</width>
+						<height>{{ScaleY('41')}}</height>
+						<texture border="{{ScaleBorder('0,2,0,2')}}">MenuItemFO.png</texture>
 						<visible>Control.HasFocus(560)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
-						<left>560</left>
-						<top>5</top>
-						<width>200</width>
-						<height>31</height>
-						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
+						<left>{{ScaleX('560')}}</left>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('200')}}</width>
+						<height>{{ScaleY('31')}}</height>
+						<texture border="{{ScaleBorder('0,0,14,0')}}">MediaItemDetailBG.png</texture>
 						<visible>Control.HasFocus(560) + !IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>730</width>
-						<height>40</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('730')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -90,10 +90,10 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>50</left>
-						<top>0</top>
-						<width>700</width>
-						<height>40</height>
+						<left>{{ScaleX('50')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('700')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -104,10 +104,10 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>850</left>
-				<top>78</top>
-				<width>25</width>
-				<height>560</height>
+				<left>{{ScaleX('850')}}</left>
+				<top>{{ScaleY('78')}}</top>
+				<width>{{ScaleX('25')}}</width>
+				<height>{{ScaleY('560')}}</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -121,13 +121,13 @@
 			</control>
 			<control type="group">
 				<visible>Control.IsVisible(560)</visible>
-				<left>910</left>
-				<top>80</top>
+				<left>{{ScaleX('910')}}</left>
+				<top>{{ScaleY('80')}}</top>
 				<control type="image">
-					<left>10</left>
-					<top>0</top>
-					<width>290</width>
-					<height>290</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('290')}}</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
@@ -135,10 +135,10 @@
 					<bordersize>8</bordersize>
 				</control>
 				<control type="fadelabel">
-					<left>10</left>
-					<top>300</top>
-					<width>290</width>
-					<height>25</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('300')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[ListItem.Label2]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -150,10 +150,10 @@
 				</control>
 				<control type="textbox">
 					<description>Description Value for TV Show</description>
-					<left>10</left>
-					<top>332</top>
-					<width>290</width>
-					<height>218</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('332')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('218')}}</height>
 					<font>font13</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>

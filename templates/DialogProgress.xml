@@ -3,8 +3,8 @@
 	<defaultcontrol always="true">10</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>335</left>
-		<top>230</top>
+		<left>{{ScaleX('335')}}</left>
+		<top>{{ScaleY('230')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -19,19 +19,19 @@
 		</include>
 		<control type="label" id="1">
 			<description>fake heading label</description>
-			<left>0</left>
-			<top>0</top>
-			<width>0</width>
-			<height>0</height>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('0')}}</top>
+			<width>{{ScaleX('0')}}</width>
+			<height>{{ScaleY('0')}}</height>
 			<font>-</font>
 			<visible>false</visible>
 		</control>
 		<control type="textbox" id="9">
 			<description>text</description>
-			<left>30</left>
-			<top>62</top>
-			<width>550</width>
-			<height>78</height>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('62')}}</top>
+			<width>{{ScaleX('550')}}</width>
+			<height>{{ScaleY('78')}}</height>
 			<align>left</align>
 			<label>-</label>
 			<font>font13</font>
@@ -39,18 +39,18 @@
 		</control>
 		<control type="progress" id="20">
 			<description>Progressbar</description>
-			<left>30</left>
-			<top>148</top>
-			<width>550</width>
-			<height>16</height>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('148')}}</top>
+			<width>{{ScaleX('550')}}</width>
+			<height>{{ScaleY('16')}}</height>
 			<info>System.Progressbar</info>
 		</control>
 		<control type="button" id="10">
 			<description>Cancel button</description>
-			<left>205</left>
-			<top>175</top>
-			<width>200</width>
-			<height>40</height>
+			<left>{{ScaleX('205')}}</left>
+			<top>{{ScaleY('175')}}</top>
+			<width>{{ScaleX('200')}}</width>
+			<height>{{ScaleY('40')}}</height>
 			<label>222</label>
 			<font>font12_title</font>
 			<textcolor>white</textcolor>

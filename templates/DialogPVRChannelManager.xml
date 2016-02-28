@@ -4,8 +4,8 @@
 	<allowoverlay>no</allowoverlay>
 	<coordinates>
 		<system>1</system>
-		<left>80</left>
-		<top>65</top>
+		<left>{{ScaleX('80')}}</left>
+		<top>{{ScaleY('65')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -19,13 +19,13 @@
 			<param name="CloseButtonNav" value="10" />
 		</include>
 		<control type="group">
-			<left>20</left>
-			<top>70</top>
+			<left>{{ScaleX('20')}}</left>
+			<top>{{ScaleY('70')}}</top>
 			<control type="scrollbar" id="60">
-				<left>440</left>
-				<top>5</top>
-				<width>25</width>
-				<height>470</height>
+				<left>{{ScaleX('440')}}</left>
+				<top>{{ScaleY('5')}}</top>
+				<width>{{ScaleX('25')}}</width>
+				<height>{{ScaleY('470')}}</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -37,55 +37,55 @@
 				<orientation>vertical</orientation>
 			</control>
 			<control type="image">
-				<left>10</left>
-				<top>0</top>
-				<width>430</width>
-				<height>475</height>
-				<texture border="5">button-nofocus.png</texture>
+				<left>{{ScaleX('10')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('430')}}</width>
+				<height>{{ScaleY('475')}}</height>
+				<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 			</control>
 			<control type="list" id="20">
-				<left>15</left>
-				<top>5</top>
-				<width>420</width>
-				<height>470</height>
+				<left>{{ScaleX('15')}}</left>
+				<top>{{ScaleY('5')}}</top>
+				<width>{{ScaleX('420')}}</width>
+				<height>{{ScaleY('470')}}</height>
 				<onup>20</onup>
 				<ondown>20</ondown>
 				<onleft>9000</onleft>
 				<onright>60</onright>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="45" width="420">
+				<itemlayout height="{{ScaleY('45')}}" width="{{ScaleX('420')}}">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>420</width>
-						<height>40</height>
-						<texture border="5">button-nofocus.png</texture>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('420')}}</width>
+						<height>{{ScaleY('40')}}</height>
+						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<left>5</left>
-						<top>5</top>
-						<width>30</width>
-						<height>30</height>
+						<left>{{ScaleX('5')}}</left>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('30')}}</width>
+						<height>{{ScaleY('30')}}</height>
 						<texture>$INFO[ListItem.Property(Icon)]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="image">
-						<left>5</left>
-						<top>5</top>
-						<width>30</width>
-						<height>30</height>
+						<left>{{ScaleX('5')}}</left>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('30')}}</width>
+						<height>{{ScaleY('30')}}</height>
 						<colordiffuse>77FFFFFF</colordiffuse>
 						<texture>$INFO[ListItem.Property(Icon)]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>!ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="label">
-						<left>45</left>
-						<top>0</top>
-						<width>335</width>
-						<height>40</height>
+						<left>{{ScaleX('45')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('335')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font12</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -95,10 +95,10 @@
 						<visible>ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="label">
-						<left>45</left>
-						<top>0</top>
-						<width>335</width>
-						<height>40</height>
+						<left>{{ScaleX('45')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('335')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font12</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -108,47 +108,47 @@
 						<visible>!ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="image">
-						<left>390</left>
-						<top>10</top>
-						<width>20</width>
-						<height>20</height>
+						<left>{{ScaleX('390')}}</left>
+						<top>{{ScaleY('10')}}</top>
+						<width>{{ScaleX('20')}}</width>
+						<height>{{ScaleY('20')}}</height>
 						<texture>OverlayWatched.png</texture>
 						<visible>ListItem.Property(Changed)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="65" width="420">
+				<focusedlayout height="{{ScaleY('65')}}" width="{{ScaleX('420')}}">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>420</width>
-						<height>60</height>
-						<texture border="5">button-focus2.png</texture>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('420')}}</width>
+						<height>{{ScaleY('60')}}</height>
+						<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
 						<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(20)">conditional</animation>
 					</control>
 					<control type="image">
-						<left>5</left>
-						<top>5</top>
-						<width>30</width>
-						<height>30</height>
+						<left>{{ScaleX('5')}}</left>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('30')}}</width>
+						<height>{{ScaleY('30')}}</height>
 						<texture>$INFO[ListItem.Property(Icon)]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="image">
-						<left>5</left>
-						<top>5</top>
-						<width>30</width>
-						<height>30</height>
+						<left>{{ScaleX('5')}}</left>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('30')}}</width>
+						<height>{{ScaleY('30')}}</height>
 						<colordiffuse>77FFFFFF</colordiffuse>
 						<texture>$INFO[ListItem.Property(Icon)]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>!ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="label">
-						<left>45</left>
-						<top>0</top>
-						<width>335</width>
-						<height>40</height>
+						<left>{{ScaleX('45')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('335')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font12</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -158,10 +158,10 @@
 						<visible>ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="label">
-						<left>45</left>
-						<top>0</top>
-						<width>335</width>
-						<height>40</height>
+						<left>{{ScaleX('45')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('335')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font12</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -171,18 +171,18 @@
 						<visible>!ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="image">
-						<left>390</left>
-						<top>10</top>
-						<width>20</width>
-						<height>20</height>
+						<left>{{ScaleX('390')}}</left>
+						<top>{{ScaleY('10')}}</top>
+						<width>{{ScaleX('20')}}</width>
+						<height>{{ScaleY('20')}}</height>
 						<texture>OverlayWatched.png</texture>
 						<visible>ListItem.Property(Changed)</visible>
 					</control>
 					<control type="label">
-						<left>5</left>
-						<top>30</top>
-						<width>410</width>
-						<height>30</height>
+						<left>{{ScaleX('5')}}</left>
+						<top>{{ScaleY('30')}}</top>
+						<width>{{ScaleX('410')}}</width>
+						<height>{{ScaleY('30')}}</height>
 						<font>font12</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -195,8 +195,8 @@
 		</control>
 		<control type="group">
 			<control type="grouplist" id="9002">
-				<left>490</left>
-				<top>75</top>
+				<left>{{ScaleX('490')}}</left>
+				<top>{{ScaleY('75')}}</top>
 				<onleft>60</onleft>
 				<onright>9000</onright>
 				<onup>34</onup>
@@ -204,10 +204,10 @@
 				<itemgap>5</itemgap>
 				<control type="label" id="9001">
 					<description>channel options Header</description>
-					<left>0</left>
-					<top>0</top>
-					<width>380</width>
-					<height>25</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('380')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<font>font12</font>
 					<label>$LOCALIZE[31511]</label>
 					<align>left</align>
@@ -217,10 +217,10 @@
 				</control>
 				<control type="radiobutton" id="7">
 					<description>Channel activated</description>
-					<left>0</left>
-					<top>0</top>
-					<width>380</width>
-					<height>40</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('380')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
 					<textcolor>white</textcolor>
 					<focusedcolor>white</focusedcolor>
@@ -234,10 +234,10 @@
 				</control>
 				<control type="edit" id="8">
 					<description>Channel name</description>
-					<left>0</left>
-					<top>0</top>
-					<width>380</width>
-					<height>40</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('380')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
 					<textcolor>white</textcolor>
 					<focusedcolor>white</focusedcolor>
@@ -247,16 +247,16 @@
 					<label>19201</label>
 				</control>
 				<control type="group" id="9005">
-					<left>0</left>
-					<top>0</top>
-					<width>380</width>
-					<height>40</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('380')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<control type="button" id="9">
 						<description>Channel logo Button</description>
-						<left>0</left>
-						<top>0</top>
-						<width>380</width>
-						<height>40</height>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('380')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font12</font>
 						<texturefocus border="5">button-focus2.png</texturefocus>
 						<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -268,20 +268,20 @@
 					</control>
 					<control type="image">
 						<description>Current Channel Icon</description>
-						<left>340</left>
-						<top>3</top>
-						<width>34</width>
-						<height>34</height>
+						<left>{{ScaleX('340')}}</left>
+						<top>{{ScaleY('3')}}</top>
+						<width>{{ScaleX('34')}}</width>
+						<height>{{ScaleY('34')}}</height>
 						<aspectratio>keep</aspectratio>
 						<info>ListItem.Property(Icon)</info>
 					</control>
 				</control>
 				<control type="radiobutton" id="12">
 					<description>EPG activated</description>
-					<left>0</left>
-					<top>0</top>
-					<width>380</width>
-					<height>40</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('380')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
 					<textcolor>white</textcolor>
 					<focusedcolor>white</focusedcolor>
@@ -295,10 +295,10 @@
 				</control>
 				<control type="spincontrolex" id="13">
 					<description>EPG source</description>
-					<left>0</left>
-					<top>0</top>
-					<width>380</width>
-					<height>40</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('380')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
 					<texturefocus border="5">button-focus2.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -306,10 +306,10 @@
 				</control>
 				<control type="radiobutton" id="14">
 					<description>Parental locked</description>
-					<left>0</left>
-					<top>0</top>
-					<width>380</width>
-					<height>40</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('380')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
 					<textcolor>white</textcolor>
 					<focusedcolor>white</focusedcolor>
@@ -323,20 +323,20 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<left>490</left>
-				<top>375</top>
+				<left>{{ScaleX('490')}}</left>
+				<top>{{ScaleY('375')}}</top>
 				<itemgap>5</itemgap>
 				<onleft>60</onleft>
 				<onright>9000</onright>
 				<onup>14</onup>
 				<ondown>7</ondown>
-				<animation effect="slide" start="0,0" end="0,45" time="0" condition="!Control.IsVisible(31)">Conditional</animation>
+				<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,45')}}" time="0" condition="!Control.IsVisible(31)">Conditional</animation>
 				<control type="label" id="9003">
 					<description>channel options Header</description>
-					<left>0</left>
-					<top>0</top>
-					<width>380</width>
-					<height>25</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('380')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<font>font12</font>
 					<label>$LOCALIZE[31026]</label>
 					<align>left</align>
@@ -346,10 +346,10 @@
 				</control>
 				<control type="button" id="31">
 					<description>New channel Button</description>
-					<left>0</left>
-					<top>0</top>
-					<width>380</width>
-					<height>40</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('380')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
 					<texturefocus border="5">button-focus2.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -358,10 +358,10 @@
 				</control>
 				<control type="button" id="30">
 					<description>Group Manager Button</description>
-					<left>0</left>
-					<top>0</top>
-					<width>380</width>
-					<height>40</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('380')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
 					<texturefocus border="5">button-focus2.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -370,10 +370,10 @@
 				</control>
 				<control type="togglebutton" id="34">
 					<description>TV/Radio toggle</description>
-					<left>0</left>
-					<top>0</top>
-					<width>380</width>
-					<height>40</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('380')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
 					<texturefocus border="5">button-focus2.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -388,14 +388,14 @@
 			</control>
 		</control>
 		<control type="group" id="9000">
-			<left>890</left>
-			<top>95</top>
+			<left>{{ScaleX('890')}}</left>
+			<top>{{ScaleY('95')}}</top>
 			<control type="button" id="4">
 				<description>OK Button</description>
-				<left>0</left>
-				<top>0</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<label>186</label>
 				<font>font12_title</font>
 				<align>center</align>
@@ -407,10 +407,10 @@
 			</control>
 			<control type="button" id="5">
 				<description>Apply changes Button</description>
-				<left>0</left>
-				<top>45</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('45')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<label>14070</label>
 				<font>font12_title</font>
 				<align>center</align>
@@ -422,10 +422,10 @@
 			</control>
 			<control type="button" id="6">
 				<description>Cancel Button</description>
-				<left>0</left>
-				<top>90</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('90')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<label>222</label>
 				<font>font12_title</font>
 				<align>center</align>
@@ -436,30 +436,30 @@
 				<ondown>4</ondown>
 			</control>
 			<control type="group">
-				<left>-5</left>
-				<top>200</top>
+				<left>{{ScaleX('-5')}}</left>
+				<top>{{ScaleY('200')}}</top>
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>210</width>
-					<height>210</height>
-					<texture border="5">button-nofocus.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('210')}}</width>
+					<height>{{ScaleY('210')}}</height>
+					<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<left>5</left>
-					<top>5</top>
-					<width>200</width>
-					<height>200</height>
+					<left>{{ScaleX('5')}}</left>
+					<top>{{ScaleY('5')}}</top>
+					<width>{{ScaleX('200')}}</width>
+					<height>{{ScaleY('200')}}</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[Container(20).ListItem.Icon]</texture>
 				</control>
 			</control>
 			<control type="label">
 				<description>Page Count Label</description>
-				<left>-15</left>
-				<top>418</top>
-				<width>230</width>
-				<height>35</height>
+				<left>{{ScaleX('-15')}}</left>
+				<top>{{ScaleY('418')}}</top>
+				<width>{{ScaleX('230')}}</width>
+				<height>{{ScaleY('35')}}</height>
 				<font>font12</font>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>

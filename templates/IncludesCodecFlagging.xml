@@ -3,15 +3,15 @@
 	<include name="VideoCodecFlaggingConditions">
 		<control type="image">
 			<description>Video rez Image</description>
-			<width>55</width>
-			<height>35</height>
+			<width>{{ScaleX('55')}}</width>
+			<height>{{ScaleY('35')}}</height>
 			<aspectratio align="right">keep</aspectratio>
 			<texture>$INFO[ListItem.VideoResolution,flagging/video/,.png]</texture>
 		</control>
 		<control type="image">
 			<description>Codec Image</description>
-			<width>80</width>
-			<height>35</height>
+			<width>{{ScaleX('80')}}</width>
+			<height>{{ScaleY('35')}}</height>
 			<aspectratio align="left">keep</aspectratio>
 			<texture>$VAR[videocodec,flagging/video/,.png]</texture>
 		</control>
@@ -19,8 +19,8 @@
 	<include name="VideoStereoscopicsFlaggingConditions">
 		<control type="image">
 			<description>Video stereoscopics flagging image</description>
-			<width>55</width>
-			<height>35</height>
+			<width>{{ScaleX('55')}}</width>
+			<height>{{ScaleY('35')}}</height>
 			<aspectratio align="right">keep</aspectratio>
 			<texture>flagging/video/3D.png</texture>
 			<visible>ListItem.IsStereoscopic</visible>
@@ -29,8 +29,8 @@
 	<include name="VideoTypeHackFlaggingConditions">
 		<control type="image">
 			<description>Video Type Image</description>
-			<width>80</width>
-			<height>35</height>
+			<width>{{ScaleX('80')}}</width>
+			<height>{{ScaleY('35')}}</height>
 			<aspectratio align="left">keep</aspectratio>
 			<texture>$VAR[typehackflagging,flagging/video/,.png]</texture>
 			<visible>!Skin.HasSetting(HideFilenameFlagging)</visible>
@@ -39,8 +39,8 @@
 	<include name="VideoMPAAFlaggingConditions">
 		<control type="image">
 			<description>Rating image</description>
-			<width>80</width>
-			<height>35</height>
+			<width>{{ScaleX('80')}}</width>
+			<height>{{ScaleY('35')}}</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[rating,flagging/ratings/,.png]</texture>
 		</control>
@@ -48,8 +48,8 @@
 	<include name="AudioCodecFlaggingConditions">
 		<control type="image">
 			<description>Audio Codec Image</description>
-			<width>80</width>
-			<height>35</height>
+			<width>{{ScaleX('80')}}</width>
+			<height>{{ScaleY('35')}}</height>
 			<aspectratio align="right">keep</aspectratio>
 			<texture>$INFO[ListItem.AudioCodec,flagging/audio/,.png]</texture>
 		</control>
@@ -57,8 +57,8 @@
 	<include name="AudioChannelsFlaggingConditions">
 		<control type="image">
 			<description>Audio Codec Image</description>
-			<width>55</width>
-			<height>35</height>
+			<width>{{ScaleX('55')}}</width>
+			<height>{{ScaleY('35')}}</height>
 			<aspectratio align="left">keep</aspectratio>
 			<texture>$INFO[ListItem.AudioChannels,flagging/audio/,.png]</texture>
 		</control>
@@ -66,8 +66,8 @@
 	<include name="AspectCodecFlaggingConditions">
 		<control type="image">
 			<description>Aspectratio Image</description>
-			<width>55</width>
-			<height>35</height>
+			<width>{{ScaleX('55')}}</width>
+			<height>{{ScaleY('35')}}</height>
 			<aspectratio align="right">keep</aspectratio>
 			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/,.png]</texture>
 		</control>

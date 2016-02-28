@@ -3,8 +3,8 @@
 	<defaultcontrol always="true">9</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>240</left>
-		<top>60</top>
+		<left>{{ScaleX('240')}}</left>
+		<top>{{ScaleY('60')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -19,10 +19,10 @@
 		</include>
 		<control type="grouplist" id="9">
 			<description>button area</description>
-			<left>45</left>
-			<top>70</top>
-			<width>710</width>
-			<height>40</height>
+			<left>{{ScaleX('45')}}</left>
+			<top>{{ScaleY('70')}}</top>
+			<width>{{ScaleX('710')}}</width>
+			<height>{{ScaleY('40')}}</height>
 			<itemgap>5</itemgap>
 			<align>center</align>
 			<orientation>horizontal</orientation>
@@ -33,28 +33,28 @@
 		</control>
 		<control type="image">
 			<description>Has Previous</description>
-			<left>25</left>
-			<top>80</top>
-			<width>20</width>
-			<height>20</height>
+			<left>{{ScaleX('25')}}</left>
+			<top>{{ScaleY('80')}}</top>
+			<width>{{ScaleX('20')}}</width>
+			<height>{{ScaleY('20')}}</height>
 			<texture>scroll-left-focus.png</texture>
 			<visible>Container(9).HasPrevious</visible>
 		</control>
 		<control type="image">
 			<description>Has Next</description>
-			<left>755</left>
-			<top>80</top>
-			<width>20</width>
-			<height>20</height>
+			<left>{{ScaleX('755')}}</left>
+			<top>{{ScaleY('80')}}</top>
+			<width>{{ScaleX('20')}}</width>
+			<height>{{ScaleY('20')}}</height>
 			<texture>scroll-right-focus.png</texture>
 			<visible>Container(9).HasNext</visible>
 		</control>
 		<control type="grouplist" id="2">
 			<description>control area</description>
-			<left>40</left>
-			<top>120</top>
-			<width>720</width>
-			<height>380</height>
+			<left>{{ScaleX('40')}}</left>
+			<top>{{ScaleY('120')}}</top>
+			<width>{{ScaleX('720')}}</width>
+			<height>{{ScaleY('380')}}</height>
 			<itemgap>5</itemgap>
 			<pagecontrol>30</pagecontrol>
 			<onup>9</onup>
@@ -63,10 +63,10 @@
 			<onright>30</onright>
 		</control>
 		<control type="scrollbar" id="30">
-			<left>765</left>
-			<top>120</top>
-			<width>25</width>
-			<height>380</height>
+			<left>{{ScaleX('765')}}</left>
+			<top>{{ScaleY('120')}}</top>
+			<width>{{ScaleX('25')}}</width>
+			<height>{{ScaleY('380')}}</height>
 			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 			<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
 			<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -78,14 +78,14 @@
 			<orientation>vertical</orientation>
 		</control>
 		<control type="group" id="9001">
-			<top>535</top>
-			<left>90</left>
+			<top>{{ScaleY('535')}}</top>
+			<left>{{ScaleX('90')}}</left>
 			<control type="button" id="10">
 				<description>OK Button</description>
-				<left>0</left>
-				<top>0</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>
@@ -97,10 +97,10 @@
 			</control>
 			<control type="button" id="11">
 				<description>Cancel Button</description>
-				<left>210</left>
-				<top>0</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('210')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>
@@ -112,10 +112,10 @@
 			</control>
 			<control type="button" id="12">
 				<description>Defaults Button</description>
-				<left>420</left>
-				<top>0</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('420')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>
@@ -128,8 +128,8 @@
 		</control>
 		<control type="button" id="13">
 			<description>Default Category Button</description>
-			<height>40</height>
-			<width>173</width>
+			<height>{{ScaleY('40')}}</height>
+			<width>{{ScaleX('173')}}</width>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font12_title</font>
@@ -138,7 +138,7 @@
 		</control>
 		<control type="button" id="3">
 			<description>Default Button</description>
-			<height>40</height>
+			<height>{{ScaleY('40')}}</height>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -146,7 +146,7 @@
 		</control>
 		<control type="radiobutton" id="4">
 			<description>Default RadioButton</description>
-			<height>40</height>
+			<height>{{ScaleY('40')}}</height>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -154,7 +154,7 @@
 		</control>
 		<control type="spincontrolex" id="5">
 			<description>Default spincontrolex</description>
-			<height>40</height>
+			<height>{{ScaleY('40')}}</height>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -164,7 +164,7 @@
 			<reverse>yes</reverse>
 		</control>
 		<control type="label" id="7">
-			<height>35</height>
+			<height>{{ScaleY('35')}}</height>
 			<font>font13_title</font>
 			<label>-</label>
 			<textcolor>blue</textcolor>
@@ -174,12 +174,12 @@
 		</control>
 		<control type="image" id="6">
 			<description>Default Seperator</description>
-			<height>2</height>
+			<height>{{ScaleY('2')}}</height>
 			<texture>separator2.png</texture>
 		</control>
 		<control type="sliderex" id="8">
 			<description>Default Slider</description>
-			<height>40</height>
+			<height>{{ScaleY('40')}}</height>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>

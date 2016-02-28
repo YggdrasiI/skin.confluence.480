@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-  id="skin.confluence.mod"
+  id="skin.confluence.480"
   version="2.7.4"
-  name="Confluence Mod"
-  provider-name="Jezz_X, Team Kodi">
+  name="Confluence Low Resolution"
+  provider-name="YggdrasiI">
   <requires>
     <import addon="xbmc.gui" version="5.9.0"/>
   </requires>

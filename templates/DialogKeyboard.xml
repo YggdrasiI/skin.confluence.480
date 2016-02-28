@@ -4,8 +4,8 @@
 	<include>dialogeffect</include>
 	<coordinates>
 		<system>2</system>
-		<left>205</left>
-		<top>120</top>
+		<left>{{ScaleX('205')}}</left>
+		<top>{{ScaleY('120')}}</top>
 	</coordinates>
 	<controls>
 		<control type="group">
@@ -21,19 +21,19 @@
 				<param name="CloseButtonNav" value="3" />
 			</include>
 			<control type="image">
-				<left>50</left>
-				<top>60</top>
-				<width>760</width>
-				<height>50</height>
+				<left>{{ScaleX('50')}}</left>
+				<top>{{ScaleY('60')}}</top>
+				<width>{{ScaleX('760')}}</width>
+				<height>{{ScaleY('50')}}</height>
 				<aspectratio>stretch</aspectratio>
-				<texture border="20">KeyboardEditArea.png</texture>
+				<texture border="{{ScaleBorder('20')}}">KeyboardEditArea.png</texture>
 			</control>
 			<control type="edit" id="312">
 				<description>Edit Text</description>
-				<left>55</left>
-				<top>60</top>
-				<width>750</width>
-				<height>50</height>
+				<left>{{ScaleX('55')}}</left>
+				<top>{{ScaleY('60')}}</top>
+				<width>{{ScaleX('750')}}</width>
+				<height>{{ScaleY('50')}}</height>
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -41,24 +41,24 @@
 				<texturenofocus>-</texturenofocus>
 			</control>
 			<control type="image">
-				<left>130</left>
-				<top>110</top>
-				<width>600</width>
-				<height>30</height>
+				<left>{{ScaleX('130')}}</left>
+				<top>{{ScaleY('110')}}</top>
+				<width>{{ScaleX('600')}}</width>
+				<height>{{ScaleY('30')}}</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>DialogHeader.png</texture>
 			</control>
 			<control type="group">
-				<left>30</left>
-				<top>140</top>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('140')}}</top>
 				<!-- 1st row -->
 				<control type="grouplist">
 					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="button" id="309">
 						<description>Layout button</description>
-						<width>200</width>
-						<height>50</height>
+						<width>{{ScaleX('200')}}</width>
+						<height>{{ScaleY('50')}}</height>
 						<label>20177</label>
 						<onup>300</onup>
 						<ondown>302</ondown>
@@ -147,12 +147,12 @@
 				<!-- 2nd row -->
 				<control type="grouplist">
 					<orientation>horizontal</orientation>
-					<top>50</top>
+					<top>{{ScaleY('50')}}</top>
 					<itemgap>0</itemgap>
 					<control type="radiobutton" id="302">
 						<description>SHIFT button</description>
-						<width>200</width>
-						<height>50</height>
+						<width>{{ScaleX('200')}}</width>
+						<height>{{ScaleY('50')}}</height>
 						<label>20178</label>
 						<onup>309</onup>
 						<ondown>303</ondown>
@@ -241,13 +241,13 @@
 				</control>
 				<!-- 3rd row -->
 				<control type="grouplist">
-					<top>100</top>
+					<top>{{ScaleY('100')}}</top>
 					<orientation>horizontal</orientation>
 					<itemgap>0</itemgap>
 					<control type="radiobutton" id="303">
 						<description>CAPS LOCK button</description>
-						<width>200</width>
-						<height>50</height>
+						<width>{{ScaleX('200')}}</width>
+						<height>{{ScaleY('50')}}</height>
 						<label>20179</label>
 						<onup>302</onup>
 						<ondown>307</ondown>
@@ -336,13 +336,13 @@
 				</control>
 				<!-- 4th row -->
 				<control type="grouplist">
-					<top>150</top>
+					<top>{{ScaleY('150')}}</top>
 					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="button" id="307">
 						<description>IP Input button</description>
-						<width>100</width>
-						<height>50</height>
+						<width>{{ScaleX('100')}}</width>
+						<height>{{ScaleY('50')}}</height>
 						<onup>303</onup>
 						<ondown>300</ondown>
 						<label>IP</label>
@@ -355,8 +355,8 @@
 					</control>
 					<control type="radiobutton" id="304">
 						<description>Symbols button</description>
-						<width>100</width>
-						<height>50</height>
+						<width>{{ScaleX('100')}}</width>
+						<height>{{ScaleY('50')}}</height>
 						<label>@#!*   </label>
 						<onup>303</onup>
 						<ondown>300</ondown>
@@ -445,13 +445,13 @@
 				</control>
 				<!-- 5th row -->
 				<control type="grouplist">
-					<top>200</top>
+					<top>{{ScaleY('200')}}</top>
 					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="button" id="300">
 						<description>DONE button</description>
-						<width>200</width>
-						<height>50</height>
+						<width>{{ScaleX('200')}}</width>
+						<height>{{ScaleY('50')}}</height>
 						<texturenofocus border="25,5,25,5">KeyboardCornerBottomNF.png</texturenofocus>
 						<texturefocus border="25,5,25,5">KeyboardCornerBottom.png</texturefocus>
 						<label>20177</label>
@@ -464,8 +464,8 @@
 					</control>
 					<control type="button" id="32">
 						<description>SPACE button</description>
-						<width>200</width>
-						<height>50</height>
+						<width>{{ScaleX('200')}}</width>
+						<height>{{ScaleY('50')}}</height>
 						<label>20182</label>
 						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
 						<texturefocus border="5">KeyboardKey.png</texturefocus>
@@ -478,8 +478,8 @@
 					</control>
 					<control type="button" id="8">
 						<description>BACKSPACE button</description>
-						<width>200</width>
-						<height>50</height>
+						<width>{{ScaleX('200')}}</width>
+						<height>{{ScaleY('50')}}</height>
 						<label>20181</label>
 						<onup>165</onup>
 						<ondown>105</ondown>
@@ -492,8 +492,8 @@
 					</control>
 					<control type="button" id="305">
 						<description>previous button</description>
-						<width>100</width>
-						<height>50</height>
+						<width>{{ScaleX('100')}}</width>
+						<height>{{ScaleY('50')}}</height>
 						<label>&lt;</label>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -506,8 +506,8 @@
 					</control>
 					<control type="button" id="306">
 						<description>next button</description>
-						<width>100</width>
-						<height>50</height>
+						<width>{{ScaleX('100')}}</width>
+						<height>{{ScaleY('50')}}</height>
 						<label>&gt;</label>
 						<align>center</align>
 						<aligny>center</aligny>

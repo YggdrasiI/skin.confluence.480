@@ -4,8 +4,8 @@
 	<allowoverlay>no</allowoverlay>
 	<coordinates>
 		<system>1</system>
-		<left>240</left>
-		<top>220</top>
+		<left>{{ScaleX('240')}}</left>
+		<top>{{ScaleY('220')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -20,10 +20,10 @@
 		</include>
 		<control type="label">
 			<description>Rule match label</description>
-			<left>40</left>
-			<top>60</top>
-			<width>720</width>
-			<height>35</height>
+			<left>{{ScaleX('40')}}</left>
+			<top>{{ScaleY('60')}}</top>
+			<width>{{ScaleX('720')}}</width>
+			<height>{{ScaleY('35')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font12</font>
@@ -34,10 +34,10 @@
 		<control type="group" id="9001">
 			<control type="spincontrolex" id="15">
 				<description>Rule Field</description>
-				<left>30</left>
-				<top>100</top>
-				<width>365</width>
-				<height>40</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('100')}}</top>
+				<width>{{ScaleX('365')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<font>-</font>
 				<texturefocus border="3">button-focus2.png</texturefocus>
 				<texturenofocus border="3">button-nofocus.png</texturenofocus>
@@ -48,10 +48,10 @@
 			</control>
 			<control type="label">
 				<description>Rule Field label</description>
-				<left>35</left>
-				<top>100</top>
-				<width>300</width>
-				<height>40</height>
+				<left>{{ScaleX('35')}}</left>
+				<top>{{ScaleY('100')}}</top>
+				<width>{{ScaleX('300')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<font>font13</font>
 				<label>$INFO[Control.GetLabel(15)]</label>
 				<align>left</align>
@@ -61,10 +61,10 @@
 			</control>
 			<control type="spincontrolex" id="16">
 				<description>Rule operator</description>
-				<left>405</left>
-				<top>100</top>
-				<width>365</width>
-				<height>40</height>
+				<left>{{ScaleX('405')}}</left>
+				<top>{{ScaleY('100')}}</top>
+				<width>{{ScaleX('365')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<font>-</font>
 				<texturefocus border="3">button-focus2.png</texturefocus>
 				<texturenofocus border="3">button-nofocus.png</texturenofocus>
@@ -75,10 +75,10 @@
 			</control>
 			<control type="label">
 				<description>Rule Field label</description>
-				<left>410</left>
-				<top>100</top>
-				<width>300</width>
-				<height>40</height>
+				<left>{{ScaleX('410')}}</left>
+				<top>{{ScaleY('100')}}</top>
+				<width>{{ScaleX('300')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<font>font13</font>
 				<label>$INFO[Control.GetLabel(16)]</label>
 				<align>left</align>
@@ -89,10 +89,10 @@
 		</control>
 		<control type="edit" id="17">
 			<description>Value Button</description>
-			<left>30</left>
-			<top>145</top>
-			<width>565</width>
-			<height>40</height>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('145')}}</top>
+			<width>{{ScaleX('565')}}</width>
+			<height>{{ScaleY('40')}}</height>
 			<font>font13</font>
 			<aligny>center</aligny>
 			<invalidcolor>invalid</invalidcolor>
@@ -106,10 +106,10 @@
 		</control>
 		<control type="button" id="20">
 			<description>Browse Button</description>
-			<left>600</left>
-			<top>145</top>
-			<width>170</width>
-			<height>40</height>
+			<left>{{ScaleX('600')}}</left>
+			<top>{{ScaleY('145')}}</top>
+			<width>{{ScaleX('170')}}</width>
+			<height>{{ScaleY('40')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<texturefocus border="3">button-focus.png</texturefocus>
@@ -124,10 +124,10 @@
 		<control type="group" id="9000">
 			<control type="button" id="18">
 				<description>Ok Button</description>
-				<left>195</left>
-				<top>210</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('195')}}</left>
+				<top>{{ScaleY('210')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>
@@ -139,10 +139,10 @@
 			</control>
 			<control type="button" id="19">
 				<description>Cancel Button</description>
-				<left>405</left>
-				<top>210</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('405')}}</left>
+				<top>{{ScaleY('210')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>

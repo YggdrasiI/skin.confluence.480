@@ -3,8 +3,8 @@
 	<defaultcontrol always="true">10</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>185</left>
-		<top>105</top>
+		<left>{{ScaleX('185')}}</left>
+		<top>{{ScaleY('105')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -22,10 +22,10 @@
 			</include>
 			<control type="label">
 				<description>Song Title value</description>
-				<left>40</left>
-				<top>60</top>
-				<width>830</width>
-				<height>30</height>
+				<left>{{ScaleX('40')}}</left>
+				<top>{{ScaleY('60')}}</top>
+				<width>{{ScaleX('830')}}</width>
+				<height>{{ScaleY('30')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font13</font>
@@ -34,30 +34,30 @@
 				<scroll>true</scroll>
 			</control>
 			<control type="image">
-				<left>40</left>
-				<top>120</top>
-				<width>200</width>
-				<height>200</height>
+				<left>{{ScaleX('40')}}</left>
+				<top>{{ScaleY('120')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('200')}}</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<texture>$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="image">
-				<left>40</left>
-				<top>320</top>
-				<width>200</width>
-				<height>200</height>
+				<left>{{ScaleX('40')}}</left>
+				<top>{{ScaleY('320')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('200')}}</height>
 				<aspectratio aligny="top">keep</aspectratio>
 				<texture flipy="true" diffuse="diffuse_mirror2.png">$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="group">
-				<left>250</left>
-				<top>120</top>
+				<left>{{ScaleX('250')}}</left>
+				<top>{{ScaleY('120')}}</top>
 				<control type="label">
 					<description>Artist Title</description>
-					<left>0</left>
-					<top>0</top>
-					<width>150</width>
-					<height>25</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('150')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -66,10 +66,10 @@
 				</control>
 				<control type="fadelabel">
 					<description>Artist Value</description>
-					<left>160</left>
-					<top>0</top>
-					<width>460</width>
-					<height>25</height>
+					<left>{{ScaleX('160')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('460')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -80,10 +80,10 @@
 				</control>
 				<control type="label">
 					<description>Album Title</description>
-					<left>0</left>
-					<top>30</top>
-					<width>150</width>
-					<height>25</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('30')}}</top>
+					<width>{{ScaleX('150')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -92,10 +92,10 @@
 				</control>
 				<control type="fadelabel">
 					<description>Album Value</description>
-					<left>160</left>
-					<top>30</top>
-					<width>460</width>
-					<height>25</height>
+					<left>{{ScaleX('160')}}</left>
+					<top>{{ScaleY('30')}}</top>
+					<width>{{ScaleX('460')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -106,10 +106,10 @@
 				</control>
 				<control type="label">
 					<description>Genre Title</description>
-					<left>0</left>
-					<top>60</top>
-					<width>150</width>
-					<height>25</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('60')}}</top>
+					<width>{{ScaleX('150')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -120,10 +120,10 @@
 				</control>
 				<control type="fadelabel">
 					<description>Genre Value</description>
-					<left>160</left>
-					<top>60</top>
-					<width>460</width>
-					<height>25</height>
+					<left>{{ScaleX('160')}}</left>
+					<top>{{ScaleY('60')}}</top>
+					<width>{{ScaleX('460')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -132,10 +132,10 @@
 				</control>
 				<control type="label">
 					<description>Year Title</description>
-					<left>0</left>
-					<top>90</top>
-					<width>150</width>
-					<height>25</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('90')}}</top>
+					<width>{{ScaleX('150')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -144,10 +144,10 @@
 				</control>
 				<control type="fadelabel">
 					<description>Year Value</description>
-					<left>160</left>
-					<top>90</top>
-					<width>460</width>
-					<height>25</height>
+					<left>{{ScaleX('160')}}</left>
+					<top>{{ScaleY('90')}}</top>
+					<width>{{ScaleX('460')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -156,10 +156,10 @@
 				</control>
 				<control type="label">
 					<description>Track Number Title</description>
-					<left>0</left>
-					<top>120</top>
-					<width>150</width>
-					<height>25</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('120')}}</top>
+					<width>{{ScaleX('150')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -168,10 +168,10 @@
 				</control>
 				<control type="fadelabel">
 					<description>Track Number Value</description>
-					<left>160</left>
-					<top>120</top>
-					<width>460</width>
-					<height>25</height>
+					<left>{{ScaleX('160')}}</left>
+					<top>{{ScaleY('120')}}</top>
+					<width>{{ScaleX('460')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -180,10 +180,10 @@
 				</control>
 				<control type="label">
 					<description>Rating Title</description>
-					<left>0</left>
-					<top>150</top>
-					<width>150</width>
-					<height>25</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('150')}}</top>
+					<width>{{ScaleX('150')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -191,23 +191,23 @@
 					<label>$LOCALIZE[563]:</label>
 				</control>
 				<control type="group">
-					<left>160</left>
-					<top>148</top>
+					<left>{{ScaleX('160')}}</left>
+					<top>{{ScaleY('148')}}</top>
 					<control type="image">
 						<description>Rating value</description>
-						<left>0</left>
-						<top>0</top>
-						<width>150</width>
-						<height>32</height>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('150')}}</width>
+						<height>{{ScaleY('32')}}</height>
 						<aspectratio align="left">keep</aspectratio>
 						<texture>LeftRating/$INFO[ListItem.StarRating]</texture>
 					</control>
 					<control type="button" id="14">
 						<description>Decrease Rating</description>
-						<left>160</left>
-						<top>5</top>
-						<width>33</width>
-						<height>22</height>
+						<left>{{ScaleX('160')}}</left>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('33')}}</width>
+						<height>{{ScaleY('22')}}</height>
 						<onclick>DecreaseRating</onclick>
 						<texturenofocus>scroll-down-2.png</texturenofocus>
 						<texturefocus>scroll-down-focus-2.png</texturefocus>
@@ -218,10 +218,10 @@
 					</control>
 					<control type="button" id="15">
 						<description>Increase Rating</description>
-						<left>193</left>
-						<top>5</top>
-						<width>33</width>
-						<height>22</height>
+						<left>{{ScaleX('193')}}</left>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('33')}}</width>
+						<height>{{ScaleY('22')}}</height>
 						<onclick>IncreaseRating</onclick>
 						<texturenofocus>scroll-up-2.png</texturenofocus>
 						<texturefocus>scroll-up-focus-2.png</texturefocus>
@@ -233,10 +233,10 @@
 				</control>
 				<control type="label">
 					<description>Comment Title</description>
-					<left>0</left>
-					<top>180</top>
-					<width>150</width>
-					<height>25</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('180')}}</top>
+					<width>{{ScaleX('150')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -245,24 +245,24 @@
 				</control>
 				<control type="textbox">
 					<description>Comment value</description>
-					<left>160</left>
-					<top>179</top>
-					<width>460</width>
-					<height>138</height>
+					<left>{{ScaleX('160')}}</left>
+					<top>{{ScaleY('179')}}</top>
+					<width>{{ScaleX('460')}}</width>
+					<height>{{ScaleY('138')}}</height>
 					<font>font13</font>
 					<pagecontrol>-</pagecontrol>
 					<label fallback="161">$INFO[ListItem.Comment]</label>
 				</control>
 			</control>
 			<control type="group" id="9000">
-				<left>40</left>
-				<top>445</top>
+				<left>{{ScaleX('40')}}</left>
+				<top>{{ScaleY('445')}}</top>
 				<control type="button" id="10">
 					<description>Ok button</description>
-					<left>0</left>
-					<top>0</top>
-					<width>200</width>
-					<height>40</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('200')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<label>186</label>
 					<font>font12_title</font>
 					<align>center</align>
@@ -273,10 +273,10 @@
 				</control>
 				<control type="button" id="11">
 					<description>Cancel button</description>
-					<left>210</left>
-					<top>0</top>
-					<width>200</width>
-					<height>40</height>
+					<left>{{ScaleX('210')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('200')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<label>222</label>
 					<font>font12_title</font>
 					<align>center</align>
@@ -287,10 +287,10 @@
 				</control>
 				<control type="button" id="12">
 					<description>Album Info button</description>
-					<left>420</left>
-					<top>0</top>
-					<width>200</width>
-					<height>40</height>
+					<left>{{ScaleX('420')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('200')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<label>10523</label>
 					<font>font12_title</font>
 					<align>center</align>
@@ -301,10 +301,10 @@
 				</control>
 				<control type="button" id="13">
 					<description>Get Thumb button</description>
-					<left>630</left>
-					<top>0</top>
-					<width>200</width>
-					<height>40</height>
+					<left>{{ScaleX('630')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('200')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<label>13405</label>
 					<font>font12_title</font>
 					<align>center</align>

@@ -3,8 +3,8 @@
 	<defaultcontrol always="true">10</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>335</left>
-		<top>230</top>
+		<left>{{ScaleX('335')}}</left>
+		<top>{{ScaleY('230')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -19,10 +19,10 @@
 		</include>
 		<control type="textbox" id="9">
 			<description>text</description>
-			<left>30</left>
-			<top>62</top>
-			<width>550</width>
-			<height>98</height>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('62')}}</top>
+			<width>{{ScaleX('550')}}</width>
+			<height>{{ScaleY('98')}}</height>
 			<align>left</align>
 			<label>-</label>
 			<font>font13</font>
@@ -30,10 +30,10 @@
 		</control>
 		<control type="button" id="11">
 			<description>Yes button</description>
-			<left>95</left>
-			<top>175</top>
-			<width>200</width>
-			<height>40</height>
+			<left>{{ScaleX('95')}}</left>
+			<top>{{ScaleY('175')}}</top>
+			<width>{{ScaleX('200')}}</width>
+			<height>{{ScaleY('40')}}</height>
 			<label>107</label>
 			<font>font12_title</font>
 			<textcolor>white</textcolor>
@@ -46,10 +46,10 @@
 		</control>
 		<control type="button" id="10">
 			<description>No button</description>
-			<left>305</left>
-			<top>175</top>
-			<width>200</width>
-			<height>40</height>
+			<left>{{ScaleX('305')}}</left>
+			<top>{{ScaleY('175')}}</top>
+			<width>{{ScaleX('200')}}</width>
+			<height>{{ScaleY('40')}}</height>
 			<label>106</label>
 			<font>font12_title</font>
 			<textcolor>white</textcolor>

@@ -3,29 +3,29 @@
 	<allowoverlay>no</allowoverlay>
 	<coordinates>
 		<system>1</system>
-		<left>680</left>
-		<top>0</top>
+		<left>{{ScaleX('680')}}</left>
+		<top>{{ScaleY('0')}}</top>
 	</coordinates>
 	<controls>
 		<control type="group">
-			<animation effect="slide" start="600,0" end="0,0" time="300" tween="quadratic" easing="out" condition="!Player.ShowCodec">WindowOpen</animation>
-			<animation effect="slide" start="600,0" end="0,0" time="300" delay="300" tween="quadratic" easing="out" condition="Player.ShowCodec">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="600,0" time="150" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="{{ScaleBorder2('600,0')}}" end="{{ScaleBorder2('0,0')}}" time="300" tween="quadratic" easing="out" condition="!Player.ShowCodec">WindowOpen</animation>
+			<animation effect="slide" start="{{ScaleBorder2('600,0')}}" end="{{ScaleBorder2('0,0')}}" time="300" delay="300" tween="quadratic" easing="out" condition="Player.ShowCodec">WindowOpen</animation>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('600,0')}}" time="150" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
 				<description>media info background image</description>
-				<left>0</left>
-				<top>0</top>
-				<width>600</width>
-				<height>720</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('600')}}</width>
+				<height>{{ScaleY('720')}}</height>
 				<colordiffuse>BBFFFFFF</colordiffuse>
-				<texture border="20,0,0,0" flipx="true">MediaBladeSub.png</texture>
+				<texture border="{{ScaleBorder('20,0,0,0')}}" flipx="true">MediaBladeSub.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>20</left>
-				<top>0</top>
-				<width>64</width>
-				<height>32</height>
+				<left>{{ScaleX('20')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('64')}}</width>
+				<height>{{ScaleY('32')}}</height>
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
@@ -35,10 +35,10 @@
 			</control>
 			<control type="label">
 				<description>header label</description>
-				<left>30</left>
-				<top>30</top>
-				<width>550</width>
-				<height>30</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('30')}}</top>
+				<width>{{ScaleX('550')}}</width>
+				<height>{{ScaleY('30')}}</height>
 				<font>font30_title</font>
 				<label>$ADDON[script.cu.lrclyrics 32199]</label>
 				<align>right</align>
@@ -48,10 +48,10 @@
 			</control>
 			<control type="label">
 				<description>Artist label</description>
-				<left>30</left>
-				<top>60</top>
-				<width>550</width>
-				<height>30</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('60')}}</top>
+				<width>{{ScaleX('550')}}</width>
+				<height>{{ScaleY('30')}}</height>
 				<font>font13_title</font>
 				<label>$INFO[MusicPlayer.Artist]</label>
 				<align>right</align>
@@ -61,10 +61,10 @@
 			</control>
 			<control type="label">
 				<description>Song label</description>
-				<left>30</left>
-				<top>85</top>
-				<width>550</width>
-				<height>30</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('85')}}</top>
+				<width>{{ScaleX('550')}}</width>
+				<height>{{ScaleY('30')}}</height>
 				<font>font13_title</font>
 				<label>$INFO[MusicPlayer.Title]</label>
 				<align>right</align>
@@ -73,30 +73,30 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="image">
-				<left>30</left>
-				<top>120</top>
-				<width>550</width>
-				<height>4</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('120')}}</top>
+				<width>{{ScaleX('550')}}</width>
+				<height>{{ScaleY('4')}}</height>
 				<texture>separator.png</texture>
 			</control>
 			<!-- ** Required ** Do not change <id> or <type> (Smooth scrolling list for lyrics) -->
 			<control type="list" id="110">
-				<left>30</left>
-				<top>130</top>
-				<width>550</width>
-				<height>500</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('130')}}</top>
+				<width>{{ScaleX('550')}}</width>
+				<height>{{ScaleY('500')}}</height>
 				<onleft>111</onleft>
 				<onright>111</onright>
 				<onup>110</onup>
 				<ondown>110</ondown>
 				<pagecontrol>111</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="25">
+				<itemlayout height="{{ScaleY('25')}}">
 					<control type="label">
-						<left>0</left>
-						<top>0</top>
-						<width>550</width>
-						<height>25</height>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('550')}}</width>
+						<height>{{ScaleY('25')}}</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<align>center</align>
@@ -104,12 +104,12 @@
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="25">
+				<focusedlayout height="{{ScaleY('25')}}">
 					<control type="label">
-						<left>0</left>
-						<top>0</top>
-						<width>550</width>
-						<height>25</height>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('550')}}</width>
+						<height>{{ScaleY('25')}}</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<align>center</align>
@@ -120,10 +120,10 @@
 						<visible>!Control.HasFocus(110)</visible>
 					</control>
 					<control type="label">
-						<left>0</left>
-						<top>0</top>
-						<width>550</width>
-						<height>25</height>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('550')}}</width>
+						<height>{{ScaleY('25')}}</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<align>center</align>
@@ -136,8 +136,8 @@
 			</control>
 			<control type="spincontrol" id="111">
 				<description>Next page button</description>
-				<left>520</left>
-				<top>650</top>
+				<left>{{ScaleX('520')}}</left>
+				<top>{{ScaleY('650')}}</top>
 				<subtype>page</subtype>
 				<font>font12</font>
 				<onleft>110</onleft>
@@ -150,10 +150,10 @@
 			</control>
 			<control type="label" id="2">
 				<description>Pick label</description>
-				<left>30</left>
-				<top>130</top>
-				<width>550</width>
-				<height>30</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('130')}}</top>
+				<width>{{ScaleX('550')}}</width>
+				<height>{{ScaleY('30')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font13_title</font>
@@ -163,30 +163,30 @@
 			</control>
 			<!-- ** Required ** Do not change <id> or <type> (Song Chooser if it gets it wrong) -->
 			<control type="list" id="120">
-				<left>30</left>
-				<top>170</top>
-				<width>550</width>
-				<height>440</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('170')}}</top>
+				<width>{{ScaleX('550')}}</width>
+				<height>{{ScaleY('440')}}</height>
 				<onleft>121</onleft>
 				<onright>121</onright>
 				<onup>120</onup>
 				<ondown>120</ondown>
 				<pagecontrol>121</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<animation effect="slide" start="0,0" end="20,0" time="0" condition="!Control.IsVisible(121)">Conditional</animation>
-				<itemlayout height="40">
+				<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('20,0')}}" time="0" condition="!Control.IsVisible(121)">Conditional</animation>
+				<itemlayout height="{{ScaleY('40')}}">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>550</width>
-						<height>41</height>
-						<texture border="5">MenuItemNF.png</texture>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('550')}}</width>
+						<height>{{ScaleY('41')}}</height>
+						<texture border="{{ScaleBorder('5')}}">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>530</width>
-						<height>40</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('530')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -194,28 +194,28 @@
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="40">
+				<focusedlayout height="{{ScaleY('40')}}">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>550</width>
-						<height>41</height>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('550')}}</width>
+						<height>{{ScaleY('41')}}</height>
 						<visible>!Control.HasFocus(120)</visible>
-						<texture border="5">MenuItemNF.png</texture>
+						<texture border="{{ScaleBorder('5')}}">MenuItemNF.png</texture>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>550</width>
-						<height>41</height>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('550')}}</width>
+						<height>{{ScaleY('41')}}</height>
 						<visible>Control.HasFocus(120)</visible>
-						<texture border="5">MenuItemFO.png</texture>
+						<texture border="{{ScaleBorder('5')}}">MenuItemFO.png</texture>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>530</width>
-						<height>40</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('530')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -226,8 +226,8 @@
 			</control>
 			<control type="spincontrol" id="121">
 				<description>Next page button</description>
-				<left>520</left>
-				<top>650</top>
+				<left>{{ScaleX('520')}}</left>
+				<top>{{ScaleY('650')}}</top>
 				<subtype>page</subtype>
 				<font>font12</font>
 				<onleft>120</onleft>
@@ -239,18 +239,18 @@
 				<visible>Control.IsVisible(120)</visible>
 			</control>
 			<control type="image">
-				<left>30</left>
-				<top>640</top>
-				<width>550</width>
-				<height>4</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('640')}}</top>
+				<width>{{ScaleX('550')}}</width>
+				<height>{{ScaleY('4')}}</height>
 				<texture>separator.png</texture>
 			</control>
 			<control type="label">
 				<description>Scraper label</description>
-				<left>30</left>
-				<top>680</top>
-				<width>550</width>
-				<height>30</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('680')}}</top>
+				<width>{{ScaleX('550')}}</width>
+				<height>{{ScaleY('30')}}</height>
 				<label>$LOCALIZE[31205] - $INFO[Control.GetLabel(200)]</label>
 				<font>font12_title</font>
 				<align>right</align>

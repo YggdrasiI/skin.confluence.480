@@ -3,8 +3,8 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>185</left>
-		<top>40</top>
+		<left>{{ScaleX('185')}}</left>
+		<top>{{ScaleY('40')}}</top>
 		<origin x="185" y="10">!IsEmpty(ListItem.Property(Addon.broken))</origin>
 	</coordinates>
 	<include>dialogeffect</include>
@@ -22,10 +22,10 @@
 				<param name="CloseButtonNav" value="3" />
 			</include>
 			<control type="image">
-				<left>30</left>
-				<top>70</top>
-				<width>220</width>
-				<height>220</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('70')}}</top>
+				<width>{{ScaleX('220')}}</width>
+				<height>{{ScaleY('220')}}</height>
 				<aspectratio>keep</aspectratio>
 				<texture>$INFO[ListItem.Icon]</texture>
 				<bordertexture border="8">ThumbShadow.png</bordertexture>
@@ -33,10 +33,10 @@
 			</control>
 			<control type="label">
 				<description>Addon Title value</description>
-				<left>280</left>
-				<top>80</top>
-				<width>580</width>
-				<height>30</height>
+				<left>{{ScaleX('280')}}</left>
+				<top>{{ScaleY('80')}}</top>
+				<width>{{ScaleX('580')}}</width>
+				<height>{{ScaleY('30')}}</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font13</font>
@@ -45,14 +45,14 @@
 				<scroll>true</scroll>
 			</control>
 			<control type="group">
-				<left>270</left>
-				<top>130</top>
+				<left>{{ScaleX('270')}}</left>
+				<top>{{ScaleY('130')}}</top>
 				<control type="label">
 					<description>Type txt</description>
-					<left>10</left>
-					<top>0</top>
-					<width>140</width>
-					<height>25</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('140')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[146]</label>
 					<align>right</align>
 					<aligny>center</aligny>
@@ -61,10 +61,10 @@
 				</control>
 				<control type="label">
 					<description>Type Value</description>
-					<left>160</left>
-					<top>0</top>
-					<width>440</width>
-					<height>25</height>
+					<left>{{ScaleX('160')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('440')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label fallback="416">$INFO[ListItem.Property(Addon.Type)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -73,10 +73,10 @@
 				</control>
 				<control type="label">
 					<description>Author txt</description>
-					<left>10</left>
-					<top>30</top>
-					<width>140</width>
-					<height>25</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('30')}}</top>
+					<width>{{ScaleX('140')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[21863]:</label>
 					<align>right</align>
 					<aligny>center</aligny>
@@ -85,10 +85,10 @@
 				</control>
 				<control type="label">
 					<description>Author Value</description>
-					<left>160</left>
-					<top>30</top>
-					<width>440</width>
-					<height>25</height>
+					<left>{{ScaleX('160')}}</left>
+					<top>{{ScaleY('30')}}</top>
+					<width>{{ScaleX('440')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label fallback="416">$INFO[ListItem.Property(Addon.Creator)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -97,10 +97,10 @@
 				</control>
 				<control type="label">
 					<description>Version txt</description>
-					<left>10</left>
-					<top>60</top>
-					<width>140</width>
-					<height>25</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('60')}}</top>
+					<width>{{ScaleX('140')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[24051]</label>
 					<align>right</align>
 					<aligny>center</aligny>
@@ -109,10 +109,10 @@
 				</control>
 				<control type="label">
 					<description>Version Value</description>
-					<left>160</left>
-					<top>60</top>
-					<width>440</width>
-					<height>25</height>
+					<left>{{ScaleX('160')}}</left>
+					<top>{{ScaleY('60')}}</top>
+					<width>{{ScaleX('440')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label fallback="416">$INFO[ListItem.Property(Addon.Version)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -121,10 +121,10 @@
 				</control>
 				<control type="label">
 					<description>Summary txt</description>
-					<left>10</left>
-					<top>90</top>
-					<width>140</width>
-					<height>25</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('90')}}</top>
+					<width>{{ScaleX('140')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[20037]:</label>
 					<align>right</align>
 					<aligny>center</aligny>
@@ -133,10 +133,10 @@
 				</control>
 				<control type="fadelabel">
 					<description>Summary Value</description>
-					<left>160</left>
-					<top>90</top>
-					<width>440</width>
-					<height>25</height>
+					<left>{{ScaleX('160')}}</left>
+					<top>{{ScaleY('90')}}</top>
+					<width>{{ScaleX('440')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label fallback="416">$INFO[ListItem.Property(Addon.Summary)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -145,18 +145,18 @@
 					<pauseatend>2000</pauseatend>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<top>160</top>
-					<width>600</width>
-					<height>4</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('160')}}</top>
+					<width>{{ScaleX('600')}}</width>
+					<height>{{ScaleY('4')}}</height>
 					<texture>separator.png</texture>
 				</control>
 				<control type="label">
 					<description>Description txt</description>
-					<left>0</left>
-					<top>170</top>
-					<width>300</width>
-					<height>25</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('170')}}</top>
+					<width>{{ScaleX('300')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[21821]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -167,10 +167,10 @@
 					<visible>!IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
 					<control type="label">
 						<description>Description Page Count</description>
-						<left>310</left>
-						<top>170</top>
-						<width>300</width>
-						<height>25</height>
+						<left>{{ScaleX('310')}}</left>
+						<top>{{ScaleY('170')}}</top>
+						<width>{{ScaleX('300')}}</width>
+						<height>{{ScaleY('25')}}</height>
 						<label>$INFO[Container(400).CurrentPage, $LOCALIZE[31024] [COLOR=blue]([/COLOR]]$INFO[Container(400).NumPages,/,[COLOR=blue])[/COLOR]]</label>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -179,10 +179,10 @@
 					</control>
 					<control type="textbox" id="400">
 						<description>Description</description>
-						<left>10</left>
-						<top>197</top>
-						<width>600</width>
-						<height>188</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('197')}}</top>
+						<width>{{ScaleX('600')}}</width>
+						<height>{{ScaleY('188')}}</height>
 						<font>font13</font>
 						<align>justify</align>
 						<textcolor>white</textcolor>
@@ -190,10 +190,10 @@
 						<pagecontrol>60</pagecontrol>
 					</control>
 					<control type="scrollbar" id="60">
-						<left>610</left>
-						<top>195</top>
-						<width>25</width>
-						<height>190</height>
+						<left>{{ScaleX('610')}}</left>
+						<top>{{ScaleY('195')}}</top>
+						<width>{{ScaleX('25')}}</width>
+						<height>{{ScaleY('190')}}</height>
 						<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 						<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 						<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -206,10 +206,10 @@
 					</control>
 					<control type="label">
 						<description>Disclaimer txt</description>
-						<left>0</left>
-						<top>400</top>
-						<width>600</width>
-						<height>25</height>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('400')}}</top>
+						<width>{{ScaleX('600')}}</width>
+						<height>{{ScaleY('25')}}</height>
 						<label>$LOCALIZE[24052]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -218,10 +218,10 @@
 					</control>
 					<control type="textbox">
 						<description>Disclaimer</description>
-						<left>10</left>
-						<top>427</top>
-						<width>600</width>
-						<height>64</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('427')}}</top>
+						<width>{{ScaleX('600')}}</width>
+						<height>{{ScaleY('64')}}</height>
 						<font>font12</font>
 						<align>left</align>
 						<textcolor>white</textcolor>
@@ -233,10 +233,10 @@
 					<visible>IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
 					<control type="label">
 						<description>Description Page Count</description>
-						<left>310</left>
-						<top>170</top>
-						<width>300</width>
-						<height>25</height>
+						<left>{{ScaleX('310')}}</left>
+						<top>{{ScaleY('170')}}</top>
+						<width>{{ScaleX('300')}}</width>
+						<height>{{ScaleY('25')}}</height>
 						<label>$INFO[Container(401).CurrentPage, $LOCALIZE[31024] [COLOR=blue]([/COLOR]]$INFO[Container(401).NumPages,/,[COLOR=blue])[/COLOR]]</label>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -245,10 +245,10 @@
 					</control>
 					<control type="textbox" id="401">
 						<description>Description</description>
-						<left>10</left>
-						<top>207</top>
-						<width>600</width>
-						<height>258</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('207')}}</top>
+						<width>{{ScaleX('600')}}</width>
+						<height>{{ScaleY('258')}}</height>
 						<font>font13</font>
 						<align>left</align>
 						<textcolor>white</textcolor>
@@ -256,10 +256,10 @@
 						<pagecontrol>61</pagecontrol>
 					</control>
 					<control type="scrollbar" id="61">
-						<left>610</left>
-						<top>205</top>
-						<width>25</width>
-						<height>260</height>
+						<left>{{ScaleX('610')}}</left>
+						<top>{{ScaleY('205')}}</top>
+						<width>{{ScaleX('25')}}</width>
+						<height>{{ScaleY('260')}}</height>
 						<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 						<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 						<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -273,10 +273,10 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9000">
-				<left>30</left>
-				<top>300</top>
-				<width>220</width>
-				<height>313</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('300')}}</top>
+				<width>{{ScaleX('220')}}</width>
+				<height>{{ScaleY('313')}}</height>
 				<onleft>60</onleft>
 				<onright>60</onright>
 				<onup>9000</onup>
@@ -284,56 +284,56 @@
 				<itemgap>2</itemgap>
 				<control type="button" id="9">
 					<description>Configure Addon</description>
-					<width>220</width>
-					<height>43</height>
+					<width>{{ScaleX('220')}}</width>
+					<height>{{ScaleY('43')}}</height>
 					<label>24020</label>
 					<align>center</align>
 					<font>font12_title</font>
 				</control>
 				<control type="button" id="8">
 					<description>Update Addon button</description>
-					<width>220</width>
-					<height>43</height>
+					<width>{{ScaleX('220')}}</width>
+					<height>{{ScaleY('43')}}</height>
 					<label>24069</label>
 					<align>center</align>
 					<font>font12_title</font>
 				</control>
 				<control type="button" id="12">
 					<description>Launch Addon button</description>
-					<width>220</width>
-					<height>43</height>
+					<width>{{ScaleX('220')}}</width>
+					<height>{{ScaleY('43')}}</height>
 					<label>518</label>
 					<align>center</align>
 					<font>font12_title</font>
 				</control>
 				<control type="button" id="6">
 					<description>Install/UnInstall Addon button</description>
-					<width>220</width>
-					<height>43</height>
+					<width>{{ScaleX('220')}}</width>
+					<height>{{ScaleY('43')}}</height>
 					<label>24022</label>
 					<align>center</align>
 					<font>font12_title</font>
 				</control>
 				<control type="button" id="7">
 					<description>Enable/Disable Addon button</description>
-					<width>220</width>
-					<height>43</height>
+					<width>{{ScaleX('220')}}</width>
+					<height>{{ScaleY('43')}}</height>
 					<label>24021</label>
 					<align>center</align>
 					<font>font12_title</font>
 				</control>
 				<control type="button" id="11">
 					<description>Rollback button</description>
-					<width>220</width>
-					<height>43</height>
+					<width>{{ScaleX('220')}}</width>
+					<height>{{ScaleY('43')}}</height>
 					<label>24048</label>
 					<align>center</align>
 					<font>font12_title</font>
 				</control>
 				<control type="button" id="10">
 					<description>Changelog button</description>
-					<width>220</width>
-					<height>43</height>
+					<width>{{ScaleX('220')}}</width>
+					<height>{{ScaleY('43')}}</height>
 					<label>24036</label>
 					<align>center</align>
 					<font>font12_title</font>
@@ -341,30 +341,30 @@
 			</control>
 			<control type="group">
 				<visible>!IsEmpty(ListItem.Property(Addon.broken))</visible>
-				<left>0</left>
-				<top>600</top>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('600')}}</top>
 				<control type="image">
 					<description>background image</description>
-					<left>0</left>
-					<top>0</top>
-					<width>920</width>
-					<height>100</height>
-					<texture border="20">OverlayDialogBackground.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('920')}}</width>
+					<height>{{ScaleY('100')}}</height>
+					<texture border="{{ScaleBorder('20')}}">OverlayDialogBackground.png</texture>
 				</control>
 				<control type="image">
 					<description>Icon image</description>
-					<left>20</left>
-					<top>20</top>
-					<width>60</width>
-					<height>60</height>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('20')}}</top>
+					<width>{{ScaleX('60')}}</width>
+					<height>{{ScaleY('60')}}</height>
 					<texture>DefaultIconError.png</texture>
 				</control>
 				<control type="label">
 					<description>header label</description>
-					<left>100</left>
-					<top>15</top>
-					<width>800</width>
-					<height>25</height>
+					<left>{{ScaleX('100')}}</left>
+					<top>{{ScaleY('15')}}</top>
+					<width>{{ScaleX('800')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<font>font12_title</font>
 					<label>24096</label>
 					<align>left</align>
@@ -374,10 +374,10 @@
 				</control>
 				<control type="textbox">
 					<description>Reason label</description>
-					<left>100</left>
-					<top>37</top>
-					<width>800</width>
-					<height>48</height>
+					<left>{{ScaleX('100')}}</left>
+					<top>{{ScaleY('37')}}</top>
+					<width>{{ScaleX('800')}}</width>
+					<height>{{ScaleY('48')}}</height>
 					<font>font13</font>
 					<label>$INFO[ListItem.Property(Addon.broken)]</label>
 					<align>left</align>

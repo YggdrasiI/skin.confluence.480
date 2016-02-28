@@ -4,46 +4,46 @@
 	<allowoverlay>no</allowoverlay>
 	<coordinates>
 		<system>1</system>
-		<left>0</left>
-		<top>0</top>
+		<left>{{ScaleX('0')}}</left>
+		<top>{{ScaleY('0')}}</top>
 	</coordinates>
 	<controls>
 		<control type="group">
-			<left>360</left>
-			<animation effect="slide" start="700,0" end="0,0" time="300" tween="quadratic" easing="out" condition="![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowOpen</animation>
-			<animation effect="slide" start="-180,0" end="0,0" time="300" tween="quadratic" easing="out" condition="[Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="700,0" time="300" tween="quadratic" easing="out" condition="![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowClose</animation>
-			<animation effect="slide" start="0,0" end="-400,0" time="300" tween="quadratic" easing="out" condition="[Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowClose</animation>
+			<left>{{ScaleX('360')}}</left>
+			<animation effect="slide" start="{{ScaleBorder2('700,0')}}" end="{{ScaleBorder2('0,0')}}" time="300" tween="quadratic" easing="out" condition="![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowOpen</animation>
+			<animation effect="slide" start="{{ScaleBorder2('-180,0')}}" end="{{ScaleBorder2('0,0')}}" time="300" tween="quadratic" easing="out" condition="[Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowOpen</animation>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('700,0')}}" time="300" tween="quadratic" easing="out" condition="![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowClose</animation>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-400,0')}}" time="300" tween="quadratic" easing="out" condition="[Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowClose</animation>
 			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1320</width>
-				<height>720</height>
-				<texture border="15,0,0,0" flipx="true">MediaBladeSub.png</texture>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('1320')}}</width>
+				<height>{{ScaleY('720')}}</height>
+				<texture border="{{ScaleBorder('15,0,0,0')}}" flipx="true">MediaBladeSub.png</texture>
 			</control>
 			<control type="image">
 				<description>background image</description>
-				<left>667</left>
-				<top>-10</top>
-				<width>675</width>
-				<height>740</height>
-				<texture border="10">KeyboardEditArea.png</texture>
+				<left>{{ScaleX('667')}}</left>
+				<top>{{ScaleY('-10')}}</top>
+				<width>{{ScaleX('675')}}</width>
+				<height>{{ScaleY('740')}}</height>
+				<texture border="{{ScaleBorder('10')}}">KeyboardEditArea.png</texture>
 				<animation effect="fade" end="30" time="0" condition="true">conditional</animation>
 			</control>
 			<control type="image">
 				<description>Dialog Header image</description>
-				<left>40</left>
-				<top>16</top>
-				<width>595</width>
-				<height>40</height>
+				<left>{{ScaleX('40')}}</left>
+				<top>{{ScaleY('16')}}</top>
+				<width>{{ScaleX('595')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<texture>dialogheader.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>20</left>
-				<top>0</top>
-				<width>64</width>
-				<height>32</height>
+				<left>{{ScaleX('20')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('64')}}</width>
+				<height>{{ScaleY('32')}}</height>
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
@@ -60,10 +60,10 @@
 				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
 				<control type="label" id="411">
 					<description>header label</description>
-					<left>40</left>
-					<top>20</top>
-					<width>595</width>
-					<height>30</height>
+					<left>{{ScaleX('40')}}</left>
+					<top>{{ScaleY('20')}}</top>
+					<width>{{ScaleX('595')}}</width>
+					<height>{{ScaleY('30')}}</height>
 					<font>font13_title</font>
 					<label>1023</label>
 					<align>center</align>
@@ -73,10 +73,10 @@
 				</control>
 				<control type="label" id="412">
 					<description>Path label</description>
-					<left>40</left>
-					<top>680</top>
-					<width>595</width>
-					<height>30</height>
+					<left>{{ScaleX('40')}}</left>
+					<top>{{ScaleY('680')}}</top>
+					<width>{{ScaleX('595')}}</width>
+					<height>{{ScaleY('30')}}</height>
 					<font>font13</font>
 					<haspath>true</haspath>
 					<align>right</align>
@@ -85,10 +85,10 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="grouplist" id="9000">
-					<left>685</left>
-					<top>130</top>
-					<width>221</width>
-					<height>225</height>
+					<left>{{ScaleX('685')}}</left>
+					<top>{{ScaleY('130')}}</top>
+					<width>{{ScaleX('221')}}</width>
+					<height>{{ScaleY('225')}}</height>
 					<itemgap>5</itemgap>
 					<orientation>vertical</orientation>
 					<onleft>450</onleft>
@@ -97,90 +97,90 @@
 					<ondown>9000</ondown>
 					<control type="button" id="413">
 						<description>OK button</description>
-						<height>48</height>
+						<height>{{ScaleY('48')}}</height>
 						<align>center</align>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>186</label>
 					</control>
 					<control type="button" id="414">
 						<description>Cancel button</description>
-						<height>48</height>
+						<height>{{ScaleY('48')}}</height>
 						<align>center</align>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>222</label>
 					</control>
 					<control type="button" id="415">
 						<description>Create folder button</description>
-						<height>48</height>
+						<height>{{ScaleY('48')}}</height>
 						<align>center</align>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>119</label>
 					</control>
 					<control type="radiobutton" id="416">
 						<description>Flip Image button</description>
-						<height>48</height>
+						<height>{{ScaleY('48')}}</height>
 						<align>center</align>
 						<include>ButtonMediaSubCommonValues</include>
 						<label>749</label>
 					</control>
 				</control>
 				<control type="image">
-					<left>685</left>
-					<top>400</top>
-					<width>221</width>
-					<height>221</height>
-					<texture border="5">button-nofocus.png</texture>
+					<left>{{ScaleX('685')}}</left>
+					<top>{{ScaleY('400')}}</top>
+					<width>{{ScaleX('221')}}</width>
+					<height>{{ScaleY('221')}}</height>
+					<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<left>690</left>
-					<top>405</top>
-					<width>211</width>
-					<height>211</height>
+					<left>{{ScaleX('690')}}</left>
+					<top>{{ScaleY('405')}}</top>
+					<width>{{ScaleX('211')}}</width>
+					<height>{{ScaleY('211')}}</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<visible>!SubString(Control.GetLabel(416),*)</visible>
 				</control>
 				<control type="image">
-					<left>250</left>
-					<top>465</top>
-					<width>410</width>
-					<height>200</height>
+					<left>{{ScaleX('250')}}</left>
+					<top>{{ScaleY('465')}}</top>
+					<width>{{ScaleX('410')}}</width>
+					<height>{{ScaleY('200')}}</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" flipx="true">$INFO[ListItem.Icon]</texture>
 					<visible>SubString(Control.GetLabel(416),*)</visible>
 				</control>
 				<control type="panel" id="450">
-					<left>20</left>
-					<top>90</top>
-					<width>620</width>
-					<height>562</height>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('90')}}</top>
+					<width>{{ScaleX('620')}}</width>
+					<height>{{ScaleY('562')}}</height>
 					<onleft>9000</onleft>
 					<onright>60</onright>
 					<onup>450</onup>
 					<ondown>450</ondown>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="40" width="620">
+					<itemlayout height="{{ScaleY('40')}}" width="{{ScaleX('620')}}">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>620</width>
-							<height>41</height>
-							<texture border="5">MenuItemNF.png</texture>
+							<left>{{ScaleX('0')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('620')}}</width>
+							<height>{{ScaleY('41')}}</height>
+							<texture border="{{ScaleBorder('5')}}">MenuItemNF.png</texture>
 						</control>
 						<control type="image">
-							<left>10</left>
-							<top>2</top>
-							<width>38</width>
-							<height>38</height>
+							<left>{{ScaleX('10')}}</left>
+							<top>{{ScaleY('2')}}</top>
+							<width>{{ScaleX('38')}}</width>
+							<height>{{ScaleY('38')}}</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
-							<left>55</left>
-							<top>0</top>
-							<width>560</width>
-							<height>40</height>
+							<left>{{ScaleX('55')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('560')}}</width>
+							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -188,36 +188,36 @@
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
-					<focusedlayout height="40" width="620">
+					<focusedlayout height="{{ScaleY('40')}}" width="{{ScaleX('620')}}">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>620</width>
-							<height>41</height>
+							<left>{{ScaleX('0')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('620')}}</width>
+							<height>{{ScaleY('41')}}</height>
 							<visible>!Control.HasFocus(450)</visible>
-							<texture border="5">MenuItemNF.png</texture>
+							<texture border="{{ScaleBorder('5')}}">MenuItemNF.png</texture>
 						</control>
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>620</width>
-							<height>41</height>
+							<left>{{ScaleX('0')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('620')}}</width>
+							<height>{{ScaleY('41')}}</height>
 							<visible>Control.HasFocus(450)</visible>
-							<texture border="5">MenuItemFO.png</texture>
+							<texture border="{{ScaleBorder('5')}}">MenuItemFO.png</texture>
 						</control>
 						<control type="image">
-							<left>10</left>
-							<top>2</top>
-							<width>38</width>
-							<height>38</height>
+							<left>{{ScaleX('10')}}</left>
+							<top>{{ScaleY('2')}}</top>
+							<width>{{ScaleX('38')}}</width>
+							<height>{{ScaleY('38')}}</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
-							<left>55</left>
-							<top>0</top>
-							<width>560</width>
-							<height>40</height>
+							<left>{{ScaleX('55')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('560')}}</width>
+							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -227,37 +227,37 @@
 					</focusedlayout>
 				</control>
 				<control type="panel" id="451">
-					<left>20</left>
-					<top>90</top>
-					<width>620</width>
-					<height>562</height>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('90')}}</top>
+					<width>{{ScaleX('620')}}</width>
+					<height>{{ScaleY('562')}}</height>
 					<onleft>9000</onleft>
 					<onright>60</onright>
 					<onup>451</onup>
 					<ondown>451</ondown>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="40" width="620">
+					<itemlayout height="{{ScaleY('40')}}" width="{{ScaleX('620')}}">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>620</width>
-							<height>41</height>
-							<texture border="5">MenuItemNF.png</texture>
+							<left>{{ScaleX('0')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('620')}}</width>
+							<height>{{ScaleY('41')}}</height>
+							<texture border="{{ScaleBorder('5')}}">MenuItemNF.png</texture>
 						</control>
 						<control type="image">
-							<left>10</left>
-							<top>2</top>
-							<width>38</width>
-							<height>38</height>
+							<left>{{ScaleX('10')}}</left>
+							<top>{{ScaleY('2')}}</top>
+							<width>{{ScaleX('38')}}</width>
+							<height>{{ScaleY('38')}}</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
-							<left>55</left>
-							<top>0</top>
-							<width>560</width>
-							<height>40</height>
+							<left>{{ScaleX('55')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('560')}}</width>
+							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -265,36 +265,36 @@
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
-					<focusedlayout height="40" width="620">
+					<focusedlayout height="{{ScaleY('40')}}" width="{{ScaleX('620')}}">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>620</width>
-							<height>41</height>
+							<left>{{ScaleX('0')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('620')}}</width>
+							<height>{{ScaleY('41')}}</height>
 							<visible>!Control.HasFocus(451)</visible>
-							<texture border="5">MenuItemNF.png</texture>
+							<texture border="{{ScaleBorder('5')}}">MenuItemNF.png</texture>
 						</control>
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>620</width>
-							<height>41</height>
+							<left>{{ScaleX('0')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('620')}}</width>
+							<height>{{ScaleY('41')}}</height>
 							<visible>Control.HasFocus(451)</visible>
-							<texture border="5">MenuItemFO.png</texture>
+							<texture border="{{ScaleBorder('5')}}">MenuItemFO.png</texture>
 						</control>
 						<control type="image">
-							<left>10</left>
-							<top>2</top>
-							<width>38</width>
-							<height>38</height>
+							<left>{{ScaleX('10')}}</left>
+							<top>{{ScaleY('2')}}</top>
+							<width>{{ScaleX('38')}}</width>
+							<height>{{ScaleY('38')}}</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
-							<left>55</left>
-							<top>0</top>
-							<width>560</width>
-							<height>40</height>
+							<left>{{ScaleX('55')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('560')}}</width>
+							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -304,10 +304,10 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="60">
-					<left>640</left>
-					<top>90</top>
-					<width>25</width>
-					<height>561</height>
+					<left>{{ScaleX('640')}}</left>
+					<top>{{ScaleY('90')}}</top>
+					<width>{{ScaleX('25')}}</width>
+					<height>{{ScaleY('561')}}</height>
 					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -320,10 +320,10 @@
 				</control>
 				<control type="label">
 					<description>Page label</description>
-					<left>685</left>
-					<top>680</top>
-					<width>221</width>
-					<height>30</height>
+					<left>{{ScaleX('685')}}</left>
+					<top>{{ScaleY('680')}}</top>
+					<width>{{ScaleX('221')}}</width>
+					<height>{{ScaleY('30')}}</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<textcolor>grey</textcolor>
@@ -334,10 +334,10 @@
 				</control>
 				<control type="label">
 					<description>Page label</description>
-					<left>685</left>
-					<top>680</top>
-					<width>221</width>
-					<height>30</height>
+					<left>{{ScaleX('685')}}</left>
+					<top>{{ScaleY('680')}}</top>
+					<width>{{ScaleX('221')}}</width>
+					<height>{{ScaleY('30')}}</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<textcolor>grey</textcolor>

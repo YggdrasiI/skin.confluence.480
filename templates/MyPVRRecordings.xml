@@ -6,10 +6,10 @@
 	<controls>
 		<include>CommonBackground</include>
 		<control type="image">
-			<left>0</left>
-			<top>100r</top>
-			<width>1280</width>
-			<height>100</height>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('100r')}}</top>
+			<width>{{ScaleX('1280')}}</width>
+			<height>{{ScaleY('100')}}</height>
 			<texture>floor.png</texture>
 			<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
@@ -20,32 +20,32 @@
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(50)</visible>
 				<control type="image">
-					<left>50</left>
-					<top>60</top>
-					<width>840</width>
-					<height>600</height>
-					<texture border="15">ContentPanel.png</texture>
+					<left>{{ScaleX('50')}}</left>
+					<top>{{ScaleY('60')}}</top>
+					<width>{{ScaleX('840')}}</width>
+					<height>{{ScaleY('600')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<left>50</left>
-					<top>652</top>
-					<width>840</width>
-					<height>64</height>
-					<texture border="15">ContentPanelMirror.png</texture>
+					<left>{{ScaleX('50')}}</left>
+					<top>{{ScaleY('652')}}</top>
+					<width>{{ScaleX('840')}}</width>
+					<height>{{ScaleY('64')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanelMirror.png</texture>
 				</control>
 				<control type="image">
-					<left>900</left>
-					<top>60</top>
-					<width>330</width>
-					<height>600</height>
-					<texture border="15">ContentPanel.png</texture>
+					<left>{{ScaleX('900')}}</left>
+					<top>{{ScaleY('60')}}</top>
+					<width>{{ScaleX('330')}}</width>
+					<height>{{ScaleY('600')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<left>900</left>
-					<top>652</top>
-					<width>330</width>
-					<height>64</height>
-					<texture border="15">ContentPanelMirror.png</texture>
+					<left>{{ScaleX('900')}}</left>
+					<top>{{ScaleY('652')}}</top>
+					<width>{{ScaleX('330')}}</width>
+					<height>{{ScaleY('64')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanelMirror.png</texture>
 				</control>
 			</control>
 		</control>
@@ -57,10 +57,10 @@
 			<visible>Control.IsVisible(50)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="list" id="50">
-				<left>70</left>
-				<top>75</top>
-				<width>760</width>
-				<height>561</height>
+				<left>{{ScaleX('70')}}</left>
+				<top>{{ScaleY('75')}}</top>
+				<width>{{ScaleX('760')}}</width>
+				<height>{{ScaleY('561')}}</height>
 				<onleft>102</onleft>
 				<onright>72</onright>
 				<onup>50</onup>
@@ -68,28 +68,28 @@
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>72</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="40" width="760">
+				<itemlayout height="{{ScaleY('40')}}" width="{{ScaleX('760')}}">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>760</width>
-						<height>41</height>
-						<texture border="2">MenuItemNF.png</texture>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('760')}}</width>
+						<height>{{ScaleY('41')}}</height>
+						<texture border="{{ScaleBorder('2')}}">MenuItemNF.png</texture>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
-						<left>10</left>
-						<top>5</top>
-						<width>30</width>
-						<height>30</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('30')}}</width>
+						<height>{{ScaleY('30')}}</height>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
-						<left>50</left>
-						<top>0</top>
-						<width>605</width>
-						<height>40</height>
+						<left>{{ScaleX('50')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('605')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -98,10 +98,10 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>225</left>
-						<top>0</top>
-						<width>500</width>
-						<height>40</height>
+						<left>{{ScaleX('225')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('500')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -110,62 +110,62 @@
 						<label>$INFO[ListItem.Date]</label>
 					</control>
 					<control type="image">
-						<left>730</left>
-						<top>14</top>
-						<width>16</width>
-						<height>16</height>
+						<left>{{ScaleX('730')}}</left>
+						<top>{{ScaleY('14')}}</top>
+						<width>{{ScaleX('16')}}</width>
+						<height>{{ScaleY('16')}}</height>
 						<texture>OverlayWatching.png</texture>
 						<visible>ListItem.IsResumable</visible>
 					</control>
 					<control type="image">
-						<left>730</left>
-						<top>14</top>
-						<width>20</width>
-						<height>16</height>
+						<left>{{ScaleX('730')}}</left>
+						<top>{{ScaleY('14')}}</top>
+						<width>{{ScaleX('20')}}</width>
+						<height>{{ScaleY('16')}}</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 				</itemlayout>
-				<focusedlayout height="40" width="760">
+				<focusedlayout height="{{ScaleY('40')}}" width="{{ScaleX('760')}}">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>760</width>
-						<height>41</height>
-						<texture border="2">MenuItemFO.png</texture>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('760')}}</width>
+						<height>{{ScaleY('41')}}</height>
+						<texture border="{{ScaleBorder('2')}}">MenuItemFO.png</texture>
 						<visible>Control.HasFocus(50)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>760</width>
-						<height>41</height>
-						<texture border="2">MenuItemNF.png</texture>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('760')}}</width>
+						<height>{{ScaleY('41')}}</height>
+						<texture border="{{ScaleBorder('2')}}">MenuItemNF.png</texture>
 						<include>VisibleFadeEffect</include>
 						<visible>!Control.HasFocus(50)</visible>
 					</control>
 					<control type="image">
-						<left>560</left>
-						<top>5</top>
-						<width>200</width>
-						<height>31</height>
-						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
+						<left>{{ScaleX('560')}}</left>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('200')}}</width>
+						<height>{{ScaleY('31')}}</height>
+						<texture border="{{ScaleBorder('0,0,14,0')}}">MediaItemDetailBG.png</texture>
 						<visible>Control.HasFocus(50) + !IsEmpty(ListItem.Date)</visible>
 					</control>
 					<control type="image">
-						<left>10</left>
-						<top>5</top>
-						<width>30</width>
-						<height>30</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('30')}}</width>
+						<height>{{ScaleY('30')}}</height>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
-						<left>50</left>
-						<top>0</top>
-						<width>630</width>
-						<height>40</height>
+						<left>{{ScaleX('50')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('630')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -174,10 +174,10 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>225</left>
-						<top>0</top>
-						<width>500</width>
-						<height>40</height>
+						<left>{{ScaleX('225')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('500')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -186,28 +186,28 @@
 						<label>$INFO[ListItem.Date]</label>
 					</control>
 					<control type="image">
-						<left>730</left>
-						<top>14</top>
-						<width>16</width>
-						<height>16</height>
+						<left>{{ScaleX('730')}}</left>
+						<top>{{ScaleY('14')}}</top>
+						<width>{{ScaleX('16')}}</width>
+						<height>{{ScaleY('16')}}</height>
 						<texture>OverlayWatching.png</texture>
 						<visible>ListItem.IsResumable</visible>
 					</control>
 					<control type="image">
-						<left>730</left>
-						<top>14</top>
-						<width>20</width>
-						<height>16</height>
+						<left>{{ScaleX('730')}}</left>
+						<top>{{ScaleY('14')}}</top>
+						<width>{{ScaleX('20')}}</width>
+						<height>{{ScaleY('16')}}</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="72">
-				<left>850</left>
-				<top>78</top>
-				<width>25</width>
-				<height>560</height>
+				<left>{{ScaleX('850')}}</left>
+				<top>{{ScaleY('78')}}</top>
+				<width>{{ScaleX('25')}}</width>
+				<height>{{ScaleY('560')}}</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -219,12 +219,12 @@
 				<orientation>vertical</orientation>
 			</control>
 			<control type="label">
-				<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
+				<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-90,0')}}" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 				<description>Page Count Label</description>
 				<right>40</right>
-				<top>53r</top>
-				<width>500</width>
-				<height>20</height>
+				<top>{{ScaleY('53r')}}</top>
+				<width>{{ScaleX('500')}}</width>
+				<height>{{ScaleY('20')}}</height>
 				<font>font12</font>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>
@@ -234,13 +234,13 @@
 				<include>Window_OpenClose_Animation</include>
 			</control>
 			<control type="group">
-				<left>910</left>
-				<top>80</top>
+				<left>{{ScaleX('910')}}</left>
+				<top>{{ScaleY('80')}}</top>
 				<control type="image">
-					<left>10</left>
-					<top>0</top>
-					<width>290</width>
-					<height>230</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('230')}}</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture fallback="DefaultVideoCover.png">$INFO[Container(50).ListItem.Icon]</texture>
@@ -248,10 +248,10 @@
 					<bordersize>8</bordersize>
 				</control>
 				<control type="fadelabel">
-					<left>10</left>
-					<top>230</top>
-					<width>290</width>
-					<height>25</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('230')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[Container(50).ListItem.Title]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -263,10 +263,10 @@
 				</control>
 				<control type="textbox">
 					<description>Description Value for TV Show</description>
-					<left>10</left>
-					<top>272</top>
-					<width>290</width>
-					<height>223</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('272')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('223')}}</height>
 					<font>font13</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>
@@ -275,10 +275,10 @@
 				</control>
 				<control type="label">
 					<description>Disk usage text</description>
-					<left>10</left>
-					<top>525</top>
-					<width>290</width>
-					<height>20</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('525')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('20')}}</height>
 					<label>$INFO[PVR.backenddiskspace]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -289,10 +289,10 @@
 				</control>
 				<control type="progress">
 					<description>Disk usage bar</description>
-					<left>10</left>
-					<top>548</top>
-					<width>290</width>
-					<height>12</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('548')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('12')}}</height>
 					<info>PVR.backenddiskspaceprogr</info><visible>!IntegerGreaterThan(PVR.backenddiskspaceprogr,100)</visible></control>
 			</control>
 		</control>
@@ -300,10 +300,10 @@
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
 		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>1280</width>
-			<height>720</height>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('0')}}</top>
+			<width>{{ScaleX('1280')}}</width>
+			<height>{{ScaleY('720')}}</height>
 			<texture>black-back.png</texture>
 			<animation effect="fade" time="300">Visible</animation>
 			<animation effect="fade" time="150">Hidden</animation>

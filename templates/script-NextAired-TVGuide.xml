@@ -13,10 +13,10 @@
 		<control type="group">
 			<visible>!IsEmpty(Window(home).Property(TVGuide.BackgroundFanart))</visible>
 			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('1280')}}</width>
+				<height>{{ScaleY('720')}}</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$INFO[Container(200).ListItem.Property(Fanart)]</texture>
 				<visible>Control.HasFocus(200)</visible>
@@ -25,10 +25,10 @@
 				<animation effect="fade" time="450">Hidden</animation>
 			</control>
 			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('1280')}}</width>
+				<height>{{ScaleY('720')}}</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$INFO[Container(201).ListItem.Property(Fanart)]</texture>
 				<visible>Control.HasFocus(201)</visible>
@@ -37,10 +37,10 @@
 				<animation effect="fade" time="450">Hidden</animation>
 			</control>
 			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('1280')}}</width>
+				<height>{{ScaleY('720')}}</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$INFO[Container(202).ListItem.Property(Fanart)]</texture>
 				<visible>Control.HasFocus(202)</visible>
@@ -49,10 +49,10 @@
 				<animation effect="fade" time="450">Hidden</animation>
 			</control>
 			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('1280')}}</width>
+				<height>{{ScaleY('720')}}</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$INFO[Container(203).ListItem.Property(Fanart)]</texture>
 				<visible>Control.HasFocus(203)</visible>
@@ -61,10 +61,10 @@
 				<animation effect="fade" time="450">Hidden</animation>
 			</control>
 			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('1280')}}</width>
+				<height>{{ScaleY('720')}}</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$INFO[Container(204).ListItem.Property(Fanart)]</texture>
 				<visible>Control.HasFocus(204)</visible>
@@ -73,10 +73,10 @@
 				<animation effect="fade" time="450">Hidden</animation>
 			</control>
 			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('1280')}}</width>
+				<height>{{ScaleY('720')}}</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$INFO[Container(205).ListItem.Property(Fanart)]</texture>
 				<visible>Control.HasFocus(205)</visible>
@@ -85,10 +85,10 @@
 				<animation effect="fade" time="450">Hidden</animation>
 			</control>
 			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('1280')}}</width>
+				<height>{{ScaleY('720')}}</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$INFO[Container(206).ListItem.Property(Fanart)]</texture>
 				<visible>Control.HasFocus(206)</visible>
@@ -98,29 +98,29 @@
 			</control>
 		</control>
 		<control type="image">
-			<left>0</left>
-			<top>100r</top>
-			<width>1280</width>
-			<height>100</height>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('100r')}}</top>
+			<width>{{ScaleX('1280')}}</width>
+			<height>{{ScaleY('100')}}</height>
 			<texture>floor.png</texture>
 			<aspectratio>stretch</aspectratio>
-			<animation effect="slide" start="0,10" end="0,0" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,10" time="150" condition="Window.Next(Home)">WindowClose</animation>
+			<animation effect="slide" start="{{ScaleBorder2('0,10')}}" end="{{ScaleBorder2('0,0')}}" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,10')}}" time="150" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
 		<control type="image">
 			<description>Section header image</description>
-			<left>20</left>
-			<top>3</top>
-			<width>35</width>
-			<height>35</height>
+			<left>{{ScaleX('20')}}</left>
+			<top>{{ScaleY('3')}}</top>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
 			<aspectratio>keep</aspectratio>
 			<texture>icon_video.png</texture>
 		</control>
 		<control type="grouplist">
-			<left>65</left>
-			<top>5</top>
-			<width>1000</width>
-			<height>30</height>
+			<left>{{ScaleX('65')}}</left>
+			<top>{{ScaleY('5')}}</top>
+			<width>{{ScaleX('1000')}}</width>
+			<height>{{ScaleY('30')}}</height>
 			<orientation>horizontal</orientation>
 			<align>left</align>
 			<itemgap>5</itemgap>
@@ -135,37 +135,37 @@
 		</control>
 		<control type="grouplist" id="2000">
 			<include>Window_OpenClose_Animation</include>
-			<left>40</left>
-			<top>60</top>
-			<width>1200</width>
-			<height>660</height>
+			<left>{{ScaleX('40')}}</left>
+			<top>{{ScaleY('60')}}</top>
+			<width>{{ScaleX('1200')}}</width>
+			<height>{{ScaleY('660')}}</height>
 			<orientation>horizontal</orientation>
 			<align>center</align>
 			<itemgap>0</itemgap>
 			<control type="group">
 				<description>Monday</description>
 				<visible>IntegerGreaterThan(Container(200).NumItems,0)</visible>
-				<width>300</width>
-				<height>660</height>
+				<width>{{ScaleX('300')}}</width>
+				<height>{{ScaleY('660')}}</height>
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>300</width>
-					<height>600</height>
-					<texture border="15">ContentPanel.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('300')}}</width>
+					<height>{{ScaleY('600')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<top>592</top>
-					<width>300</width>
-					<height>64</height>
-					<texture border="15">ContentPanelMirror.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('592')}}</top>
+					<width>{{ScaleX('300')}}</width>
+					<height>{{ScaleY('64')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanelMirror.png</texture>
 				</control>
 				<control type="label">
-					<left>20</left>
-					<top>13</top>
-					<width>260</width>
-					<height>20</height>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('13')}}</top>
+					<width>{{ScaleX('260')}}</width>
+					<height>{{ScaleY('20')}}</height>
 					<label>$LOCALIZE[11]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -173,10 +173,10 @@
 					<textcolor>white</textcolor>
 				</control>
 				<control type="panel" id="200">
-					<left>10</left>
-					<top>40</top>
-					<width>280</width>
-					<height>530</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('40')}}</top>
+					<width>{{ScaleX('280')}}</width>
+					<height>{{ScaleY('530')}}</height>
 					<scrolltime>200</scrolltime>
 					<onup>200</onup>
 					<ondown>200</ondown>
@@ -188,27 +188,27 @@
 			<control type="group">
 				<description>Tuesday</description>
 				<visible>IntegerGreaterThan(Container(201).NumItems,0)</visible>
-				<width>300</width>
-				<height>660</height>
+				<width>{{ScaleX('300')}}</width>
+				<height>{{ScaleY('660')}}</height>
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>300</width>
-					<height>600</height>
-					<texture border="15">ContentPanel.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('300')}}</width>
+					<height>{{ScaleY('600')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<top>592</top>
-					<width>300</width>
-					<height>64</height>
-					<texture border="15">ContentPanelMirror.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('592')}}</top>
+					<width>{{ScaleX('300')}}</width>
+					<height>{{ScaleY('64')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanelMirror.png</texture>
 				</control>
 				<control type="label">
-					<left>20</left>
-					<top>13</top>
-					<width>260</width>
-					<height>20</height>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('13')}}</top>
+					<width>{{ScaleX('260')}}</width>
+					<height>{{ScaleY('20')}}</height>
 					<label>$LOCALIZE[12]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -216,10 +216,10 @@
 					<textcolor>white</textcolor>
 				</control>
 				<control type="panel" id="201">
-					<left>10</left>
-					<top>40</top>
-					<width>280</width>
-					<height>530</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('40')}}</top>
+					<width>{{ScaleX('280')}}</width>
+					<height>{{ScaleY('530')}}</height>
 					<scrolltime>200</scrolltime>
 					<onup>201</onup>
 					<ondown>201</ondown>
@@ -231,27 +231,27 @@
 			<control type="group">
 				<description>Wednesday</description>
 				<visible>IntegerGreaterThan(Container(202).NumItems,0)</visible>
-				<width>300</width>
-				<height>660</height>
+				<width>{{ScaleX('300')}}</width>
+				<height>{{ScaleY('660')}}</height>
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>300</width>
-					<height>600</height>
-					<texture border="15">ContentPanel.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('300')}}</width>
+					<height>{{ScaleY('600')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<top>592</top>
-					<width>300</width>
-					<height>64</height>
-					<texture border="15">ContentPanelMirror.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('592')}}</top>
+					<width>{{ScaleX('300')}}</width>
+					<height>{{ScaleY('64')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanelMirror.png</texture>
 				</control>
 				<control type="label">
-					<left>20</left>
-					<top>13</top>
-					<width>260</width>
-					<height>20</height>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('13')}}</top>
+					<width>{{ScaleX('260')}}</width>
+					<height>{{ScaleY('20')}}</height>
 					<label>$LOCALIZE[13]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -259,10 +259,10 @@
 					<textcolor>white</textcolor>
 				</control>
 				<control type="panel" id="202">
-					<left>10</left>
-					<top>40</top>
-					<width>280</width>
-					<height>530</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('40')}}</top>
+					<width>{{ScaleX('280')}}</width>
+					<height>{{ScaleY('530')}}</height>
 					<scrolltime>200</scrolltime>
 					<onup>202</onup>
 					<ondown>202</ondown>
@@ -274,27 +274,27 @@
 			<control type="group">
 				<description>Thursday</description>
 				<visible>IntegerGreaterThan(Container(203).NumItems,0)</visible>
-				<width>300</width>
-				<height>660</height>
+				<width>{{ScaleX('300')}}</width>
+				<height>{{ScaleY('660')}}</height>
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>300</width>
-					<height>600</height>
-					<texture border="15">ContentPanel.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('300')}}</width>
+					<height>{{ScaleY('600')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<top>592</top>
-					<width>300</width>
-					<height>64</height>
-					<texture border="15">ContentPanelMirror.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('592')}}</top>
+					<width>{{ScaleX('300')}}</width>
+					<height>{{ScaleY('64')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanelMirror.png</texture>
 				</control>
 				<control type="label">
-					<left>20</left>
-					<top>13</top>
-					<width>260</width>
-					<height>20</height>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('13')}}</top>
+					<width>{{ScaleX('260')}}</width>
+					<height>{{ScaleY('20')}}</height>
 					<label>$LOCALIZE[14]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -302,10 +302,10 @@
 					<textcolor>white</textcolor>
 				</control>
 				<control type="panel" id="203">
-					<left>10</left>
-					<top>40</top>
-					<width>280</width>
-					<height>530</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('40')}}</top>
+					<width>{{ScaleX('280')}}</width>
+					<height>{{ScaleY('530')}}</height>
 					<scrolltime>200</scrolltime>
 					<onup>203</onup>
 					<ondown>203</ondown>
@@ -317,27 +317,27 @@
 			<control type="group">
 				<description>Friday</description>
 				<visible>IntegerGreaterThan(Container(204).NumItems,0)</visible>
-				<width>300</width>
-				<height>660</height>
+				<width>{{ScaleX('300')}}</width>
+				<height>{{ScaleY('660')}}</height>
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>300</width>
-					<height>600</height>
-					<texture border="15">ContentPanel.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('300')}}</width>
+					<height>{{ScaleY('600')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<top>592</top>
-					<width>300</width>
-					<height>64</height>
-					<texture border="15">ContentPanelMirror.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('592')}}</top>
+					<width>{{ScaleX('300')}}</width>
+					<height>{{ScaleY('64')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanelMirror.png</texture>
 				</control>
 				<control type="label">
-					<left>20</left>
-					<top>13</top>
-					<width>260</width>
-					<height>20</height>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('13')}}</top>
+					<width>{{ScaleX('260')}}</width>
+					<height>{{ScaleY('20')}}</height>
 					<label>$LOCALIZE[15]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -345,10 +345,10 @@
 					<textcolor>white</textcolor>
 				</control>
 				<control type="panel" id="204">
-					<left>10</left>
-					<top>40</top>
-					<width>280</width>
-					<height>530</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('40')}}</top>
+					<width>{{ScaleX('280')}}</width>
+					<height>{{ScaleY('530')}}</height>
 					<scrolltime>200</scrolltime>
 					<onup>204</onup>
 					<ondown>204</ondown>
@@ -360,27 +360,27 @@
 			<control type="group">
 				<description>Saturday</description>
 				<visible>IntegerGreaterThan(Container(205).NumItems,0)</visible>
-				<width>300</width>
-				<height>660</height>
+				<width>{{ScaleX('300')}}</width>
+				<height>{{ScaleY('660')}}</height>
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>300</width>
-					<height>600</height>
-					<texture border="15">ContentPanel.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('300')}}</width>
+					<height>{{ScaleY('600')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<top>592</top>
-					<width>300</width>
-					<height>64</height>
-					<texture border="15">ContentPanelMirror.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('592')}}</top>
+					<width>{{ScaleX('300')}}</width>
+					<height>{{ScaleY('64')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanelMirror.png</texture>
 				</control>
 				<control type="label">
-					<left>20</left>
-					<top>13</top>
-					<width>260</width>
-					<height>20</height>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('13')}}</top>
+					<width>{{ScaleX('260')}}</width>
+					<height>{{ScaleY('20')}}</height>
 					<label>$LOCALIZE[16]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -388,10 +388,10 @@
 					<textcolor>white</textcolor>
 				</control>
 				<control type="panel" id="205">
-					<left>10</left>
-					<top>40</top>
-					<width>280</width>
-					<height>530</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('40')}}</top>
+					<width>{{ScaleX('280')}}</width>
+					<height>{{ScaleY('530')}}</height>
 					<scrolltime>200</scrolltime>
 					<onup>205</onup>
 					<ondown>205</ondown>
@@ -403,27 +403,27 @@
 			<control type="group">
 				<description>Sunday</description>
 				<visible>IntegerGreaterThan(Container(206).NumItems,0)</visible>
-				<width>300</width>
-				<height>660</height>
+				<width>{{ScaleX('300')}}</width>
+				<height>{{ScaleY('660')}}</height>
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>300</width>
-					<height>600</height>
-					<texture border="15">ContentPanel.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('300')}}</width>
+					<height>{{ScaleY('600')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<top>592</top>
-					<width>300</width>
-					<height>64</height>
-					<texture border="15">ContentPanelMirror.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('592')}}</top>
+					<width>{{ScaleX('300')}}</width>
+					<height>{{ScaleY('64')}}</height>
+					<texture border="{{ScaleBorder('15')}}">ContentPanelMirror.png</texture>
 				</control>
 				<control type="label">
-					<left>20</left>
-					<top>13</top>
-					<width>260</width>
-					<height>20</height>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('13')}}</top>
+					<width>{{ScaleX('260')}}</width>
+					<height>{{ScaleY('20')}}</height>
 					<label>$LOCALIZE[17]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -431,10 +431,10 @@
 					<textcolor>white</textcolor>
 				</control>
 				<control type="panel" id="206">
-					<left>10</left>
-					<top>40</top>
-					<width>280</width>
-					<height>530</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('40')}}</top>
+					<width>{{ScaleX('280')}}</width>
+					<height>{{ScaleY('530')}}</height>
 					<scrolltime>200</scrolltime>
 					<onup>206</onup>
 					<ondown>206</ondown>
@@ -448,40 +448,40 @@
 			<include>Window_OpenClose_Animation</include>
 			<control type="image">
 				<description>left Arrow</description>
-				<left>10</left>
-				<top>120</top>
-				<width>30</width>
-				<height>40</height>
+				<left>{{ScaleX('10')}}</left>
+				<top>{{ScaleY('120')}}</top>
+				<width>{{ScaleX('30')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<texture>arrow-big-left.png</texture>
 				<visible>Container(2000).HasPrevious</visible>
 				<include>VisibleFadeEffect</include>
 			</control>
 			<control type="image">
 				<description>left Arrow</description>
-				<left>10</left>
-				<top>170r</top>
-				<width>30</width>
-				<height>40</height>
+				<left>{{ScaleX('10')}}</left>
+				<top>{{ScaleY('170r')}}</top>
+				<width>{{ScaleX('30')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<texture>arrow-big-left.png</texture>
 				<visible>Container(2000).HasPrevious</visible>
 				<include>VisibleFadeEffect</include>
 			</control>
 			<control type="image">
 				<description>right Arrow</description>
-				<left>1240</left>
-				<top>120</top>
-				<width>30</width>
-				<height>40</height>
+				<left>{{ScaleX('1240')}}</left>
+				<top>{{ScaleY('120')}}</top>
+				<width>{{ScaleX('30')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<texture>arrow-big-right.png</texture>
 				<visible>Container(2000).HasNext</visible>
 				<include>VisibleFadeEffect</include>
 			</control>
 			<control type="image">
 				<description>right Arrow</description>
-				<left>1240</left>
-				<top>170r</top>
-				<width>30</width>
-				<height>40</height>
+				<left>{{ScaleX('1240')}}</left>
+				<top>{{ScaleY('170r')}}</top>
+				<width>{{ScaleX('30')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<texture>arrow-big-right.png</texture>
 				<visible>Container(2000).HasNext</visible>
 				<include>VisibleFadeEffect</include>
@@ -491,13 +491,13 @@
 		<include>MainWindowMouseButtons</include>
 		<include>BehindDialogFadeOut</include>
 		<control type="group">
-			<left>-250</left>
+			<left>{{ScaleX('-250')}}</left>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
-				<left>0</left>
-				<top>110</top>
-				<width>250</width>
-				<height>600</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('110')}}</top>
+				<width>{{ScaleX('250')}}</width>
+				<height>{{ScaleY('600')}}</height>
 				<onleft>9000</onleft>
 				<onright>200</onright>
 				<onup>9000</onup>
@@ -506,14 +506,14 @@
 				<itemgap>0</itemgap>
 				<control type="image" id="2">
 					<description>LOGO</description>
-					<width>250</width>
-					<height>150</height>
+					<width>{{ScaleX('250')}}</width>
+					<height>{{ScaleY('150')}}</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[system.addonicon(script.tv.show.next.aired)]</texture>
 				</control>
 				<control type="label" id="7">
-					<width>250</width>
-					<height>35</height>
+					<width>{{ScaleX('250')}}</width>
+					<height>{{ScaleY('35')}}</height>
 					<font>font12</font>
 					<label>31006</label>
 					<textcolor>blue</textcolor>

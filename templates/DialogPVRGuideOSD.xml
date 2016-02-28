@@ -3,26 +3,26 @@
 	<defaultcontrol always="true">11</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>780</left>
-		<top>30</top>
+		<left>{{ScaleX('780')}}</left>
+		<top>{{ScaleY('30')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
 		<control type="group">
 			<control type="image">
 				<description>background image</description>
-				<left>0</left>
-				<top>0</top>
-				<width>480</width>
-				<height>660</height>
-				<texture border="40">DialogBack2.png</texture>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('480')}}</width>
+				<height>{{ScaleY('660')}}</height>
+				<texture border="{{ScaleBorder('40')}}">DialogBack2.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>390</left>
-				<top>15</top>
-				<width>64</width>
-				<height>32</height>
+				<left>{{ScaleX('390')}}</left>
+				<top>{{ScaleY('15')}}</top>
+				<width>{{ScaleX('64')}}</width>
+				<height>{{ScaleY('32')}}</height>
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
@@ -36,18 +36,18 @@
 			</control>
 			<control type="image">
 				<description>Dialog Header image</description>
-				<left>40</left>
-				<top>16</top>
-				<width>400</width>
-				<height>40</height>
+				<left>{{ScaleX('40')}}</left>
+				<top>{{ScaleY('16')}}</top>
+				<width>{{ScaleX('400')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<texture>dialogheader.png</texture>
 			</control>
 			<control type="label">
 				<description>header label</description>
-				<left>40</left>
-				<top>16</top>
-				<width>430</width>
-				<height>40</height>
+				<left>{{ScaleX('40')}}</left>
+				<top>{{ScaleY('16')}}</top>
+				<width>{{ScaleX('430')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<font>font12_title</font>
 				<label>$LOCALIZE[19222] - $INFO[VideoPlayer.ChannelName]</label>
 				<align>center</align>
@@ -57,10 +57,10 @@
 			</control>
 			<control type="label">
 				<description>Selected item's date</description>
-				<left>40</left>
-				<top>60</top>
-				<width>430</width>
-				<height>30</height>
+				<left>{{ScaleX('40')}}</left>
+				<top>{{ScaleY('60')}}</top>
+				<width>{{ScaleX('430')}}</width>
+				<height>{{ScaleY('30')}}</height>
 				<font>font13</font>
 				<textcolor>grey2</textcolor>
 				<label>$INFO[Container(11).ListItem.StartDate]</label>
@@ -68,10 +68,10 @@
 				<aligny>center</aligny>
 			</control>
 			<control type="list" id="11">
-				<left>30</left>
-				<top>100</top>
-				<width>410</width>
-				<height>490</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('100')}}</top>
+				<width>{{ScaleX('410')}}</width>
+				<height>{{ScaleY('490')}}</height>
 				<onleft>60</onleft>
 				<onright>60</onright>
 				<onup>11</onup>
@@ -79,20 +79,20 @@
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="35" width="410">
+				<itemlayout height="{{ScaleY('35')}}" width="{{ScaleX('410')}}">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>410</width>
-						<height>30</height>
-						<texture border="5">button-nofocus.png</texture>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('410')}}</width>
+						<height>{{ScaleY('30')}}</height>
+						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>100</width>
-						<height>30</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('100')}}</width>
+						<height>{{ScaleY('30')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -101,34 +101,34 @@
 						<label>$INFO[ListItem.StartTime]</label>
 					</control>
 					<control type="image">
-						<left>120</left>
-						<top>5</top>
-						<width>30</width>
-						<height>20</height>
+						<left>{{ScaleX('120')}}</left>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('30')}}</width>
+						<height>{{ScaleY('20')}}</height>
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
 					</control>
 					<control type="image">
-						<left>120</left>
-						<top>5</top>
-						<width>20</width>
-						<height>20</height>
+						<left>{{ScaleX('120')}}</left>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('20')}}</width>
+						<height>{{ScaleY('20')}}</height>
 						<texture>PVR-HasTimer.png</texture>
 						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 					</control>
 					<control type="image">
-						<left>60</left>
-						<top>7</top>
-						<width>16</width>
-						<height>16</height>
+						<left>{{ScaleX('60')}}</left>
+						<top>{{ScaleY('7')}}</top>
+						<width>{{ScaleX('16')}}</width>
+						<height>{{ScaleY('16')}}</height>
 						<texture>PVR-HasRecording.png</texture>
 						<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.HasTimer</visible>
 					</control>
 					<control type="label">
-						<left>100</left>
-						<top>0</top>
-						<width>300</width>
-						<height>30</height>
+						<left>{{ScaleX('100')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('300')}}</width>
+						<height>{{ScaleY('30')}}</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -138,10 +138,10 @@
 						<visible>![ListItem.IsRecording | ListItem.HasTimer]</visible>
 					</control>
 					<control type="label">
-						<left>150</left>
-						<top>0</top>
-						<width>250</width>
-						<height>30</height>
+						<left>{{ScaleX('150')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('250')}}</width>
+						<height>{{ScaleY('30')}}</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -151,30 +151,30 @@
 						<visible>ListItem.IsRecording | ListItem.HasTimer</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="35" width="410">
+				<focusedlayout height="{{ScaleY('35')}}" width="{{ScaleX('410')}}">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>410</width>
-						<height>30</height>
-						<texture border="5">button-nofocus.png</texture>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('410')}}</width>
+						<height>{{ScaleY('30')}}</height>
+						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 						<visible>!Control.HasFocus(11)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>410</width>
-						<height>30</height>
-						<texture border="5">button-focus2.png</texture>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('410')}}</width>
+						<height>{{ScaleY('30')}}</height>
+						<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
 						<visible>Control.HasFocus(11)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>100</width>
-						<height>30</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('100')}}</width>
+						<height>{{ScaleY('30')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -183,34 +183,34 @@
 						<label>$INFO[ListItem.StartTime]</label>
 					</control>
 					<control type="image">
-						<left>120</left>
-						<top>5</top>
-						<width>30</width>
-						<height>20</height>
+						<left>{{ScaleX('120')}}</left>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('30')}}</width>
+						<height>{{ScaleY('20')}}</height>
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
 					</control>
 					<control type="image">
-						<left>120</left>
-						<top>5</top>
-						<width>20</width>
-						<height>20</height>
+						<left>{{ScaleX('120')}}</left>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('20')}}</width>
+						<height>{{ScaleY('20')}}</height>
 						<texture>PVR-HasTimer.png</texture>
 						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 					</control>
 					<control type="image">
-						<left>60</left>
-						<top>7</top>
-						<width>16</width>
-						<height>16</height>
+						<left>{{ScaleX('60')}}</left>
+						<top>{{ScaleY('7')}}</top>
+						<width>{{ScaleX('16')}}</width>
+						<height>{{ScaleY('16')}}</height>
 						<texture>PVR-HasRecording.png</texture>
 						<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.HasTimer</visible>
 					</control>
 					<control type="label">
-						<left>100</left>
-						<top>0</top>
-						<width>300</width>
-						<height>30</height>
+						<left>{{ScaleX('100')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('300')}}</width>
+						<height>{{ScaleY('30')}}</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -220,10 +220,10 @@
 						<visible>![ListItem.IsRecording | ListItem.HasTimer]</visible>
 					</control>
 					<control type="label">
-						<left>150</left>
-						<top>0</top>
-						<width>250</width>
-						<height>30</height>
+						<left>{{ScaleX('150')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('250')}}</width>
+						<height>{{ScaleY('30')}}</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -235,10 +235,10 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>440</left>
-				<top>100</top>
-				<width>25</width>
-				<height>490</height>
+				<left>{{ScaleX('440')}}</left>
+				<top>{{ScaleY('100')}}</top>
+				<width>{{ScaleX('25')}}</width>
+				<height>{{ScaleY('490')}}</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -253,10 +253,10 @@
 			</control>
 			<control type="label">
 				<description>Page Count Label</description>
-				<left>50</left>
-				<top>610</top>
-				<width>400</width>
-				<height>20</height>
+				<left>{{ScaleX('50')}}</left>
+				<top>{{ScaleY('610')}}</top>
+				<width>{{ScaleX('400')}}</width>
+				<height>{{ScaleY('20')}}</height>
 				<font>font12</font>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>

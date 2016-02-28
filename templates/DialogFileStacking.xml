@@ -4,23 +4,23 @@
 	<include>dialogeffect</include>
 	<coordinates>
 		<system>1</system>
-		<left>315</left>
-		<top>260</top>
+		<left>{{ScaleX('315')}}</left>
+		<top>{{ScaleY('260')}}</top>
 	</coordinates>
 	<controls>
 		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>650</width>
-			<height>200</height>
-			<texture border="20">OverlayDialogBackground.png</texture>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('0')}}</top>
+			<width>{{ScaleX('650')}}</width>
+			<height>{{ScaleY('200')}}</height>
+			<texture border="{{ScaleBorder('20')}}">OverlayDialogBackground.png</texture>
 		</control>
 		<control type="button">
 			<description>Close Window button</description>
-			<left>560</left>
-			<top>5</top>
-			<width>64</width>
-			<height>32</height>
+			<left>{{ScaleX('560')}}</left>
+			<top>{{ScaleY('5')}}</top>
+			<width>{{ScaleX('64')}}</width>
+			<height>{{ScaleY('32')}}</height>
 			<label>-</label>
 			<font>-</font>
 			<onclick>PreviousMenu</onclick>
@@ -34,10 +34,10 @@
 		</control>
 		<control type="label">
 			<description>heading label</description>
-			<left>40</left>
-			<top>18</top>
-			<width>570</width>
-			<height>30</height>
+			<left>{{ScaleX('40')}}</left>
+			<top>{{ScaleY('18')}}</top>
+			<width>{{ScaleX('570')}}</width>
+			<height>{{ScaleY('30')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font13</font>
@@ -45,10 +45,10 @@
 			<textcolor>white</textcolor>
 		</control>
 		<control type="label">
-			<left>40</left>
-			<top>60</top>
-			<width>570</width>
-			<height>30</height>
+			<left>{{ScaleX('40')}}</left>
+			<top>{{ScaleY('60')}}</top>
+			<width>{{ScaleX('570')}}</width>
+			<height>{{ScaleY('30')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font12</font>
@@ -56,26 +56,26 @@
 			<textcolor>grey2</textcolor>
 		</control>
 		<control type="image">
-			<left>50</left>
-			<top>110</top>
-			<width>20</width>
-			<height>25</height>
+			<left>{{ScaleX('50')}}</left>
+			<top>{{ScaleY('110')}}</top>
+			<width>{{ScaleX('20')}}</width>
+			<height>{{ScaleY('25')}}</height>
 			<texture>scroll-left-focus.png</texture>
 			<visible>Container(450).HasPrevious</visible>
 		</control>
 		<control type="image">
-			<left>575</left>
-			<top>110</top>
-			<width>20</width>
-			<height>25</height>
+			<left>{{ScaleX('575')}}</left>
+			<top>{{ScaleY('110')}}</top>
+			<width>{{ScaleX('20')}}</width>
+			<height>{{ScaleY('25')}}</height>
 			<texture>scroll-right-focus.png</texture>
 			<visible>Container(450).HasNext</visible>
 		</control>
 		<control type="list" id="450">
-			<left>85</left>
-			<top>105</top>
-			<width>480</width>
-			<height>100</height>
+			<left>{{ScaleX('85')}}</left>
+			<top>{{ScaleY('105')}}</top>
+			<width>{{ScaleX('480')}}</width>
+			<height>{{ScaleY('100')}}</height>
 			<onleft>450</onleft>
 			<onright>450</onright>
 			<onup>450</onup>
@@ -83,32 +83,32 @@
 			<orientation>horizontal</orientation>
 			<viewtype label="535">list</viewtype>
 			<scrolltime>200</scrolltime>
-			<itemlayout width="40">
+			<itemlayout width="{{ScaleX('40')}}">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>38</width>
-					<height>32</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('38')}}</width>
+					<height>{{ScaleY('32')}}</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>StackNF.png</texture>
 				</control>
 			</itemlayout>
-			<focusedlayout width="40">
+			<focusedlayout width="{{ScaleX('40')}}">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>38</width>
-					<height>32</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('38')}}</width>
+					<height>{{ScaleY('32')}}</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>StackFO.png</texture>
 				</control>
 			</focusedlayout>
 		</control>
 		<control type="label">
-			<left>40</left>
-			<top>155</top>
-			<width>570</width>
-			<height>22</height>
+			<left>{{ScaleX('40')}}</left>
+			<top>{{ScaleY('155')}}</top>
+			<width>{{ScaleX('570')}}</width>
+			<height>{{ScaleY('22')}}</height>
 			<font>font13_title</font>
 			<align>center</align>
 			<info>Container(450).ListItem.Label</info>

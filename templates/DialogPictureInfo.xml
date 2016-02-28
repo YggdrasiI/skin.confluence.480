@@ -3,44 +3,44 @@
 	<defaultcontrol always="true">5</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>240</left>
-		<top>45</top>
+		<left>{{ScaleX('240')}}</left>
+		<top>{{ScaleY('45')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
 		<control type="group">
 			<control type="image">
 				<description>background image</description>
-				<left>0</left>
-				<top>0</top>
-				<width>800</width>
-				<height>630</height>
-				<texture border="40">DialogBack.png</texture>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('800')}}</width>
+				<height>{{ScaleY('630')}}</height>
+				<texture border="{{ScaleBorder('40')}}">DialogBack.png</texture>
 				<visible>!Window.IsVisible(Slideshow)</visible>
 			</control>
 			<control type="image">
 				<description>background image</description>
-				<left>0</left>
-				<top>0</top>
-				<width>800</width>
-				<height>630</height>
-				<texture border="40">DialogBack2.png</texture>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('800')}}</width>
+				<height>{{ScaleY('630')}}</height>
+				<texture border="{{ScaleBorder('40')}}">DialogBack2.png</texture>
 				<visible>Window.IsVisible(Slideshow)</visible>
 			</control>
 			<control type="image">
 				<description>Dialog Header image</description>
-				<left>40</left>
-				<top>16</top>
-				<width>720</width>
-				<height>40</height>
+				<left>{{ScaleX('40')}}</left>
+				<top>{{ScaleY('16')}}</top>
+				<width>{{ScaleX('720')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<texture>dialogheader.png</texture>
 			</control>
 			<control type="label">
 				<description>header label</description>
-				<left>40</left>
-				<top>20</top>
-				<width>720</width>
-				<height>30</height>
+				<left>{{ScaleX('40')}}</left>
+				<top>{{ScaleY('20')}}</top>
+				<width>{{ScaleX('720')}}</width>
+				<height>{{ScaleY('30')}}</height>
 				<font>font13_title</font>
 				<label>$LOCALIZE[13406]</label>
 				<align>center</align>
@@ -50,10 +50,10 @@
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>710</left>
-				<top>15</top>
-				<width>64</width>
-				<height>32</height>
+				<left>{{ScaleX('710')}}</left>
+				<top>{{ScaleY('15')}}</top>
+				<width>{{ScaleX('64')}}</width>
+				<height>{{ScaleY('32')}}</height>
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
@@ -66,10 +66,10 @@
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>755</left>
-				<top>70</top>
-				<width>25</width>
-				<height>495</height>
+				<left>{{ScaleX('755')}}</left>
+				<top>{{ScaleY('70')}}</top>
+				<width>{{ScaleX('25')}}</width>
+				<height>{{ScaleY('495')}}</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -81,30 +81,30 @@
 				<orientation>vertical</orientation>
 			</control>
 			<control type="list" id="5">
-				<animation effect="slide" start="0,0" end="10,0" time="0" condition="!Control.IsVisible(60)">Conditional</animation>
-				<left>30</left>
-				<top>70</top>
-				<width>720</width>
-				<height>495</height>
+				<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('10,0')}}" time="0" condition="!Control.IsVisible(60)">Conditional</animation>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('70')}}</top>
+				<width>{{ScaleX('720')}}</width>
+				<height>{{ScaleY('495')}}</height>
 				<onleft>60</onleft>
 				<onright>60</onright>
 				<onup>5</onup>
 				<ondown>5</ondown>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="45">
+				<itemlayout height="{{ScaleY('45')}}">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>720</width>
-						<height>40</height>
-						<texture border="5">button-nofocus.png</texture>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('720')}}</width>
+						<height>{{ScaleY('40')}}</height>
+						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>500</width>
-						<height>40</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('500')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
@@ -114,10 +114,10 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>60</left>
-						<top>0</top>
-						<width>650</width>
-						<height>40</height>
+						<left>{{ScaleX('60')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('650')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<textcolor>grey2</textcolor>
@@ -127,28 +127,28 @@
 						<info>ListItem.Label2</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="45">
+				<focusedlayout height="{{ScaleY('45')}}">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>720</width>
-						<height>40</height>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('720')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<visible>!Control.HasFocus(5)</visible>
-						<texture border="5">button-nofocus.png</texture>
+						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>720</width>
-						<height>40</height>
-						<texture border="5">button-focus2.png</texture>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('720')}}</width>
+						<height>{{ScaleY('40')}}</height>
+						<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
 						<visible>Control.HasFocus(5)</visible>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>500</width>
-						<height>40</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('500')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
@@ -158,10 +158,10 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>60</left>
-						<top>0</top>
-						<width>650</width>
-						<height>40</height>
+						<left>{{ScaleX('60')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('650')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<textcolor>grey2</textcolor>
@@ -174,10 +174,10 @@
 			</control>
 			<control type="label">
 				<description>number of files/pages in list text label</description>
-				<left>460</left>
-				<top>570</top>
-				<width>300</width>
-				<height>35</height>
+				<left>{{ScaleX('460')}}</left>
+				<top>{{ScaleY('570')}}</top>
+				<width>{{ScaleX('300')}}</width>
+				<height>{{ScaleY('35')}}</height>
 				<font>font12</font>
 				<align>right</align>
 				<aligny>center</aligny>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<default type="image">
-		<left>0</left>
-		<top>0</top>
+		<left>{{ScaleX('0')}}</left>
+		<top>{{ScaleY('0')}}</top>
 		<texture>-</texture>
 		<colorkey>0</colorkey>
 	</default>
@@ -13,29 +13,29 @@
 		<disabledcolor>grey3</disabledcolor>
 	</default>
 	<default type="fadelabel">
-		<left>80</left>
-		<top>60</top>
+		<left>{{ScaleX('80')}}</left>
+		<top>{{ScaleY('60')}}</top>
 		<font>font13</font>
 		<textcolor>white</textcolor>
 		<disabledcolor>grey3</disabledcolor>
 	</default>
 	<default type="button">
-		<width>300</width>
-		<height>42</height>
+		<width>{{ScaleX('300')}}</width>
+		<height>{{ScaleY('42')}}</height>
 		<texturefocus border="5">button-focus.png</texturefocus>
 		<texturenofocus border="5">button-nofocus.png</texturenofocus>
 		<font>font13</font>
 		<textcolor>white</textcolor>
 		<disabledcolor>grey3</disabledcolor>
-		<textoffsetx>7</textoffsetx>
+		<textoffsetx>{{ScaleX('7')}}</textoffsetx>
 		<aligny>center</aligny>
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="togglebutton">
-		<left>140</left>
-		<top>167</top>
-		<width>20</width>
-		<height>20</height>
+		<left>{{ScaleX('140')}}</left>
+		<top>{{ScaleY('167')}}</top>
+		<width>{{ScaleX('20')}}</width>
+		<height>{{ScaleY('20')}}</height>
 		<texturefocus>scroll-up-focus.png</texturefocus>
 		<texturenofocus>scroll-up.png</texturenofocus>
 		<alttexturefocus>scroll-down-focus.png</alttexturefocus>
@@ -47,17 +47,17 @@
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="textbox">
-		<left>220</left>
-		<top>222</top>
-		<width>410</width>
-		<height>213</height>
+		<left>{{ScaleX('220')}}</left>
+		<top>{{ScaleY('222')}}</top>
+		<width>{{ScaleX('410')}}</width>
+		<height>{{ScaleY('213')}}</height>
 		<align>left</align>
 		<textcolor>white</textcolor>
 		<font>font13</font>
 	</default>
 	<default type="progress">
-		<left>100</left>
-		<top>325</top>
+		<left>{{ScaleX('100')}}</left>
+		<top>{{ScaleY('325')}}</top>
 		<texturebg border="6,0,6,0">OSDProgressBack.png</texturebg>
 		<lefttexture>-</lefttexture>
 		<midtexture border="6,0,6,0">OSDProgressMid.png</midtexture>
@@ -65,29 +65,29 @@
 		<overlaytexture>-</overlaytexture>
 	</default>
 	<default type="spincontrol">
-		<left>330</left>
-		<top>126</top>
+		<left>{{ScaleX('330')}}</left>
+		<top>{{ScaleY('126')}}</top>
 		<textureup>scroll-up-2.png</textureup>
 		<texturedown>scroll-down-2.png</texturedown>
 		<textureupfocus>scroll-up-focus-2.png</textureupfocus>
 		<texturedownfocus>scroll-down-focus-2.png</texturedownfocus>
 		<align>right</align>
-		<width>33</width>
-		<height>22</height>
+		<width>{{ScaleX('33')}}</width>
+		<height>{{ScaleY('22')}}</height>
 		<font>font13</font>
 		<reverse>yes</reverse>
 		<textcolor>white</textcolor>
 		<disabledcolor>grey3</disabledcolor>
 		<subtype>text</subtype>
-		<textoffsetx>-5</textoffsetx>
-		<textoffsety>0</textoffsety>
+		<textoffsetx>{{ScaleX('-5')}}</textoffsetx>
+		<textoffsety>{{ScaleY('0')}}</textoffsety>
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="spincontrolex">
-		<left>530</left>
-		<top>160</top>
-		<width>300</width>
-		<height>42</height>
+		<left>{{ScaleX('530')}}</left>
+		<top>{{ScaleY('160')}}</top>
+		<width>{{ScaleX('300')}}</width>
+		<height>{{ScaleY('42')}}</height>
 		<spinwidth>33</spinwidth>
 		<spinheight>22</spinheight>
 		<texturefocus>button-focus.png</texturefocus>
@@ -99,16 +99,16 @@
 		<font>font13</font>
 		<textcolor>white</textcolor>
 		<disabledcolor>grey3</disabledcolor>
-		<textoffsetx>7</textoffsetx>
+		<textoffsetx>{{ScaleX('7')}}</textoffsetx>
 		<aligny>center</aligny>
 		<reverse>yes</reverse>
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="radiobutton">
-		<left>300</left>
-		<top>200</top>
-		<width>300</width>
-		<height>42</height>
+		<left>{{ScaleX('300')}}</left>
+		<top>{{ScaleY('200')}}</top>
+		<width>{{ScaleX('300')}}</width>
+		<height>{{ScaleY('42')}}</height>
 		<radiowidth>24</radiowidth>
 		<radioheight>24</radioheight>
 		<textureradioonfocus>radiobutton-focus.png</textureradioonfocus>
@@ -121,15 +121,15 @@
 		<font>font13</font>
 		<textcolor>white</textcolor>
 		<disabledcolor>grey3</disabledcolor>
-		<textoffsetx>7</textoffsetx>
+		<textoffsetx>{{ScaleX('7')}}</textoffsetx>
 		<aligny>center</aligny>
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="selectbutton">
-		<left>490</left>
-		<top>335</top>
-		<width>300</width>
-		<height>50</height>
+		<left>{{ScaleX('490')}}</left>
+		<top>{{ScaleY('335')}}</top>
+		<width>{{ScaleX('300')}}</width>
+		<height>{{ScaleY('50')}}</height>
 		<label>-</label>
 		<font>font12</font>
 		<texturefocus>-</texturefocus>
@@ -148,8 +148,8 @@
 		<controloffsety>0</controloffsety>
 	</default>
 	<default type="sliderex">
-		<height>35</height>
-		<textoffsetx>7</textoffsetx>
+		<height>{{ScaleY('35')}}</height>
+		<textoffsetx>{{ScaleX('7')}}</textoffsetx>
 		<aligny>center</aligny>
 		<texturefocus border="5">button-focus.png</texturefocus>
 		<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -163,29 +163,29 @@
 		<disabledcolor>grey3</disabledcolor>
 	</default>
 	<default type="mover">
-		<left>60</left>
-		<top>192</top>
+		<left>{{ScaleX('60')}}</left>
+		<top>{{ScaleY('192')}}</top>
 		<texturefocus border="5">button-focus.png</texturefocus>
 		<texturenofocus border="5">button-nofocus.png</texturenofocus>
 	</default>
 	<default type="resize">
-		<left>60</left>
-		<top>192</top>
+		<left>{{ScaleX('60')}}</left>
+		<top>{{ScaleY('192')}}</top>
 		<texturefocus border="5">button-focus.png</texturefocus>
 		<texturenofocus border="5">button-nofocus.png</texturenofocus>
 	</default>
 	<default type="edit">
-		<left>300</left>
-		<top>200</top>
-		<width>300</width>
-		<height>42</height>
+		<left>{{ScaleX('300')}}</left>
+		<top>{{ScaleY('200')}}</top>
+		<width>{{ScaleX('300')}}</width>
+		<height>{{ScaleY('42')}}</height>
 		<texturefocus border="5">button-focus.png</texturefocus>
 		<texturenofocus border="5">button-nofocus.png</texturenofocus>
 		<font>font13</font>
 		<textcolor>white</textcolor>
 		<disabledcolor>grey3</disabledcolor>
 		<invalidcolor>invalid</invalidcolor>
-		<textoffsetx>7</textoffsetx>
+		<textoffsetx>{{ScaleX('7')}}</textoffsetx>
 		<aligny>center</aligny>
 		<pulseonselect>no</pulseonselect>
 	</default>
