@@ -47,12 +47,12 @@
 			</control>
 		</control>
 		<control type="group">
-			<left>{{ScaleX('-250')}}</left>
+			<left>{{ScaleX({{ -250 - {SideBladeExtraWidth} }})}}</left>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('110')}}</top>
-				<width>{{ScaleX('250')}}</width>
+				<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
 				<height>{{ScaleY('600')}}</height>
 				<onleft>9000</onleft>
 				<onright>50</onright>
@@ -61,7 +61,7 @@
 				<ondown>9000</ondown>
 				<itemgap>0</itemgap>
 				<control type="label" id="200">
-					<width>{{ScaleX('250')}}</width>
+					<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
 					<height>{{ScaleY('35')}}</height>
 					<font>font12</font>
 					<label>31006</label>
@@ -71,12 +71,12 @@
 				</control>
 				<control type="button" id="2">
 					<description>View As button</description>
-					<textwidth>235</textwidth>
+					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>-</label>
 				</control>
 				<control type="label" id="201">
-					<width>{{ScaleX('250')}}</width>
+					<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
 					<height>{{ScaleY('35')}}</height>
 					<font>font12</font>
 					<label>31026</label>
@@ -91,21 +91,21 @@
 				</control>
 				<control type="button" id="26">
 					<description>Repeat button</description>
-					<textwidth>235</textwidth>
+					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>-</label>
 				</control>
 				<control type="button" id="21">
 					<description>Save button</description>
 					<label>190</label>
-					<textwidth>235</textwidth>
+					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
 					<include>ButtonCommonValues</include>
 				</control>
 				<control type="button" id="22">
 					<description>Clear button</description>
 					<label>192</label>
 					<onclick>ReplaceWindow(Videos)</onclick>
-					<textwidth>235</textwidth>
+					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
 					<include>ButtonCommonValues</include>
 				</control>
 				<include>CommonNowPlaying_Controls</include>

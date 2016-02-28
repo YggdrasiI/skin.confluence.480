@@ -9,12 +9,12 @@
 	<include>dialogeffect</include>
 	<controls>
 		<include name="DialogBackgroundCommons">
-			<param name="DialogBackgroundWidth" value="730" />
-			<param name="DialogBackgroundHeight" value="660" />
-			<param name="DialogHeaderWidth" value="650" />
+			<param name="DialogBackgroundWidth" value="{{ScaleX('730')}}" />
+			<param name="DialogBackgroundHeight" value="{{ScaleY('660')}}" />
+			<param name="DialogHeaderWidth" value="{{ScaleX('650')}}" />
 			<param name="DialogHeaderLabel" value="$LOCALIZE[19053]" />
 			<param name="DialogHeaderId" value="2" />
-			<param name="CloseButtonLeft" value="640" />
+			<param name="CloseButtonLeft" value="{{ScaleX('640')}}" />
 			<param name="CloseButtonNav" value="10" />
 		</include>
 		<control type="label">

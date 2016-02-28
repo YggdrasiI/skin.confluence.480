@@ -23,29 +23,29 @@
 			<control type="image">
 				<description>LOGO</description>
 				<left>{{ScaleX('10')}}</left>
-				<top>{{ScaleY('10')}}</top>
-				<width>{{ScaleX('100')}}</width>
-				<height>{{ScaleY('50')}}</height>
+				<top>{{ScaleY('5')}}</top>
+				<width>{{ScaleX({{ 120 * {LogoScale} }})}}</width>
+				<height>{{ScaleY({{ 49 * {LogoScale} }})}}</height>
 				<aspectratio aligny="top" align="left">keep</aspectratio>
 				<texture>kodi-logo.png</texture>
 				<include>Window_OpenClose_Animation</include>
 			</control>
 			<control type="image">
-				<left>{{ScaleX('265')}}</left>
+				<left>{{ScaleX({{ 265 - int({SettingPanelExtraWidthR}/2) }})}}</left>
 				<top>{{ScaleY('60')}}</top>
-				<width>{{ScaleX('750')}}</width>
+				<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('600')}}</height>
 				<texture border="{{ScaleBorder('10')}}">ContentPanel.png</texture>
 			</control>
 			<control type="image">
-				<left>{{ScaleX('265')}}</left>
+				<left>{{ScaleX({{ 265 - int({SettingPanelExtraWidthR}/2) }})}}</left>
 				<top>{{ScaleY('652')}}</top>
-				<width>{{ScaleX('750')}}</width>
+				<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('64')}}</height>
 				<texture border="{{ScaleBorder('10')}}">ContentPanelMirror.png</texture>
 			</control>
 			<control type="label">
-				<left>{{ScaleX('295')}}</left>
+				<left>{{ScaleX({{ 295 - int({SettingPanelExtraWidthR}/2) }})}}</left>
 				<top>{{ScaleY('100')}}</top>
 				<width>{{ScaleX('690')}}</width>
 				<height>{{ScaleY('40')}}</height>
@@ -56,9 +56,9 @@
 				<label>$LOCALIZE[31421]</label>
 			</control>
 			<control type="list" id="52">
-				<left>{{ScaleX('295')}}</left>
+				<left>{{ScaleX({{ 295 - int({SettingPanelExtraWidthR}/2) }})}}</left>
 				<top>{{ScaleY('170')}}</top>
-				<width>{{ScaleX('690')}}</width>
+				<width>{{ScaleX({{ 690 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('401')}}</height>
 				<onleft>20</onleft>
 				<onright>20</onright>
@@ -67,11 +67,11 @@
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="{{ScaleY('100')}}" width="{{ScaleX('690')}}">
+				<itemlayout height="{{ScaleY('100')}}" width="{{{{ 690 + {SettingPanelExtraWidthR} }}}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('690')}}</width>
+						<width>{{ScaleX({{ 690 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('95')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 					</control>
@@ -86,7 +86,7 @@
 					<control type="label">
 						<left>{{ScaleX('110')}}</left>
 						<top>{{ScaleY('10')}}</top>
-						<width>{{ScaleX('580')}}</width>
+						<width>{{ScaleX({{ 580 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font24_title</font>
 						<textcolor>grey2</textcolor>
@@ -98,7 +98,7 @@
 					<control type="label">
 						<left>{{ScaleX('110')}}</left>
 						<top>{{ScaleY('50')}}</top>
-						<width>{{ScaleX('580')}}</width>
+						<width>{{ScaleX({{ 580 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('25')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -108,11 +108,11 @@
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="{{ScaleY('100')}}" width="{{ScaleX('580')}}">
+				<focusedlayout height="{{ScaleY('100')}}" width="{{{{ 690 + {SettingPanelExtraWidthR} }}}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('690')}}</width>
+						<width>{{ScaleX({{ 690 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('95')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 						<visible>!Control.HasFocus(52)</visible>
@@ -121,7 +121,7 @@
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('690')}}</width>
+						<width>{{ScaleX({{ 690 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('95')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
 						<visible>Control.HasFocus(52)</visible>
@@ -138,7 +138,7 @@
 					<control type="label">
 						<left>{{ScaleX('110')}}</left>
 						<top>{{ScaleY('10')}}</top>
-						<width>{{ScaleX('580')}}</width>
+						<width>{{ScaleX({{ 580 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font24_title</font>
 						<textcolor>white</textcolor>
@@ -150,7 +150,7 @@
 					<control type="label">
 						<left>{{ScaleX('110')}}</left>
 						<top>{{ScaleY('50')}}</top>
-						<width>{{ScaleX('580')}}</width>
+						<width>{{ScaleX({{ 580 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('25')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -163,7 +163,7 @@
 			</control>
 			<control type="image">
 				<description>LOGO</description>
-				<left>{{ScaleX('265')}}</left>
+				<left>{{ScaleX({{ 265 - int({SettingPanelExtraWidthR}/2) }})}}</left>
 				<top>{{ScaleY('580')}}</top>
 				<width>{{ScaleX('220')}}</width>
 				<height>{{ScaleY('80')}}</height>
@@ -171,12 +171,12 @@
 				<texture>Confluence_Logo.png</texture>
 			</control>
 			<control type="group">
-				<left>{{ScaleX('940')}}</left>
+				<left>{{ScaleX({{ 940 + int({SettingPanelExtraWidthR}/2) }})}}</left>
 				<top>{{ScaleY('600')}}</top>
 				<control type="label">
-					<left>{{ScaleX('-580')}}</left>
+					<left>{{ScaleX({{ -580 - {SettingPanelExtraWidthR} }})}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('580')}}</width>
+					<width>{{ScaleX({{ 580 + {SettingPanelExtraWidthR} }})}}</width>
 					<height>{{ScaleY('45')}}</height>
 					<font>font12</font>
 					<textcolor>grey2</textcolor>
@@ -216,12 +216,12 @@
 		<control type="label">
 			<description>Date label</description>
 			<right>{{ScaleX('20')}}</right>
-			<top>{{ScaleY('35')}}</top>
-			<width>{{ScaleX('200')}}</width>
-			<height>{{ScaleY('15')}}</height>
+			<top>{{ScaleY('70')}}</top>
+			<width>{{ScaleX({{ 400 }})}}</width>
+			<height>{{ScaleY({{ 30 }})}}</height>
 			<align>right</align>
 			<aligny>center</aligny>
-			<font>font10</font>
+			<font>font16</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Date]</label>

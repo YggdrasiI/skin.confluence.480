@@ -8,11 +8,28 @@
 		<top>{{ScaleY('0')}}</top>
 	</coordinates>
 	<controls>
+		<control type="image">
+			<left>{{ScaleX({{ -{W} }})}}</left>
+			<top>{{ScaleY({{ -{H} }})}}</top>
+			<width>{{ScaleX({{ 2*{W} }})}}</width>
+			<height>{{ScaleY({{ 2*{H} }})}}</height>
+			<texture>black-back.png</texture>
+		</control>
+		<!-- To tall. Height always 670... -->
+		<!--
+		<control type="image">
+			<left>{{ScaleX('10')}}</left>
+			<top>{{ScaleY('10')}}</top>
+			<width>{{ScaleX({{ 320 + {DialogButtonExtraWidth} }})}}</width>
+			<height max="670">auto</height>
+			<texture>ContentPanel.png</texture>
+		</control>
+		-->
 		<control type="image" id="999">
 			<description>background image</description>
 			<left>{{ScaleX('0')}}</left>
 			<top>{{ScaleY('0')}}</top>
-			<width>{{ScaleX('340')}}</width>
+			<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
 			<height>{{ScaleY('720')}}</height>
 			<texture border="{{ScaleBorder('20')}}">DialogBack.png</texture>
 		</control>
@@ -20,13 +37,13 @@
 			<description>grouplist for context buttons</description>
 			<left>{{ScaleX('20')}}</left>
 			<top>{{ScaleY('30')}}</top>
-			<width>{{ScaleX('300')}}</width>
+			<width>{{ScaleX({{ 300 + {DialogButtonExtraWidth} }})}}</width>
 			<height max="670">auto</height>
 			<itemgap>2</itemgap>
 		</control>
 		<control type="button">
 			<description>Close Window button</description>
-			<left>{{ScaleX('260')}}</left>
+			<left>{{ScaleX({{ 260 + {DialogButtonExtraWidth} }})}}</left>
 			<top>{{ScaleY('5')}}</top>
 			<width>{{ScaleX('64')}}</width>
 			<height>{{ScaleY('32')}}</height>
@@ -45,7 +62,7 @@
 			<description>button template</description>
 			<left>{{ScaleX('-')}}</left>
 			<top>{{ScaleY('-')}}</top>
-			<width>{{ScaleX('300')}}</width>
+			<width>{{ScaleX({{ 300 + {DialogButtonExtraWidth} }})}}</width>
 			<height>{{ScaleY('38')}}</height>
 			<font>fontContextMenu</font>
 			<align>center</align>

@@ -151,8 +151,10 @@
 	</include>
 	<include name="ButtonCommonValues">
 		<height>{{ScaleY('40')}}</height>
+		<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} - 10 }})}}</width>
 		<width>{{ScaleX('250')}}</width>
 		<textoffsetx>{{ScaleX('10')}}</textoffsetx>
+		<textwidth>{{ 200 + {SideBladeExtraWidth} - 10 }}</textwidth>
 		<textwidth>200</textwidth>
 		<aligny>center</aligny>
 		<font>font13</font>
@@ -173,12 +175,14 @@
 	</include>
 	<include name="ButtonHomeSubCommonValues">
 		<height>{{ScaleY('35')}}</height>
-		<width>{{ScaleX('180')}}</width>
-		<textwidth>195</textwidth>
+		<width>{{ScaleX({HomeSubMenuWidth})}}</width>
+		<textwidth>{{ScaleX({{ 15 + {HomeSubMenuWidth} }})}}</textwidth>
+		<textwidth>{{195 + {HomeSubMenuWidth} + 20 }}</textwidth>
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>font12</font>
 		<textcolor>grey2</textcolor>
+		<focusedcolor>selected_home</focusedcolor>
 		<focusedcolor>white</focusedcolor>
 		<texturefocus border="5">HomeSubFO.png</texturefocus>
 		<texturenofocus border="5">HomeSubNF.png</texturenofocus>
@@ -209,15 +213,15 @@
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="SideBladeLeft">
-		<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('250,0')}}" time="300" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)">Conditional</animation>
-		<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-300,0')}}" time="300" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001)">WindowClose</animation>
+		<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('{{ 250 + {SideBladeExtraWidth} }},0')}}" time="300" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)">Conditional</animation>
+		<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('{{ -300 - {SideBladeExtraWidth} }},0')}}" time="300" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001)">WindowClose</animation>
 		<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-50,0')}}" time="225" tween="quadratic" easing="out" condition="![ControlGroup(9000).HasFocus | Control.HasFocus(9001)]">WindowClose</animation>
 		<animation effect="slide" start="{{ScaleBorder2('-50,0')}}" end="{{ScaleBorder2('0,0')}}" time="225" tween="quadratic" easing="out">WindowOpen</animation>
 		<control type="button" id="8999">
 			<description>Fake button for mouse control</description>
 			<left>{{ScaleX('0')}}</left>
 			<top>{{ScaleY('0')}}</top>
-			<width>{{ScaleX('250')}}</width>
+			<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
 			<height>{{ScaleY('720')}}</height>
 			<label>-</label>
 			<font>-</font>
@@ -226,7 +230,7 @@
 			<visible>true</visible>
 		</control>
 		<control type="button" id="9001">
-			<left>{{ScaleX('250')}}</left>
+			<left>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</left>
 			<top>{{ScaleY('260')}}</top>
 			<width>{{ScaleX('42')}}</width>
 			<height>{{ScaleY('128')}}</height>
@@ -237,7 +241,7 @@
 		<control type="image">
 			<left>{{ScaleX('0')}}</left>
 			<top>{{ScaleY('0')}}</top>
-			<width>{{ScaleX('260')}}</width>
+			<width>{{ScaleX({{ 260 + {SideBladeExtraWidth} }})}}</width>
 			<height>{{ScaleY('720')}}</height>
 			<texture border="{{ScaleBorder('0,0,10,0')}}">MediaBladeSub.png</texture>
 		</control>
@@ -975,11 +979,11 @@
 			<description>time label</description>
 			<right>{{ScaleX('20')}}</right>
 			<top>{{ScaleY('5')}}</top>
-			<width>{{ScaleX('200')}}</width>
-			<height>{{ScaleY('30')}}</height>
+			<width>{{ScaleX('400')}}</width>
+			<height>{{ScaleY('60')}}</height>
 			<align>right</align>
 			<aligny>center</aligny>
-			<font>font28_title</font>
+			<font>font35_title</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Time]</label>
@@ -989,7 +993,7 @@
 	<include name="HomeAddonsCommonLayout">
 		<include>Window_OpenClose_Animation</include>
 		<animation type="Visible">
-			<effect type="slide" start="{{ScaleBorder2('0,30')}}" end="{{ScaleBorder2('0,0')}}" delay="150" easing="out" tween="quadratic" time="150" />
+			<effect type="slide" start="{{ScaleBorder2('{{ScaleBorder2('0,30')}}')}}" end="{{ScaleBorder2('{{ScaleBorder2('0,0')}}')}}" delay="150" easing="out" tween="quadratic" time="150" />
 			<effect type="fade" start="0" end="100" delay="150" time="150" />
 		</animation>
 		<animation type="Hidden">

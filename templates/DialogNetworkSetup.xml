@@ -9,12 +9,12 @@
 	<include>dialogeffect</include>
 	<controls>
 		<include name="DialogBackgroundCommons">
-			<param name="DialogBackgroundWidth" value="800" />
-			<param name="DialogBackgroundHeight" value="440" />
-			<param name="DialogHeaderWidth" value="720" />
+			<param name="DialogBackgroundWidth" value="{{ScaleX('800')}}" />
+			<param name="DialogBackgroundHeight" value="{{ScaleY('440')}}" />
+			<param name="DialogHeaderWidth" value="{{ScaleX('720')}}" />
 			<param name="DialogHeaderLabel" value="$LOCALIZE[1007]" />
 			<param name="DialogHeaderId" value="2" />
-			<param name="CloseButtonLeft" value="710" />
+			<param name="CloseButtonLeft" value="{{ScaleX('710')}}" />
 			<param name="CloseButtonNav" value="10" />
 		</include>
 		<control type="spincontrolex" id="10">

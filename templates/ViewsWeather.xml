@@ -31,19 +31,19 @@
 				<scrolltime>200</scrolltime>
 				<include>VisibleFadeEffect</include>
 				<visible>IsEmpty(Window.Property(Weather.CurrentView))</visible>
-				<itemlayout height="{{ScaleY('135')}}" width="{{ScaleX('600')}}" condition="IsEmpty(Window.Property(Daily.IsFetched))">
+				<itemlayout height="{{ScaleY('165')}}" width="{{ScaleX('600')}}" condition="IsEmpty(Window.Property(Daily.IsFetched))">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('600')}}</width>
-						<height>{{ScaleY('136')}}</height>
+						<height>{{ScaleY('166')}}</height>
 						<texture border="{{ScaleBorder('0,5,0,5')}}">MenuItemNF.png</texture>
 					</control>
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('600')}}</width>
-						<height>{{ScaleY('136')}}</height>
+						<height>{{ScaleY('166')}}</height>
 						<texture border="{{ScaleBorder('0,5,0,5')}}">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
@@ -85,7 +85,7 @@
 						<left>{{ScaleX('30')}}</left>
 						<top>{{ScaleY('72')}}</top>
 						<width>{{ScaleX('400')}}</width>
-						<height>{{ScaleY('48')}}</height>
+						<height>{{ScaleY('70')}}</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -94,12 +94,12 @@
 						<label>$INFO[ListItem.Property(Outlook)]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="{{ScaleY('135')}}" width="{{ScaleX('600')}}" condition="IsEmpty(Window.Property(Daily.IsFetched))">
+				<focusedlayout height="{{ScaleY('165')}}" width="{{ScaleX('600')}}" condition="IsEmpty(Window.Property(Daily.IsFetched))">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('600')}}</width>
-						<height>{{ScaleY('136')}}</height>
+						<height>{{ScaleY('166')}}</height>
 						<texture border="{{ScaleBorder('0,2,0,2')}}">MenuItemNF.png</texture>
 						<visible>!Control.HasFocus(51)</visible>
 						<include>VisibleFadeEffect</include>
@@ -108,7 +108,7 @@
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('600')}}</width>
-						<height>{{ScaleY('136')}}</height>
+						<height>{{ScaleY('166')}}</height>
 						<texture border="{{ScaleBorder('0,2,0,2')}}">MenuItemNF.png</texture>
 						<visible>!Control.HasFocus(51)</visible>
 						<include>VisibleFadeEffect</include>
@@ -161,7 +161,7 @@
 						<left>{{ScaleX('30')}}</left>
 						<top>{{ScaleY('72')}}</top>
 						<width>{{ScaleX('400')}}</width>
-						<height>{{ScaleY('48')}}</height>
+						<height>{{ScaleY('70')}}</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -170,25 +170,13 @@
 						<label>$INFO[ListItem.Property(Outlook)]</label>
 					</control>
 				</focusedlayout>
-				<itemlayout height="{{ScaleY('135')}}" width="{{ScaleX('600')}}" condition="!IsEmpty(Window.Property(Daily.IsFetched))">
+				<itemlayout height="{{ScaleY('165')}}" width="{{ScaleX('600')}}" condition="!IsEmpty(Window.Property(Daily.IsFetched))">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('600')}}</width>
-						<height>{{ScaleY('136')}}</height>
+						<height>{{ScaleY('166')}}</height>
 						<texture border="{{ScaleBorder('0,5,0,5')}}">MenuItemNF.png</texture>
-					</control>
-					<control type="label">
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('100')}}</width>
-						<height>{{ScaleY('120')}}</height>
-						<font>font12</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
 						<left>{{ScaleX('110')}}</left>
@@ -199,9 +187,21 @@
 						<texture>$INFO[ListItem.Thumb]</texture>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('200')}}</left>
+						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('390')}}</width>
+						<width>{{ScaleX({{ 100 + {WeatherRightExtraW} }})}}</width>
+						<height>{{ScaleY('100')}}</height>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>{{ScaleX({{ 200 - {WeatherRightExtraW} }})}}</left>
+						<top>{{ScaleY('8')}}</top>
+						<width>{{ScaleX({{ 390 + {WeatherRightExtraW} }})}}</width>
 						<height>{{ScaleY('70')}}</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>
@@ -214,7 +214,7 @@
 						<left>{{ScaleX('5')}}</left>
 						<top>{{ScaleY('82')}}</top>
 						<width>{{ScaleX('590')}}</width>
-						<height>{{ScaleY('48')}}</height>
+						<height>{{ScaleY('70')}}</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -222,36 +222,24 @@
 						<label>$INFO[ListItem.ActualIcon]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="{{ScaleY('135')}}" width="{{ScaleX('600')}}" condition="!IsEmpty(Window.Property(Daily.IsFetched))">
+				<focusedlayout height="{{ScaleY('165')}}" width="{{ScaleX('600')}}" condition="!IsEmpty(Window.Property(Daily.IsFetched))">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('600')}}</width>
-						<height>{{ScaleY('136')}}</height>
+						<height>{{ScaleY('166')}}</height>
 						<texture border="{{ScaleBorder('0,2,0,2')}}">MenuItemNF.png</texture>
 						<visible>!Control.HasFocus(51)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
+						<top>{{ScaleY('-5')}}</top>
 						<width>{{ScaleX('600')}}</width>
-						<height>{{ScaleY('136')}}</height>
+						<height>{{ScaleY('166')}}</height>
 						<texture border="{{ScaleBorder('10')}}">button-focus2.png</texture>
 						<visible>Control.HasFocus(51)</visible>
 						<include>VisibleFadeEffect</include>
-					</control>
-					<control type="label">
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('100')}}</width>
-						<height>{{ScaleY('120')}}</height>
-						<font>font12</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
 						<left>{{ScaleX('110')}}</left>
@@ -262,9 +250,21 @@
 						<texture>$INFO[ListItem.Thumb]</texture>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('200')}}</left>
+						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('390')}}</width>
+						<width>{{ScaleX({{ 100 + {WeatherRightExtraW} }})}}</width>
+						<height>{{ScaleY('100')}}</height>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>{{ScaleX({{ 200 - {WeatherRightExtraW} }})}}</left>
+						<top>{{ScaleY('8')}}</top>
+						<width>{{ScaleX({{ 390 + {WeatherRightExtraW} }})}}</width>
 						<height>{{ScaleY('70')}}</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>
@@ -277,7 +277,7 @@
 						<left>{{ScaleX('5')}}</left>
 						<top>{{ScaleY('82')}}</top>
 						<width>{{ScaleX('590')}}</width>
-						<height>{{ScaleY('48')}}</height>
+						<height>{{ScaleY('70')}}</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>

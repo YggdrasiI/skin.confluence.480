@@ -11,12 +11,12 @@
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(AddonSettings)">Conditional</animation>
 			<include name="DialogBackgroundCommons">
-				<param name="DialogBackgroundWidth" value="800" />
-				<param name="DialogBackgroundHeight" value="680" />
-				<param name="DialogHeaderWidth" value="720" />
+				<param name="DialogBackgroundWidth" value="{{ScaleX('800')}}" />
+				<param name="DialogBackgroundHeight" value="{{ScaleY('680')}}" />
+				<param name="DialogHeaderWidth" value="{{ScaleX('720')}}" />
 				<param name="DialogHeaderLabel" value="$LOCALIZE[20333]" />
 				<param name="DialogHeaderId" value="1" />
-				<param name="CloseButtonLeft" value="710" />
+				<param name="CloseButtonLeft" value="{{ScaleX('710')}}" />
 				<param name="CloseButtonNav" value="10" />
 			</include>
 			<control type="label">

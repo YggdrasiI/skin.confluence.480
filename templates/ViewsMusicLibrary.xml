@@ -334,11 +334,11 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<animation type="focus">
 							<effect type="fade" start="0" end="100" time="150" />
-							<effect type="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('40,40')}}" time="150" />
+							<effect type="slide" start="{{ScaleBorder2('{{ScaleBorder2('0,0')}}')}}" end="{{ScaleBorder2('{{ScaleBorder2('40,40')}}')}}" time="150" />
 						</animation>
 						<animation type="unfocus">
 							<effect type="fade" start="100" end="0" time="150" />
-							<effect type="slide" end="{{ScaleBorder2('0,0')}}" start="{{ScaleBorder2('40,40')}}" time="150" />
+							<effect type="slide" end="{{ScaleBorder2('{{ScaleBorder2('0,0')}}')}}" start="{{ScaleBorder2('{{ScaleBorder2('40,40')}}')}}" time="150" />
 						</animation>
 					</control>
 				</focusedlayout>
