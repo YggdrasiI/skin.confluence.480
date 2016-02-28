@@ -108,7 +108,7 @@
 			</control>
 			<control type="label">
 				<description>Page label</description>
-				<right>30</right>
+				<right>{{ScaleX('30')}}</right>
 				<top>{{ScaleY('670')}}</top>
 				<width>{{ScaleX('350')}}</width>
 				<height>{{ScaleY('30')}}</height>

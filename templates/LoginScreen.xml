@@ -215,7 +215,7 @@
 		<include>Clock</include>
 		<control type="label">
 			<description>Date label</description>
-			<right>20</right>
+			<right>{{ScaleX('20')}}</right>
 			<top>{{ScaleY('35')}}</top>
 			<width>{{ScaleX('200')}}</width>
 			<height>{{ScaleY('15')}}</height>

@@ -574,7 +574,7 @@
 						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.1.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.1.Temperature),[B] ,[/B]]</label>
 					</control>
 					<control type="label">
-						<right>90</right>
+						<right>{{ScaleX('90')}}</right>
 						<top>{{ScaleY('20')}}</top>
 						<width>{{ScaleX('390')}}</width>
 						<height>{{ScaleY('130')}}</height>
@@ -639,7 +639,7 @@
 						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.2.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.2.Temperature),[B] ,[/B]]</label>
 					</control>
 					<control type="label">
-						<right>90</right>
+						<right>{{ScaleX('90')}}</right>
 						<top>{{ScaleY('20')}}</top>
 						<width>{{ScaleX('390')}}</width>
 						<height>{{ScaleY('130')}}</height>
@@ -704,7 +704,7 @@
 						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.3.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.3.Temperature),[B] ,[/B]]</label>
 					</control>
 					<control type="label">
-						<right>90</right>
+						<right>{{ScaleX('90')}}</right>
 						<top>{{ScaleY('20')}}</top>
 						<width>{{ScaleX('390')}}</width>
 						<height>{{ScaleY('130')}}</height>
@@ -1297,7 +1297,7 @@
 			<control type="label">
 				<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-90,0')}}" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 				<description>number of files/pages</description>
-				<right>40</right>
+				<right>{{ScaleX('40')}}</right>
 				<top>{{ScaleY('627')}}</top>
 				<width>{{ScaleX('570')}}</width>
 				<font>font12</font>

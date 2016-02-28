@@ -1,0 +1,1 @@
+s/<textwidth>\([^$<]\+\)</<textwidth>{{ScaleX('\1')}}</g

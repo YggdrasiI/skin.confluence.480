@@ -414,7 +414,7 @@
 					</control>
 				</control>
 				<control type="label">
-					<right>130</right>
+					<right>{{ScaleX('130')}}</right>
 					<top>{{ScaleY('480')}}</top>
 					<width>{{ScaleX('400')}}</width>
 					<height>{{ScaleY('30')}}</height>
@@ -428,7 +428,7 @@
 					<visible>Control.IsVisible(4)</visible>
 				</control>
 				<control type="label">
-					<right>130</right>
+					<right>{{ScaleX('130')}}</right>
 					<top>{{ScaleY('480')}}</top>
 					<width>{{ScaleX('400')}}</width>
 					<height>{{ScaleY('30')}}</height>
@@ -442,7 +442,7 @@
 					<visible>Control.IsVisible(50) + Container.Content(Albums)</visible>
 				</control>
 				<control type="label">
-					<right>130</right>
+					<right>{{ScaleX('130')}}</right>
 					<top>{{ScaleY('480')}}</top>
 					<width>{{ScaleX('400')}}</width>
 					<height>{{ScaleY('30')}}</height>

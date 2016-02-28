@@ -269,8 +269,8 @@
 		</control>
 		<control type="button" id="410">
 			<description>Fake button for mouse control</description>
-			<right>145</right>
-			<bottom>60</bottom>
+			<right>{{ScaleX('145')}}</right>
+			<bottom>{{ScaleY('60')}}</bottom>
 			<width>{{ScaleX('256')}}</width>
 			<height>{{ScaleY('250')}}</height>
 			<label>-</label>
@@ -286,8 +286,8 @@
 			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,80')}}" time="0" condition="![VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled]">Conditional</animation>
 			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,40')}}" time="0" condition="!VideoPlayer.HasSubtitles">Conditional</animation>
 			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('55,0')}}" time="0" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
-			<right>145</right>
-			<bottom>45</bottom>
+			<right>{{ScaleX('145')}}</right>
+			<bottom>{{ScaleY('45')}}</bottom>
 			<width>{{ScaleX('256')}}</width>
 			<height>{{ScaleY('260')}}</height>
 			<itemgap>0</itemgap>
@@ -390,8 +390,8 @@
 		</control>
 		<control type="button" id="520">
 			<description>Fake button for mouse control</description>
-			<right>200</right>
-			<bottom>60</bottom>
+			<right>{{ScaleX('200')}}</right>
+			<bottom>{{ScaleY('60')}}</bottom>
 			<width>{{ScaleX('256')}}</width>
 			<height>{{ScaleY('210')}}</height>
 			<label>-</label>
@@ -405,8 +405,8 @@
 			<visible>videoplayer.isstereoscopic + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)] + [Control.HasFocus(255) | ControlGroup(500).HasFocus | Control.HasFocus(520)]</visible>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('55,0')}}" time="0" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
-			<right>200</right>
-			<bottom>45</bottom>
+			<right>{{ScaleX('200')}}</right>
+			<bottom>{{ScaleY('45')}}</bottom>
 			<width>{{ScaleX('256')}}</width>
 			<height>{{ScaleY('220')}}</height>
 			<itemgap>0</itemgap>

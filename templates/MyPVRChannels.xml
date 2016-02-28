@@ -399,7 +399,7 @@
 			<control type="label">
 				<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-90,0')}}" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 				<description>Page Count Label</description>
-				<right>40</right>
+				<right>{{ScaleX('40')}}</right>
 				<top>{{ScaleY('53r')}}</top>
 				<width>{{ScaleX('500')}}</width>
 				<height>{{ScaleY('20')}}</height>
