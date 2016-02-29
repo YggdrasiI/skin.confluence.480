@@ -1283,7 +1283,7 @@
 		<animation effect="fade" time="225">Hidden</animation>
 	</include>
 	<include name="KeyboardButton">
-		<width>{{ScaleX('50')}}</width>
+		<width>{{ScaleX({VirtualKeyboardKeyWidth})}}</width>
 		<height>{{ScaleY('50')}}</height>
 		<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
 		<texturefocus border="5">KeyboardKey.png</texturefocus>

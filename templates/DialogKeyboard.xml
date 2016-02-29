@@ -4,7 +4,7 @@
 	<include>dialogeffect</include>
 	<coordinates>
 		<system>2</system>
-		<left>{{ScaleX('205')}}</left>
+		<left>{{ScaleX({{ int(({W}-{VirtualKeyboardWidth})/2) }})}}</left>
 		<top>{{ScaleY('120')}}</top>
 	</coordinates>
 	<controls>
@@ -12,18 +12,18 @@
 			<include>VisibleFadeEffect</include>
 			<visible>!Window.IsVisible(numericinput)</visible>
 			<include name="DialogBackgroundCommons">
-				<param name="DialogBackgroundWidth" value="{{ScaleX('860')}}" />
+				<param name="DialogBackgroundWidth" value="{{ScaleX({VirtualKeyboardWidth})}}" />
 				<param name="DialogBackgroundHeight" value="{{ScaleY('430')}}" />
-				<param name="DialogHeaderWidth" value="{{ScaleX('780')}}" />
+				<param name="DialogHeaderWidth" value="{{ScaleX({{ {VirtualKeyboardWidth} - 80 }})}}" />
 				<param name="DialogHeaderLabel" value="" />
 				<param name="DialogHeaderId" value="311" />
-				<param name="CloseButtonLeft" value="{{ScaleX('770')}}" />
+				<param name="CloseButtonLeft" value="{{ScaleX({{ {VirtualKeyboardWidth} - 90 }})}}" />
 				<param name="CloseButtonNav" value="3" />
 			</include>
 			<control type="image">
 				<left>{{ScaleX('50')}}</left>
 				<top>{{ScaleY('60')}}</top>
-				<width>{{ScaleX('760')}}</width>
+				<width>{{ScaleX({{ {VirtualKeyboardWidth} - 100 }})}}</width>
 				<height>{{ScaleY('50')}}</height>
 				<aspectratio>stretch</aspectratio>
 				<texture border="{{ScaleBorder('20')}}">KeyboardEditArea.png</texture>
@@ -32,7 +32,7 @@
 				<description>Edit Text</description>
 				<left>{{ScaleX('55')}}</left>
 				<top>{{ScaleY('60')}}</top>
-				<width>{{ScaleX('750')}}</width>
+				<width>{{ScaleX({{ {VirtualKeyboardWidth} - 110 }})}}</width>
 				<height>{{ScaleY('50')}}</height>
 				<font>font13</font>
 				<align>center</align>
@@ -43,7 +43,7 @@
 			<control type="image">
 				<left>{{ScaleX('130')}}</left>
 				<top>{{ScaleY('110')}}</top>
-				<width>{{ScaleX('600')}}</width>
+				<width>{{ScaleX({{ {VirtualKeyboardWidth} - 260 }})}}</width>
 				<height>{{ScaleY('30')}}</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>DialogHeader.png</texture>
@@ -57,7 +57,7 @@
 					<orientation>horizontal</orientation>
 					<control type="button" id="309">
 						<description>Layout button</description>
-						<width>{{ScaleX('200')}}</width>
+						<width>{{ScaleX({{ 5 * {VirtualKeyboardKeyWidth} }})}}</width>
 						<height>{{ScaleY('50')}}</height>
 						<label>20177</label>
 						<onup>300</onup>
@@ -151,7 +151,7 @@
 					<itemgap>0</itemgap>
 					<control type="radiobutton" id="302">
 						<description>SHIFT button</description>
-						<width>{{ScaleX('200')}}</width>
+						<width>{{ScaleX({{ 5 * {VirtualKeyboardKeyWidth} }})}}</width>
 						<height>{{ScaleY('50')}}</height>
 						<label>20178</label>
 						<onup>309</onup>
@@ -161,7 +161,7 @@
 						<radioposy>5</radioposy>
 						<radiowidth>20</radiowidth>
 						<radioheight>20</radioheight>
-						<align>center</align>
+						<align>left</align>
 						<aligny>center</aligny>
 						<font>font13</font>
 						<focusedcolor>black</focusedcolor>
@@ -246,7 +246,7 @@
 					<itemgap>0</itemgap>
 					<control type="radiobutton" id="303">
 						<description>CAPS LOCK button</description>
-						<width>{{ScaleX('200')}}</width>
+						<width>{{ScaleX({{ 5 * {VirtualKeyboardKeyWidth} }})}}</width>
 						<height>{{ScaleY('50')}}</height>
 						<label>20179</label>
 						<onup>302</onup>
@@ -256,8 +256,9 @@
 						<radioposy>5</radioposy>
 						<radiowidth>20</radiowidth>
 						<radioheight>20</radioheight>
-						<align>center</align>
+						<align>left</align>
 						<aligny>center</aligny>
+						<textoffsetx>{{ScaleX('10')}}</textoffsetx>
 						<font>font13</font>
 						<focusedcolor>black</focusedcolor>
 					</control>
@@ -341,7 +342,7 @@
 					<orientation>horizontal</orientation>
 					<control type="button" id="307">
 						<description>IP Input button</description>
-						<width>{{ScaleX('100')}}</width>
+						<width>{{ScaleX({{ 2 * {VirtualKeyboardKeyWidth} }})}}</width>
 						<height>{{ScaleY('50')}}</height>
 						<onup>303</onup>
 						<ondown>300</ondown>
@@ -355,7 +356,7 @@
 					</control>
 					<control type="radiobutton" id="304">
 						<description>Symbols button</description>
-						<width>{{ScaleX('100')}}</width>
+						<width>{{ScaleX({{ 3 * {VirtualKeyboardKeyWidth} }})}}</width>
 						<height>{{ScaleY('50')}}</height>
 						<label>@#!*   </label>
 						<onup>303</onup>
@@ -450,7 +451,7 @@
 					<orientation>horizontal</orientation>
 					<control type="button" id="300">
 						<description>DONE button</description>
-						<width>{{ScaleX('200')}}</width>
+						<width>{{ScaleX({{ 5 * {VirtualKeyboardKeyWidth} }})}}</width>
 						<height>{{ScaleY('50')}}</height>
 						<texturenofocus border="25,5,25,5">KeyboardCornerBottomNF.png</texturenofocus>
 						<texturefocus border="25,5,25,5">KeyboardCornerBottom.png</texturefocus>

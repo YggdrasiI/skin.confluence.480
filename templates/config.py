@@ -47,6 +47,11 @@ substitutions = {
 
     "LogoScale": 2,  # 1
     "FavoritesBladeWidth": 650,  # 400
+
+    # 1+16 Cols. Shift width = 1+4 Cols
+    "VirtualKeyboardWidth": 1000,  # 860
+    "VirtualKeyboardKeyWidth": 62,  # 50
+    "VirtualNumpadWidth": 450,  # ?
 }
 
 # Finally, extend by other dicts here
