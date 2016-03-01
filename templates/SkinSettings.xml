@@ -438,6 +438,19 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
+					<control type="radiobutton" id="231">
+						<description>Replace edit control to lower cpu usage</description>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<height>{{ScaleY('40')}}</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Replace edit control to lower cpu usage</label>
+						<onclick>Skin.ToggleSetting(replaceEditControl)</onclick>
+						<selected>!Skin.HasSetting(replaceEditControl)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
 					<control type="label" id="220">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('45')}}</height>
