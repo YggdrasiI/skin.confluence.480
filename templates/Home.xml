@@ -29,9 +29,9 @@
 		</control>
 		<control type="image">
 			<left>{{ScaleX('0')}}</left>
-			<top>{{ScaleY('252')}}</top>
+			<top>{{ScaleY('250')}}</top>
 			<width>{{ScaleX({W})}}</width>
-			<height>{{ScaleY({{ {BackgroundForInfoHeight} + 4 }})}}</height>
+			<height>{{ScaleY({{ {BackgroundForInfoHeight} + 2 }})}}</height>
 			<texture background="true" >floor.png</texture>
 			<visible>[ Player.HasAudio | Player.HasVideo ] + !Skin.HasSetting(backgroundForInfo)</visible>
 		</control>

@@ -18,6 +18,7 @@ settings = {
     "zip_addon": False,  # Not implemented
     "force": False,
     "ignored_patterns": [".*", ".git",
+                         "screenshots",
                          "media",
                          "720p",
                          "themes",

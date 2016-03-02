@@ -32,7 +32,7 @@ substitutions = {
 
     # File meta data at home screen
     "AlbumLabelOffsetY": -0,  # 0
-    "BackgroundForInfoHeight": 162,
+    "BackgroundForInfoHeight": 154,
 
     # Give desciption text space for two extra lines
     "SettingDescExtraHeight": 80,  # 0
