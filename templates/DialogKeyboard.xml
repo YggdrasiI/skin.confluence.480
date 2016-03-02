@@ -32,6 +32,7 @@
 			<!-- Edit field animation cause high CPU load... -->
 			<control type="edit" id="312">
 				<description>Edit Text</description>
+				<left>-200</left>
 				<left>{{ScaleX('55')}}</left>
 				<top>{{ScaleY('60')}}</top>
 				<width>{{ScaleX({{ {VirtualKeyboardWidth} - 110 }})}}</width>
