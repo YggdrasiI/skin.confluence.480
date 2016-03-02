@@ -35,7 +35,7 @@
 		<control type="label" id="4">
 			<description>Edit Text</description>
 			<left>{{ScaleX('40')}}</left>
-			<top>{{ScaleY('70')}}</top>
+			<top>{{ScaleY('90')}}</top>
 			<width>{{ScaleX({{ {VirtualNumpadWidth} - 80 }})}}</width>
 			<height>{{ScaleY('50')}}</height>
 			<font>font13</font>
