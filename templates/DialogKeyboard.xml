@@ -465,7 +465,7 @@
 					</control>
 					<control type="button" id="32">
 						<description>SPACE button</description>
-						<width>{{ScaleX('200')}}</width>
+						<width>{{ScaleX({{ 4 * {VirtualKeyboardKeyWidth} }})}}</width>
 						<height>{{ScaleY('50')}}</height>
 						<label>20182</label>
 						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
@@ -479,7 +479,7 @@
 					</control>
 					<control type="button" id="8">
 						<description>BACKSPACE button</description>
-						<width>{{ScaleX('200')}}</width>
+						<width>{{ScaleX({{ 4 * {VirtualKeyboardKeyWidth} }})}}</width>
 						<height>{{ScaleY('50')}}</height>
 						<label>20181</label>
 						<onup>165</onup>
@@ -493,7 +493,7 @@
 					</control>
 					<control type="button" id="305">
 						<description>previous button</description>
-						<width>{{ScaleX('100')}}</width>
+						<width>{{ScaleX({{ 2 * {VirtualKeyboardKeyWidth} }})}}</width>
 						<height>{{ScaleY('50')}}</height>
 						<label>&lt;</label>
 						<align>center</align>
@@ -507,7 +507,7 @@
 					</control>
 					<control type="button" id="306">
 						<description>next button</description>
-						<width>{{ScaleX('100')}}</width>
+						<width>{{ScaleX({{ 2 * {VirtualKeyboardKeyWidth} }})}}</width>
 						<height>{{ScaleY('50')}}</height>
 						<label>&gt;</label>
 						<align>center</align>

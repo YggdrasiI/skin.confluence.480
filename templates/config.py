@@ -49,7 +49,7 @@ substitutions = {
     "FavoritesBladeWidth": 650,  # 400
 
     # 1+16 Cols. Shift width = 1+4 Cols
-    "VirtualKeyboardWidth": 1000,  # 860
+    "VirtualKeyboardWidth": 17*62+50,  # 860
     "VirtualKeyboardKeyWidth": 62,  # 50
     "VirtualNumpadWidth": 450,  # ?
 }
