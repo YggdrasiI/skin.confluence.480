@@ -52,7 +52,17 @@ substitutions = {
     "VirtualKeyboardWidth": 17*62+50,  # 860
     "VirtualKeyboardKeyWidth": 62,  # 50
     "VirtualNumpadWidth": 450,  # ?
+
+    "OSDBookmarksWidth": 1000,  # 800
+    "OSDBookmarksItemHeight": 245,  # 215
+    "OSDSettingsWidth": 1000,  # 800
+    "OSDSeekSliderWidth": 720,  # 720
+    "OSDSubtitleMenuWidth": 356,  # 256
 }
+
+substitutions["OSDBookmarksItemWidth"] = int(
+    (substitutions["OSDBookmarksWidth"] - 2*40)/3)
+
 
 # Finally, extend by other dicts here
 map(lambda x: substitutions.update(x), [])
