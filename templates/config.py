@@ -66,6 +66,11 @@ substitutions = {
     "DialogSeekBarWidth2": 340,  # 240
 
     "FullScreenExtraHeight": 34,  # 0
+
+    "MyPVRChannelsLeftExtraWidth": 100,  # 0
+    "MyPVRChannelsLeftItemHeight": 80,  # ?
+    "MyPVRChannelsPreviewHeight": 300, # 400
+    "MyPVRChannelsRightExtraHeight": 54, # 0
     }
 
 substitutions["OSDBookmarksItemWidth"] = int(
