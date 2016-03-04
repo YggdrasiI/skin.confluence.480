@@ -1118,6 +1118,22 @@
 				<aspectratio>keep</aspectratio>
 				<texture>icon_power.png</texture>
 			</control>
+			<control type="button" id="99021">
+				<description>Favourites dummy button. Focused element controls position of dialog.</description>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('-140')}}</top>
+				<width>{{ScaleX('0')}}</width>
+				<height>{{ScaleY('0')}}</height>
+				<label></label>
+				<font>-</font>
+				<visible>true</visible>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>20</onleft>
+				<onright>20</onright>
+				<onup>9002</onup>
+				<ondown>9003</ondown>
+			</control>
 			<control type="button" id="21">
 				<description>Favourites push button</description>
 				<left>{{ScaleX('0')}}</left>
@@ -1126,7 +1142,9 @@
 				<height>{{ScaleY('45')}}</height>
 				<label>1036</label>
 				<font>-</font>
+				<onclick>SetFocus(99021)</onclick>
 				<onclick>ActivateWindow(Favourites)</onclick>
+				<onclick>SetFocus(21)</onclick>
 				<texturefocus border="5">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
 				<onleft>20</onleft>
