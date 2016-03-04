@@ -40,21 +40,29 @@ def get_template_paths(folder, extension=".xml"):
 
 def parse_options():
     p = optparse.OptionParser()
-    p.add_option('--out', '-o', default=settings["out_folder"])
-    p.add_option('--xscale', '-x', default=str(settings["base_resolution"][0]))
-    p.add_option('--yscale', '-y', default=str(settings["base_resolution"][1]))
-    p.add_option('--templates', '-t', default=settings["template_folder"])
-    # default=int(settings["verbose"]))
+    p.add_option('--out', '-o', default=settings["out_folder"],
+                 help="Destination folder for xml files.")
+    p.add_option('--xscale', '-x', default=str(settings["base_resolution"][0]),
+                 help="Targeting screen width.")
+    p.add_option('--yscale', '-y', default=str(settings["base_resolution"][1]),
+                 help="Targeting screen height.")
+    p.add_option('--templates', '-t', default=settings["template_folder"],
+                 help="Source template directory.")
     p.add_option('--verbose', '-v', action="store_true")
-    p.add_option('--config', '-c', default=str(settings["configModule"]))
+    p.add_option('--debug-labels', '-d', action="store_true",
+                 help="Replace label text with line of definition.")
+    p.add_option('--config', '-c', default=str(settings["configModule"]),
+                 help="Module name (python syntax) of config file.")
     p.add_option('--force', '-f',
                  default=settings["ignore_timestamps"],
-                 action="store_true")
+                 action="store_true",
+                 help="Ignore timestamps and update all files.")
     options, arguments = p.parse_args()
     settings["base_resolution"] = [int(options.xscale), int(options.yscale)]
     settings["out_folder"] = options.out
     settings["template_folder"] = options.templates  # + os.path.sep
     settings["verbose"] = bool(options.verbose)
+    settings["replace_labels"] = bool(options.debug_labels)
     settings["configModule"] = options.config
     settings["ignore_timestamps"] = bool(options.force)
 
@@ -114,13 +122,41 @@ def do_substitutions(line, iLine=-1):
     return line
 
 
+def replace_labels(line, filename, iLine):
+    """
+    m = re.search("<control[^s>]*>([^<]*)", line)
+    if m is not None:
+        line = "%s<label>%s, %d</label>%s\n" % (
+            line[:m.start(1)],
+            filename,
+            iLine,
+            line[m.end(1):])
+        return line
+    """
+
+    for tag in ["label", "info"]:
+        m = re.search("<{0}[^>]*>([^<]*)<\/{0}>".format(tag), line)
+        if m is not None:
+            line = "%s%s, %d%s" % (
+                line[:m.start(1)],
+                filename,
+                iLine,
+                line[m.end(1):])
+            break
+
+    return line
+
+
 def substitute(file_in, file_out):
     f = open(file_in, 'r')
     f2 = open(file_out, 'w')
+    basename = os.path.splitext(os.path.basename(file_in))[0]
     l = f.readline()
     iLine = 1
     while(l):
         l2 = do_substitutions(l, iLine)
+        if settings["replace_labels"]:
+            l2 = replace_labels(l2, basename, iLine)
         f2.write(l2)
         l = f.readline()
         iLine += 1
