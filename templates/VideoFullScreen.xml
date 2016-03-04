@@ -310,7 +310,7 @@
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('100')}}</width>
+					<width>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>left</align>
@@ -321,7 +321,7 @@
 					<visible>VideoPlayer.Content(LiveTV)</visible>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('100')}}</width>
+					<width>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>left</align>
@@ -330,26 +330,26 @@
 				</control>
 				<control type="progress" id="1">
 					<description>ProgressbarCache</description>
-					<left>{{ScaleX('100')}}</left>
+					<left>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</left>
 					<top>{{ScaleY('15')}}</top>
-					<width>{{ScaleX('720')}}</width>
+					<width>{{ScaleX({OSDSeekSliderWidth})}}</width>
 					<height>{{ScaleY('16')}}</height>
 					<info>Player.ProgressCache</info>
 					<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
 				</control>
 				<control type="progress" id="1">
 					<description>Progressbar</description>
-					<left>{{ScaleX('100')}}</left>
+					<left>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</left>
 					<top>{{ScaleY('15')}}</top>
-					<width>{{ScaleX('720')}}</width>
+					<width>{{ScaleX({OSDSeekSliderWidth})}}</width>
 					<height>{{ScaleY('16')}}</height>
 					<info>Player.Progress</info>
 				</control>
 				<control type="label" id="1">
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
-					<left>{{ScaleX('820')}}</left>
+					<left>{{ScaleX({{ int(820 + ({OSDSeekSliderWidth} - 720)/2) }})}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('100')}}</width>
+					<width>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>right</align>
@@ -358,9 +358,9 @@
 				</control>
 				<control type="label" id="1">
 					<visible>VideoPlayer.Content(LiveTV)</visible>
-					<left>{{ScaleX('820')}}</left>
+					<left>{{ScaleX({{ int(820 + ({OSDSeekSliderWidth} - 720)/2) }})}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('100')}}</width>
+					<width>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>right</align>

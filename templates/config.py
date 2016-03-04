@@ -56,7 +56,7 @@ substitutions = {
     "OSDBookmarksWidth": 1000,  # 800
     "OSDBookmarksItemHeight": 245,  # 215
     "OSDSettingsWidth": 1000,  # 800
-    "OSDSeekSliderWidth": 720,  # 720
+    "OSDSeekSliderWidth": 670,  # 720
     "OSDSubtitleMenuWidth": 356,  # 256
 }
 
