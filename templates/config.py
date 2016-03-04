@@ -54,7 +54,7 @@ substitutions = {
     "VirtualNumpadWidth": 450,  # ?
 
     "OSDBookmarksWidth": 1000,  # 800
-    "OSDBookmarksItemHeight": 245,  # 215
+    "OSDBookmarksItemHeight": 238,  # 215
     "OSDSettingsWidth": 1000,  # 800
     "OSDSeekSliderWidth": 670,  # 720
     "OSDSubtitleMenuWidth": 356,  # 256
