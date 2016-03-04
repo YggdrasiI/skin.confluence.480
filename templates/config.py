@@ -58,6 +58,12 @@ substitutions = {
     "OSDSettingsWidth": 1000,  # 800
     "OSDSeekSliderWidth": 670,  # 720
     "OSDSubtitleMenuWidth": 356,  # 256
+
+    # Dimensions of Seek bar region
+    "DialogSeekBarWidth": 390,  # 370
+    "DialogSeekBarHeight": 90,  # 70
+    # The bar length
+    "DialogSeekBarWidth2": 340,  # 240
 }
 
 substitutions["OSDBookmarksItemWidth"] = int(
