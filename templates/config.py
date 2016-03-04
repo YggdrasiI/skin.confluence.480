@@ -64,7 +64,9 @@ substitutions = {
     "DialogSeekBarHeight": 90,  # 70
     # The bar length
     "DialogSeekBarWidth2": 340,  # 240
-}
+
+    "FullScreenExtraHeight": 34,  # 0
+    }
 
 substitutions["OSDBookmarksItemWidth"] = int(
     (substitutions["OSDBookmarksWidth"] - 2*40)/3)

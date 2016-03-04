@@ -18,7 +18,7 @@
 				<left>{{ScaleX('30')}}</left>
 				<top>{{ScaleY('5')}}</top>
 				<width>{{ScaleX('1000')}}</width>
-				<height>{{ScaleY('25')}}</height>
+				<height>{{ScaleY('35')}}</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font13</font>
@@ -32,7 +32,7 @@
 				<left>{{ScaleX('30')}}</left>
 				<top>{{ScaleY('5')}}</top>
 				<width>{{ScaleX('1000')}}</width>
-				<height>{{ScaleY('25')}}</height>
+				<height>{{ScaleY('35')}}</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font13</font>
@@ -46,7 +46,7 @@
 				<left>{{ScaleX('450')}}</left>
 				<top>{{ScaleY('5')}}</top>
 				<width>{{ScaleX('800')}}</width>
-				<height>{{ScaleY('25')}}</height>
+				<height>{{ScaleY('35')}}</height>
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>font13</font>
@@ -58,9 +58,9 @@
 			</control>
 			<control type="image" id="1">
 				<left>{{ScaleX('0')}}</left>
-				<top>{{ScaleY('230r')}}</top>
+				<top>{{ScaleY('{{ 230 + {FullScreenExtraHeight} }}r')}}</top>
 				<width>{{ScaleX('1280')}}</width>
-				<height>{{ScaleY('230')}}</height>
+				<height>{{ScaleY({{ 230 + {FullScreenExtraHeight} }})}}</height>
 				<texture border="{{ScaleBorder('1')}}">HomeNowPlayingBack.png</texture>
 			</control>
 			<control type="image" id="1">
@@ -99,7 +99,7 @@
 			</control>
 			<control type="group" id="1">
 				<left>{{ScaleX('330')}}</left>
-				<top>{{ScaleY('185r')}}</top>
+				<top>{{ScaleY('{{ 185 + {FullScreenExtraHeight} }}r')}}</top>
 				<control type="label" id="1">
 					<description>Heading label</description>
 					<left>{{ScaleX('0')}}</left>
@@ -140,7 +140,7 @@
 				<control type="label" id="1">
 					<description>Studio label</description>
 					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY('30')}}</top>
+					<top>{{ScaleY({{ 30 + int(1*{FullScreenExtraHeight}/3) }})}}</top>
 					<width>{{ScaleX('910')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<align>left</align>
@@ -153,7 +153,7 @@
 				<control type="label" id="1">
 					<description>TV Show label</description>
 					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY('30')}}</top>
+					<top>{{ScaleY({{ 30 + int(1*{FullScreenExtraHeight}/3) }})}}</top>
 					<width>{{ScaleX('910')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<align>left</align>
@@ -166,7 +166,7 @@
 				<control type="label" id="1">
 					<description>Music Info label</description>
 					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY('30')}}</top>
+					<top>{{ScaleY({{ 30 + int(1*{FullScreenExtraHeight}/3) }})}}</top>
 					<width>{{ScaleX('910')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<align>left</align>
@@ -179,7 +179,7 @@
 				<control type="label" id="1">
 					<description>LiveTV Info label</description>
 					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY('30')}}</top>
+					<top>{{ScaleY({{ 30 + int(1*{FullScreenExtraHeight}/3) }})}}</top>
 					<width>{{ScaleX('910')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<align>left</align>
@@ -191,7 +191,7 @@
 				</control>
 				<control type="grouplist" id="1">
 					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY('60')}}</top>
+					<top>{{ScaleY({{ 60 + {FullScreenExtraHeight} }})}}</top>
 					<width>{{ScaleX('910')}}</width>
 					<height>{{ScaleY('35')}}</height>
 					<itemgap>5</itemgap>
@@ -275,7 +275,7 @@
 				</control>
 				<control type="label" id="1">
 					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('120')}}</top>
+					<top>{{ScaleY({{ 120 + {FullScreenExtraHeight} }})}}</top>
 					<width>{{ScaleX('910')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[31049] $INFO[Player.FinishTime]</label>
@@ -289,7 +289,7 @@
 				</control>
 				<control type="label" id="1">
 					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('120')}}</top>
+					<top>{{ScaleY({{ 120 + {FullScreenExtraHeight} }})}}</top>
 					<width>{{ScaleX('910')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]: ]</label>
