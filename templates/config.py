@@ -71,6 +71,9 @@ substitutions = {
     "MyPVRChannelsLeftItemHeight": 80,  # ?
     "MyPVRChannelsPreviewHeight": 300, # 400
     "MyPVRChannelsRightExtraHeight": 54, # 0
+
+    # Higher desciption box
+    "DialogPVRGuideInfoExtraHeight": 150, # 0
     }
 
 substitutions["OSDBookmarksItemWidth"] = int(

@@ -203,7 +203,7 @@
 				</control>
 				<control type="label">
 					<right>{{ScaleX('130')}}</right>
-					<top>{{ScaleY('480')}}</top>
+					<top>{{ScaleY({{ 480 - {DialogPVRGuideInfoExtraHeight} }})}}</top>
 					<width>{{ScaleX('400')}}</width>
 					<height>{{ScaleY('30')}}</height>
 					<font>font13_title</font>
@@ -218,7 +218,7 @@
 				<control type="spincontrol" id="61">
 					<description>Next page button</description>
 					<left>{{ScaleX('120r')}}</left>
-					<top>{{ScaleY('485')}}</top>
+					<top>{{ScaleY({{ 485 - {DialogPVRGuideInfoExtraHeight} }})}}</top>
 					<subtype>page</subtype>
 					<font>-</font>
 					<onleft>61</onleft>
@@ -230,9 +230,9 @@
 				</control>
 				<control type="textbox" id="400">
 					<left>{{ScaleX('210')}}</left>
-					<top>{{ScaleY('527')}}</top>
+					<top>{{ScaleY({{ 527 - {DialogPVRGuideInfoExtraHeight} }})}}</top>
 					<width>{{ScaleX('1030')}}</width>
-					<height>{{ScaleY('120')}}</height>
+					<height>{{ScaleY({{ 120 + {DialogPVRGuideInfoExtraHeight} }})}}</height>
 					<font>font13</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>
