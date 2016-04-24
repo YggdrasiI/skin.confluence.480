@@ -65,6 +65,8 @@ substitutions = {
     # The bar length
     "DialogSeekBarWidth2": 340,  # 240
 
+    "DialogBusyWidth": 300,  # 200
+
     "FullScreenExtraHeight": 34,  # 0
 
     "MyPVRChannelsLeftExtraWidth": 100,  # 0
