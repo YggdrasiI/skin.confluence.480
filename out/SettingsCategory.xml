@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="image">
+			<left>0</left>
+			<top>66r</top>
+			<width>720</width>
+			<height>66</height>
+			<texture>floor.png</texture>
+			<include>VisibleFadeEffect</include>
+		</control>
+		<control type="group">
+			<left>-2</left>
+			<top>20</top>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="360,240" easing="out" tween="back" time="225" />
+				<effect type="fade" start="0" end="100" time="225" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="80" center="360,240" easing="in" tween="back" time="225" />
+				<effect type="fade" start="100" end="0" time="225" />
+			</animation>
+			<control type="image">
+				<left>2</left>
+				<top>3</top>
+				<width>720</width>
+				<height>420</height>
+				<texture border="8">ContentPanel.png</texture>
+			</control>
+			<control type="image">
+				<left>2</left>
+				<top>416</top>
+				<width>720</width>
+				<height>42</height>
+				<texture border="8">ContentPanelMirror.png</texture>
+			</control>
+			<control type="button">
+				<description>Close Window button</description>
+				<left>658</left>
+				<top>7</top>
+				<width>36</width>
+				<height>21</height>
+				<label>-</label>
+				<font>-</font>
+				<onclick>PreviousMenu</onclick>
+				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturenofocus>DialogCloseButton.png</texturenofocus>
+				<onleft>1</onleft>
+				<onright>1</onright>
+				<onup>1</onup>
+				<ondown>1</ondown>
+				<visible>system.getbool(input.enablemouse)</visible>
+				<include>VisibleFadeEffect</include>
+			</control>
+			<control type="image">
+				<description>LOGO</description>
+				<left>16</left>
+				<top>10</top>
+				<width>149</width>
+				<height>53</height>
+				<aspectratio>keep</aspectratio>
+				<texture>Confluence_Logo.png</texture>
+			</control>
+			<control type="grouplist" id="3">
+				<description>button area</description>
+				<left>5</left>
+				<top>60</top>
+				<width>171</width>
+				<height>320</height>
+				<itemgap>-1</itemgap>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>20</ondown>
+			</control>
+			<control type="button" id="20">
+				<description>Setting level button</description>
+				<left>5</left>
+				<top>363</top>
+				<height>40</height>
+				<width>171</width>
+				<label>10037</label>
+				<textoffsetx>11</textoffsetx>
+				<textoffsety>18</textoffsety>
+				<align>right</align>
+				<aligny>top</aligny>
+				<font>font13</font>
+				<textcolor>selected</textcolor>
+				<focusedcolor>selected</focusedcolor>
+				<texturefocus border="5">MenuItemFO.png</texturefocus>
+				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<onclick>SettingsLevelChange</onclick>
+			</control>
+			<control type="label">
+				<left>11</left>
+				<top>366</top>
+				<height>16</height>
+				<width>154</width>
+				<label>31142</label>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="image">
+				<left>176</left>
+				<top>6</top>
+				<width>525</width>
+				<height>412</height>
+				<texture border="2">black-back2.png</texture>
+			</control>
+			<control type="image">
+				<left>176</left>
+				<top>6</top>
+				<width>525</width>
+				<height>34</height>
+				<texture>dialogheader.png</texture>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<left>194</left>
+				<top>13</top>
+				<width>489</width>
+				<height>20</height>
+				<font>font16</font>
+				<label>$INFO[Control.GetLabel(2)] - $LOCALIZE[5]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<left>188</left>
+				<top>40</top>
+				<width>503</width>
+				<height>290</height>
+				<itemgap>-1</itemgap>
+				<pagecontrol>60</pagecontrol>
+				<onleft>3</onleft>
+				<onright>60</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>703</left>
+				<top>40</top>
+				<width>14</width>
+				<height>290</height>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft>5</onleft>
+				<onright>3</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			<control type="image">
+				<description>separator image</description>
+				<left>188</left>
+				<top>350</top>
+				<width>503</width>
+				<height>1</height>
+				<texture>separator2.png</texture>
+				<colordiffuse>40FFFFFF</colordiffuse>
+			</control>
+			<control type="textbox" id="6">
+				<description>description area</description>
+				<left>192</left>
+				<top>354</top>
+				<width>495</width>
+				<height>55</height>
+				<font>font12</font>
+				<align>justify</align>
+				<textcolor>white</textcolor>
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+			</control>
+		</control>
+		<include>BehindDialogFadeOut</include>
+		<control type="button" id="10">
+			<description>Default Category Button</description>
+			<height>40</height>
+			<width>146</width>
+			<textoffsetx>11</textoffsetx>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>font13_title</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus border="5">MenuItemFO.png</texturefocus>
+			<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+			<pulseonselect>false</pulseonselect>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<left>0</left>
+			<top>0</top>
+			<height>26</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<invalidcolor>invalid</invalidcolor>
+			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
+			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<left>0</left>
+			<top>0</top>
+			<height>26</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
+			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<left>0</left>
+			<top>0</top>
+			<height>26</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
+			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+		</control>
+		<control type="sliderex" id="13">
+			<description>Default Slider</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>26</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
+			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+			<aligny>center</aligny>
+		</control>
+		<control type="image" id="11">
+			<description>separator image</description>
+			<height>1</height>
+			<texture>separator2.png</texture>
+		</control>
+		<control type="label" id="14">
+			<description>Default Label</description>
+			<left>0</left>
+			<top>0</top>
+			<height>20</height>
+			<label>-</label>
+			<align>center</align>
+			<aligny>bottom</aligny>
+			<font>font13_title</font>
+			<textcolor>grey</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="label" id="2">
+			<description>Fake Label so we can pass it value down to the one below</description>
+			<left>0</left>
+			<top>0</top>
+			<width>0</width>
+			<height>0</height>
+			<font>-</font>
+			<visible>false</visible>
+		</control>
+		<include>CommonNowPlaying</include>
+		<include>MainWindowMouseButtons</include>
+		<control type="image">
+			<description>Section header image</description>
+			<left>11</left>
+			<top>2</top>
+			<width>19</width>
+			<height>23</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icon_system.png</texture>
+		</control>
+		<control type="grouplist">
+			<left>36</left>
+			<top>3</top>
+			<width>562</width>
+			<height>20</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>$LOCALIZE[5]</label>
+			</control>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>[COLOR=blue] - [/COLOR]$INFO[Control.GetLabel(2)]</label>
+			</control>
+		</control>
+		<include>Clock</include>
+	</controls>
+</window>

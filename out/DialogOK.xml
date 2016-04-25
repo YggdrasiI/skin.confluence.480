@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<left>188</left>
+		<top>153</top>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<include name="DialogBackgroundCommons">
+			<param name="DialogBackgroundWidth" value="343" />
+			<param name="DialogBackgroundHeight" value="160" />
+			<param name="DialogHeaderWidth" value="298" />
+			<param name="DialogHeaderLabel" value="$LOCALIZE[13406]" />
+			<param name="DialogHeaderId" value="1" />
+			<param name="CloseButtonLeft" value="292" />
+			<param name="CloseButtonNav" value="10" />
+		</include>
+		<control type="textbox" id="9">
+			<description>text</description>
+			<left>16</left>
+			<top>41</top>
+			<width>309</width>
+			<height>65</height>
+			<align>left</align>
+			<label>-</label>
+			<font>font13</font>
+			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+		</control>
+		<control type="button" id="10">
+			<description>OK button</description>
+			<left>115</left>
+			<top>116</top>
+			<width>112</width>
+			<height>26</height>
+			<label>186</label>
+			<font>font12_title</font>
+			<textcolor>white</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<align>center</align>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+		</control>
+	</controls>
+</window>

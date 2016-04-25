@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog">
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<left>233</left>
+		<top>183</top>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<include name="DialogBackgroundCommons">
+				<param name="DialogBackgroundWidth" value="253" />
+				<param name="DialogBackgroundHeight" value="113" />
+				<param name="DialogHeaderWidth" value="208" />
+				<param name="DialogHeaderLabel" value="$LOCALIZE[31321]" />
+				<param name="DialogHeaderId" value="1" />
+				<param name="CloseButtonLeft" value="202" />
+				<param name="CloseButtonNav" value="10" />
+			</include>
+			<control type="label" id="401">
+				<description>Song Number Label</description>
+				<left>16</left>
+				<top>46</top>
+				<width>219</width>
+				<height>20</height>
+				<font>font28_title</font>
+				<textcolor>white</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="402">
+				<description>Song Name Label</description>
+				<left>16</left>
+				<top>80</top>
+				<width>219</width>
+				<height>13</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>blue</textcolor>
+				<scroll>true</scroll>
+			</control>
+		</control>
+	</controls>
+</window>

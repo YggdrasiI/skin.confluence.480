@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>1</defaultcontrol>
+	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
+	<animation effect="fade" start="0" end="100" time="150">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+	<controls>
+		<control type="group">
+			<visible>player.chaptercount + Window.IsVisible(FullScreenVideo)</visible>
+			<left>396r</left>
+			<top>-4</top>
+			<include>VisibleFadeEffect</include>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>84</width>
+				<height>46</height>
+				<colordiffuse>EEFFFFFF</colordiffuse>
+				<texture border="6">OverlayDialogBackground.png</texture>
+			</control>
+			<control type="label" id="1">
+				<description>Chapter Pos No</description>
+				<left>11</left>
+				<top>6</top>
+				<width>61</width>
+				<height>13</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>blue</textcolor>
+				<label>$LOCALIZE[21396]</label>
+				<visible>player.chaptercount</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Chapter Pos No</description>
+				<left>11</left>
+				<top>20</top>
+				<width>61</width>
+				<height>13</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font13_title</font>
+				<textcolor>grey2</textcolor>
+				<label>$INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
+				<visible>player.chaptercount</visible>
+			</control>
+		</control>
+		<control type="group">
+			<left>315r</left>
+			<top>-4</top>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>219</width>
+				<height>60</height>
+				<colordiffuse>EEFFFFFF</colordiffuse>
+				<texture border="6">OverlayDialogBackground.png</texture>
+			</control>
+			<control type="group">
+				<left>157</left>
+				<top>6</top>
+				<control type="image">
+					<left>5</left>
+					<top>0</top>
+					<width>45</width>
+					<height>33</height>
+					<texture>OSDSeekFrame.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>2</top>
+					<width>11</width>
+					<height>29</height>
+					<texture>OSDSeekRewind.png</texture>
+					<visible>Player.Rewinding</visible>
+				</control>
+				<control type="image">
+					<left>45</left>
+					<top>2</top>
+					<width>11</width>
+					<height>29</height>
+					<texture>OSDSeekForward.png</texture>
+					<visible>Player.Forwarding</visible>
+				</control>
+				<control type="image">
+					<left>17</left>
+					<top>2</top>
+					<width>22</width>
+					<height>26</height>
+					<texture>OSDPause.png</texture>
+					<visible>Player.Paused</visible>
+				</control>
+				<control type="image">
+					<left>17</left>
+					<top>2</top>
+					<width>22</width>
+					<height>26</height>
+					<texture>OSDPlay.png</texture>
+					<visible>Player.Playing</visible>
+				</control>
+				<control type="image">
+					<left>15</left>
+					<top>2</top>
+					<width>22</width>
+					<height>26</height>
+					<texture>OSD2x.png</texture>
+					<visible>Player.Rewinding2x</visible>
+				</control>
+				<control type="image">
+					<left>14</left>
+					<top>2</top>
+					<width>22</width>
+					<height>26</height>
+					<texture>OSD4x.png</texture>
+					<visible>Player.Rewinding4x</visible>
+				</control>
+				<control type="image">
+					<left>12</left>
+					<top>2</top>
+					<width>22</width>
+					<height>26</height>
+					<texture>OSD8x.png</texture>
+					<visible>Player.Rewinding8x</visible>
+				</control>
+				<control type="image">
+					<left>10</left>
+					<top>2</top>
+					<width>22</width>
+					<height>26</height>
+					<texture>OSD16x.png</texture>
+					<visible>Player.Rewinding16x</visible>
+				</control>
+				<control type="image">
+					<left>9</left>
+					<top>2</top>
+					<width>22</width>
+					<height>26</height>
+					<texture>OSD32x.png</texture>
+					<visible>Player.Rewinding32x</visible>
+				</control>
+				<control type="image">
+					<left>19</left>
+					<top>2</top>
+					<width>22</width>
+					<height>26</height>
+					<texture>OSD2x.png</texture>
+					<visible>Player.Forwarding2x</visible>
+				</control>
+				<control type="image">
+					<left>20</left>
+					<top>2</top>
+					<width>22</width>
+					<height>26</height>
+					<texture>OSD4x.png</texture>
+					<visible>Player.Forwarding4x</visible>
+				</control>
+				<control type="image">
+					<left>22</left>
+					<top>2</top>
+					<width>22</width>
+					<height>26</height>
+					<texture>OSD8x.png</texture>
+					<visible>Player.Forwarding8x</visible>
+				</control>
+				<control type="image">
+					<left>24</left>
+					<top>2</top>
+					<width>22</width>
+					<height>26</height>
+					<texture>OSD16x.png</texture>
+					<visible>Player.Forwarding16x</visible>
+				</control>
+				<control type="image">
+					<left>25</left>
+					<top>2</top>
+					<width>22</width>
+					<height>26</height>
+					<texture>OSD32x.png</texture>
+					<visible>Player.Forwarding32x</visible>
+				</control>
+			</control>
+			<control type="label">
+				<description>Seekbar Label</description>
+				<left>11</left>
+				<top>4</top>
+				<width>146</width>
+				<height>20</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>blue</textcolor>
+				<label>$VAR[SeekLabel]</label>
+			</control>
+			<control type="label">
+				<description>Elapsed Time Label</description>
+				<left>11</left>
+				<top>22</top>
+				<width>146</width>
+				<height>20</height>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[Player.Time] - $INFO[Player.Duration]</label>
+				<visible>!Player.Seeking</visible>
+			</control>
+			<control type="label">
+				<description>Seek Time Label</description>
+				<left>11</left>
+				<top>22</top>
+				<width>146</width>
+				<height>20</height>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[Player.SeekTime] - $INFO[Player.Duration]</label>
+				<visible>Player.Seeking</visible>
+			</control>
+			<control type="progress">
+				<description>ProgressbarCache</description>
+				<left>11</left>
+				<top>42</top>
+				<width>191</width>
+				<height>10</height>
+				<info>Player.ProgressCache</info>
+				<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
+				<visible>true</visible>
+			</control>
+			<control type="progress" id="23">
+				<description>Progressbar</description>
+				<left>11</left>
+				<top>42</top>
+				<width>191</width>
+				<height>10</height>
+				<info>Player.Progress</info>
+				<visible>true</visible>
+			</control>
+			<control type="slider" id="401">
+				<description>Seek Slider</description>
+				<left>11</left>
+				<top>40</top>
+				<width>191</width>
+				<height>10</height>
+				<texturesliderbar>seekslider.png</texturesliderbar>
+				<textureslidernib>osd_slider_nib.png</textureslidernib>
+				<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+				<visible>Player.Seeking</visible>
+			</control>
+		</control>
+	</controls>
+</window>

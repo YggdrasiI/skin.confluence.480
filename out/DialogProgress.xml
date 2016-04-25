@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<left>188</left>
+		<top>153</top>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<include name="DialogBackgroundCommons">
+			<param name="DialogBackgroundWidth" value="343" />
+			<param name="DialogBackgroundHeight" value="160" />
+			<param name="DialogHeaderWidth" value="298" />
+			<param name="DialogHeaderLabel" value="$INFO[Control.GetLabel(1)] $INFO[System.Progressbar,- ,%]" />
+			<param name="DialogHeaderId" value="0" />
+			<param name="CloseButtonLeft" value="292" />
+			<param name="CloseButtonNav" value="10" />
+		</include>
+		<control type="label" id="1">
+			<description>fake heading label</description>
+			<left>0</left>
+			<top>0</top>
+			<width>0</width>
+			<height>0</height>
+			<font>-</font>
+			<visible>false</visible>
+		</control>
+		<control type="textbox" id="9">
+			<description>text</description>
+			<left>16</left>
+			<top>41</top>
+			<width>309</width>
+			<height>52</height>
+			<align>left</align>
+			<label>-</label>
+			<font>font13</font>
+			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+		</control>
+		<control type="progress" id="20">
+			<description>Progressbar</description>
+			<left>16</left>
+			<top>98</top>
+			<width>309</width>
+			<height>10</height>
+			<info>System.Progressbar</info>
+		</control>
+		<control type="button" id="10">
+			<description>Cancel button</description>
+			<left>115</left>
+			<top>116</top>
+			<width>112</width>
+			<height>26</height>
+			<label>222</label>
+			<font>font12_title</font>
+			<textcolor>white</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<align>center</align>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+		</control>
+	</controls>
+</window>

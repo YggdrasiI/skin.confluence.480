@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">1</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<left>188</left>
+		<top>156</top>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<include name="DialogBackgroundCommons">
+			<param name="DialogBackgroundWidth" value="343" />
+			<param name="DialogBackgroundHeight" value="153" />
+			<param name="DialogHeaderWidth" value="298" />
+			<param name="DialogHeaderLabel" value="$LOCALIZE[13406]" />
+			<param name="DialogHeaderId" value="1" />
+			<param name="CloseButtonLeft" value="292" />
+			<param name="CloseButtonNav" value="10" />
+		</include>
+		<control type="label" id="2">
+			<description>dialog line 1</description>
+			<left>16</left>
+			<top>46</top>
+			<width>309</width>
+			<height>20</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>-</label>
+			<font>font13</font>
+		</control>
+		<control type="label" id="3">
+			<description>dialog line 2</description>
+			<left>16</left>
+			<top>63</top>
+			<width>309</width>
+			<height>20</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>-</label>
+			<font>font13</font>
+		</control>
+		<control type="label" id="4">
+			<description>dialog line 3</description>
+			<left>16</left>
+			<top>86</top>
+			<width>309</width>
+			<height>20</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>-</label>
+			<font>font35_title</font>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="CommonBackground">
+		<control type="image">
+			<description>Normal Default Background Image</description>
+			<left>0</left>
+			<top>0</top>
+			<width>720</width>
+			<height>480</height>
+			<aspectratio>scale</aspectratio>
+			<texture fallback="low_contrast2.png">$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
+			<texture fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
+			<visible>![Skin.HasSetting(UseCustomBackground) + !IsEmpty(Skin.String(CustomBackgroundPath))]</visible>
+			<include>VisibleFadeEffect</include>
+		</control>
+		<control type="image">
+			<description>User Set Background Image</description>
+			<left>0</left>
+			<top>0</top>
+			<width>720</width>
+			<height>480</height>
+			<aspectratio>scale</aspectratio>
+			<texture>$INFO[Skin.String(CustomBackgroundPath)]</texture>
+			<visible>Skin.HasSetting(UseCustomBackground) + !IsEmpty(Skin.String(CustomBackgroundPath))</visible>
+			<include>VisibleFadeEffect</include>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>720</width>
+			<height>480</height>
+			<aspectratio>scale</aspectratio>
+			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			<include>backgroundfade</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<visible>!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(ListItem.Property(Fanart_Image))</visible>
+			<include>Window_OpenClose_Animation</include>
+			<visible>![Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)]</visible>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>720</width>
+			<height>480</height>
+			<texture>special://skin/backgrounds/media-overlay.jpg</texture>
+			<visible>[Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
+			<include>VisibleFadeEffect</include>
+		</control>
+		<control type="visualisation">
+			<left>0</left>
+			<top>0</top>
+			<width>720</width>
+			<height>480</height>
+			<visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis)</visible>
+		</control>
+		<control type="videowindow">
+			<left>0</left>
+			<top>0</top>
+			<width>720</width>
+			<height>480</height>
+			<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo) + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>-26</top>
+			<width>720</width>
+			<height>80</height>
+			<texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
+			<visible>[Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] | [Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis)] | [!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(ListItem.Property(Fanart_Image))]</visible>
+			<include>VisibleFadeEffect</include>
+		</control>
+	</include>
+	<include name="ContentPanelBackgrounds">
+		<control type="image">
+			<left>0</left>
+			<top>66r</top>
+			<width>720</width>
+			<height>66</height>
+			<texture>floor.png</texture>
+			<animation effect="slide" start="0,6" end="0,0" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,6" time="150" condition="Window.Next(Home)">WindowClose</animation>
+		</control>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(50)</visible>
+				<control type="image">
+					<left>28</left>
+					<top>40</top>
+					<width>421</width>
+					<height>400</height>
+					<texture border="8">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<left>28</left>
+					<top>434</top>
+					<width>421</width>
+					<height>42</height>
+					<texture border="8">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(504) | Control.IsVisible(550) | Control.IsVisible(512)</visible>
+				<control type="image">
+					<left>28</left>
+					<top>40</top>
+					<width>360</width>
+					<height>400</height>
+					<texture border="8">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<left>28</left>
+					<top>434</top>
+					<width>360</width>
+					<height>42</height>
+					<texture border="8">ContentPanelMirror.png</texture>
+				</control>
+				<control type="image">
+					<left>393</left>
+					<top>40</top>
+					<width>298</width>
+					<height>400</height>
+					<texture border="8">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<left>393</left>
+					<top>434</top>
+					<width>298</width>
+					<height>42</height>
+					<texture border="8">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(551) | Control.IsVisible(560) | Control.IsVisible(511) | Control.IsVisible(506) | Control.IsVisible(513)</visible>
+				<control type="image">
+					<left>28</left>
+					<top>40</top>
+					<width>472</width>
+					<height>400</height>
+					<texture border="8">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<left>28</left>
+					<top>434</top>
+					<width>472</width>
+					<height>42</height>
+					<texture border="8">ContentPanelMirror.png</texture>
+				</control>
+				<control type="image">
+					<left>506</left>
+					<top>40</top>
+					<width>185</width>
+					<height>400</height>
+					<texture border="8">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<left>506</left>
+					<top>434</top>
+					<width>185</width>
+					<height>42</height>
+					<texture border="8">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(501)</visible>
+				<control type="image">
+					<left>28</left>
+					<top>33</top>
+					<width>663</width>
+					<height>406</height>
+					<texture border="8">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<left>28</left>
+					<top>434</top>
+					<width>663</width>
+					<height>42</height>
+					<texture border="8">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(503)</visible>
+				<control type="image">
+					<left>28</left>
+					<top>153</top>
+					<width>360</width>
+					<height>286</height>
+					<texture border="8">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<left>28</left>
+					<top>434</top>
+					<width>360</width>
+					<height>42</height>
+					<texture border="8">ContentPanelMirror.png</texture>
+				</control>
+				<control type="image">
+					<left>393</left>
+					<top>153</top>
+					<width>309</width>
+					<height>286</height>
+					<texture border="8">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<left>393</left>
+					<top>434</top>
+					<width>309</width>
+					<height>42</height>
+					<texture border="8">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(51) | Control.IsVisible(500) | Control.IsVisible(505)</visible>
+				<control type="image">
+					<left>42</left>
+					<top>40</top>
+					<width>635</width>
+					<height>400</height>
+					<texture border="8">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<left>42</left>
+					<top>434</top>
+					<width>635</width>
+					<height>42</height>
+					<texture border="8">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(514)</visible>
+				<control type="image">
+					<left>28</left>
+					<top>40</top>
+					<width>275</width>
+					<height>400</height>
+					<texture border="8">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<left>28</left>
+					<top>434</top>
+					<width>275</width>
+					<height>42</height>
+					<texture border="8">ContentPanelMirror.png</texture>
+				</control>
+				<control type="image">
+					<left>309</left>
+					<top>40</top>
+					<width>382</width>
+					<height>400</height>
+					<texture border="8">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<left>309</left>
+					<top>434</top>
+					<width>382</width>
+					<height>42</height>
+					<texture border="8">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(515)</visible>
+				<control type="image">
+					<left>28</left>
+					<top>40</top>
+					<width>225</width>
+					<height>400</height>
+					<texture border="8">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<left>28</left>
+					<top>434</top>
+					<width>225</width>
+					<height>42</height>
+					<texture border="8">ContentPanelMirror.png</texture>
+				</control>
+				<control type="image">
+					<left>258</left>
+					<top>40</top>
+					<width>433</width>
+					<height>400</height>
+					<texture border="8">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<left>258</left>
+					<top>434</top>
+					<width>433</width>
+					<height>42</height>
+					<texture border="8">ContentPanelMirror.png</texture>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

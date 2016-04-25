@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>450</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<left>177</left>
+		<top>173</top>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>365</width>
+			<height>133</height>
+			<texture border="11">OverlayDialogBackground.png</texture>
+		</control>
+		<control type="button">
+			<description>Close Window button</description>
+			<left>315</left>
+			<top>3</top>
+			<width>36</width>
+			<height>21</height>
+			<label>-</label>
+			<font>-</font>
+			<onclick>PreviousMenu</onclick>
+			<texturefocus>DialogCloseButton-focus.png</texturefocus>
+			<texturenofocus>DialogCloseButton.png</texturenofocus>
+			<onleft>13</onleft>
+			<onright>13</onright>
+			<onup>13</onup>
+			<ondown>13</ondown>
+			<visible>system.getbool(input.enablemouse)</visible>
+		</control>
+		<control type="label">
+			<description>heading label</description>
+			<left>22</left>
+			<top>12</top>
+			<width>320</width>
+			<height>20</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font13</font>
+			<label>$INFO[ListItem.Label]</label>
+			<textcolor>white</textcolor>
+		</control>
+		<control type="label">
+			<left>22</left>
+			<top>40</top>
+			<width>320</width>
+			<height>20</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font12</font>
+			<label>31060</label>
+			<textcolor>grey2</textcolor>
+		</control>
+		<control type="image">
+			<left>28</left>
+			<top>73</top>
+			<width>11</width>
+			<height>16</height>
+			<texture>scroll-left-focus.png</texture>
+			<visible>Container(450).HasPrevious</visible>
+		</control>
+		<control type="image">
+			<left>323</left>
+			<top>73</top>
+			<width>11</width>
+			<height>16</height>
+			<texture>scroll-right-focus.png</texture>
+			<visible>Container(450).HasNext</visible>
+		</control>
+		<control type="list" id="450">
+			<left>47</left>
+			<top>70</top>
+			<width>270</width>
+			<height>66</height>
+			<onleft>450</onleft>
+			<onright>450</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<orientation>horizontal</orientation>
+			<viewtype label="535">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<itemlayout width="22">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>21</width>
+					<height>21</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>StackNF.png</texture>
+				</control>
+			</itemlayout>
+			<focusedlayout width="22">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>21</width>
+					<height>21</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>StackFO.png</texture>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="label">
+			<left>22</left>
+			<top>103</top>
+			<width>320</width>
+			<height>14</height>
+			<font>font13_title</font>
+			<align>center</align>
+			<info>Container(450).ListItem.Label</info>
+		</control>
+	</controls>
+</window>
