@@ -29,7 +29,7 @@ For developers:
   `./templates/config.py` contains the definition of variables.
  
   Run `./parseTemplates.py` to translate the XML files from ./templates
-  into ./out. (The 'out'-folder was defined skin directory in `addon.xml`.)
+  into ./out. ('out' was defined as skin directory in `addon.xml`.)
 
   • Use `./buildPackage.py` to export the data for a release of the skin.
     See ./buildPackage --help for more information.
