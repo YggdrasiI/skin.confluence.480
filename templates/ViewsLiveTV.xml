@@ -75,7 +75,7 @@
 						<width>{{ScaleX('200')}}</width>
 						<height>{{ScaleY('31')}}</height>
 						<texture border="{{ScaleBorder('0,0,14,0')}}">MediaItemDetailBG.png</texture>
-						<visible>Control.HasFocus(560) + !IsEmpty(ListItem.Label2)</visible>
+						<visible>Control.HasFocus(560) + !String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('10')}}</left>

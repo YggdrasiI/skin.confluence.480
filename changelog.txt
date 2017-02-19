@@ -1,4 +1,177 @@
-[B]2.7.4[/B]
+[B]3.0.39[/B]
+
+- Fixed home Weather item
+- Added 'Privacy Policy' to system info
+- Updated background video conditions
+
+[B]3.0.38[/B]
+
+- Fix using DeafultUser.png added in v3.0.6 and remove unknown-user.png
+
+[B]3.0.36[/B]
+
+- Added customisable home submenus that use library nodes
+- Added news feature
+
+[B]3.0.35[/B]
+
+- Updated language files from Transifex
+
+[B]3.0.34[/B]
+
+- Added player speed controls (tempo) and on-screen indicator
+
+[B]3.0.33[/B]
+
+- Changed LibrarySettings to MediaSettings
+
+[B]3.0.32[/B]
+
+- Added DialogPlayerProcessInfo.xml
+- Removed player process info from video OSD
+- Added 'assets' to addon.xml
+
+[B]3.0.31[/B]
+
+- Updated language files from Transifex
+
+[B]3.0.30[/B]
+
+- Updated DialogSelect.xml
+
+[B]3.0.29[/B]
+
+- Updated video osd player process info
+
+[B]3.0.28[/B]
+
+- Added player processing info to video osd
+
+[B]3.0.27[/B]
+
+- Updated language files from Transifex
+
+[B]3.0.26[/B]
+
+- Show addon status if available, instead of size
+
+[B]3.0.25[/B]
+
+- Added size label to addon browser
+
+[B]3.0.24[/B]
+
+- Removed changelog button from addon info dialog
+
+[B]3.0.23[/B]
+
+- Updated language files from Transifex
+
+[B]3.0.22[/B]
+
+- Cleanup after removal of Player.ShowCodec
+
+[B]3.0.21[/B]
+
+- Remove startup window heading
+
+[B]3.0.20[/B]
+
+- Fix case issue with Defaults.xml
+
+[B]3.0.19[/B]
+
+- Fix include problem
+- Case change for Defaults.xml and Includes.xml
+
+[B]3.0.18[/B]
+
+- Fix text width for buttons in addon settings
+
+[B]3.0.17[/B]
+
+- Updated language files from Transifex
+
+[B]3.0.16[/B]
+
+- Fixed PVR OSD guide label problem
+
+[B]3.0.15[/B]
+
+- Added horizontal orientation tag to default slider control
+
+[B]3.0.14[/B]
+
+- Updated language files from Transifex
+
+[B]3.0.13[/B]
+
+- Updated language files from Transifex
+
+[B]3.0.12[/B]
+
+- Updated language files from Transifex
+
+[B]3.0.11[/B]
+
+- Updated settings layout
+- Remove the set of ADSP manager dialog list types, becomes done from Kodi itself
+
+[B]3.0.10[/B]
+
+- Updated global search
+- Updated music and video info
+- Added DefaultAddonsRecentlyUpdated.png and DefaultMusicRoles.png
+
+[B]3.0.9[/B]
+
+- Updated language files from Transifex
+
+[B]3.0.8[/B]
+
+- Updated language files from Transifex
+
+[B]3.0.7[/B]
+
+- Updated include calls
+
+[B]3.0.6[/B]
+
+- Added game controller support
+- Added DefaultAddonInputstream.png and DefaultAddonLookAndFeel.png
+- Changed unknown-user.png to DefaultUser.png
+- Removed obsolete fanart code from DialogVideoInfo.xml
+- Updated boolean conditions
+
+[B]3.0.5[/B]
+
+- Updated language files from Transifex
+
+[B]3.0.4[/B]
+
+- Updated language files from Transifex
+
+[B]3.0.3[/B]
+
+- Removed Player.ShowCodec
+
+[B]3.0.2[/B]
+
+- Merged setting dialogs into DialogSettings
+
+[B]3.0.1[/B]
+
+- Updated language files from Transifex
+
+[B]3.0.0[/B]
+
+- Move skin to repository
+
+[B]2.8.2[/B]
+
+- Updated language files from Transifex
+
+[B]2.8.1[/B]
 
 - Updated language files from Transifex
 
@@ -55,7 +228,7 @@
 
 [B]2.4.0[/B]
 - Set minimum GUI version to 5.2.0
-- Rewrite of the PVR section 
+- Rewrite of the PVR section
 
 [B]2.2.14[/B]
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<depth>DepthDialog+</depth>
 	<defaultcontrol>11</defaultcontrol>
 	<animation effect="slide" start="{{ScaleBorder2('0,-80')}}" end="{{ScaleBorder2('0,0')}}" time="75">WindowOpen</animation>
 	<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,-80')}}" time="75">WindowClose</animation>
 	<coordinates>
-		<system>1</system>
 		<left>{{ScaleX('405')}}</left>
 		<top>{{ScaleY('0')}}</top>
 	</coordinates>

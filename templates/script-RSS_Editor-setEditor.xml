@@ -2,19 +2,18 @@
 <window>
 	<defaultcontrol>10</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>{{ScaleX('240')}}</left>
 		<top>{{ScaleY('140')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
-		<include name="DialogBackgroundCommons">
-			<param name="DialogBackgroundWidth" value="{{ScaleX('800')}}" />
-			<param name="DialogBackgroundHeight" value="{{ScaleY('420')}}" />
-			<param name="DialogHeaderWidth" value="{{ScaleX('720')}}" />
+		<include content="DialogBackgroundCommons">
+			<param name="DialogBackgroundWidth" value="800" />
+			<param name="DialogBackgroundHeight" value="420" />
+			<param name="DialogHeaderWidth" value="720" />
 			<param name="DialogHeaderLabel" value="-" />
 			<param name="DialogHeaderId" value="2" />
-			<param name="CloseButtonLeft" value="{{ScaleX('710')}}" />
+			<param name="CloseButtonLeft" value="710" />
 			<param name="CloseButtonNav" value="10" />
 		</include>
 		<control type="label" id="3">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	<menucontrol>9000</menucontrol>
 	<views>50</views>
 	<controls>
 		<include>CommonBackground</include>
@@ -82,7 +82,7 @@
 						<top>{{ScaleY('5')}}</top>
 						<width>{{ScaleX('30')}}</width>
 						<height>{{ScaleY('30')}}</height>
-						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
@@ -95,7 +95,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('225')}}</left>
@@ -151,14 +151,14 @@
 						<width>{{ScaleX('200')}}</width>
 						<height>{{ScaleY('31')}}</height>
 						<texture border="{{ScaleBorder('0,0,14,0')}}">MediaItemDetailBG.png</texture>
-						<visible>Control.HasFocus(50) + !IsEmpty(ListItem.Date)</visible>
+						<visible>Control.HasFocus(50) + !String.IsEmpty(ListItem.Date)</visible>
 					</control>
 					<control type="image">
 						<left>{{ScaleX('10')}}</left>
 						<top>{{ScaleY('5')}}</top>
 						<width>{{ScaleX('30')}}</width>
 						<height>{{ScaleY('30')}}</height>
-						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.ActualIcon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
@@ -171,7 +171,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('225')}}</left>
@@ -219,6 +219,7 @@
 				<orientation>vertical</orientation>
 			</control>
 			<control type="label">
+				<depth>DepthFooter</depth>
 				<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-90,0')}}" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 				<description>Page Count Label</description>
 				<right>{{ScaleX('40')}}</right>
@@ -252,7 +253,7 @@
 					<top>{{ScaleY('230')}}</top>
 					<width>{{ScaleX('290')}}</width>
 					<height>{{ScaleY('25')}}</height>
-					<label>$INFO[Container(50).ListItem.Title]</label>
+					<label>$INFO[Container(50).ListItem.Title]$INFO[ListItem.EpisodeName, (,)]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -285,7 +286,7 @@
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<font>font12</font>
-					<visible>!IntegerGreaterThan(PVR.backenddiskspaceprogr,100)</visible>
+					<visible>!Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible>
 				</control>
 				<control type="progress">
 					<description>Disk usage bar</description>
@@ -293,10 +294,13 @@
 					<top>{{ScaleY('548')}}</top>
 					<width>{{ScaleX('290')}}</width>
 					<height>{{ScaleY('12')}}</height>
-					<info>PVR.backenddiskspaceprogr</info><visible>!IntegerGreaterThan(PVR.backenddiskspaceprogr,100)</visible></control>
+					<info>PVR.backenddiskspaceprogr</info><visible>!Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible></control>
 			</control>
 		</control>
-		<include>CommonNowPlaying</include>
+		<control type="group">
+			<depth>DepthFooter</depth>
+			<include>CommonNowPlaying</include>
+		</control>
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
 		<control type="image">
@@ -310,6 +314,5 @@
 			<visible>Window.IsActive(FileBrowser) | Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo) | Window.IsActive(PVRTimerSetting) | Window.IsActive(PVRGroupManager) | Window.IsActive(PVRGuideSearch)</visible>
 		</control>
 		<include>PVRSideBlade</include>
-		<include>Clock</include>
 	</controls>
 </window>

@@ -5,8 +5,11 @@
 	<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,-40')}}" delay="300" time="75">WindowClose</animation>
 	<controls>
 		<control type="group">
+			<depth>DepthOSD</depth>
 			<left>{{ScaleX('820')}}</left>
 			<top>{{ScaleY('0')}}</top>
+			<include>VisibleFadeEffect</include>
+			<visible>!Player.Muted</visible>
 			<control type="image">
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('-10')}}</top>
@@ -60,6 +63,16 @@
 					<aligny>center</aligny>
 				</control>
 			</control>
+		</control>
+		<control type="image">
+			<left>{{ScaleX('50r')}}</left>
+			<top>{{ScaleY('2')}}</top>
+			<width>{{ScaleX('45')}}</width>
+			<height>{{ScaleY('45')}}</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icon-mute.png</texture>
+			<include>VisibleFadeEffect</include>
+			<visible>Player.Muted</visible>
 		</control>
 	</controls>
 </window>

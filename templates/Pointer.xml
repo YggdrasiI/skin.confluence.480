@@ -2,7 +2,6 @@
 <window>
 	<defaultcontrol>-</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>{{ScaleX('0')}}</left>
 		<top>{{ScaleY('0')}}</top>
 	</coordinates>

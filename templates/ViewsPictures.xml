@@ -7,6 +7,7 @@
 			<left>{{ScaleX('0')}}</left>
 			<top>{{ScaleY('440')}}</top>
 			<control type="wraplist" id="510">
+				<depth>DepthContent+</depth>
 				<left>{{ScaleX('-25')}}</left>
 				<top>{{ScaleY('5')}}</top>
 				<width>{{ScaleX('1330')}}</width>
@@ -44,6 +45,7 @@
 				</itemlayout>
 				<focusedlayout height="{{ScaleY('200')}}" width="{{ScaleX('190')}}">
 					<control type="image">
+						<depth>DepthContentPopout</depth>
 						<left>{{ScaleX('15')}}</left>
 						<top>{{ScaleY('40')}}</top>
 						<width>{{ScaleX('160')}}</width>
@@ -57,6 +59,7 @@
 						<animation reversible="false" effect="zoom" end="15,40,160,160" start="-10,-5,210,210" time="150">unfocus</animation>
 					</control>
 					<control type="image">
+						<depth>DepthContentPopout</depth>
 						<left>{{ScaleX('25')}}</left>
 						<top>{{ScaleY('50')}}</top>
 						<width>{{ScaleX('140')}}</width>

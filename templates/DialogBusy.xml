@@ -3,37 +3,37 @@
 	<animation effect="fade" time="75">WindowOpen</animation>
 	<animation effect="fade" time="150">WindowClose</animation>
 	<coordinates>
-		<system>1</system>
 		<left>{{ScaleX('0')}}</left>
 		<top>{{ScaleY('0')}}</top>
 	</coordinates>
 	<controls>
 		<control type="group">
-			<left>{{ScaleX({{ 1070 - {DialogBusyWidth} + 200 }})}}</left>
-			<top>{{ScaleY({{ 640 }})}}</top>
+			<depth>DepthDialog+</depth>
+			<left>{{ScaleX('1070')}}</left>
+			<top>{{ScaleY('640')}}</top>
 			<control type="image">
 				<description>background image</description>
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX({{ 200 + {DialogBusyWidth} - 200 }})}}</width>
-				<height>{{ScaleY({{ 70 }})}}</height>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('70')}}</height>
 				<texture border="{{ScaleBorder('20')}}">OverlayDialogBackground.png</texture>
 			</control>
 			<control type="image">
 				<description>Busy animation</description>
 				<left>{{ScaleX('20')}}</left>
-				<top>{{ScaleX('20')}}</top>
+				<top>{{ScaleY('20')}}</top>
 				<width>{{ScaleX('32')}}</width>
-				<height>{{ScaleX('32')}}</height>
+				<height>{{ScaleY('32')}}</height>
 				<texture>busy.png</texture>
 				<aspectratio>keep</aspectratio>
-				<animation effect="rotate" start="0" end="360" center="{{ScaleBorder('36,36')}}" time="900" loop="true" condition="true">conditional</animation>
+				<animation effect="rotate" start="0" end="360" center="36,36" time="900" loop="true" condition="true">conditional</animation>
 			</control>
 			<control type="label">
 				<description>Busy label</description>
-				<left>{{ScaleX('72')}}</left>
-				<top>{{ScaleX('20')}}</top>
-				<width>{{ScaleX({{ 120 + {DialogBusyWidth} - 200 }})}}</width>
+				<left>{{ScaleX('60')}}</left>
+				<top>{{ScaleY('20')}}</top>
+				<width>{{ScaleX('120')}}</width>
 				<height>{{ScaleY('32')}}</height>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -44,7 +44,7 @@
 				<description>Progressbar</description>
 				<left>{{ScaleX('20')}}</left>
 				<top>{{ScaleY('53')}}</top>
-				<width>{{ScaleX({{ 160 + {DialogBusyWidth} - 200 }})}}</width>
+				<width>{{ScaleX('160')}}</width>
 				<height>{{ScaleY('8')}}</height>
 			</control>
 		</control>

@@ -42,6 +42,7 @@
 				</itemlayout>
 				<focusedlayout height="{{ScaleY('310')}}" width="{{ScaleX('218')}}">
 					<control type="image">
+						<depth>DepthContentPopout</depth>
 						<left>{{ScaleX('-2')}}</left>
 						<top>{{ScaleY('36')}}</top>
 						<width>{{ScaleX('222')}}</width>
@@ -54,6 +55,7 @@
 						<animation reversible="false" effect="zoom" end="-2,36,222,318" start="-28,0,284,390" time="150">unfocus</animation>
 					</control>
 					<control type="image">
+						<depth>DepthContentPopout</depth>
 						<left>{{ScaleX('6')}}</left>
 						<top>{{ScaleY('44')}}</top>
 						<width>{{ScaleX('170')}}</width>
@@ -64,6 +66,7 @@
 						<animation reversible="false" effect="zoom" end="6,44,170,180" start="-24,4,240,250" time="150">unfocus</animation>
 					</control>
 					<control type="image">
+						<depth>DepthContentPopout</depth>
 						<left>{{ScaleX('185')}}</left>
 						<top>{{ScaleY('310')}}</top>
 						<width>{{ScaleX('35')}}</width>
@@ -72,11 +75,11 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<animation type="focus">
 							<effect type="fade" start="0" end="100" time="150" />
-							<effect type="slide" start="{{ScaleBorder2('{{ScaleBorder2('0,0')}}')}}" end="{{ScaleBorder2('{{ScaleBorder2('40,40')}}')}}" time="150" />
+							<effect type="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('40,40')}}" time="150" />
 						</animation>
 						<animation type="unfocus">
 							<effect type="fade" start="100" end="0" time="150" />
-							<effect type="slide" end="{{ScaleBorder2('{{ScaleBorder2('0,0')}}')}}" start="{{ScaleBorder2('{{ScaleBorder2('40,40')}}')}}" time="150" />
+							<effect type="slide" end="{{ScaleBorder2('0,0')}}" start="{{ScaleBorder2('40,40')}}" time="150" />
 						</animation>
 					</control>
 				</focusedlayout>
@@ -309,6 +312,7 @@
 			<left>{{ScaleX('0')}}</left>
 			<top>{{ScaleY('460')}}</top>
 			<control type="fixedlist" id="508">
+				<depth>DepthContent-</depth>
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Sets)</visible>
 				<hitrect x="0" y="-10" w="1280" h="190" />
 				<left>{{ScaleX('-20')}}</left>
@@ -361,6 +365,7 @@
 				</itemlayout>
 				<focusedlayout height="{{ScaleY('310')}}" width="{{ScaleX('120')}}">
 					<control type="image">
+						<depth>DepthContentPopout</depth>
 						<left>{{ScaleX('-2')}}</left>
 						<top>{{ScaleY('16')}}</top>
 						<width>{{ScaleX('128')}}</width>
@@ -374,6 +379,7 @@
 						<animation reversible="false" effect="zoom" end="-2,16,128,168" start="-12,-10,148,198" time="150">unfocus</animation>
 					</control>
 					<control type="image">
+						<depth>DepthContentPopout</depth>
 						<left>{{ScaleX('2')}}</left>
 						<top>{{ScaleY('180')}}</top>
 						<width>{{ScaleX('120')}}</width>
@@ -385,6 +391,7 @@
 						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$VAR[PosterThumb]</texture>
 					</control>
 					<control type="image">
+						<depth>DepthContentPopout</depth>
 						<left>{{ScaleX('90')}}</left>
 						<top>{{ScaleY('150')}}</top>
 						<width>{{ScaleX('35')}}</width>
@@ -393,16 +400,17 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<animation type="focus">
 							<effect type="fade" start="0" end="100" time="150" />
-							<effect type="slide" start="{{ScaleBorder2('{{ScaleBorder2('0,0')}}')}}" end="{{ScaleBorder2('{{ScaleBorder2('10,5')}}')}}" time="150" />
+							<effect type="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('10,5')}}" time="150" />
 						</animation>
 						<animation type="unfocus">
 							<effect type="fade" start="100" end="0" time="150" />
-							<effect type="slide" end="{{ScaleBorder2('{{ScaleBorder2('0,0')}}')}}" start="{{ScaleBorder2('{{ScaleBorder2('10,5')}}')}}" time="150" />
+							<effect type="slide" end="{{ScaleBorder2('0,0')}}" start="{{ScaleBorder2('10,5')}}" time="150" />
 						</animation>
 					</control>
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
+				<depth>DepthContent</depth>
 				<left>{{ScaleX('310')}}</left>
 				<top>{{ScaleY('185')}}</top>
 				<width>{{ScaleX('660')}}</width>
@@ -857,7 +865,7 @@
 						<width>{{ScaleX('200')}}</width>
 						<height>{{ScaleY('31')}}</height>
 						<texture border="{{ScaleBorder('0,0,14,0')}}">MediaItemDetailBG.png</texture>
-						<visible>Control.HasFocus(503) + !IsEmpty(ListItem.Label2)</visible>
+						<visible>Control.HasFocus(503) + !String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('10')}}</left>
@@ -1289,7 +1297,7 @@
 						<width>{{ScaleX('200')}}</width>
 						<height>{{ScaleY('31')}}</height>
 						<texture border="{{ScaleBorder('0,0,14,0')}}">MediaItemDetailBG.png</texture>
-						<visible>Control.HasFocus(504) + !IsEmpty(ListItem.Label2)</visible>
+						<visible>Control.HasFocus(504) + !String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('10')}}</left>
@@ -1759,6 +1767,7 @@
 					<include>VideoTypeHackFlaggingConditions</include>
 				</control>
 				<control type="image">
+					<depth>DepthContent+</depth>
 					<left>{{ScaleX('560')}}</left>
 					<top>{{ScaleY('140')}}</top>
 					<width>{{ScaleX('180')}}</width>
@@ -1808,6 +1817,7 @@
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="image">
+					<depth>DepthContent+</depth>
 					<left>{{ScaleX('560')}}</left>
 					<top>{{ScaleY('140')}}</top>
 					<width>{{ScaleX('180')}}</width>
@@ -1857,6 +1867,7 @@
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="image">
+					<depth>DepthContent+</depth>
 					<left>{{ScaleX('560')}}</left>
 					<top>{{ScaleY('140')}}</top>
 					<width>{{ScaleX('180')}}</width>
@@ -1921,6 +1932,7 @@
 					<include>VideoTypeHackFlaggingConditions</include>
 				</control>
 				<control type="image">
+					<depth>DepthContent+</depth>
 					<left>{{ScaleX('420')}}</left>
 					<top>{{ScaleY('140')}}</top>
 					<width>{{ScaleX('330')}}</width>

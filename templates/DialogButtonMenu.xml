@@ -3,7 +3,6 @@
 	<defaultcontrol>9001</defaultcontrol>
 	<include>dialogeffect</include>
 	<coordinates>
-		<system>1</system>
 		<left>{{ScaleX('0')}}</left>
 		<top>{{ScaleY('0')}}</top>
 	</coordinates>
@@ -32,9 +31,9 @@
 			<texture>black-back.png</texture>
 		</control>
 		<control type="grouplist" id="9000">
-			<left>{{ScaleX({{ 470 - int({DialogButtonExtraWidth}/2) }})}}</left>
+			<left>{{ScaleX('470')}}</left>
 			<top>{{ScaleY('0')}}</top>
-			<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+			<width>{{ScaleX('340')}}</width>
 			<height>{{ScaleY('720')}}</height>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
@@ -43,19 +42,19 @@
 			<itemgap>0</itemgap>
 			<align>center</align>
 			<control type="group" id="1">
-				<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+				<width>{{ScaleX('340')}}</width>
 				<height>{{ScaleY('30')}}</height>
 				<control type="image">
 					<description>background top image</description>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+					<width>{{ScaleX('340')}}</width>
 					<height>{{ScaleY('30')}}</height>
 					<texture border="{{ScaleBorder('20,19,20,0')}}">DialogContextTop.png</texture>
 				</control>
 				<control type="button" id="20">
 					<description>Close Window button</description>
-					<left>{{ScaleX({{ 260 + {DialogButtonExtraWidth} }})}}</left>
+					<left>{{ScaleX('260')}}</left>
 					<top>{{ScaleY('5')}}</top>
 					<width>{{ScaleX('64')}}</width>
 					<height>{{ScaleY('32')}}</height>
@@ -73,12 +72,12 @@
 			</control>
 			<control type="button" id="2">
 				<description>Exit button</description>
-				<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+				<width>{{ScaleX('340')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
-				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
+				<textwidth>290</textwidth>
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>Quit()</onclick>
@@ -89,12 +88,12 @@
 			</control>
 			<control type="button" id="3">
 				<description>Shutdown button</description>
-				<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+				<width>{{ScaleX('340')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
-				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
+				<textwidth>290</textwidth>
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>Powerdown()</onclick>
@@ -105,12 +104,12 @@
 			</control>
 			<control type="button" id="4">
 				<description>Custom Shutdown Timer</description>
-				<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+				<width>{{ScaleX('340')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
-				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
+				<textwidth>290</textwidth>
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
@@ -122,12 +121,12 @@
 			</control>
 			<control type="button" id="5">
 				<description>Cancel Shutdown Timer</description>
-				<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+				<width>{{ScaleX('340')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
-				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
+				<textwidth>290</textwidth>
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>CancelAlarm(shutdowntimer)</onclick>
@@ -138,12 +137,12 @@
 			</control>
 			<control type="button" id="6">
 				<description>Suspend button</description>
-				<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+				<width>{{ScaleX('340')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
-				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
+				<textwidth>290</textwidth>
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>Suspend()</onclick>
@@ -154,12 +153,12 @@
 			</control>
 			<control type="button" id="7">
 				<description>Hibernate button</description>
-				<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+				<width>{{ScaleX('340')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
-				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
+				<textwidth>290</textwidth>
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>Hibernate()</onclick>
@@ -170,12 +169,12 @@
 			</control>
 			<control type="button" id="8">
 				<description>Reboot button</description>
-				<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+				<width>{{ScaleX('340')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
-				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
+				<textwidth>290</textwidth>
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>Reset()</onclick>
@@ -186,12 +185,12 @@
 			</control>
 			<control type="button" id="9">
 				<description>Logoff button</description>
-				<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+				<width>{{ScaleX('340')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
-				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
+				<textwidth>290</textwidth>
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>dialog.close(all,true)</onclick>
@@ -199,18 +198,18 @@
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
 				<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
-				<visible>System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)</visible>
+				<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
 				<visible>System.Loggedon</visible>
 			</control>
 			<control type="togglebutton" id="10">
 				<description>Master mode button</description>
-				<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+				<width>{{ScaleX('340')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<label>20046</label>
 				<altlabel>20045</altlabel>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
+				<textwidth>290</textwidth>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
@@ -224,21 +223,21 @@
 				<visible>System.HasLocks</visible>
 			</control>
 			<control type="group" id="11">
-				<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+				<width>{{ScaleX('340')}}</width>
 				<height>{{ScaleY('70')}}</height>
 				<visible>System.HasAlarm(shutdowntimer)</visible>
 				<control type="image">
 					<description>background top image</description>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+					<width>{{ScaleX('340')}}</width>
 					<height>{{ScaleY('70')}}</height>
 					<texture border="{{ScaleBorder('25,5,25,5')}}">DialogContextMiddle.png</texture>
 				</control>
 				<control type="textbox">
 					<left>{{ScaleX('25')}}</left>
 					<top>{{ScaleY('22')}}</top>
-					<width>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</width>
+					<width>{{ScaleX('290')}}</width>
 					<height>{{ScaleY('48')}}</height>
 					<font>font12</font>
 					<textcolor>white</textcolor>
@@ -249,12 +248,12 @@
 			</control>
 			<control type="button" id="12">
 				<description>Inhibit idle shutdown</description>
-				<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+				<width>{{ScaleX('340')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
-				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
+				<textwidth>290</textwidth>
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>InhibitIdleShutdown(true)</onclick>
@@ -265,12 +264,12 @@
 			</control>
 			<control type="button" id="13">
 				<description>Allow idle shutdown</description>
-				<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+				<width>{{ScaleX('340')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
-				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
+				<textwidth>290</textwidth>
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>InhibitIdleShutdown(false)</onclick>
@@ -282,7 +281,7 @@
 			<control type="image" id="14">
 				<description>background bottom image</description>
 				<left>{{ScaleX('0')}}</left>
-				<width>{{ScaleX({{ 340 + {DialogButtonExtraWidth} }})}}</width>
+				<width>{{ScaleX('340')}}</width>
 				<height>{{ScaleY('25')}}</height>
 				<texture border="{{ScaleBorder('20,0,19,20')}}">DialogContextBottom.png</texture>
 			</control>

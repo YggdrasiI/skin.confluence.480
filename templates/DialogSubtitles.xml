@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
 	<coordinates>
-		<system>1</system>
 		<left>{{ScaleX('380')}}</left>
 		<top>{{ScaleY('0')}}</top>
 	</coordinates>
 	<controls>
 		<control type="group" id="250">
+			<depth>DepthDialog-</depth>
 			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('900,0')}}" time="375" tween="quadratic" easing="out">WindowClose</animation>
 			<animation type="Conditional" condition="Control.HasFocus(150) | Control.HasFocus(160)" reversible="true">
-				<effect type="slide" end="{{ScaleBorder2('{{ScaleBorder2('-250,0')}}')}}" time="300" />
+				<effect type="slide" end="{{ScaleBorder2('-250,0')}}" time="300" />
 			</animation>
 			<control type="button" id="8999">
 				<description>Fake button for mouse control</description>

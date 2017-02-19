@@ -2,8 +2,7 @@
 <window>
 	<defaultcontrol always="true">2</defaultcontrol>
 	<coordinates>
-		<system>1</system>
-		<left>{{ScaleX({{ int(({W}-{OSDBookmarksWidth})/2) }})}}</left>
+		<left>{{ScaleX('240')}}</left>
 		<top>{{ScaleY('60')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
@@ -12,15 +11,15 @@
 			<description>background image</description>
 			<left>{{ScaleX('0')}}</left>
 			<top>{{ScaleY('0')}}</top>
-			<width>{{ScaleX({OSDBookmarksWidth})}}</width>
-			<height>{{ScaleY({{ 600 + 2*({OSDBookmarksItemHeight}-215) }})}}</height>
+			<width>{{ScaleX('800')}}</width>
+			<height>{{ScaleY('600')}}</height>
 			<texture border="{{ScaleBorder('40')}}">DialogBack2.png</texture>
 		</control>
 		<control type="image">
 			<description>Dialog Header image</description>
 			<left>{{ScaleX('40')}}</left>
 			<top>{{ScaleY('16')}}</top>
-			<width>{{ScaleX({{ {OSDBookmarksWidth} - 2*40 }})}}</width>
+			<width>{{ScaleX('720')}}</width>
 			<height>{{ScaleY('40')}}</height>
 			<texture>dialogheader.png</texture>
 		</control>
@@ -28,7 +27,7 @@
 			<description>header label</description>
 			<left>{{ScaleX('40')}}</left>
 			<top>{{ScaleY('20')}}</top>
-			<width>{{ScaleX({{ {OSDBookmarksWidth} - 2*40 }})}}</width>
+			<width>{{ScaleX('720')}}</width>
 			<height>{{ScaleY('30')}}</height>
 			<font>font13_title</font>
 			<label>$LOCALIZE[298]</label>
@@ -39,7 +38,7 @@
 		</control>
 		<control type="button">
 			<description>Close Window button</description>
-			<left>{{ScaleX({{ {OSDBookmarksWidth} - 90 }})}}</left>
+			<left>{{ScaleX('710')}}</left>
 			<top>{{ScaleY('15')}}</top>
 			<width>{{ScaleX('64')}}</width>
 			<height>{{ScaleY('32')}}</height>
@@ -54,79 +53,11 @@
 			<ondown>3</ondown>
 			<visible>system.getbool(input.enablemouse)</visible>
 		</control>
-		<control type="panel" id="11">
-			<left>{{ScaleX('40')}}</left>
-			<top>{{ScaleY('65')}}</top>
-			<width>{{ScaleX({{ {OSDBookmarksWidth} - 2*40 }})}}</width>
-			<height>{{ScaleY({{ 2*{OSDBookmarksItemHeight} }})}}</height>
-			<onleft>2</onleft>
-			<onright>3</onright>
-			<ondown>2</ondown>
-			<onup>2</onup>
-			<scrolltime>200</scrolltime>
-			<viewtype label="536">icon</viewtype>
-			<pagecontrol>-</pagecontrol>
-			<orientation>vertical</orientation>
-			<itemlayout height="{{ScaleY({OSDBookmarksItemHeight})}}" width="{{ScaleX({OSDBookmarksItemWidth})}}">
-				<control type="image">
-					<left>{{ScaleX('2')}}</left>
-					<top>{{ScaleY('2')}}</top>
-					<width>{{ScaleX({{ {OSDBookmarksItemWidth} - 4 }})}}</width>
-					<height>{{ScaleY({{ {OSDBookmarksItemHeight} - 4 }})}}</height>
-					<texture border="{{ScaleBorder('3')}}">button-nofocus.png</texture>
-				</control>
-				<control type="image">
-					<left>{{ScaleX({{ int(({OSDBookmarksItemWidth}-220)/2) }})}}</left>
-					<top>{{ScaleY('20')}}</top>
-					<width>{{ScaleX('220')}}</width>
-					<height>{{ScaleY('150')}}</height>
-					<aspectratio>scale</aspectratio>
-					<info>ListItem.Icon</info>
-				</control>
-				<control type="label">
-					<left>{{ScaleX('7')}}</left>
-					<bottom>{{ScaleY({{ 15 + {OSDBookmarksItemHeight} - 215 }})}}</bottom>
-					<width>{{ScaleX({{ {OSDBookmarksItemWidth} - 4 }})}}</width>
-					<height>{{ScaleY({{ 15 + {OSDBookmarksItemHeight} - 215 }})}}</height>
-					<font>font12</font>
-					<selectedcolor>selected</selectedcolor>
-					<align>center</align>
-					<label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2, (,)]</label>
-				</control>
-			</itemlayout>
-			<focusedlayout height="{{ScaleY({OSDBookmarksItemHeight})}}" width="{{ScaleX({OSDBookmarksItemWidth})}}">
-				<control type="image">
-					<left>{{ScaleX('2')}}</left>
-					<top>{{ScaleY('2')}}</top>
-					<width>{{ScaleX({{ {OSDBookmarksItemWidth} - 4 }})}}</width>
-					<height>{{ScaleY({{ {OSDBookmarksItemHeight} - 4 }})}}</height>
-					<texture border="{{ScaleBorder('3')}}">folder-focus.png</texture>
-				</control>
-				<control type="image">
-					<left>{{ScaleX({{ int(({OSDBookmarksItemWidth}-220)/2) }})}}</left>
-					<top>{{ScaleY('20')}}</top>
-					<width>{{ScaleX('220')}}</width>
-					<height>{{ScaleY('150')}}</height>
-					<aspectratio>scale</aspectratio>
-					<info>ListItem.Icon</info>
-				</control>
-				<control type="label">
-					<left>{{ScaleX('7')}}</left>
-					<bottom>{{ScaleY({{ 15 + {OSDBookmarksItemHeight} - 215 }})}}</bottom>
-					<width>{{ScaleX({{ {OSDBookmarksItemWidth} - 4 }})}}</width>
-					<height>{{ScaleY({{ 15 + {OSDBookmarksItemHeight} - 215 }})}}</height>
-					<font>font12</font>
-					<selectedcolor>selected</selectedcolor>
-					<align>center</align>
-					<label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2, (,)]</label>
-				</control>
-			</focusedlayout>
-		</control>
 		<control type="label">
 			<description>number of files/pages in list text label</description>
-			<left>{{ScaleX('360')}}</left>
-			<top>{{ScaleY({{ 495 + 2*({OSDBookmarksItemHeight}-215) }})}}</top>
-			<width>{{ScaleX({{ {OSDBookmarksWidth} - 400 }})}}</width>
+			<left>{{ScaleX('460')}}</left>
+			<top>{{ScaleY('495')}}</top>
+			<width>{{ScaleX('300')}}</width>
 			<height>{{ScaleY('35')}}</height>
 			<font>font12</font>
 			<align>right</align>
@@ -135,10 +66,80 @@
 			<textcolor>grey</textcolor>
 			<label>([COLOR=blue]$INFO[Container(11).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages][/COLOR])</label>
 		</control>
+		<control type="panel" id="11">
+			<left>{{ScaleX('40')}}</left>
+			<top>{{ScaleY('65')}}</top>
+			<width>{{ScaleX('720')}}</width>
+			<height>{{ScaleY('430')}}</height>
+			<onleft>2</onleft>
+			<onright>3</onright>
+			<ondown>2</ondown>
+			<onup>2</onup>
+			<scrolltime>200</scrolltime>
+			<viewtype label="536">icon</viewtype>
+			<pagecontrol>-</pagecontrol>
+			<orientation>vertical</orientation>
+			<itemlayout height="{{ScaleY('215')}}" width="{{ScaleX('240')}}">
+				<control type="image">
+					<left>{{ScaleX('2')}}</left>
+					<top>{{ScaleY('2')}}</top>
+					<width>{{ScaleX('235')}}</width>
+					<height>{{ScaleY('211')}}</height>
+					<texture border="{{ScaleBorder('3')}}">button-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<left>{{ScaleX('7')}}</left>
+					<top>{{ScaleY('20')}}</top>
+					<width>{{ScaleX('220')}}</width>
+					<height>{{ScaleY('150')}}</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="label">
+					<left>{{ScaleX('7')}}</left>
+					<top>{{ScaleY('185')}}</top>
+					<width>{{ScaleX('226')}}</width>
+					<height>{{ScaleY('15')}}</height>
+					<font>font12</font>
+					<selectedcolor>selected</selectedcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="{{ScaleY('215')}}" width="{{ScaleX('240')}}">
+				<control type="image">
+					<left>{{ScaleX('2')}}</left>
+					<top>{{ScaleY('2')}}</top>
+					<width>{{ScaleX('235')}}</width>
+					<height>{{ScaleY('211')}}</height>
+					<texture border="{{ScaleBorder('3')}}">folder-focus.png</texture>
+				</control>
+				<control type="image">
+					<left>{{ScaleX('7')}}</left>
+					<top>{{ScaleY('20')}}</top>
+					<width>{{ScaleX('220')}}</width>
+					<height>{{ScaleY('150')}}</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="label">
+					<left>{{ScaleX('7')}}</left>
+					<top>{{ScaleY('185')}}</top>
+					<width>{{ScaleX('226')}}</width>
+					<height>{{ScaleY('15')}}</height>
+					<font>font12</font>
+					<selectedcolor>selected</selectedcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>
+				</control>
+			</focusedlayout>
+		</control>
 		<control type="grouplist" id="9000">
 			<left>{{ScaleX('20')}}</left>
-			<top>{{ScaleY({{ 535 + 2*({OSDBookmarksItemHeight}-215) }})}}</top>
-			<width>{{ScaleX({{ {OSDBookmarksWidth} - 2*20 }})}}</width>
+			<top>{{ScaleY('535')}}</top>
+			<width>{{ScaleX('760')}}</width>
 			<height>{{ScaleY('40')}}</height>
 			<itemgap>5</itemgap>
 			<align>center</align>
@@ -150,19 +151,19 @@
 			<control type="button" id="2">
 				<description>Create Bookmark button</description>
 				<label>294</label>
-				<width>{{ScaleX({{ int(({OSDBookmarksWidth} - 3*20)/3) }})}}</width>
+				<width>{{ScaleX('240')}}</width>
 				<include>ButtonInfoDialogsCommonValues</include>
 			</control>
 			<control type="button" id="3">
 				<description>Clear Bookmark button</description>
 				<label>296</label>
-				<width>{{ScaleX({{ int(({OSDBookmarksWidth} - 3*20)/3) }})}}</width>
+				<width>{{ScaleX('240')}}</width>
 				<include>ButtonInfoDialogsCommonValues</include>
 			</control>
 			<control type="button" id="4">
 				<description>Clear Bookmark button</description>
 				<label>20406</label>
-				<width>{{ScaleX({{ int(({OSDBookmarksWidth} - 3*20)/3) }})}}</width>
+				<width>{{ScaleX('240')}}</width>
 				<include>ButtonInfoDialogsCommonValues</include>
 				<visible>videoplayer.content(episodes)</visible>
 			</control>

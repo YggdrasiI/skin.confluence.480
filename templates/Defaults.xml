@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<default type="image">
+		<left>{{ScaleX('0')}}</left>
+		<top>{{ScaleY('0')}}</top>
+		<texture>-</texture>
+	</default>
+	<default type="label">
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+	</default>
+	<default type="fadelabel">
+		<left>{{ScaleX('80')}}</left>
+		<top>{{ScaleY('60')}}</top>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+	</default>
+	<default type="button">
+		<width>{{ScaleX('300')}}</width>
+		<height>{{ScaleY('42')}}</height>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<textoffsetx>{{ScaleX('7')}}</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>no</pulseonselect>
+	</default>
+	<default type="togglebutton">
+		<left>{{ScaleX('140')}}</left>
+		<top>{{ScaleY('167')}}</top>
+		<width>{{ScaleX('20')}}</width>
+		<height>{{ScaleY('20')}}</height>
+		<texturefocus>scroll-up-focus.png</texturefocus>
+		<texturenofocus>scroll-up.png</texturenofocus>
+		<alttexturefocus>scroll-down-focus.png</alttexturefocus>
+		<alttexturenofocus>scroll-down.png</alttexturenofocus>
+		<textcolor>white</textcolor>
+		<label>-</label>
+		<font>font13</font>
+		<disabledcolor>grey3</disabledcolor>
+		<pulseonselect>no</pulseonselect>
+	</default>
+	<default type="textbox">
+		<left>{{ScaleX('220')}}</left>
+		<top>{{ScaleY('222')}}</top>
+		<width>{{ScaleX('410')}}</width>
+		<height>{{ScaleY('213')}}</height>
+		<align>left</align>
+		<textcolor>white</textcolor>
+		<font>font13</font>
+	</default>
+	<default type="progress">
+		<left>{{ScaleX('100')}}</left>
+		<top>{{ScaleY('325')}}</top>
+		<texturebg border="6,0,6,0">OSDProgressBack.png</texturebg>
+		<lefttexture>-</lefttexture>
+		<midtexture border="6,0,6,0">OSDProgressMid.png</midtexture>
+		<righttexture>-</righttexture>
+		<overlaytexture>-</overlaytexture>
+	</default>
+	<default type="spincontrol">
+		<left>{{ScaleX('330')}}</left>
+		<top>{{ScaleY('126')}}</top>
+		<textureup>scroll-up-2.png</textureup>
+		<texturedown>scroll-down-2.png</texturedown>
+		<textureupdisabled colordiffuse="40FFFFFF">scroll-up-2.png</textureupdisabled>
+		<texturedowndisabled colordiffuse="40FFFFFF">scroll-down-2.png</texturedowndisabled>
+		<textureupfocus>scroll-up-focus-2.png</textureupfocus>
+		<texturedownfocus>scroll-down-focus-2.png</texturedownfocus>
+		<align>right</align>
+		<width>{{ScaleX('33')}}</width>
+		<height>{{ScaleY('22')}}</height>
+		<font>font13</font>
+		<reverse>yes</reverse>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<subtype>text</subtype>
+		<textoffsetx>{{ScaleX('-5')}}</textoffsetx>
+		<textoffsety>{{ScaleY('0')}}</textoffsety>
+		<pulseonselect>no</pulseonselect>
+	</default>
+	<default type="spincontrolex">
+		<left>{{ScaleX('530')}}</left>
+		<top>{{ScaleY('160')}}</top>
+		<width>{{ScaleX('300')}}</width>
+		<height>{{ScaleY('42')}}</height>
+		<spinwidth>33</spinwidth>
+		<spinheight>22</spinheight>
+		<texturefocus>button-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureup>scroll-up-2.png</textureup>
+		<texturedown>scroll-down-2.png</texturedown>
+		<textureupdisabled colordiffuse="40FFFFFF">scroll-up-2.png</textureupdisabled>
+		<texturedowndisabled colordiffuse="40FFFFFF">scroll-down-2.png</texturedowndisabled>
+		<textureupfocus>scroll-up-focus-2.png</textureupfocus>
+		<texturedownfocus>scroll-down-focus-2.png</texturedownfocus>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<textoffsetx>{{ScaleX('7')}}</textoffsetx>
+		<aligny>center</aligny>
+		<reverse>yes</reverse>
+		<pulseonselect>no</pulseonselect>
+	</default>
+	<default type="radiobutton">
+		<left>{{ScaleX('300')}}</left>
+		<top>{{ScaleY('200')}}</top>
+		<width>{{ScaleX('300')}}</width>
+		<height>{{ScaleY('42')}}</height>
+		<radiowidth>24</radiowidth>
+		<radioheight>24</radioheight>
+		<textureradioonfocus>radiobutton-focus.png</textureradioonfocus>
+		<textureradioonnofocus>radiobutton-focus.png</textureradioonnofocus>
+		<textureradioofffocus>radiobutton-nofocus.png</textureradioofffocus>
+		<textureradiooffnofocus>radiobutton-nofocus.png</textureradiooffnofocus>
+		<textureradioondisabled colordiffuse="40FFFFFF">radiobutton-focus.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="40FFFFFF">radiobutton-nofocus.png</textureradiooffdisabled>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<label>215</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<textoffsetx>{{ScaleX('7')}}</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>no</pulseonselect>
+	</default>
+	<default type="selectbutton">
+		<left>{{ScaleX('490')}}</left>
+		<top>{{ScaleY('335')}}</top>
+		<width>{{ScaleX('300')}}</width>
+		<height>{{ScaleY('50')}}</height>
+		<label>-</label>
+		<font>font12</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<texturebg>button-focus.png</texturebg>
+		<textureleft>scroll-left.png</textureleft>
+		<textureleftfocus>scroll-left-focus.png</textureleftfocus>
+		<textureright>scroll-right.png</textureright>
+		<texturerightfocus>scroll-right-focus.png</texturerightfocus>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<aligny>center</aligny>
+	</default>
+	<default type="slider">
+		<controloffsetx>75</controloffsetx>
+		<controloffsety>0</controloffsety>
+		<orientation>horizontal</orientation>
+	</default>
+	<default type="sliderex">
+		<height>{{ScaleY('35')}}</height>
+		<textoffsetx>{{ScaleX('7')}}</textoffsetx>
+		<aligny>center</aligny>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<sliderwidth>150</sliderwidth>
+		<sliderheight>20</sliderheight>
+		<texturesliderbar>osd_slider_bg.png</texturesliderbar>
+		<textureslidernib>osd_slider_nibNF.png</textureslidernib>
+		<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+		<font>font12</font>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+	</default>
+	<default type="mover">
+		<left>{{ScaleX('60')}}</left>
+		<top>{{ScaleY('192')}}</top>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+	</default>
+	<default type="resize">
+		<left>{{ScaleX('60')}}</left>
+		<top>{{ScaleY('192')}}</top>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+	</default>
+	<default type="edit">
+		<left>{{ScaleX('300')}}</left>
+		<top>{{ScaleY('200')}}</top>
+		<width>{{ScaleX('300')}}</width>
+		<height>{{ScaleY('42')}}</height>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<invalidcolor>invalid</invalidcolor>
+		<textoffsetx>{{ScaleX('7')}}</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>no</pulseonselect>
+	</default>
+</includes>

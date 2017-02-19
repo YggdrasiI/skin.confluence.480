@@ -1,110 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
-	<zorder>1</zorder>
 	<defaultcontrol always="true">3</defaultcontrol>
 	<coordinates>
-		<system>1</system>
-		<left>{{ScaleX('215')}}</left>
-		<top>{{ScaleY('35')}}</top>
+		<left>{{ScaleX('235')}}</left>
+		<top>{{ScaleY('75')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
+	<depth>DepthDialog+</depth>
 	<controls>
 		<control type="group">
-			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,60')}}" time="0" condition="Control.IsVisible(3) + !Control.IsVisible(5) + !IntegerGreaterThan(Container(3).NumItems,4)">Conditional</animation>
-			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,60')}}" time="0" condition="Control.IsVisible(3) + !Control.IsVisible(5) + !IntegerGreaterThan(Container(3).NumItems,6)">Conditional</animation>
-			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,60')}}" time="0" condition="Control.IsVisible(3) + !Control.IsVisible(5) + !IntegerGreaterThan(Container(3).NumItems,8)">Conditional</animation>
-			<control type="group">
-				<visible>Control.IsVisible(5)</visible>
-				<control type="image">
-					<description>background image</description>
-					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('850')}}</width>
-					<height>{{ScaleY('630')}}</height>
-					<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
-				</control>
-				<control type="image">
-					<description>Dialog Header image</description>
-					<left>{{ScaleX('40')}}</left>
-					<top>{{ScaleY('16')}}</top>
-					<width>{{ScaleX('770')}}</width>
-					<height>{{ScaleY('40')}}</height>
-					<texture>dialogheader.png</texture>
-				</control>
-				<control type="label" id="1">
-					<description>header label</description>
-					<left>{{ScaleX('40')}}</left>
-					<top>{{ScaleY('20')}}</top>
-					<width>{{ScaleX('770')}}</width>
-					<height>{{ScaleY('30')}}</height>
-					<font>font13_title</font>
-					<label>$LOCALIZE[13406]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>selected</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,46')}}" time="0" condition="[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,4)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,2)]">Conditional</animation>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,46')}}" time="0" condition="[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,6)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,3)]">Conditional</animation>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,46')}}" time="0" condition="[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,8)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,4)]">Conditional</animation>
+			<control type="image">
+				<description>background image</description>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('850')}}</width>
+				<height>{{ScaleY('550')}}</height>
+				<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
+				<visible>[Control.IsVisible(3) + Integer.IsGreater(Container(3).NumItems,8)] | [Control.IsVisible(6) + Integer.IsGreater(Container(6).NumItems,4)]</visible>
 			</control>
-			<control type="group">
-				<left>{{ScaleX('120')}}</left>
-				<visible>!Control.IsVisible(5)</visible>
-				<control type="image">
-					<description>background image</description>
-					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('610')}}</width>
-					<height>{{ScaleY('630')}}</height>
-					<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
-					<visible>[Control.IsVisible(3) + IntegerGreaterThan(Container(3).NumItems,8)] | Control.IsVisible(6)</visible>
-				</control>
-				<control type="image">
-					<description>background image</description>
-					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('610')}}</width>
-					<height>{{ScaleY('550')}}</height>
-					<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
-					<visible>Control.IsVisible(3) + IntegerGreaterThan(Container(3).NumItems,6) + !IntegerGreaterThan(Container(3).NumItems,8)</visible>
-				</control>
-				<control type="image">
-					<description>background image</description>
-					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('610')}}</width>
-					<height>{{ScaleY('370')}}</height>
-					<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
-					<visible>Control.IsVisible(3) + IntegerGreaterThan(Container(3).NumItems,4) + !IntegerGreaterThan(Container(3).NumItems,6)</visible>
-				</control>
-				<control type="image">
-					<description>background image</description>
-					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('610')}}</width>
-					<height>{{ScaleY('280')}}</height>
-					<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
-					<visible>Control.IsVisible(3) + !IntegerGreaterThan(Container(3).NumItems,4)</visible>
-				</control>
-				<control type="image">
-					<description>Dialog Header image</description>
-					<left>{{ScaleX('40')}}</left>
-					<top>{{ScaleY('16')}}</top>
-					<width>{{ScaleX('530')}}</width>
-					<height>{{ScaleY('40')}}</height>
-					<texture>dialogheader.png</texture>
-				</control>
-				<control type="label" id="1">
-					<description>header label</description>
-					<left>{{ScaleX('40')}}</left>
-					<top>{{ScaleY('20')}}</top>
-					<width>{{ScaleX('530')}}</width>
-					<height>{{ScaleY('30')}}</height>
-					<font>font13_title</font>
-					<label>$LOCALIZE[13406]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>selected</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
+			<control type="image">
+				<description>background image</description>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('850')}}</width>
+				<height>{{ScaleY('458')}}</height>
+				<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
+				<visible>[Control.IsVisible(3) + Integer.IsGreater(Container(3).NumItems,6) + !Integer.IsGreater(Container(3).NumItems,8)] | [Control.IsVisible(6) + Integer.IsGreater(Container(6).NumItems,3) + !Integer.IsGreater(Container(6).NumItems,4)]</visible>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('850')}}</width>
+				<height>{{ScaleY('366')}}</height>
+				<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
+				<visible>[Control.IsVisible(3) + Integer.IsGreater(Container(3).NumItems,4) + !Integer.IsGreater(Container(3).NumItems,6)] | [Control.IsVisible(6) + Integer.IsGreater(Container(6).NumItems,2) + !Integer.IsGreater(Container(6).NumItems,3)]</visible>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('850')}}</width>
+				<height>{{ScaleY('274')}}</height>
+				<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
+				<visible>[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,4)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,2)]</visible>
+			</control>
+			<control type="image">
+				<description>Dialog Header image</description>
+				<left>{{ScaleX('40')}}</left>
+				<top>{{ScaleY('16')}}</top>
+				<width>{{ScaleX('770')}}</width>
+				<height>{{ScaleY('40')}}</height>
+				<texture>dialogheader.png</texture>
+			</control>
+			<control type="label" id="1">
+				<description>header label</description>
+				<left>{{ScaleX('40')}}</left>
+				<top>{{ScaleY('20')}}</top>
+				<width>{{ScaleX('770')}}</width>
+				<height>{{ScaleY('30')}}</height>
+				<font>font13_title</font>
+				<label>$LOCALIZE[13406]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>selected</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label" id="4">
+				<description>No Settings Label</description>
+				<left>{{ScaleX('20')}}</left>
+				<top>{{ScaleY('120')}}</top>
+				<width>{{ScaleX('550')}}</width>
+				<align>center</align>
+				<font>font13</font>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
@@ -117,26 +88,19 @@
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
-				<onleft>10</onleft>
-				<onright>10</onright>
-				<onup>10</onup>
-				<ondown>10</ondown>
-				<animation effect="slide" end="{{ScaleBorder2('-120,0')}}" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			<control type="list" id="3">
 				<left>{{ScaleX('20')}}</left>
 				<top>{{ScaleY('67')}}</top>
 				<width>{{ScaleX('550')}}</width>
-				<height>{{ScaleY('506')}}</height>
+				<height>{{ScaleY('460')}}</height>
 				<onup>3</onup>
 				<ondown>3</ondown>
-				<onleft>5</onleft>
+				<onleft>7</onleft>
 				<onright>61</onright>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('10,0')}}" time="0" condition="!Control.IsVisible(61)">Conditional</animation>
-				<animation effect="slide" end="{{ScaleBorder2('120,0')}}" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
 				<itemlayout height="{{ScaleY('46')}}" width="{{ScaleX('550')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
@@ -193,30 +157,28 @@
 			</control>
 			<control type="list" id="6">
 				<left>{{ScaleX('20')}}</left>
-				<top>{{ScaleY('65')}}</top>
+				<top>{{ScaleY('67')}}</top>
 				<width>{{ScaleX('550')}}</width>
-				<height>{{ScaleY('510')}}</height>
+				<height>{{ScaleY('460')}}</height>
 				<onup>6</onup>
 				<ondown>6</ondown>
-				<onleft>5</onleft>
+				<onleft>7</onleft>
 				<onright>61</onright>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('10,0')}}" time="0" condition="!Control.IsVisible(61)">Conditional</animation>
-				<animation effect="slide" end="{{ScaleBorder2('120,0')}}" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
-				<itemlayout height="{{ScaleY('85')}}" width="{{ScaleX('550')}}">
+				<itemlayout height="{{ScaleY('92')}}" width="{{ScaleX('550')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('550')}}</width>
-						<height>{{ScaleY('80')}}</height>
+						<height>{{ScaleY('86')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 					</control>
 					<control type="image">
 						<left>{{ScaleX('2')}}</left>
-						<top>{{ScaleY('2')}}</top>
+						<top>{{ScaleY('3')}}</top>
 						<width>{{ScaleX('80')}}</width>
-						<height>{{ScaleY('76')}}</height>
+						<height>{{ScaleY('80')}}</height>
 						<texture>$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<bordertexture border="3">black-back2.png</bordertexture>
@@ -224,7 +186,7 @@
 					</control>
 					<control type="label">
 						<left>{{ScaleX('90')}}</left>
-						<top>{{ScaleY('0')}}</top>
+						<top>{{ScaleY('2')}}</top>
 						<width>{{ScaleX('450')}}</width>
 						<height>{{ScaleY('30')}}</height>
 						<font>font13</font>
@@ -236,22 +198,22 @@
 					</control>
 					<control type="textbox">
 						<left>{{ScaleX('90')}}</left>
-						<top>{{ScaleY('32')}}</top>
+						<top>{{ScaleY('34')}}</top>
 						<width>{{ScaleX('450')}}</width>
 						<height>{{ScaleY('48')}}</height>
 						<font>font12</font>
 						<textcolor>grey</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
-						<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="{{ScaleY('85')}}" width="{{ScaleX('550')}}">
+				<focusedlayout height="{{ScaleY('92')}}" width="{{ScaleX('550')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('550')}}</width>
-						<height>{{ScaleY('80')}}</height>
+						<height>{{ScaleY('86')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 						<visible>!Control.HasFocus(6)</visible>
 						<include>VisibleFadeEffect</include>
@@ -260,16 +222,16 @@
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('550')}}</width>
-						<height>{{ScaleY('80')}}</height>
+						<height>{{ScaleY('86')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
 						<visible>Control.HasFocus(6)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
 						<left>{{ScaleX('2')}}</left>
-						<top>{{ScaleY('2')}}</top>
+						<top>{{ScaleY('3')}}</top>
 						<width>{{ScaleX('80')}}</width>
-						<height>{{ScaleY('76')}}</height>
+						<height>{{ScaleY('80')}}</height>
 						<texture>$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<bordertexture border="3">black-back2.png</bordertexture>
@@ -277,7 +239,7 @@
 					</control>
 					<control type="label">
 						<left>{{ScaleX('90')}}</left>
-						<top>{{ScaleY('0')}}</top>
+						<top>{{ScaleY('2')}}</top>
 						<width>{{ScaleX('450')}}</width>
 						<height>{{ScaleY('30')}}</height>
 						<font>font13</font>
@@ -289,14 +251,14 @@
 					</control>
 					<control type="textbox">
 						<left>{{ScaleX('90')}}</left>
-						<top>{{ScaleY('32')}}</top>
+						<top>{{ScaleY('34')}}</top>
 						<width>{{ScaleX('450')}}</width>
 						<height>{{ScaleY('48')}}</height>
 						<font>font12</font>
 						<textcolor>grey</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
-						<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</focusedlayout>
 			</control>
@@ -304,83 +266,63 @@
 				<left>{{ScaleX('570')}}</left>
 				<top>{{ScaleY('65')}}</top>
 				<width>{{ScaleX('25')}}</width>
-				<height>{{ScaleY('510')}}</height>
+				<height>{{ScaleY('464')}}</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-				<onleft>3</onleft>
-				<onright>5</onright>
+				<onleft condition="Control.IsVisible(3)">3</onleft>
+				<onleft condition="Control.IsVisible(6)">6</onleft>
+				<onright>90</onright>
 				<ondown>61</ondown>
 				<onup>61</onup>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-				<animation effect="slide" end="{{ScaleBorder2('120,0')}}" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
-			</control>
-			<control type="label">
-				<description>number of files/pages in list text label</description>
-				<left>{{ScaleX('275')}}</left>
-				<top>{{ScaleY('572')}}</top>
-				<width>{{ScaleX('550')}}</width>
-				<height>{{ScaleY('35')}}</height>
-				<font>font12</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<scroll>true</scroll>
-				<textcolor>grey</textcolor>
-				<label>([COLOR=blue]$INFO[Container(3).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages][/COLOR])</label>
-				<animation effect="slide" end="{{ScaleBorder2('-120,0')}}" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
-				<visible>IntegerGreaterThan(Container(3).NumItems,8)</visible>
-			</control>
-			<control type="label">
-				<description>number of files/pages in list text label</description>
-				<left>{{ScaleX('275')}}</left>
-				<top>{{ScaleY('572')}}</top>
-				<width>{{ScaleX('550')}}</width>
-				<height>{{ScaleY('35')}}</height>
-				<font>font12</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<scroll>true</scroll>
-				<textcolor>grey</textcolor>
-				<label>([COLOR=blue]$INFO[Container(6).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages][/COLOR])</label>
-				<wrapmultiline>true</wrapmultiline>
-				<animation effect="slide" end="{{ScaleBorder2('-120,0')}}" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
-				<visible>IntegerGreaterThan(Container(6).NumItems,8)</visible>
-			</control>
-			<control type="button" id="5">
-				<description>Manual button</description>
-				<left>{{ScaleX('615')}}</left>
-				<top>{{ScaleY('107')}}</top>
-				<width>{{ScaleX('200')}}</width>
-				<height>{{ScaleY('40')}}</height>
-				<label>186</label>
-				<font>font12_title</font>
-				<textcolor>white</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<align>center</align>
-				<onleft>3</onleft>
-				<onright>3</onright>
 			</control>
 			<control type="group">
-				<left>{{ScaleX('610')}}</left>
-				<top>{{ScaleY('320')}}</top>
-				<visible>Control.IsVisible(6) + Control.IsVisible(5)</visible>
-				<control type="image">
-					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('210')}}</width>
-					<height>{{ScaleY('210')}}</height>
-					<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
+				<control type="label">
+					<description>number of files/pages in list text label</description>
+					<left>{{ScaleX('592')}}</left>
+					<top>{{ScaleY('490')}}</top>
+					<width>{{ScaleX('240')}}</width>
+					<height>{{ScaleY('35')}}</height>
+					<font>font12</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<label>$VAR[SelectLabel]</label>
+					<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,-92')}}" time="0" condition="[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,4)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,2)]">Conditional</animation>
+					<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,-92')}}" time="0" condition="[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,6)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,3)]">Conditional</animation>
+					<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,-92')}}" time="0" condition="[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,8)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,4)]">Conditional</animation>
 				</control>
-				<control type="image">
-					<left>{{ScaleX('5')}}</left>
-					<top>{{ScaleY('5')}}</top>
-					<width>{{ScaleX('200')}}</width>
-					<height>{{ScaleY('200')}}</height>
-					<aspectratio>keep</aspectratio>
-					<texture background="true">$INFO[Container(6).ListItem.Icon]</texture>
+				<control type="grouplist" id="90">
+					<left>{{ScaleX('612')}}</left>
+					<top>{{ScaleY('100')}}</top>
+					<onleft condition="Control.IsVisible(3)">3</onleft>
+					<onleft condition="Control.IsVisible(6)">6</onleft>
+					<onright condition="Control.IsVisible(3)">3</onright>
+					<onright condition="Control.IsVisible(6)">6</onright>
+					<control type="button" id="5">
+						<description>Manual button</description>
+						<width>{{ScaleX('200')}}</width>
+						<height>{{ScaleY('40')}}</height>
+						<label>-</label>
+						<font>font12_title</font>
+						<textcolor>white</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<align>center</align>
+					</control>
+					<control type="button" id="7">
+						<description>Cancel button</description>
+						<width>{{ScaleX('200')}}</width>
+						<height>{{ScaleY('40')}}</height>
+						<label>-</label>
+						<font>font12_title</font>
+						<textcolor>white</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<align>center</align>
+					</control>
 				</control>
 			</control>
 		</control>

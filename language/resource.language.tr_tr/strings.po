@@ -36,6 +36,10 @@ msgctxt "#31006"
 msgid "View options"
 msgstr "Görünüm seçenekleri"
 
+msgctxt "#31007"
+msgid "Video process information"
+msgstr "Video işlem bilgisi"
+
 msgctxt "#31008"
 msgid "Full screen"
 msgstr "Tam ekran"
@@ -44,9 +48,25 @@ msgctxt "#31009"
 msgid "Total duration"
 msgstr "Toplam süre"
 
-msgctxt "#31022"
-msgid "Music - Files"
-msgstr "Müzik - Dosyalar"
+msgctxt "#31010"
+msgid "Hardware decoding"
+msgstr "Donanım çözümleme"
+
+msgctxt "#31011"
+msgid "Inactive"
+msgstr "Etkin değil"
+
+msgctxt "#31012"
+msgid "Decoder"
+msgstr "Kod Çözücü"
+
+msgctxt "#31013"
+msgid "Audio process information"
+msgstr "Ses işlem bilgisi"
+
+msgctxt "#31014"
+msgid "Memory used"
+msgstr "Kullanılan bellek"
 
 msgctxt "#31023"
 msgid "Playing"
@@ -152,10 +172,6 @@ msgctxt "#31059"
 msgid "Current playlist"
 msgstr "Geçerli çalma listesi"
 
-msgctxt "#31060"
-msgid "This file is stacked, select the part you want to play from."
-msgstr "Bu dosya yığınlandı, oynatmak istediğiniz bölümü seçin."
-
 msgctxt "#31061"
 msgid "Current selected"
 msgstr "Şu an seçilen"
@@ -170,7 +186,7 @@ msgstr "Arka Plan"
 
 msgctxt "#31103"
 msgid "Show \"Paused\" in picture slideshow"
-msgstr "Resim slayt gösterisinde \"Duraklatıldı\"yı göster"
+msgstr "Resim slayt gösterisinde \"Duraklatıldı\" mesajını göster"
 
 msgctxt "#31104"
 msgid "Play trailers in a window [COLOR=grey3](Video information dialogue only)[/COLOR]"
@@ -220,21 +236,17 @@ msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "Arka plan fanartını gizle"
 
+msgctxt "#31122"
+msgid "Hide EPG if RDS is present on channel window"
+msgstr "Eğer kanal penceresinde RDS varsa EPG'yi gizle"
+
 msgctxt "#31124"
 msgid "Show background \"Now playing\" video"
-msgstr "\"Video oynatılıyorken\" arka planı göster"
+msgstr "Arkaplanda oynatılan videoyu göster"
 
 msgctxt "#31125"
 msgid "Show background \"Now playing\" visualisation"
-msgstr "\"Görsel efektler oynatılıyorken\" arka planı göster"
-
-msgctxt "#31126"
-msgid "Play TV theme songs in video library (TvTunes add-on)"
-msgstr "TV tema şarkılarını video kitaplığında çal (TvTunes eklentisi)"
-
-msgctxt "#31127"
-msgid "TvTunes"
-msgstr "TvTunes"
+msgstr "Arkaplanda görsel öğeyi göster"
 
 msgctxt "#31128"
 msgid "Lyrics"
@@ -263,10 +275,6 @@ msgstr "Ana sayfa \"Resimler\" alt menüsü"
 msgctxt "#31140"
 msgid "Music OSD"
 msgstr "Müzik OSD"
-
-msgctxt "#31141"
-msgid "Video OSD"
-msgstr "Video OSD"
 
 msgctxt "#31142"
 msgid "Settings level"
@@ -298,7 +306,7 @@ msgstr "Gelecek bölümler"
 
 msgctxt "#31300"
 msgid "Current temperature"
-msgstr "Sıcaklık"
+msgstr "Geçerli sıcaklık"
 
 msgctxt "#31301"
 msgid "Last updated"
@@ -307,10 +315,6 @@ msgstr "Son güncelleme"
 msgctxt "#31303"
 msgid "Data provider"
 msgstr "Veri sağlayıcı"
-
-msgctxt "#31307"
-msgid "Hide fanart"
-msgstr "Fanart'ı gizle"
 
 msgctxt "#31308"
 msgid "Movie details"
@@ -324,26 +328,6 @@ msgctxt "#31310"
 msgid "Track number"
 msgstr "Parça numarası"
 
-msgctxt "#31311"
-msgid "Fanart image[CR][CR]Unavailable[CR][CR] Click button to set"
-msgstr "Fanart resmi[CR][CR]Mevcut Değil[CR][CR] Ayarlamak için düğmeye basın"
-
-msgctxt "#31312"
-msgid "Current scraper"
-msgstr "Geçerli sağlayıcı"
-
-msgctxt "#31313"
-msgid "Choose a scraper"
-msgstr "Sağlayıcı seç"
-
-msgctxt "#31314"
-msgid "Content scanning options"
-msgstr "İçerik tarama seçenekleri"
-
-msgctxt "#31317"
-msgid "Set fanart path"
-msgstr "Fanart yolunu ayarla"
-
 msgctxt "#31319"
 msgid "Selected profile"
 msgstr "Seçilen profil"
@@ -352,13 +336,9 @@ msgctxt "#31320"
 msgid "Last logged in"
 msgstr "Son giriş yapan"
 
-msgctxt "#31321"
-msgid "Karaoke song selector"
-msgstr "Karaoke şarkı seçici"
-
 msgctxt "#31322"
 msgid "Aired"
-msgstr "Gösterim"
+msgstr "Yayınlanma"
 
 msgctxt "#31325"
 msgid "Playlist options"
@@ -436,42 +416,6 @@ msgctxt "#31392"
 msgid "Arial based"
 msgstr "Arial tabanlı"
 
-msgctxt "#31400"
-msgid "[B]CONFIGURE APPEARANCE SETTINGS[/B][CR][CR]Change the skin · Set language and region · Change file listing options[CR]Set up a screensaver"
-msgstr "[B]GÖRÜNÜM AYARLARINI YAPILANDIR[/B][CR][CR]Dış görünümü değiştir · Dil ve bölgesel ayarları değiştir · Dosya listeleme seçeneklerini değiştir[CR]Ekran koruyucuyu ayarla"
-
-msgctxt "#31401"
-msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set video playback options · Change video listing options[CR]Set subtitle fonts"
-msgstr "[B]VİDEO AYARLARINI YAPILANDIR[/B][CR][CR]Video kitaplığını yönet · Video oynatma seçeneklerini ayarla · Video listeleme seçeneklerini değiştir[CR]Altyazı yazı tiplerini ayarla"
-
-msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
-msgstr "[B]MÜZİK AYARLARINI YAPILANDIR[/B][CR][CR]Müzik kitaplığını yönet · Müzik çalma seçeneklerini ayarla · Müzik listeleme seçeneklerini değiştir · Şarkı sunumu ayarları · Karaoke seçeneklerini ayarla"
-
-msgctxt "#31403"
-msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"
-msgstr "[B]RESİM AYARLARINI YAPILANDIR[/B][CR][CR]Resim listeleme seçeneklerini ayarla · Slayt gösterisi ayarlarını yapılandır"
-
-msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set various cities to collect weather information"
-msgstr "[B]HAVA DURUMU AYARLARINI YAPILANDIR[/B][CR][CR]Hava durumu bilgilerini almak için çeşitli şehirler seçin"
-
-msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
-msgstr "[B]SİSTEM AYARLARINI YAPILANDIR[/B][CR][CR]Görünümleri ayarla · Ses çıkış ayarlarını yapılandır · Uzaktan kumandaları ayarla[CR]Güç tasarrufu seçeneklerini ayarla · Hata ayıklamayı etkinleştir · Yönetici kilidini ayarla"
-
-msgctxt "#31408"
-msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed add-ons · Browse for and install add-ons from kodi.tv[CR]Modify add-on settings"
-msgstr "[B]EKLENTİLERİ YAPILANDIR[/B][CR][CR]Yüklenmiş eklentilerinizi yönetin · Eklentilere gözatın ve yenilerini yükleyin[CR]Eklenti ayarlarını değiştir"
-
-msgctxt "#31409"
-msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
-msgstr "[B]TV AYARLARINI YAPILANDIR[/B][CR][CR]Tam ekran bilgisini değiştir · EPG veri ayarlarını yönet"
-
-msgctxt "#31410"
-msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of Kodi via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
-msgstr "[B]HİZMET AYARLARINI YAPILANDIR[/B][CR][CR]UPnP ve HTTP üzerinden Kodi kontrolü ayarları · Dosya paylaşımını yapılandır[CR]Zeroconf'u etkinleştir · AirPlay'i yapılandır"
-
 msgctxt "#31411"
 msgid "First run help..."
 msgstr "İlk çalıştırma yardımı..."
@@ -499,6 +443,34 @@ msgstr "Başlangıçta oturum açma ekranını göster veya gizle."
 msgctxt "#31423"
 msgid "Select the profile that will be used at startup when the login screen is disabled."
 msgstr "Oturum açma ekranı devre dışı olduğunda başlangıçta kullanılacak profilinizi seçin."
+
+msgctxt "#31430"
+msgid "[B]PLAYER SETTINGS[/B][CR][CR]Configure actions that can be used during playback · Configure how media content is played"
+msgstr "[B]OYNATICI SEÇENEKLERİ[/B][CR][CR]Oynatım sırasında kullanılacak eylemleri yapılandırın · Medya içeriğinin nasıl oynatılacağını yapılandırın."
+
+msgctxt "#31431"
+msgid "[B]LIBRARY SETTINGS[/B][CR][CR]Configure how the library/file views display media content ·  Configure how library lists/views are navigated · Configure the media database options"
+msgstr "[B]KİTAPLIK AYARLARI[/B][CR][CR]Kitaplık/dosya görünümlerinin medya içeriğini nasıl göstereceğini yapılandırın ·  Kitaplık listelerine/görünümlerine nasıl gidileceğini yapılandırın · Medya veritabanı seçeneklerini yapılandırın"
+
+msgctxt "#31432"
+msgid "[B]PVR SETTINGS[/B][CR][CR]Configure how the channels & guide are managed  · Configure how Live TV and recordings are managed"
+msgstr "[B]PVR AYARLARI[/B][CR][CR]Kanalların ve rehberin nasıl yönetileceğini yapılandırın · Canlı yayın ve kayıtların nasıl yönetileceğini yapılandırın"
+
+msgctxt "#31433"
+msgid "[B]ADD-ONS SETTINGS[/B][CR][CR]Configure your installed add-ons · Browse for and install add-ons from kodi.tv"
+msgstr "[B]EKLENTİ AYARLARI[/B][CR][CR]Yüklü eklentilerinizi yapılandırın · kodi.tv'deki eklentilere göz atın ve yükleyin"
+
+msgctxt "#31434"
+msgid "[B]SERVICES SETTINGS[/B][CR][CR]Configure & manage media sharing services · Configure web server · Configure & manage the weather service"
+msgstr "[B]HIZMET AYARLARI[/B][CR][CR]Medya paylaşım hizmetlerini yönetin ve yapılandırın · Web sunucusunu yapılandırın · Hava durumu hizmetini yönetin ve yapılandırın"
+
+msgctxt "#31435"
+msgid "[B]SYSTEM SETTINGS[/B][CR][CR]Configure display · Configure audio · Configure internet access · Configure power saving· Configure logging"
+msgstr "[B]SİSTEM AYARLARI[/B][CR][CR]Görüntüyü yapılandırın · Sesi yapılandırın · İnternet erişimini yapılandırın · Güç tasarrufunu yapılandırın · Günlüğü yapılandırın"
+
+msgctxt "#31436"
+msgid "[B]INTERFACE SETTINGS[/B][CR][CR]Configure skin · Configure region · Configure control · Configure screensaver · Configure master lock"
+msgstr "[B]ARABİRİM AYARLARI[/B][CR][CR]Dış görünümü yapılandırın · Bölge ayarlarını yapılandırın · Denetim ayarlarını yapılandırın · Ekran koruyucuyu yapılandırın · Yönetici kilidini yapılandırın"
 
 msgctxt "#31501"
 msgid "Scheduled time"
@@ -555,10 +527,6 @@ msgstr "Günlük hava tahmini"
 msgctxt "#31905"
 msgid "Forecast"
 msgstr "Hava Tahmini"
-
-msgctxt "#31908"
-msgid "Chance of precipitation"
-msgstr "Yağış olasılığı"
 
 msgctxt "#31909"
 msgid "Fetching forecast info..."

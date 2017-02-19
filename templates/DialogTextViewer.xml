@@ -3,12 +3,13 @@
 	<defaultcontrol>61</defaultcontrol>
 	<controls>
 		<control type="group">
+			<depth>DepthDialog-</depth>
 			<animation effect="slide" start="{{ScaleBorder2('1100,0')}}" end="{{ScaleBorder2('0,0')}}" time="300" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('1100,0')}}" time="300" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
 				<left>{{ScaleX('180')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('1100')}}</width>
+				<width>{{ScaleX('1120')}}</width>
 				<height>{{ScaleY('720')}}</height>
 				<texture border="{{ScaleBorder('15,0,0,0')}}" flipx="true">MediaBladeSub.png</texture>
 			</control>
@@ -76,6 +77,9 @@
 				</control>
 			</control>
 		</control>
-		<include>Clock</include>
+		<control type="group">
+			<depth>DepthDialog-</depth>
+			<include>Clock</include>
+		</control>
 	</controls>
 </window>
