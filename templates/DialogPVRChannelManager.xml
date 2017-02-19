@@ -24,9 +24,9 @@
 				<top>{{ScaleY('5')}}</top>
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('470')}}</height>
-				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>20</onleft>
@@ -225,8 +225,8 @@
 					<shadowcolor>black</shadowcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<texturefocus border="5">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
+					<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 					<pulseonselect>no</pulseonselect>
 					<label>19074</label>
 				</control>
@@ -240,8 +240,8 @@
 					<textcolor>white</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<shadowcolor>black</shadowcolor>
-					<texturefocus border="5">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
+					<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 					<label>19201</label>
 				</control>
 				<control type="group" id="9005">
@@ -256,8 +256,8 @@
 						<width>{{ScaleX('380')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font12</font>
-						<texturefocus border="5">button-focus2.png</texturefocus>
-						<texturenofocus border="5">button-nofocus.png</texturenofocus>
+						<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
+						<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 						<label>19202</label>
 						<onleft>60</onleft>
 						<onright>9000</onright>
@@ -286,8 +286,8 @@
 					<shadowcolor>black</shadowcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<texturefocus border="5">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
+					<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 					<pulseonselect>no</pulseonselect>
 					<label>19206</label>
 				</control>
@@ -298,8 +298,8 @@
 					<width>{{ScaleX('380')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
-					<texturefocus border="5">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
+					<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 					<label>19200</label>
 				</control>
 				<control type="radiobutton" id="14">
@@ -314,8 +314,8 @@
 					<shadowcolor>black</shadowcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<texturefocus border="5">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
+					<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 					<pulseonselect>no</pulseonselect>
 					<label>19267</label>
 				</control>
@@ -349,8 +349,8 @@
 					<width>{{ScaleX('380')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
-					<texturefocus border="5">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
+					<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 					<align>center</align>
 					<label>19204</label>
 				</control>
@@ -361,8 +361,8 @@
 					<width>{{ScaleX('380')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
-					<texturefocus border="5">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
+					<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 					<align>center</align>
 					<label>19205</label>
 				</control>
@@ -373,8 +373,8 @@
 					<width>{{ScaleX('380')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
-					<texturefocus border="5">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
+					<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 					<alttexturefocus border="5">button-focus2.png</alttexturefocus>
 					<alttexturenofocus border="5">button-nofocus.png</alttexturenofocus>
 					<align>center</align>

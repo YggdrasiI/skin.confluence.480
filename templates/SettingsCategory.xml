@@ -89,8 +89,8 @@
 				<font>font13</font>
 				<textcolor>selected</textcolor>
 				<focusedcolor>selected</focusedcolor>
-				<texturefocus border="5">MenuItemFO.png</texturefocus>
-				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">MenuItemFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('5')}}">MenuItemNF.png</texturenofocus>
 				<pulseonselect>false</pulseonselect>
 				<onleft>5</onleft>
 				<onright>5</onright>
@@ -154,9 +154,9 @@
 				<top>{{ScaleY('60')}}</top>
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('435')}}</height>
-				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>5</onleft>
@@ -196,8 +196,8 @@
 			<font>font13_title</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5">MenuItemFO.png</texturefocus>
-			<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+			<texturefocus border="{{ScaleBorder('5')}}">MenuItemFO.png</texturefocus>
+			<texturenofocus border="{{ScaleBorder('5')}}">MenuItemNF.png</texturenofocus>
 			<pulseonselect>false</pulseonselect>
 		</control>
 		<control type="button" id="7">
@@ -209,8 +209,8 @@
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<invalidcolor>invalid</invalidcolor>
-			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
-			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+			<texturefocus border="{{ScaleBorder('0,2,0,2')}}">MenuItemFO.png</texturefocus>
+			<texturenofocus border="{{ScaleBorder('0,2,0,2')}}">MenuItemNF.png</texturenofocus>
 		</control>
 		<control type="radiobutton" id="8">
 			<description>Default RadioButton</description>
@@ -220,8 +220,8 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
-			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+			<texturefocus border="{{ScaleBorder('0,2,0,2')}}">MenuItemFO.png</texturefocus>
+			<texturenofocus border="{{ScaleBorder('0,2,0,2')}}">MenuItemNF.png</texturenofocus>
 		</control>
 		<control type="spincontrolex" id="9">
 			<description>Default SpinControlex</description>
@@ -231,8 +231,8 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
-			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+			<texturefocus border="{{ScaleBorder('0,2,0,2')}}">MenuItemFO.png</texturefocus>
+			<texturenofocus border="{{ScaleBorder('0,2,0,2')}}">MenuItemNF.png</texturenofocus>
 			<aligny>center</aligny>
 			<reverse>yes</reverse>
 		</control>
@@ -244,8 +244,8 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
-			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+			<texturefocus border="{{ScaleBorder('0,2,0,2')}}">MenuItemFO.png</texturefocus>
+			<texturenofocus border="{{ScaleBorder('0,2,0,2')}}">MenuItemNF.png</texturenofocus>
 			<aligny>center</aligny>
 		</control>
 		<control type="image" id="11">

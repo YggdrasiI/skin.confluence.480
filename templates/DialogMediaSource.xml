@@ -96,9 +96,9 @@
 			<top>{{ScaleY('105')}}</top>
 			<width>{{ScaleX('25')}}</width>
 			<height>{{ScaleY('225')}}</height>
-			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-			<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-			<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+			<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
+			<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+			<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 			<textureslidernib>ScrollBarNib.png</textureslidernib>
 			<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 			<onleft>10</onleft>
@@ -119,8 +119,8 @@
 				<font>font12_title</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
 				<onup>18</onup>
 				<onleft>60</onleft>
 				<onright>10</onright>
@@ -136,8 +136,8 @@
 				<font>font12_title</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
 				<onup>11</onup>
 				<onleft>60</onleft>
 				<onright>10</onright>
@@ -153,8 +153,8 @@
 				<font>font12_title</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
 				<onup>13</onup>
 				<onleft>60</onleft>
 				<onright>10</onright>
@@ -184,8 +184,8 @@
 			<aligny>center</aligny>
 			<label>-</label>
 			<font>font13</font>
-			<texturefocus border="5">button-focus2.png</texturefocus>
-			<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
+			<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 			<onup>10</onup>
 			<onleft>12</onleft>
 			<onright>19</onright>
@@ -202,8 +202,8 @@
 				<height>{{ScaleY('40')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
 				<label>186</label>
 				<font>font12_title</font>
 				<onup>12</onup>
@@ -219,8 +219,8 @@
 				<height>{{ScaleY('40')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
 				<label>222</label>
 				<font>font12_title</font>
 				<onup>12</onup>

@@ -191,8 +191,8 @@
 					<label>-</label>
 					<font>-</font>
 					<onclick>ActivateWindow(ShutdownMenu)</onclick>
-					<texturefocus border="5">floor_buttonFO.png</texturefocus>
-					<texturenofocus border="5">floor_button.png</texturenofocus>
+					<texturefocus border="{{ScaleBorder('5')}}">floor_buttonFO.png</texturefocus>
+					<texturenofocus border="{{ScaleBorder('5')}}">floor_button.png</texturenofocus>
 					<onleft>52</onleft>
 					<onright>52</onright>
 					<onup>52</onup>

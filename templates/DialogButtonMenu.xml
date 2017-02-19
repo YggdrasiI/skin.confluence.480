@@ -79,8 +79,8 @@
 				<align>center</align>
 				<textwidth>290</textwidth>
 				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
-				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
-				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonFocus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>Quit()</onclick>
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
@@ -95,8 +95,8 @@
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
 				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
-				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
-				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonFocus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>Powerdown()</onclick>
 				<visible>System.CanPowerDown</visible>
 				<pulseonselect>no</pulseonselect>
@@ -111,8 +111,8 @@
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
 				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
-				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
-				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonFocus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
@@ -128,8 +128,8 @@
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
 				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
-				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
-				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonFocus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>CancelAlarm(shutdowntimer)</onclick>
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
@@ -144,8 +144,8 @@
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
 				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
-				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
-				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonFocus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>Suspend()</onclick>
 				<visible>System.CanSuspend</visible>
 				<pulseonselect>no</pulseonselect>
@@ -160,8 +160,8 @@
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
 				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
-				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
-				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonFocus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>Hibernate()</onclick>
 				<visible>System.CanHibernate</visible>
 				<pulseonselect>no</pulseonselect>
@@ -176,8 +176,8 @@
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
 				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
-				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
-				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonFocus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>Reset()</onclick>
 				<visible>System.CanReboot</visible>
 				<pulseonselect>no</pulseonselect>
@@ -192,8 +192,8 @@
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
 				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
-				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
-				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonFocus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>dialog.close(all,true)</onclick>
 				<onclick>System.LogOff</onclick>
 				<pulseonselect>no</pulseonselect>
@@ -213,8 +213,8 @@
 				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
-				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonFocus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonNoFocus.png</texturenofocus>
 				<usealttexture>!System.IsMaster</usealttexture>
 				<alttexturefocus border="25,5,25,5">ShutdownButtonFocus.png</alttexturefocus>
 				<alttexturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</alttexturenofocus>
@@ -255,8 +255,8 @@
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
 				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
-				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
-				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonFocus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>InhibitIdleShutdown(true)</onclick>
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
@@ -271,8 +271,8 @@
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
 				<textwidth>{{ScaleX({{ 290 + {DialogButtonExtraWidth} }})}}</textwidth>
-				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
-				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonFocus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonNoFocus.png</texturenofocus>
 				<onclick>InhibitIdleShutdown(false)</onclick>
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>

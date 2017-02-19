@@ -50,7 +50,7 @@
 			<align>center</align>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5">button-focus.png</texturefocus>
+			<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
 		</control>
 	</controls>
 </window>

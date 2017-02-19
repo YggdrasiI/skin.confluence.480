@@ -314,7 +314,7 @@
 		<textwidth>{{ 200 + {SideBladeExtraWidth} - 10 }}</textwidth>
 		<aligny>center</aligny>
 		<font>font13</font>
-		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</include>
@@ -325,8 +325,8 @@
 		<textwidth>{{195 + {HomeSubMenuWidth} + 20 }}</textwidth>
 		<aligny>center</aligny>
 		<font>font12_title</font>
-		<texturefocus border="5">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
+		<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="ButtonHomeSubCommonValues">
@@ -339,8 +339,8 @@
 		<textcolor>grey2</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<scroll>true</scroll>
-		<texturefocus border="5">HomeSubFO.png</texturefocus>
-		<texturenofocus border="5">HomeSubNF.png</texturenofocus>
+		<texturefocus border="{{ScaleBorder('5')}}">HomeSubFO.png</texturefocus>
+		<texturenofocus border="{{ScaleBorder('5')}}">HomeSubNF.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="HomeSubMenuCommonValues">
@@ -363,8 +363,8 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>font12_title</font>
-		<texturefocus border="5">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
+		<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="SideBladeLeft">
@@ -427,8 +427,8 @@
 				<label>1036</label>
 				<font>-</font>
 				<onclick>back</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">floor_buttonFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('5')}}">floor_button.png</texturenofocus>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>50</onup>
@@ -452,8 +452,8 @@
 				<label>31003</label>
 				<font>-</font>
 				<onclick>ActivateWindow(home)</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">floor_buttonFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('5')}}">floor_button.png</texturenofocus>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>50</onup>
@@ -485,8 +485,8 @@
 				<label>31003</label>
 				<font>-</font>
 				<onclick>ActivateWindow(PlayerControls)</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">floor_buttonFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('5')}}">floor_button.png</texturenofocus>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>50</onup>
@@ -1392,8 +1392,8 @@
 	<include name="KeyboardButton">
 		<width>{{ScaleX({VirtualKeyboardKeyWidth})}}</width>
 		<height>{{ScaleY('50')}}</height>
-		<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-		<texturefocus border="5">KeyboardKey.png</texturefocus>
+		<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
+		<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>font13</font>

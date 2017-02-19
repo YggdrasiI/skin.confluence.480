@@ -21,8 +21,8 @@
 	<default type="button">
 		<width>{{ScaleX('300')}}</width>
 		<height>{{ScaleY('42')}}</height>
-		<texturefocus border="5">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
+		<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 		<font>font13</font>
 		<textcolor>white</textcolor>
 		<disabledcolor>grey3</disabledcolor>
@@ -120,8 +120,8 @@
 		<textureradiooffnofocus>radiobutton-nofocus.png</textureradiooffnofocus>
 		<textureradioondisabled colordiffuse="40FFFFFF">radiobutton-focus.png</textureradioondisabled>
 		<textureradiooffdisabled colordiffuse="40FFFFFF">radiobutton-nofocus.png</textureradiooffdisabled>
-		<texturefocus border="5">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
+		<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 		<label>215</label>
 		<font>font13</font>
 		<textcolor>white</textcolor>
@@ -157,8 +157,8 @@
 		<height>{{ScaleY('35')}}</height>
 		<textoffsetx>{{ScaleX('7')}}</textoffsetx>
 		<aligny>center</aligny>
-		<texturefocus border="5">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
+		<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 		<sliderwidth>150</sliderwidth>
 		<sliderheight>20</sliderheight>
 		<texturesliderbar>osd_slider_bg.png</texturesliderbar>
@@ -171,22 +171,22 @@
 	<default type="mover">
 		<left>{{ScaleX('60')}}</left>
 		<top>{{ScaleY('192')}}</top>
-		<texturefocus border="5">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
+		<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 	</default>
 	<default type="resize">
 		<left>{{ScaleX('60')}}</left>
 		<top>{{ScaleY('192')}}</top>
-		<texturefocus border="5">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
+		<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 	</default>
 	<default type="edit">
 		<left>{{ScaleX('300')}}</left>
 		<top>{{ScaleY('200')}}</top>
 		<width>{{ScaleX('300')}}</width>
 		<height>{{ScaleY('42')}}</height>
-		<texturefocus border="5">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
+		<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
 		<font>font13</font>
 		<textcolor>white</textcolor>
 		<disabledcolor>grey3</disabledcolor>

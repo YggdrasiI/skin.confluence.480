@@ -89,8 +89,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="25,25,5,5">KeyboardCornerTopNF.png</texturenofocus>
-				<texturefocus border="25,25,5,5">KeyboardCornerTop.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,25,5,5')}}">KeyboardCornerTopNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,25,5,5')}}">KeyboardCornerTop.png</texturefocus>
 				<label>12311</label>
 				<focusedcolor>black</focusedcolor>
 				<onleft>23</onleft>
@@ -107,8 +107,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
 				<label>12312</label>
 				<focusedcolor>black</focusedcolor>
 				<onleft>11</onleft>
@@ -125,8 +125,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
 				<label>12313</label>
 				<focusedcolor>black</focusedcolor>
 				<onleft>12</onleft>
@@ -170,8 +170,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
 				<label>12314</label>
 				<focusedcolor>black</focusedcolor>
 				<onleft>23</onleft>
@@ -188,8 +188,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
 				<label>12315</label>
 				<focusedcolor>black</focusedcolor>
 				<onleft>14</onleft>
@@ -206,8 +206,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
 				<label>12316</label>
 				<focusedcolor>black</focusedcolor>
 				<onleft>15</onleft>
@@ -224,8 +224,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
 				<label>12317</label>
 				<focusedcolor>black</focusedcolor>
 				<onleft>21</onleft>
@@ -242,8 +242,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
 				<label>12318</label>
 				<focusedcolor>black</focusedcolor>
 				<onleft>17</onleft>
@@ -260,8 +260,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
 				<label>12319</label>
 				<focusedcolor>black</focusedcolor>
 				<onleft>18</onleft>
@@ -315,8 +315,8 @@
 				<focusedcolor>black</focusedcolor>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5,25,25,5">KeyboardCornerBottomNF.png</texturenofocus>
-				<texturefocus border="5,25,25,5">KeyboardCornerBottom.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('5,25,25,5')}}">KeyboardCornerBottomNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5,25,25,5')}}">KeyboardCornerBottom.png</texturefocus>
 				<onleft>21</onleft>
 				<onright>10</onright>
 				<onup>17</onup>
@@ -331,8 +331,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
 				<label>12310</label>
 				<focusedcolor>black</focusedcolor>
 				<onleft>20</onleft>
@@ -351,8 +351,8 @@
 				<focusedcolor>black</focusedcolor>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
 				<onleft>10</onleft>
 				<onright>21</onright>
 				<onup>19</onup>

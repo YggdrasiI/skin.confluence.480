@@ -330,8 +330,8 @@
 				<label>33003</label>
 				<textoffsetx>{{ScaleX('30')}}</textoffsetx>
 				<aligny>center</aligny>
-				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
-				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
 				<alttexturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</alttexturefocus>
 				<alttexturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</alttexturenofocus>
 				<onclick>Close</onclick>
@@ -346,8 +346,8 @@
 				<aligny>center</aligny>
 				<font>font13</font>
 				<textoffsetx>{{ScaleX('30')}}</textoffsetx>
-				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
-				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
 				<pulseonselect>false</pulseonselect>
 				<label>22006</label>
 				<onclick>SubtitleDelay</onclick>
@@ -359,8 +359,8 @@
 				<aligny>center</aligny>
 				<font>font13</font>
 				<textoffsetx>{{ScaleX('30')}}</textoffsetx>
-				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
-				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
 				<pulseonselect>false</pulseonselect>
 				<label>209</label>
 				<onclick>CycleSubtitle</onclick>
@@ -374,8 +374,8 @@
 				<font>font13</font>
 				<label>449</label>
 				<radioposx>{{ScaleX({{ {OSDSubtitleMenuWidth} - 56 }})}}</radioposx>
-				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
-				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
 				<onclick>ShowSubtitles</onclick>
 				<selected>VideoPlayer.SubtitlesEnabled</selected>
 				<visible>VideoPlayer.HasSubtitles</visible>
@@ -450,8 +450,8 @@
 				<font>font13</font>
 				<label>31362</label>
 				<radioposx>{{ScaleX({{ {OSDSubtitleMenuWidth} - 56 }})}}</radioposx>
-				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
-				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
 				<onclick>ToggleStereoMode</onclick>
 				<selected>Integer.IsGreater(System.StereoscopicMode,0)</selected>
 				<pulseonselect>false</pulseonselect>
@@ -462,8 +462,8 @@
 				<aligny>center</aligny>
 				<font>font13</font>
 				<textoffsetx>{{ScaleX('30')}}</textoffsetx>
-				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
-				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
 				<pulseonselect>false</pulseonselect>
 				<label>31361</label>
 				<onclick>StereoMode</onclick>
@@ -476,8 +476,8 @@
 				<font>font13</font>
 				<label>31360</label>
 				<radioposx>{{ScaleX({{ {OSDSubtitleMenuWidth} - 56 }})}}</radioposx>
-				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
-				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
 				<onclick>StereoModeToMono</onclick>
 				<selected>String.IsEqual(System.StereoscopicMode,9)</selected>
 				<pulseonselect>false</pulseonselect>
