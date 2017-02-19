@@ -11,15 +11,15 @@
 			<animation effect="slide" start="{{ScaleBorder2('400,0')}}" end="{{ScaleBorder2('0,0')}}" time="300" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('400,0')}}" time="300" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
-				<left>{{ScaleX('400r')}}</left>
+				<left>{{ScaleX('{FavoritesBladeWidth}r')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('420')}}</width>
+				<width>{{ScaleX({FavoritesBladeWidth})}}</width>
 				<height>{{ScaleY('720')}}</height>
 				<texture border="{{ScaleBorder('15,0,0,0')}}" flipx="true">HomeBladeSub.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>{{ScaleX('380r')}}</left>
+				<left>{{ScaleX('{{ {FavoritesBladeWidth} - 20 }}r')}}</left>
 				<top>{{ScaleY('0')}}</top>
 				<width>{{ScaleX('64')}}</width>
 				<height>{{ScaleY('32')}}</height>
@@ -35,7 +35,7 @@
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			<control type="image">
-				<left>{{ScaleX('370r')}}</left>
+				<left>{{ScaleX('{{ {FavoritesBladeWidth} - 30 }}r')}}</left>
 				<top>{{ScaleY('30')}}</top>
 				<width>{{ScaleX('200')}}</width>
 				<height>{{ScaleY('200')}}</height>
@@ -46,9 +46,9 @@
 				<bordersize>8</bordersize>
 			</control>
 			<control type="list" id="450">
-				<left>{{ScaleX('390r')}}</left>
+				<left>{{ScaleX('{{ {FavoritesBladeWidth} - 20 }}r')}}</left>
 				<top>{{ScaleY('250')}}</top>
-				<width>{{ScaleX('450')}}</width>
+				<width>{{ScaleX({{ 50 + {FavoritesBladeWidth} }})}}</width>
 				<height>{{ScaleY('380')}}</height>
 				<onup>450</onup>
 				<onleft>Dialog.Close(Favourites)</onleft>
@@ -60,14 +60,14 @@
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('370')}}</width>
+						<width>{{ScaleX({{ -30 + {FavoritesBladeWidth} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('10')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('350')}}</width>
+						<width>{{ScaleX({{ -50 + {FavoritesBladeWidth} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font12_title</font>
 						<align>left</align>
@@ -80,7 +80,7 @@
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('370')}}</width>
+						<width>{{ScaleX({{ -30 + {FavoritesBladeWidth} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<visible>!Control.HasFocus(450)</visible>
 						<texture border="{{ScaleBorder('3')}}">button-nofocus.png</texture>
@@ -88,7 +88,7 @@
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('370')}}</width>
+						<width>{{ScaleX({{ -30 + {FavoritesBladeWidth} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<visible>Control.HasFocus(450)</visible>
 						<texture border="{{ScaleBorder('3')}}">button-focus.png</texture>
@@ -96,7 +96,7 @@
 					<control type="label">
 						<left>{{ScaleX('10')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('350')}}</width>
+						<width>{{ScaleX({{ -50 + {FavoritesBladeWidth} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font12_title</font>
 						<align>left</align>
@@ -110,7 +110,7 @@
 				<description>Page label</description>
 				<right>{{ScaleX('30')}}</right>
 				<top>{{ScaleY('670')}}</top>
-				<width>{{ScaleX('350')}}</width>
+				<width>{{ScaleX({{ -50 + {FavoritesBladeWidth} }})}}</width>
 				<height>{{ScaleY('30')}}</height>
 				<align>right</align>
 				<aligny>center</aligny>

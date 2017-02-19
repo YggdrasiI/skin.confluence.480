@@ -44,20 +44,18 @@ Workflow for updates on new confluence versions:
 
  3. Replace xml files in /templates with new files of
     orginial confluence skin. And commit changes.
-    Moreover, check if config files (i.e. addon.xml) 
-    or mediafiles (./media) was changed.
 
  4. Checkout sedChangesOnly and replace xml files
     in templates directory, too.
     (cd templates ; rm *.xml;  git checkout original_skin *.xml)
     Then, run sed scripts and commit changes.
-    (cd templates/sed; ./runSubstitutions.sh *.sed
 
- 5. Checkout master branch, repeat step 4 
-    (cd templates ; rm *.xml;  git checkout sedChangesOnly *.xml)
-    and run
-    ./parseTemplates.py
-    ./buildPackage --dest /dev/shm -t -p -f
+ 4. Checkout unstable branch and apply changes of step 2 and 3. 
+   Then run sed scripts (cd templates/sed; ./runSubstitutions.sh *.sed ),
+    parse templates ( ./parseTemplates.py ),
+    and build new package ( ./buildPackage --dest /dev/shm -t -p -f )
+
+ 5. Zip result, .i.e.    
     cd /dev/shm ; zip -r skin.confluence.480.zip skin.confluence.480
 
  6. Copy skin-zip to media center and resolve errors.

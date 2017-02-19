@@ -181,7 +181,7 @@
 					<control type="label">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('100')}}</width>
+						<width>{{ScaleX({{ 100 + {WeatherRightExtraW} }})}}</width>
 						<height>{{ScaleY('120')}}</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>
@@ -191,7 +191,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('110')}}</left>
+						<left>{{ScaleX({{ 110 + {WeatherRightExtraW} }})}}</left>
 						<top>{{ScaleY('5')}}</top>
 						<width>{{ScaleX('80')}}</width>
 						<height>{{ScaleY('80')}}</height>
@@ -199,9 +199,9 @@
 						<texture>$INFO[ListItem.Thumb]</texture>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('200')}}</left>
+						<left>{{ScaleX({{ 200 - {WeatherRightExtraW} }})}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('390')}}</width>
+						<width>{{ScaleX({{ 390 + {WeatherRightExtraW} }})}}</width>
 						<height>{{ScaleY('70')}}</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>
@@ -244,7 +244,7 @@
 					<control type="label">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('100')}}</width>
+						<width>{{ScaleX({{ 100 + {WeatherRightExtraW} }})}}</width>
 						<height>{{ScaleY('120')}}</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>
@@ -254,7 +254,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('110')}}</left>
+						<left>{{ScaleX({{ 110 + {WeatherRightExtraW} }})}}</left>
 						<top>{{ScaleY('5')}}</top>
 						<width>{{ScaleX('80')}}</width>
 						<height>{{ScaleY('80')}}</height>
@@ -262,9 +262,9 @@
 						<texture>$INFO[ListItem.Thumb]</texture>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('200')}}</left>
+						<left>{{ScaleX({{ 200 - {WeatherRightExtraW} }})}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('390')}}</width>
+						<width>{{ScaleX({{ 390 + {WeatherRightExtraW} }})}}</width>
 						<height>{{ScaleY('70')}}</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>

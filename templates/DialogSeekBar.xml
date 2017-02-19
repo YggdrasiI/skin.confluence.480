@@ -52,13 +52,13 @@
 			<control type="image">
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('370')}}</width>
-				<height>{{ScaleY('70')}}</height>
+				<width>{{ScaleX({DialogSeekBarWidth})}}</width>
+				<height>{{ScaleY({DialogSeekBarHeight})}}</height>
 				<colordiffuse>EEFFFFFF</colordiffuse>
 				<texture border="{{ScaleBorder('12')}}">OverlayDialogBackground.png</texture>
 			</control>
 			<control type="group">
-				<left>{{ScaleX('260')}}</left>
+				<left>{{ScaleX({{ {DialogSeekBarWidth} - 110 }})}}</left>
 				<top>{{ScaleY('10')}}</top>
 				<control type="image">
 					<left>{{ScaleX('10')}}</left>
@@ -240,8 +240,8 @@
 				<description>Seekbar Label</description>
 				<left>{{ScaleX('20')}}</left>
 				<top>{{ScaleY('7')}}</top>
-				<width>{{ScaleX('240')}}</width>
-				<height>{{ScaleY('20')}}</height>
+				<width>{{ScaleX({{ {DialogSeekBarWidth} - 130 }})}}</width>
+				<height>{{ScaleY({{ int(20 + ({DialogSeekBarHeight}-70)/2) }})}}</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font10_title</font>
@@ -251,9 +251,9 @@
 			<control type="label">
 				<description>Elapsed Time Label</description>
 				<left>{{ScaleX('20')}}</left>
-				<top>{{ScaleY('23')}}</top>
-				<width>{{ScaleX('240')}}</width>
-				<height>{{ScaleY('20')}}</height>
+				<top>{{ScaleY({{ int(23 + ({DialogSeekBarHeight}-70)/2) }})}}</top>
+				<width>{{ScaleX({{ {DialogSeekBarWidth} - 130 }})}}</width>
+				<height>{{ScaleY({{ int(20 + ({DialogSeekBarHeight}-70)/2) }})}}</height>
 				<font>font13_title</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
@@ -264,9 +264,9 @@
 			<control type="label">
 				<description>Seek Time Label</description>
 				<left>{{ScaleX('20')}}</left>
-				<top>{{ScaleY('23')}}</top>
-				<width>{{ScaleX('240')}}</width>
-				<height>{{ScaleY('20')}}</height>
+				<top>{{ScaleY({{ int(23 + ({DialogSeekBarHeight}-70)/2) }})}}</top>
+				<width>{{ScaleX({{ {DialogSeekBarWidth} - 130 }})}}</width>
+				<height>{{ScaleY({{ int(20 + ({DialogSeekBarHeight}-70)/2) }})}}</height>
 				<font>font13_title</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
@@ -277,8 +277,8 @@
 			<control type="progress">
 				<description>ProgressbarCache</description>
 				<left>{{ScaleX('20')}}</left>
-				<top>{{ScaleY('45')}}</top>
-				<width>{{ScaleX('240')}}</width>
+				<top>{{ScaleY({{ 43 + ({DialogSeekBarHeight}-70) }})}}</top>
+				<width>{{ScaleX({{ {DialogSeekBarWidth2} }})}}</width>
 				<height>{{ScaleY('15')}}</height>
 				<info>Player.ProgressCache</info>
 				<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
@@ -287,8 +287,8 @@
 			<control type="progress" id="23">
 				<description>Progressbar</description>
 				<left>{{ScaleX('20')}}</left>
-				<top>{{ScaleY('45')}}</top>
-				<width>{{ScaleX('240')}}</width>
+				<top>{{ScaleY({{ 43 + ({DialogSeekBarHeight}-70) }})}}</top>
+				<width>{{ScaleX({{ {DialogSeekBarWidth2} }})}}</width>
 				<height>{{ScaleY('15')}}</height>
 				<info>Player.Progress</info>
 				<visible>true</visible>
@@ -296,8 +296,8 @@
 			<control type="slider" id="401">
 				<description>Seek Slider</description>
 				<left>{{ScaleX('20')}}</left>
-				<top>{{ScaleY('42')}}</top>
-				<width>{{ScaleX('240')}}</width>
+				<top>{{ScaleY({{ 40 + ({DialogSeekBarHeight}-70) }})}}</top>
+				<width>{{ScaleX({{ {DialogSeekBarWidth2} }})}}</width>
 				<height>{{ScaleY('12')}}</height>
 				<texturesliderbar>seekslider.png</texturesliderbar>
 				<textureslidernib>osd_slider_nib.png</textureslidernib>
