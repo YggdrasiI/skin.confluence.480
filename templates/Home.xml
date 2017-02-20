@@ -491,8 +491,8 @@
 			<depth>DepthMenu-</depth>
 			<description>Controls for currently playing media</description>
 			<left>{{ScaleX({{ 15 + {HomeSearchWidth} + {HomeFullscreenWidth} + 6*{HomeControlIconWidth} + 1*(5+{HomeControlIconWidth}) }})}}r</left>
-			<top>{{ScaleY({{370 - ({HomeControlIconWidth}-30) + 1 }})}}</top>
-			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('365,-{BackgroundForInfoHeight}')}}" time="225" condition="!Player.HasMedia">conditional</animation>
+			<top>{{ScaleY({{370}})}}</top>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('{{ 15 + {HomeFullscreenWidth} + 6*{HomeControlIconWidth} + 0*(5+{HomeControlIconWidth}) }},-{BackgroundForInfoHeight}')}}" time="225" condition="!Player.HasMedia">conditional</animation>-->
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="{{ScaleBorder2('640,360')}}" easing="out" tween="back" time="225" />
 				<effect type="fade" start="0" end="100" time="225" />
@@ -1154,6 +1154,7 @@
 				<height>{{ScaleY('45')}}</height>
 				<label>31003</label>
 				<font>-</font>
+				<onclick>ReloadSkin</onclick>
 				<onclick>ActivateWindow(ShutdownMenu)</onclick>
 				<texturefocus border="{{ScaleBorder('5')}}">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="{{ScaleBorder('5')}}">floor_button.png</texturenofocus>
@@ -1211,6 +1212,7 @@
 				<include>Window_OpenClose_Animation</include>
 				<visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
 			</control>
+			<!--
 			<control type="image">
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('250')}}</top>
@@ -1219,6 +1221,7 @@
 				<texture background="true" >floor.png</texture>
 				<visible>[ Player.HasAudio | Player.HasVideo ] + !Skin.HasSetting(backgroundForInfo)</visible>
 			</control>
+			-->
 			<control type="group">
 				<left>{{ScaleX('20')}}</left>
 				<top>{{ScaleY('0')}}</top>
