@@ -326,9 +326,9 @@
 				<control type="label">
 					<description>Channel label</description>
 					<left>{{ScaleX('160')}}</left>
-					<top>{{ScaleY('265')}}</top>
+					<top>{{ScaleY('255')}}</top>
 					<height>{{ScaleY('25')}}</height>
-					<width>{{ScaleX('660')}}</width>
+					<width>{{ScaleX('760')}}</width>
 					<label>$INFO[VideoPlayer.ChannelName]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -338,21 +338,21 @@
 				</control>
 				<control type="label">
 					<description>Title label</description>
-					<left>{{ScaleX('160')}}</left>
-					<top>{{ScaleY('285')}}</top>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('200')}}</top>
 					<height>{{ScaleY('30')}}</height>
-					<width>{{ScaleX('1000')}}</width>
+					<width>{{ScaleX('1200')}}</width>
 					<label>$INFO[Player.Title]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font13_title</font>
+					<font>font17_title</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<description>Time Label</description>
 					<left>{{ScaleX('160')}}</left>
-					<top>{{ScaleY('310')}}</top>
+					<top>{{ScaleY('295')}}</top>
 					<height>{{ScaleY('30')}}</height>
 					<width>{{ScaleX('300')}}</width>
 					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
@@ -1295,12 +1295,12 @@
 			<control type="label">
 				<description>Date label</description>
 				<right>{{ScaleX('20')}}</right>
-				<top>{{ScaleY('{{35 * {GlobalFontScaling} * 2 }}')}}</top>
+				<top>{{ScaleY('{{35 * {GlobalFontScaling} * 2.1 }}')}}</top>
 				<width>{{ScaleX('300')}}</width>
 				<height>{{ScaleY('15')}}</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<font>font10</font>
+				<font>font13</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[System.Date]</label>
