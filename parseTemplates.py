@@ -231,6 +231,11 @@ def ScaleGeneral(sX, base_dim, out_dim):
     Output:
         ret = string
     """
+
+    # Substitute kodi constants
+    if sX in config.substitutions:
+        sX = config.substitutions[sX]
+
     sX = str(sX).strip()
 
     if(sX == "auto"
@@ -243,9 +248,12 @@ def ScaleGeneral(sX, base_dim, out_dim):
     if bRight:
         sX = sX[:-1]
 
-    x = int(sX)
+    # x = int(sX)
+    x = float(sX)  # This skin uses float values
     sign = bool(x > 0) - bool(x < 0)
+
     x = int(x * out_dim / base_dim)
+    # x = float(int(1000 * x * out_dim / base_dim))/1000
 
     # Omit return of 0 for non-zero inputs.
     if x is 0 and sign is not 0:

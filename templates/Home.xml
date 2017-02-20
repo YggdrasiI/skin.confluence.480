@@ -54,7 +54,7 @@
 			<width>{{ScaleX('1320')}}</width>
 			<height>{{ScaleY('90')}}</height>
 			<texture>floor.png</texture>
-			<animation effect="rotatex" end="45" time="0" center="620,0" condition="true">Conditional</animation>
+			<animation effect="rotatex" end="45" time="0" center="{{ScaleBorder2('620,0')}}" condition="true">Conditional</animation>
 			<animation effect="slide" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" time="200" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
@@ -1292,7 +1292,7 @@
 			<control type="label">
 				<description>Date label</description>
 				<right>{{ScaleX('20')}}</right>
-				<top>{{ScaleY('35')}}</top>
+				<top>{{ScaleY('{{35 * {GlobalFontScaling} * 2 }}')}}</top>
 				<width>{{ScaleX('300')}}</width>
 				<height>{{ScaleY('15')}}</height>
 				<align>right</align>

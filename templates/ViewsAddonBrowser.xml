@@ -275,7 +275,7 @@
 						<selectedcolor>red</selectedcolor>
 						<align>center</align>
 						<aligny>center</aligny>
-						<animation effect="rotate" start="0" end="45" center="auto" time="0" condition="true">Conditional</animation>
+						<animation effect="rotate" start="0" end="45" center="{{ScaleBorder2('auto')}}" time="0" condition="true">Conditional</animation>
 						<label>24098</label>
 						<visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
 					</control>
@@ -328,7 +328,7 @@
 						<selectedcolor>red</selectedcolor>
 						<align>center</align>
 						<aligny>center</aligny>
-						<animation effect="rotate" start="0" end="45" center="auto" time="0" condition="true">Conditional</animation>
+						<animation effect="rotate" start="0" end="45" center="{{ScaleBorder2('auto')}}" time="0" condition="true">Conditional</animation>
 						<label>24098</label>
 						<visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
 					</control>

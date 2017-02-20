@@ -72,7 +72,7 @@
 			<width>{{ScaleX('1320')}}</width>
 			<height>{{ScaleY('100')}}</height>
 			<texture>floor.png</texture>
-			<animation effect="rotatex" end="45" time="0" center="620,0" condition="true">Conditional</animation>
+			<animation effect="rotatex" end="45" time="0" center="{{ScaleBorder2('620,0')}}" condition="true">Conditional</animation>
 			<animation effect="slide" start="{{ScaleBorder2('0,10')}}" end="{{ScaleBorder2('0,0')}}" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,10')}}" time="150" condition="Window.Next(Home)">WindowClose</animation>
 		</control>

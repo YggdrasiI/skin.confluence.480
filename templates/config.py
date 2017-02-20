@@ -49,8 +49,8 @@ substitutions = {
     "FavoritesBladeWidth": 650,  # 400
 
     # 1+16 Cols. Shift width = 1+4 Cols
-    "VirtualKeyboardWidth": 17*62+50,  # 860
-    "VirtualKeyboardKeyWidth": 62,  # 50
+    "VirtualKeyboardWidth": 17*60+50,  # 860
+    "VirtualKeyboardKeyWidth": 60,  # 50
     "VirtualNumpadWidth": 450,  # 380
 
     "OSDBookmarksWidth": 1000,  # 800

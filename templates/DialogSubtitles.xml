@@ -327,7 +327,7 @@
 					<width>{{ScaleX('720')}}</width>
 					<height>{{ScaleY('4')}}</height>
 					<texture>separator.png</texture>
-					<animation effect="rotate" start="0" end="90" center="auto" time="0" condition="true">Conditional</animation>
+					<animation effect="rotate" start="0" end="90" center="{{ScaleBorder2('auto')}}" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="label">
 					<left>{{ScaleX('905')}}</left>

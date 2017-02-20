@@ -451,19 +451,19 @@
 					<control type="button" id="165">
 						<description>(3,5) key button</description>
 						<onup>145</onup>
-						<ondown>8</ondown>
+						<ondown>305</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="166">
 						<description>(3,6) key button</description>
 						<onup>146</onup>
-						<ondown>305</ondown>
+						<ondown>306</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="167">
 						<description>(3,7) key button</description>
 						<onup>147</onup>
-						<ondown>306</ondown>
+						<ondown>308</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="168">
@@ -526,7 +526,7 @@
 					</control>
 					<control type="button" id="8">
 						<description>BACKSPACE button</description>
-						<width>{{ScaleX({{ 4 * {VirtualKeyboardKeyWidth} }})}}</width>
+						<width>{{ScaleX({{ 1 * {VirtualKeyboardKeyWidth} }})}}</width>
 						<height>{{ScaleY('50')}}</height>
 						<label>20181</label>
 						<onup>164</onup>
@@ -540,7 +540,7 @@
 					</control>
 					<control type="button" id="305">
 						<description>previous button</description>
-						<width>{{ScaleX({{ 2 * {VirtualKeyboardKeyWidth} }})}}</width>
+						<width>{{ScaleX({{ 1 * {VirtualKeyboardKeyWidth} }})}}</width>
 						<height>{{ScaleY('50')}}</height>
 						<label>&lt;</label>
 						<align>center</align>
@@ -549,12 +549,12 @@
 						<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
 						<font>font30</font>
 						<focusedcolor>black</focusedcolor>
-						<onup>166</onup>
+						<onup>165</onup>
 						<ondown>106</ondown>
 					</control>
 					<control type="button" id="306">
 						<description>next button</description>
-						<width>{{ScaleX({{ 2 * {VirtualKeyboardKeyWidth} }})}}</width>
+						<width>{{ScaleX({{ 1 * {VirtualKeyboardKeyWidth} }})}}</width>
 						<height>{{ScaleY('50')}}</height>
 						<label>&gt;</label>
 						<align>center</align>
@@ -563,7 +563,7 @@
 						<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
 						<font>font30</font>
 						<focusedcolor>black</focusedcolor>
-						<onup>167</onup>
+						<onup>166</onup>
 						<ondown>107</ondown>
 					</control>
 					<control type="button" id="308">
@@ -584,7 +584,7 @@
 				</control>
 				<control type="image">
 					<description>Backspace icon</description>
-					<left>{{ScaleX('435')}}</left>
+					<left>{{ScaleX({{ 12 + (5+4) * {VirtualKeyboardKeyWidth} }})}}</left>
 					<top>{{ScaleY('210')}}</top>
 					<width>{{ScaleX('30')}}</width>
 					<height>{{ScaleY('30')}}</height>
