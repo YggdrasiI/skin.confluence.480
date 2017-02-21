@@ -67,15 +67,22 @@ substitutions = {
 
     "DialogBusyWidth": 300,  # 200
 
-    "FullScreenExtraHeight": 34,  # 0
+    "DialogPVRExtraWidth": 200,  # 0
+    "DialogPVRExtraHeight": 34,  # 0
+    "DialogPVRItemExtraHeight": 40,  # 0
+
+    "FullScreenExtraHeight": 44,  # 0
+    "FullScreenExtraWidth": 32,  # 0
+    "FullScreenExtraIconDim": 10,  # 0
 
     "MyPVRChannelsLeftExtraWidth": 100,  # 0
     "MyPVRChannelsLeftItemHeight": 80,  # ?
-    "MyPVRChannelsPreviewHeight": 300, # 400
-    "MyPVRChannelsRightExtraHeight": 54, # 0
+    "MyPVRChannelsPreviewHeight": 300,  # 400
+    "MyPVRChannelsRightExtraHeight": 54,  # 0
 
     # Higher desciption box
-    "DialogPVRGuideInfoExtraHeight": 150, # 0
+    "DialogPVRGuideInfoExtraHeight": 150,  # 0
+
     }
 
 substitutions["OSDBookmarksItemWidth"] = int(

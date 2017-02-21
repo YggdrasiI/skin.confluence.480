@@ -503,7 +503,7 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('53r')}}</top>
+				<top>{{ScaleY('57r')}}</top>
 				<width>{{ScaleX('700')}}</width>
 				<height>{{ScaleY('20')}}</height>
 				<label>$INFO[Player.Title] - ([COLOR=blue]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</label>
@@ -515,7 +515,7 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('32r')}}</top>
+				<top>{{ScaleY('26r')}}</top>
 				<width>{{ScaleX('700')}}</width>
 				<height>{{ScaleY('20')}}</height>
 				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
@@ -528,7 +528,7 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('30r')}}</top>
+				<top>{{ScaleY('26r')}}</top>
 				<width>{{ScaleX('700')}}</width>
 				<height>{{ScaleY('20')}}</height>
 				<label>$INFO[VideoPlayer.Studio]</label>
@@ -541,7 +541,7 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('30r')}}</top>
+				<top>{{ScaleY('26r')}}</top>
 				<width>{{ScaleX('700')}}</width>
 				<height>{{ScaleY('20')}}</height>
 				<label>$INFO[VideoPlayer.TVShowTitle]</label>
@@ -554,7 +554,7 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('30r')}}</top>
+				<top>{{ScaleY('26r')}}</top>
 				<width>{{ScaleX('700')}}</width>
 				<height>{{ScaleY('20')}}</height>
 				<label>$INFO[VideoPlayer.Artist]</label>
@@ -567,7 +567,7 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('30r')}}</top>
+				<top>{{ScaleY('26r')}}</top>
 				<width>{{ScaleX('700')}}</width>
 				<height>{{ScaleY('20')}}</height>
 				<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, - ([COLOR=blue],[/COLOR])]</label>

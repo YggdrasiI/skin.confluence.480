@@ -102,8 +102,8 @@
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="group" id="1">
-				<left>{{ScaleX('330')}}</left>
-				<top>{{ScaleY('{{ 185 + {FullScreenExtraHeight} }}r')}}</top>
+				<left>{{ScaleX('{{ 330 - {FullScreenExtraWidth} }}')}}</left>
+				<top>{{ScaleY('{{ 185 + 20 + {FullScreenExtraHeight} }}r')}}</top>
 				<control type="label" id="1">
 					<description>Heading label</description>
 					<left>{{ScaleX('0')}}</left>
@@ -212,61 +212,61 @@
 					</control>
 					<control type="image" id="1">
 						<description>Video Resolution Image</description>
-						<width>{{ScaleX('50')}}</width>
-						<height>{{ScaleY('35')}}</height>
+						<width>{{ScaleX('{{ 50 + {FullScreenExtraIconDim} }}')}}</width>
+						<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
 						<aspectratio align="center">keep</aspectratio>
 						<texture>$INFO[VideoPlayer.VideoResolution,flagging/video/,.png]</texture>
 						<visible>!Player.ChannelPreviewActive</visible>
 					</control>
 					<control type="image" id="1">
 						<description>ADSP Master Mode Image</description>
-						<width>{{ScaleX('85')}}</width>
-						<height>{{ScaleY('35')}}</height>
+						<width>{{ScaleX('{{ 85 + {FullScreenExtraIconDim} }}')}}</width>
+						<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
 						<aspectratio align="right">keep</aspectratio>
 						<visible>![String.IsEmpty(ADSP.MasterOwnIcon) | Player.ChannelPreviewActive]</visible>
 						<texture>$INFO[ADSP.MasterOwnIcon]</texture>
 					</control>
 					<control type="image" id="1">
 						<description>Audio Codec Image</description>
-						<width>{{ScaleX('85')}}</width>
-						<height>{{ScaleY('35')}}</height>
+						<width>{{ScaleX('{{ 85 + {FullScreenExtraIconDim} }}')}}</width>
+						<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
 						<aspectratio align="center">keep</aspectratio>
 						<visible>String.IsEmpty(ADSP.MasterOverrideIcon) + !Player.ChannelPreviewActive</visible>
 						<texture>$INFO[VideoPlayer.AudioCodec,flagging/audio/,.png]</texture>
 					</control>
 					<control type="image" id="1">
 						<description>ADSP Audio Codec Override Image</description>
-						<width>{{ScaleX('85')}}</width>
-						<height>{{ScaleY('35')}}</height>
+						<width>{{ScaleX('{{ 85 + {FullScreenExtraIconDim} }}')}}</width>
+						<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
 						<aspectratio align="right">keep</aspectratio>
 						<visible>![String.IsEmpty(ADSP.MasterOverrideIcon) | Player.ChannelPreviewActive]</visible>
 						<texture>$INFO[ADSP.MasterOverrideIcon]</texture>
 					</control>
 					<control type="image" id="1">
 						<description>Audio Channels Image</description>
-						<width>{{ScaleX('50')}}</width>
-						<height>{{ScaleY('35')}}</height>
+						<width>{{ScaleX('{{ 50 + {FullScreenExtraIconDim} }}')}}</width>
+						<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
 						<aspectratio align="center">keep</aspectratio>
 						<texture>$INFO[VideoPlayer.AudioChannels,flagging/audio/,.png]</texture>
 						<visible>!Player.ChannelPreviewActive</visible>
 					</control>
 					<control type="group" id="1">
-						<width>{{ScaleX('85')}}</width>
-						<height>{{ScaleY('35')}}</height>
+						<width>{{ScaleX('{{ 85 + {FullScreenExtraIconDim} }}')}}</width>
+						<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
 						<visible>![String.IsEmpty(VideoPlayer.AudioLanguage) | Player.ChannelPreviewActive]</visible>
 						<control type="image" id="1">
 							<left>{{ScaleX('5')}}</left>
 							<top>{{ScaleY('0')}}</top>
 							<description>Audio Language Image</description>
-							<width>{{ScaleX('80')}}</width>
-							<height>{{ScaleY('35')}}</height>
+							<width>{{ScaleX('{{ 80 + {FullScreenExtraIconDim} }}')}}</width>
+							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
 							<texture>flagging/AudioLang.png</texture>
 						</control>
 						<control type="label" id="1">
 							<left>{{ScaleX('38')}}</left>
 							<top>{{ScaleY('2')}}</top>
-							<width>{{ScaleX('47')}}</width>
-							<height>{{ScaleY('35')}}</height>
+							<width>{{ScaleX('{{ 47 + {FullScreenExtraIconDim} }}')}}</width>
+							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
 							<font>font13</font>
 							<align>left</align>
 							<label>$INFO[VideoPlayer.AudioLanguage]</label>
@@ -274,21 +274,21 @@
 						</control>
 					</control>
 					<control type="group" id="1">
-						<width>{{ScaleX('85')}}</width>
-						<height>{{ScaleY('35')}}</height>
+						<width>{{ScaleX('{{ 85 + {FullScreenExtraIconDim} }}')}}</width>
+						<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
 						<visible>![String.IsEmpty(VideoPlayer.SubtitlesLanguage) | Player.ChannelPreviewActive]</visible>
 						<control type="image" id="1">
 							<left>{{ScaleX('5')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('80')}}</width>
-							<height>{{ScaleY('35')}}</height>
+							<width>{{ScaleX('{{ 80 + {FullScreenExtraIconDim} }}')}}</width>
+							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
 							<texture>flagging/SubLang.png</texture>
 						</control>
 						<control type="label" id="1">
 							<left>{{ScaleX('38')}}</left>
 							<top>{{ScaleY('2')}}</top>
-							<width>{{ScaleX('47')}}</width>
-							<height>{{ScaleY('35')}}</height>
+							<width>{{ScaleX('{{ 47 + {FullScreenExtraIconDim} }}')}}</width>
+							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
 							<font>font13</font>
 							<align>left</align>
 							<label>$INFO[VideoPlayer.SubtitlesLanguage]</label>
