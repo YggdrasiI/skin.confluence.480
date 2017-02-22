@@ -80,9 +80,9 @@
 			<control type="label">
 				<description>Album Label</description>
 				<left>{{ScaleX('170')}}</left>
-				<bottom>{{ScaleY({{ {H} - 235 - 75 }})}}</bottom>
+				<bottom>{{ScaleY({{ {H} - 235 - 105 }})}}</bottom>
 				<height>{{ScaleY('25')}}</height>
-				<width>{{ScaleX('1000')}}</width>
+				<width>{{ScaleX('1200')}}</width>
 				<label>$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -95,7 +95,7 @@
 				<left>{{ScaleX('170')}}</left>
 				<bottom>{{ScaleY({{ {H} - 235 - 75 }})}}</bottom>
 				<height>{{ScaleY('30')}}</height>
-				<width>{{ScaleX('1000')}}</width>
+				<width>{{ScaleX('1200')}}</width>
 				<label>$INFO[Player.Title]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -106,7 +106,7 @@
 			<control type="label">
 				<description>Time Label</description>
 				<left>{{ScaleX('170')}}</left>
-				<top>{{ScaleY('310')}}</top>
+				<top>{{ScaleY('305')}}</top>
 				<height>{{ScaleY('30')}}</height>
 				<width>{{ScaleX('300')}}</width>
 				<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
@@ -285,10 +285,10 @@
 				</control>
 				<control type="label">
 					<description>Title label</description>
-					<left>{{ScaleX('190')}}</left>
-					<top>{{ScaleY('285')}}</top>
+					<left>{{ScaleX('180')}}</left>
+					<top>{{ScaleY('270')}}</top>
 					<height>{{ScaleY('30')}}</height>
-					<width>{{ScaleX('1000')}}</width>
+					<width>{{ScaleX('1200')}}</width>
 					<label>$INFO[Player.Title]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -298,10 +298,10 @@
 				</control>
 				<control type="label">
 					<description>Time Label</description>
-					<left>{{ScaleX('190')}}</left>
-					<top>{{ScaleY('310')}}</top>
+					<left>{{ScaleX('180')}}</left>
+					<top>{{ScaleY('305')}}</top>
 					<height>{{ScaleY('30')}}</height>
-					<width>{{ScaleX('300')}}</width>
+					<width>{{ScaleX('500')}}</width>
 					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
 					<align>left</align>
 					<aligny>center</aligny>
