@@ -2,7 +2,6 @@
 <window>
 	<defaultcontrol always="true">2</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>240</left>
 		<top>60</top>
 	</coordinates>
@@ -94,7 +93,7 @@
 					<width>220</width>
 					<height>150</height>
 					<aspectratio>scale</aspectratio>
-					<info>ListItem.Icon</info>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="label">
 					<left>7</left>
@@ -122,7 +121,7 @@
 					<width>220</width>
 					<height>150</height>
 					<aspectratio>scale</aspectratio>
-					<info>ListItem.Icon</info>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="label">
 					<left>7</left>

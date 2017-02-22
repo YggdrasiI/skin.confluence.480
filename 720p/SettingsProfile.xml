@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="image">
@@ -141,7 +140,7 @@
 					<aspectratio>keep</aspectratio>
 					<bordertexture border="12">ThumbBorder.png</bordertexture>
 					<bordersize>10</bordersize>
-					<texture fallback="unknown-user.png">$INFO[Container(2).Listitem.Icon]</texture>
+					<texture fallback="DefaultUser.png">$INFO[Container(2).Listitem.Icon]</texture>
 				</control>
 				<control type="label">
 					<left>0</left>
@@ -316,7 +315,7 @@
 							<height>145</height>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<bordersize>5</bordersize>
-							<texture fallback="unknown-user.png">$INFO[Listitem.Icon]</texture>
+							<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
@@ -340,7 +339,7 @@
 							<height>145</height>
 							<bordertexture border="5">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
-							<texture fallback="unknown-user.png">$INFO[Listitem.Icon]</texture>
+							<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
@@ -374,31 +373,15 @@
 				</control>
 			</control>
 		</control>
-		<include>CommonNowPlaying</include>
+		<control type="group">
+			<depth>DepthFooter</depth>
+			<include>CommonNowPlaying</include>
+		</control>
 		<include>MainWindowMouseButtons</include>
 		<include>BehindDialogFadeOut</include>
-		<control type="image">
-			<description>Section header image</description>
-			<left>20</left>
-			<top>3</top>
-			<width>35</width>
-			<height>35</height>
-			<aspectratio>keep</aspectratio>
-			<texture>icon_system.png</texture>
-		</control>
-		<control type="grouplist">
-			<left>65</left>
-			<top>5</top>
-			<width>1000</width>
-			<height>30</height>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<itemgap>5</itemgap>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<label>$LOCALIZE[13200]</label>
-			</control>
-		</control>
-		<include>Clock</include>
+		<include content="CommonWindowHeader">
+			<param name="Icon" value="icon_system" />
+			<param name="Label" value="$LOCALIZE[13200]" />
+		</include>
 	</controls>
 </window>

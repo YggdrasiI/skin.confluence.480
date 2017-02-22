@@ -2,13 +2,12 @@
 <window>
 	<defaultcontrol always="true">9</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>210</left>
 		<top>65</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
-		<include name="DialogBackgroundCommons">
+		<include content="DialogBackgroundCommons">
 			<param name="DialogBackgroundWidth" value="865" />
 			<param name="DialogBackgroundHeight" value="605" />
 			<param name="DialogHeaderWidth" value="785" />
