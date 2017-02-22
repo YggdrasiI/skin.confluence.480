@@ -1154,7 +1154,6 @@
 				<height>{{ScaleY('45')}}</height>
 				<label>31003</label>
 				<font>-</font>
-				<onclick>ReloadSkin</onclick>
 				<onclick>ActivateWindow(ShutdownMenu)</onclick>
 				<texturefocus border="{{ScaleBorder('5')}}">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="{{ScaleBorder('5')}}">floor_button.png</texturenofocus>
