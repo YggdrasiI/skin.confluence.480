@@ -68,3 +68,4 @@ target/
 
 # Compiled templates of skin
 out/
+tmp/

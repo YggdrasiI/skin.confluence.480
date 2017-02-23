@@ -502,7 +502,7 @@
 					<visible>Container(9000).Hasfocus(3)</visible>
 					<left>{{ScaleX({{ 290 + {SettingPanelExtraWidthL} }})}}</left>
 					<top>{{ScaleY('60')}}</top>
-					<width>{{ScaleX('750')}}</width>
+					<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 					<height>{{ScaleY('530')}}</height>
 					<itemgap>-1</itemgap>
 					<pagecontrol>60</pagecontrol>
