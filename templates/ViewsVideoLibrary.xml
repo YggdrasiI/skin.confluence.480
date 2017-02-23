@@ -51,8 +51,8 @@
 						<bordertexture border="8">ThumbBorder.png</bordertexture>
 						<bordersize>8</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
-						<animation reversible="false" effect="zoom" start="-2,36,222,318" end="-28,0,284,390" time="150">focus</animation>
-						<animation reversible="false" effect="zoom" end="-2,36,222,318" start="-28,0,284,390" time="150">unfocus</animation>
+						<animation reversible="false" effect="zoom" start="{{ScaleBorder2('-2,36,222,318')}}" end="{{ScaleBorder2('-28,0,284,390')}}" time="150">focus</animation>
+						<animation reversible="false" effect="zoom" end="{{ScaleBorder2('-2,36,222,318')}}" start="{{ScaleBorder2('-28,0,284,390')}}" time="150">unfocus</animation>
 					</control>
 					<control type="image">
 						<depth>DepthContentPopout</depth>
@@ -62,8 +62,8 @@
 						<height>{{ScaleY('180')}}</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>GlassOverlay.png</texture>
-						<animation reversible="false" effect="zoom" start="6,44,170,180" end="-24,4,240,250" time="150">focus</animation>
-						<animation reversible="false" effect="zoom" end="6,44,170,180" start="-24,4,240,250" time="150">unfocus</animation>
+						<animation reversible="false" effect="zoom" start="{{ScaleBorder2('6,44,170,180')}}" end="{{ScaleBorder2('-24,4,240,250')}}" time="150">focus</animation>
+						<animation reversible="false" effect="zoom" end="{{ScaleBorder2('6,44,170,180')}}" start="{{ScaleBorder2('-24,4,240,250')}}" time="150">unfocus</animation>
 					</control>
 					<control type="image">
 						<depth>DepthContentPopout</depth>
@@ -375,8 +375,8 @@
 						<bordersize>8</bordersize>
 						<fadetime>200</fadetime>
 						<texture background="true">$VAR[PosterThumb]</texture>
-						<animation reversible="false" effect="zoom" start="-2,16,128,168" end="-12,-10,148,198" time="150">focus</animation>
-						<animation reversible="false" effect="zoom" end="-2,16,128,168" start="-12,-10,148,198" time="150">unfocus</animation>
+						<animation reversible="false" effect="zoom" start="{{ScaleBorder2('-2,16,128,168')}}" end="{{ScaleBorder2('-12,-10,148,198')}}" time="150">focus</animation>
+						<animation reversible="false" effect="zoom" end="{{ScaleBorder2('-2,16,128,168')}}" start="{{ScaleBorder2('-12,-10,148,198')}}" time="150">unfocus</animation>
 					</control>
 					<control type="image">
 						<depth>DepthContentPopout</depth>

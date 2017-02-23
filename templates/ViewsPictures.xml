@@ -55,8 +55,8 @@
 						<bordersize>8</bordersize>
 						<fadetime>200</fadetime>
 						<texture border="{{ScaleBorder('2')}}">ThumbBG.png</texture>
-						<animation reversible="false" effect="zoom" start="15,40,160,160" end="-10,-5,210,210" time="150">focus</animation>
-						<animation reversible="false" effect="zoom" end="15,40,160,160" start="-10,-5,210,210" time="150">unfocus</animation>
+						<animation reversible="false" effect="zoom" start="{{ScaleBorder2('15,40,160,160')}}" end="{{ScaleBorder2('-10,-5,210,210')}}" time="150">focus</animation>
+						<animation reversible="false" effect="zoom" end="{{ScaleBorder2('15,40,160,160')}}" start="{{ScaleBorder2('-10,-5,210,210')}}" time="150">unfocus</animation>
 					</control>
 					<control type="image">
 						<depth>DepthContentPopout</depth>
@@ -66,8 +66,8 @@
 						<height>{{ScaleY('140')}}</height>
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<animation reversible="false" effect="zoom" start="25,50,140,140" end="5,10,180,180" time="150">focus</animation>
-						<animation reversible="false" effect="zoom" end="25,50,140,140" start="5,10,180,180" time="150">unfocus</animation>
+						<animation reversible="false" effect="zoom" start="{{ScaleBorder2('25,50,140,140')}}" end="{{ScaleBorder2('5,10,180,180')}}" time="150">focus</animation>
+						<animation reversible="false" effect="zoom" end="{{ScaleBorder2('25,50,140,140')}}" start="{{ScaleBorder2('5,10,180,180')}}" time="150">unfocus</animation>
 					</control>
 				</focusedlayout>
 			</control>
