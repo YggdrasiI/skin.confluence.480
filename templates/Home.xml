@@ -1293,13 +1293,13 @@
 			<include>Clock</include>
 			<control type="label">
 				<description>Date label</description>
-				<right>{{ScaleX('20')}}</right>
+				<right>{{ScaleX('-20')}}</right>
 				<top>{{ScaleY('{{35 * {GlobalFontScaling} * 2.1 }}')}}</top>
-				<width>{{ScaleX('300')}}</width>
+				<width>{{ScaleX('600')}}</width>
 				<height>{{ScaleY('15')}}</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<font>font13</font>
+				<font>font12</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[System.Date]</label>

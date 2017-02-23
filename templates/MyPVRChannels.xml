@@ -414,9 +414,9 @@
 					<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-90,0')}}" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 					<description>Page Count Label</description>
 					<right>{{ScaleX('40')}}</right>
-					<top>{{ScaleY('53r')}}</top>
+					<top>{{ScaleY('56r')}}</top>
 					<width>{{ScaleX('500')}}</width>
-					<height>{{ScaleY('20')}}</height>
+					<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
 					<font>font12</font>
 					<textcolor>grey</textcolor>
 					<scroll>false</scroll>

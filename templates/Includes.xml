@@ -503,9 +503,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('57r')}}</top>
+				<top>{{ScaleY('60r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('20')}}</height>
+				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
 				<label>$INFO[Player.Title] - ([COLOR=blue]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -515,9 +515,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('26r')}}</top>
+				<top>{{ScaleY('25r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('20')}}</height>
+				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
 				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -528,9 +528,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('26r')}}</top>
+				<top>{{ScaleY('25r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('20')}}</height>
+				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
 				<label>$INFO[VideoPlayer.Studio]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -541,9 +541,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('26r')}}</top>
+				<top>{{ScaleY('25r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('20')}}</height>
+				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
 				<label>$INFO[VideoPlayer.TVShowTitle]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -554,9 +554,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('26r')}}</top>
+				<top>{{ScaleY('25r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('20')}}</height>
+				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
 				<label>$INFO[VideoPlayer.Artist]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -567,9 +567,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('26r')}}</top>
+				<top>{{ScaleY('25r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('20')}}</height>
+				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
 				<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, - ([COLOR=blue],[/COLOR])]</label>
 				<align>left</align>
 				<aligny>center</aligny>
