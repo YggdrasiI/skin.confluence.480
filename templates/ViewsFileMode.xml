@@ -236,7 +236,7 @@
 				<left>{{ScaleX('90')}}</left>
 				<top>{{ScaleY('80')}}</top>
 				<!--<width>{{ScaleX('1080')}}</width>-->
-				<width>{{ScaleX('{{ 95 + 3 * (216 + {ThumbnailViewItemExtraWidth}) }}')}}</width>
+				<width>{{ScaleX('{{ 95 + {ThumbnailViewItemColumns} * (216 + {ThumbnailViewItemExtraWidth}) }}')}}</width>
 				<height>{{ScaleY('558')}}</height>
 				<onleft>2</onleft>
 				<onright>60</onright>
@@ -390,7 +390,7 @@
 			</control>
 			<control type="scrollbar" id="60">
 				<!--<left>{{ScaleX('1170')}}</left>-->
-				<left>{{ScaleX('{{ 70 + 3 * ( 216 + {ThumbnailViewItemExtraWidth}) }}')}}</left>
+				<left>{{ScaleX('{{ 70 + {ThumbnailViewItemColumns} * ( 216 + {ThumbnailViewItemExtraWidth}) }}')}}</left>
 				<top>{{ScaleY('80')}}</top>
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('550')}}</height>
