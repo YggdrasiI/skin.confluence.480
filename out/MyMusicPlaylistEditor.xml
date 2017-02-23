@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">6</defaultcontrol>
+	<menucontrol>9000</menucontrol>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="group">
+			<top>6</top>
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<left>250</left>
+				<top>26</top>
+				<width>219</width>
+				<height>426</height>
+				<texture>black-back.png</texture>
+			</control>
+			<control type="label">
+				<left>267</left>
+				<top>30</top>
+				<width>185</width>
+				<height>20</height>
+				<font>font13_title</font>
+				<textcolor>blue</textcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[31061]</label>
+			</control>
+			<control type="group" id="9000">
+				<left>267</left>
+				<top>366</top>
+				<control type="button" id="6">
+					<description>Open Button</description>
+					<left>0</left>
+					<top>0</top>
+					<width>185</width>
+					<label>31055</label>
+					<align>center</align>
+					<include>ButtonHomeSubCommonValues</include>
+					<onleft>50</onleft>
+					<onright>100</onright>
+					<onup>8</onup>
+					<ondown>7</ondown>
+				</control>
+				<control type="button" id="7">
+					<description>Save Button</description>
+					<left>0</left>
+					<top>26</top>
+					<width>185</width>
+					<label>31056</label>
+					<align>center</align>
+					<include>ButtonHomeSubCommonValues</include>
+					<onleft>50</onleft>
+					<onright>100</onright>
+					<onup>6</onup>
+					<ondown>8</ondown>
+				</control>
+				<control type="button" id="8">
+					<description>Clear button</description>
+					<left>0</left>
+					<top>53</top>
+					<width>185</width>
+					<label>31057</label>
+					<align>center</align>
+					<include>ButtonHomeSubCommonValues</include>
+					<onleft>50</onleft>
+					<onright>100</onright>
+					<onup>7</onup>
+					<ondown>6</ondown>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Control.HasFocus(50)</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<left>270</left>
+					<top>60</top>
+					<width>180</width>
+					<height>133</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Container(50).ListItem.Icon]</texture>
+				</control>
+				<control type="textbox">
+					<left>270</left>
+					<top>201</top>
+					<width>180</width>
+					<height>145</height>
+					<font>font13</font>
+					<align>center</align>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<pagecontrol>-</pagecontrol>
+					<label>$INFO[Container(50).ListItem.Title,[COLOR=blue]$LOCALIZE[556]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Artist,[COLOR=blue]$LOCALIZE[557]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Album,[COLOR=blue]$LOCALIZE[558]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Duration,[COLOR=blue]$LOCALIZE[555]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.TrackNumber,[COLOR=blue]$LOCALIZE[554]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Genre,[COLOR=blue]$LOCALIZE[515]:[/COLOR] ,[CR]]</label>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Control.HasFocus(100)</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<left>261</left>
+					<top>60</top>
+					<width>196</width>
+					<height>133</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Container(100).ListItem.Icon]</texture>
+				</control>
+				<control type="textbox">
+					<left>261</left>
+					<top>201</top>
+					<width>196</width>
+					<height>145</height>
+					<font>font13</font>
+					<align>center</align>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<pagecontrol>-</pagecontrol>
+					<label>$INFO[Container(100).ListItem.Title,[COLOR=blue]$LOCALIZE[556]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Artist,[COLOR=blue]$LOCALIZE[557]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Album,[COLOR=blue]$LOCALIZE[558]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Duration,[COLOR=blue]$LOCALIZE[555]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.TrackNumber,[COLOR=blue]$LOCALIZE[554]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Genre,[COLOR=blue]$LOCALIZE[515]:[/COLOR] ,[CR]]</label>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="slide" start="-270,0" end="0,0" time="375" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" end="-270,0" start="0,0" time="375" tween="quadratic" easing="out">WindowClose</animation>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>270</width>
+				<height>480</height>
+				<texture border="0,0,8,0">MediaBladeSub.png</texture>
+			</control>
+			<control type="label">
+				<left>16</left>
+				<top>26</top>
+				<width>230</width>
+				<height>20</height>
+				<font>font24_title</font>
+				<textcolor>white</textcolor>
+				<scroll>true</scroll>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>31058</label>
+			</control>
+			<control type="image">
+				<left>5</left>
+				<top>53</top>
+				<width>258</width>
+				<height>2</height>
+				<texture>separator.png</texture>
+			</control>
+			<control type="image">
+				<left>5</left>
+				<top>33r</top>
+				<width>258</width>
+				<height>2</height>
+				<texture>separator.png</texture>
+			</control>
+			<control type="label">
+				<description>number of files/pages in left list text label</description>
+				<left>16</left>
+				<top>25r</top>
+				<width>230</width>
+				<font>font12</font>
+				<align>left</align>
+				<scroll>true</scroll>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>($INFO[Container(50).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(50).CurrentPage]/$INFO[Container(50).NumPages])</label>
+			</control>
+			<control type="scrollbar" id="30">
+				<left>11</left>
+				<top>66</top>
+				<width>14</width>
+				<height>360</height>
+				<texturesliderbackground border="0,7,0,7">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="0,7,0,7">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="0,7,0,7">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft>31</onleft>
+				<onright>50</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			<control type="list" id="50">
+				<left>28</left>
+				<top>66</top>
+				<width>225</width>
+				<height>360</height>
+				<onleft>30</onleft>
+				<onright>9000</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<viewtype label="">list</viewtype>
+				<pagecontrol>30</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="20" width="225">
+					<control type="label">
+						<left>2</left>
+						<top>0</top>
+						<width>213</width>
+						<height>20</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<left>19</left>
+						<top>0</top>
+						<width>202</width>
+						<height>20</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="20" width="225">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>225</width>
+						<height>20</height>
+						<texture border="3">MenuItemFO.png</texture>
+						<visible>Control.HasFocus(50)</visible>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="label">
+						<left>2</left>
+						<top>0</top>
+						<width>213</width>
+						<height>20</height>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<left>19</left>
+						<top>0</top>
+						<width>202</width>
+						<height>20</height>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="slide" start="270,0" end="0,0" time="375" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" end="270,0" start="0,0" time="375" tween="quadratic" easing="out">WindowClose</animation>
+			<left>450</left>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>270</width>
+				<height>480</height>
+				<texture border="8,0,0,0" flipx="true">MediaBladeSub.png</texture>
+			</control>
+			<control type="label">
+				<left>16</left>
+				<top>26</top>
+				<width>230</width>
+				<height>20</height>
+				<font>font24_title</font>
+				<textcolor>white</textcolor>
+				<scroll>true</scroll>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>31059</label>
+			</control>
+			<control type="image">
+				<left>5</left>
+				<top>53</top>
+				<width>258</width>
+				<height>2</height>
+				<texture>separator.png</texture>
+			</control>
+			<control type="image">
+				<left>5</left>
+				<top>33r</top>
+				<width>258</width>
+				<height>2</height>
+				<texture>separator.png</texture>
+			</control>
+			<control type="label">
+				<description>Page Count Label</description>
+				<left>78</left>
+				<top>25r</top>
+				<width>168</width>
+				<height>13</height>
+				<font>font12</font>
+				<textcolor>blue</textcolor>
+				<scroll>false</scroll>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>($INFO[Container(100).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(100).CurrentPage]/$INFO[Container(100).NumPages])</label>
+			</control>
+			<control type="scrollbar" id="31">
+				<left>241</left>
+				<top>66</top>
+				<width>14</width>
+				<height>366</height>
+				<texturesliderbackground border="0,7,0,7">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="0,7,0,7">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="0,7,0,7">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft>100</onleft>
+				<onright>30</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			<control type="list" id="100">
+				<left>11</left>
+				<top>66</top>
+				<width>225</width>
+				<height>366</height>
+				<onleft>9000</onleft>
+				<onright>31</onright>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<viewtype label="">list</viewtype>
+				<pagecontrol>31</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="20" width="225">
+					<control type="label">
+						<left>2</left>
+						<top>0</top>
+						<width>213</width>
+						<height>20</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<left>19</left>
+						<top>0</top>
+						<width>202</width>
+						<height>20</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="20" width="225">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>225</width>
+						<height>20</height>
+						<texture border="3">MenuItemFO.png</texture>
+						<visible>Control.HasFocus(100)</visible>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="label">
+						<left>2</left>
+						<top>0</top>
+						<width>213</width>
+						<height>20</height>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<left>19</left>
+						<top>0</top>
+						<width>202</width>
+						<height>20</height>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<include content="CommonWindowHeader">
+			<param name="Icon" value="icon_music" />
+			<param name="Label" value="$LOCALIZE[10503]" />
+		</include>
+	</controls>
+</window>

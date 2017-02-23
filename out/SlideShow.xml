@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>2</defaultcontrol>
+	<controls>
+		<control type="group" id="13">
+			<left>73r</left>
+			<top>6</top>
+			<visible>!Skin.HasSetting(Show_SlideShow_Paused)</visible>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>67</width>
+				<height>23</height>
+				<texture>black-back.png</texture>
+				<bordertexture border="3">NoCover_1.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
+			<control type="label">
+				<description>paused label</description>
+				<left>5</left>
+				<top>0</top>
+				<width>56</width>
+				<height>23</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font10</font>
+				<textcolor>white</textcolor>
+				<label>31043</label>
+			</control>
+		</control>
+		<!-- media infos -->
+		<control type="group">
+			<left>11</left>
+			<top>120r</top>
+			<visible>Player.ShowInfo + Player.HasMedia</visible>
+			<include>VisibleFadeEffect</include>
+			<include>SmallMusicInfo</include>
+		</control>
+		<control type="button">
+			<visible>SlideShow.IsVideo + [!SlideShow.IsActive | SlideShow.IsPaused]</visible>
+			<description>Video Play Button</description>
+			<left>303</left>
+			<top>173</top>
+			<width>112</width>
+			<height>133</height>
+			<font>-</font>
+			<onclick>play</onclick>
+			<texturefocus>arrow-big-right.png</texturefocus>
+			<texturenofocus>arrow-big-right.png</texturenofocus>
+		</control>
+	</controls>
+</window>

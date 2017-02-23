@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<coordinates>
+		<left>78</left>
+		<top>50</top>
+	</coordinates>
+	<include>dialogeffect</include>
+	<depth>DepthDialog+</depth>
+	<controls>
+		<control type="group">
+			<animation effect="slide" start="0,0" end="0,30" time="0" condition="[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,4)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,2)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,30" time="0" condition="[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,6)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,3)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,30" time="0" condition="[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,8)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,4)]">Conditional</animation>
+			<control type="image">
+				<description>background image</description>
+				<left>0</left>
+				<top>0</top>
+				<width>585</width>
+				<height>366</height>
+				<texture border="22">$VAR[SelectBack]</texture>
+				<visible>[Control.IsVisible(3) + Integer.IsGreater(Container(3).NumItems,8)] | [Control.IsVisible(6) + Integer.IsGreater(Container(6).NumItems,4)]</visible>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<left>0</left>
+				<top>0</top>
+				<width>585</width>
+				<height>305</height>
+				<texture border="22">$VAR[SelectBack]</texture>
+				<visible>[Control.IsVisible(3) + Integer.IsGreater(Container(3).NumItems,6) + !Integer.IsGreater(Container(3).NumItems,8)] | [Control.IsVisible(6) + Integer.IsGreater(Container(6).NumItems,3) + !Integer.IsGreater(Container(6).NumItems,4)]</visible>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<left>0</left>
+				<top>0</top>
+				<width>585</width>
+				<height>244</height>
+				<texture border="22">$VAR[SelectBack]</texture>
+				<visible>[Control.IsVisible(3) + Integer.IsGreater(Container(3).NumItems,4) + !Integer.IsGreater(Container(3).NumItems,6)] | [Control.IsVisible(6) + Integer.IsGreater(Container(6).NumItems,2) + !Integer.IsGreater(Container(6).NumItems,3)]</visible>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<left>0</left>
+				<top>0</top>
+				<width>585</width>
+				<height>182</height>
+				<texture border="22">$VAR[SelectBack]</texture>
+				<visible>[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,4)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,2)]</visible>
+			</control>
+			<control type="image">
+				<description>Dialog Header image</description>
+				<left>22</left>
+				<top>10</top>
+				<width>540</width>
+				<height>26</height>
+				<texture>dialogheader.png</texture>
+			</control>
+			<control type="label" id="1">
+				<description>header label</description>
+				<left>22</left>
+				<top>13</top>
+				<width>540</width>
+				<height>20</height>
+				<font>font13_title</font>
+				<label>$LOCALIZE[13406]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>selected</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label" id="4">
+				<description>No Settings Label</description>
+				<left>11</left>
+				<top>80</top>
+				<width>416</width>
+				<align>center</align>
+				<font>font13</font>
+			</control>
+			<control type="button">
+				<description>Close Window button</description>
+				<left>534</left>
+				<top>10</top>
+				<width>36</width>
+				<height>21</height>
+				<label>-</label>
+				<font>-</font>
+				<onclick>PreviousMenu</onclick>
+				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturenofocus>DialogCloseButton.png</texturenofocus>
+				<visible>system.getbool(input.enablemouse)</visible>
+			</control>
+			<control type="list" id="3">
+				<left>11</left>
+				<top>44</top>
+				<width>416</width>
+				<height>306</height>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<onleft>7</onleft>
+				<onright>61</onright>
+				<pagecontrol>61</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="30" width="416">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>416</width>
+						<height>26</height>
+						<texture border="2">button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<left>11</left>
+						<top>0</top>
+						<width>393</width>
+						<height>26</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="30" width="416">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>416</width>
+						<height>26</height>
+						<texture border="2">button-nofocus.png</texture>
+						<visible>!Control.HasFocus(3)</visible>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>410</width>
+						<height>26</height>
+						<texture border="2">button-focus2.png</texture>
+						<visible>Control.HasFocus(3)</visible>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="label">
+						<left>11</left>
+						<top>0</top>
+						<width>393</width>
+						<height>26</height>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="list" id="6">
+				<left>11</left>
+				<top>44</top>
+				<width>309</width>
+				<height>306</height>
+				<onup>6</onup>
+				<ondown>6</ondown>
+				<onleft>7</onleft>
+				<onright>61</onright>
+				<pagecontrol>61</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="61" width="416">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>416</width>
+						<height>57</height>
+						<texture border="2">button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<left>1</left>
+						<top>2</top>
+						<width>45</width>
+						<height>53</height>
+						<texture>$INFO[Listitem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<bordertexture border="3">black-back2.png</bordertexture>
+						<bordersize>2</bordersize>
+					</control>
+					<control type="label">
+						<left>50</left>
+						<top>1</top>
+						<width>360</width>
+						<height>20</height>
+						<font>font13</font>
+						<textcolor>grey</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+					</control>
+					<control type="textbox">
+						<left>50</left>
+						<top>22</top>
+						<width>360</width>
+						<height>32</height>
+						<font>font12</font>
+						<textcolor>grey</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="61" width="416">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>416</width>
+						<height>57</height>
+						<texture border="2">button-nofocus.png</texture>
+						<visible>!Control.HasFocus(6)</visible>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>416</width>
+						<height>57</height>
+						<texture border="2">button-focus2.png</texture>
+						<visible>Control.HasFocus(6)</visible>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="image">
+						<left>1</left>
+						<top>2</top>
+						<width>45</width>
+						<height>53</height>
+						<texture>$INFO[Listitem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<bordertexture border="3">black-back2.png</bordertexture>
+						<bordersize>2</bordersize>
+					</control>
+					<control type="label">
+						<left>50</left>
+						<top>1</top>
+						<width>360</width>
+						<height>20</height>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+					</control>
+					<control type="textbox">
+						<left>50</left>
+						<top>22</top>
+						<width>360</width>
+						<height>32</height>
+						<font>font12</font>
+						<textcolor>grey</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="61">
+				<left>427</left>
+				<top>43</top>
+				<width>14</width>
+				<height>309</height>
+				<texturesliderbackground border="0,7,0,7">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="0,7,0,7">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="0,7,0,7">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft condition="Control.IsVisible(3)">3</onleft>
+				<onleft condition="Control.IsVisible(6)">6</onleft>
+				<onright>90</onright>
+				<ondown>61</ondown>
+				<onup>61</onup>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			<control type="group">
+				<control type="label">
+					<description>number of files/pages in list text label</description>
+					<left>333</left>
+					<top>326</top>
+					<width>135</width>
+					<height>23</height>
+					<font>font12</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<label>$VAR[SelectLabel]</label>
+					<animation effect="slide" start="0,0" end="0,-61" time="0" condition="[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,4)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,2)]">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-61" time="0" condition="[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,6)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,3)]">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-61" time="0" condition="[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,8)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,4)]">Conditional</animation>
+				</control>
+				<control type="grouplist" id="90">
+					<left>451</left>
+					<top>66</top>
+					<onleft condition="Control.IsVisible(3)">3</onleft>
+					<onleft condition="Control.IsVisible(6)">6</onleft>
+					<onright condition="Control.IsVisible(3)">3</onright>
+					<onright condition="Control.IsVisible(6)">6</onright>
+					<control type="button" id="5">
+						<description>Manual button</description>
+						<width>112</width>
+						<height>26</height>
+						<label>-</label>
+						<font>font12_title</font>
+						<textcolor>white</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<align>center</align>
+					</control>
+					<control type="button" id="7">
+						<description>Cancel button</description>
+						<width>112</width>
+						<height>26</height>
+						<label>-</label>
+						<font>font12_title</font>
+						<textcolor>white</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<align>center</align>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

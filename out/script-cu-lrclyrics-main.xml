@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<coordinates>
+		<left>168</left>
+		<top>40</top>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="group">
+			<depth>DepthSideBlade</depth>
+			<control type="image">
+				<description>background image</description>
+				<left>0</left>
+				<top>0</top>
+				<width>382</width>
+				<height>313</height>
+				<colordiffuse>BBFFFFFF</colordiffuse>
+				<texture border="22">DialogBack2.png</texture>
+			</control>
+			<control type="image">
+				<description>Dialog Header image</description>
+				<left>22</left>
+				<top>10</top>
+				<width>337</width>
+				<height>26</height>
+				<texture>dialogheader.png</texture>
+			</control>
+			<control type="button">
+				<description>Close Window button</description>
+				<left>331</left>
+				<top>10</top>
+				<width>36</width>
+				<height>21</height>
+				<label>-</label>
+				<font>-</font>
+				<onclick>PreviousMenu</onclick>
+				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturenofocus>DialogCloseButton.png</texturenofocus>
+				<visible>system.getbool(input.enablemouse)</visible>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<left>22</left>
+				<top>13</top>
+				<width>337</width>
+				<height>20</height>
+				<label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</label>
+				<font>font13_title</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>selected</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>!Control.IsVisible(120)</visible>
+			</control>
+			<control type="label" id="2">
+				<description>Pick label</description>
+				<left>22</left>
+				<top>13</top>
+				<width>337</width>
+				<height>20</height>
+				<label>31203</label>
+				<font>font13_title</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>selected</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Control.IsVisible(120) + !Control.IsVisible(110)</visible>
+			</control>
+			<!-- ** Required ** Do not change <id> or <type> (Smooth scrolling list for lyrics) -->
+			<control type="list" id="110">
+				<left>16</left>
+				<top>40</top>
+				<width>348</width>
+				<height>233</height>
+				<onleft>111</onleft>
+				<onright>111</onright>
+				<onup>110</onup>
+				<ondown>110</ondown>
+				<pagecontrol>111</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="16">
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>348</width>
+						<height>16</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<align>center</align>
+						<selectedcolor>selected</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="16">
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>348</width>
+						<height>16</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<align>center</align>
+						<shadowcolor>black</shadowcolor>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!Control.HasFocus(110)</visible>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>348</width>
+						<height>16</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<align>center</align>
+						<shadowcolor>black</shadowcolor>
+						<textcolor>selected</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>Control.HasFocus(110)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="label">
+				<left>202</left>
+				<top>280</top>
+				<width>112</width>
+				<height>13</height>
+				<font>font12</font>
+				<aligny>center</aligny>
+				<align>right</align>
+				<textcolor>grey2</textcolor>
+				<label>$INFO[Container(110).CurrentPage, ( $LOCALIZE[31024] ]$INFO[Container(110).NumPages,/, )]</label>
+				<visible>Control.IsVisible(111)</visible>
+			</control>
+			<control type="spincontrol" id="111">
+				<description>Next page button</description>
+				<left>320</left>
+				<top>280</top>
+				<subtype>page</subtype>
+				<font>-</font>
+				<onleft>110</onleft>
+				<onright>110</onright>
+				<ondown>110</ondown>
+				<onup>110</onup>
+				<showonepage>true</showonepage>
+				<visible>Control.IsVisible(110)</visible>
+			</control>
+			<!-- ** Required ** Do not change <id> or <type> (Song Chooser if it gets it wrong) -->
+			<control type="list" id="120">
+				<left>16</left>
+				<top>40</top>
+				<width>348</width>
+				<height>240</height>
+				<onleft>121</onleft>
+				<onright>121</onright>
+				<onup>120</onup>
+				<ondown>120</ondown>
+				<pagecontrol>121</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="26">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>348</width>
+						<height>27</height>
+						<texture border="2">MenuItemNF.png</texture>
+					</control>
+					<control type="label">
+						<left>5</left>
+						<top>0</top>
+						<width>337</width>
+						<height>26</height>
+						<font>font13</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="26">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>348</width>
+						<height>27</height>
+						<visible>!Control.HasFocus(120)</visible>
+						<texture border="2">MenuItemNF.png</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>348</width>
+						<height>27</height>
+						<visible>Control.HasFocus(120)</visible>
+						<texture border="2">MenuItemFO.png</texture>
+					</control>
+					<control type="label">
+						<left>5</left>
+						<top>0</top>
+						<width>337</width>
+						<height>26</height>
+						<font>font13</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="label">
+				<left>202</left>
+				<top>280</top>
+				<width>112</width>
+				<height>13</height>
+				<font>font12</font>
+				<aligny>center</aligny>
+				<align>right</align>
+				<textcolor>grey2</textcolor>
+				<label>$INFO[Container(120).CurrentPage, ( $LOCALIZE[31024] ]$INFO[Container(120).NumPages,/, )]</label>
+				<visible>Control.IsVisible(121)</visible>
+			</control>
+			<control type="spincontrol" id="121">
+				<description>Next page button</description>
+				<left>320</left>
+				<top>280</top>
+				<subtype>page</subtype>
+				<font>-</font>
+				<onleft>120</onleft>
+				<onright>120</onright>
+				<ondown>120</ondown>
+				<onup>120</onup>
+				<showonepage>true</showonepage>
+				<visible>Control.IsVisible(120)</visible>
+			</control>
+			<control type="label">
+				<description>Scraper label</description>
+				<left>22</left>
+				<top>280</top>
+				<width>337</width>
+				<height>20</height>
+				<label>$LOCALIZE[31205] - $INFO[Control.GetLabel(200)]</label>
+				<font>font12_title</font>
+				<aligny>center</aligny>
+				<textcolor>grey2</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label" id="200">
+				<description>Scraper label</description>
+				<visible>false</visible>
+			</control>
+		</control>
+	</controls>
+</window>

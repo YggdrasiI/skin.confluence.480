@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>20</defaultcontrol>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="image">
+			<left>0</left>
+			<top>66r</top>
+			<width>720</width>
+			<height>66</height>
+			<texture>floor.png</texture>
+			<animation effect="slide" start="0,6" end="0,0" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,6" time="150" condition="Window.Next(Home)">WindowClose</animation>
+		</control>
+		<control type="group">
+			<left>16</left>
+			<top>26</top>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="360,240" easing="out" tween="back" time="225" />
+				<effect type="fade" start="0" end="100" time="225" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="80" center="360,240" easing="in" tween="back" time="225" />
+				<effect type="fade" start="100" end="0" time="225" />
+			</animation>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>343</width>
+				<height>413</height>
+				<texture border="11">ContentPanel.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>408</top>
+				<width>343</width>
+				<height>42</height>
+				<texture border="5">ContentPanelMirror.png</texture>
+			</control>
+			<control type="image">
+				<left>286</left>
+				<top>13</top>
+				<width>45</width>
+				<height>53</height>
+				<aspectratio>keep</aspectratio>
+				<info>Container(20).ListItem.Icon</info>
+				<bordertexture border="5">button-nofocus.png</bordertexture>
+				<bordersize>3</bordersize>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<left>16</left>
+				<top>20</top>
+				<width>264</width>
+				<height>20</height>
+				<font>font35_title</font>
+				<label>A</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label" id="101">
+				<description>current directory text label</description>
+				<left>16</left>
+				<top>46</top>
+				<width>264</width>
+				<height>20</height>
+				<font>font12_title</font>
+				<textcolor>selected</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="scrollbar" id="30">
+				<left>5</left>
+				<top>73</top>
+				<width>14</width>
+				<height>326</height>
+				<texturesliderbackground border="0,7,0,7">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="1,9,1,9">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="1,9,1,9">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
+				<onleft>31</onleft>
+				<onright>20</onright>
+				<ondown>20</ondown>
+				<onup>20</onup>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			<control type="list" id="20">
+				<left>22</left>
+				<top>73</top>
+				<width>303</width>
+				<height>327</height>
+				<onleft>30</onleft>
+				<onright>21</onright>
+				<onup>20</onup>
+				<ondown>20</ondown>
+				<pagecontrol>30</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="26" width="303">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>303</width>
+						<height>27</height>
+						<texture border="0,1,0,1">MenuItemNF.png</texture>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>281</width>
+						<height>26</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<textcolor>grey2</textcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<left>185</left>
+						<top>0</top>
+						<width>112</width>
+						<height>26</height>
+						<font>font12</font>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<textcolor>grey</textcolor>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="26" width="303">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>303</width>
+						<height>27</height>
+						<visible>!Control.HasFocus(20)</visible>
+						<texture border="0,1,0,1">MenuItemNF.png</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>303</width>
+						<height>27</height>
+						<visible>Control.HasFocus(20)</visible>
+						<texture border="0,1,0,1">MenuItemFO.png</texture>
+					</control>
+					<control type="image">
+						<left>191</left>
+						<top>3</top>
+						<width>112</width>
+						<height>20</height>
+						<texture border="0,0,7,0">MediaItemDetailBG.png</texture>
+						<visible>Control.HasFocus(20) + !String.IsEmpty(ListItem.Label2)</visible>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>281</width>
+						<height>26</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<left>185</left>
+						<top>0</top>
+						<width>112</width>
+						<height>26</height>
+						<font>font12</font>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<textcolor>grey</textcolor>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<control type="group">
+			<left>365</left>
+			<top>26</top>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="360,240" easing="out" tween="back" time="225" />
+				<effect type="fade" start="0" end="100" time="225" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="80" center="360,240" easing="in" tween="back" time="225" />
+				<effect type="fade" start="100" end="0" time="225" />
+			</animation>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>343</width>
+				<height>413</height>
+				<texture border="11">ContentPanel.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>408</top>
+				<width>343</width>
+				<height>42</height>
+				<texture border="5">ContentPanelMirror.png</texture>
+			</control>
+			<control type="image">
+				<left>11</left>
+				<top>13</top>
+				<width>45</width>
+				<height>53</height>
+				<aspectratio>keep</aspectratio>
+				<info>Container(21).ListItem.Icon</info>
+				<bordertexture border="5">button-nofocus.png</bordertexture>
+				<bordersize>3</bordersize>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<left>61</left>
+				<top>20</top>
+				<width>264</width>
+				<height>20</height>
+				<font>font35_title</font>
+				<label>B</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label" id="102">
+				<description>current directory text label</description>
+				<left>61</left>
+				<top>46</top>
+				<width>264</width>
+				<height>20</height>
+				<font>font12_title</font>
+				<textcolor>selected</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+				<align>right</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="scrollbar" id="31">
+				<left>323</left>
+				<top>73</top>
+				<width>14</width>
+				<height>326</height>
+				<texturesliderbackground border="0,7,0,7">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="1,9,1,9">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="1,9,1,9">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
+				<onleft>21</onleft>
+				<onright>30</onright>
+				<ondown>21</ondown>
+				<onup>21</onup>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			<control type="list" id="21">
+				<left>16</left>
+				<top>73</top>
+				<width>303</width>
+				<height>327</height>
+				<onleft>20</onleft>
+				<onright>31</onright>
+				<onup>21</onup>
+				<ondown>21</ondown>
+				<pagecontrol>31</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="26">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>303</width>
+						<height>27</height>
+						<texture border="0,1,0,1">MenuItemNF.png</texture>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>281</width>
+						<height>26</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<textcolor>grey2</textcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<left>185</left>
+						<top>0</top>
+						<width>112</width>
+						<height>26</height>
+						<font>font12</font>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<textcolor>grey</textcolor>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="26">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>303</width>
+						<height>27</height>
+						<visible>!Control.HasFocus(21)</visible>
+						<texture border="0,1,0,1">MenuItemNF.png</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>303</width>
+						<height>27</height>
+						<visible>Control.HasFocus(21)</visible>
+						<texture border="0,1,0,1">MenuItemFO.png</texture>
+					</control>
+					<control type="image">
+						<left>191</left>
+						<top>3</top>
+						<width>112</width>
+						<height>20</height>
+						<texture border="0,0,7,0">MediaItemDetailBG.png</texture>
+						<visible>Control.HasFocus(21) + !String.IsEmpty(ListItem.Label2)</visible>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>281</width>
+						<height>26</height>
+						<font>font13</font>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<left>185</left>
+						<top>0</top>
+						<width>112</width>
+						<height>26</height>
+						<font>font12</font>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<textcolor>grey</textcolor>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<control type="group">
+			<depth>DepthFooter</depth>
+			<control type="label">
+				<description>number of files/pages in left list text label</description>
+				<left>22</left>
+				<top>35r</top>
+				<width>320</width>
+				<font>font12</font>
+				<align>left</align>
+				<scroll>true</scroll>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>([COLOR=blue]$INFO[Container(20).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages][/COLOR])</label>
+			</control>
+			<control type="label">
+				<description>number of files/pages in left list text label</description>
+				<right>22</right>
+				<top>35r</top>
+				<width>320</width>
+				<font>font12</font>
+				<align>right</align>
+				<scroll>true</scroll>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>([COLOR=blue]$INFO[Container(21).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(21).CurrentPage]/$INFO[Container(21).NumPages][/COLOR])</label>
+			</control>
+		</control>
+		<control type="group" id="10">
+			<left>334</left>
+			<top>36r</top>
+			<include>Window_OpenClose_Animation</include>
+			<visible>system.getbool(input.enablemouse)</visible>
+			<include>Window_OpenClose_Animation</include>
+			<control type="button">
+				<description>Back push button</description>
+				<left>0</left>
+				<top>0</top>
+				<width>25</width>
+				<height>30</height>
+				<label>1036</label>
+				<font>-</font>
+				<onclick>back</onclick>
+				<texturefocus border="2">floor_buttonFO.png</texturefocus>
+				<texturenofocus border="2">floor_button.png</texturenofocus>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+			</control>
+			<control type="image">
+				<description>Back Icon</description>
+				<left>2</left>
+				<top>3</top>
+				<width>19</width>
+				<height>23</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icon_back.png</texture>
+			</control>
+			<control type="button">
+				<description>Home push button</description>
+				<left>30</left>
+				<top>0</top>
+				<width>25</width>
+				<height>30</height>
+				<label>31003</label>
+				<font>-</font>
+				<onclick>ActivateWindow(home)</onclick>
+				<texturefocus border="2">floor_buttonFO.png</texturefocus>
+				<texturenofocus border="2">floor_button.png</texturenofocus>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+			</control>
+			<control type="image">
+				<description>Home Icon</description>
+				<left>33</left>
+				<top>3</top>
+				<width>19</width>
+				<height>23</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icon_home.png</texture>
+			</control>
+		</control>
+		<include content="CommonWindowHeader">
+			<param name="Icon" value="icon_system" />
+			<param name="Label" value="$LOCALIZE[7]" />
+		</include>
+	</controls>
+</window>
