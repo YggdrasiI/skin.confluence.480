@@ -200,8 +200,7 @@
 				<height>{{ScaleY({{446 - {SettingDescExtraHeight} }})}}</height>
 				<aspectratio>stretch</aspectratio>
 				<fadetime>600</fadetime>
-				<texture background="true">backgrounds/settings.jpg</texture>
-				<texture background="true">special://skin/backgrounds/settings.jpg</texture>
+				<texture background="true" fallback="special://skin/backgrounds/settings.jpg">backgrounds/settings.jpg</texture>
 			</control>
 			<control type="image">
 				<left>{{ScaleX({{ 272 + {SettingPanelExtraWidthL} }})}}</left>

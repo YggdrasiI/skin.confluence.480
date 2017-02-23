@@ -322,7 +322,7 @@
 		<height>{{ScaleY('40')}}</height>
 		<width>{{ScaleX({HomeSubMenuWidth})}}</width>
 		<textoffsetx>{{ScaleX('20')}}</textoffsetx>
-		<textwidth>{{195 + {HomeSubMenuWidth} + 20 }}</textwidth>
+		<textwidth>{{ScaleX('{{ 15 + {HomeSubMenuWidth} }}')}}</textwidth>
 		<aligny>center</aligny>
 		<font>font12_title</font>
 		<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
@@ -331,8 +331,8 @@
 	</include>
 	<include name="ButtonHomeSubCommonValues">
 		<height>{{ScaleY('35')}}</height>
-		<width>{{ScaleX({HomeSubMenuWidth})}}</width>
-		<textwidth>{{195 + {HomeSubMenuWidth} + 20 }}</textwidth>
+		<width>{{ScaleX('{HomeSubMenuWidth}')}}</width>
+		<textwidth>{{ScaleX('{{ 15 + {HomeSubMenuWidth} }}')}}</textwidth>
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>font12</font>
