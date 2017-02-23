@@ -22,6 +22,8 @@ settings = {
                          "media",
                          "720p",
                          "themes",
+                         "tmp",
+                         "xml",
                          "__pycache__", "*.pyc",
                          ],
     # This files are required to rebuild the skin.
