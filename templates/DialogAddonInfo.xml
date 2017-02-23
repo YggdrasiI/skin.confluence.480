@@ -4,7 +4,7 @@
 	<coordinates>
 		<left>{{ScaleX({{int( 185 - ({SettingPanelExtraWidthL}+{SettingPanelExtraWidthR})/2) }})}}</left>
 		<top>{{ScaleY('40')}}</top>
-		<origin x="185" y="10">!String.IsEmpty(ListItem.AddonBroken)</origin>
+		<origin x="{{ScaleX('185')}}" y="{{ScaleY('10')}}">!String.IsEmpty(ListItem.AddonBroken)</origin>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -13,8 +13,8 @@
 			<visible>!Window.isVisible(AddonSettings) + !Window.IsActive(TextViewer)</visible>
 			<include content="DialogBackgroundCommons">
 				<param name="DialogBackgroundWidth" value="{{ScaleX({{ 920 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
-				<param name="DialogBackgroundHeight" value="639" />
-				<param name="DialogHeaderWidth" value="840" />
+				<param name="DialogBackgroundHeight" value="{{ScaleY('639')}}" />
+				<param name="DialogHeaderWidth" value="{{ScaleX({{ 840 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
 				<param name="DialogHeaderLabel" value="$LOCALIZE[24003]" />
 				<param name="DialogHeaderId" value="2" />
 				<param name="CloseButtonLeft" value="{{ScaleX({{ 830 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />

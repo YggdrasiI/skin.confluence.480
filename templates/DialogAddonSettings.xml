@@ -2,15 +2,15 @@
 <window>
 	<defaultcontrol always="true">9</defaultcontrol>
 	<coordinates>
-		<left>{{ScaleX('240')}}</left>
+		<left>{{ScaleX({{ 240 - ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/2 }})}}</left>
 		<top>{{ScaleY('60')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
 		<include content="DialogBackgroundCommons">
-			<param name="DialogBackgroundWidth" value="800" />
-			<param name="DialogBackgroundHeight" value="600" />
-			<param name="DialogHeaderWidth" value="720" />
+			<param name="DialogBackgroundWidth" value="{{ScaleX({{ 800 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
+			<param name="DialogBackgroundHeight" value="{{ScaleY('600')}}" />
+			<param name="DialogHeaderWidth" value="{{ScaleX({{ 720 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
 			<param name="DialogHeaderLabel" value="-" />
 			<param name="DialogHeaderId" value="20" />
 			<param name="CloseButtonLeft" value="710" />
@@ -20,7 +20,7 @@
 			<description>button area</description>
 			<left>{{ScaleX('45')}}</left>
 			<top>{{ScaleY('70')}}</top>
-			<width>{{ScaleX('710')}}</width>
+			<width>{{ScaleX('{{ 710 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 			<height>{{ScaleY('40')}}</height>
 			<itemgap>5</itemgap>
 			<align>center</align>
@@ -41,7 +41,7 @@
 		</control>
 		<control type="image">
 			<description>Has Next</description>
-			<left>{{ScaleX('755')}}</left>
+			<left>{{ScaleX('{{ 755 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 			<top>{{ScaleY('80')}}</top>
 			<width>{{ScaleX('20')}}</width>
 			<height>{{ScaleY('20')}}</height>
@@ -52,7 +52,7 @@
 			<description>control area</description>
 			<left>{{ScaleX('40')}}</left>
 			<top>{{ScaleY('120')}}</top>
-			<width>{{ScaleX('720')}}</width>
+			<width>{{ScaleX('{{ 720 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 			<height>{{ScaleY('380')}}</height>
 			<itemgap>5</itemgap>
 			<pagecontrol>30</pagecontrol>
@@ -62,7 +62,7 @@
 			<onright>30</onright>
 		</control>
 		<control type="scrollbar" id="30">
-			<left>{{ScaleX('765')}}</left>
+			<left>{{ScaleX('{{ 765 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 			<top>{{ScaleY('120')}}</top>
 			<width>{{ScaleX('25')}}</width>
 			<height>{{ScaleY('380')}}</height>
@@ -83,7 +83,7 @@
 				<description>OK Button</description>
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('200')}}</width>
+				<width>{{ScaleX('{{ 200 + ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/3 }}')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -96,9 +96,9 @@
 			</control>
 			<control type="button" id="11">
 				<description>Cancel Button</description>
-				<left>{{ScaleX('210')}}</left>
+				<left>{{ScaleX('{{ 210 + ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/3 }}')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('200')}}</width>
+				<width>{{ScaleX('{{ 200 + ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/3 }}')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -111,9 +111,9 @@
 			</control>
 			<control type="button" id="12">
 				<description>Defaults Button</description>
-				<left>{{ScaleX('420')}}</left>
+				<left>{{ScaleX('{{ 2*210 + 2*({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/3 }}')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('200')}}</width>
+				<width>{{ScaleX('{{ 200 + ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/3 }}')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -147,7 +147,7 @@
 			<description>Default RadioButton</description>
 			<height>{{ScaleY('40')}}</height>
 			<font>font13</font>
-			<textwidth>668</textwidth>
+			<textwidth>{{ScaleX('{{ 668 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</textwidth>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
@@ -181,7 +181,7 @@
 			<description>Default Slider</description>
 			<height>{{ScaleY('40')}}</height>
 			<font>font13</font>
-			<textwidth>518</textwidth>
+			<textwidth>{{ScaleX('{{ 518 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</textwidth>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>

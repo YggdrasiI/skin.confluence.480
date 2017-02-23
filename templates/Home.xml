@@ -530,8 +530,7 @@
 				<texturenofocus flipy="true" border="5">HomeSubNF.png</texturenofocus>
 				<pulseonselect>false</pulseonselect>
 				<label>137</label>
-				<onclick>ReloadSkin</onclick>
-				<!--<onclick>RunScript(script.globalsearch)</onclick>-->
+				<onclick>RunScript(script.globalsearch)</onclick>
 				<textureradioonfocus>icon_search.png</textureradioonfocus>
 				<textureradioonnofocus>icon_search.png</textureradioonnofocus>
 				<textureradioofffocus>icon_search.png</textureradioofffocus>
@@ -1118,7 +1117,7 @@
 		<control type="group">
 			<depth>DepthMenu-</depth>
 			<left>{{ScaleX('0')}}</left>
-			<top>{{ScaleY('33r')}}</top>
+			<top>{{ScaleY('55r')}}</top>
 			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
 			<include>Window_OpenClose_Animation</include>
 			<control type="rss">
