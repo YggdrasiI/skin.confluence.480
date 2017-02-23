@@ -235,7 +235,8 @@
 			<control type="panel" id="500">
 				<left>{{ScaleX('90')}}</left>
 				<top>{{ScaleY('80')}}</top>
-				<width>{{ScaleX('1080')}}</width>
+				<!--<width>{{ScaleX('1080')}}</width>-->
+				<width>{{ScaleX('{{ 95 + 3 * (216 + {ThumbnailViewItemExtraWidth}) }}')}}</width>
 				<height>{{ScaleY('558')}}</height>
 				<onleft>2</onleft>
 				<onright>60</onright>
@@ -245,23 +246,12 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<preloaditems>2</preloaditems>
-				<itemlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(TVShows) + !Container.Content(Sets)" height="{{ScaleY('186')}}" width="{{ScaleX('216')}}">
+				<itemlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(TVShows) + !Container.Content(Sets)" height="{{ScaleY('{{ 186 + {ThumbnailViewItemExtraHeight} }}')}}" width="{{ScaleX('{{ 216 + {ThumbnailViewItemExtraWidth} }}')}}">
 					<control type="image">
-						<left>{{ScaleX('1')}}</left>
+						<left>{{ScaleX('{{ 1 + ({ThumbnailViewItemExtraWidth} - {ThumbnailViewItemExtraHeight})/2 }}')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('214')}}</width>
-						<height>{{ScaleY('160')}}</height>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
-						<texture background="true">$INFO[Listitem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-						<visible>!Container.Content(Episodes)</visible>
-					</control>
-					<control type="image">
-						<left>{{ScaleX('1')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('214')}}</width>
-						<height>{{ScaleY('160')}}</height>
+						<width>{{ScaleX('{{ 214 + {ThumbnailViewItemExtraHeight} }}')}}</width>
+						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} }}')}}</height>
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
@@ -270,8 +260,8 @@
 					</control>
 					<control type="label">
 						<left>{{ScaleX('8')}}</left>
-						<top>{{ScaleY('160')}}</top>
-						<width>{{ScaleX('200')}}</width>
+						<top>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} }}')}}</top>
+						<width>{{ScaleX('{{ 200 + {ThumbnailViewItemExtraWidth} }}')}}</width>
 						<height>{{ScaleY('25')}}</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
@@ -281,20 +271,20 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('170')}}</left>
-						<top>{{ScaleY('130')}}</top>
+						<left>{{ScaleX('{{ 170 + {ThumbnailViewItemExtraWidth} }}')}}</left>
+						<top>{{ScaleY('{{ 130 + {ThumbnailViewItemExtraHeight} }}')}}</top>
 						<width>{{ScaleX('30')}}</width>
 						<height>{{ScaleY('30')}}</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(TVShows) + !Container.Content(Sets)" height="{{ScaleY('186')}}" width="{{ScaleX('216')}}">
+				<focusedlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(TVShows) + !Container.Content(Sets)" height="{{ScaleY('{{ 186 + {ThumbnailViewItemExtraHeight} }}')}}" width="{{ScaleX('{{ 216 + {ThumbnailViewItemExtraWidth} }}')}}">
 					<control type="image">
-						<left>{{ScaleX('1')}}</left>
+						<left>{{ScaleX('{{ 1 + ({ThumbnailViewItemExtraWidth} - {ThumbnailViewItemExtraHeight})/2 }}')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('214')}}</width>
-						<height>{{ScaleY('160')}}</height>
+						<width>{{ScaleX('{{ 214 + {ThumbnailViewItemExtraHeight} }}')}}</width>
+						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} }}')}}</height>
 						<bordertexture border="5">folder-focus.png</bordertexture>
 						<bordersize>5</bordersize>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
@@ -302,10 +292,10 @@
 						<visible>!Container.Content(Episodes)</visible>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('1')}}</left>
+						<left>{{ScaleX('{{ 1 + ({ThumbnailViewItemExtraWidth} - {ThumbnailViewItemExtraHeight})/2 }}')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('214')}}</width>
-						<height>{{ScaleY('160')}}</height>
+						<width>{{ScaleX('{{ 214 + {ThumbnailViewItemExtraHeight} }}')}}</width>
+						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} }}')}}</height>
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="5">folder-focus.png</bordertexture>
 						<bordersize>5</bordersize>
@@ -314,8 +304,8 @@
 					</control>
 					<control type="label">
 						<left>{{ScaleX('8')}}</left>
-						<top>{{ScaleY('160')}}</top>
-						<width>{{ScaleX('200')}}</width>
+						<top>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} }}')}}</top>
+						<width>{{ScaleX('{{ 200 + {ThumbnailViewItemExtraWidth} }}')}}</width>
 						<height>{{ScaleY('25')}}</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>
@@ -325,20 +315,20 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('170')}}</left>
-						<top>{{ScaleY('130')}}</top>
+						<left>{{ScaleX('{{ 170 + {ThumbnailViewItemExtraWidth} }}')}}</left>
+						<top>{{ScaleY('{{ 130 + {ThumbnailViewItemExtraHeight} }}')}}</top>
 						<width>{{ScaleX('30')}}</width>
 						<height>{{ScaleY('30')}}</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
 					</control>
 				</focusedlayout>
-				<itemlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="{{ScaleY('279')}}" width="{{ScaleX('216')}}">
+				<itemlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="{{ScaleY('{{ 279 + {ThumbnailViewItemExtraHeight} }}')}}" width="{{ScaleX('{{ 216 + {ThumbnailViewItemExtraWidth} }}')}}">
 					<control type="image">
-						<left>{{ScaleX('1')}}</left>
+						<left>{{ScaleX('{{ 1 + ({ThumbnailViewItemExtraWidth} - {ThumbnailViewItemExtraHeight})/2 }}')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('214')}}</width>
-						<height>{{ScaleY('240')}}</height>
+						<width>{{ScaleX('{{ 214 + {ThumbnailViewItemExtraHeight} }}')}}</width>
+						<height>{{ScaleY('{{ 240 + {ThumbnailViewItemExtraHeight} }}')}}</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
@@ -346,8 +336,8 @@
 					</control>
 					<control type="label">
 						<left>{{ScaleX('8')}}</left>
-						<top>{{ScaleY('240')}}</top>
-						<width>{{ScaleX('200')}}</width>
+						<top>{{ScaleY('{{ 240 + {ThumbnailViewItemExtraHeight} }}')}}</top>
+						<width>{{ScaleX('{{ 200 + {ThumbnailViewItemExtraWidth} }}')}}</width>
 						<height>{{ScaleY('25')}}</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
@@ -357,20 +347,20 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('170')}}</left>
-						<top>{{ScaleY('210')}}</top>
+						<left>{{ScaleX('{{ 170 + {ThumbnailViewItemExtraWidth} }}')}}</left>
+						<top>{{ScaleY('{{ 210 + {ThumbnailViewItemExtraHeight} }}')}}</top>
 						<width>{{ScaleX('30')}}</width>
 						<height>{{ScaleY('30')}}</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="{{ScaleY('276')}}" width="{{ScaleX('216')}}">
+				<focusedlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="{{ScaleY('{{ScaleY('{{ 279 + {ThumbnailViewItemExtraHeight} }}')}}')}}" width="{{ScaleX('{{ 216 + {ThumbnailViewItemExtraWidth} }}')}}">
 					<control type="image">
-						<left>{{ScaleX('1')}}</left>
+						<left>{{ScaleX('{{ 1 + ({ThumbnailViewItemExtraWidth} - {ThumbnailViewItemExtraHeight})/2 }}')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('214')}}</width>
-						<height>{{ScaleY('240')}}</height>
+						<width>{{ScaleX('{{ 214 + {ThumbnailViewItemExtraHeight} }}')}}</width>
+						<height>{{ScaleY('{{ 240 + {ThumbnailViewItemExtraHeight} }}')}}</height>
 						<bordertexture border="5">folder-focus.png</bordertexture>
 						<bordersize>5</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
@@ -378,8 +368,8 @@
 					</control>
 					<control type="label">
 						<left>{{ScaleX('8')}}</left>
-						<top>{{ScaleY('240')}}</top>
-						<width>{{ScaleX('200')}}</width>
+						<top>{{ScaleY('{{ 240 + {ThumbnailViewItemExtraHeight} }}')}}</top>
+						<width>{{ScaleX('{{ 200 + {ThumbnailViewItemExtraWidth} }}')}}</width>
 						<height>{{ScaleY('25')}}</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>
@@ -389,8 +379,8 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('170')}}</left>
-						<top>{{ScaleY('210')}}</top>
+						<left>{{ScaleX('{{ 170 + {ThumbnailViewItemExtraWidth} }}')}}</left>
+						<top>{{ScaleY('{{ 210 + {ThumbnailViewItemExtraHeight} }}')}}</top>
 						<width>{{ScaleX('30')}}</width>
 						<height>{{ScaleY('30')}}</height>
 						<aspectratio>keep</aspectratio>
@@ -399,7 +389,8 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>{{ScaleX('1170')}}</left>
+				<!--<left>{{ScaleX('1170')}}</left>-->
+				<left>{{ScaleX('{{ 70 + 3 * ( 216 + {ThumbnailViewItemExtraWidth}) }}')}}</left>
 				<top>{{ScaleY('80')}}</top>
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('550')}}</height>

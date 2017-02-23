@@ -82,7 +82,8 @@ substitutions = {
 
     # Higher desciption box
     "DialogPVRGuideInfoExtraHeight": 150,  # 0
-
+    "ThumbnailViewItemExtraWidth": 150,
+    "ThumbnailViewItemExtraHeight": -100,  # Smaller icons
     }
 
 substitutions["OSDBookmarksItemWidth"] = int(
