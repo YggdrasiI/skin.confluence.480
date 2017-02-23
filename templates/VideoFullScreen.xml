@@ -197,12 +197,12 @@
 					<left>{{ScaleX('20')}}</left>
 					<top>{{ScaleY({{ 60 + {FullScreenExtraHeight} }})}}</top>
 					<width>{{ScaleX('910')}}</width>
-					<height>{{ScaleY('35')}}</height>
+					<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
 					<itemgap>5</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="label" id="1">
 						<width min="{{ScaleX('10')}}" max="{{ScaleX('520')}}">{{ScaleX('auto')}}</width>
-						<height>{{ScaleY('30')}}</height>
+						<height>{{ScaleY('{{ 20 + {FullScreenExtraIconDim} }}')}}</height>
 						<font>font30</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -298,7 +298,8 @@
 				</control>
 				<control type="label" id="1">
 					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY({{ 120 + {FullScreenExtraHeight} }})}}</top>
+					<top>{{ScaleY('65r')}}</top>
+					<!--<top>{{ScaleY({{ 120 + {FullScreenExtraHeight} }})}}</top>-->
 					<width>{{ScaleX('910')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[31049] $INFO[Player.FinishTime]</label>
@@ -312,7 +313,8 @@
 				</control>
 				<control type="label" id="1">
 					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY({{ 120 + {FullScreenExtraHeight} }})}}</top>
+					<top>{{ScaleY('65r')}}</top>
+					<!--<top>{{ScaleY({{ 120 + {FullScreenExtraHeight} }})}}</top>-->
 					<width>{{ScaleX('910')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]: ]</label>

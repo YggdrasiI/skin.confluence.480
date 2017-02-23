@@ -151,21 +151,21 @@
 					</control>
 					<control type="group">
 						<description>Rating</description>
-						<width>{{ScaleX('172')}}</width>
+						<width>{{ScaleX('{{ 172 + 172/29 * {MusicVisualisationExtraHeight}/3 }}')}}</width>
 						<height>{{ScaleY('{{ 29 + {MusicVisualisationExtraHeight}/3 }}')}}</height>
 						<control type="image">
 							<description>rating back</description>
 							<left>{{ScaleX('0')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('172')}}</width>
-							<height>{{ScaleY('29')}}</height>
+							<width>{{ScaleX('{{ 172 + 172/29 * {MusicVisualisationExtraHeight}/3 }}')}}</width>
+							<height>{{ScaleY('{{ 29 + {MusicVisualisationExtraHeight}/3 }}')}}</height>
 							<texture border="{{ScaleBorder('5')}}">flagging/blank.png</texture>
 						</control>
 						<control type="image">
 							<description>User Rating</description>
 							<left>{{ScaleX('2')}}</left>
 							<top>{{ScaleY('5')}}</top>
-							<width>{{ScaleX('168')}}</width>
+							<width>{{ScaleX('{{ 168 + 172/29 * {MusicVisualisationExtraHeight}/3 }}')}}</width>
 							<height>{{ScaleY('{{ 21 + {MusicVisualisationExtraHeight}/3 }}')}}</height>
 							<texture fallback="ratings/0.png">$INFO[MusicPlayer.UserRating,ratings/,.png]</texture>
 						</control>
@@ -235,9 +235,9 @@
 				</control>
 				<control type="label">
 					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('120')}}</top>
+					<top>{{ScaleY('65r')}}</top>
 					<width>{{ScaleX('910')}}</width>
-					<height>{{ScaleY('25')}}</height>
+					<height>{{ScaleY('{{ 25 + {MusicVisualisationExtraHeight}/3 }}')}}</height>
 					<label>$LOCALIZE[19031]: $INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -254,7 +254,7 @@
 				<control type="label">
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('{{ 100 + 40 }}')}}</width>
+					<width>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>left</align>
@@ -263,16 +263,16 @@
 				</control>
 				<control type="progress">
 					<description>Progressbar</description>
-					<left>{{ScaleX('{{ 100 + 40 }}')}}</left>
+					<left>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</left>
 					<top>{{ScaleY('15')}}</top>
-					<width>{{ScaleX('{{ 720 - 80 }}')}}</width>
+					<width>{{ScaleX({OSDSeekSliderWidth})}}</width>
 					<height>{{ScaleY('16')}}</height>
 					<info>Player.Progress</info>
 				</control>
 				<control type="label">
-					<left>{{ScaleX('{{ 820 - 40 }}')}}</left>
+					<left>{{ScaleX({{ int(820 + ({OSDSeekSliderWidth} - 720)/2) }})}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('{{ 100 + 40 }}')}}</width>
+					<width>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>right</align>
