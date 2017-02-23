@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon 
   id="skin.confluence.480"
-	version="3.0.39"
+	version="3.0.47"
   name="Confluence Low Resolution"
 	provider-name="YggdrasiI">
 	<requires>
