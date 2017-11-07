@@ -20,6 +20,14 @@ msgctxt "#31000"
 msgid "Change your"
 msgstr "Cambiar sus"
 
+msgctxt "#31001"
+msgid "GAMES"
+msgstr "JUEGOS"
+
+msgctxt "#31002"
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]AJUSTES DE JUEGOS[/B][CR][CR]Configura el soporte para rebobinar y opciones ·  Configura el teclado y el número de jugadores por teclado"
+
 msgctxt "#31003"
 msgid "Power options"
 msgstr "Opciones de energía"
@@ -67,6 +75,10 @@ msgstr "Información de procesamiento de audio"
 msgctxt "#31014"
 msgid "Memory used"
 msgstr "Memoria usada"
+
+msgctxt "#31015"
+msgid "Minute"
+msgstr "Minuto"
 
 msgctxt "#31023"
 msgid "Playing"
@@ -234,7 +246,7 @@ msgstr "Submenú de programas de la pantalla principal"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
-msgstr "Ocultar el Fanart del fondo"
+msgstr "Ocultar fanart del fondo"
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
@@ -254,7 +266,7 @@ msgstr "Letra"
 
 msgctxt "#31129"
 msgid "Hide fanart in full screen visualisation"
-msgstr "Ocultar Fanart en visualizaciones a pantalla completa"
+msgstr "Ocultar fanart en visualizaciones a pantalla completa"
 
 msgctxt "#31132"
 msgid "Lyrics add-on"

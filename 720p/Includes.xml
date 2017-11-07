@@ -73,7 +73,6 @@
 	</variable>
 	<variable name="MusicInfoPanelLabel">
 		<value condition="Container.Content(Artists)">$INFO[ListItem.Label]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.Label,[COLOR=selected][B],[/B][/COLOR] - ]$INFO[ListItem.Label2]</value>
 		<value>$INFO[ListItem.TrackNumber,([COLOR=selected][B],[/B][/COLOR]) - ]$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="PlayList">
@@ -107,7 +106,7 @@
 		<value condition="Player.IsTempo + String.StartsWith(Player.PlaySpeed,0.)">$LOCALIZE[31045]</value>
 		<value condition="Player.IsTempo + String.StartsWith(Player.PlaySpeed,1.)">$LOCALIZE[31044]</value>
 		<value condition="Player.Playing + !Player.Seeking + !Player.DisplayAfterSeek">$LOCALIZE[31042]</value>
-		<value condition="[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek">$LOCALIZE[31043]</value>
+		<value condition="[Player.Paused + !Player.Caching] + !Player.Seeking">$LOCALIZE[31043]</value>
 		<value condition="[Player.Paused + Player.Caching] + !Player.Seeking">$LOCALIZE[15107] $INFO[Player.CacheLevel]%</value>
 		<value condition="!String.IsEmpty(Player.SeekStepSize) + ![player.forwarding | player.rewinding]">$LOCALIZE[31046][COLOR=grey] $INFO[Player.SeekStepSize][/COLOR]</value>
 		<value condition="Player.DisplayAfterSeek + ![player.forwarding | player.rewinding]">$LOCALIZE[31046][COLOR=grey] $INFO[Player.SeekOffset][/COLOR]</value>
@@ -1565,6 +1564,11 @@
 			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(ListItem.Year)</visible>
 		</item>
+		<item>
+			<label>$LOCALIZE[15311]</label>
+			<label2>$INFO[ListItem.FilenameAndPath]</label2>
+			<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
+		</item>
 	</include>
 	<include name="MusicInfoSongInfo">
 		<item>
@@ -1674,6 +1678,11 @@
 			<label2>$INFO[ListItem.Property(Role.Mixer)]</label2>
 			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(ListItem.Property(Role.Mixer))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[15311]</label>
+			<label2>$INFO[ListItem.FilenameAndPath]</label2>
+			<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
 		</item>
 	</include>
 </includes>

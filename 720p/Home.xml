@@ -16,7 +16,7 @@
 			</itemlayout>
 			<focusedlayout height="1" width="1">
 			</focusedlayout>
-			<content target="video" limit="7">library://video/movies/</content>
+			<content target="video" limit="6">library://video/movies/</content>
 			<visible>Library.HasContent(Movies)</visible>
 		</control>
 		<control type="list" id="90170">
@@ -29,7 +29,7 @@
 			</itemlayout>
 			<focusedlayout height="1" width="1">
 			</focusedlayout>
-			<content target="video" limit="7">library://video/tvshows/</content>
+			<content target="video" limit="6">library://video/tvshows/</content>
 			<visible>Library.HasContent(TVShows)</visible>
 		</control>
 		<control type="list" id="90110">
@@ -802,7 +802,7 @@
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9016</onleft>
 					<onright>9016</onright>
-					<visible>Container(9000).HasFocus(10)</visible>
+					<visible>Container(9000).HasFocus(10) + !String.IsEmpty(Container(90160).ListItemNoWrap(0).Label)</visible>
 					<!-- Buttons for the grouplist -->
 					<include>HomeSubMenuMovies</include>
 				</control>
@@ -810,7 +810,7 @@
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9017</onleft>
 					<onright>9017</onright>
-					<visible>Container(9000).HasFocus(11)</visible>
+					<visible>Container(9000).HasFocus(11) + !String.IsEmpty(Container(90170).ListItemNoWrap(0).Label)</visible>
 					<!-- Buttons for the grouplist -->
 					<include>HomeSubMenuTVShows</include>
 				</control>
@@ -818,7 +818,7 @@
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9011</onleft>
 					<onright>9011</onright>
-					<visible>Container(9000).HasFocus(3)</visible>
+					<visible>Container(9000).HasFocus(3) + !String.IsEmpty(Container(90110).ListItemNoWrap(0).Label)</visible>
 					<!-- Buttons for the grouplist -->
 					<include>HomeSubMenuMusic</include>
 				</control>
