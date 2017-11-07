@@ -15,8 +15,22 @@ The following changes was made:
   • Added color set with better contrast.
 
 
+How to build (short):
+  • `./parseTemplates.py`
+  • `./buildPackage.py [--pack]`
+  • `cd /dev/shm ; zip -r skin.confluence.480.zip skin.confluence.480`
 
-For developers:
+
+How to build (long):
+  • Run `./parseTemplates.py` to translate the XML files from ./templates
+  into ./out. The 'out'-folder was defined as skin directory in `addon.xml`.
+  • Use `./buildPackage.py` to export the data for a release of the skin.
+    Add `--pack` to compress the images with Kodi's TexturePacker. If not installed,
+    you could compile the tool with ./TexturePackerBuild.sh.
+    See ./buildPackage --help for more information.
+
+
+Notes for developers:
   • The sed scripts in `./templates/sed` could also be used for other skins. They
     wrap the values of <width>, <height>, <left>, <top> by a function. This is dual
     to the font resizing but more flexible.
@@ -28,34 +42,28 @@ For developers:
 
   `./templates/config.py` contains the definition of variables.
 
-  Run `./parseTemplates.py` to translate the XML files from ./templates
-  into ./out. (The 'out'-folder was defined skin directory in `addon.xml`.)
 
-  • Use `./buildPackage.py` to export the data for a release of the skin.
-    See ./buildPackage --help for more information.
+  • Workflow for updates on new confluence versions:
+   1. Checkout original_skin.
+   2. Update static files like addon.xml, changelog.txt
+      and folders
+      resources, languages, media, colors, fonts, backgrounds
+      This changes should be repeat in step 3/4, too.
 
+   3. Replace xml files in /templates with new files of
+      orginial confluence skin. And commit changes.
 
-Workflow for updates on new confluence versions:
- 1. Checkout original_skin.
- 2. Update static files like addon.xml, changelog.txt
-    and folders
-    resources, languages, media, colors, fonts, backgrounds
-    This changes should be repeat in step 3/4, too.
+   4. Checkout sedChangesOnly and replace xml files
+      in templates directory, too.
+      (cd templates ; rm *.xml;  git checkout original_skin *.xml)
+      Then, run sed scripts and commit changes.
 
- 3. Replace xml files in /templates with new files of
-    orginial confluence skin. And commit changes.
+   4. Checkout unstable branch and apply changes of step 2 and 3. 
+     Then run sed scripts (cd templates/sed; ./runSubstitutions.sh *.sed ),
+      parse templates ( ./parseTemplates.py ),
+      and build new package ( ./buildPackage --dest /dev/shm -t -p -f )
 
- 4. Checkout sedChangesOnly and replace xml files
-    in templates directory, too.
-    (cd templates ; rm *.xml;  git checkout original_skin *.xml)
-    Then, run sed scripts and commit changes.
+   5. Zip result, .i.e.    
+      cd /dev/shm ; zip -r skin.confluence.480.zip skin.confluence.480
 
- 4. Checkout unstable branch and apply changes of step 2 and 3. 
-   Then run sed scripts (cd templates/sed; ./runSubstitutions.sh *.sed ),
-    parse templates ( ./parseTemplates.py ),
-    and build new package ( ./buildPackage --dest /dev/shm -t -p -f )
-
- 5. Zip result, .i.e.    
-    cd /dev/shm ; zip -r skin.confluence.480.zip skin.confluence.480
-
- 6. Copy skin-zip to media center and resolve errors.
+   6. Copy skin-zip to media center and resolve errors.
