@@ -90,8 +90,23 @@ def call_theme_packer(to_pack_folder):
             os.path.basename(to_pack_folder), ".xbt")
         arg = ""
 
-    os.system("TexturePacker {0} -input {1} -output {2}".format(
-        arg, to_pack_folder, pack_path))
+    if os.path.exists("./TexturePacker"):
+        bin_name = "./TexturePacker"
+    else:
+        bin_name = "TexturePacker"
+
+    ret = os.system("which {0}".format(bin_name))
+    if ret != 0:
+        print("Error: Can not find TexturePacker. Look at "
+              "http://kodi.wiki/view/TexturePacker "
+              "for more information.\n\n"
+              "For Linux users: You could use "
+              "'./TexturePackerBuild.sh' to build the binary without cloning "
+              "the whole xbmc repository."
+              )
+    else:
+        os.system("{0} {1} -input {2} -output {3}".format(
+            bin_name, arg, to_pack_folder, pack_path))
 
 
 def copy_addon(source_folder, dest_folder):
