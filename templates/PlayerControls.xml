@@ -4,27 +4,27 @@
 	<include>dialogeffect</include>
 	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation)</visible>
 	<coordinates>
-		<left>{{ScaleX('390')}}</left>
-		<top>{{ScaleY('250')}}</top>
+		<left>390</left>
+		<top>250</top>
 	</coordinates>
 	<controls>
 		<control type="image">
-			<left>{{ScaleX('5')}}</left>
-			<top>{{ScaleY('156')}}</top>
-			<width>{{ScaleX('483')}}</width>
-			<height>{{ScaleY('53')}}</height>
+			<left>5</left>
+			<top>156</top>
+			<width>483</width>
+			<height>53</height>
 			<texture flipy="true" border="20,20,20,2">InfoMessagePanel.png</texture>
 		</control>
 		<control type="group" id="100">
-			<left>{{ScaleX('25')}}</left>
-			<top>{{ScaleY('162')}}</top>
+			<left>25</left>
+			<top>162</top>
 			<defaultcontrol always="true">603</defaultcontrol>
 			<visible>!VideoPlayer.Content(LiveTV)</visible>
 			<control type="button" id="600">
-				<left>{{ScaleX('0')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('40')}}</width>
-				<height>{{ScaleY('40')}}</height>
+				<left>0</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
 				<label>-</label>
 				<texturefocus>OSDPrevTrackFO.png</texturefocus>
 				<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
@@ -36,10 +36,10 @@
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="601">
-				<left>{{ScaleX('40')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('40')}}</width>
-				<height>{{ScaleY('40')}}</height>
+				<left>40</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
 				<label>-</label>
 				<texturefocus>OSDRewindFO.png</texturefocus>
 				<texturenofocus>OSDRewindNF.png</texturenofocus>
@@ -51,10 +51,10 @@
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="togglebutton" id="603">
-				<left>{{ScaleX('80')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('40')}}</width>
-				<height>{{ScaleY('40')}}</height>
+				<left>80</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
 				<label>-</label>
 				<texturefocus>OSDPauseFO.png</texturefocus>
 				<texturenofocus>OSDPauseNF.png</texturenofocus>
@@ -69,10 +69,10 @@
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="602">
-				<left>{{ScaleX('120')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('40')}}</width>
-				<height>{{ScaleY('40')}}</height>
+				<left>120</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
 				<label>-</label>
 				<texturefocus>OSDStopFO.png</texturefocus>
 				<texturenofocus>OSDStopNF.png</texturenofocus>
@@ -85,10 +85,10 @@
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="604">
-				<left>{{ScaleX('160')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('40')}}</width>
-				<height>{{ScaleY('40')}}</height>
+				<left>160</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
 				<label>-</label>
 				<texturefocus>OSDForwardFO.png</texturefocus>
 				<texturenofocus>OSDForwardNF.png</texturenofocus>
@@ -100,10 +100,10 @@
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="605">
-				<left>{{ScaleX('200')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('40')}}</width>
-				<height>{{ScaleY('40')}}</height>
+				<left>200</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
 				<label>-</label>
 				<texturefocus>OSDNextTrackFO.png</texturefocus>
 				<texturenofocus>OSDNextTrackNF.png</texturenofocus>
@@ -115,10 +115,10 @@
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="606">
-				<left>{{ScaleX('240')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('40')}}</width>
-				<height>{{ScaleY('40')}}</height>
+				<left>240</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
 				<label>-</label>
 				<texturefocus>OSDRecordOffFO.png</texturefocus>
 				<texturenofocus>OSDRecordOffNF.png</texturenofocus>
@@ -132,12 +132,12 @@
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="group">
-				<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('40,0')}}" time="0" condition="!Player.HasAudio">Conditional</animation>
+				<animation effect="slide" start="0,0" end="40,0" time="0" condition="!Player.HasAudio">Conditional</animation>
 				<control type="button" id="607">
-					<left>{{ScaleX('325')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('40')}}</width>
-					<height>{{ScaleY('40')}}</height>
+					<left>325</left>
+					<top>0</top>
+					<width>40</width>
+					<height>40</height>
 					<label>-</label>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
@@ -149,70 +149,70 @@
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 				</control>
 				<control type="image">
-					<left>{{ScaleX('325')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('40')}}</width>
-					<height>{{ScaleY('40')}}</height>
+					<left>325</left>
+					<top>0</top>
+					<width>40</width>
+					<height>40</height>
 					<texture>OSDRepeatNF.png</texture>
 					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
 					<visible>!Control.HasFocus(607)</visible>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 				</control>
 				<control type="image">
-					<left>{{ScaleX('325')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('40')}}</width>
-					<height>{{ScaleY('40')}}</height>
+					<left>325</left>
+					<top>0</top>
+					<width>40</width>
+					<height>40</height>
 					<texture>OSDRepeatFO.png</texture>
 					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
 					<visible>Control.HasFocus(607)</visible>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 				</control>
 				<control type="image">
-					<left>{{ScaleX('325')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('40')}}</width>
-					<height>{{ScaleY('40')}}</height>
+					<left>325</left>
+					<top>0</top>
+					<width>40</width>
+					<height>40</height>
 					<texture>OSDRepeatOneNF.png</texture>
 					<visible>Playlist.IsRepeatOne</visible>
 					<visible>!Control.HasFocus(607)</visible>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 				</control>
 				<control type="image">
-					<left>{{ScaleX('325')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('40')}}</width>
-					<height>{{ScaleY('40')}}</height>
+					<left>325</left>
+					<top>0</top>
+					<width>40</width>
+					<height>40</height>
 					<texture>OSDRepeatOneFO.png</texture>
 					<visible>Playlist.IsRepeatOne</visible>
 					<visible>Control.HasFocus(607)</visible>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 				</control>
 				<control type="image">
-					<left>{{ScaleX('325')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('40')}}</width>
-					<height>{{ScaleY('40')}}</height>
+					<left>325</left>
+					<top>0</top>
+					<width>40</width>
+					<height>40</height>
 					<texture>OSDRepeatAllNF.png</texture>
 					<visible>Playlist.IsRepeat</visible>
 					<visible>!Control.HasFocus(607)</visible>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 				</control>
 				<control type="image">
-					<left>{{ScaleX('325')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('40')}}</width>
-					<height>{{ScaleY('40')}}</height>
+					<left>325</left>
+					<top>0</top>
+					<width>40</width>
+					<height>40</height>
 					<texture>OSDRepeatAllFO.png</texture>
 					<visible>Playlist.IsRepeat</visible>
 					<visible>Control.HasFocus(607)</visible>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 				</control>
 				<control type="togglebutton" id="608">
-					<left>{{ScaleX('365')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('40')}}</width>
-					<height>{{ScaleY('40')}}</height>
+					<left>365</left>
+					<top>0</top>
+					<width>40</width>
+					<height>40</height>
 					<label>-</label>
 					<texturefocus>OSDRandomOffFO.png</texturefocus>
 					<texturenofocus>OSDRandomOffNF.png</texturenofocus>
@@ -227,10 +227,10 @@
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 				</control>
 				<control type="togglebutton" id="609">
-					<left>{{ScaleX('405')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('40')}}</width>
-					<height>{{ScaleY('40')}}</height>
+					<left>405</left>
+					<top>0</top>
+					<width>40</width>
+					<height>40</height>
 					<label>31128</label>
 					<font>-</font>
 					<texturefocus>OSDLyricsFO.png</texturefocus>
@@ -254,15 +254,15 @@
 			</control>
 		</control>
 		<control type="group" id="100">
-			<left>{{ScaleX('25')}}</left>
-			<top>{{ScaleY('162')}}</top>
+			<left>25</left>
+			<top>162</top>
 			<defaultcontrol always="true">700</defaultcontrol>
 			<visible>VideoPlayer.Content(LiveTV)</visible>
 			<control type="button" id="701">
-				<left>{{ScaleX('0')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('40')}}</width>
-				<height>{{ScaleY('40')}}</height>
+				<left>0</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
 				<label>-</label>
 				<texturefocus>OSDRewindFO.png</texturefocus>
 				<texturenofocus>OSDRewindNF.png</texturenofocus>
@@ -276,10 +276,10 @@
 				<animation effect="fade" start="100" end="50" time="75" condition="true">Conditional</animation>
 			</control>
 			<control type="button" id="702">
-				<left>{{ScaleX('40')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('40')}}</width>
-				<height>{{ScaleY('40')}}</height>
+				<left>40</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
 				<label>-</label>
 				<texturefocus>OSDStopFO.png</texturefocus>
 				<texturenofocus>OSDStopNF.png</texturenofocus>
@@ -292,10 +292,10 @@
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="togglebutton" id="703">
-				<left>{{ScaleX('80')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('40')}}</width>
-				<height>{{ScaleY('40')}}</height>
+				<left>80</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
 				<label>-</label>
 				<texturefocus>OSDPauseFO.png</texturefocus>
 				<texturenofocus>OSDPauseNF.png</texturenofocus>
@@ -313,10 +313,10 @@
 				<animation effect="fade" start="100" end="50" time="75" condition="true">Conditional</animation>
 			</control>
 			<control type="button" id="704">
-				<left>{{ScaleX('120')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('40')}}</width>
-				<height>{{ScaleY('40')}}</height>
+				<left>120</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
 				<label>-</label>
 				<texturefocus>OSDForwardFO.png</texturefocus>
 				<texturenofocus>OSDForwardNF.png</texturenofocus>
@@ -330,10 +330,10 @@
 				<animation effect="fade" start="100" end="50" time="75" condition="true">Conditional</animation>
 			</control>
 			<control type="button" id="700">
-				<left>{{ScaleX('200')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('40')}}</width>
-				<height>{{ScaleY('40')}}</height>
+				<left>200</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
 				<label>-</label>
 				<texturefocus>OSDChannelUPFO.png</texturefocus>
 				<texturenofocus>OSDChannelUPNF.png</texturenofocus>
@@ -345,10 +345,10 @@
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="705">
-				<left>{{ScaleX('240')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('40')}}</width>
-				<height>{{ScaleY('40')}}</height>
+				<left>240</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
 				<label>-</label>
 				<texturefocus>OSDChannelDownFO.png</texturefocus>
 				<texturenofocus>OSDChannelDownNF.png</texturenofocus>
@@ -360,10 +360,10 @@
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="706">
-				<left>{{ScaleX('280')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('40')}}</width>
-				<height>{{ScaleY('40')}}</height>
+				<left>280</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
 				<label>-</label>
 				<texturefocus>OSDRecordOffFO.png</texturefocus>
 				<texturenofocus>OSDRecordOffNF.png</texturenofocus>
@@ -377,10 +377,10 @@
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="707">
-				<left>{{ScaleX('400')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('40')}}</width>
-				<height>{{ScaleY('40')}}</height>
+				<left>400</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
 				<label>-</label>
 				<texturefocus>OSDRadioRDSFO.png</texturefocus>
 				<texturenofocus>OSDRadioRDSNF.png</texturenofocus>
@@ -394,13 +394,13 @@
 		</control>
 		<control type="image">
 			<description>gradient</description>
-			<left>{{ScaleX('0')}}</left>
-			<top>{{ScaleY('0')}}</top>
-			<width>{{ScaleX('500')}}</width>
-			<height>{{ScaleY('165')}}</height>
+			<left>0</left>
+			<top>0</top>
+			<width>500</width>
+			<height>165</height>
 			<colordiffuse>CCFFFFFF</colordiffuse>
 			<visible>Window.IsVisible(home)</visible>
-			<texture border="{{ScaleBorder('20')}}">OverlayDialogBackground.png</texture>
+			<texture border="20">OverlayDialogBackground.png</texture>
 		</control>
 		<!-- Music Info -->
 		<control type="group">
@@ -414,10 +414,10 @@
 		</control>
 		<control type="button">
 			<description>Close Window button</description>
-			<left>{{ScaleX('420')}}</left>
-			<top>{{ScaleY('5')}}</top>
-			<width>{{ScaleX('64')}}</width>
-			<height>{{ScaleY('32')}}</height>
+			<left>420</left>
+			<top>5</top>
+			<width>64</width>
+			<height>32</height>
 			<label>-</label>
 			<font>-</font>
 			<onclick>back</onclick>

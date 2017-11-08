@@ -4,10 +4,10 @@
 	<controls>
 		<control type="videowindow" id="20">
 			<description>videowindow</description>
-			<left>{{ScaleX('0')}}</left>
-			<top>{{ScaleY('0')}}</top>
-			<width>{{ScaleX('1280')}}</width>
-			<height>{{ScaleY('720')}}</height>
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
 			<visible>Player.HasVideo</visible>
 		</control>
 		<control type="group">
@@ -16,19 +16,19 @@
 		</control>
 		<control type="image">
 			<description>Overlay</description>
-			<left>{{ScaleX('0')}}</left>
-			<top>{{ScaleY('0')}}</top>
-			<width>{{ScaleX('1280')}}</width>
-			<height>{{ScaleY('720')}}</height>
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
 			<texture>black-back.png</texture>
 			<include>dialogeffect</include>
 		</control>
 		<control type="button">
 			<description>Close Window button</description>
-			<left>{{ScaleX('100r')}}</left>
-			<top>{{ScaleY('0')}}</top>
-			<width>{{ScaleX('64')}}</width>
-			<height>{{ScaleY('32')}}</height>
+			<left>100r</left>
+			<top>0</top>
+			<width>64</width>
+			<height>32</height>
 			<label>-</label>
 			<font>-</font>
 			<onclick>PreviousMenu</onclick>
@@ -42,57 +42,57 @@
 		</control>
 		<control type="mover" id="8">
 			<description>top left mover</description>
-			<left>{{ScaleX('0')}}</left>
-			<top>{{ScaleY('0')}}</top>
-			<width>{{ScaleX('128')}}</width>
-			<height>{{ScaleY('128')}}</height>
+			<left>0</left>
+			<top>0</top>
+			<width>128</width>
+			<height>128</height>
 			<texturefocus>CalibrateTopLeft.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 		</control>
 		<control type="mover" id="9">
 			<description>right bottom mover</description>
-			<left>{{ScaleX('700')}}</left>
-			<top>{{ScaleY('500')}}</top>
-			<width>{{ScaleX('128')}}</width>
-			<height>{{ScaleY('128')}}</height>
+			<left>700</left>
+			<top>500</top>
+			<width>128</width>
+			<height>128</height>
 			<texturefocus>CalibrateBottomRight.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 		</control>
 		<control type="mover" id="10">
 			<description>subtitle position mover</description>
-			<left>{{ScaleX('200')}}</left>
-			<top>{{ScaleY('500')}}</top>
-			<width>{{ScaleX('512')}}</width>
-			<height>{{ScaleY('128')}}</height>
+			<left>200</left>
+			<top>500</top>
+			<width>512</width>
+			<height>128</height>
 			<texturefocus>CalibrateSubtitles.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 		</control>
 		<control type="resize" id="11">
 			<description>pixel aspect ratio box</description>
-			<left>{{ScaleX('0')}}</left>
-			<top>{{ScaleY('232')}}</top>
-			<width>{{ScaleX('256')}}</width>
-			<height>{{ScaleY('256')}}</height>
+			<left>0</left>
+			<top>232</top>
+			<width>256</width>
+			<height>256</height>
 			<texturefocus>CalibratePixelRatio.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 		</control>
 		<control type="group">
-			<left>{{ScaleX('20')}}</left>
-			<top>{{ScaleY('80')}}</top>
+			<left>20</left>
+			<top>80</top>
 			<control type="label" id="2">
 				<description>coordinates label</description>
-				<left>{{ScaleX('0')}}</left>
-				<top>{{ScaleY('10')}}</top>
-				<width>{{ScaleX('1240')}}</width>
+				<left>0</left>
+				<top>10</top>
+				<width>1240</width>
 				<label>-</label>
 				<align>center</align>
 				<font>font13</font>
 			</control>
 			<control type="label" id="3">
 				<description>help information</description>
-				<left>{{ScaleX('0')}}</left>
-				<top>{{ScaleY('40')}}</top>
-				<width>{{ScaleX('1240')}}</width>
+				<left>0</left>
+				<top>40</top>
+				<width>1240</width>
 				<label>-</label>
 				<align>center</align>
 				<font>font13</font>

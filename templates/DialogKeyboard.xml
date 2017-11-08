@@ -4,84 +4,84 @@
 	<include>dialogeffect</include>
 	<depth>DepthDialog+</depth>
 	<coordinates>
-		<left>{{ScaleX({{ int(({W}-{VirtualKeyboardWidth})/2) }})}}</left>
-		<top>{{ScaleY('120')}}</top>
+		<left>205</left>
+		<top>120</top>
 	</coordinates>
 	<controls>
 		<control type="group">
 			<include>VisibleFadeEffect</include>
 			<visible>!Window.IsVisible(numericinput)</visible>
 			<include content="DialogBackgroundCommons">
-				<param name="DialogBackgroundWidth" value="{{ScaleX({VirtualKeyboardWidth})}}" />
-				<param name="DialogBackgroundHeight" value="{{ScaleY('430')}}" />
-				<param name="DialogHeaderWidth" value="{{ScaleX({{ {VirtualKeyboardWidth} - 80 }})}}" />
+				<param name="DialogBackgroundWidth" value="860" />
+				<param name="DialogBackgroundHeight" value="430" />
+				<param name="DialogHeaderWidth" value="780" />
 				<param name="DialogHeaderLabel" value="" />
 				<param name="DialogHeaderId" value="311" />
-				<param name="CloseButtonLeft" value="{{ScaleX({{ {VirtualKeyboardWidth} - 90 }})}}" />
+				<param name="CloseButtonLeft" value="770" />
 				<param name="CloseButtonNav" value="3" />
 			</include>
 			<control type="group">
-				<left>{{ScaleX('0')}}</left>
-				<top>{{ScaleY('-90')}}</top>
+				<left>0</left>
+				<top>-90</top>
 				<visible>Control.IsVisible(313)</visible>
 				<control type="image">
-					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX({{ {VirtualKeyboardWidth} - 0 }})}}</width>
-					<height>{{ScaleY('102')}}</height>
-					<texture border="{{ScaleBorder('20')}}">OverlayDialogBackground.png</texture>
+					<left>0</left>
+					<top>0</top>
+					<width>860</width>
+					<height>102</height>
+					<texture border="20">OverlayDialogBackground.png</texture>
 				</control>
 				<control type="image">
-					<left>{{ScaleX('50')}}</left>
-					<top>{{ScaleY('18')}}</top>
-					<width>{{ScaleX({{ {VirtualKeyboardWidth} - 100 }})}}</width>
-					<height>{{ScaleY('32')}}</height>
+					<left>50</left>
+					<top>18</top>
+					<width>760</width>
+					<height>32</height>
 					<aspectratio>stretch</aspectratio>
-					<texture border="{{ScaleBorder('20')}}">KeyboardEditArea.png</texture>
+					<texture border="20">KeyboardEditArea.png</texture>
 				</control>
 				<control type="image">
-					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('53')}}</top>
-					<width>{{ScaleX({{ {VirtualKeyboardWidth} - 0 }})}}</width>
-					<height>{{ScaleY('2')}}</height>
+					<left>0</left>
+					<top>53</top>
+					<width>860</width>
+					<height>2</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>separator.png</texture>
 				</control>
 				<control type="label" id="313">
 					<description>HZCODE label</description>
-					<left>{{ScaleX('55')}}</left>
-					<top>{{ScaleY('18')}}</top>
-					<width>{{ScaleX({{ {VirtualKeyboardWidth} - 110 }})}}</width>
-					<height>{{ScaleY('30')}}</height>
+					<left>55</left>
+					<top>18</top>
+					<width>750</width>
+					<height>30</height>
 					<font>font13</font>
 					<align>center</align>
 					<aligny>center</aligny>
 				</control>
 				<control type="label" id="314">
 					<description>HZLIST label</description>
-					<left>{{ScaleX('55')}}</left>
-					<top>{{ScaleY('55')}}</top>
-					<width>{{ScaleX({{ {VirtualKeyboardWidth} - 110 }})}}</width>
-					<height>{{ScaleY('30')}}</height>
+					<left>55</left>
+					<top>55</top>
+					<width>750</width>
+					<height>30</height>
 					<font>font13</font>
 					<align>center</align>
 					<aligny>center</aligny>
 				</control>
 			</control>
 			<control type="image">
-				<left>{{ScaleX('50')}}</left>
-				<top>{{ScaleY('60')}}</top>
-				<width>{{ScaleX({{ {VirtualKeyboardWidth} - 100 }})}}</width>
-				<height>{{ScaleY('50')}}</height>
+				<left>50</left>
+				<top>60</top>
+				<width>760</width>
+				<height>50</height>
 				<aspectratio>stretch</aspectratio>
-				<texture border="{{ScaleBorder('20')}}">KeyboardEditArea.png</texture>
+				<texture border="20">KeyboardEditArea.png</texture>
 			</control>
 			<control type="edit" id="312">
 				<description>Edit Text</description>
-				<left>{{ScaleX('55')}}</left>
-				<top>{{ScaleY('60')}}</top>
-				<width>{{ScaleX({{ {VirtualKeyboardWidth} - 110 }})}}</width>
-				<height>{{ScaleY('50')}}</height>
+				<left>55</left>
+				<top>60</top>
+				<width>750</width>
+				<height>50</height>
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -89,29 +89,29 @@
 				<texturenofocus>-</texturenofocus>
 			</control>
 			<control type="image">
-				<left>{{ScaleX('130')}}</left>
-				<top>{{ScaleY('110')}}</top>
-				<width>{{ScaleX({{ {VirtualKeyboardWidth} - 260 }})}}</width>
-				<height>{{ScaleY('30')}}</height>
+				<left>130</left>
+				<top>110</top>
+				<width>600</width>
+				<height>30</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>DialogHeader.png</texture>
 			</control>
 			<control type="group">
-				<left>{{ScaleX('30')}}</left>
-				<top>{{ScaleY('140')}}</top>
+				<left>30</left>
+				<top>140</top>
 				<!-- 1st row -->
 				<control type="grouplist">
 					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="button" id="309">
 						<description>Layout button</description>
-						<width>{{ScaleX({{ 5 * {VirtualKeyboardKeyWidth} }})}}</width>
-						<height>{{ScaleY('50')}}</height>
+						<width>200</width>
+						<height>50</height>
 						<label>20177</label>
 						<onup>300</onup>
 						<ondown>302</ondown>
-						<texturenofocus border="{{ScaleBorder('25,25,5,5')}}">KeyboardCornerTopNF.png</texturenofocus>
-						<texturefocus border="{{ScaleBorder('25,25,5,5')}}">KeyboardCornerTop.png</texturefocus>
+						<texturenofocus border="25,25,5,5">KeyboardCornerTopNF.png</texturenofocus>
+						<texturefocus border="25,25,5,5">KeyboardCornerTop.png</texturefocus>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
@@ -195,17 +195,17 @@
 				<!-- 2nd row -->
 				<control type="grouplist">
 					<orientation>horizontal</orientation>
-					<top>{{ScaleY('50')}}</top>
+					<top>50</top>
 					<itemgap>0</itemgap>
 					<control type="radiobutton" id="302">
 						<description>SHIFT button</description>
-						<width>{{ScaleX({{ 5 * {VirtualKeyboardKeyWidth} }})}}</width>
-						<height>{{ScaleY('50')}}</height>
+						<width>200</width>
+						<height>50</height>
 						<label>20178</label>
 						<onup>309</onup>
 						<ondown>303</ondown>
-						<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
-						<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
+						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
+						<texturefocus border="5">KeyboardKey.png</texturefocus>
 						<radioposy>5</radioposy>
 						<radiowidth>20</radiowidth>
 						<radioheight>20</radioheight>
@@ -289,18 +289,18 @@
 				</control>
 				<!-- 3rd row -->
 				<control type="grouplist">
-					<top>{{ScaleY('100')}}</top>
+					<top>100</top>
 					<orientation>horizontal</orientation>
 					<itemgap>0</itemgap>
 					<control type="radiobutton" id="303">
 						<description>CAPS LOCK button</description>
-						<width>{{ScaleX({{ 5 * {VirtualKeyboardKeyWidth} }})}}</width>
-						<height>{{ScaleY('50')}}</height>
+						<width>200</width>
+						<height>50</height>
 						<label>20179</label>
 						<onup>302</onup>
 						<ondown>307</ondown>
-						<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
-						<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
+						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
+						<texturefocus border="5">KeyboardKey.png</texturefocus>
 						<radioposy>5</radioposy>
 						<radiowidth>20</radiowidth>
 						<radioheight>20</radioheight>
@@ -384,18 +384,18 @@
 				</control>
 				<!-- 4th row -->
 				<control type="grouplist">
-					<top>{{ScaleY('150')}}</top>
+					<top>150</top>
 					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="button" id="307">
 						<description>IP Input button</description>
-						<width>{{ScaleX({{ 2 * {VirtualKeyboardKeyWidth} }})}}</width>
-						<height>{{ScaleY('50')}}</height>
+						<width>100</width>
+						<height>50</height>
 						<onup>303</onup>
 						<ondown>300</ondown>
 						<label>IP</label>
-						<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
-						<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
+						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
+						<texturefocus border="5">KeyboardKey.png</texturefocus>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
@@ -403,13 +403,13 @@
 					</control>
 					<control type="radiobutton" id="304">
 						<description>Symbols button</description>
-						<width>{{ScaleX({{ 3 * {VirtualKeyboardKeyWidth} }})}}</width>
-						<height>{{ScaleY('50')}}</height>
+						<width>100</width>
+						<height>50</height>
 						<label>@#!*   </label>
 						<onup>303</onup>
 						<ondown>300</ondown>
-						<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
-						<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
+						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
+						<texturefocus border="5">KeyboardKey.png</texturefocus>
 						<radioposy>5</radioposy>
 						<radiowidth>20</radiowidth>
 						<radioheight>20</radioheight>
@@ -451,19 +451,19 @@
 					<control type="button" id="165">
 						<description>(3,5) key button</description>
 						<onup>145</onup>
-						<ondown>305</ondown>
+						<ondown>8</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="166">
 						<description>(3,6) key button</description>
 						<onup>146</onup>
-						<ondown>306</ondown>
+						<ondown>305</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="167">
 						<description>(3,7) key button</description>
 						<onup>147</onup>
-						<ondown>308</ondown>
+						<ondown>306</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="168">
@@ -493,15 +493,15 @@
 				</control>
 				<!-- 5th row -->
 				<control type="grouplist">
-					<top>{{ScaleY('200')}}</top>
+					<top>200</top>
 					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="button" id="300">
 						<description>DONE button</description>
-						<width>{{ScaleX({{ 5 * {VirtualKeyboardKeyWidth} }})}}</width>
-						<height>{{ScaleY('50')}}</height>
-						<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">KeyboardCornerBottomNF.png</texturenofocus>
-						<texturefocus border="{{ScaleBorder('25,5,25,5')}}">KeyboardCornerBottom.png</texturefocus>
+						<width>200</width>
+						<height>50</height>
+						<texturenofocus border="25,5,25,5">KeyboardCornerBottomNF.png</texturenofocus>
+						<texturefocus border="25,5,25,5">KeyboardCornerBottom.png</texturefocus>
 						<label>20177</label>
 						<font>font13</font>
 						<align>center</align>
@@ -512,11 +512,11 @@
 					</control>
 					<control type="button" id="32">
 						<description>SPACE button</description>
-						<width>{{ScaleX({{ 4 * {VirtualKeyboardKeyWidth} }})}}</width>
-						<height>{{ScaleY('50')}}</height>
+						<width>200</width>
+						<height>50</height>
 						<label>20182</label>
-						<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
-						<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
+						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
+						<texturefocus border="5">KeyboardKey.png</texturefocus>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
@@ -526,13 +526,13 @@
 					</control>
 					<control type="button" id="8">
 						<description>BACKSPACE button</description>
-						<width>{{ScaleX({{ 1 * {VirtualKeyboardKeyWidth} }})}}</width>
-						<height>{{ScaleY('50')}}</height>
+						<width>100</width>
+						<height>50</height>
 						<label>20181</label>
 						<onup>164</onup>
 						<ondown>104</ondown>
-						<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
-						<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
+						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
+						<texturefocus border="5">KeyboardKey.png</texturefocus>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>-</font>
@@ -540,36 +540,36 @@
 					</control>
 					<control type="button" id="305">
 						<description>previous button</description>
-						<width>{{ScaleX({{ 1 * {VirtualKeyboardKeyWidth} }})}}</width>
-						<height>{{ScaleY('50')}}</height>
+						<width>50</width>
+						<height>50</height>
 						<label>&lt;</label>
 						<align>center</align>
 						<aligny>center</aligny>
-						<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
-						<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
+						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
+						<texturefocus border="5">KeyboardKey.png</texturefocus>
 						<font>font30</font>
 						<focusedcolor>black</focusedcolor>
-						<onup>165</onup>
+						<onup>166</onup>
 						<ondown>106</ondown>
 					</control>
 					<control type="button" id="306">
 						<description>next button</description>
-						<width>{{ScaleX({{ 1 * {VirtualKeyboardKeyWidth} }})}}</width>
-						<height>{{ScaleY('50')}}</height>
+						<width>50</width>
+						<height>50</height>
 						<label>&gt;</label>
 						<align>center</align>
 						<aligny>center</aligny>
-						<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
-						<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
+						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
+						<texturefocus border="5">KeyboardKey.png</texturefocus>
 						<font>font30</font>
 						<focusedcolor>black</focusedcolor>
-						<onup>166</onup>
+						<onup>167</onup>
 						<ondown>107</ondown>
 					</control>
 					<control type="button" id="308">
 						<description>cancel button</description>
-						<width>{{ScaleX({{ 4 * {VirtualKeyboardKeyWidth} }})}}</width>
-						<height>{{ScaleY('50')}}</height>
+						<width>200</width>
+						<height>50</height>
 						<label>222</label>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -584,10 +584,10 @@
 				</control>
 				<control type="image">
 					<description>Backspace icon</description>
-					<left>{{ScaleX({{ 12 + (5+4) * {VirtualKeyboardKeyWidth} }})}}</left>
-					<top>{{ScaleY('210')}}</top>
-					<width>{{ScaleX('30')}}</width>
-					<height>{{ScaleY('30')}}</height>
+					<left>435</left>
+					<top>210</top>
+					<width>30</width>
+					<height>30</height>
 					<texture>KeyboardBackKey.png</texture>
 				</control>
 			</control>

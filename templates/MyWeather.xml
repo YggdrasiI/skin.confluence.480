@@ -22,55 +22,55 @@
 			<param name="Label" value="$LOCALIZE[8]" />
 		</include>
 		<control type="image">
-			<left>{{ScaleX('0')}}</left>
-			<top>{{ScaleY('100r')}}</top>
-			<width>{{ScaleX('1280')}}</width>
-			<height>{{ScaleY('100')}}</height>
+			<left>0</left>
+			<top>100r</top>
+			<width>1280</width>
+			<height>100</height>
 			<texture>floor.png</texture>
 			<include>VisibleFadeEffect</include>
-			<animation effect="slide" start="{{ScaleBorder2('0,10')}}" end="{{ScaleBorder2('0,0')}}" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,10')}}" time="150" condition="Window.Next(Home)">WindowClose</animation>
+			<animation effect="slide" start="0,10" end="0,0" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,10" time="150" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="80" end="100" center="{{ScaleBorder2('640,360')}}" easing="out" tween="back" time="225" />
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="225" />
 				<effect type="fade" start="0" end="100" time="225" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="zoom" start="100" end="80" center="{{ScaleBorder2('640,360')}}" easing="in" tween="back" time="225" />
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="225" />
 				<effect type="fade" start="100" end="0" time="225" />
 			</animation>
 			<include>VisibleFadeEffect</include>
 			<control type="group">
-				<left>{{ScaleX('60')}}</left>
-				<top>{{ScaleY('40')}}</top>
+				<left>60</left>
+				<top>40</top>
 				<control type="image">
-					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('500')}}</width>
-					<height>{{ScaleY('620')}}</height>
-					<texture border="{{ScaleBorder('20')}}">ContentPanel.png</texture>
+					<left>0</left>
+					<top>0</top>
+					<width>500</width>
+					<height>620</height>
+					<texture border="20">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('612')}}</top>
-					<width>{{ScaleX('500')}}</width>
-					<height>{{ScaleY('64')}}</height>
-					<texture border="{{ScaleBorder('10')}}">ContentPanelMirror.png</texture>
+					<left>0</left>
+					<top>612</top>
+					<width>500</width>
+					<height>64</height>
+					<texture border="10">ContentPanelMirror.png</texture>
 				</control>
 				<control type="image">
-					<left>{{ScaleX('8')}}</left>
-					<top>{{ScaleY('5')}}</top>
-					<width>{{ScaleX('484')}}</width>
-					<height>{{ScaleY('45')}}</height>
+					<left>8</left>
+					<top>5</top>
+					<width>484</width>
+					<height>45</height>
 					<texture>dialogheader.png</texture>
 				</control>
 				<control type="label">
 					<description>header label</description>
-					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY('15')}}</top>
-					<width>{{ScaleX('460')}}</width>
-					<height>{{ScaleY('30')}}</height>
+					<left>20</left>
+					<top>15</top>
+					<width>460</width>
+					<height>30</height>
 					<font>font13_title</font>
 					<label>31300</label>
 					<align>center</align>
@@ -79,19 +79,19 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="image">
-					<left>{{ScaleX('30')}}</left>
-					<top>{{ScaleY('55')}}</top>
-					<width>{{ScaleX('440')}}</width>
-					<height>{{ScaleY('46')}}</height>
+					<left>30</left>
+					<top>55</top>
+					<width>440</width>
+					<height>46</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture>$INFO[Window.Property(WeatherProviderLogo)]</texture>
 				</control>
 				<control type="label">
 					<description>Provider Text</description>
-					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY('60')}}</top>
-					<width>{{ScaleX('460')}}</width>
-					<height>{{ScaleY('35')}}</height>
+					<left>20</left>
+					<top>60</top>
+					<width>460</width>
+					<height>35</height>
 					<font>font12</font>
 					<textcolor>white</textcolor>
 					<scroll>true</scroll>
@@ -104,10 +104,10 @@
 				<control type="group">
 					<control type="label">
 						<description>weather location label</description>
-						<left>{{ScaleX('20')}}</left>
-						<top>{{ScaleY('100')}}</top>
-						<width>{{ScaleX('460')}}</width>
-						<height>{{ScaleY('30')}}</height>
+						<left>20</left>
+						<top>100</top>
+						<width>460</width>
+						<height>30</height>
 						<font>font13_title</font>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
@@ -117,10 +117,10 @@
 					</control>
 					<control type="label">
 						<description>update label</description>
-						<left>{{ScaleX('20')}}</left>
-						<top>{{ScaleY('120')}}</top>
-						<width>{{ScaleX('460')}}</width>
-						<height>{{ScaleY('35')}}</height>
+						<left>20</left>
+						<top>120</top>
+						<width>460</width>
+						<height>35</height>
 						<font>font12</font>
 						<label>$LOCALIZE[31301] - $INFO[Window.Property(Updated)]</label>
 						<align>center</align>
@@ -131,10 +131,10 @@
 						<depth>DepthContent+</depth>
 						<control type="label">
 							<description>current temp Value</description>
-							<left>{{ScaleX('15')}}</left>
-							<top>{{ScaleY('185')}}</top>
-							<width>{{ScaleX('180')}}</width>
-							<height>{{ScaleY('40')}}</height>
+							<left>15</left>
+							<top>185</top>
+							<width>180</width>
+							<height>40</height>
 							<font>WeatherTemp</font>
 							<align>right</align>
 							<aligny>top</aligny>
@@ -144,10 +144,10 @@
 						</control>
 						<control type="label">
 							<description>current temp Value Units</description>
-							<left>{{ScaleX('200')}}</left>
-							<top>{{ScaleY('206')}}</top>
-							<width>{{ScaleX('100')}}</width>
-							<height>{{ScaleY('40')}}</height>
+							<left>200</left>
+							<top>206</top>
+							<width>100</width>
+							<height>40</height>
 							<font>font16</font>
 							<align>left</align>
 							<aligny>top</aligny>
@@ -157,20 +157,20 @@
 						</control>
 						<control type="image">
 							<description>current weather icon</description>
-							<left>{{ScaleX('260')}}</left>
-							<top>{{ScaleY('145')}}</top>
-							<width>{{ScaleX('200')}}</width>
-							<height>{{ScaleY('200')}}</height>
+							<left>260</left>
+							<top>145</top>
+							<width>200</width>
+							<height>200</height>
 							<info>Window.Property(Current.ConditionIcon)</info>
 							<aspectratio>keep</aspectratio>
 						</control>
 					</control>
 					<control type="label">
 						<description>current condition label</description>
-						<left>{{ScaleX('20')}}</left>
-						<top>{{ScaleY('350')}}</top>
-						<width>{{ScaleX('460')}}</width>
-						<height>{{ScaleY('30')}}</height>
+						<left>20</left>
+						<top>350</top>
+						<width>460</width>
+						<height>30</height>
 						<info>Window.Property(Current.Condition)</info>
 						<wrapmultiline>true</wrapmultiline>
 						<font>font13</font>
@@ -181,24 +181,24 @@
 					</control>
 				</control>
 				<control type="image">
-					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY('390')}}</top>
-					<width>{{ScaleX('460')}}</width>
-					<height>{{ScaleY('4')}}</height>
+					<left>20</left>
+					<top>390</top>
+					<width>460</width>
+					<height>4</height>
 					<texture>separator.png</texture>
 				</control>
 				<control type="grouplist">
-					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('400')}}</top>
-					<width>{{ScaleX({{ 170 + {WeatherLeftExtraW} }})}}</width>
-					<height>{{ScaleY('180')}}</height>
+					<left>0</left>
+					<top>400</top>
+					<width>170</width>
+					<height>180</height>
 					<itemgap>0</itemgap>
 					<control type="label">
 						<description>current feels like label</description>
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 170 + {WeatherLeftExtraW} }})}}</width>
-						<height>{{ScaleY('28')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>170</width>
+						<height>28</height>
 						<font>font13</font>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -209,10 +209,10 @@
 					</control>
 					<control type="label">
 						<description>current dew label</description>
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 170 + {WeatherLeftExtraW} }})}}</width>
-						<height>{{ScaleY('28')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>170</width>
+						<height>28</height>
 						<font>font13</font>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -223,10 +223,10 @@
 					</control>
 					<control type="label">
 						<description>current humidity label</description>
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 170 + {WeatherLeftExtraW} }})}}</width>
-						<height>{{ScaleY('28')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>170</width>
+						<height>28</height>
 						<font>font13</font>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -237,10 +237,10 @@
 					</control>
 					<control type="label">
 						<description>current UV Index label</description>
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 170 + {WeatherLeftExtraW} }})}}</width>
-						<height>{{ScaleY('28')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>170</width>
+						<height>28</height>
 						<font>font13</font>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -251,10 +251,10 @@
 					</control>
 					<control type="label">
 						<description>current Precipitation label</description>
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 170 + {WeatherLeftExtraW} }})}}</width>
-						<height>{{ScaleY('28')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>170</width>
+						<height>28</height>
 						<font>font13</font>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -265,10 +265,10 @@
 					</control>
 					<control type="label">
 						<description>current Wind label</description>
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 170 + {WeatherLeftExtraW} }})}}</width>
-						<height>{{ScaleY('28')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>170</width>
+						<height>28</height>
 						<font>font13</font>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -279,17 +279,17 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<left>{{ScaleX({{ 185 + {WeatherLeftExtraW} }})}}</left>
-					<top>{{ScaleY('400')}}</top>
-					<width>{{ScaleX({{ 300 - {WeatherLeftExtraW} }})}}</width>
-					<height>{{ScaleY('180')}}</height>
+					<left>185</left>
+					<top>400</top>
+					<width>300</width>
+					<height>180</height>
 					<itemgap>0</itemgap>
 					<control type="label">
 						<description>current feels like Value</description>
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 300 - {WeatherLeftExtraW} }})}}</width>
-						<height>{{ScaleY('28')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>300</width>
+						<height>28</height>
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -300,10 +300,10 @@
 					</control>
 					<control type="label">
 						<description>current dew Value</description>
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 300 - {WeatherLeftExtraW} }})}}</width>
-						<height>{{ScaleY('28')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>300</width>
+						<height>28</height>
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -314,10 +314,10 @@
 					</control>
 					<control type="label">
 						<description>current humidity Value</description>
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 300 - {WeatherLeftExtraW} }})}}</width>
-						<height>{{ScaleY('28')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>300</width>
+						<height>28</height>
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -328,10 +328,10 @@
 					</control>
 					<control type="label">
 						<description>current UV Index Value</description>
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 300 - {WeatherLeftExtraW} }})}}</width>
-						<height>{{ScaleY('28')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>300</width>
+						<height>28</height>
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -342,10 +342,10 @@
 					</control>
 					<control type="label">
 						<description>current Precipitation Value</description>
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 300 - {WeatherLeftExtraW} }})}}</width>
-						<height>{{ScaleY('28')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>300</width>
+						<height>28</height>
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -356,10 +356,10 @@
 					</control>
 					<control type="label">
 						<description>current Wind Value</description>
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 300 - {WeatherLeftExtraW} }})}}</width>
-						<height>{{ScaleY('28')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>300</width>
+						<height>28</height>
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -373,10 +373,10 @@
 					<visible>!String.IsEmpty(Window.Property(Today.IsFetched))</visible>
 					<control type="label">
 						<description>Sunrise Label</description>
-						<left>{{ScaleX('30')}}</left>
-						<top>{{ScaleY('570')}}</top>
-						<width>{{ScaleX({{ 300 - {WeatherLeftExtraW} }})}}</width>
-						<height>{{ScaleY('35')}}</height>
+						<left>30</left>
+						<top>570</top>
+						<width>300</width>
+						<height>35</height>
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -387,10 +387,10 @@
 					</control>
 					<control type="label">
 						<description>Sunset label</description>
-						<left>{{ScaleX('170')}}</left>
-						<top>{{ScaleY('570')}}</top>
-						<width>{{ScaleX({{ 300 - {WeatherLeftExtraW} }})}}</width>
-						<height>{{ScaleY('35')}}</height>
+						<left>170</left>
+						<top>570</top>
+						<width>300</width>
+						<height>35</height>
 						<font>font13</font>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -402,27 +402,27 @@
 				</control>
 			</control>
 			<control type="group">
-				<left>{{ScaleX('580')}}</left>
-				<top>{{ScaleY('40')}}</top>
+				<left>580</left>
+				<top>40</top>
 				<control type="image">
-					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('650')}}</width>
-					<height>{{ScaleY('620')}}</height>
-					<texture border="{{ScaleBorder('20')}}">ContentPanel.png</texture>
+					<left>0</left>
+					<top>0</top>
+					<width>650</width>
+					<height>620</height>
+					<texture border="20">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('612')}}</top>
-					<width>{{ScaleX('650')}}</width>
-					<height>{{ScaleY('64')}}</height>
-					<texture border="{{ScaleBorder('10')}}">ContentPanelMirror.png</texture>
+					<left>0</left>
+					<top>612</top>
+					<width>650</width>
+					<height>64</height>
+					<texture border="10">ContentPanelMirror.png</texture>
 				</control>
 				<control type="image">
-					<left>{{ScaleX('8')}}</left>
-					<top>{{ScaleY('5')}}</top>
-					<width>{{ScaleX('634')}}</width>
-					<height>{{ScaleY('45')}}</height>
+					<left>8</left>
+					<top>5</top>
+					<width>634</width>
+					<height>45</height>
 					<texture>dialogheader.png</texture>
 				</control>
 				<control type="group" id="50">
@@ -441,13 +441,13 @@
 		</control>
 		<include>MainWindowMouseButtons</include>
 		<control type="group">
-			<left>{{ScaleX({{ -250 - {SideBladeExtraWidth} }})}}</left>
+			<left>-250</left>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
-				<left>{{ScaleX('0')}}</left>
-				<top>{{ScaleY('60')}}</top>
-				<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
-				<height>{{ScaleY('650')}}</height>
+				<left>0</left>
+				<top>60</top>
+				<width>250</width>
+				<height>650</height>
 				<onleft>9000</onleft>
 				<onright>50</onright>
 				<onup>9000</onup>
@@ -455,8 +455,8 @@
 				<onback>50</onback>
 				<itemgap>0</itemgap>
 				<control type="label" id="200">
-					<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
-					<height>{{ScaleY('35')}}</height>
+					<width>250</width>
+					<height>35</height>
 					<font>font12</font>
 					<label>31006</label>
 					<textcolor>blue</textcolor>
@@ -464,12 +464,12 @@
 					<aligny>center</aligny>
 				</control>
 				<control type="group" id="300">
-					<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
-					<height>{{ScaleY('40')}}</height>
+					<width>250</width>
+					<height>40</height>
 					<control type="spincontrolex" id="3">
 						<description>change location button</description>
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
+						<left>0</left>
+						<top>0</top>
 						<font>-</font>
 						<include>ButtonCommonValues</include>
 						<onleft>50</onleft>
@@ -479,10 +479,10 @@
 						<onback>50</onback>
 					</control>
 					<control type="label" id="301">
-						<left>{{ScaleX('10')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 200 + {SideBladeExtraWidth} }})}}</width>
-						<height>{{ScaleY('40')}}</height>
+						<left>10</left>
+						<top>0</top>
+						<width>200</width>
+						<height>40</height>
 						<font>font13</font>
 						<label>31027</label>
 						<textcolor>white</textcolor>
@@ -492,7 +492,7 @@
 				</control>
 				<control type="button" id="302">
 					<description>Daily forcast button</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>31904</label>
 					<onfocus>ClearProperty(Weather.CurrentView)</onfocus>
@@ -500,7 +500,7 @@
 				</control>
 				<control type="button" id="303">
 					<description>36 hour forcast button</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>31901</label>
 					<onfocus>SetProperty(Weather.CurrentView,36hour)</onfocus>
@@ -508,7 +508,7 @@
 				</control>
 				<control type="button" id="304">
 					<description>Weekend forcast button</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>31903</label>
 					<onfocus>SetProperty(Weather.CurrentView,weekend)</onfocus>
@@ -516,7 +516,7 @@
 				</control>
 				<control type="button" id="305">
 					<description>Hourly forcast button</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>31902</label>
 					<onfocus>SetProperty(Weather.CurrentView,hourly)</onfocus>
@@ -524,7 +524,7 @@
 				</control>
 				<control type="button" id="306">
 					<description>Maps button</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>31910</label>
 					<onfocus>SetProperty(Weather.CurrentView,map)</onfocus>
@@ -532,15 +532,15 @@
 				</control>
 				<control type="button" id="307">
 					<description>Alerts button</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>33050</label>
 					<onfocus>SetProperty(Weather.CurrentView,alerts)</onfocus>
 					<visible>!String.IsEmpty(Window.Property(Alerts.IsFetched))</visible>
 				</control>
 				<control type="label" id="201">
-					<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
-					<height>{{ScaleY('35')}}</height>
+					<width>250</width>
+					<height>35</height>
 					<font>font12</font>
 					<label>31026</label>
 					<textcolor>blue</textcolor>
@@ -549,7 +549,7 @@
 				</control>
 				<control type="button" id="2">
 					<description>Refresh button</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>103</label>
 				</control>
@@ -557,7 +557,7 @@
 					<description>Settings button</description>
 					<label>5</label>
 					<onclick>ActivateWindow(servicesettings,weather)</onclick>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 				</control>
 				<include>CommonNowPlaying_Controls</include>

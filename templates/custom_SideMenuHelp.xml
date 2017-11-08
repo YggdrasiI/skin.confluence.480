@@ -4,31 +4,31 @@
 	<include>dialogeffect</include>
 	<controls>
 		<control type="image">
-			<left>{{ScaleX('0')}}</left>
-			<top>{{ScaleY('0')}}</top>
-			<width>{{ScaleX('1280')}}</width>
-			<height>{{ScaleY('720')}}</height>
-			<texture border="{{ScaleBorder('120,0,0,0')}}">hint-overlay.png</texture>
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<texture border="120,0,0,0">hint-overlay.png</texture>
 		</control>
 		<control type="image">
-			<left>{{ScaleX('120')}}</left>
-			<top>{{ScaleY('300')}}</top>
-			<width>{{ScaleX('64')}}</width>
-			<height>{{ScaleY('64')}}</height>
+			<left>120</left>
+			<top>300</top>
+			<width>64</width>
+			<height>64</height>
 			<texture>arrow-big-left.png</texture>
 		</control>
 		<control type="image">
-			<left>{{ScaleX('190')}}</left>
-			<top>{{ScaleY('100')}}</top>
-			<width>{{ScaleX('2')}}</width>
-			<height>{{ScaleY('512')}}</height>
+			<left>190</left>
+			<top>100</top>
+			<width>2</width>
+			<height>512</height>
 			<texture>separator_vertical.png</texture>
 		</control>
 		<control type="label">
-			<left>{{ScaleX('240')}}</left>
-			<top>{{ScaleY('150')}}</top>
-			<width>{{ScaleX('680')}}</width>
-			<height>{{ScaleY('60')}}</height>
+			<left>240</left>
+			<top>150</top>
+			<width>680</width>
+			<height>60</height>
 			<font>font35_title</font>
 			<textcolor>blue</textcolor>
 			<align>left</align>
@@ -36,10 +36,10 @@
 			<label>31411</label>
 		</control>
 		<control type="textbox">
-			<left>{{ScaleX('240')}}</left>
-			<top>{{ScaleY('242')}}</top>
-			<width>{{ScaleX('680')}}</width>
-			<height>{{ScaleY('248')}}</height>
+			<left>240</left>
+			<top>242</top>
+			<width>680</width>
+			<height>248</height>
 			<font>font14</font>
 			<textcolor>white</textcolor>
 			<align>left</align>
@@ -47,10 +47,10 @@
 		</control>
 		<control type="button" id="100">
 			<description>OK button</description>
-			<left>{{ScaleX('720')}}</left>
-			<top>{{ScaleY('500')}}</top>
-			<width>{{ScaleX('200')}}</width>
-			<height>{{ScaleY('40')}}</height>
+			<left>720</left>
+			<top>500</top>
+			<width>200</width>
+			<height>40</height>
 			<label>12321</label>
 			<font>font12_title</font>
 			<textcolor>white</textcolor>

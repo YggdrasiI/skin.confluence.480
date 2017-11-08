@@ -5,10 +5,10 @@
 			<visible>Control.IsVisible(550)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="list" id="550">
-				<left>{{ScaleX('70')}}</left>
-				<top>{{ScaleY('78')}}</top>
-				<width>{{ScaleX('580')}}</width>
-				<height>{{ScaleY('561')}}</height>
+				<left>70</left>
+				<top>78</top>
+				<width>580</width>
+				<height>561</height>
 				<onleft>2</onleft>
 				<onright>60</onright>
 				<onup>550</onup>
@@ -17,19 +17,19 @@
 				<visible>Window.IsVisible(AddonBrowser) | Container.Content(Addons)</visible>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="{{ScaleY('40')}}" width="{{ScaleX('580')}}">
+				<itemlayout height="40" width="580">
 					<control type="image">
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('580')}}</width>
-						<height>{{ScaleY('41')}}</height>
-						<texture border="{{ScaleBorder('0,2,0,2')}}">MenuItemNF.png</texture>
+						<left>0</left>
+						<top>0</top>
+						<width>580</width>
+						<height>41</height>
+						<texture border="0,2,0,2">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('10')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('520')}}</width>
-						<height>{{ScaleY('40')}}</height>
+						<left>10</left>
+						<top>0</top>
+						<width>520</width>
+						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -38,10 +38,10 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('55')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('500')}}</width>
-						<height>{{ScaleY('40')}}</height>
+						<left>55</left>
+						<top>0</top>
+						<width>500</width>
+						<height>40</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -50,38 +50,38 @@
 						<label>$VAR[AddonLabel2]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="{{ScaleY('40')}}" width="{{ScaleX('580')}}">
+				<focusedlayout height="40" width="580">
 					<control type="image">
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('580')}}</width>
-						<height>{{ScaleY('41')}}</height>
-						<texture border="{{ScaleBorder('0,2,0,2')}}">MenuItemNF.png</texture>
+						<left>0</left>
+						<top>0</top>
+						<width>580</width>
+						<height>41</height>
+						<texture border="0,2,0,2">MenuItemNF.png</texture>
 						<visible>!Control.HasFocus(550)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('580')}}</width>
-						<height>{{ScaleY('41')}}</height>
-						<texture border="{{ScaleBorder('0,2,0,2')}}">MenuItemFO.png</texture>
+						<left>0</left>
+						<top>0</top>
+						<width>580</width>
+						<height>41</height>
+						<texture border="0,2,0,2">MenuItemFO.png</texture>
 						<visible>Control.HasFocus(550)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('370')}}</left>
-						<top>{{ScaleY('5')}}</top>
-						<width>{{ScaleX('200')}}</width>
-						<height>{{ScaleY('31')}}</height>
-						<texture border="{{ScaleBorder('0,0,14,0')}}">MediaItemDetailBG.png</texture>
+						<left>370</left>
+						<top>5</top>
+						<width>200</width>
+						<height>31</height>
+						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
 						<visible>Control.HasFocus(550) + !String.IsEmpty(ListItem.Property(Addon.Status))</visible>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('10')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('520')}}</width>
-						<height>{{ScaleY('40')}}</height>
+						<left>10</left>
+						<top>0</top>
+						<width>520</width>
+						<height>40</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -90,10 +90,10 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('55')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('500')}}</width>
-						<height>{{ScaleY('40')}}</height>
+						<left>55</left>
+						<top>0</top>
+						<width>500</width>
+						<height>40</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -104,13 +104,13 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>{{ScaleX('650')}}</left>
-				<top>{{ScaleY('78')}}</top>
-				<width>{{ScaleX('25')}}</width>
-				<height>{{ScaleY('560')}}</height>
-				<texturesliderbackground border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<left>650</left>
+				<top>78</top>
+				<width>25</width>
+				<height>560</height>
+				<texturesliderbackground border="10,14,10,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="10,14,10,14">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="10,14,10,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>550</onleft>
@@ -120,15 +120,15 @@
 				<visible>Control.IsVisible(550)</visible>
 			</control>
 			<control type="group">
-				<left>{{ScaleX('710')}}</left>
-				<top>{{ScaleY('80')}}</top>
+				<left>710</left>
+				<top>80</top>
 				<visible>Control.IsVisible(550)</visible>
 				<control type="label">
 					<description>Show Title txt</description>
-					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('510')}}</width>
-					<height>{{ScaleY('15')}}</height>
+					<left>0</left>
+					<top>0</top>
+					<width>510</width>
+					<height>15</height>
 					<label>$INFO[ListItem.AddonName]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -138,10 +138,10 @@
 					<wrapmultiline>true</wrapmultiline>
 				</control>
 				<control type="image">
-					<left>{{ScaleX('10')}}</left>
-					<top>{{ScaleY('30')}}</top>
-					<width>{{ScaleX('490')}}</width>
-					<height>{{ScaleY('240')}}</height>
+					<left>10</left>
+					<top>30</top>
+					<width>490</width>
+					<height>240</height>
 					<aspectratio>keep</aspectratio>
 					<fadetime>200</fadetime>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
@@ -149,13 +149,13 @@
 					<bordersize>8</bordersize>
 				</control>
 				<control type="group">
-					<top>{{ScaleY('280')}}</top>
+					<top>280</top>
 					<control type="label">
 						<description>Author txt</description>
-						<left>{{ScaleX('10')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('140')}}</width>
-						<height>{{ScaleY('25')}}</height>
+						<left>10</left>
+						<top>0</top>
+						<width>140</width>
+						<height>25</height>
 						<label>$LOCALIZE[21863]:</label>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -164,10 +164,10 @@
 					</control>
 					<control type="fadelabel">
 						<description>Author Value</description>
-						<left>{{ScaleX('160')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('350')}}</width>
-						<height>{{ScaleY('25')}}</height>
+						<left>160</left>
+						<top>0</top>
+						<width>350</width>
+						<height>25</height>
 						<label fallback="416">$INFO[ListItem.AddonCreator]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -177,10 +177,10 @@
 					</control>
 					<control type="label">
 						<description>Version txt</description>
-						<left>{{ScaleX('10')}}</left>
-						<top>{{ScaleY('30')}}</top>
-						<width>{{ScaleX('140')}}</width>
-						<height>{{ScaleY('25')}}</height>
+						<left>10</left>
+						<top>30</top>
+						<width>140</width>
+						<height>25</height>
 						<label>$LOCALIZE[24051]</label>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -189,10 +189,10 @@
 					</control>
 					<control type="label">
 						<description>Version Value</description>
-						<left>{{ScaleX('160')}}</left>
-						<top>{{ScaleY('30')}}</top>
-						<width>{{ScaleX('350')}}</width>
-						<height>{{ScaleY('25')}}</height>
+						<left>160</left>
+						<top>30</top>
+						<width>350</width>
+						<height>25</height>
 						<label fallback="416">$INFO[ListItem.AddonVersion]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -200,18 +200,18 @@
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('60')}}</top>
-						<width>{{ScaleX('490')}}</width>
-						<height>{{ScaleY('4')}}</height>
+						<left>0</left>
+						<top>60</top>
+						<width>490</width>
+						<height>4</height>
 						<texture>separator.png</texture>
 					</control>
 					<control type="textbox">
 						<description>Description</description>
-						<left>{{ScaleX('10')}}</left>
-						<top>{{ScaleY('67')}}</top>
-						<width>{{ScaleX('490')}}</width>
-						<height>{{ScaleY('213')}}</height>
+						<left>10</left>
+						<top>67</top>
+						<width>490</width>
+						<height>213</height>
 						<font>font13</font>
 						<align>left</align>
 						<textcolor>white</textcolor>
@@ -227,10 +227,10 @@
 			<visible>Control.IsVisible(551)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="panel" id="551">
-				<left>{{ScaleX('70')}}</left>
-				<top>{{ScaleY('78')}}</top>
-				<width>{{ScaleX('772')}}</width>
-				<height>{{ScaleY('558')}}</height>
+				<left>70</left>
+				<top>78</top>
+				<width>772</width>
+				<height>558</height>
 				<onleft>2</onleft>
 				<onright>60</onright>
 				<onup>551</onup>
@@ -239,12 +239,12 @@
 				<visible>Window.IsVisible(AddonBrowser) | Container.Content(Addons)</visible>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="{{ScaleY('186')}}" width="{{ScaleX('193')}}">
+				<itemlayout height="186" width="193">
 					<control type="image">
-						<left>{{ScaleX('1')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('191')}}</width>
-						<height>{{ScaleY('160')}}</height>
+						<left>1</left>
+						<top>0</top>
+						<width>191</width>
+						<height>160</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
 						<fadetime>100</fadetime>
@@ -252,10 +252,10 @@
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('1')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('191')}}</width>
-						<height>{{ScaleY('160')}}</height>
+						<left>1</left>
+						<top>0</top>
+						<width>191</width>
+						<height>160</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
 						<fadetime>100</fadetime>
@@ -265,25 +265,25 @@
 						<visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('193')}}</width>
-						<height>{{ScaleY('186')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>193</width>
+						<height>186</height>
 						<font>font13_title</font>
 						<textcolor>ffaa0000</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<selectedcolor>red</selectedcolor>
 						<align>center</align>
 						<aligny>center</aligny>
-						<animation effect="rotate" start="0" end="45" center="{{ScaleBorder2('auto')}}" time="0" condition="true">Conditional</animation>
+						<animation effect="rotate" start="0" end="45" center="auto" time="0" condition="true">Conditional</animation>
 						<label>24098</label>
 						<visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('1')}}</left>
-						<top>{{ScaleY('160')}}</top>
-						<width>{{ScaleX('191')}}</width>
-						<height>{{ScaleY('25')}}</height>
+						<left>1</left>
+						<top>160</top>
+						<width>191</width>
+						<height>25</height>
 						<font>font12</font>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -292,12 +292,12 @@
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="{{ScaleY('186')}}" width="{{ScaleX('193')}}">
+				<focusedlayout height="186" width="193">
 					<control type="image">
-						<left>{{ScaleX('1')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('191')}}</width>
-						<height>{{ScaleY('160')}}</height>
+						<left>1</left>
+						<top>0</top>
+						<width>191</width>
+						<height>160</height>
 						<bordertexture border="5">folder-focus.png</bordertexture>
 						<bordersize>5</bordersize>
 						<fadetime>100</fadetime>
@@ -305,10 +305,10 @@
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('1')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('191')}}</width>
-						<height>{{ScaleY('160')}}</height>
+						<left>1</left>
+						<top>0</top>
+						<width>191</width>
+						<height>160</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
 						<fadetime>100</fadetime>
@@ -318,25 +318,25 @@
 						<visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('193')}}</width>
-						<height>{{ScaleY('186')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>193</width>
+						<height>186</height>
 						<font>font13_title</font>
 						<textcolor>ffaa0000</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<selectedcolor>red</selectedcolor>
 						<align>center</align>
 						<aligny>center</aligny>
-						<animation effect="rotate" start="0" end="45" center="{{ScaleBorder2('auto')}}" time="0" condition="true">Conditional</animation>
+						<animation effect="rotate" start="0" end="45" center="auto" time="0" condition="true">Conditional</animation>
 						<label>24098</label>
 						<visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('1')}}</left>
-						<top>{{ScaleY('160')}}</top>
-						<width>{{ScaleX('191')}}</width>
-						<height>{{ScaleY('25')}}</height>
+						<left>1</left>
+						<top>160</top>
+						<width>191</width>
+						<height>25</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -347,13 +347,13 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>{{ScaleX('850')}}</left>
-				<top>{{ScaleY('78')}}</top>
-				<width>{{ScaleX('25')}}</width>
-				<height>{{ScaleY('560')}}</height>
-				<texturesliderbackground border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<left>850</left>
+				<top>78</top>
+				<width>25</width>
+				<height>560</height>
+				<texturesliderbackground border="10,14,10,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="10,14,10,14">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="10,14,10,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>551</onleft>
@@ -363,15 +363,15 @@
 				<visible>Control.IsVisible(551)</visible>
 			</control>
 			<control type="group">
-				<left>{{ScaleX('910')}}</left>
-				<top>{{ScaleY('90')}}</top>
+				<left>910</left>
+				<top>90</top>
 				<visible>Control.IsVisible(551)</visible>
 				<control type="label">
 					<description>Show Title txt</description>
-					<left>{{ScaleX('10')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('290')}}</width>
-					<height>{{ScaleY('15')}}</height>
+					<left>10</left>
+					<top>0</top>
+					<width>290</width>
+					<height>15</height>
 					<label>$INFO[ListItem.AddonName]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -381,13 +381,13 @@
 					<wrapmultiline>true</wrapmultiline>
 				</control>
 				<control type="group">
-					<top>{{ScaleY('40')}}</top>
+					<top>40</top>
 					<control type="label">
 						<description>Author txt</description>
-						<left>{{ScaleX('10')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('120')}}</width>
-						<height>{{ScaleY('25')}}</height>
+						<left>10</left>
+						<top>0</top>
+						<width>120</width>
+						<height>25</height>
 						<label>$LOCALIZE[21863]:</label>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -396,10 +396,10 @@
 					</control>
 					<control type="fadelabel">
 						<description>Author Value</description>
-						<left>{{ScaleX('140')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('155')}}</width>
-						<height>{{ScaleY('25')}}</height>
+						<left>140</left>
+						<top>0</top>
+						<width>155</width>
+						<height>25</height>
 						<label fallback="416">$INFO[ListItem.AddonCreator]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -409,10 +409,10 @@
 					</control>
 					<control type="label">
 						<description>Version txt</description>
-						<left>{{ScaleX('10')}}</left>
-						<top>{{ScaleY('30')}}</top>
-						<width>{{ScaleX('120')}}</width>
-						<height>{{ScaleY('25')}}</height>
+						<left>10</left>
+						<top>30</top>
+						<width>120</width>
+						<height>25</height>
 						<label>$LOCALIZE[24051]</label>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -421,10 +421,10 @@
 					</control>
 					<control type="label">
 						<description>Version Value</description>
-						<left>{{ScaleX('140')}}</left>
-						<top>{{ScaleY('30')}}</top>
-						<width>{{ScaleX('155')}}</width>
-						<height>{{ScaleY('25')}}</height>
+						<left>140</left>
+						<top>30</top>
+						<width>155</width>
+						<height>25</height>
 						<label fallback="416">$INFO[ListItem.AddonVersion]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -432,18 +432,18 @@
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('70')}}</top>
-						<width>{{ScaleX('290')}}</width>
-						<height>{{ScaleY('4')}}</height>
+						<left>0</left>
+						<top>70</top>
+						<width>290</width>
+						<height>4</height>
 						<texture>separator.png</texture>
 					</control>
 					<control type="textbox">
 						<description>Description</description>
-						<left>{{ScaleX('10')}}</left>
-						<top>{{ScaleY('77')}}</top>
-						<width>{{ScaleX('290')}}</width>
-						<height>{{ScaleY('443')}}</height>
+						<left>10</left>
+						<top>77</top>
+						<width>290</width>
+						<height>443</height>
 						<font>font13</font>
 						<align>left</align>
 						<textcolor>white</textcolor>

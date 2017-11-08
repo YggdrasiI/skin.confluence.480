@@ -5,21 +5,21 @@
 		<control type="group">
 			<depth>DepthSideBlade</depth>
 			<visible>!Window.IsVisible(FileBrowser)</visible>
-			<animation effect="slide" start="{{ScaleBorder2('1100,0')}}" end="{{ScaleBorder2('0,0')}}" time="300" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('1100,0')}}" time="300" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="1100,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="1100,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
-				<left>{{ScaleX('180')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('1120')}}</width>
-				<height>{{ScaleY('720')}}</height>
-				<texture border="{{ScaleBorder('15,0,0,0')}}" flipx="true">MediaBladeSub.png</texture>
+				<left>180</left>
+				<top>0</top>
+				<width>1120</width>
+				<height>720</height>
+				<texture border="15,0,0,0" flipx="true">MediaBladeSub.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>{{ScaleX('230')}}</left>
-				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('64')}}</width>
-				<height>{{ScaleY('32')}}</height>
+				<left>230</left>
+				<top>0</top>
+				<width>64</width>
+				<height>32</height>
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
@@ -36,10 +36,10 @@
 				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
 				<control type="label">
 					<description>header label</description>
-					<left>{{ScaleX('210')}}</left>
-					<top>{{ScaleY('40')}}</top>
-					<width>{{ScaleX('1030')}}</width>
-					<height>{{ScaleY('30')}}</height>
+					<left>210</left>
+					<top>40</top>
+					<width>1030</width>
+					<height>30</height>
 					<font>font24_title</font>
 					<label>$INFO[Listitem.Title]</label>
 					<align>center</align>
@@ -49,9 +49,9 @@
 				</control>
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
-					<left>{{ScaleX('200')}}</left>
-					<top>{{ScaleY('480')}}</top>
-					<width>{{ScaleX('600')}}</width>
+					<left>200</left>
+					<top>480</top>
+					<width>600</width>
 					<align>left</align>
 					<itemgap>2</itemgap>
 					<orientation>horizontal</orientation>
@@ -65,31 +65,31 @@
 					<include>VideoTypeHackFlaggingConditions</include>
 				</control>
 				<control type="group">
-					<top>{{ScaleY('90')}}</top>
-					<left>{{ScaleX('387')}}</left>
+					<top>90</top>
+					<left>387</left>
 					<visible>Control.HasFocus(15)</visible>
 					<include>VisibleFadeEffect</include>
 					<control type="image">
 						<description>Border</description>
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('675')}}</width>
-						<height>{{ScaleY('380')}}</height>
-						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
+						<left>0</left>
+						<top>0</top>
+						<width>675</width>
+						<height>380</height>
+						<texture border="5">button-nofocus.png</texture>
 					</control>
 					<control type="image">
 						<description>background</description>
-						<left>{{ScaleX('5')}}</left>
-						<top>{{ScaleY('5')}}</top>
-						<width>{{ScaleX('665')}}</width>
-						<height>{{ScaleY('370')}}</height>
+						<left>5</left>
+						<top>5</top>
+						<width>665</width>
+						<height>370</height>
 						<texture>black-back.png</texture>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('675')}}</width>
-						<height>{{ScaleY('380')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>675</width>
+						<height>380</height>
 						<font>font30_title</font>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -100,54 +100,54 @@
 					</control>
 					<control type="videowindow">
 						<description>No Fanart Back</description>
-						<left>{{ScaleX('5')}}</left>
-						<top>{{ScaleY('5')}}</top>
-						<width>{{ScaleX('665')}}</width>
-						<height>{{ScaleY('370')}}</height>
+						<left>5</left>
+						<top>5</top>
+						<width>665</width>
+						<height>370</height>
 						<visible>Player.HasVideo</visible>
 					</control>
 				</control>
 				<control type="group">
 					<visible>[!String.IsEqual(ListItem.DBTYPE,tvshow) + !String.IsEqual(ListItem.DBTYPE,episode) + !String.IsEqual(ListItem.DBTYPE,musicvideo)] + ![Control.HasFocus(12) | Control.HasFocus(15)]</visible>
-					<top>{{ScaleY('90')}}</top>
-					<left>{{ScaleX('210')}}</left>
+					<top>90</top>
+					<left>210</left>
 					<include>VisibleFadeEffect</include>
 					<control type="image">
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('270')}}</width>
-						<height>{{ScaleY('380')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>270</width>
+						<height>380</height>
 						<aspectratio>stretch</aspectratio>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>4</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('4')}}</left>
-						<top>{{ScaleY('4')}}</top>
-						<width>{{ScaleX('200')}}</width>
-						<height>{{ScaleY('230')}}</height>
+						<left>4</left>
+						<top>4</top>
+						<width>200</width>
+						<height>230</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>GlassOverlay.png</texture>
 						<colordiffuse>AAFFFFFF</colordiffuse>
 					</control>
 					<control type="list" id="49">
-						<left>{{ScaleX('290')}}</left>
-						<top>{{ScaleY('-4')}}</top>
-						<width>{{ScaleX('740')}}</width>
-						<height>{{ScaleY('390')}}</height>
+						<left>290</left>
+						<top>-4</top>
+						<width>740</width>
+						<height>390</height>
 						<onleft>49</onleft>
 						<onright>49</onright>
 						<onup>9000</onup>
 						<ondown>61</ondown>
 						<pagecontrol>-</pagecontrol>
 						<scrolltime>200</scrolltime>
-						<itemlayout height="{{ScaleY('30')}}">
+						<itemlayout height="30">
 							<control type="label">
-								<left>{{ScaleX('5')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('160')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>5</left>
+								<top>0</top>
+								<width>160</width>
+								<height>30</height>
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -156,10 +156,10 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>{{ScaleX('175')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('565')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>175</left>
+								<top>0</top>
+								<width>565</width>
+								<height>30</height>
 								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -168,21 +168,21 @@
 								<info>ListItem.Label2</info>
 							</control>
 						</itemlayout>
-						<focusedlayout height="{{ScaleY('30')}}">
+						<focusedlayout height="30">
 							<control type="image">
-								<left>{{ScaleX('0')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('740')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>0</left>
+								<top>0</top>
+								<width>740</width>
+								<height>30</height>
 								<visible>Control.HasFocus(49)</visible>
 								<texture>MenuItemFO.png</texture>
 								<include>VisibleFadeEffect</include>
 							</control>
 							<control type="label">
-								<left>{{ScaleX('5')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('160')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>5</left>
+								<top>0</top>
+								<width>160</width>
+								<height>30</height>
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -191,10 +191,10 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>{{ScaleX('175')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('565')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>175</left>
+								<top>0</top>
+								<width>565</width>
+								<height>30</height>
 								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -285,55 +285,55 @@
 						</content>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('290')}}</left>
-						<top>{{ScaleY('382')}}</top>
-						<width>{{ScaleX('740')}}</width>
-						<height>{{ScaleY('4')}}</height>
+						<left>290</left>
+						<top>382</top>
+						<width>740</width>
+						<height>4</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>separator.png</texture>
 					</control>
 				</control>
 				<control type="group">
 					<visible>String.IsEqual(ListItem.DBTYPE,tvshow) + !Control.HasFocus(12)</visible>
-					<top>{{ScaleY('90')}}</top>
-					<left>{{ScaleX('210')}}</left>
+					<top>90</top>
+					<left>210</left>
 					<include>VisibleFadeEffect</include>
 					<control type="image">
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('270')}}</width>
-						<height>{{ScaleY('380')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>270</width>
+						<height>380</height>
 						<aspectratio>stretch</aspectratio>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>4</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('4')}}</left>
-						<top>{{ScaleY('4')}}</top>
-						<width>{{ScaleX('200')}}</width>
-						<height>{{ScaleY('230')}}</height>
+						<left>4</left>
+						<top>4</top>
+						<width>200</width>
+						<height>230</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>GlassOverlay.png</texture>
 						<colordiffuse>AAFFFFFF</colordiffuse>
 					</control>
 					<control type="list" id="49">
-						<left>{{ScaleX('290')}}</left>
-						<top>{{ScaleY('20')}}</top>
-						<width>{{ScaleX('740')}}</width>
-						<height>{{ScaleY('330')}}</height>
+						<left>290</left>
+						<top>20</top>
+						<width>740</width>
+						<height>330</height>
 						<onleft>49</onleft>
 						<onright>49</onright>
 						<onup>9000</onup>
 						<ondown>61</ondown>
 						<pagecontrol>-</pagecontrol>
 						<scrolltime>200</scrolltime>
-						<itemlayout height="{{ScaleY('30')}}">
+						<itemlayout height="30">
 							<control type="label">
-								<left>{{ScaleX('5')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('160')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>5</left>
+								<top>0</top>
+								<width>160</width>
+								<height>30</height>
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -342,10 +342,10 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>{{ScaleX('175')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('565')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>175</left>
+								<top>0</top>
+								<width>565</width>
+								<height>30</height>
 								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -354,21 +354,21 @@
 								<info>ListItem.Label2</info>
 							</control>
 						</itemlayout>
-						<focusedlayout height="{{ScaleY('30')}}">
+						<focusedlayout height="30">
 							<control type="image">
-								<left>{{ScaleX('0')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('740')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>0</left>
+								<top>0</top>
+								<width>740</width>
+								<height>30</height>
 								<visible>Control.HasFocus(49)</visible>
 								<texture>MenuItemFO.png</texture>
 								<include>VisibleFadeEffect</include>
 							</control>
 							<control type="label">
-								<left>{{ScaleX('5')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('160')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>5</left>
+								<top>0</top>
+								<width>160</width>
+								<height>30</height>
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -377,10 +377,10 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>{{ScaleX('175')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('565')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>175</left>
+								<top>0</top>
+								<width>565</width>
+								<height>30</height>
 								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -435,56 +435,56 @@
 						</content>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('290')}}</left>
-						<top>{{ScaleY('370')}}</top>
-						<width>{{ScaleX('740')}}</width>
-						<height>{{ScaleY('4')}}</height>
+						<left>290</left>
+						<top>370</top>
+						<width>740</width>
+						<height>4</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>separator.png</texture>
 					</control>
 				</control>
 				<control type="group">
 					<visible>String.IsEqual(ListItem.DBTYPE,episode) + !Control.HasFocus(12)</visible>
-					<top>{{ScaleY('90')}}</top>
-					<left>{{ScaleX('210')}}</left>
+					<top>90</top>
+					<left>210</left>
 					<include>VisibleFadeEffect</include>
 					<control type="image">
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('380')}}</width>
-						<height>{{ScaleY('250')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>380</width>
+						<height>250</height>
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>4</bordersize>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('250')}}</top>
-						<width>{{ScaleX('380')}}</width>
-						<height>{{ScaleY('250')}}</height>
+						<left>0</left>
+						<top>250</top>
+						<width>380</width>
+						<height>250</height>
 						<aspectratio aligny="top">keep</aspectratio>
 						<bordertexture border="5" flipy="true" diffuse="diffuse_mirror2.png">button-nofocus.png</bordertexture>
 						<bordersize>4</bordersize>
 						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="list" id="49">
-						<left>{{ScaleX('390')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('640')}}</width>
-						<height>{{ScaleY('360')}}</height>
+						<left>390</left>
+						<top>0</top>
+						<width>640</width>
+						<height>360</height>
 						<onleft>49</onleft>
 						<onright>49</onright>
 						<onup>9000</onup>
 						<ondown>61</ondown>
 						<pagecontrol>-</pagecontrol>
 						<scrolltime>200</scrolltime>
-						<itemlayout height="{{ScaleY('30')}}">
+						<itemlayout height="30">
 							<control type="label">
-								<left>{{ScaleX('5')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('160')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>5</left>
+								<top>0</top>
+								<width>160</width>
+								<height>30</height>
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -493,10 +493,10 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>{{ScaleX('175')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('465')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>175</left>
+								<top>0</top>
+								<width>465</width>
+								<height>30</height>
 								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -505,21 +505,21 @@
 								<info>ListItem.Label2</info>
 							</control>
 						</itemlayout>
-						<focusedlayout height="{{ScaleY('30')}}">
+						<focusedlayout height="30">
 							<control type="image">
-								<left>{{ScaleX('0')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('640')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>0</left>
+								<top>0</top>
+								<width>640</width>
+								<height>30</height>
 								<visible>Control.HasFocus(49)</visible>
 								<texture>MenuItemFO.png</texture>
 								<include>VisibleFadeEffect</include>
 							</control>
 							<control type="label">
-								<left>{{ScaleX('5')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('160')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>5</left>
+								<top>0</top>
+								<width>160</width>
+								<height>30</height>
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -528,10 +528,10 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>{{ScaleX('175')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('465')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>175</left>
+								<top>0</top>
+								<width>465</width>
+								<height>30</height>
 								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -616,46 +616,46 @@
 						</content>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('290')}}</left>
-						<top>{{ScaleY('370')}}</top>
-						<width>{{ScaleX('740')}}</width>
-						<height>{{ScaleY('4')}}</height>
+						<left>290</left>
+						<top>370</top>
+						<width>740</width>
+						<height>4</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>separator.png</texture>
 					</control>
 				</control>
 				<control type="group">
 					<visible>String.IsEqual(ListItem.DBTYPE,musicvideo) + !Control.HasFocus(12)</visible>
-					<top>{{ScaleY('90')}}</top>
-					<left>{{ScaleX('210')}}</left>
+					<top>90</top>
+					<left>210</left>
 					<include>VisibleFadeEffect</include>
 					<control type="image">
-						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('380')}}</width>
-						<height>{{ScaleY('360')}}</height>
+						<left>0</left>
+						<top>0</top>
+						<width>380</width>
+						<height>360</height>
 						<aspectratio>keep</aspectratio>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>4</bordersize>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="list" id="49">
-						<left>{{ScaleX('390')}}</left>
-						<top>{{ScaleY('20')}}</top>
-						<width>{{ScaleX('640')}}</width>
-						<height>{{ScaleY('330')}}</height>
+						<left>390</left>
+						<top>20</top>
+						<width>640</width>
+						<height>330</height>
 						<onleft>49</onleft>
 						<onright>49</onright>
 						<onup>9000</onup>
 						<ondown>61</ondown>
 						<pagecontrol>-</pagecontrol>
 						<scrolltime>200</scrolltime>
-						<itemlayout height="{{ScaleY('30')}}">
+						<itemlayout height="30">
 							<control type="label">
-								<left>{{ScaleX('5')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('160')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>5</left>
+								<top>0</top>
+								<width>160</width>
+								<height>30</height>
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -664,10 +664,10 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>{{ScaleX('175')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('465')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>175</left>
+								<top>0</top>
+								<width>465</width>
+								<height>30</height>
 								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -676,21 +676,21 @@
 								<info>ListItem.Label2</info>
 							</control>
 						</itemlayout>
-						<focusedlayout height="{{ScaleY('30')}}">
+						<focusedlayout height="30">
 							<control type="image">
-								<left>{{ScaleX('0')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('640')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>0</left>
+								<top>0</top>
+								<width>640</width>
+								<height>30</height>
 								<visible>Control.HasFocus(49)</visible>
 								<texture>MenuItemFO.png</texture>
 								<include>VisibleFadeEffect</include>
 							</control>
 							<control type="label">
-								<left>{{ScaleX('5')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('160')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>5</left>
+								<top>0</top>
+								<width>160</width>
+								<height>30</height>
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -699,10 +699,10 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>{{ScaleX('175')}}</left>
-								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('465')}}</width>
-								<height>{{ScaleY('30')}}</height>
+								<left>175</left>
+								<top>0</top>
+								<width>465</width>
+								<height>30</height>
 								<font>font13</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -775,19 +775,19 @@
 						</content>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('390')}}</left>
-						<top>{{ScaleY('370')}}</top>
-						<width>{{ScaleX('640')}}</width>
-						<height>{{ScaleY('4')}}</height>
+						<left>390</left>
+						<top>370</top>
+						<width>640</width>
+						<height>4</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>separator.png</texture>
 					</control>
 				</control>
 				<control type="label">
-					<right>{{ScaleX('130')}}</right>
-					<top>{{ScaleY('480')}}</top>
-					<width>{{ScaleX('400')}}</width>
-					<height>{{ScaleY('30')}}</height>
+					<right>130</right>
+					<top>480</top>
+					<width>400</width>
+					<height>30</height>
 					<font>font13_title</font>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
@@ -798,10 +798,10 @@
 					<visible>Control.IsVisible(400)</visible>
 				</control>
 				<control type="label">
-					<right>{{ScaleX('130')}}</right>
-					<top>{{ScaleY('480')}}</top>
-					<width>{{ScaleX('400')}}</width>
-					<height>{{ScaleY('30')}}</height>
+					<right>130</right>
+					<top>480</top>
+					<width>400</width>
+					<height>30</height>
 					<font>font13_title</font>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
@@ -813,8 +813,8 @@
 				</control>
 				<control type="spincontrol" id="61">
 					<description>Next page button</description>
-					<left>{{ScaleX('120r')}}</left>
-					<top>{{ScaleY('485')}}</top>
+					<left>120r</left>
+					<top>485</top>
 					<subtype>page</subtype>
 					<font>-</font>
 					<onleft>61</onleft>
@@ -826,10 +826,10 @@
 				</control>
 				<control type="textbox" id="400">
 					<description>Description Value for Movies</description>
-					<left>{{ScaleX('210')}}</left>
-					<top>{{ScaleY('527')}}</top>
-					<width>{{ScaleX('1030')}}</width>
-					<height>{{ScaleY('120')}}</height>
+					<left>210</left>
+					<top>527</top>
+					<width>1030</width>
+					<height>120</height>
 					<font>font13</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>
@@ -840,19 +840,19 @@
 				</control>
 				<control type="image">
 					<description>Actor image</description>
-					<left>{{ScaleX('210')}}</left>
-					<top>{{ScaleY('480')}}</top>
-					<width>{{ScaleX('160')}}</width>
-					<height>{{ScaleY('160')}}</height>
+					<left>210</left>
+					<top>480</top>
+					<width>160</width>
+					<height>160</height>
 					<texture>$INFO[Container(50).Listitem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>Control.IsVisible(50)</visible>
 				</control>
 				<control type="panel" id="50">
-					<left>{{ScaleX('380')}}</left>
-					<top>{{ScaleY('520')}}</top>
-					<width>{{ScaleX('860')}}</width>
-					<height>{{ScaleY('120')}}</height>
+					<left>380</left>
+					<top>520</top>
+					<width>860</width>
+					<height>120</height>
 					<onleft>9000</onleft>
 					<onright>61</onright>
 					<onup>61</onup>
@@ -861,20 +861,20 @@
 					<pagecontrol>61</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<orientation>vertical</orientation>
-					<itemlayout height="{{ScaleY('40')}}" width="{{ScaleX('430')}}">
+					<itemlayout height="40" width="430">
 						<control type="image">
-							<left>{{ScaleX('0')}}</left>
-							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('430')}}</width>
-							<height>{{ScaleY('40')}}</height>
-							<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
+							<left>0</left>
+							<top>0</top>
+							<width>430</width>
+							<height>40</height>
+							<texture border="5">button-nofocus.png</texture>
 						</control>
 						<control type="label">
 							<description>Actor and Role</description>
-							<left>{{ScaleX('10')}}</left>
-							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('410')}}</width>
-							<height>{{ScaleY('40')}}</height>
+							<left>10</left>
+							<top>0</top>
+							<width>410</width>
+							<height>40</height>
 							<font>font12</font>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -882,29 +882,29 @@
 							<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, $LOCALIZE[20347] ,]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="{{ScaleY('40')}}" width="{{ScaleX('430')}}">
+					<focusedlayout height="40" width="430">
 						<control type="image">
-							<left>{{ScaleX('0')}}</left>
-							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('430')}}</width>
-							<height>{{ScaleY('40')}}</height>
+							<left>0</left>
+							<top>0</top>
+							<width>430</width>
+							<height>40</height>
 							<visible>!Control.HasFocus(50)</visible>
-							<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
+							<texture border="5">button-nofocus.png</texture>
 						</control>
 						<control type="image">
-							<left>{{ScaleX('0')}}</left>
-							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('430')}}</width>
-							<height>{{ScaleY('40')}}</height>
+							<left>0</left>
+							<top>0</top>
+							<width>430</width>
+							<height>40</height>
 							<visible>Control.HasFocus(50)</visible>
-							<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
+							<texture border="5">button-focus2.png</texture>
 						</control>
 						<control type="label">
 							<description>Actor and Role</description>
-							<left>{{ScaleX('10')}}</left>
-							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('410')}}</width>
-							<height>{{ScaleY('40')}}</height>
+							<left>10</left>
+							<top>0</top>
+							<width>410</width>
+							<height>40</height>
 							<font>font12</font>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -914,10 +914,10 @@
 					</focusedlayout>
 				</control>
 				<control type="grouplist" id="9000">
-					<left>{{ScaleX('210')}}</left>
-					<top>{{ScaleY('660')}}</top>
-					<width>{{ScaleX('1030')}}</width>
-					<height>{{ScaleY('40')}}</height>
+					<left>210</left>
+					<top>660</top>
+					<width>1030</width>
+					<height>40</height>
 					<itemgap>2</itemgap>
 					<align>center</align>
 					<orientation>horizontal</orientation>
@@ -929,8 +929,8 @@
 						<description>Play/browse to Show</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>208</label>
-						<alttexturefocus border="{{ScaleBorder('2')}}">button-focus.png</alttexturefocus>
-						<alttexturenofocus border="{{ScaleBorder('2')}}">button-nofocus.png</alttexturenofocus>
+						<alttexturefocus border="2">button-focus.png</alttexturefocus>
+						<alttexturenofocus border="2">button-nofocus.png</alttexturenofocus>
 						<altlabel>1024</altlabel>
 						<usealttexture>String.IsEqual(ListItem.DBTYPE,tvshow)</usealttexture>
 					</control>
