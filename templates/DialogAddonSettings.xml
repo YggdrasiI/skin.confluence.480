@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">3</defaultcontrol>
 	<coordinates>
-		<left>{{ScaleX('215')}}</left>
+		<left>{{ScaleX({{ 215 - ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/2 }})}}</left>
 		<top>{{ScaleY('60')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
@@ -12,9 +12,9 @@
 			<animation effect="fade" start="100" end="0" time="300" condition="[Window.Is(osdaudiosettings) | Window.Is(osdvideosettings)] + [Window.IsVisible(SliderDialog) | Window.IsVisible(OSDAudioDSPSettings) |  Window.IsVisible(FileBrowser)]">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="400" condition="Window.Is(osdaudiodspsettings) + Window.IsVisible(SliderDialog)">Conditional</animation>
 			<include content="DialogBackgroundCommons">
-				<param name="DialogBackgroundWidth" value="850" />
-				<param name="DialogBackgroundHeight" value="600" />
-				<param name="DialogHeaderWidth" value="720" />
+				<param name="DialogBackgroundWidth" value="{{ScaleX({{ 850 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
+				<param name="DialogBackgroundHeight" value="{{ScaleY('600')}}" />
+				<param name="DialogHeaderWidth" value="{{ScaleX({{ 720 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
 				<param name="DialogHeaderId" value="2" />
 				<param name="CloseButtonLeft" value="760" />
 				<param name="CloseButtonNav" value="10" />
@@ -23,7 +23,7 @@
 				<description>Categories Area</description>
 				<left>{{ScaleX('45')}}</left>
 				<top>{{ScaleY('70')}}</top>
-				<width>{{ScaleX('759')}}</width>
+				<width>{{ScaleX('{{ 759 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<itemgap>5</itemgap>
 				<align>center</align>
@@ -54,7 +54,7 @@
 			</control>
 			<control type="image">
 				<description>Has Next</description>
-				<left>{{ScaleX('805')}}</left>
+				<left>{{ScaleX('{{ 805 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 				<top>{{ScaleY('80')}}</top>
 				<width>{{ScaleX('20')}}</width>
 				<height>{{ScaleY('20')}}</height>
@@ -65,7 +65,7 @@
 				<description>control area</description>
 				<left>{{ScaleX('40')}}</left>
 				<top>{{ScaleY('120')}}</top>
-				<width>{{ScaleX('770')}}</width>
+				<width>{{ScaleX('{{ 770 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<height>{{ScaleY('380')}}</height>
 				<itemgap>5</itemgap>
 				<pagecontrol>60</pagecontrol>
@@ -75,7 +75,7 @@
 				<onright>60</onright>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>{{ScaleX('815')}}</left>
+				<left>{{ScaleX('{{ 815 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 				<top>{{ScaleY('120')}}</top>
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('380')}}</height>
@@ -99,7 +99,7 @@
 				<description>Default RadioButton</description>
 				<height>{{ScaleY('40')}}</height>
 				<font>font13</font>
-				<textwidth>695</textwidth>
+				<textwidth>{{ScaleX('{{ 695 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</textwidth>
 				<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
 			</control>
 			<control type="spincontrolex" id="9">
@@ -154,7 +154,7 @@
 				<control type="button" id="28">
 					<description>OK Button</description>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('200')}}</width>
+					<width>{{ScaleX('{{ 200 + ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/3 }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -166,8 +166,9 @@
 				</control>
 				<control type="button" id="29">
 					<description>Cancel Button</description>
+					<!--<left>{{ScaleX('{{ 210 + ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/3 }}')}}</left>-->
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('200')}}</width>
+					<width>{{ScaleX('{{ 200 + ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/3 }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -180,8 +181,9 @@
 				</control>
 				<control type="button" id="30">
 					<description>Settings Button</description>
+					<!--<left>{{ScaleX('{{ 2*210 + 2*({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/3 }}')}}</left>-->
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('200')}}</width>
+					<width>{{ScaleX('{{ 200 + ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/3 }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>

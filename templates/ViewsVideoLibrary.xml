@@ -90,8 +90,8 @@
 				<width>{{ScaleX('880')}}</width>
 				<height>{{ScaleY('25')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('14,0,14,0')}}">ScrollBarH.png</texturesliderbackground>
-				<texturesliderbar border="14,0,14,0">ScrollBarH_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="14,0,14,0">ScrollBarH_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('14,0,14,0')}}">ScrollBarH_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('14,0,14,0')}}">ScrollBarH_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onup>501</onup>
@@ -416,8 +416,8 @@
 				<width>{{ScaleX('660')}}</width>
 				<height>{{ScaleY('25')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('14,0,14,0')}}">ScrollBarH.png</texturesliderbackground>
-				<texturesliderbar border="14,0,14,0">ScrollBarH_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="14,0,14,0">ScrollBarH_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('14,0,14,0')}}">ScrollBarH_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('14,0,14,0')}}">ScrollBarH_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onup>508</onup>
@@ -926,8 +926,8 @@
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('400')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>503</onleft>
@@ -1358,8 +1358,8 @@
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('560')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="10,14,10,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="10,14,10,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>504</onleft>
@@ -1704,8 +1704,8 @@
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('560')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="10,14,10,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="10,14,10,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>515</onleft>

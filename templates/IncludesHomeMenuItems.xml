@@ -147,6 +147,7 @@
 			<texture border="{{ScaleBorder('0,0,0,3')}}" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90112">
+			<width>{{ScaleX('{{ 50 + {HomeSubMenuWidth} }}')}}</width>
 			<include>ButtonHomeSubCommonValues</include>
 			<label>$INFO[Container(90110).ListItemNoWrap(0).Label]</label>
 			<onclick>ActivateWindow(Music,$INFO[Container(90110).ListItemNoWrap(0).FileNameAndPath],return)</onclick>

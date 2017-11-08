@@ -308,8 +308,8 @@
 					<width>{{ScaleX('25')}}</width>
 					<height>{{ScaleY('561')}}</height>
 					<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
-					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+					<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 					<textureslidernib>ScrollBarNib.png</textureslidernib>
 					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 					<onleft>450</onleft>

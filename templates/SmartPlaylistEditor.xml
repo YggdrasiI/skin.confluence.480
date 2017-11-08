@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">22</defaultcontrol>
 	<coordinates>
-		<left>{{ScaleX('240')}}</left>
+		<left>{{ScaleX('{{ 240 - ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/2 }}')}}</left>
 		<top>{{ScaleY('34')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
@@ -11,19 +11,19 @@
 			<visible>!Window.IsVisible(smartplaylistrule)</visible>
 			<include>VisibleFadeEffect</include>
 			<include content="DialogBackgroundCommons">
-				<param name="DialogBackgroundWidth" value="800" />
-				<param name="DialogBackgroundHeight" value="650" />
-				<param name="DialogHeaderWidth" value="720" />
+				<param name="DialogBackgroundWidth" value="{{ScaleX({{ 800 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
+				<param name="DialogBackgroundHeight" value="{{ScaleY('650')}}" />
+				<param name="DialogHeaderWidth" value="{{ScaleX({{ 720 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
 				<param name="DialogHeaderLabel" value="-" />
 				<param name="DialogHeaderId" value="2" />
-				<param name="CloseButtonLeft" value="710" />
+				<param name="CloseButtonLeft" value="{{ScaleX({{ 710 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
 				<param name="CloseButtonNav" value="22" />
 			</include>
 			<control type="button" id="22">
 				<description>Set Playlist type</description>
 				<left>{{ScaleX('30')}}</left>
 				<top>{{ScaleY('70')}}</top>
-				<width>{{ScaleX('740')}}</width>
+				<width>{{ScaleX('{{ 740 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<label>467</label>
 				<font>font13</font>
@@ -38,10 +38,10 @@
 				<description>Name Button</description>
 				<left>{{ScaleX('30')}}</left>
 				<top>{{ScaleY('120')}}</top>
-				<width>{{ScaleX('740')}}</width>
+				<width>{{ScaleX('{{ 740 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<textoffsetx>{{ScaleX('10')}}</textoffsetx>
-				<textwidth>720</textwidth>
+				<textwidth>{{ScaleX('{{ 720 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</textwidth>
 				<font>font13</font>
 				<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
 				<label>21433</label>
@@ -54,7 +54,7 @@
 				<description>rules label</description>
 				<left>{{ScaleX('30')}}</left>
 				<top>{{ScaleY('175')}}</top>
-				<width>{{ScaleX('740')}}</width>
+				<width>{{ScaleX('{{ 740 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<align>left</align>
 				<label>21434</label>
 				<font>font12</font>
@@ -65,24 +65,24 @@
 				<description>Rules List Control</description>
 				<left>{{ScaleX('30')}}</left>
 				<top>{{ScaleY('200')}}</top>
-				<width>{{ScaleX('550')}}</width>
+				<width>{{ScaleX('{{ 550 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<height>{{ScaleY('135')}}</height>
 				<onup>12</onup>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<ondown>16</ondown>
-				<itemlayout width="{{ScaleX('560')}}" height="{{ScaleY('45')}}">
+				<itemlayout width="{{ScaleX('{{ 560 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}" height="{{ScaleY('45')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('550')}}</width>
+						<width>{{ScaleX('{{ 550 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('10')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('530')}}</width>
+						<width>{{ScaleX('{{ 530 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
@@ -90,11 +90,11 @@
 						<font>font13</font>
 					</control>
 				</itemlayout>
-				<focusedlayout width="{{ScaleX('560')}}" height="{{ScaleY('45')}}">
+				<focusedlayout width="{{ScaleX('{{ 560 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}" height="{{ScaleY('45')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('550')}}</width>
+						<width>{{ScaleX('{{ 550 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
 						<visible>Control.HasFocus(10)</visible>
@@ -102,7 +102,7 @@
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('550')}}</width>
+						<width>{{ScaleX('{{ 550 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 						<visible>!Control.HasFocus(10)</visible>
@@ -110,7 +110,7 @@
 					<control type="label">
 						<left>{{ScaleX('10')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('530')}}</width>
+						<width>{{ScaleX('{{ 530 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
@@ -120,7 +120,7 @@
 				</focusedlayout>
 			</control>
 			<control type="group" id="9000">
-				<left>{{ScaleX('590')}}</left>
+				<left>{{ScaleX('{{ 590 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 				<top>{{ScaleY('200')}}</top>
 				<control type="button" id="13">
 					<description>Add Rule Button</description>
@@ -221,7 +221,7 @@
 				<ondown>23</ondown>
 			</control>
 			<control type="button" id="19">
-				<left>{{ScaleX('590')}}</left>
+				<left>{{ScaleX('{{ 590 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 				<top>{{ScaleY('460')}}</top>
 				<width>{{ScaleX('180')}}</width>
 				<height>{{ScaleY('40')}}</height>
@@ -248,7 +248,7 @@
 				<ondown>9001</ondown>
 			</control>
 			<control type="radiobutton" id="24">
-				<left>{{ScaleX('590')}}</left>
+				<left>{{ScaleX('{{ 590 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 				<top>{{ScaleY('505')}}</top>
 				<width>{{ScaleX('180')}}</width>
 				<height>{{ScaleY('40')}}</height>
