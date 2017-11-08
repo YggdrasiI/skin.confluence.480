@@ -375,8 +375,8 @@
 					<font>font12</font>
 					<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
 					<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
-					<alttexturefocus border="5">button-focus2.png</alttexturefocus>
-					<alttexturenofocus border="5">button-nofocus.png</alttexturenofocus>
+					<alttexturefocus border="{{ScaleBorder('5')}}">button-focus2.png</alttexturefocus>
+					<alttexturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</alttexturenofocus>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>19024</label>

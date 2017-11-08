@@ -216,8 +216,8 @@
 				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonNoFocus.png</texturenofocus>
 				<usealttexture>!System.IsMaster</usealttexture>
-				<alttexturefocus border="25,5,25,5">ShutdownButtonFocus.png</alttexturefocus>
-				<alttexturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</alttexturenofocus>
+				<alttexturefocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonFocus.png</alttexturefocus>
+				<alttexturenofocus border="{{ScaleBorder('25,5,25,5')}}">ShutdownButtonNoFocus.png</alttexturenofocus>
 				<onclick>mastermode</onclick>
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>

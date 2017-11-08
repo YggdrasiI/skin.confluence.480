@@ -24,6 +24,7 @@ settings = {
                          "themes",
                          "tmp",
                          "xml",
+                         "TexturePacker*",
                          "__pycache__", "*.pyc",
                          ],
     # This files are required to rebuild the skin.
