@@ -57,6 +57,9 @@ docs/_build/
 
 # PyBuilder
 target/
+*.xbt
+TexturePacker
+TexturePackerBuild
 
 #Ipython Notebook
 .ipynb_checkpoints
@@ -68,3 +71,4 @@ target/
 
 # Compiled templates of skin
 out/
+tmp/
