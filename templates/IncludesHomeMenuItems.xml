@@ -2,9 +2,9 @@
 <includes>
 	<include name="HomeSubMenuVideos">
 		<control type="image" id="90101">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90102">
 			<include>ButtonHomeSubCommonValues</include>
@@ -41,16 +41,16 @@
 			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
 		</control>
 		<control type="image" id="90108">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}">HomeSubEnd.png</texture>
 		</control>
 	</include>
 	<include name="HomeSubMenuMovies">
 		<control type="image" id="90161">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90162">
 			<include>ButtonHomeSubCommonValues</include>
@@ -88,16 +88,16 @@
 			<visible>!String.IsEmpty(Container(90160).ListItemNoWrap(5).Label)</visible>
 		</control>
 		<control type="image" id="90168">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}">HomeSubEnd.png</texture>
 		</control>
 	</include>
 	<include name="HomeSubMenuTVShows">
 		<control type="image" id="90171">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90172">
 			<include>ButtonHomeSubCommonValues</include>
@@ -135,16 +135,16 @@
 			<visible>!String.IsEmpty(Container(90170).ListItemNoWrap(5).Label)</visible>
 		</control>
 		<control type="image" id="90178">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}">HomeSubEnd.png</texture>
 		</control>
 	</include>
 	<include name="HomeSubMenuMusic">
 		<control type="image" id="90111">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90112">
 			<include>ButtonHomeSubCommonValues</include>
@@ -182,16 +182,16 @@
 			<visible>!String.IsEmpty(Container(90110).ListItemNoWrap(5).Label)</visible>
 		</control>
 		<control type="image" id="90119">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}">HomeSubEnd.png</texture>
 		</control>
 	</include>
 	<include name="HomeSubMenuSystem">
 		<control type="image" id="90121">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90122">
 			<include>ButtonHomeSubCommonValues</include>
@@ -220,16 +220,16 @@
 			<visible>system.getbool(eventlog.enabled)</visible>
 		</control>
 		<control type="image" id="90127">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}">HomeSubEnd.png</texture>
 		</control>
 	</include>
 	<include name="HomeSubMenuPlayDisc">
 		<control type="image" id="90131">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90132">
 			<include>ButtonHomeSubCommonValues</include>
@@ -238,16 +238,16 @@
 			<onclick>EjectTray()</onclick>
 		</control>
 		<control type="image" id="90133">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}">HomeSubEnd.png</texture>
 		</control>
 	</include>
 	<include name="HomeSubMenuPictures">
 		<control type="image" id="90147">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90148">
 			<include>ButtonHomeSubCommonValues</include>
@@ -255,16 +255,16 @@
 			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
 		</control>
 		<control type="image" id="90149">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}">HomeSubEnd.png</texture>
 		</control>
 	</include>
 	<include name="HomeSubMenuTV">
 		<control type="image" id="90141">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90143">
 			<include>ButtonHomeSubCommonValues</include>
@@ -297,16 +297,16 @@
 			<onclick>ActivateWindow(TVSearch)</onclick>
 		</control>
 		<control type="image" id="90149">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}">HomeSubEnd.png</texture>
 		</control>
 	</include>
 	<include name="HomeSubMenuRadio">
 		<control type="image" id="90141">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90243">
 			<include>ButtonHomeSubCommonValues</include>
@@ -339,9 +339,9 @@
 			<onclick>ActivateWindow(RadioSearch)</onclick>
 		</control>
 		<control type="image" id="90249">
-			<width>35</width>
-			<height>35</height>
-			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+			<width>{{ScaleX('35')}}</width>
+			<height>{{ScaleY('35')}}</height>
+			<texture border="{{ScaleBorder('0,0,0,3')}}">HomeSubEnd.png</texture>
 		</control>
 	</include>
 	<include name="HomeAddonItemsVideos">

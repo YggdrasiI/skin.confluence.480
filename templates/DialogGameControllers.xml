@@ -2,8 +2,8 @@
 <window>
 	<defaultcontrol>3</defaultcontrol>
 	<coordinates>
-		<left>80</left>
-		<top>60</top>
+		<left>{{ScaleX('80')}}</left>
+		<top>{{ScaleY('60')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -17,14 +17,14 @@
 			<param name="CloseButtonNav" value="3" />
 		</include>
 		<control type="group" id="9000">
-			<left>20</left>
-			<top>60</top>
+			<left>{{ScaleX('20')}}</left>
+			<top>{{ScaleY('60')}}</top>
 			<control type="label">
 				<description>Controller types heading</description>
-				<top>5</top>
-				<left>30</left>
-				<width>220</width>
-				<height>25</height>
+				<top>{{ScaleY('5')}}</top>
+				<left>{{ScaleX('30')}}</left>
+				<width>{{ScaleX('220')}}</width>
+				<height>{{ScaleY('25')}}</height>
 				<font>font12</font>
 				<label>35050</label>
 				<align>center</align>
@@ -33,11 +33,11 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="scrollbar" id="30">
-				<left>0</left>
-				<top>40</top>
-				<width>25</width>
-				<height>405</height>
-				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('40')}}</top>
+				<width>{{ScaleX('25')}}</width>
+				<height>{{ScaleY('405')}}</height>
+				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>-</textureslidernib>
@@ -51,10 +51,10 @@
 			</control>
 			<control type="grouplist" id="3">
 				<description>Controller types grouplist</description>
-				<left>30</left>
-				<top>40</top>
-				<width>220</width>
-				<height>405</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('40')}}</top>
+				<width>{{ScaleX('220')}}</width>
+				<height>{{ScaleY('405')}}</height>
 				<onleft>30</onleft>
 				<onright>5</onright>
 				<onup>9001</onup>
@@ -63,8 +63,8 @@
 			</control>
 			<control type="button" id="10">
 				<description>Default controller types button</description>
-				<height>40</height>
-				<width>220</width>
+				<height>{{ScaleY('40')}}</height>
+				<width>{{ScaleX('220')}}</width>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>
@@ -72,18 +72,18 @@
 				<pulseonselect>false</pulseonselect>
 			</control>
 			<control type="gamecontroller" id="31">
-				<left>300</left>
-				<top>90</top>
-				<width>480</width>
-				<height>286</height>
+				<left>{{ScaleX('300')}}</left>
+				<top>{{ScaleY('90')}}</top>
+				<width>{{ScaleX('480')}}</width>
+				<height>{{ScaleY('286')}}</height>
 				<include>VisibleFadeEffect</include>
 			</control>
 			<control type="label">
 				<description>Feature types heading</description>
-				<top>5</top>
-				<left>828</left>
-				<width>220</width>
-				<height>25</height>
+				<top>{{ScaleY('5')}}</top>
+				<left>{{ScaleX('828')}}</left>
+				<width>{{ScaleX('220')}}</width>
+				<height>{{ScaleY('25')}}</height>
 				<font>font12</font>
 				<label>35059</label>
 				<align>center</align>
@@ -92,11 +92,11 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="scrollbar" id="50">
-				<left>1053</left>
-				<top>40</top>
-				<width>25</width>
-				<height>405</height>
-				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<left>{{ScaleX('1053')}}</left>
+				<top>{{ScaleY('40')}}</top>
+				<width>{{ScaleX('25')}}</width>
+				<height>{{ScaleY('405')}}</height>
+				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>-</textureslidernib>
@@ -110,10 +110,10 @@
 			</control>
 			<control type="grouplist" id="5">
 				<description>Feature types grouplist</description>
-				<left>828</left>
-				<top>40</top>
-				<width>220</width>
-				<height>405</height>
+				<left>{{ScaleX('828')}}</left>
+				<top>{{ScaleY('40')}}</top>
+				<width>{{ScaleX('220')}}</width>
+				<height>{{ScaleY('405')}}</height>
 				<onleft>3</onleft>
 				<onright>50</onright>
 				<onup>9001</onup>
@@ -122,8 +122,8 @@
 			</control>
 			<control type="button" id="7">
 				<description>Default feature types button</description>
-				<height>40</height>
-				<width>220</width>
+				<height>{{ScaleY('40')}}</height>
+				<width>{{ScaleX('220')}}</width>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>
@@ -132,8 +132,8 @@
 			</control>
 			<control type="label" id="8">
 				<description>Default feature types label</description>
-				<height>40</height>
-				<width>220</width>
+				<height>{{ScaleY('40')}}</height>
+				<width>{{ScaleX('220')}}</width>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>
@@ -142,18 +142,18 @@
 			</control>
 		</control>
 		<control type="group" id="9001">
-			<left>145</left>
-			<top>525</top>
+			<left>{{ScaleX('145')}}</left>
+			<top>{{ScaleY('525')}}</top>
 			<control type="button" id="18">
 				<description>Ok Button</description>
-				<left>0</left>
-				<top>0</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
 				<label>186</label>
 				<font>font12_title</font>
 				<onleft>17</onleft>
@@ -163,14 +163,14 @@
 			</control>
 			<control type="button" id="19">
 				<description>Reset Button</description>
-				<left>210</left>
-				<top>0</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('210')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('5')}}">button-nofocus.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
 				<label>10035</label>
 				<font>font12_title</font>
 				<onleft>18</onleft>
@@ -180,10 +180,10 @@
 			</control>
 			<control type="button" id="20">
 				<description>Link to install more controllers</description>
-				<left>420</left>
-				<top>0</top>
-				<height>40</height>
-				<width>200</width>
+				<left>{{ScaleX('420')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<height>{{ScaleY('40')}}</height>
+				<width>{{ScaleX('200')}}</width>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>
@@ -197,10 +197,10 @@
 			</control>
 			<control type="button" id="17">
 				<description>Help button</description>
-				<left>630</left>
-				<top>0</top>
-				<height>40</height>
-				<width>200</width>
+				<left>{{ScaleX('630')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<height>{{ScaleY('40')}}</height>
+				<width>{{ScaleX('200')}}</width>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>

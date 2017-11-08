@@ -2,8 +2,8 @@
 <window>
 	<defaultcontrol>10</defaultcontrol>
 	<coordinates>
-		<left>240</left>
-		<top>140</top>
+		<left>{{ScaleX('240')}}</left>
+		<top>{{ScaleY('140')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -18,10 +18,10 @@
 		</include>
 		<control type="label" id="3">
 			<description>List label</description>
-			<left>20</left>
-			<top>65</top>
-			<width>760</width>
-			<height>30</height>
+			<left>{{ScaleX('20')}}</left>
+			<top>{{ScaleY('65')}}</top>
+			<width>{{ScaleX('760')}}</width>
+			<height>{{ScaleY('30')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font12</font>
@@ -29,29 +29,29 @@
 			<shadowcolor>black</shadowcolor>
 		</control>
 		<control type="list" id="10">
-			<left>30</left>
-			<top>105</top>
-			<width>520</width>
-			<height>225</height>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('105')}}</top>
+			<width>{{ScaleX('520')}}</width>
+			<height>{{ScaleY('225')}}</height>
 			<onup>9001</onup>
 			<onleft>9000</onleft>
 			<onright>60</onright>
 			<ondown>9001</ondown>
 			<pagecontrol>60</pagecontrol>
 			<scrolltime>200</scrolltime>
-			<itemlayout height="45">
+			<itemlayout height="{{ScaleY('45')}}">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>520</width>
-					<height>40</height>
-					<texture border="5">button-nofocus.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('520')}}</width>
+					<height>{{ScaleY('40')}}</height>
+					<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 				</control>
 				<control type="label">
-					<left>10</left>
-					<top>0</top>
-					<width>500</width>
-					<height>40</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('500')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -60,28 +60,28 @@
 					<info>ListItem.Label</info>
 				</control>
 			</itemlayout>
-			<focusedlayout height="45">
+			<focusedlayout height="{{ScaleY('45')}}">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>520</width>
-					<height>40</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('520')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<visible>!Control.HasFocus(10)</visible>
-					<texture border="5">button-nofocus.png</texture>
+					<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>520</width>
-					<height>40</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('520')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<visible>Control.hasfocus(14) | Control.HasFocus(10)</visible>
-					<texture border="5">button-focus2.png</texture>
+					<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
 				</control>
 				<control type="label">
-					<left>10</left>
-					<top>0</top>
-					<width>500</width>
-					<height>40</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('500')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -91,11 +91,11 @@
 			</focusedlayout>
 		</control>
 		<control type="scrollbar" id="60">
-			<left>552</left>
-			<top>105</top>
-			<width>25</width>
-			<height>225</height>
-			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+			<left>{{ScaleX('552')}}</left>
+			<top>{{ScaleY('105')}}</top>
+			<width>{{ScaleX('25')}}</width>
+			<height>{{ScaleY('225')}}</height>
+			<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
 			<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 			<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 			<textureslidernib>ScrollBarNib.png</textureslidernib>
@@ -106,14 +106,14 @@
 			<orientation>vertical</orientation>
 		</control>
 		<control type="group" id="9000">
-			<left>580</left>
-			<top>105</top>
+			<left>{{ScaleX('580')}}</left>
+			<top>{{ScaleY('105')}}</top>
 			<control type="button" id="11">
 				<description>Change Set Button</description>
-				<left>0</left>
-				<top>0</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<font>font12_title</font>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -124,10 +124,10 @@
 			</control>
 			<control type="button" id="13">
 				<description>Add Button</description>
-				<left>0</left>
-				<top>45</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('45')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<font>font12_title</font>
 				<label>15019</label>
 				<align>center</align>
@@ -139,10 +139,10 @@
 			</control>
 			<control type="button" id="14">
 				<description>Remove Button</description>
-				<left>0</left>
-				<top>90</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('90')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<font>font12_title</font>
 				<label>1210</label>
 				<align>center</align>
@@ -156,10 +156,10 @@
 		<control type="group" id="9001">
 			<control type="button" id="18">
 				<description>Ok Button</description>
-				<left>200</left>
-				<top>355</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('200')}}</left>
+				<top>{{ScaleY('355')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>186</label>
@@ -171,10 +171,10 @@
 			</control>
 			<control type="button" id="19">
 				<description>Cancel Button</description>
-				<left>410</left>
-				<top>355</top>
-				<width>200</width>
-				<height>40</height>
+				<left>{{ScaleX('410')}}</left>
+				<top>{{ScaleY('355')}}</top>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>222</label>

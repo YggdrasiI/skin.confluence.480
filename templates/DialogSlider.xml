@@ -2,26 +2,26 @@
 <window>
 	<depth>DepthDialog+</depth>
 	<defaultcontrol>11</defaultcontrol>
-	<animation effect="slide" start="0,-80" end="0,0" time="75">WindowOpen</animation>
-	<animation effect="slide" start="0,0" end="0,-80" time="75">WindowClose</animation>
+	<animation effect="slide" start="{{ScaleBorder2('0,-80')}}" end="{{ScaleBorder2('0,0')}}" time="75">WindowOpen</animation>
+	<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,-80')}}" time="75">WindowClose</animation>
 	<coordinates>
-		<left>405</left>
-		<top>0</top>
+		<left>{{ScaleX('405')}}</left>
+		<top>{{ScaleY('0')}}</top>
 	</coordinates>
 	<controls>
 		<control type="image">
-			<left>0</left>
-			<top>-10</top>
-			<width>460</width>
-			<height>80</height>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('-10')}}</top>
+			<width>{{ScaleX('460')}}</width>
+			<height>{{ScaleY('80')}}</height>
 			<texture flipy="true" border="20,2,20,20">InfoMessagePanel.png</texture>
 		</control>
 		<control type="label" id="10">
 			<description>Dialog header</description>
-			<left>20</left>
-			<top>10</top>
-			<width>230</width>
-			<height>20</height>
+			<left>{{ScaleX('20')}}</left>
+			<top>{{ScaleY('10')}}</top>
+			<width>{{ScaleX('230')}}</width>
+			<height>{{ScaleY('20')}}</height>
 			<align>left</align>
 			<aligny>center</aligny>
 			<font>font12_title</font>
@@ -29,10 +29,10 @@
 		</control>
 		<control type="label" id="12">
 			<description>Slider Value</description>
-			<left>220</left>
-			<top>10</top>
-			<width>220</width>
-			<height>20</height>
+			<left>{{ScaleX('220')}}</left>
+			<top>{{ScaleY('10')}}</top>
+			<width>{{ScaleX('220')}}</width>
+			<height>{{ScaleY('20')}}</height>
 			<align>right</align>
 			<aligny>center</aligny>
 			<font>font12_title</font>
@@ -40,10 +40,10 @@
 		</control>
 		<control type="slider" id="11">
 			<description>Slider</description>
-			<left>20</left>
-			<top>35</top>
-			<width>420</width>
-			<height>20</height>
+			<left>{{ScaleX('20')}}</left>
+			<top>{{ScaleY('35')}}</top>
+			<width>{{ScaleX('420')}}</width>
+			<height>{{ScaleY('20')}}</height>
 			<aligny>center</aligny>
 			<texturefocus>-</texturefocus>
 			<texturenofocus>-</texturenofocus>

@@ -5,33 +5,33 @@
 	<include>dialogeffect</include>
 	<depth>DepthOSD</depth>
 	<coordinates>
-		<left>0</left>
-		<top>0</top>
+		<left>{{ScaleX('0')}}</left>
+		<top>{{ScaleY('0')}}</top>
 	</coordinates>
 	<controls>
 		<control type="button">
 			<description>Close Window button</description>
-			<left>84r</left>
-			<top>0</top>
-			<width>64</width>
-			<height>32</height>
+			<left>{{ScaleX('84r')}}</left>
+			<top>{{ScaleY('0')}}</top>
+			<width>{{ScaleX('64')}}</width>
+			<height>{{ScaleY('32')}}</height>
 			<label>-</label>
 			<font>-</font>
 			<onclick>Dialog.Close(VideoOSD,true)</onclick>
 			<onclick>FullScreen</onclick>
 			<texturefocus>DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
-			<animation effect="slide" start="0,0" end="-30,0" time="0" condition="Player.Muted">conditional</animation>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-30,0')}}" time="0" condition="Player.Muted">conditional</animation>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<visible>system.getbool(input.enablemouse) + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 		</control>
 		<control type="slider" id="87">
 			<depth>DepthOSD+</depth>
 			<description>Seek Slider</description>
-			<left>430</left>
-			<top>82r</top>
-			<width>720</width>
-			<height>16</height>
+			<left>{{ScaleX('430')}}</left>
+			<top>{{ScaleY('82r')}}</top>
+			<width>{{ScaleX('720')}}</width>
+			<height>{{ScaleY('16')}}</height>
 			<onup>702</onup>
 			<ondown>26</ondown>
 			<action>seek</action>
@@ -42,15 +42,15 @@
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV)]</visible>
 		</control>
 		<control type="grouplist" id="100">
-			<left>325</left>
-			<top>60r</top>
+			<left>{{ScaleX('325')}}</left>
+			<top>{{ScaleY('60r')}}</top>
 			<orientation>horizontal</orientation>
 			<itemgap>0</itemgap>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<control type="button" id="300">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>210</label>
 				<font>-</font>
 				<texturefocus>OSDChannelUPFO.png</texturefocus>
@@ -59,8 +59,8 @@
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="301">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>209</label>
 				<font>-</font>
 				<texturefocus>OSDChannelDownFO.png</texturefocus>
@@ -69,8 +69,8 @@
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="200">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>210</label>
 				<font>-</font>
 				<texturefocus>OSDPrevTrackFO.png</texturefocus>
@@ -79,8 +79,8 @@
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="201">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>31354</label>
 				<font>-</font>
 				<texturefocus>OSDRewindFO.png</texturefocus>
@@ -93,8 +93,8 @@
 				<onclick condition="Player.IsTempo + Player.TempoEnabled">PlayerControl(TempoDown)</onclick>
 			</control>
 			<control type="togglebutton" id="202">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>31351</label>
 				<altlabel>208</altlabel>
 				<font>-</font>
@@ -108,8 +108,8 @@
 				<animation effect="fade" start="100" end="50" time="75" condition="!Player.PauseEnabled">Conditional</animation>
 			</control>
 			<control type="button" id="203">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>31352</label>
 				<font>-</font>
 				<texturefocus>OSDStopFO.png</texturefocus>
@@ -117,8 +117,8 @@
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
 			<control type="button" id="204">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>31353</label>
 				<font>-</font>
 				<texturefocus>OSDForwardFO.png</texturefocus>
@@ -131,8 +131,8 @@
 				<onclick condition="Player.IsTempo + Player.TempoEnabled">PlayerControl(TempoUp)</onclick>
 			</control>
 			<control type="button" id="205">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>209</label>
 				<font>-</font>
 				<texturefocus>OSDNextTrackFO.png</texturefocus>
@@ -141,8 +141,8 @@
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="306">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>19019</label>
 				<font>-</font>
 				<texturefocus>OSDChannelListFO.png</texturefocus>
@@ -152,8 +152,8 @@
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="307">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>$LOCALIZE[19029]$INFO[VideoPlayer.ChannelName, - ]</label>
 				<font>-</font>
 				<texturefocus>OSDepgFO.png</texturefocus>
@@ -163,8 +163,8 @@
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="350">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>31356</label>
 				<font>-</font>
 				<texturefocus>OSDTeleTextFO.png</texturefocus>
@@ -173,25 +173,25 @@
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image" id="2200">
-				<width>270</width>
+				<width>{{ScaleX('270')}}</width>
 				<texture>-</texture>
 				<visible>VideoPlayer.HasMenu + !VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image" id="2300">
-				<width>160</width>
+				<width>{{ScaleX('160')}}</width>
 				<texture>-</texture>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image" id="2600">
-				<width>325</width>
+				<width>{{ScaleX('325')}}</width>
 				<texture>-</texture>
 				<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.HasMenu</visible>
 			</control>
 			<control type="button" id="255">
 				<enable>VideoPlayer.IsStereoscopic</enable>
 				<animation effect="fade" start="100" end="0" time="75" condition="!VideoPlayer.IsStereoscopic">Conditional</animation>
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>36501</label>
 				<font>-</font>
 				<texturefocus>OSDStereoscopicFO.png</texturefocus>
@@ -199,8 +199,8 @@
 				<onup>501</onup>
 			</control>
 			<control type="button" id="250">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>31356</label>
 				<font>-</font>
 				<texturefocus>OSDSubtitlesFO.png</texturefocus>
@@ -208,8 +208,8 @@
 				<onup>404</onup>
 			</control>
 			<control type="button" id="251">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>13395</label>
 				<font>-</font>
 				<texturefocus>OSDVideoFO.png</texturefocus>
@@ -217,8 +217,8 @@
 				<onclick>ActivateWindow(OSDVideoSettings)</onclick>
 			</control>
 			<control type="togglebutton" id="252">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>13396</label>
 				<font>-</font>
 				<texturefocus>OSDAudioFO.png</texturefocus>
@@ -229,8 +229,8 @@
 				<onclick>ActivateWindow(OSDAudioSettings)</onclick>
 			</control>
 			<control type="button" id="253">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>298</label>
 				<font>-</font>
 				<texturefocus>OSDBookmarksFO.png</texturefocus>
@@ -239,8 +239,8 @@
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="254">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>31355</label>
 				<font>-</font>
 				<texturefocus>OSDDvdFO.png</texturefocus>
@@ -249,8 +249,8 @@
 				<visible>!VideoPlayer.Content(LiveTV) + VideoPlayer.HasMenu</visible>
 			</control>
 			<control type="togglebutton" id="353">
-				<width>55</width>
-				<height>55</height>
+				<width>{{ScaleX('55')}}</width>
+				<height>{{ScaleY('55')}}</height>
 				<label>264</label>
 				<altlabel>265</altlabel>
 				<font>-</font>
@@ -267,29 +267,29 @@
 		</control>
 		<control type="button" id="410">
 			<description>Fake button for mouse control</description>
-			<right>145</right>
+			<right>{{ScaleX('145')}}</right>
 			<bottom>60</bottom>
-			<width>256</width>
-			<height>250</height>
+			<width>{{ScaleX('256')}}</width>
+			<height>{{ScaleY('250')}}</height>
 			<label>-</label>
 			<font>-</font>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<animation effect="slide" start="0,0" end="55,0" time="0" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('55,0')}}" time="0" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
 			<visible>Control.HasFocus(410) | Control.HasFocus(250) | ControlGroup(400).HasFocus</visible>
 		</control>
 		<control type="grouplist" id="400">
 			<depth>DepthOSD+</depth>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 			<animation effect="fade" time="150">VisibleChange</animation>
-			<animation effect="slide" start="0,0" end="0,80" time="0" condition="![VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled]">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,40" time="0" condition="!VideoPlayer.HasSubtitles">Conditional</animation>
-			<animation effect="slide" start="0,0" end="55,0" time="0" condition="![VideoPlayer.HasMenu | VideoPlayer.Content(LiveTV)]">Conditional</animation>
-			<animation effect="slide" start="0,0" end="55,0" time="0" condition="!VideoPlayer.HasMenu + VideoPlayer.Content(LiveTV)">Conditional</animation>
-			<right>145</right>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,80')}}" time="0" condition="![VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled]">Conditional</animation>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,40')}}" time="0" condition="!VideoPlayer.HasSubtitles">Conditional</animation>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('55,0')}}" time="0" condition="![VideoPlayer.HasMenu | VideoPlayer.Content(LiveTV)]">Conditional</animation>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('55,0')}}" time="0" condition="!VideoPlayer.HasMenu + VideoPlayer.Content(LiveTV)">Conditional</animation>
+			<right>{{ScaleX('145')}}</right>
 			<bottom>45</bottom>
-			<width>256</width>
-			<height>260</height>
+			<width>{{ScaleX('256')}}</width>
+			<height>{{ScaleY('260')}}</height>
 			<itemgap>0</itemgap>
 			<onleft>400</onleft>
 			<onright>400</onright>
@@ -300,21 +300,21 @@
 			<include>VisibleFadeEffect</include>
 			<control type="group">
 				<description>Header</description>
-				<width>256</width>
-				<height>40</height>
+				<width>{{ScaleX('256')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<control type="image">
 					<description>Header</description>
-					<left>0</left>
-					<top>0</top>
-					<width>256</width>
-					<height>40</height>
-					<texture border="20,18,20,0">SubMenuBack-Header.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('256')}}</width>
+					<height>{{ScaleY('40')}}</height>
+					<texture border="{{ScaleBorder('20,18,20,0')}}">SubMenuBack-Header.png</texture>
 				</control>
 				<control type="label">
-					<left>30</left>
-					<top>20</top>
-					<width>196</width>
-					<height>15</height>
+					<left>{{ScaleX('30')}}</left>
+					<top>{{ScaleY('20')}}</top>
+					<width>{{ScaleX('196')}}</width>
+					<height>{{ScaleY('15')}}</height>
 					<font>font12</font>
 					<label>24012</label>
 					<textcolor>blue</textcolor>
@@ -324,16 +324,16 @@
 			</control>
 			<control type="togglebutton" id="401">
 				<description>Download with Subtitles script</description>
-				<height>40</height>
-				<width>256</width>
+				<height>{{ScaleY('40')}}</height>
+				<width>{{ScaleX('256')}}</width>
 				<font>font13</font>
 				<label>33003</label>
-				<textoffsetx>30</textoffsetx>
+				<textoffsetx>{{ScaleX('30')}}</textoffsetx>
 				<aligny>center</aligny>
-				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
-				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
-				<alttexturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</alttexturefocus>
-				<alttexturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</alttexturenofocus>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
+				<alttexturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</alttexturefocus>
+				<alttexturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</alttexturenofocus>
 				<onclick>Close</onclick>
 				<onclick>Dialog.Close(VideoOSD)</onclick>
 				<onclick>ActivateWindow(SubtitleSearch)</onclick>
@@ -341,41 +341,41 @@
 				<enable>!VideoPlayer.Content(LiveTV)</enable>
 			</control>
 			<control type="button" id="402">
-				<height>40</height>
-				<width>256</width>
+				<height>{{ScaleY('40')}}</height>
+				<width>{{ScaleX('256')}}</width>
 				<aligny>center</aligny>
 				<font>font13</font>
-				<textoffsetx>30</textoffsetx>
-				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
-				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
+				<textoffsetx>{{ScaleX('30')}}</textoffsetx>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
 				<pulseonselect>false</pulseonselect>
 				<label>22006</label>
 				<onclick>SubtitleDelay</onclick>
 				<visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</visible>
 			</control>
 			<control type="button" id="403">
-				<height>40</height>
-				<width>256</width>
+				<height>{{ScaleY('40')}}</height>
+				<width>{{ScaleX('256')}}</width>
 				<aligny>center</aligny>
 				<font>font13</font>
-				<textoffsetx>30</textoffsetx>
-				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
-				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
+				<textoffsetx>{{ScaleX('30')}}</textoffsetx>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
 				<pulseonselect>false</pulseonselect>
 				<label>209</label>
 				<onclick>CycleSubtitle</onclick>
 				<visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</visible>
 			</control>
 			<control type="radiobutton" id="404">
-				<height>40</height>
-				<width>256</width>
-				<textoffsetx>30</textoffsetx>
+				<height>{{ScaleY('40')}}</height>
+				<width>{{ScaleX('256')}}</width>
+				<textoffsetx>{{ScaleX('30')}}</textoffsetx>
 				<aligny>center</aligny>
 				<font>font13</font>
 				<label>449</label>
-				<radioposx>200</radioposx>
-				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
-				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
+				<radioposx>{{ScaleX('200')}}</radioposx>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
 				<onclick>ShowSubtitles</onclick>
 				<selected>VideoPlayer.SubtitlesEnabled</selected>
 				<visible>VideoPlayer.HasSubtitles</visible>
@@ -383,34 +383,34 @@
 			</control>
 			<control type="image" id="440">
 				<description>Footer</description>
-				<width>256</width>
-				<height>52</height>
-				<texture border="20,0,20,50">SubMenuBack-Footer.png</texture>
+				<width>{{ScaleX('256')}}</width>
+				<height>{{ScaleY('52')}}</height>
+				<texture border="{{ScaleBorder('20,0,20,50')}}">SubMenuBack-Footer.png</texture>
 			</control>
 		</control>
 		<control type="button" id="520">
 			<description>Fake button for mouse control</description>
-			<right>200</right>
+			<right>{{ScaleX('200')}}</right>
 			<bottom>60</bottom>
-			<width>256</width>
-			<height>210</height>
+			<width>{{ScaleX('256')}}</width>
+			<height>{{ScaleY('210')}}</height>
 			<label>-</label>
 			<font>-</font>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<animation effect="slide" start="0,0" end="55,0" time="0" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('55,0')}}" time="0" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
 			<visible>Control.HasFocus(520) | Control.HasFocus(255) | ControlGroup(500).HasFocus</visible>
 		</control>
 		<control type="grouplist" id="500">
 			<depth>DepthOSD+</depth>
 			<visible>videoplayer.isstereoscopic + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)] + [Control.HasFocus(255) | ControlGroup(500).HasFocus | Control.HasFocus(520)]</visible>
 			<animation effect="fade" time="150">VisibleChange</animation>
-			<animation effect="slide" start="0,0" end="55,0" time="0" condition="![VideoPlayer.HasMenu | VideoPlayer.Content(LiveTV)]">Conditional</animation>
-			<animation effect="slide" start="0,0" end="55,0" time="0" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
-			<right>200</right>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('55,0')}}" time="0" condition="![VideoPlayer.HasMenu | VideoPlayer.Content(LiveTV)]">Conditional</animation>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('55,0')}}" time="0" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
+			<right>{{ScaleX('200')}}</right>
 			<bottom>45</bottom>
-			<width>256</width>
-			<height>220</height>
+			<width>{{ScaleX('256')}}</width>
+			<height>{{ScaleY('220')}}</height>
 			<itemgap>0</itemgap>
 			<onleft>100</onleft>
 			<onright>100</onright>
@@ -420,21 +420,21 @@
 			<include>VisibleFadeEffect</include>
 			<control type="group">
 				<description>Header</description>
-				<width>256</width>
-				<height>40</height>
+				<width>{{ScaleX('256')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<control type="image">
 					<description>Header</description>
-					<left>0</left>
-					<top>0</top>
-					<width>256</width>
-					<height>40</height>
-					<texture border="20,18,20,0">SubMenuBack-Header.png</texture>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('256')}}</width>
+					<height>{{ScaleY('40')}}</height>
+					<texture border="{{ScaleBorder('20,18,20,0')}}">SubMenuBack-Header.png</texture>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>20</top>
-					<width>256</width>
-					<height>15</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('20')}}</top>
+					<width>{{ScaleX('256')}}</width>
+					<height>{{ScaleY('15')}}</height>
 					<font>font12</font>
 					<label>36501</label>
 					<textcolor>blue</textcolor>
@@ -443,50 +443,50 @@
 				</control>
 			</control>
 			<control type="radiobutton" id="503">
-				<height>40</height>
-				<width>256</width>
-				<textoffsetx>30</textoffsetx>
+				<height>{{ScaleY('40')}}</height>
+				<width>{{ScaleX('256')}}</width>
+				<textoffsetx>{{ScaleX('30')}}</textoffsetx>
 				<aligny>center</aligny>
 				<font>font13</font>
 				<label>31362</label>
-				<radioposx>200</radioposx>
-				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
-				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
+				<radioposx>{{ScaleX('200')}}</radioposx>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
 				<onclick>ToggleStereoMode</onclick>
 				<selected>Integer.IsGreater(System.StereoscopicMode,0)</selected>
 				<pulseonselect>false</pulseonselect>
 			</control>
 			<control type="button" id="502">
-				<height>40</height>
-				<width>256</width>
+				<height>{{ScaleY('40')}}</height>
+				<width>{{ScaleX('256')}}</width>
 				<aligny>center</aligny>
 				<font>font13</font>
-				<textoffsetx>30</textoffsetx>
-				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
-				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
+				<textoffsetx>{{ScaleX('30')}}</textoffsetx>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
 				<pulseonselect>false</pulseonselect>
 				<label>31361</label>
 				<onclick>StereoMode</onclick>
 			</control>
 			<control type="radiobutton" id="501">
-				<height>40</height>
-				<width>256</width>
-				<textoffsetx>30</textoffsetx>
+				<height>{{ScaleY('40')}}</height>
+				<width>{{ScaleX('256')}}</width>
+				<textoffsetx>{{ScaleX('30')}}</textoffsetx>
 				<aligny>center</aligny>
 				<font>font13</font>
 				<label>31360</label>
-				<radioposx>200</radioposx>
-				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
-				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
+				<radioposx>{{ScaleX('200')}}</radioposx>
+				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
 				<onclick>StereoModeToMono</onclick>
 				<selected>String.IsEqual(System.StereoscopicMode,9)</selected>
 				<pulseonselect>false</pulseonselect>
 			</control>
 			<control type="image" id="549">
 				<description>Footer</description>
-				<width>256</width>
-				<height>52</height>
-				<texture border="20,0,20,50">SubMenuBack-Footer.png</texture>
+				<width>{{ScaleX('256')}}</width>
+				<height>{{ScaleY('52')}}</height>
+				<texture border="{{ScaleBorder('20,0,20,50')}}">SubMenuBack-Footer.png</texture>
 			</control>
 		</control>
 	</controls>

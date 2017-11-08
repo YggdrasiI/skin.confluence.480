@@ -4,45 +4,45 @@
 	<controls>
 		<include>CommonBackground</include>
 		<control type="image">
-			<left>0</left>
-			<top>100r</top>
-			<width>1280</width>
-			<height>100</height>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('100r')}}</top>
+			<width>{{ScaleX('1280')}}</width>
+			<height>{{ScaleY('100')}}</height>
 			<texture>floor.png</texture>
-			<animation effect="slide" start="0,10" end="0,0" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,10" time="150" condition="Window.Next(Home)">WindowClose</animation>
+			<animation effect="slide" start="{{ScaleBorder2('0,10')}}" end="{{ScaleBorder2('0,0')}}" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,10')}}" time="150" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
 		<control type="group">
-			<left>90</left>
-			<top>30</top>
+			<left>{{ScaleX('90')}}</left>
+			<top>{{ScaleY('30')}}</top>
 			<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="225" />
+				<effect type="zoom" start="80" end="100" center="{{ScaleBorder2('640,360')}}" easing="out" tween="back" time="225" />
 				<effect type="fade" start="0" end="100" time="225" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="225" />
+				<effect type="zoom" start="100" end="80" center="{{ScaleBorder2('640,360')}}" easing="in" tween="back" time="225" />
 				<effect type="fade" start="100" end="0" time="225" />
 			</animation>
 			<control type="image">
-				<left>5</left>
-				<top>5</top>
-				<width>1090</width>
-				<height>630</height>
-				<texture border="15">ContentPanel.png</texture>
+				<left>{{ScaleX('5')}}</left>
+				<top>{{ScaleY('5')}}</top>
+				<width>{{ScaleX('1090')}}</width>
+				<height>{{ScaleY('630')}}</height>
+				<texture border="{{ScaleBorder('15')}}">ContentPanel.png</texture>
 			</control>
 			<control type="image">
-				<left>5</left>
-				<top>625</top>
-				<width>1090</width>
-				<height>64</height>
-				<texture border="15">ContentPanelMirror.png</texture>
+				<left>{{ScaleX('5')}}</left>
+				<top>{{ScaleY('625')}}</top>
+				<width>{{ScaleX('1090')}}</width>
+				<height>{{ScaleY('64')}}</height>
+				<texture border="{{ScaleBorder('15')}}">ContentPanelMirror.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>980</left>
-				<top>11</top>
-				<width>64</width>
-				<height>32</height>
+				<left>{{ScaleX('980')}}</left>
+				<top>{{ScaleY('11')}}</top>
+				<width>{{ScaleX('64')}}</width>
+				<height>{{ScaleY('32')}}</height>
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
@@ -56,37 +56,37 @@
 			</control>
 			<control type="image">
 				<description>LOGO</description>
-				<left>30</left>
-				<top>15</top>
-				<width>220</width>
-				<height>80</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('15')}}</top>
+				<width>{{ScaleX('220')}}</width>
+				<height>{{ScaleY('80')}}</height>
 				<aspectratio>keep</aspectratio>
 				<texture>Confluence_Logo.png</texture>
 			</control>
 			<control type="list" id="9000">
-				<left>10</left>
-				<top>82</top>
-				<width>260</width>
-				<height>541</height>
+				<left>{{ScaleX('10')}}</left>
+				<top>{{ScaleY('82')}}</top>
+				<width>{{ScaleX('260')}}</width>
+				<height>{{ScaleY('541')}}</height>
 				<onleft>9010</onleft>
 				<onright>9010</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
-				<itemlayout height="54" width="260">
+				<itemlayout height="{{ScaleY('54')}}" width="{{ScaleX('260')}}">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>260</width>
-						<height>55</height>
-						<texture border="5">MenuItemNF.png</texture>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('260')}}</width>
+						<height>{{ScaleY('55')}}</height>
+						<texture border="{{ScaleBorder('5')}}">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>240</width>
-						<height>55</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('240')}}</width>
+						<height>{{ScaleY('55')}}</height>
 						<font>font24_title</font>
 						<textcolor>grey3</textcolor>
 						<align>right</align>
@@ -94,20 +94,20 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="54" width="260">
+				<focusedlayout height="{{ScaleY('54')}}" width="{{ScaleX('260')}}">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>260</width>
-						<height>55</height>
-						<texture border="5">MenuItemFO.png</texture>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('260')}}</width>
+						<height>{{ScaleY('55')}}</height>
+						<texture border="{{ScaleBorder('5')}}">MenuItemFO.png</texture>
 						<animation effect="fade" start="100" end="30" time="75" condition="!Control.HasFocus(9000)">Conditional</animation>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>240</width>
-						<height>55</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('240')}}</width>
+						<height>{{ScaleY('55')}}</height>
 						<font>font24_title</font>
 						<textcolor>white</textcolor>
 						<align>right</align>
@@ -130,23 +130,23 @@
 			</control>
 			<control type="group">
 				<visible>Container(9000).Hasfocus(2)</visible>
-				<left>20</left>
-				<top>260</top>
+				<left>{{ScaleX('20')}}</left>
+				<top>{{ScaleY('260')}}</top>
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>240</width>
-					<height>200</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('240')}}</width>
+					<height>{{ScaleY('200')}}</height>
 					<aspectratio>keep</aspectratio>
 					<bordertexture border="12">ThumbBorder.png</bordertexture>
 					<bordersize>10</bordersize>
 					<texture fallback="DefaultUser.png">$INFO[Container(2).Listitem.Icon]</texture>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>210</top>
-					<width>240</width>
-					<height>20</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('210')}}</top>
+					<width>{{ScaleX('240')}}</width>
+					<height>{{ScaleY('20')}}</height>
 					<font>font12_title</font>
 					<textcolor>blue</textcolor>
 					<align>center</align>
@@ -154,10 +154,10 @@
 					<label>$LOCALIZE[31319]</label>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>235</top>
-					<width>240</width>
-					<height>20</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('235')}}</top>
+					<width>{{ScaleX('240')}}</width>
+					<height>{{ScaleY('20')}}</height>
 					<font>font13</font>
 					<textcolor>white</textcolor>
 					<align>center</align>
@@ -165,10 +165,10 @@
 					<label>$INFO[Container(2).ListItem.Label]</label>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>265</top>
-					<width>240</width>
-					<height>30</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('265')}}</top>
+					<width>{{ScaleX('240')}}</width>
+					<height>{{ScaleY('30')}}</height>
 					<font>font12_title</font>
 					<textcolor>blue</textcolor>
 					<align>center</align>
@@ -176,10 +176,10 @@
 					<label>$LOCALIZE[31320]</label>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>290</top>
-					<width>240</width>
-					<height>30</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('290')}}</top>
+					<width>{{ScaleX('240')}}</width>
+					<height>{{ScaleY('30')}}</height>
 					<font>font13</font>
 					<textcolor>white</textcolor>
 					<align>center</align>
@@ -188,25 +188,25 @@
 				</control>
 			</control>
 			<control type="image">
-				<left>268</left>
-				<top>10</top>
-				<width>790</width>
-				<height>618</height>
-				<texture border="5">black-back2.png</texture>
+				<left>{{ScaleX('268')}}</left>
+				<top>{{ScaleY('10')}}</top>
+				<width>{{ScaleX('790')}}</width>
+				<height>{{ScaleY('618')}}</height>
+				<texture border="{{ScaleBorder('5')}}">black-back2.png</texture>
 			</control>
 			<control type="image">
-				<left>268</left>
-				<top>10</top>
-				<width>790</width>
-				<height>52</height>
+				<left>{{ScaleX('268')}}</left>
+				<top>{{ScaleY('10')}}</top>
+				<width>{{ScaleX('790')}}</width>
+				<height>{{ScaleY('52')}}</height>
 				<texture>dialogheader.png</texture>
 			</control>
 			<control type="label">
 				<description>header label</description>
-				<left>300</left>
-				<top>20</top>
-				<width>726</width>
-				<height>30</height>
+				<left>{{ScaleX('300')}}</left>
+				<top>{{ScaleY('20')}}</top>
+				<width>{{ScaleX('726')}}</width>
+				<height>{{ScaleY('30')}}</height>
 				<font>font16</font>
 				<label>$LOCALIZE[13200] - $LOCALIZE[5]</label>
 				<align>center</align>
@@ -217,10 +217,10 @@
 			<control type="group" id="9010">
 				<control type="grouplist" id="9001">
 					<visible>Container(9000).Hasfocus(1)</visible>
-					<left>290</left>
-					<top>60</top>
-					<width>750</width>
-					<height>440</height>
+					<left>{{ScaleX('290')}}</left>
+					<top>{{ScaleY('60')}}</top>
+					<width>{{ScaleX('750')}}</width>
+					<height>{{ScaleY('440')}}</height>
 					<itemgap>-1</itemgap>
 					<pagecontrol>60</pagecontrol>
 					<onleft>9000</onleft>
@@ -229,8 +229,8 @@
 					<ondown>9001</ondown>
 					<control type="radiobutton" id="4">
 						<description>enable login screen</description>
-						<width>750</width>
-						<height>40</height>
+						<width>{{ScaleX('750')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>20096</label>
 						<textcolor>grey2</textcolor>
@@ -240,8 +240,8 @@
 					</control>
 					<control type="button" id="5">
 						<description>auto login</description>
-						<width>750</width>
-						<height>40</height>
+						<width>{{ScaleX('750')}}</width>
+						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>33084</label>
 						<label2>$INFO[System.ProfileAutoLogin]</label2>
@@ -254,25 +254,25 @@
 				</control>
 				<control type="group">
 					<visible>Container(9000).Hasfocus(1)</visible>
-					<left>290</left>
-					<top>500</top>
-					<width>750</width>
-					<height>40</height>
+					<left>{{ScaleX('290')}}</left>
+					<top>{{ScaleY('500')}}</top>
+					<width>{{ScaleX('750')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<control type="image">
 						<description>separator image</description>
-						<left>0</left>
-						<top>25</top>
-						<width>750</width>
-						<height>2</height>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('25')}}</top>
+						<width>{{ScaleX('750')}}</width>
+						<height>{{ScaleY('2')}}</height>
 						<texture>separator2.png</texture>
 						<colordiffuse>40FFFFFF</colordiffuse>
 					</control>
 					<control type="textbox">
 						<description>description area</description>
-						<left>7</left>
-						<top>32</top>
-						<width>736</width>
-						<height>83</height>
+						<left>{{ScaleX('7')}}</left>
+						<top>{{ScaleY('32')}}</top>
+						<width>{{ScaleX('736')}}</width>
+						<height>{{ScaleY('83')}}</height>
 						<font>font12</font>
 						<label>$LOCALIZE[31422]</label>
 						<align>justify</align>
@@ -282,10 +282,10 @@
 					</control>
 					<control type="textbox">
 						<description>description area</description>
-						<left>7</left>
-						<top>32</top>
-						<width>736</width>
-						<height>83</height>
+						<left>{{ScaleX('7')}}</left>
+						<top>{{ScaleY('32')}}</top>
+						<width>{{ScaleX('736')}}</width>
+						<height>{{ScaleY('83')}}</height>
 						<font>font12</font>
 						<label>$LOCALIZE[31423]</label>
 						<align>justify</align>
@@ -296,10 +296,10 @@
 				</control>
 				<control type="panel" id="2">
 					<visible>Container(9000).Hasfocus(2)</visible>
-					<left>290</left>
-					<top>72</top>
-					<width>760</width>
-					<height>540</height>
+					<left>{{ScaleX('290')}}</left>
+					<top>{{ScaleY('72')}}</top>
+					<width>{{ScaleX('760')}}</width>
+					<height>{{ScaleY('540')}}</height>
 					<onleft>9000</onleft>
 					<onright>60</onright>
 					<onup>9010</onup>
@@ -307,22 +307,22 @@
 					<viewtype label="21371">list</viewtype>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="180" width="190">
+					<itemlayout height="{{ScaleY('180')}}" width="{{ScaleX('190')}}">
 						<control type="image">
-							<left>1</left>
-							<top>0</top>
-							<width>188</width>
-							<height>145</height>
+							<left>{{ScaleX('1')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('188')}}</width>
+							<height>{{ScaleY('145')}}</height>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
-							<left>6</left>
-							<top>145</top>
-							<width>178</width>
-							<height>25</height>
+							<left>{{ScaleX('6')}}</left>
+							<top>{{ScaleY('145')}}</top>
+							<width>{{ScaleX('178')}}</width>
+							<height>{{ScaleY('25')}}</height>
 							<font>font13</font>
 							<textcolor>grey2</textcolor>
 							<selectedcolor>selected</selectedcolor>
@@ -331,22 +331,22 @@
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
-					<focusedlayout height="180" width="190">
+					<focusedlayout height="{{ScaleY('180')}}" width="{{ScaleX('190')}}">
 						<control type="image">
-							<left>1</left>
-							<top>0</top>
-							<width>188</width>
-							<height>145</height>
+							<left>{{ScaleX('1')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('188')}}</width>
+							<height>{{ScaleY('145')}}</height>
 							<bordertexture border="5">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
-							<left>6</left>
-							<top>145</top>
-							<width>178</width>
-							<height>25</height>
+							<left>{{ScaleX('6')}}</left>
+							<top>{{ScaleY('145')}}</top>
+							<width>{{ScaleX('178')}}</width>
+							<height>{{ScaleY('25')}}</height>
 							<font>font13</font>
 							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
@@ -357,11 +357,11 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="60">
-					<left>1060</left>
-					<top>60</top>
-					<width>25</width>
-					<height>530</height>
-					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+					<left>{{ScaleX('1060')}}</left>
+					<top>{{ScaleY('60')}}</top>
+					<width>{{ScaleX('25')}}</width>
+					<height>{{ScaleY('530')}}</height>
+					<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
 					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 					<textureslidernib>ScrollBarNib.png</textureslidernib>

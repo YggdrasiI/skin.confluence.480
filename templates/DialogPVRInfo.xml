@@ -2,8 +2,8 @@
 <window>
 	<defaultcontrol always="true">7</defaultcontrol>
 	<coordinates>
-		<left>225</left>
-		<top>30</top>
+		<left>{{ScaleX('225')}}</left>
+		<top>{{ScaleY('30')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -17,22 +17,22 @@
 			<param name="CloseButtonNav" value="10" />
 		</include>
 		<control type="list" id="49">
-			<left>40</left>
-			<top>80</top>
-			<width>640</width>
-			<height>330</height>
+			<left>{{ScaleX('40')}}</left>
+			<top>{{ScaleY('80')}}</top>
+			<width>{{ScaleX('640')}}</width>
+			<height>{{ScaleY('330')}}</height>
 			<onleft>49</onleft>
 			<onright>49</onright>
 			<onup>9000</onup>
 			<ondown>61</ondown>
 			<pagecontrol>-</pagecontrol>
 			<scrolltime>200</scrolltime>
-			<itemlayout height="30">
+			<itemlayout height="{{ScaleY('30')}}">
 				<control type="label">
-					<left>5</left>
-					<top>0</top>
-					<width>160</width>
-					<height>30</height>
+					<left>{{ScaleX('5')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('160')}}</width>
+					<height>{{ScaleY('30')}}</height>
 					<font>font13</font>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -41,10 +41,10 @@
 					<info>ListItem.Label</info>
 				</control>
 				<control type="label">
-					<left>175</left>
-					<top>0</top>
-					<width>465</width>
-					<height>30</height>
+					<left>{{ScaleX('175')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('465')}}</width>
+					<height>{{ScaleY('30')}}</height>
 					<font>font13</font>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -53,21 +53,21 @@
 					<info>ListItem.Label2</info>
 				</control>
 			</itemlayout>
-			<focusedlayout height="30">
+			<focusedlayout height="{{ScaleY('30')}}">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>640</width>
-					<height>30</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('640')}}</width>
+					<height>{{ScaleY('30')}}</height>
 					<visible>Control.HasFocus(49)</visible>
 					<texture>MenuItemFO.png</texture>
 					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="label">
-					<left>5</left>
-					<top>0</top>
-					<width>160</width>
-					<height>30</height>
+					<left>{{ScaleX('5')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('160')}}</width>
+					<height>{{ScaleY('30')}}</height>
 					<font>font13</font>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -76,10 +76,10 @@
 					<info>ListItem.Label</info>
 				</control>
 				<control type="label">
-					<left>175</left>
-					<top>0</top>
-					<width>465</width>
-					<height>30</height>
+					<left>{{ScaleX('175')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('465')}}</width>
+					<height>{{ScaleY('30')}}</height>
 					<font>font13</font>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -149,10 +149,10 @@
 			</content>
 		</control>
 		<control type="label">
-			<left>310</left>
-			<top>370</top>
-			<width>400</width>
-			<height>30</height>
+			<left>{{ScaleX('310')}}</left>
+			<top>{{ScaleY('370')}}</top>
+			<width>{{ScaleX('400')}}</width>
+			<height>{{ScaleY('30')}}</height>
 			<font>font12</font>
 			<textcolor>grey</textcolor>
 			<shadowcolor>black</shadowcolor>
@@ -163,8 +163,8 @@
 		</control>
 		<control type="spincontrol" id="60">
 			<description>Next page button</description>
-			<left>720</left>
-			<top>375</top>
+			<left>{{ScaleX('720')}}</left>
+			<top>{{ScaleY('375')}}</top>
 			<subtype>page</subtype>
 			<font>-</font>
 			<onleft>60</onleft>
@@ -176,20 +176,20 @@
 		</control>
 		<control type="textbox" id="400">
 			<description>PLOT</description>
-			<left>40</left>
-			<top>402</top>
-			<width>750</width>
-			<height>178</height>
+			<left>{{ScaleX('40')}}</left>
+			<top>{{ScaleY('402')}}</top>
+			<width>{{ScaleX('750')}}</width>
+			<height>{{ScaleY('178')}}</height>
 			<font>font13</font>
 			<align>justify</align>
 			<pagecontrol>60</pagecontrol>
 			<label fallback="161">$INFO[ListItem.Plot]</label>
 		</control>
 		<control type="grouplist" id="9000">
-			<left>40</left>
-			<top>590</top>
-			<width>740</width>
-			<height>40</height>
+			<left>{{ScaleX('40')}}</left>
+			<top>{{ScaleY('590')}}</top>
+			<width>{{ScaleX('740')}}</width>
+			<height>{{ScaleY('40')}}</height>
 			<itemgap>5</itemgap>
 			<align>center</align>
 			<orientation>horizontal</orientation>
