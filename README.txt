@@ -44,26 +44,32 @@ Notes for developers:
 
 
   • Workflow for updates on new confluence versions:
-   1. Checkout original_skin.
+   1. Checkout branch 'original_skin'.
    2. Update static files like addon.xml, changelog.txt
-      and folders
-      resources, languages, media, colors, fonts, backgrounds
-      This changes should be repeat in step 3/4, too.
+      and the folders: 720p, resources, languages, media,
+      colors, fonts and backgrounds
 
-   3. Replace xml files in /templates with new files of
-      orginial confluence skin. And commit changes.
+      Commit these changes and cherry-pick them in step 3/4, too.
 
-   4. Checkout sedChangesOnly and replace xml files
-      in templates directory, too.
-      (cd templates ; rm *.xml;  git checkout original_skin *.xml)
-      Then, run sed scripts and commit changes.
+   3. Replace xml files in ./templates with new files of
+      original confluence skin (./720p) and commit changes again.
 
-   4. Checkout unstable branch and apply changes of step 2 and 3. 
-     Then run sed scripts (cd templates/sed; ./runSubstitutions.sh *.sed ),
-      parse templates ( ./parseTemplates.py ),
-      and build new package ( ./buildPackage --dest /dev/shm -t -p -f )
+   4. Checkout branch 'sedChangesOnly' and cherry-pick changes of 2.
+      Replace xml files like in 3., and finally run sed scripts.
+      ( cd templates ; rm *.xml;  git checkout original_skin *.xml;
+      cd sed; ./runSubstitutions.sh *.sed)
 
-   5. Zip result, .i.e.    
+      Commit changes.
+
+   5. Rebase unstable branch on new sedChangesOnly. 
+      This should lift the manual changes of the templates upon the new
+      automated.
+      This step required manually work, especially if new xml files was added.
+      Run './parseTemplates.py --force' to check if templates are still valid.
+
+   6. Build new package ( ./buildPackage --dest /dev/shm -t -p -f )
+
+   7. Zip result, .i.e.    
       cd /dev/shm ; zip -r skin.confluence.480.zip skin.confluence.480
 
-   6. Copy skin-zip to media center and resolve errors.
+   8. Copy skin-zip to media center and resolve errors.
