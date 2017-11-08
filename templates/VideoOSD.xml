@@ -332,8 +332,8 @@
 				<aligny>center</aligny>
 				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
 				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
-				<alttexturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</alttexturefocus>
-				<alttexturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</alttexturenofocus>
+				<alttexturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</alttexturefocus>
+				<alttexturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</alttexturenofocus>
 				<onclick>Close</onclick>
 				<onclick>Dialog.Close(VideoOSD)</onclick>
 				<onclick>ActivateWindow(SubtitleSearch)</onclick>

@@ -20,6 +20,14 @@ msgctxt "#31000"
 msgid "Change your"
 msgstr "Modification des"
 
+msgctxt "#31001"
+msgid "GAMES"
+msgstr "JEUX"
+
+msgctxt "#31002"
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]PARAMÈTRES DE JEU[/B][CR][CR]Configuration de la prise en charge et des options pour revoir des parties de jeu · Configuration de l'utilisation du clavier et de nombre de joueur au clavier"
+
 msgctxt "#31003"
 msgid "Power options"
 msgstr "Options d'alimentation"
@@ -67,6 +75,10 @@ msgstr "Informations de traitement audio"
 msgctxt "#31014"
 msgid "Memory used"
 msgstr "Mémoire utilisée "
+
+msgctxt "#31015"
+msgid "Minute"
+msgstr "Minute"
 
 msgctxt "#31023"
 msgid "Playing"
@@ -178,7 +190,7 @@ msgstr "Sélection actuelle"
 
 msgctxt "#31101"
 msgid "Home screen options"
-msgstr "Options de la page d'accueil"
+msgstr "Options de l'écran d'accueil"
 
 msgctxt "#31102"
 msgid "Background"
@@ -450,7 +462,7 @@ msgstr "[B]PARAMÈTRES DU LECTEUR[/B][CR][CR]Configuration des actions pouvant �
 
 msgctxt "#31431"
 msgid "[B]LIBRARY SETTINGS[/B][CR][CR]Configure how the library/file views display media content ·  Configure how library lists/views are navigated · Configure the media database options"
-msgstr "[B]PARAMÈTRES DE BIBLIOTHÈQUE[/B][CR][CR]Configuration de l'affichage du média selon les vues médiathèque/fichier ·  Configuration de la navigation des vues/listes de la médiathèque · Configuration des options de la base de données de media"
+msgstr "[B]PARAMÈTRES DES BIBLIOTHÈQUES[/B][CR][CR]Configuration de l'affichage du média selon les vues médiathèque/fichier ·  Configuration de la navigation des vues/listes de la médiathèque · Configuration des options de la base de données des médias"
 
 msgctxt "#31432"
 msgid "[B]PVR SETTINGS[/B][CR][CR]Configure how the channels & guide are managed  · Configure how Live TV and recordings are managed"

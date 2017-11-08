@@ -85,7 +85,7 @@
 				<control type="togglebutton" id="4">
 					<description>Sort asc</description>
 					<include>ButtonCommonValues</include>
-					<alttexturefocus border="5">button-focus.png</alttexturefocus>
+					<alttexturefocus border="{{ScaleBorder('5')}}">button-focus.png</alttexturefocus>
 					<alttexturenofocus>-</alttexturenofocus>
 					<label>31051</label>
 					<altlabel>31050</altlabel>
@@ -166,7 +166,7 @@
 					<include>ButtonCommonValues</include>
 					<label>653</label>
 					<altlabel>13353</altlabel>
-					<alttexturefocus border="5">button-focus.png</alttexturefocus>
+					<alttexturefocus border="{{ScaleBorder('5')}}">button-focus.png</alttexturefocus>
 					<alttexturenofocus>-</alttexturenofocus>
 					<usealttexture>library.isscanningvideo</usealttexture>
 				</control>
