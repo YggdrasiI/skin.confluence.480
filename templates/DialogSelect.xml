@@ -2,7 +2,7 @@
 <window type="dialog">
 	<defaultcontrol always="true">3</defaultcontrol>
 	<coordinates>
-		<left>{{ScaleX('235')}}</left>
+		<left>{{ScaleX('{{ 235 - ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/2 }}')}}</left>
 		<top>{{ScaleY('75')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
@@ -16,7 +16,7 @@
 				<description>background image</description>
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('850')}}</width>
+				<width>{{ScaleX('{{ 850 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<height>{{ScaleY('550')}}</height>
 				<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
 				<visible>[Control.IsVisible(3) + Integer.IsGreater(Container(3).NumItems,8)] | [Control.IsVisible(6) + Integer.IsGreater(Container(6).NumItems,4)]</visible>
@@ -25,7 +25,7 @@
 				<description>background image</description>
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('850')}}</width>
+				<width>{{ScaleX('{{ 850 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<height>{{ScaleY('458')}}</height>
 				<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
 				<visible>[Control.IsVisible(3) + Integer.IsGreater(Container(3).NumItems,6) + !Integer.IsGreater(Container(3).NumItems,8)] | [Control.IsVisible(6) + Integer.IsGreater(Container(6).NumItems,3) + !Integer.IsGreater(Container(6).NumItems,4)]</visible>
@@ -34,7 +34,7 @@
 				<description>background image</description>
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('850')}}</width>
+				<width>{{ScaleX('{{ 850 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<height>{{ScaleY('366')}}</height>
 				<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
 				<visible>[Control.IsVisible(3) + Integer.IsGreater(Container(3).NumItems,4) + !Integer.IsGreater(Container(3).NumItems,6)] | [Control.IsVisible(6) + Integer.IsGreater(Container(6).NumItems,2) + !Integer.IsGreater(Container(6).NumItems,3)]</visible>
@@ -43,7 +43,7 @@
 				<description>background image</description>
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('850')}}</width>
+				<width>{{ScaleX('{{ 850 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<height>{{ScaleY('274')}}</height>
 				<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
 				<visible>[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,4)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,2)]</visible>
@@ -52,7 +52,7 @@
 				<description>Dialog Header image</description>
 				<left>{{ScaleX('40')}}</left>
 				<top>{{ScaleY('16')}}</top>
-				<width>{{ScaleX('770')}}</width>
+				<width>{{ScaleX('{{ 770 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<texture>dialogheader.png</texture>
 			</control>
@@ -60,7 +60,7 @@
 				<description>header label</description>
 				<left>{{ScaleX('40')}}</left>
 				<top>{{ScaleY('20')}}</top>
-				<width>{{ScaleX('770')}}</width>
+				<width>{{ScaleX('{{ 770 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<height>{{ScaleY('30')}}</height>
 				<font>font13_title</font>
 				<label>$LOCALIZE[13406]</label>
@@ -73,13 +73,13 @@
 				<description>No Settings Label</description>
 				<left>{{ScaleX('20')}}</left>
 				<top>{{ScaleY('120')}}</top>
-				<width>{{ScaleX('550')}}</width>
+				<width>{{ScaleX('{{ 550 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<align>center</align>
 				<font>font13</font>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>{{ScaleX('760')}}</left>
+				<left>{{ScaleX('{{ 760 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 				<top>{{ScaleY('15')}}</top>
 				<width>{{ScaleX('64')}}</width>
 				<height>{{ScaleY('32')}}</height>
@@ -93,7 +93,7 @@
 			<control type="list" id="3">
 				<left>{{ScaleX('20')}}</left>
 				<top>{{ScaleY('67')}}</top>
-				<width>{{ScaleX('550')}}</width>
+				<width>{{ScaleX('{{ 550 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<height>{{ScaleY('460')}}</height>
 				<onup>3</onup>
 				<ondown>3</ondown>
@@ -101,18 +101,18 @@
 				<onright>61</onright>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="{{ScaleY('46')}}" width="{{ScaleX('550')}}">
+				<itemlayout height="{{ScaleY('46')}}" width="{{ScaleX('{{ 550 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('550')}}</width>
+						<width>{{ScaleX('{{ 550 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('20')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('510')}}</width>
+						<width>{{ScaleX('{{ 510 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -122,11 +122,11 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="{{ScaleY('46')}}" width="{{ScaleX('550')}}">
+				<focusedlayout height="{{ScaleY('46')}}" width="{{ScaleX('{{ 550 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('550')}}</width>
+						<width>{{ScaleX('{{ 550 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 						<visible>!Control.HasFocus(3)</visible>
@@ -135,7 +135,7 @@
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('550')}}</width>
+						<width>{{ScaleX('{{ 540 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
 						<visible>Control.HasFocus(3)</visible>
@@ -144,7 +144,7 @@
 					<control type="label">
 						<left>{{ScaleX('20')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('510')}}</width>
+						<width>{{ScaleX('{{ 510 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
@@ -166,11 +166,11 @@
 				<onright>61</onright>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="{{ScaleY('92')}}" width="{{ScaleX('550')}}">
+				<itemlayout height="{{ScaleY('92')}}" width="{{ScaleX('{{ 550 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('550')}}</width>
+						<width>{{ScaleX('{{ 550 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('86')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 					</control>
@@ -187,7 +187,7 @@
 					<control type="label">
 						<left>{{ScaleX('90')}}</left>
 						<top>{{ScaleY('2')}}</top>
-						<width>{{ScaleX('450')}}</width>
+						<width>{{ScaleX('{{ 450 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('30')}}</height>
 						<font>font13</font>
 						<textcolor>grey</textcolor>
@@ -199,7 +199,7 @@
 					<control type="textbox">
 						<left>{{ScaleX('90')}}</left>
 						<top>{{ScaleY('34')}}</top>
-						<width>{{ScaleX('450')}}</width>
+						<width>{{ScaleX('{{ 450 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('48')}}</height>
 						<font>font12</font>
 						<textcolor>grey</textcolor>
@@ -208,11 +208,11 @@
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="{{ScaleY('92')}}" width="{{ScaleX('550')}}">
+				<focusedlayout height="{{ScaleY('92')}}" width="{{ScaleX('{{ 550 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('550')}}</width>
+						<width>{{ScaleX('{{ 550 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('86')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 						<visible>!Control.HasFocus(6)</visible>
@@ -221,7 +221,7 @@
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('550')}}</width>
+						<width>{{ScaleX('{{ 550 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('86')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
 						<visible>Control.HasFocus(6)</visible>
@@ -240,7 +240,7 @@
 					<control type="label">
 						<left>{{ScaleX('90')}}</left>
 						<top>{{ScaleY('2')}}</top>
-						<width>{{ScaleX('450')}}</width>
+						<width>{{ScaleX('{{ 450 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('30')}}</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
@@ -252,7 +252,7 @@
 					<control type="textbox">
 						<left>{{ScaleX('90')}}</left>
 						<top>{{ScaleY('34')}}</top>
-						<width>{{ScaleX('450')}}</width>
+						<width>{{ScaleX('{{ 450 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('48')}}</height>
 						<font>font12</font>
 						<textcolor>grey</textcolor>
@@ -263,13 +263,13 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="61">
-				<left>{{ScaleX('570')}}</left>
+				<left>{{ScaleX('{{ 570 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 				<top>{{ScaleY('65')}}</top>
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('464')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft condition="Control.IsVisible(3)">3</onleft>
@@ -297,7 +297,7 @@
 					<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,-92')}}" time="0" condition="[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,8)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,4)]">Conditional</animation>
 				</control>
 				<control type="grouplist" id="90">
-					<left>{{ScaleX('612')}}</left>
+					<left>{{ScaleX('{{ 612 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 					<top>{{ScaleY('100')}}</top>
 					<onleft condition="Control.IsVisible(3)">3</onleft>
 					<onleft condition="Control.IsVisible(6)">6</onleft>

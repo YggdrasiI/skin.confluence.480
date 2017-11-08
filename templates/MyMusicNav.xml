@@ -43,12 +43,12 @@
 			<param name="Label" value="$LOCALIZE[10516]" />
 		</include>
 		<control type="group">
-			<left>{{ScaleX('-250')}}</left>
+			<left>{{ScaleX({{ -250 - {SideBladeExtraWidth} }})}}</left>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('60')}}</top>
-				<width>{{ScaleX('250')}}</width>
+				<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
 				<height>{{ScaleY('650')}}</height>
 				<onleft>9000</onleft>
 				<onright>50</onright>
@@ -57,7 +57,7 @@
 				<onback>50</onback>
 				<itemgap>0</itemgap>
 				<control type="label" id="200">
-					<width>{{ScaleX('250')}}</width>
+					<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
 					<height>{{ScaleY('35')}}</height>
 					<font>font12</font>
 					<label>31006</label>
@@ -67,7 +67,7 @@
 				</control>
 				<control type="button" id="2">
 					<description>View As button</description>
-					<textwidth>235</textwidth>
+					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>-</label>
 				</control>
@@ -88,7 +88,7 @@
 				<control type="edit" id="19">
 					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
 					<description>Filter</description>
-					<textwidth>230</textwidth>
+					<textwidth>{{ 230 + {SideBladeExtraWidth} }}</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>587</label>
 				</control>
@@ -103,7 +103,7 @@
 				</control>
 				<control type="radiobutton" id="100">
 					<description>Show Info Toggle</description>
-					<textwidth>170</textwidth>
+					<textwidth>{{ 170 + {SideBladeExtraWidth} }}</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>31005</label>
 					<onclick>Skin.ToggleSetting(View509HideInfo)</onclick>
@@ -130,7 +130,7 @@
 					<include>ButtonCommonValues</include>
 				</control>
 				<control type="label" id="203">
-					<width>{{ScaleX('250')}}</width>
+					<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
 					<height>{{ScaleY('35')}}</height>
 					<font>font12</font>
 					<label>31039</label>
@@ -140,7 +140,7 @@
 				</control>
 				<control type="togglebutton" id="20">
 					<description>Update library</description>
-					<textwidth>235</textwidth>
+					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>653</label>
 					<altlabel>13353</altlabel>

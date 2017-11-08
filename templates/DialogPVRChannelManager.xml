@@ -8,9 +8,9 @@
 	<include>dialogeffect</include>
 	<controls>
 		<include content="DialogBackgroundCommons">
-			<param name="DialogBackgroundWidth" value="1120" />
-			<param name="DialogBackgroundHeight" value="570" />
-			<param name="DialogHeaderWidth" value="1020" />
+			<param name="DialogBackgroundWidth" value="{{ScaleX({{ 1120 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
+			<param name="DialogBackgroundHeight" value="{{ScaleY('570')}}" />
+			<param name="DialogHeaderWidth" value="{{ScaleX({{ 1020 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
 			<param name="DialogHeaderLabel" value="$VAR[PVRChannelMgrHeader]" />
 			<param name="DialogHeaderId" value="2" />
 			<param name="CloseButtonLeft" value="1030" />
@@ -25,8 +25,8 @@
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('470')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>20</onleft>
@@ -37,14 +37,14 @@
 			<control type="image">
 				<left>{{ScaleX('10')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('430')}}</width>
+				<width>{{ScaleX('{{ 430 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<height>{{ScaleY('475')}}</height>
 				<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 			</control>
 			<control type="list" id="20">
 				<left>{{ScaleX('15')}}</left>
 				<top>{{ScaleY('5')}}</top>
-				<width>{{ScaleX('420')}}</width>
+				<width>{{ScaleX('{{ 420 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<height>{{ScaleY('470')}}</height>
 				<onup>20</onup>
 				<ondown>20</ondown>
@@ -52,11 +52,11 @@
 				<onright>60</onright>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="{{ScaleY('45')}}" width="{{ScaleX('420')}}">
+				<itemlayout height="{{ScaleY('45')}}" width="{{ScaleX('{{ 420 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('420')}}</width>
+						<width>{{ScaleX('{{ 420 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 					</control>
@@ -82,7 +82,7 @@
 					<control type="label">
 						<left>{{ScaleX('45')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('335')}}</width>
+						<width>{{ScaleX('{{ 335 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font12</font>
 						<align>left</align>
@@ -95,7 +95,7 @@
 					<control type="label">
 						<left>{{ScaleX('45')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('335')}}</width>
+						<width>{{ScaleX('{{ 335 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font12</font>
 						<align>left</align>
@@ -106,7 +106,7 @@
 						<visible>!ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('390')}}</left>
+						<left>{{ScaleX('{{ 390 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 						<top>{{ScaleY('10')}}</top>
 						<width>{{ScaleX('20')}}</width>
 						<height>{{ScaleY('20')}}</height>
@@ -114,11 +114,11 @@
 						<visible>ListItem.Property(Changed)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="{{ScaleY('65')}}" width="{{ScaleX('420')}}">
+				<focusedlayout height="{{ScaleY('45')}}" width="{{ScaleX('{{ 420 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('420')}}</width>
+						<width>{{ScaleX('{{ 420 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('60')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
 						<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(20)">conditional</animation>
@@ -145,7 +145,7 @@
 					<control type="label">
 						<left>{{ScaleX('45')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('335')}}</width>
+						<width>{{ScaleX('{{ 335 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font12</font>
 						<align>left</align>
@@ -158,7 +158,7 @@
 					<control type="label">
 						<left>{{ScaleX('45')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('335')}}</width>
+						<width>{{ScaleX('{{ 335 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font12</font>
 						<align>left</align>
@@ -169,7 +169,7 @@
 						<visible>!ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('390')}}</left>
+						<left>{{ScaleX('{{ 390 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 						<top>{{ScaleY('10')}}</top>
 						<width>{{ScaleX('20')}}</width>
 						<height>{{ScaleY('20')}}</height>
@@ -179,7 +179,7 @@
 					<control type="label">
 						<left>{{ScaleX('5')}}</left>
 						<top>{{ScaleY('30')}}</top>
-						<width>{{ScaleX('410')}}</width>
+						<width>{{ScaleX('{{ 410 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('30')}}</height>
 						<font>font12</font>
 						<align>left</align>
@@ -193,7 +193,7 @@
 		</control>
 		<control type="group">
 			<control type="grouplist" id="9002">
-				<left>{{ScaleX('490')}}</left>
+				<left>{{ScaleX('{{ 490 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 				<top>{{ScaleY('75')}}</top>
 				<onleft>60</onleft>
 				<onright>9000</onright>
@@ -217,7 +217,7 @@
 					<description>Channel activated</description>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('380')}}</width>
+					<width>{{ScaleX('{{ 380 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
 					<textcolor>white</textcolor>
@@ -234,7 +234,7 @@
 					<description>Channel name</description>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('380')}}</width>
+					<width>{{ScaleX('{{ 380 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
 					<textcolor>white</textcolor>
@@ -247,13 +247,13 @@
 				<control type="group" id="9005">
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('380')}}</width>
+					<width>{{ScaleX('{{ 380 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<control type="button" id="9">
 						<description>Channel logo Button</description>
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('380')}}</width>
+						<width>{{ScaleX('{{ 380 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font12</font>
 						<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
@@ -266,7 +266,7 @@
 					</control>
 					<control type="image">
 						<description>Current Channel Icon</description>
-						<left>{{ScaleX('340')}}</left>
+						<left>{{ScaleX('{{ 340 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 						<top>{{ScaleY('3')}}</top>
 						<width>{{ScaleX('34')}}</width>
 						<height>{{ScaleY('34')}}</height>
@@ -278,7 +278,7 @@
 					<description>EPG activated</description>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('380')}}</width>
+					<width>{{ScaleX('{{ 380 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
 					<textcolor>white</textcolor>
@@ -295,7 +295,7 @@
 					<description>EPG source</description>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('380')}}</width>
+					<width>{{ScaleX('{{ 380 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
 					<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
@@ -306,7 +306,7 @@
 					<description>Parental locked</description>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('380')}}</width>
+					<width>{{ScaleX('{{ 380 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
 					<textcolor>white</textcolor>
@@ -321,7 +321,7 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<left>{{ScaleX('490')}}</left>
+				<left>{{ScaleX('{{ 490 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 				<top>{{ScaleY('375')}}</top>
 				<itemgap>5</itemgap>
 				<onleft>60</onleft>
@@ -333,7 +333,7 @@
 					<description>channel options Header</description>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('380')}}</width>
+					<width>{{ScaleX('{{ 380 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<font>font12</font>
 					<label>$LOCALIZE[31026]</label>
@@ -346,7 +346,7 @@
 					<description>New channel Button</description>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('380')}}</width>
+					<width>{{ScaleX('{{ 380 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
 					<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
@@ -358,7 +358,7 @@
 					<description>Group Manager Button</description>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('380')}}</width>
+					<width>{{ScaleX('{{ 380 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
 					<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
@@ -370,7 +370,7 @@
 					<description>TV/Radio toggle</description>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('380')}}</width>
+					<width>{{ScaleX('{{ 380 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font12</font>
 					<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
@@ -386,7 +386,7 @@
 			</control>
 		</control>
 		<control type="group" id="9000">
-			<left>{{ScaleX('890')}}</left>
+			<left>{{ScaleX('{{ 890 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 			<top>{{ScaleY('95')}}</top>
 			<control type="button" id="4">
 				<description>OK Button</description>

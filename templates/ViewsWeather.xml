@@ -181,7 +181,7 @@
 					<control type="label">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('100')}}</width>
+						<width>{{ScaleX({{ 100 + {WeatherRightExtraW} }})}}</width>
 						<height>{{ScaleY('120')}}</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>
@@ -191,7 +191,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('110')}}</left>
+						<left>{{ScaleX({{ 110 + {WeatherRightExtraW} }})}}</left>
 						<top>{{ScaleY('5')}}</top>
 						<width>{{ScaleX('80')}}</width>
 						<height>{{ScaleY('80')}}</height>
@@ -199,9 +199,9 @@
 						<texture>$INFO[ListItem.Thumb]</texture>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('200')}}</left>
+						<left>{{ScaleX({{ 200 - {WeatherRightExtraW} }})}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('390')}}</width>
+						<width>{{ScaleX({{ 390 + {WeatherRightExtraW} }})}}</width>
 						<height>{{ScaleY('70')}}</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>
@@ -244,7 +244,7 @@
 					<control type="label">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('100')}}</width>
+						<width>{{ScaleX({{ 100 + {WeatherRightExtraW} }})}}</width>
 						<height>{{ScaleY('120')}}</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>
@@ -254,7 +254,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('110')}}</left>
+						<left>{{ScaleX({{ 110 + {WeatherRightExtraW} }})}}</left>
 						<top>{{ScaleY('5')}}</top>
 						<width>{{ScaleX('80')}}</width>
 						<height>{{ScaleY('80')}}</height>
@@ -262,9 +262,9 @@
 						<texture>$INFO[ListItem.Thumb]</texture>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('200')}}</left>
+						<left>{{ScaleX({{ 200 - {WeatherRightExtraW} }})}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('390')}}</width>
+						<width>{{ScaleX({{ 390 + {WeatherRightExtraW} }})}}</width>
 						<height>{{ScaleY('70')}}</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>
@@ -363,8 +363,8 @@
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('540')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>51</onleft>
@@ -1087,8 +1087,8 @@
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('540')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>52</onleft>

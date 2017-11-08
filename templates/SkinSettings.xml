@@ -16,7 +16,7 @@
 			<param name="Label" value="$LOCALIZE[20077]" />
 		</include>
 		<control type="group">
-			<left>{{ScaleX('90')}}</left>
+			<left>{{ScaleX({{ int(90 - ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/2) }})}}</left>
 			<top>{{ScaleY('30')}}</top>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="{{ScaleBorder2('640,360')}}" easing="out" tween="back" time="225" />
@@ -29,20 +29,20 @@
 			<control type="image">
 				<left>{{ScaleX('5')}}</left>
 				<top>{{ScaleY('5')}}</top>
-				<width>{{ScaleX('1090')}}</width>
+				<width>{{ScaleX({{ 1090 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('630')}}</height>
 				<texture border="{{ScaleBorder('15')}}">ContentPanel.png</texture>
 			</control>
 			<control type="image">
 				<left>{{ScaleX('5')}}</left>
 				<top>{{ScaleY('625')}}</top>
-				<width>{{ScaleX('1090')}}</width>
+				<width>{{ScaleX({{ 1090 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('64')}}</height>
 				<texture border="{{ScaleBorder('15')}}">ContentPanelMirror.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>{{ScaleX('980')}}</left>
+				<left>{{ScaleX({{ 980 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}</left>
 				<top>{{ScaleY('11')}}</top>
 				<width>{{ScaleX('64')}}</width>
 				<height>{{ScaleY('32')}}</height>
@@ -61,7 +61,7 @@
 				<description>LOGO</description>
 				<left>{{ScaleX('30')}}</left>
 				<top>{{ScaleY('15')}}</top>
-				<width>{{ScaleX('220')}}</width>
+				<width>{{ScaleX({{ 220 + {SettingPanelExtraWidthL} }})}}</width>
 				<height>{{ScaleY('80')}}</height>
 				<aspectratio>keep</aspectratio>
 				<texture>Confluence_Logo.png</texture>
@@ -69,7 +69,7 @@
 			<control type="list" id="9000">
 				<left>{{ScaleX('10')}}</left>
 				<top>{{ScaleY('90')}}</top>
-				<width>{{ScaleX('260')}}</width>
+				<width>{{ScaleX({{ 260 + {SettingPanelExtraWidthL} }})}}</width>
 				<height>{{ScaleY('481')}}</height>
 				<onleft>9010</onleft>
 				<onright>9010</onright>
@@ -77,18 +77,18 @@
 				<ondown>9000</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
-				<itemlayout height="{{ScaleY('80')}}" width="{{ScaleX('260')}}">
+				<itemlayout height="{{ScaleY('80')}}" width="{{ScaleX({{ 260 + {SettingPanelExtraWidthL} }})}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('260')}}</width>
+						<width>{{ScaleX({{ 260 + {SettingPanelExtraWidthL} }})}}</width>
 						<height>{{ScaleY('81')}}</height>
 						<texture border="{{ScaleBorder('5')}}">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('10')}}</left>
 						<top>{{ScaleY('15')}}</top>
-						<width>{{ScaleX('240')}}</width>
+						<width>{{ScaleX({{ 240 + {SettingPanelExtraWidthL} }})}}</width>
 						<height>{{ScaleY('25')}}</height>
 						<font>font24_title</font>
 						<textcolor>grey3</textcolor>
@@ -99,7 +99,7 @@
 					<control type="label">
 						<left>{{ScaleX('10')}}</left>
 						<top>{{ScaleY('42')}}</top>
-						<width>{{ScaleX('240')}}</width>
+						<width>{{ScaleX({{ 240 + {SettingPanelExtraWidthL} }})}}</width>
 						<height>{{ScaleY('25')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -108,11 +108,11 @@
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="{{ScaleY('80')}}" width="{{ScaleX('260')}}">
+				<focusedlayout height="{{ScaleY('80')}}" width="{{ScaleX({{ 260 + {SettingPanelExtraWidthL} }})}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('260')}}</width>
+						<width>{{ScaleX({{ 260 + {SettingPanelExtraWidthL} }})}}</width>
 						<height>{{ScaleY('81')}}</height>
 						<texture border="{{ScaleBorder('5')}}">MenuItemFO.png</texture>
 						<animation effect="fade" start="100" end="30" time="75" condition="!Control.HasFocus(9000)">Conditional</animation>
@@ -120,7 +120,7 @@
 					<control type="label">
 						<left>{{ScaleX('10')}}</left>
 						<top>{{ScaleY('15')}}</top>
-						<width>{{ScaleX('240')}}</width>
+						<width>{{ScaleX({{ 240 + {SettingPanelExtraWidthL} }})}}</width>
 						<height>{{ScaleY('25')}}</height>
 						<font>font24_title</font>
 						<textcolor>white</textcolor>
@@ -131,7 +131,7 @@
 					<control type="label">
 						<left>{{ScaleX('10')}}</left>
 						<top>{{ScaleY('42')}}</top>
-						<width>{{ScaleX('240')}}</width>
+						<width>{{ScaleX({{ 240 + {SettingPanelExtraWidthL} }})}}</width>
 						<height>{{ScaleY('25')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -164,24 +164,24 @@
 				</content>
 			</control>
 			<control type="image">
-				<left>{{ScaleX('268')}}</left>
+				<left>{{ScaleX({{ 268 + {SettingPanelExtraWidthL} }})}}</left>
 				<top>{{ScaleY('10')}}</top>
-				<width>{{ScaleX('790')}}</width>
+				<width>{{ScaleX({{ 790 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('618')}}</height>
 				<texture border="{{ScaleBorder('5')}}">black-back2.png</texture>
 			</control>
 			<control type="image">
-				<left>{{ScaleX('268')}}</left>
+				<left>{{ScaleX({{ 268 + {SettingPanelExtraWidthL} }})}}</left>
 				<top>{{ScaleY('10')}}</top>
-				<width>{{ScaleX('790')}}</width>
+				<width>{{ScaleX({{ 790 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('52')}}</height>
 				<texture>dialogheader.png</texture>
 			</control>
 			<control type="label">
 				<description>header label</description>
-				<left>{{ScaleX('300')}}</left>
+				<left>{{ScaleX({{ 300 + {SettingPanelExtraWidthL} }})}}</left>
 				<top>{{ScaleY('20')}}</top>
-				<width>{{ScaleX('726')}}</width>
+				<width>{{ScaleX({{ 726 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('30')}}</height>
 				<font>font16</font>
 				<label>$LOCALIZE[20077] - $INFO[Container(9000).ListItem.Label]</label>
@@ -193,9 +193,9 @@
 			<control type="group" id="9010">
 				<control type="grouplist" id="9001">
 					<visible>Container(9000).Hasfocus(1)</visible>
-					<left>{{ScaleX('290')}}</left>
+					<left>{{ScaleX({{ 290 + {SettingPanelExtraWidthL} }})}}</left>
 					<top>{{ScaleY('60')}}</top>
-					<width>{{ScaleX('750')}}</width>
+					<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 					<height>{{ScaleY('530')}}</height>
 					<itemgap>-1</itemgap>
 					<pagecontrol>60</pagecontrol>
@@ -204,7 +204,7 @@
 					<onup>9001</onup>
 					<ondown>9001</ondown>
 					<control type="label" id="100">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('45')}}</height>
 						<font>font13_title</font>
 						<label>31106</label>
@@ -214,7 +214,7 @@
 						<aligny>center</aligny>
 					</control>
 					<control type="radiobutton" id="101">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>20189</label>
@@ -226,7 +226,7 @@
 						<selected>Skin.HasSetting(AutoScroll)</selected>
 					</control>
 					<control type="radiobutton" id="102">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31103</label>
@@ -238,7 +238,7 @@
 						<selected>!Skin.HasSetting(Show_SlideShow_Paused)</selected>
 					</control>
 					<control type="radiobutton" id="112">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31104</label>
@@ -250,7 +250,7 @@
 						<selected>Skin.HasSetting(WindowedTrailer)</selected>
 					</control>
 					<control type="radiobutton" id="113">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31107</label>
@@ -262,7 +262,7 @@
 						<selected>Skin.HasSetting(HideFilenameFlagging)</selected>
 					</control>
 					<control type="radiobutton" id="116">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31122</label>
@@ -275,13 +275,13 @@
 					</control>
 				</control>
 				<control type="scrollbar" id="60">
-					<left>{{ScaleX('1060')}}</left>
+					<left>{{ScaleX({{ 1060 + {SettingPanelExtraWidthL} +{SettingPanelExtraWidthR} }})}}</left>
 					<top>{{ScaleY('60')}}</top>
 					<width>{{ScaleX('25')}}</width>
 					<height>{{ScaleY('530')}}</height>
 					<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
-					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+					<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 					<textureslidernib>ScrollBarNib.png</textureslidernib>
 					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 					<onleft>9001</onleft>
@@ -292,9 +292,9 @@
 				</control>
 				<control type="grouplist" id="9002">
 					<visible>Container(9000).Hasfocus(2)</visible>
-					<left>{{ScaleX('290')}}</left>
+					<left>{{ScaleX({{ 290 + {SettingPanelExtraWidthL} }})}}</left>
 					<top>{{ScaleY('60')}}</top>
-					<width>{{ScaleX('750')}}</width>
+					<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 					<height>{{ScaleY('530')}}</height>
 					<itemgap>-1</itemgap>
 					<pagecontrol>60</pagecontrol>
@@ -303,7 +303,7 @@
 					<onup>9002</onup>
 					<ondown>9002</ondown>
 					<control type="label" id="200">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('45')}}</height>
 						<font>font13_title</font>
 						<label>31101</label>
@@ -314,7 +314,7 @@
 					</control>
 					<control type="radiobutton" id="202">
 						<description>enable video info</description>
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -327,7 +327,7 @@
 					</control>
 					<control type="radiobutton" id="203">
 						<description>enable music info</description>
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -340,7 +340,7 @@
 					</control>
 					<control type="radiobutton" id="204">
 						<description>enable weather info</description>
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -354,7 +354,7 @@
 					</control>
 					<control type="radiobutton" id="205">
 						<description>Show Recently added Video info</description>
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -367,7 +367,7 @@
 					</control>
 					<control type="radiobutton" id="206">
 						<description>Show Recently added info</description>
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -379,7 +379,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="label" id="220">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('45')}}</height>
 						<font>font13_title</font>
 						<label>31108</label>
@@ -390,7 +390,7 @@
 					</control>
 					<control type="radiobutton" id="221">
 						<description>Hide Videos Button</description>
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -403,7 +403,7 @@
 					</control>
 					<control type="radiobutton" id="222">
 						<description>Hide Movies Button</description>
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -417,7 +417,7 @@
 					</control>
 					<control type="radiobutton" id="223">
 						<description>Hide TV Shows Button</description>
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -431,7 +431,7 @@
 					</control>
 					<control type="radiobutton" id="224">
 						<description>Hide Music Button</description>
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -444,7 +444,7 @@
 					</control>
 					<control type="radiobutton" id="225">
 						<description>Hide Pictures Button</description>
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -457,7 +457,7 @@
 					</control>
 					<control type="radiobutton" id="226">
 						<description>Hide Programs Button</description>
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -470,7 +470,7 @@
 					</control>
 					<control type="radiobutton" id="228">
 						<description>Hide Weather Button</description>
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -483,13 +483,13 @@
 					</control>
 				</control>
 				<control type="scrollbar" id="60">
-					<left>{{ScaleX('1060')}}</left>
+					<left>{{ScaleX({{ 1060 + {SettingPanelExtraWidthL} +{SettingPanelExtraWidthR} }})}}</left>
 					<top>{{ScaleY('60')}}</top>
 					<width>{{ScaleX('25')}}</width>
 					<height>{{ScaleY('530')}}</height>
 					<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
-					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+					<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 					<textureslidernib>ScrollBarNib.png</textureslidernib>
 					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 					<onleft>9002</onleft>
@@ -500,9 +500,9 @@
 				</control>
 				<control type="grouplist" id="9003">
 					<visible>Container(9000).Hasfocus(3)</visible>
-					<left>{{ScaleX('290')}}</left>
+					<left>{{ScaleX({{ 290 + {SettingPanelExtraWidthL} }})}}</left>
 					<top>{{ScaleY('60')}}</top>
-					<width>{{ScaleX('750')}}</width>
+					<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 					<height>{{ScaleY('530')}}</height>
 					<itemgap>-1</itemgap>
 					<pagecontrol>60</pagecontrol>
@@ -511,7 +511,7 @@
 					<onup>9003</onup>
 					<ondown>9003</ondown>
 					<control type="label" id="300">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('45')}}</height>
 						<font>font13_title</font>
 						<label>31106</label>
@@ -521,7 +521,7 @@
 						<aligny>center</aligny>
 					</control>
 					<control type="radiobutton" id="301">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31119</label>
@@ -533,7 +533,7 @@
 						<selected>Skin.HasSetting(HideBackGroundFanart)</selected>
 					</control>
 					<control type="radiobutton" id="302">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31129</label>
@@ -545,7 +545,7 @@
 						<selected>Skin.HasSetting(HideVisualizationFanart)</selected>
 					</control>
 					<control type="radiobutton" id="303">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31124</label>
@@ -557,7 +557,7 @@
 						<selected>!Skin.HasSetting(ShowBackgroundVideo)</selected>
 					</control>
 					<control type="radiobutton" id="304">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31125</label>
@@ -569,7 +569,7 @@
 						<selected>!Skin.HasSetting(ShowBackgroundVis)</selected>
 					</control>
 					<control type="label" id="310">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('45')}}</height>
 						<font>font13_title</font>
 						<label>31102</label>
@@ -579,7 +579,7 @@
 						<aligny>center</aligny>
 					</control>
 					<control type="radiobutton" id="311">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31109</label>
@@ -591,7 +591,7 @@
 						<selected>Skin.HasSetting(UseCustomBackground)</selected>
 					</control>
 					<control type="button" id="312">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>- $LOCALIZE[31110]</label>
@@ -607,9 +607,9 @@
 				<control type="group">
 					<control type="grouplist" id="9004">
 						<visible>Container(9000).Hasfocus(4)</visible>
-						<left>{{ScaleX('290')}}</left>
+						<left>{{ScaleX({{ 290 + {SettingPanelExtraWidthL} }})}}</left>
 						<top>{{ScaleY('60')}}</top>
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('530')}}</height>
 						<itemgap>-1</itemgap>
 						<pagecontrol>61</pagecontrol>
@@ -618,7 +618,7 @@
 						<onup>9004</onup>
 						<ondown>9004</ondown>
 						<control type="label" id="453">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('45')}}</height>
 							<font>font13_title</font>
 							<label>31140</label>
@@ -628,7 +628,7 @@
 							<aligny>center</aligny>
 						</control>
 						<control type="button" id="455">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[31132]</label>
@@ -640,7 +640,7 @@
 							<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
 						</control>
 						<control type="button" id="456">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>- $LOCALIZE[24020]</label>
@@ -652,7 +652,7 @@
 							<onclick>Addon.OpenSettings($INFO[Skin.String(LyricScript_Path)])</onclick>
 						</control>
 						<control type="label" id="410">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('45')}}</height>
 							<font>font13_title</font>
 							<label>31134</label>
@@ -662,7 +662,7 @@
 							<aligny>center</aligny>
 						</control>
 						<control type="button" id="411">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]1[/B]</label>
@@ -674,7 +674,7 @@
 							<onclick>Skin.SetAddon(HomeVideosButton1,xbmc.addon.video)</onclick>
 						</control>
 						<control type="button" id="412">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]2[/B]</label>
@@ -686,7 +686,7 @@
 							<onclick>Skin.SetAddon(HomeVideosButton2,xbmc.addon.video)</onclick>
 						</control>
 						<control type="button" id="413">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]3[/B]</label>
@@ -698,7 +698,7 @@
 							<onclick>Skin.SetAddon(HomeVideosButton3,xbmc.addon.video)</onclick>
 						</control>
 						<control type="button" id="414">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]4[/B]</label>
@@ -710,7 +710,7 @@
 							<onclick>Skin.SetAddon(HomeVideosButton4,xbmc.addon.video)</onclick>
 						</control>
 						<control type="button" id="415">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]5[/B]</label>
@@ -722,7 +722,7 @@
 							<onclick>Skin.SetAddon(HomeVideosButton5,xbmc.addon.video)</onclick>
 						</control>
 						<control type="label" id="420">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('45')}}</height>
 							<font>font13_title</font>
 							<label>31135</label>
@@ -732,7 +732,7 @@
 							<aligny>center</aligny>
 						</control>
 						<control type="button" id="421">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]1[/B]</label>
@@ -744,7 +744,7 @@
 							<onclick>Skin.SetAddon(HomeMusicButton1,xbmc.addon.audio)</onclick>
 						</control>
 						<control type="button" id="422">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]2[/B]</label>
@@ -756,7 +756,7 @@
 							<onclick>Skin.SetAddon(HomeMusicButton2,xbmc.addon.audio)</onclick>
 						</control>
 						<control type="button" id="423">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]3[/B]</label>
@@ -768,7 +768,7 @@
 							<onclick>Skin.SetAddon(HomeMusicButton3,xbmc.addon.audio)</onclick>
 						</control>
 						<control type="button" id="424">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]4[/B]</label>
@@ -780,7 +780,7 @@
 							<onclick>Skin.SetAddon(HomeMusicButton4,xbmc.addon.audio)</onclick>
 						</control>
 						<control type="button" id="425">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]5[/B]</label>
@@ -792,7 +792,7 @@
 							<onclick>Skin.SetAddon(HomeMusicButton5,xbmc.addon.audio)</onclick>
 						</control>
 						<control type="label" id="430">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('45')}}</height>
 							<font>font13_title</font>
 							<label>31136</label>
@@ -802,7 +802,7 @@
 							<aligny>center</aligny>
 						</control>
 						<control type="button" id="431">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]1[/B]</label>
@@ -814,7 +814,7 @@
 							<onclick>Skin.SetAddon(HomePictureButton1,xbmc.addon.image)</onclick>
 						</control>
 						<control type="button" id="432">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]2[/B]</label>
@@ -826,7 +826,7 @@
 							<onclick>Skin.SetAddon(HomePictureButton2,xbmc.addon.image)</onclick>
 						</control>
 						<control type="button" id="433">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]3[/B]</label>
@@ -838,7 +838,7 @@
 							<onclick>Skin.SetAddon(HomePictureButton3,xbmc.addon.image)</onclick>
 						</control>
 						<control type="button" id="434">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]4[/B]</label>
@@ -850,7 +850,7 @@
 							<onclick>Skin.SetAddon(HomePictureButton4,xbmc.addon.image)</onclick>
 						</control>
 						<control type="button" id="435">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]5[/B]</label>
@@ -862,7 +862,7 @@
 							<onclick>Skin.SetAddon(HomePictureButton5,xbmc.addon.image)</onclick>
 						</control>
 						<control type="label" id="440">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('45')}}</height>
 							<font>font13_title</font>
 							<label>31118</label>
@@ -872,7 +872,7 @@
 							<aligny>center</aligny>
 						</control>
 						<control type="button" id="441">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]1[/B]</label>
@@ -884,7 +884,7 @@
 							<onclick>Skin.SetAddon(HomeProgramButton1,xbmc.addon.executable)</onclick>
 						</control>
 						<control type="button" id="442">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]2[/B]</label>
@@ -896,7 +896,7 @@
 							<onclick>Skin.SetAddon(HomeProgramButton2,xbmc.addon.executable)</onclick>
 						</control>
 						<control type="button" id="443">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]3[/B]</label>
@@ -908,7 +908,7 @@
 							<onclick>Skin.SetAddon(HomeProgramButton3,xbmc.addon.executable)</onclick>
 						</control>
 						<control type="button" id="444">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]4[/B]</label>
@@ -920,7 +920,7 @@
 							<onclick>Skin.SetAddon(HomeProgramButton4,xbmc.addon.executable)</onclick>
 						</control>
 						<control type="button" id="445">
-							<width>{{ScaleX('750')}}</width>
+							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]5[/B]</label>
@@ -934,13 +934,13 @@
 					</control>
 				</control>
 				<control type="scrollbar" id="61">
-					<left>{{ScaleX('1060')}}</left>
+					<left>{{ScaleX({{ 1060 + {SettingPanelExtraWidthL} +{SettingPanelExtraWidthR} }})}}</left>
 					<top>{{ScaleY('60')}}</top>
 					<width>{{ScaleX('25')}}</width>
 					<height>{{ScaleY('530')}}</height>
 					<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
-					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+					<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 					<textureslidernib>ScrollBarNib.png</textureslidernib>
 					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 					<onleft>9004</onleft>

@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">5</defaultcontrol>
 	<coordinates>
-		<left>{{ScaleX('240')}}</left>
+		<left>{{ScaleX('{{ 240 - ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/2 }}')}}</left>
 		<top>{{ScaleY('142')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
@@ -12,11 +12,11 @@
 			<animation effect="fade" start="100" end="0" time="300" condition="[Window.Is(osdaudiosettings) | Window.Is(osdvideosettings)] + [Window.IsVisible(SliderDialog) | Window.IsVisible(OSDAudioDSPSettings) |  Window.IsVisible(FileBrowser)]">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="400" condition="Window.Is(osdaudiodspsettings) + Window.IsVisible(SliderDialog)">Conditional</animation>
 			<include content="DialogBackgroundCommons">
-				<param name="DialogBackgroundWidth" value="800" />
-				<param name="DialogBackgroundHeight" value="458" />
-				<param name="DialogHeaderWidth" value="720" />
+				<param name="DialogBackgroundWidth" value="{{ScaleX({{ 800 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
+				<param name="DialogBackgroundHeight" value="{{ScaleY('458')}}" />
+				<param name="DialogHeaderWidth" value="{{ScaleX({{ 720 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
 				<param name="DialogHeaderId" value="2" />
-				<param name="CloseButtonLeft" value="710" />
+				<param name="CloseButtonLeft" value="{{ScaleX({{ 710 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
 				<param name="CloseButtonNav" value="10" />
 			</include>
 			<control type="grouplist" id="5">
@@ -24,7 +24,7 @@
 				<description>control area</description>
 				<left>{{ScaleX('35')}}</left>
 				<top>{{ScaleY('70')}}</top>
-				<width>{{ScaleX('730')}}</width>
+				<width>{{ScaleX('{{ 730 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 				<height>{{ScaleY('308')}}</height>
 				<itemgap>4</itemgap>
 				<pagecontrol>60</pagecontrol>
@@ -34,13 +34,13 @@
 				<onright>60</onright>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>{{ScaleX('758')}}</left>
+				<left>{{ScaleX('{{ 758 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 				<top>{{ScaleY('70')}}</top>
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('308')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>5</onleft>

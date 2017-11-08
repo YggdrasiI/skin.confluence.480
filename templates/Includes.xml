@@ -106,7 +106,7 @@
 		<value condition="Player.IsTempo + String.StartsWith(Player.PlaySpeed,0.)">$LOCALIZE[31045]</value>
 		<value condition="Player.IsTempo + String.StartsWith(Player.PlaySpeed,1.)">$LOCALIZE[31044]</value>
 		<value condition="Player.Playing + !Player.Seeking + !Player.DisplayAfterSeek">$LOCALIZE[31042]</value>
-		<value condition="[Player.Paused + !Player.Caching] + !Player.Seeking">$LOCALIZE[31043]</value>
+		<value condition="[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek">$LOCALIZE[31043]</value>
 		<value condition="[Player.Paused + Player.Caching] + !Player.Seeking">$LOCALIZE[15107] $INFO[Player.CacheLevel]%</value>
 		<value condition="!String.IsEmpty(Player.SeekStepSize) + ![player.forwarding | player.rewinding]">$LOCALIZE[31046][COLOR=grey] $INFO[Player.SeekStepSize][/COLOR]</value>
 		<value condition="Player.DisplayAfterSeek + ![player.forwarding | player.rewinding]">$LOCALIZE[31046][COLOR=grey] $INFO[Player.SeekOffset][/COLOR]</value>
@@ -309,9 +309,9 @@
 	</include>
 	<include name="ButtonCommonValues">
 		<height>{{ScaleY('40')}}</height>
-		<width>{{ScaleX('250')}}</width>
+		<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} - 10 }})}}</width>
 		<textoffsetx>{{ScaleX('10')}}</textoffsetx>
-		<textwidth>200</textwidth>
+		<textwidth>{{ 200 + {SideBladeExtraWidth} - 10 }}</textwidth>
 		<aligny>center</aligny>
 		<font>font13</font>
 		<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
@@ -320,9 +320,9 @@
 	</include>
 	<include name="ButtonMediaSubCommonValues">
 		<height>{{ScaleY('40')}}</height>
-		<width>{{ScaleX('221')}}</width>
+		<width>{{ScaleX({HomeSubMenuWidth})}}</width>
 		<textoffsetx>{{ScaleX('20')}}</textoffsetx>
-		<textwidth>195</textwidth>
+		<textwidth>{{ScaleX('{{ 15 + {HomeSubMenuWidth} }}')}}</textwidth>
 		<aligny>center</aligny>
 		<font>font12_title</font>
 		<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
@@ -331,8 +331,8 @@
 	</include>
 	<include name="ButtonHomeSubCommonValues">
 		<height>{{ScaleY('35')}}</height>
-		<width>{{ScaleX('180')}}</width>
-		<textwidth>195</textwidth>
+		<width>{{ScaleX('{HomeSubMenuWidth}')}}</width>
+		<textwidth>{{ScaleX('{{ 15 + {HomeSubMenuWidth} }}')}}</textwidth>
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>font12</font>
@@ -369,15 +369,15 @@
 	</include>
 	<include name="SideBladeLeft">
 		<depth>DepthSideBlade</depth>
-		<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('250,0')}}" time="300" tween="quadratic" easing="out" condition="[ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)] + ![Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRadioRDSInfo)]">Conditional</animation>
-		<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-300,0')}}" time="300" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001)">WindowClose</animation>
+		<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('{{ 250 + {SideBladeExtraWidth} }},0')}}" time="300" tween="quadratic" easing="out" condition="[ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)] + ![Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRadioRDSInfo)]">Conditional</animation>
+		<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('{{ -300 - {SideBladeExtraWidth} }},0')}}" time="300" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001)">WindowClose</animation>
 		<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-50,0')}}" time="225" tween="quadratic" easing="out" condition="![ControlGroup(9000).HasFocus | Control.HasFocus(9001)]">WindowClose</animation>
 		<animation effect="slide" start="{{ScaleBorder2('-50,0')}}" end="{{ScaleBorder2('0,0')}}" time="225" tween="quadratic" easing="out">WindowOpen</animation>
 		<control type="button" id="8999">
 			<description>Fake button for mouse control</description>
 			<left>{{ScaleX('0')}}</left>
 			<top>{{ScaleY('0')}}</top>
-			<width>{{ScaleX('250')}}</width>
+			<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
 			<height>{{ScaleY('720')}}</height>
 			<label>-</label>
 			<font>-</font>
@@ -386,7 +386,7 @@
 			<visible>true</visible>
 		</control>
 		<control type="button" id="9001">
-			<left>{{ScaleX('250')}}</left>
+			<left>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</left>
 			<top>{{ScaleY('260')}}</top>
 			<width>{{ScaleX('42')}}</width>
 			<height>{{ScaleY('128')}}</height>
@@ -397,7 +397,7 @@
 		<control type="image">
 			<left>{{ScaleX('-20')}}</left>
 			<top>{{ScaleY('0')}}</top>
-			<width>{{ScaleX('280')}}</width>
+			<width>{{ScaleX({{ 280 + {SideBladeExtraWidth} }})}}</width>
 			<height>{{ScaleY('720')}}</height>
 			<texture border="{{ScaleBorder('0,0,10,0')}}">MediaBladeSub.png</texture>
 		</control>
@@ -503,9 +503,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('53r')}}</top>
+				<top>{{ScaleY('60r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('20')}}</height>
+				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
 				<label>$INFO[Player.Title] - ([COLOR=blue]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -515,9 +515,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('32r')}}</top>
+				<top>{{ScaleY('25r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('20')}}</height>
+				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
 				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -528,9 +528,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('30r')}}</top>
+				<top>{{ScaleY('25r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('20')}}</height>
+				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
 				<label>$INFO[VideoPlayer.Studio]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -541,9 +541,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('30r')}}</top>
+				<top>{{ScaleY('25r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('20')}}</height>
+				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
 				<label>$INFO[VideoPlayer.TVShowTitle]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -554,9 +554,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('30r')}}</top>
+				<top>{{ScaleY('25r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('20')}}</height>
+				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
 				<label>$INFO[VideoPlayer.Artist]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -567,9 +567,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('30r')}}</top>
+				<top>{{ScaleY('25r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('20')}}</height>
+				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
 				<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, - ([COLOR=blue],[/COLOR])]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -1390,7 +1390,7 @@
 		<animation effect="fade" time="225">Hidden</animation>
 	</include>
 	<include name="KeyboardButton">
-		<width>{{ScaleX('50')}}</width>
+		<width>{{ScaleX({VirtualKeyboardKeyWidth})}}</width>
 		<height>{{ScaleY('50')}}</height>
 		<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
 		<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
@@ -1564,11 +1564,6 @@
 			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(ListItem.Year)</visible>
 		</item>
-		<item>
-			<label>$LOCALIZE[15311]</label>
-			<label2>$INFO[ListItem.FilenameAndPath]</label2>
-			<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
-		</item>
 	</include>
 	<include name="MusicInfoSongInfo">
 		<item>
@@ -1678,11 +1673,6 @@
 			<label2>$INFO[ListItem.Property(Role.Mixer)]</label2>
 			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(ListItem.Property(Role.Mixer))</visible>
-		</item>
-		<item>
-			<label>$LOCALIZE[15311]</label>
-			<label2>$INFO[ListItem.FilenameAndPath]</label2>
-			<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
 		</item>
 	</include>
 </includes>
