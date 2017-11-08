@@ -8,9 +8,9 @@
 	<include>dialogeffect</include>
 	<controls>
 		<include content="DialogBackgroundCommons">
-			<param name="DialogBackgroundWidth" value="1120" />
-			<param name="DialogBackgroundHeight" value="590" />
-			<param name="DialogHeaderWidth" value="1020" />
+			<param name="DialogBackgroundWidth" value="{{ScaleX({{ 1120 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
+			<param name="DialogBackgroundHeight" value="{{ScaleY('590')}}" />
+			<param name="DialogHeaderWidth" value="{{ScaleX({{ 1020 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
 			<param name="DialogHeaderLabel" value="35058" />
 			<param name="DialogHeaderId" value="2" />
 			<param name="CloseButtonLeft" value="1030" />
@@ -23,7 +23,7 @@
 				<description>Controller types heading</description>
 				<top>{{ScaleY('5')}}</top>
 				<left>{{ScaleX('30')}}</left>
-				<width>{{ScaleX('220')}}</width>
+				<width>{{ScaleX('{{ 220 + {SettingPanelExtraWidthL} }}')}}</width>
 				<height>{{ScaleY('25')}}</height>
 				<font>font12</font>
 				<label>35050</label>
@@ -53,7 +53,7 @@
 				<description>Controller types grouplist</description>
 				<left>{{ScaleX('30')}}</left>
 				<top>{{ScaleY('40')}}</top>
-				<width>{{ScaleX('220')}}</width>
+				<width>{{ScaleX('{{ 220 + {SettingPanelExtraWidthL} }}')}}</width>
 				<height>{{ScaleY('405')}}</height>
 				<onleft>30</onleft>
 				<onright>5</onright>
@@ -64,7 +64,7 @@
 			<control type="button" id="10">
 				<description>Default controller types button</description>
 				<height>{{ScaleY('40')}}</height>
-				<width>{{ScaleX('220')}}</width>
+				<width>{{ScaleX('{{ 220 + {SettingPanelExtraWidthL} }}')}}</width>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>
@@ -81,8 +81,8 @@
 			<control type="label">
 				<description>Feature types heading</description>
 				<top>{{ScaleY('5')}}</top>
-				<left>{{ScaleX('828')}}</left>
-				<width>{{ScaleX('220')}}</width>
+				<left>{{ScaleX('{{ 828 + {SettingPanelExtraWidthL} }}')}}</left>
+				<width>{{ScaleX('{{ 220 + {SettingPanelExtraWidthR} }}')}}</width>
 				<height>{{ScaleY('25')}}</height>
 				<font>font12</font>
 				<label>35059</label>
@@ -92,7 +92,7 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="scrollbar" id="50">
-				<left>{{ScaleX('1053')}}</left>
+				<left>{{ScaleX('{{ 1053 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
 				<top>{{ScaleY('40')}}</top>
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('405')}}</height>
@@ -112,7 +112,7 @@
 				<description>Feature types grouplist</description>
 				<left>{{ScaleX('828')}}</left>
 				<top>{{ScaleY('40')}}</top>
-				<width>{{ScaleX('220')}}</width>
+				<width>{{ScaleX('{{ 220 + {SettingPanelExtraWidthL} }}')}}</width>
 				<height>{{ScaleY('405')}}</height>
 				<onleft>3</onleft>
 				<onright>50</onright>
@@ -123,7 +123,7 @@
 			<control type="button" id="7">
 				<description>Default feature types button</description>
 				<height>{{ScaleY('40')}}</height>
-				<width>{{ScaleX('220')}}</width>
+				<width>{{ScaleX('{{ 220 + {SettingPanelExtraWidthL} }}')}}</width>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>
@@ -133,7 +133,7 @@
 			<control type="label" id="8">
 				<description>Default feature types label</description>
 				<height>{{ScaleY('40')}}</height>
-				<width>{{ScaleX('220')}}</width>
+				<width>{{ScaleX('{{ 220 + {SettingPanelExtraWidthL} }}')}}</width>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>
