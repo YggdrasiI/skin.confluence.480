@@ -1,4 +1,4 @@
-Skin based on skin.confluence (currently version 3.0.46).
+Skin based on skin.confluence (currently version 3.1.43).
 
 The targeting use case is the RPi 1 with a CRT TV on the composite output.
 Currently, only the main controls was changed.
@@ -43,13 +43,15 @@ Notes for developers:
   `./templates/config.py` contains the definition of variables.
 
 
-  • Workflow for updates on new confluence versions:
+  • Workflow for updates on new confluence versions (sketch)
    1. Checkout branch 'original_skin'.
+      This branch holds the used reference of skin.confluence.
+
    2. Update static files like addon.xml, changelog.txt
       and the folders: 720p, resources, languages, media,
-      colors, fonts and backgrounds
+      colors, fonts and backgrounds.
 
-      Commit these changes and cherry-pick them in step 3/4, too.
+      Commit these changes now, to cherry-pick them in step 4/5.
 
    3. Replace xml files in ./templates with new files of
       original confluence skin (./720p) and commit changes again.
