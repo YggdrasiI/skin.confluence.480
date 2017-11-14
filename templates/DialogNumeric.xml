@@ -146,6 +146,7 @@
 				<texturenofocus flipx="true" border="{{ScaleBorder('5,25,25,5')}}">KeyboardCornerTopNF.png</texturenofocus>
 				<texturefocus flipx="true" border="{{ScaleBorder('5,25,25,5')}}">KeyboardCornerTop.png</texturefocus>
 				<textwidth>120</textwidth>
+				<textwidth>{{ScaleX('120')}}</textwidth>
 				<label></label>
 				<focusedcolor>black</focusedcolor>
 				<onleft>13</onleft>
@@ -284,7 +285,7 @@
 				<aligny>center</aligny>
 				<texturenofocus flipx="true" border="{{ScaleBorder('25,5,5,25')}}">KeyboardCornerBottomNF.png</texturenofocus>
 				<texturefocus flipx="true" border="{{ScaleBorder('5,5,25,25')}}">KeyboardCornerBottom.png</texturefocus>
-				<textwidth>120</textwidth>
+				<textwidth>{{ScaleX('120')}}</textwidth>
 				<label></label>
 				<focusedcolor>black</focusedcolor>
 				<onleft>19</onleft>
