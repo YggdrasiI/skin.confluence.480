@@ -526,8 +526,8 @@
 				<font>font12</font>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<texturefocus flipy="true" border="5">HomeSubFO.png</texturefocus>
-				<texturenofocus flipy="true" border="5">HomeSubNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">HomeSubFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('5')}}">HomeSubNF.png</texturenofocus>
 				<pulseonselect>false</pulseonselect>
 				<label>137</label>
 				<onclick>RunScript(script.globalsearch)</onclick>
@@ -761,8 +761,8 @@
 				<font>font12</font>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<texturefocus flipy="true" border="5">HomeSubFO.png</texturefocus>
-				<texturenofocus flipy="true" border="5">HomeSubNF.png</texturenofocus>
+				<texturefocus border="{{ScaleBorder('5')}}">HomeSubFO.png</texturefocus>
+				<texturenofocus border="{{ScaleBorder('5')}}">HomeSubNF.png</texturenofocus>
 				<pulseonselect>false</pulseonselect>
 				<label>31008</label>
 				<onclick>fullscreen</onclick>
