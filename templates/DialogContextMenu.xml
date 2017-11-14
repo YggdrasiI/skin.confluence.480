@@ -29,8 +29,8 @@
 			<top>{{ScaleY('5')}}</top>
 			<width>{{ScaleX('64')}}</width>
 			<height>{{ScaleY('32')}}</height>
-			<label>-</label>
-			<font>-</font>
+			<label></label>
+			<font></font>
 			<onclick>PreviousMenu</onclick>
 			<texturefocus>DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -42,8 +42,8 @@
 		</control>
 		<control type="button" id="1000">
 			<description>button template</description>
-			<left>{{ScaleX('-')}}</left>
-			<top>{{ScaleY('-')}}</top>
+			<left></left>
+			<top></top>
 			<width>{{ScaleX('300')}}</width>
 			<height>{{ScaleY('38')}}</height>
 			<font>fontContextMenu</font>

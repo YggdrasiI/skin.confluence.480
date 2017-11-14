@@ -42,8 +42,8 @@
 				<top>{{ScaleY('11')}}</top>
 				<width>{{ScaleX('64')}}</width>
 				<height>{{ScaleY('32')}}</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -258,7 +258,7 @@
 			<left>{{ScaleX('0')}}</left>
 			<top>{{ScaleY('0')}}</top>
 			<height>{{ScaleY('30')}}</height>
-			<label>-</label>
+			<label></label>
 			<align>center</align>
 			<aligny>bottom</aligny>
 			<font>font13_title</font>
@@ -271,7 +271,7 @@
 			<top>{{ScaleY('0')}}</top>
 			<width>{{ScaleX('0')}}</width>
 			<height>{{ScaleY('0')}}</height>
-			<font>-</font>
+			<font></font>
 			<visible>false</visible>
 		</control>
 		<control type="group">

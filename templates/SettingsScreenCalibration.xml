@@ -29,8 +29,8 @@
 			<top>{{ScaleY('0')}}</top>
 			<width>{{ScaleX('64')}}</width>
 			<height>{{ScaleY('32')}}</height>
-			<label>-</label>
-			<font>-</font>
+			<label></label>
+			<font></font>
 			<onclick>PreviousMenu</onclick>
 			<texturefocus>DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -47,7 +47,7 @@
 			<width>{{ScaleX('128')}}</width>
 			<height>{{ScaleY('128')}}</height>
 			<texturefocus>CalibrateTopLeft.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 		</control>
 		<control type="mover" id="9">
 			<description>right bottom mover</description>
@@ -56,7 +56,7 @@
 			<width>{{ScaleX('128')}}</width>
 			<height>{{ScaleY('128')}}</height>
 			<texturefocus>CalibrateBottomRight.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 		</control>
 		<control type="mover" id="10">
 			<description>subtitle position mover</description>
@@ -65,7 +65,7 @@
 			<width>{{ScaleX('512')}}</width>
 			<height>{{ScaleY('128')}}</height>
 			<texturefocus>CalibrateSubtitles.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 		</control>
 		<control type="resize" id="11">
 			<description>pixel aspect ratio box</description>
@@ -74,7 +74,7 @@
 			<width>{{ScaleX('256')}}</width>
 			<height>{{ScaleY('256')}}</height>
 			<texturefocus>CalibratePixelRatio.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 		</control>
 		<control type="group">
 			<left>{{ScaleX('20')}}</left>
@@ -84,7 +84,7 @@
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('10')}}</top>
 				<width>{{ScaleX('1240')}}</width>
-				<label>-</label>
+				<label></label>
 				<align>center</align>
 				<font>font13</font>
 			</control>
@@ -93,7 +93,7 @@
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('40')}}</top>
 				<width>{{ScaleX('1240')}}</width>
-				<label>-</label>
+				<label></label>
 				<align>center</align>
 				<font>font13</font>
 			</control>
