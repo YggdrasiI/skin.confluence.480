@@ -280,11 +280,11 @@ msgstr "הסתר לוח שידורים מחלון ערוץ אם זמין מיד�
 # empty string with id 31123
 msgctxt "#31124"
 msgid "Show background \"Now playing\" video"
-msgstr "הצג וידאו \\\"מנגן כעת \\\" כרקע"
+msgstr "הצג וידאו \"מנגן כעת \" כרקע"
 
 msgctxt "#31125"
 msgid "Show background \"Now playing\" visualisation"
-msgstr "הצג חיזוי \\\"מנגן כעת \\\" כרקע"
+msgstr "הצג חיזוי \"מנגן כעת \" כרקע"
 
 # empty strings from id 31126 to 31127
 msgctxt "#31128"
