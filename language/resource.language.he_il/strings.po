@@ -217,7 +217,7 @@ msgstr "רקע"
 
 msgctxt "#31103"
 msgid "Show \"Paused\" in picture slideshow"
-msgstr "הצג \\\"מושהה\\\" במצגת תמונות"
+msgstr "הצג \"מושהה\" במצגת תמונות"
 
 msgctxt "#31104"
 msgid "Play trailers in a window [COLOR=grey3](Video information dialogue only)[/COLOR]"
@@ -230,7 +230,7 @@ msgstr "אפשרויות שונות"
 
 msgctxt "#31107"
 msgid "Hide flagging read from video filenames [COLOR=grey3](e.g. Blu-ray, HD-DVD)[/COLOR]"
-msgstr "הסתר סימון \\\"נצפה\\\" משמות קבצי וידאו [COLOR=grey3](Blu-ray, HD-DVD)[/COLOR]"
+msgstr "הסתר סימון \"נצפה\" משמות קבצי וידאו [COLOR=grey3](Blu-ray, HD-DVD)[/COLOR]"
 
 msgctxt "#31108"
 msgid "Hide main menu buttons"
