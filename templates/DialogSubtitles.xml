@@ -17,10 +17,10 @@
 				<top>{{ScaleY('0')}}</top>
 				<width>{{ScaleX('80')}}</width>
 				<height>{{ScaleY('720')}}</height>
-				<label>-</label>
-				<font>-</font>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
+				<label></label>
+				<font></font>
+				<texturenofocus></texturenofocus>
+				<texturefocus></texturefocus>
 				<visible>true</visible>
 				<onfocus>SetFocus(150)</onfocus>
 			</control>
@@ -39,8 +39,8 @@
 				<top>{{ScaleY('0')}}</top>
 				<width>{{ScaleX('64')}}</width>
 				<height>{{ScaleY('32')}}</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>

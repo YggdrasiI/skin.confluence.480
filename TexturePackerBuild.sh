@@ -5,7 +5,12 @@
 # cd xbmc
 
 ROOT_DIR="./"
-
+REQUIRED_LIBS="libgif-dev libjpeg-dev liblzo2-dev"
+if [ -d "/usr/include/libpng12" ] ; then
+REQUIRED_LIBS="${REQUIRED_LIBS} libpng12-dev"
+else
+REQUIRED_LIBS="${REQUIRED_LIBS} libpng16-dev"
+fi
 
 cd "${ROOT_DIR}" && mkdir TexturePackerBuild; cd TexturePackerBuild
 
@@ -22,7 +27,6 @@ if [ ! -d ".git" ] ; then
 fi
 
 echo "Install libs..."
-REQUIRED_LIBS="libpng16-dev libgif-dev libjpeg-dev liblzo2-dev"
 echo -e "Required dev packges for header files: \n" \
        "${REQUIRED_LIBS} \n\nInstall? y/N"
 read INSTALL_LIBS

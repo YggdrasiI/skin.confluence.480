@@ -411,7 +411,7 @@
 				<top>{{ScaleY('147')}}</top>
 				<width>{{ScaleX('275')}}</width>
 				<height>{{ScaleY('14')}}</height>
-				<overlaytexture>-</overlaytexture>
+				<overlaytexture></overlaytexture>
 				<info>PVR.ActStreamProgrSNR</info>
 			</control>
 			<control type="label">

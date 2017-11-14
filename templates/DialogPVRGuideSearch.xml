@@ -13,7 +13,7 @@
 			<param name="DialogHeaderWidth" value="{{ScaleX({{ 785 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
 			<param name="DialogHeaderLabel" value="$LOCALIZE[19142]" />
 			<param name="DialogHeaderId" value="2" />
-			<param name="CloseButtonLeft" value="775" />
+			<param name="CloseButtonLeft" value="{{ScaleX({{ 775 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
 			<param name="CloseButtonNav" value="3" />
 		</include>
 		<control type="label">
@@ -46,8 +46,8 @@
 			<font>font13</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
 			<align>left</align>
 			<onleft>9</onleft>
 			<onright>9</onright>

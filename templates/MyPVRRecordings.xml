@@ -95,7 +95,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+						<label>$INFO[ListItem.Label,, ]$INFO[ListItem.EpisodeName,(,) ]$INFO[Listitem.Season,,.]$INFO[Listitem.Episode]</label>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('225')}}</left>
@@ -171,7 +171,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+						<label>$INFO[ListItem.Label,, ]$INFO[ListItem.EpisodeName,(,) ]$INFO[Listitem.Season,,.]$INFO[Listitem.Episode]</label>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('225')}}</left>
@@ -237,20 +237,9 @@
 			<control type="group">
 				<left>{{ScaleX('910')}}</left>
 				<top>{{ScaleY('80')}}</top>
-				<control type="image">
-					<left>{{ScaleX('10')}}</left>
-					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('290')}}</width>
-					<height>{{ScaleY('230')}}</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<texture fallback="DefaultVideoCover.png">$INFO[Container(50).ListItem.Icon]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
-				</control>
 				<control type="fadelabel">
 					<left>{{ScaleX('10')}}</left>
-					<top>{{ScaleY('230')}}</top>
+					<top>{{ScaleY('0')}}</top>
 					<width>{{ScaleX('290')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[Container(50).ListItem.Title]$INFO[ListItem.EpisodeName, (,)]</label>
@@ -265,9 +254,9 @@
 				<control type="textbox">
 					<description>Description Value for TV Show</description>
 					<left>{{ScaleX('10')}}</left>
-					<top>{{ScaleY('272')}}</top>
+					<top>{{ScaleY('40')}}</top>
 					<width>{{ScaleX('290')}}</width>
-					<height>{{ScaleY('223')}}</height>
+					<height>{{ScaleY('455')}}</height>
 					<font>font13</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>

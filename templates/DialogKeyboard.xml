@@ -85,8 +85,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturefocus>-</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus></texturefocus>
+				<texturenofocus></texturenofocus>
 			</control>
 			<control type="image">
 				<left>{{ScaleX('130')}}</left>
@@ -187,8 +187,8 @@
 						<description>(0,11) key button</description>
 						<onup>308</onup>
 						<ondown>131</ondown>
-						<texturenofocus flipx="true" border="5,25,25,5">KeyboardCornerTopNF.png</texturenofocus>
-						<texturefocus flipx="true" border="5,25,25,5">KeyboardCornerTop.png</texturefocus>
+						<texturenofocus border="{{ScaleBorder('5,25,25,5')}}">KeyboardCornerTopNF.png</texturenofocus>
+						<texturefocus border="{{ScaleBorder('5,25,25,5')}}">KeyboardCornerTop.png</texturefocus>
 						<include>KeyboardButton</include>
 					</control>
 				</control>
@@ -535,7 +535,7 @@
 						<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
 						<align>center</align>
 						<aligny>center</aligny>
-						<font>-</font>
+						<font></font>
 						<focusedcolor>black</focusedcolor>
 					</control>
 					<control type="button" id="305">
@@ -573,8 +573,8 @@
 						<label>222</label>
 						<align>center</align>
 						<aligny>center</aligny>
-						<texturenofocus flipx="true" border="5,5,25,25">KeyboardCornerBottomNF.png</texturenofocus>
-						<texturefocus flipx="true" border="5,5,25,25">KeyboardCornerBottom.png</texturefocus>
+						<texturenofocus border="{{ScaleBorder('5,5,25,25')}}">KeyboardCornerBottomNF.png</texturenofocus>
+						<texturefocus border="{{ScaleBorder('5,5,25,25')}}">KeyboardCornerBottom.png</texturefocus>
 						<font>font13</font>
 						<focusedcolor>black</focusedcolor>
 						<onup>168</onup>

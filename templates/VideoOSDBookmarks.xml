@@ -42,8 +42,8 @@
 			<top>{{ScaleY('15')}}</top>
 			<width>{{ScaleX('64')}}</width>
 			<height>{{ScaleY('32')}}</height>
-			<label>-</label>
-			<font>-</font>
+			<label></label>
+			<font></font>
 			<onclick>PreviousMenu</onclick>
 			<texturefocus>DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -77,7 +77,7 @@
 			<onup>2</onup>
 			<scrolltime>200</scrolltime>
 			<viewtype label="536">icon</viewtype>
-			<pagecontrol>-</pagecontrol>
+			<pagecontrol></pagecontrol>
 			<orientation>vertical</orientation>
 			<itemlayout height="{{ScaleY({OSDBookmarksItemHeight})}}" width="{{ScaleX({OSDBookmarksItemWidth})}}">
 				<control type="image">
