@@ -82,6 +82,7 @@
 	</include>
 	<include name="PVRSideBlade">
 		<control type="group">
+			<visible>!Skin.HasSetting(Kiosk)</visible>
 			<left>{{ScaleX({{ -250 - {SideBladeExtraWidth} }})}}</left>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
