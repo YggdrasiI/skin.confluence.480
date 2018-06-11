@@ -1,4 +1,9 @@
-Skin based on skin.confluence (currently version 3.1.43).
+This skin based on skin.confluence.
+
+Newest supported skin version for Kodi 18.x (Leia): 4.4.2 (=> master branch).
+Newest supported skin version for Kodi 17.x (Krypton): 3.1.6 (=> release_3.1.6 branch)
+Older skin version for Kodi 15.2-16.x: See release_0.8 branch.
+
 
 The targeting use case is the RPi 1 with a CRT TV on the composite output.
 Currently, only the main controls was changed.
