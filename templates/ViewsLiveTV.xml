@@ -131,8 +131,8 @@
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 				<control type="fadelabel">
 					<left>{{ScaleX('10')}}</left>

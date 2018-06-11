@@ -136,8 +136,8 @@
 					<width>{{ScaleX({{ 240 + {SettingPanelExtraWidthL} }})}}</width>
 					<height>{{ScaleY('200')}}</height>
 					<aspectratio>keep</aspectratio>
-					<bordertexture border="12">ThumbBorder.png</bordertexture>
-					<bordersize>10</bordersize>
+					<bordertexture border="{{ScaleBorder('12')}}">ThumbBorder.png</bordertexture>
+					<bordersize>{{ScaleBorder('10')}}</bordersize>
 					<texture fallback="DefaultUser.png">$INFO[Container(2).Listitem.Icon]</texture>
 				</control>
 				<control type="label">
@@ -311,8 +311,8 @@
 							<top>{{ScaleY('0')}}</top>
 							<width>{{ScaleX({{ 188 + {SettingProfileExtraWidth} }})}}</width>
 							<height>{{ScaleY('145')}}</height>
-							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+							<bordersize>{{ScaleBorder('5')}}</bordersize>
 							<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
@@ -335,8 +335,8 @@
 							<top>{{ScaleY('0')}}</top>
 							<width>{{ScaleX({{ 188 + {SettingProfileExtraWidth} }})}}</width>
 							<height>{{ScaleY('145')}}</height>
-							<bordertexture border="5">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<bordertexture border="{{ScaleBorder('5')}}">folder-focus.png</bordertexture>
+							<bordersize>{{ScaleBorder('5')}}</bordersize>
 							<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>

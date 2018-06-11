@@ -57,8 +57,8 @@
 						<width>{{ScaleX('270')}}</width>
 						<height>{{ScaleY('270')}}</height>
 						<aspectratio>keep</aspectratio>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>4</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('4')}}</bordersize>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="list" id="49">

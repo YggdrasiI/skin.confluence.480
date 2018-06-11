@@ -42,8 +42,8 @@
 				<aspectratio align="center">keep</aspectratio>
 				<fadetime>IconCrossfadeTime</fadetime>
 				<texture>$INFO[ListItem.Icon]</texture>
-				<bordertexture border="8">ThumbShadow.png</bordertexture>
-				<bordersize>8</bordersize>
+				<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+				<bordersize>{{ScaleBorder('8')}}</bordersize>
 			</control>
 			<control type="list" id="450">
 				<left>{{ScaleX('{{ {FavoritesBladeWidth} - 20 }}r')}}</left>

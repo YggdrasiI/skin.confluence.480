@@ -59,7 +59,7 @@
 			<top>{{ScaleY('-40')}}</top>
 			<width>{{ScaleX('1320')}}</width>
 			<height>{{ScaleY('120')}}</height>
-			<texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
+			<texture flipy="true" border="{{ScaleBorder('1')}}">HomeNowPlayingBack.png</texture>
 			<visible>[Player.HasVideo + !Slideshow.IsActive + !Window.IsActive(movieinformation) + !Skin.HasSetting(ShowBackgroundVideo)] | [Player.HasAudio + ![Skin.HasSetting(ShowBackgroundVis) | !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))]] | [!Skin.HasSetting(HideBackGroundFanart) + !String.IsEmpty(ListItem.Property(Fanart_Image))]</visible>
 			<include>VisibleFadeEffect</include>
 		</control>

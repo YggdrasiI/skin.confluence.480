@@ -74,8 +74,8 @@
 				<height>{{ScaleY('295')}}</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
-				<bordertexture border="8">ThumbBorder.png</bordertexture>
-				<bordersize>5</bordersize>
+				<bordertexture border="{{ScaleBorder('8')}}">ThumbBorder.png</bordertexture>
+				<bordersize>{{ScaleBorder('5')}}</bordersize>
 			</control>
 			<control type="label">
 				<description>Album Label</description>
@@ -143,8 +143,8 @@
 					<height>{{ScaleY('80')}}</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" fallback="DefaultVideoCover.png">$INFO[PVR.NextRecordingChannelIcon]</texture>
-					<bordertexture border="8">ThumbBorder.png</bordertexture>
-					<bordersize>4</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbBorder.png</bordertexture>
+					<bordersize>{{ScaleBorder('4')}}</bordersize>
 				</control>
 				<control type="image">
 					<left>{{ScaleX('365')}}</left>
@@ -210,8 +210,8 @@
 					<height>{{ScaleY('80')}}</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" fallback="DefaultVideoCover.png">$INFO[PVR.NowRecordingChannelIcon]</texture>
-					<bordertexture border="8">ThumbBorder.png</bordertexture>
-					<bordersize>4</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbBorder.png</bordertexture>
+					<bordersize>{{ScaleBorder('4')}}</bordersize>
 				</control>
 				<control type="image">
 					<left>{{ScaleX('365')}}</left>
@@ -280,8 +280,8 @@
 					<height>{{ScaleY('300')}}</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
-					<bordertexture border="8">ThumbBorder.png</bordertexture>
-					<bordersize>5</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbBorder.png</bordertexture>
+					<bordersize>{{ScaleBorder('5')}}</bordersize>
 				</control>
 				<control type="label">
 					<description>Title label</description>
@@ -320,8 +320,8 @@
 					<height>{{ScaleY('300')}}</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
-					<bordertexture border="8">ThumbBorder.png</bordertexture>
-					<bordersize>5</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbBorder.png</bordertexture>
+					<bordersize>{{ScaleBorder('5')}}</bordersize>
 				</control>
 				<control type="label">
 					<description>Channel label</description>
@@ -373,8 +373,8 @@
 					<height>{{ScaleY('300')}}</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
-					<bordertexture border="8">ThumbBorder.png</bordertexture>
-					<bordersize>5</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbBorder.png</bordertexture>
+					<bordersize>{{ScaleBorder('5')}}</bordersize>
 				</control>
 				<control type="label">
 					<description>Studio label</description>
@@ -426,8 +426,8 @@
 					<height>{{ScaleY('120')}}</height>
 					<aspectratio>scale</aspectratio>
 					<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
-					<bordertexture border="8">ThumbBorder.png</bordertexture>
-					<bordersize>5</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbBorder.png</bordertexture>
+					<bordersize>{{ScaleBorder('5')}}</bordersize>
 				</control>
 				<control type="label">
 					<description>TV Show Season Ep Label</description>
@@ -509,7 +509,7 @@
 				<width>{{ScaleX({{ 5 + {HomeControlIconWidth} }})}}</width>
 				<height>{{ScaleY({{ 5 + {HomeControlIconWidth} }})}}</height>
 				<colordiffuse>CCFFFFFF</colordiffuse>
-				<texture flipy="true" border="0,5,0,0" flipx="true">HomeSubEnd.png</texture>
+				<texture flipy="true" border="{{ScaleBorder('0,5,0,0')}}" flipx="true">HomeSubEnd.png</texture>
 				<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('{HomeSearchWidth},0')}}" time="0" condition="!System.HasAddon(script.globalsearch)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="608">
@@ -526,15 +526,15 @@
 				<font>font12</font>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<texturefocus border="{{ScaleBorder('5')}}">HomeSubFO.png</texturefocus>
-				<texturenofocus border="{{ScaleBorder('5')}}">HomeSubNF.png</texturenofocus>
+				<texturefocus flipy="true" border="{{ScaleBorder('5')}}">HomeSubFO.png</texturefocus>
+				<texturenofocus flipy="true" border="{{ScaleBorder('5')}}">HomeSubNF.png</texturenofocus>
 				<pulseonselect>false</pulseonselect>
 				<label>137</label>
 				<onclick>RunScript(script.globalsearch)</onclick>
-				<textureradioonfocus>icon_search.png</textureradioonfocus>
-				<textureradioonnofocus>icon_search.png</textureradioonnofocus>
-				<textureradioofffocus>icon_search.png</textureradioofffocus>
-				<textureradiooffnofocus>icon_search.png</textureradiooffnofocus>
+				<textureradioonfocus>icon_search_home.png</textureradioonfocus>
+				<textureradioonnofocus>icon_search_home.png</textureradioonnofocus>
+				<textureradioofffocus>icon_search_home.png</textureradioofffocus>
+				<textureradiooffnofocus>icon_search_home.png</textureradiooffnofocus>
 				<onleft>607</onleft>
 				<onright>601</onright>
 				<onup>9003</onup>
@@ -553,7 +553,7 @@
 					<top>{{ScaleY('0')}}</top>
 					<width>{{ScaleX({{ 10 + 6*({HomeControlIconWidth}) + 7 }})}}</width>
 					<height>{{ScaleY({{ 5 + {HomeControlIconWidth} }})}}</height>
-					<texture flipy="true" border="0,5,0,0">HomeSubNF.png</texture>
+					<texture flipy="true" border="{{ScaleBorder('0,5,0,0')}}">HomeSubNF.png</texture>
 					<colordiffuse>CCFFFFFF</colordiffuse>
 				</control>
 				<control type="group">
@@ -743,7 +743,7 @@
 						<onright>607</onright>
 						<onup>9003</onup>
 						<ondown>9000</ondown>
-						<onclick>PlayerControl(record)</onclick>
+						<onclick>PVR.ToggleRecordPlayingChannel</onclick>
 					</control>
 				</control>
 			</control>
@@ -761,8 +761,8 @@
 				<font>font12</font>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<texturefocus border="{{ScaleBorder('5')}}">HomeSubFO.png</texturefocus>
-				<texturenofocus border="{{ScaleBorder('5')}}">HomeSubNF.png</texturenofocus>
+				<texturefocus flipy="true" border="{{ScaleBorder('5')}}">HomeSubFO.png</texturefocus>
+				<texturenofocus flipy="true" border="{{ScaleBorder('5')}}">HomeSubNF.png</texturenofocus>
 				<pulseonselect>false</pulseonselect>
 				<label>31008</label>
 				<onclick>fullscreen</onclick>
@@ -1071,14 +1071,14 @@
 		<control type="group" id="9002">
 			<depth>DepthMenu</depth>
 			<onup>9001</onup>
-			<ondown>20</ondown>
+			<ondown>21</ondown>
 			<control type="fixedlist" id="700">
 				<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-91,0')}}" time="0" condition="String.IsEqual(Container(700).NumItems,2) | String.IsEqual(Container(700).NumItems,4)">conditional</animation>
 				<visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(10) | Container(9000).HasFocus(11)</visible>
 				<onleft>700</onleft>
 				<onright>700</onright>
 				<onup>9001</onup>
-				<ondown>20</ondown>
+				<ondown>21</ondown>
 				<include>HomeAddonsCommonLayout</include>
 				<content>
 					<include>HomeAddonItemsVideos</include>
@@ -1090,7 +1090,7 @@
 				<onleft>703</onleft>
 				<onright>703</onright>
 				<onup>9001</onup>
-				<ondown>20</ondown>
+				<ondown>21</ondown>
 				<include>HomeAddonsCommonLayout</include>
 				<content>
 					<include>HomeAddonItemsMusic</include>
@@ -1102,7 +1102,7 @@
 				<onleft>704</onleft>
 				<onright>704</onright>
 				<onup>9001</onup>
-				<ondown>20</ondown>
+				<ondown>21</ondown>
 				<include>HomeAddonsCommonLayout</include>
 				<content>
 					<include>HomeAddonItemsPictures</include>
@@ -1114,7 +1114,7 @@
 				<onleft>705</onleft>
 				<onright>705</onright>
 				<onup>9001</onup>
-				<ondown>20</ondown>
+				<ondown>21</ondown>
 				<include>HomeAddonsCommonLayout</include>
 				<content>
 					<include>HomeAddonItemsPrograms</include>

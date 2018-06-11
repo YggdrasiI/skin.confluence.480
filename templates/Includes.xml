@@ -464,6 +464,7 @@
 		<value condition="String.Contains(listitem.mpaa,Rated PG)">mpaa_pg</value>
 		<value condition="String.Contains(Listitem.mpaa,Rated R)">mpaa_restricted</value>
 		<value condition="String.Contains(Listitem.mpaa,Rated NC)">mpaa_nc17</value>
+		<value condition="String.Contains(Listitem.mpaa,Rated NR)">mpaa_notrated</value>
 		<value condition="String.Contains(Listitem.mpaa,Not Rated)">mpaa_notrated</value>
 	</variable>
 	<variable name="videocodec">
@@ -1273,9 +1274,9 @@
 					<label/>
 					<texturefocus>OSDRecordOffFO.png</texturefocus>
 					<texturenofocus>OSDRecordOffNF.png</texturenofocus>
-					<onclick>PlayerControl(record)</onclick>
-					<enable>Player.CanRecord</enable>
-					<animation effect="fade" start="100" end="30" time="75" condition="!Player.CanRecord">Conditional</animation>
+					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+					<enable>PVR.CanRecordPlayingChannel</enable>
+					<animation effect="fade" start="100" end="30" time="75" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
 				</control>
 				<control type="button" id="606">
 					<width>{{ScaleX('39')}}</width>
@@ -1491,8 +1492,8 @@
 				<width>{{ScaleX('180')}}</width>
 				<height>{{ScaleY('120')}}</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>3</bordersize>
+				<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+				<bordersize>{{ScaleBorder('3')}}</bordersize>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="image">
@@ -1522,8 +1523,8 @@
 				<width>{{ScaleX('180')}}</width>
 				<height>{{ScaleY('120')}}</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>3</bordersize>
+				<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+				<bordersize>{{ScaleBorder('3')}}</bordersize>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<visible>!ControlGroup(9002).HasFocus</visible>
 			</control>
@@ -1533,8 +1534,8 @@
 				<width>{{ScaleX('180')}}</width>
 				<height>{{ScaleY('120')}}</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="5">folder-focus.png</bordertexture>
-				<bordersize>3</bordersize>
+				<bordertexture border="{{ScaleBorder('5')}}">folder-focus.png</bordertexture>
+				<bordersize>{{ScaleBorder('3')}}</bordersize>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<visible>ControlGroup(9002).HasFocus</visible>
 			</control>

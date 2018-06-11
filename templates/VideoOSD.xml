@@ -23,7 +23,7 @@
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
 			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-30,0')}}" time="0" condition="Player.Muted">conditional</animation>
 			<animation effect="fade" time="150">VisibleChange</animation>
-			<visible>system.getbool(input.enablemouse) + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+			<visible>system.getbool(input.enablemouse) + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 		</control>
 		<control type="slider" id="87">
 			<depth>DepthOSD+</depth>
@@ -39,7 +39,7 @@
 			<textureslidernib>osd_slider_nibNF.png</textureslidernib>
 			<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
 			<animation effect="fade" time="150">VisibleChange</animation>
-			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV)]</visible>
+			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV)]</visible>
 		</control>
 		<control type="grouplist" id="100">
 			<left>{{ScaleX('325')}}</left>
@@ -47,7 +47,7 @@
 			<orientation>horizontal</orientation>
 			<itemgap>0</itemgap>
 			<animation effect="fade" time="150">VisibleChange</animation>
-			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide)]</visible>
+			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide)]</visible>
 			<control type="button" id="300">
 				<width>{{ScaleX('55')}}</width>
 				<height>{{ScaleY('55')}}</height>
@@ -205,7 +205,7 @@
 				<font></font>
 				<texturefocus>OSDSubtitlesFO.png</texturefocus>
 				<texturenofocus>OSDSubtitlesNF.png</texturenofocus>
-				<onup>404</onup>
+				<onclick>ActivateWindow(OSDSubtitleSettings)</onclick>
 			</control>
 			<control type="button" id="251">
 				<width>{{ScaleX('55')}}</width>
@@ -256,12 +256,12 @@
 				<font></font>
 				<texturefocus>OSDRecordOffFO.png</texturefocus>
 				<texturenofocus>OSDRecordOffNF.png</texturenofocus>
-				<usealttexture>Player.Recording</usealttexture>
+				<usealttexture>PVR.IsRecordingPlayingChannel</usealttexture>
 				<alttexturefocus>OSDRecordOnFO.png</alttexturefocus>
 				<alttexturenofocus>OSDRecordOnNF.png</alttexturenofocus>
-				<onclick>PlayerControl(Record)</onclick>
-				<enable>Player.CanRecord</enable>
-				<animation effect="fade" start="100" end="50" time="75" condition="!Player.CanRecord">Conditional</animation>
+				<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+				<enable>PVR.CanRecordPlayingChannel</enable>
+				<animation effect="fade" start="100" end="50" time="75" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 		</control>
@@ -403,7 +403,7 @@
 		</control>
 		<control type="grouplist" id="500">
 			<depth>DepthOSD+</depth>
-			<visible>videoplayer.isstereoscopic + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide)] + [Control.HasFocus(255) | ControlGroup(500).HasFocus | Control.HasFocus(520)]</visible>
+			<visible>videoplayer.isstereoscopic + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide)] + [Control.HasFocus(255) | ControlGroup(500).HasFocus | Control.HasFocus(520)]</visible>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('55,0')}}" time="0" condition="![VideoPlayer.HasMenu | VideoPlayer.Content(LiveTV)]">Conditional</animation>
 			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('55,0')}}" time="0" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
