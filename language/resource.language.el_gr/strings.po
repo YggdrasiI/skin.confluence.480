@@ -20,6 +20,10 @@ msgctxt "#31000"
 msgid "Change your"
 msgstr "Αλλαγή"
 
+msgctxt "#31001"
+msgid "GAMES"
+msgstr "ΠΑΙΧΝΙΔΙΑ"
+
 msgctxt "#31003"
 msgid "Power options"
 msgstr "Επιλογές Ενέργειας"
@@ -52,6 +56,10 @@ msgctxt "#31010"
 msgid "Hardware decoding"
 msgstr "Αποκωδικοποίηση υλικού"
 
+msgctxt "#31011"
+msgid "Inactive"
+msgstr "Ανενεργό"
+
 msgctxt "#31012"
 msgid "Decoder"
 msgstr "Αποκωδικοποιητής"
@@ -63,6 +71,10 @@ msgstr "Πληροφορίες διεργασίας ήχου"
 msgctxt "#31014"
 msgid "Memory used"
 msgstr "Μνήμη σε χρήση"
+
+msgctxt "#31015"
+msgid "Minute"
+msgstr "Λεπτό"
 
 msgctxt "#31023"
 msgid "Playing"
