@@ -109,8 +109,8 @@
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('560')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="10,14,10,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="10,14,10,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>550</onleft>
@@ -145,8 +145,8 @@
 					<aspectratio>keep</aspectratio>
 					<fadetime>200</fadetime>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 				<control type="group">
 					<top>{{ScaleY('280')}}</top>
@@ -245,8 +245,8 @@
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('191')}}</width>
 						<height>{{ScaleY('160')}}</height>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('5')}}</bordersize>
 						<fadetime>100</fadetime>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
@@ -256,8 +256,8 @@
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('191')}}</width>
 						<height>{{ScaleY('160')}}</height>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('5')}}</bordersize>
 						<fadetime>100</fadetime>
 						<colordiffuse>ff333333</colordiffuse>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
@@ -298,8 +298,8 @@
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('191')}}</width>
 						<height>{{ScaleY('160')}}</height>
-						<bordertexture border="5">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">folder-focus.png</bordertexture>
+						<bordersize>{{ScaleBorder('5')}}</bordersize>
 						<fadetime>100</fadetime>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
@@ -309,8 +309,8 @@
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('191')}}</width>
 						<height>{{ScaleY('160')}}</height>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('5')}}</bordersize>
 						<fadetime>100</fadetime>
 						<colordiffuse>ff333333</colordiffuse>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
@@ -352,8 +352,8 @@
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('560')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="10,14,10,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="10,14,10,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>551</onleft>

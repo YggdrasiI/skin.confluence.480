@@ -109,8 +109,8 @@
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('560')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('2,16,2,16')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('2,16,2,16')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>560</onleft>
@@ -131,8 +131,8 @@
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 				<control type="fadelabel">
 					<left>{{ScaleX('10')}}</left>

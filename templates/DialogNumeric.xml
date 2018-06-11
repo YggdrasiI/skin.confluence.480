@@ -143,8 +143,8 @@
 				<font>font12</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus flipx="true" border="5,25,25,5">KeyboardCornerTopNF.png</texturenofocus>
-				<texturefocus flipx="true" border="5,25,25,5">KeyboardCornerTop.png</texturefocus>
+				<texturenofocus flipx="true" border="{{ScaleBorder('5,25,25,5')}}">KeyboardCornerTopNF.png</texturenofocus>
+				<texturefocus flipx="true" border="{{ScaleBorder('5,25,25,5')}}">KeyboardCornerTop.png</texturefocus>
 				<textwidth>120</textwidth>
 				<label></label>
 				<focusedcolor>black</focusedcolor>
@@ -278,8 +278,8 @@
 				<font>font12</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus flipx="true" border="25,5,5,25">KeyboardCornerBottomNF.png</texturenofocus>
-				<texturefocus flipx="true" border="5,5,25,25">KeyboardCornerBottom.png</texturefocus>
+				<texturenofocus flipx="true" border="{{ScaleBorder('25,5,5,25')}}">KeyboardCornerBottomNF.png</texturenofocus>
+				<texturefocus flipx="true" border="{{ScaleBorder('5,5,25,25')}}">KeyboardCornerBottom.png</texturefocus>
 				<textwidth>120</textwidth>
 				<label></label>
 				<focusedcolor>black</focusedcolor>

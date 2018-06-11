@@ -35,8 +35,8 @@
 						<width>{{ScaleX('214')}}</width>
 						<height>{{ScaleY('310')}}</height>
 						<aspectratio>stretch</aspectratio>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>4</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('4')}}</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
 					</control>
 				</itemlayout>
@@ -48,8 +48,8 @@
 						<width>{{ScaleX('222')}}</width>
 						<height>{{ScaleY('318')}}</height>
 						<aspectratio>stretch</aspectratio>
-						<bordertexture border="8">ThumbBorder.png</bordertexture>
-						<bordersize>8</bordersize>
+						<bordertexture border="{{ScaleBorder('8')}}">ThumbBorder.png</bordertexture>
+						<bordersize>{{ScaleBorder('8')}}</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
 						<animation reversible="false" effect="zoom" start="{{ScaleBorder2('-2,36,222,318')}}" end="{{ScaleBorder2('-28,0,284,390')}}" time="150">focus</animation>
 						<animation reversible="false" effect="zoom" end="{{ScaleBorder2('-2,36,222,318')}}" start="{{ScaleBorder2('-28,0,284,390')}}" time="150">unfocus</animation>
@@ -90,8 +90,8 @@
 				<width>{{ScaleX('880')}}</width>
 				<height>{{ScaleY('25')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('14,0,14,0')}}">ScrollBarH.png</texturesliderbackground>
-				<texturesliderbar border="14,0,14,0">ScrollBarH_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="14,0,14,0">ScrollBarH_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('14,0,14,0')}}">ScrollBarH_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('14,0,14,0')}}">ScrollBarH_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onup>501</onup>
@@ -337,8 +337,8 @@
 						<width>{{ScaleX('120')}}</width>
 						<height>{{ScaleY('160')}}</height>
 						<aspectratio>stretch</aspectratio>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>4</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('4')}}</bordersize>
 						<fadetime>200</fadetime>
 						<texture background="true">$VAR[PosterThumb]</texture>
 					</control>
@@ -357,8 +357,8 @@
 						<width>{{ScaleX('120')}}</width>
 						<height>{{ScaleY('160')}}</height>
 						<aspectratio>stretch</aspectratio>
-						<bordertexture border="5" diffuse="diffuse_mirror2.png">button-nofocus.png</bordertexture>
-						<bordersize>4</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}" diffuse="diffuse_mirror2.png">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('4')}}</bordersize>
 						<fadetime>200</fadetime>
 						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$VAR[PosterThumb]</texture>
 					</control>
@@ -371,8 +371,8 @@
 						<width>{{ScaleX('128')}}</width>
 						<height>{{ScaleY('168')}}</height>
 						<aspectratio>stretch</aspectratio>
-						<bordertexture border="8">ThumbBorder.png</bordertexture>
-						<bordersize>8</bordersize>
+						<bordertexture border="{{ScaleBorder('8')}}">ThumbBorder.png</bordertexture>
+						<bordersize>{{ScaleBorder('8')}}</bordersize>
 						<fadetime>200</fadetime>
 						<texture background="true">$VAR[PosterThumb]</texture>
 						<animation reversible="false" effect="zoom" start="{{ScaleBorder2('-2,16,128,168')}}" end="{{ScaleBorder2('-12,-10,148,198')}}" time="150">focus</animation>
@@ -385,8 +385,8 @@
 						<width>{{ScaleX('120')}}</width>
 						<height>{{ScaleY('160')}}</height>
 						<aspectratio>stretch</aspectratio>
-						<bordertexture border="5" diffuse="diffuse_mirror2.png">button-nofocus.png</bordertexture>
-						<bordersize>4</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}" diffuse="diffuse_mirror2.png">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('4')}}</bordersize>
 						<fadetime>200</fadetime>
 						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$VAR[PosterThumb]</texture>
 					</control>
@@ -416,8 +416,8 @@
 				<width>{{ScaleX('660')}}</width>
 				<height>{{ScaleY('25')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('14,0,14,0')}}">ScrollBarH.png</texturesliderbackground>
-				<texturesliderbar border="14,0,14,0">ScrollBarH_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="14,0,14,0">ScrollBarH_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('14,0,14,0')}}">ScrollBarH_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('14,0,14,0')}}">ScrollBarH_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onup>508</onup>
@@ -926,8 +926,8 @@
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('400')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>503</onleft>
@@ -948,8 +948,8 @@
 					<aspectratio>keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$VAR[BannerThumb]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 				<control type="label">
 					<description>Episodes txt</description>
@@ -1056,8 +1056,8 @@
 					<aspectratio>keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
@@ -1120,8 +1120,8 @@
 					<aspectratio>keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 				<control type="textbox">
 					<description>Description Value for Seasons</description>
@@ -1162,8 +1162,8 @@
 					<aspectratio>keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$VAR[PosterThumb]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
@@ -1358,8 +1358,8 @@
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('560')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="10,14,10,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="10,14,10,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>504</onleft>
@@ -1381,8 +1381,8 @@
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true" fallback="Fanart_Fallback_Small.jpg">$INFO[ListItem.Art(fanart)]</texture>
 					<visible>Container.Content(Movies)</visible>
-					<bordertexture background="true" border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture background="true" border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 				<control type="image">
 					<left>{{ScaleX('0')}}</left>
@@ -1393,8 +1393,8 @@
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true" fallback="Fanart_Fallback_Small.jpg">$INFO[ListItem.Art(fanart)]</texture>
 					<visible>Container.Content(TVShows) | Container.Content(Videos)</visible>
-					<bordertexture background="true" border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture background="true" border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
@@ -1499,8 +1499,8 @@
 					<aspectratio>scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<bordertexture background="true" border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture background="true" border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
@@ -1704,8 +1704,8 @@
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('560')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="10,14,10,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="10,14,10,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('10,14,10,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>515</onleft>
@@ -1775,8 +1775,8 @@
 					<aspectratio align="left" aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$VAR[PosterThumb]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 			</control>
 			<control type="group">
@@ -1825,8 +1825,8 @@
 					<aspectratio align="left" aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$VAR[PosterThumb]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 			</control>
 			<control type="group">
@@ -1875,8 +1875,8 @@
 					<aspectratio align="left" aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 			</control>
 			<control type="group">
@@ -1940,8 +1940,8 @@
 					<aspectratio align="left" aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 			</control>
 		</control>

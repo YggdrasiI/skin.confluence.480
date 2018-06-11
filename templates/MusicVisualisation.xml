@@ -32,7 +32,7 @@
 				<top>{{ScaleY('-150')}}</top>
 				<width>{{ScaleX('1320')}}</width>
 				<height>{{ScaleY('256')}}</height>
-				<texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
+				<texture flipy="true" border="{{ScaleBorder('1')}}">HomeNowPlayingBack.png</texture>
 			</control>
 			<control type="label">
 				<description>Partymode Header label</description>
@@ -93,8 +93,8 @@
 				<height>{{ScaleY('230')}}</height>
 				<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="8">ThumbShadow.png</bordertexture>
-				<bordersize>8</bordersize>
+				<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+				<bordersize>{{ScaleBorder('8')}}</bordersize>
 			</control>
 			<control type="group">
 				<left>{{ScaleX('330')}}</left>

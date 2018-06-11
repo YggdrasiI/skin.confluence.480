@@ -15,7 +15,7 @@
 				<top>{{ScaleY('-10')}}</top>
 				<width>{{ScaleX('300')}}</width>
 				<height>{{ScaleY('50')}}</height>
-				<texture flipy="true" border="20,20,20,2">InfoMessagePanel.png</texture>
+				<texture flipy="true" border="{{ScaleBorder('20,20,20,2')}}">InfoMessagePanel.png</texture>
 			</control>
 			<control type="group">
 				<visible>!player.passthrough</visible>

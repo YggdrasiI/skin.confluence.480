@@ -44,8 +44,8 @@
 				<height>{{ScaleY('80')}}</height>
 				<aspectratio>keep</aspectratio>
 				<info>Container(20).ListItem.Icon</info>
-				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>3</bordersize>
+				<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+				<bordersize>{{ScaleBorder('3')}}</bordersize>
 			</control>
 			<control type="label">
 				<description>header label</description>
@@ -79,8 +79,8 @@
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('490')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('2,16,2,16')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('2,16,2,16')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib></textureslidernib>
 				<textureslidernibfocus></textureslidernibfocus>
 				<onleft>31</onleft>
@@ -218,8 +218,8 @@
 				<height>{{ScaleY('80')}}</height>
 				<aspectratio>keep</aspectratio>
 				<info>Container(21).ListItem.Icon</info>
-				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>3</bordersize>
+				<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+				<bordersize>{{ScaleBorder('3')}}</bordersize>
 			</control>
 			<control type="label">
 				<description>header label</description>
@@ -253,8 +253,8 @@
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('490')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('2,16,2,16')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('2,16,2,16')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib></textureslidernib>
 				<textureslidernibfocus></textureslidernibfocus>
 				<onleft>21</onleft>

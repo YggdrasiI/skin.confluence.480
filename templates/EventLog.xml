@@ -60,8 +60,8 @@
 						<height>{{ScaleY('76')}}</height>
 						<texture>$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
-						<bordertexture border="3">black-back2.png</bordertexture>
-						<bordersize>2</bordersize>
+						<bordertexture border="{{ScaleBorder('3')}}">black-back2.png</bordertexture>
+						<bordersize>{{ScaleBorder('2')}}</bordersize>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('90')}}</left>
@@ -125,8 +125,8 @@
 						<height>{{ScaleY('76')}}</height>
 						<texture>$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
-						<bordertexture border="3">black-back2.png</bordertexture>
-						<bordersize>2</bordersize>
+						<bordertexture border="{{ScaleBorder('3')}}">black-back2.png</bordertexture>
+						<bordersize>{{ScaleBorder('2')}}</bordersize>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('90')}}</left>
@@ -171,8 +171,8 @@
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('550')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>570</onleft>

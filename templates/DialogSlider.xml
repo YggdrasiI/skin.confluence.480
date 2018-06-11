@@ -14,7 +14,7 @@
 			<top>{{ScaleY('-10')}}</top>
 			<width>{{ScaleX('460')}}</width>
 			<height>{{ScaleY('80')}}</height>
-			<texture flipy="true" border="20,2,20,20">InfoMessagePanel.png</texture>
+			<texture flipy="true" border="{{ScaleBorder('20,2,20,20')}}">InfoMessagePanel.png</texture>
 		</control>
 		<control type="label" id="10">
 			<description>Dialog header</description>
