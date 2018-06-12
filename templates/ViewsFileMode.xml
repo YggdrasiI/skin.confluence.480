@@ -248,7 +248,7 @@
 				<preloaditems>2</preloaditems>
 				<itemlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(TVShows) + !Container.Content(Sets)" height="{{ScaleY('{{ 186 + {ThumbnailViewItemExtraHeight} }}')}}" width="{{ScaleX('{{ 216 + {ThumbnailViewItemExtraWidth} }}')}}">
 					<control type="image">
-						<left>{{ScaleX('1')}}</left>
+						<left>{{ScaleX('{{ 1 + ({ThumbnailViewItemExtraWidth} - {ThumbnailViewItemExtraHeight})/2 }}')}}</left>
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('214')}}</width>
 						<height>{{ScaleY('160')}}</height>

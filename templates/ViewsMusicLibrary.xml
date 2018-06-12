@@ -280,7 +280,7 @@
 			<control type="fixedlist" id="509">
 				<depth>DepthContent-</depth>
 				<visible>Container.Content(Albums)</visible>
-				<hitrect x="0" y="-10" w="1280" h="190" />
+				<hitrect x="{{ScaleX('0')}}" y="{{ScaleY('-10')}}" w="{{ScaleX('1280')}}" h="{{ScaleY('190')}}" />
 				<left>{{ScaleX('-80')}}</left>
 				<top>{{ScaleY('0')}}</top>
 				<width>{{ScaleX('1360')}}</width>
