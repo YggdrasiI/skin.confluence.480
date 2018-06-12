@@ -13,7 +13,7 @@
 			<top>{{ScaleY('156')}}</top>
 			<width>{{ScaleX('483')}}</width>
 			<height>{{ScaleY('53')}}</height>
-			<texture flipy="true" border="20,20,20,2">InfoMessagePanel.png</texture>
+			<texture flipy="true" border="{{ScaleBorder('20,20,20,2')}}">InfoMessagePanel.png</texture>
 		</control>
 		<control type="group" id="100">
 			<left>{{ScaleX('25')}}</left>

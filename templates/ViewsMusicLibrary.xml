@@ -131,8 +131,8 @@
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 				<control type="label">
 					<left>{{ScaleX('10')}}</left>
@@ -280,7 +280,7 @@
 			<control type="fixedlist" id="509">
 				<depth>DepthContent-</depth>
 				<visible>Container.Content(Albums)</visible>
-				<hitrect x="0" y="-10" w="1280" h="190" />
+				<hitrect x="{{ScaleX('0')}}" y="{{ScaleY('-10')}}" w="{{ScaleX('1280')}}" h="{{ScaleY('190')}}" />
 				<left>{{ScaleX('-80')}}</left>
 				<top>{{ScaleY('0')}}</top>
 				<width>{{ScaleX('1360')}}</width>
@@ -303,8 +303,8 @@
 						<width>{{ScaleX('160')}}</width>
 						<height>{{ScaleY('160')}}</height>
 						<aspectratio>stretch</aspectratio>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>4</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('4')}}</bordersize>
 						<fadetime>200</fadetime>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 					</control>
@@ -323,8 +323,8 @@
 						<width>{{ScaleX('160')}}</width>
 						<height>{{ScaleY('160')}}</height>
 						<aspectratio>stretch</aspectratio>
-						<bordertexture border="5" diffuse="diffuse_mirror2.png">button-nofocus.png</bordertexture>
-						<bordersize>4</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}" diffuse="diffuse_mirror2.png">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('4')}}</bordersize>
 						<fadetime>200</fadetime>
 						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[ListItem.Icon]</texture>
 					</control>
@@ -337,8 +337,8 @@
 						<width>{{ScaleX('168')}}</width>
 						<height>{{ScaleY('168')}}</height>
 						<aspectratio>stretch</aspectratio>
-						<bordertexture border="8">ThumbBorder.png</bordertexture>
-						<bordersize>8</bordersize>
+						<bordertexture border="{{ScaleBorder('8')}}">ThumbBorder.png</bordertexture>
+						<bordersize>{{ScaleBorder('8')}}</bordersize>
 						<fadetime>200</fadetime>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<animation reversible="false" effect="zoom" start="{{ScaleBorder2('-2,16,168,168')}}" end="{{ScaleBorder2('-12,-4,198,198')}}" time="150">focus</animation>
@@ -646,8 +646,8 @@
 					<aspectratio>keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
@@ -828,8 +828,8 @@
 					<aspectratio>keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 				<control type="group">
 					<top>{{ScaleY('310')}}</top>
@@ -1062,8 +1062,8 @@
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 				<control type="label">
 					<description>Description Header txt</description>

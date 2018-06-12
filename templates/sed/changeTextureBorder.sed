@@ -1,1 +1,1 @@
-s/<texture border="\([^$"]*\)"/<texture border="{{ScaleBorder('\1')}}"/g
+s/<texture \([^>]*\)border="\([^${"]*\)"/<texture \1border="{{ScaleBorder('\2')}}"/g

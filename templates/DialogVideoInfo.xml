@@ -118,8 +118,8 @@
 						<width>{{ScaleX('270')}}</width>
 						<height>{{ScaleY('380')}}</height>
 						<aspectratio>stretch</aspectratio>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>4</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('4')}}</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
 					</control>
 					<control type="image">
@@ -304,8 +304,8 @@
 						<width>{{ScaleX('270')}}</width>
 						<height>{{ScaleY('380')}}</height>
 						<aspectratio>stretch</aspectratio>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>4</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('4')}}</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
 					</control>
 					<control type="image">
@@ -454,8 +454,8 @@
 						<width>{{ScaleX('380')}}</width>
 						<height>{{ScaleY('250')}}</height>
 						<aspectratio aligny="bottom">keep</aspectratio>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>4</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('4')}}</bordersize>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="image">
@@ -464,8 +464,8 @@
 						<width>{{ScaleX('380')}}</width>
 						<height>{{ScaleY('250')}}</height>
 						<aspectratio aligny="top">keep</aspectratio>
-						<bordertexture border="5" flipy="true" diffuse="diffuse_mirror2.png">button-nofocus.png</bordertexture>
-						<bordersize>4</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}" flipy="true" diffuse="diffuse_mirror2.png">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('4')}}</bordersize>
 						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="list" id="49">
@@ -635,8 +635,8 @@
 						<width>{{ScaleX('380')}}</width>
 						<height>{{ScaleY('360')}}</height>
 						<aspectratio>keep</aspectratio>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>4</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('4')}}</bordersize>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="list" id="49">

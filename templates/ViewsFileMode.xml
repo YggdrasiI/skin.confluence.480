@@ -213,8 +213,8 @@
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$VAR[PosterThumb]</texture>
-					<bordertexture border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
 				</control>
 				<control type="image">
 					<left>{{ScaleX('8')}}</left>
@@ -249,12 +249,23 @@
 				<itemlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(TVShows) + !Container.Content(Sets)" height="{{ScaleY('{{ 186 + {ThumbnailViewItemExtraHeight} }}')}}" width="{{ScaleX('{{ 216 + {ThumbnailViewItemExtraWidth} }}')}}">
 					<control type="image">
 						<left>{{ScaleX('{{ 1 + ({ThumbnailViewItemExtraWidth} - {ThumbnailViewItemExtraHeight})/2 }}')}}</left>
-						<top>{{ScaleY('0')}}</top>
+						<top>{{ScaleY('10')}}</top>
 						<width>{{ScaleX('{{ 214 + {ThumbnailViewItemExtraHeight} }}')}}</width>
-						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} }}')}}</height>
+						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} - 20 }}')}}</height>
+						<aspectratio>keep</aspectratio>
+						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('5')}}</bordersize>
+						<texture background="true">$INFO[Listitem.Icon]</texture>
+						<visible>!Container.Content(Episodes)</visible>
+					</control>
+					<control type="image">
+						<left>{{ScaleX('{{ 1 + ({ThumbnailViewItemExtraWidth} - {ThumbnailViewItemExtraHeight})/2 }}')}}</left>
+						<top>{{ScaleY('10')}}</top>
+						<width>{{ScaleX('{{ 214 + {ThumbnailViewItemExtraHeight} }}')}}</width>
+						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} - 20 }}')}}</height>
 						<aspectratio>scale</aspectratio>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('5')}}</bordersize>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
 						<visible>Container.Content(Episodes)</visible>
 					</control>
@@ -282,23 +293,23 @@
 				<focusedlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(TVShows) + !Container.Content(Sets)" height="{{ScaleY('{{ 186 + {ThumbnailViewItemExtraHeight} }}')}}" width="{{ScaleX('{{ 216 + {ThumbnailViewItemExtraWidth} }}')}}">
 					<control type="image">
 						<left>{{ScaleX('{{ 1 + ({ThumbnailViewItemExtraWidth} - {ThumbnailViewItemExtraHeight})/2 }}')}}</left>
-						<top>{{ScaleY('0')}}</top>
+						<top>{{ScaleY('10')}}</top>
 						<width>{{ScaleX('{{ 214 + {ThumbnailViewItemExtraHeight} }}')}}</width>
-						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} }}')}}</height>
-						<bordertexture border="5">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} - 20 }}')}}</height>
+						<bordertexture border="{{ScaleBorder('5')}}">folder-focus.png</bordertexture>
+						<bordersize>{{ScaleBorder('5')}}</bordersize>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>!Container.Content(Episodes)</visible>
 					</control>
 					<control type="image">
 						<left>{{ScaleX('{{ 1 + ({ThumbnailViewItemExtraWidth} - {ThumbnailViewItemExtraHeight})/2 }}')}}</left>
-						<top>{{ScaleY('0')}}</top>
+						<top>{{ScaleY('10')}}</top>
 						<width>{{ScaleX('{{ 214 + {ThumbnailViewItemExtraHeight} }}')}}</width>
-						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} }}')}}</height>
+						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} - 20 }}')}}</height>
 						<aspectratio>scale</aspectratio>
-						<bordertexture border="5">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">folder-focus.png</bordertexture>
+						<bordersize>{{ScaleBorder('5')}}</bordersize>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
 						<visible>Container.Content(Episodes)</visible>
 					</control>
@@ -329,8 +340,8 @@
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('{{ 214 + {ThumbnailViewItemExtraHeight} }}')}}</width>
 						<height>{{ScaleY('{{ 240 + {ThumbnailViewItemExtraHeight} }}')}}</height>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('5')}}</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
@@ -355,14 +366,14 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="{{ScaleY('{{ScaleY('{{ 279 + {ThumbnailViewItemExtraHeight} }}')}}')}}" width="{{ScaleX('{{ 216 + {ThumbnailViewItemExtraWidth} }}')}}">
+				<focusedlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="{{ScaleY('{{ 279 + {ThumbnailViewItemExtraHeight} }}')}}" width="{{ScaleX('{{ 216 + {ThumbnailViewItemExtraWidth} }}')}}">
 					<control type="image">
 						<left>{{ScaleX('{{ 1 + ({ThumbnailViewItemExtraWidth} - {ThumbnailViewItemExtraHeight})/2 }}')}}</left>
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('{{ 214 + {ThumbnailViewItemExtraHeight} }}')}}</width>
 						<height>{{ScaleY('{{ 240 + {ThumbnailViewItemExtraHeight} }}')}}</height>
-						<bordertexture border="5">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">folder-focus.png</bordertexture>
+						<bordersize>{{ScaleBorder('5')}}</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
@@ -431,8 +442,8 @@
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('538')}}</width>
 						<height>{{ScaleY('105')}}</height>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+						<bordersize>{{ScaleBorder('5')}}</bordersize>
 						<texture background="true">$VAR[BannerThumb]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
@@ -451,8 +462,8 @@
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('538')}}</width>
 						<height>{{ScaleY('105')}}</height>
-						<bordertexture border="5">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<bordertexture border="{{ScaleBorder('5')}}">folder-focus.png</bordertexture>
+						<bordersize>{{ScaleBorder('5')}}</bordersize>
 						<texture background="true">$VAR[BannerThumb]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>

@@ -66,10 +66,14 @@ substitutions = {
     "DialogSeekBarWidth2": 340,  # 240
 
     "DialogBusyWidth": 300,  # 200
+    "DialogNotificationExtraWidth": 200,  # 0
 
     "DialogPVRExtraWidth": 200,  # 0
     "DialogPVRExtraHeight": 34,  # 0
     "DialogPVRItemExtraHeight": 40,  # 0
+
+    "DialogSliderExtraWidth": 300,  # 0 Used in DialogSlider
+    "DialogSettingsExtraHeight": 200,  # 0 Used in DialogSettings
 
     "FullScreenExtraHeight": 44,  # 0
     "FullScreenExtraWidth": 32,  # 0
@@ -83,7 +87,7 @@ substitutions = {
     # Higher desciption box
     "DialogPVRGuideInfoExtraHeight": 150,  # 0
     "ThumbnailViewItemExtraWidth": 150,
-    "ThumbnailViewItemExtraHeight": -100,  # Smaller icons
+    "ThumbnailViewItemExtraHeight": 0,  # -100,  # Smaller icons
     "ThumbnailViewItemColumns": 3,
 
     "MusicVisualisationExtraHeight": 75,
@@ -92,6 +96,16 @@ substitutions = {
 substitutions["OSDBookmarksItemWidth"] = int(
     (substitutions["OSDBookmarksWidth"] - 2*40)/3)
 
+substitutions["DialogExtraWidth"] =\
+    substitutions.get("SettingPanelExtraWidthL", 0) +\
+    substitutions.get("SettingPanelExtraWidthR", 0) +\
+    140
+substitutions["DialogExtraWidthL"] =\
+    substitutions.get("SettingPanelExtraWidthL", 0) +\
+    30
+substitutions["DialogExtraWidthR"] =\
+    substitutions.get("SettingPanelExtraWidthR", 0) +\
+    110
 
 # Finally, extend by other dicts here
 map(lambda x: substitutions.update(x), [])

@@ -12,7 +12,7 @@
 				<top>{{ScaleY('-150')}}</top>
 				<width>{{ScaleX('1320')}}</width>
 				<height>{{ScaleY('256')}}</height>
-				<texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
+				<texture flipy="true" border="{{ScaleBorder('1')}}">HomeNowPlayingBack.png</texture>
 			</control>
 			<control type="label" id="1">
 				<description>Chapter Count Header label</description>
@@ -73,8 +73,8 @@
 				<height>{{ScaleY('230')}}</height>
 				<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="8">ThumbShadow.png</bordertexture>
-				<bordersize>8</bordersize>
+				<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+				<bordersize>{{ScaleBorder('8')}}</bordersize>
 				<visible>![VideoPlayer.Content(Movies) | VideoPlayer.Content(LiveTV)]</visible>
 			</control>
 			<control type="image" id="1">
@@ -86,8 +86,8 @@
 				<height>{{ScaleY('330')}}</height>
 				<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="8">ThumbShadow.png</bordertexture>
-				<bordersize>8</bordersize>
+				<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+				<bordersize>{{ScaleBorder('8')}}</bordersize>
 				<visible>VideoPlayer.Content(Movies)</visible>
 			</control>
 			<control type="image" id="1">
@@ -264,9 +264,10 @@
 						</control>
 						<control type="label" id="1">
 							<left>{{ScaleX('38')}}</left>
-							<top>{{ScaleY('2')}}</top>
-							<width>{{ScaleX('{{ 47 + {FullScreenExtraIconDim} }}')}}</width>
-							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
+							<top>{{ScaleY('{{ 2 - 10 }}')}}</top>
+							<aligny>bottom</aligny>
+							<width min="{{ScaleX('{{ 47 + {FullScreenExtraIconDim} }}')}}" max="{{ScaleX('{{ 47 + {FullScreenExtraIconDim} + 20 }}')}}">auto</width>
+							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} + 10 }}')}}</height>
 							<font>font13</font>
 							<align>left</align>
 							<label>$INFO[VideoPlayer.AudioLanguage]</label>
@@ -286,9 +287,10 @@
 						</control>
 						<control type="label" id="1">
 							<left>{{ScaleX('38')}}</left>
-							<top>{{ScaleY('2')}}</top>
-							<width>{{ScaleX('{{ 47 + {FullScreenExtraIconDim} }}')}}</width>
-							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
+							<top>{{ScaleY('{{ 2 - 10 }}')}}</top>
+							<aligny>bottom</aligny>
+							<width min="{{ScaleX('{{ 47 + {FullScreenExtraIconDim} }}')}}" max="{{ScaleX('{{ 47 + {FullScreenExtraIconDim} + 20 }}')}}">auto</width>
+							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} + 10 }}')}}</height>
 							<font>font13</font>
 							<align>left</align>
 							<label>$INFO[VideoPlayer.SubtitlesLanguage]</label>

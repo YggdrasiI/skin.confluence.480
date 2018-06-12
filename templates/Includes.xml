@@ -1106,7 +1106,7 @@
 			<effect type="zoom" start="100" end="70" center="{{ScaleBorder2('auto')}}" easing="in" tween="quadratic" time="225" />
 			<effect type="fade" start="100" end="0" time="225" />
 		</animation>
-		<hitrect x="0" y="530" w="1280" h="120" />
+		<hitrect x="{{ScaleX('0')}}" y="{{ScaleY('530')}}" w="{{ScaleX('1280')}}" h="{{ScaleY('120')}}" />
 		<left>{{ScaleX('0')}}</left>
 		<top>{{ScaleY('190r')}}</top>
 		<width>{{ScaleX('1280')}}</width>
@@ -1123,8 +1123,8 @@
 				<width>{{ScaleX('180')}}</width>
 				<height>{{ScaleY('120')}}</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>3</bordersize>
+				<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+				<bordersize>{{ScaleBorder('3')}}</bordersize>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="image">
@@ -1154,8 +1154,8 @@
 				<width>{{ScaleX('180')}}</width>
 				<height>{{ScaleY('120')}}</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>3</bordersize>
+				<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
+				<bordersize>{{ScaleBorder('3')}}</bordersize>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<visible>!ControlGroup(9002).HasFocus</visible>
 			</control>
@@ -1165,8 +1165,8 @@
 				<width>{{ScaleX('180')}}</width>
 				<height>{{ScaleY('120')}}</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="5">folder-focus.png</bordertexture>
-				<bordersize>3</bordersize>
+				<bordertexture border="{{ScaleBorder('5')}}">folder-focus.png</bordertexture>
+				<bordersize>{{ScaleBorder('3')}}</bordersize>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<visible>ControlGroup(9002).HasFocus</visible>
 			</control>

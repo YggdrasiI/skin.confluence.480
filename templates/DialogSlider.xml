@@ -5,22 +5,22 @@
 	<animation effect="slide" start="{{ScaleBorder2('0,-80')}}" end="{{ScaleBorder2('0,0')}}" time="75">WindowOpen</animation>
 	<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,-80')}}" time="75">WindowClose</animation>
 	<coordinates>
-		<left>{{ScaleX('405')}}</left>
+		<left>{{ScaleX({{ 405 - {DialogSliderExtraWidth}/2 }})}}</left>
 		<top>{{ScaleY('0')}}</top>
 	</coordinates>
 	<controls>
 		<control type="image">
 			<left>{{ScaleX('0')}}</left>
 			<top>{{ScaleY('-10')}}</top>
-			<width>{{ScaleX('460')}}</width>
+			<width>{{ScaleX({{ 460 + {DialogSliderExtraWidth} }})}}</width>
 			<height>{{ScaleY('80')}}</height>
-			<texture flipy="true" border="20,2,20,20">InfoMessagePanel.png</texture>
+			<texture flipy="true" border="{{ScaleBorder('20,2,20,20')}}">InfoMessagePanel.png</texture>
 		</control>
 		<control type="label" id="10">
 			<description>Dialog header</description>
 			<left>{{ScaleX('20')}}</left>
 			<top>{{ScaleY('10')}}</top>
-			<width>{{ScaleX('230')}}</width>
+			<width>{{ScaleX({{ 230 + {DialogSliderExtraWidth}/2 }})}}</width>
 			<height>{{ScaleY('20')}}</height>
 			<align>left</align>
 			<aligny>center</aligny>
@@ -29,9 +29,9 @@
 		</control>
 		<control type="label" id="12">
 			<description>Slider Value</description>
-			<left>{{ScaleX('220')}}</left>
+			<left>{{ScaleX({{ 220 + {DialogSliderExtraWidth}/2 }})}}</left>
 			<top>{{ScaleY('10')}}</top>
-			<width>{{ScaleX('220')}}</width>
+			<width>{{ScaleX({{ 220 + {DialogSliderExtraWidth}/2 }})}}</width>
 			<height>{{ScaleY('20')}}</height>
 			<align>right</align>
 			<aligny>center</aligny>
@@ -42,7 +42,7 @@
 			<description>Slider</description>
 			<left>{{ScaleX('20')}}</left>
 			<top>{{ScaleY('35')}}</top>
-			<width>{{ScaleX('420')}}</width>
+			<width>{{ScaleX({{ 420 + {DialogSliderExtraWidth} }})}}</width>
 			<height>{{ScaleY('20')}}</height>
 			<aligny>center</aligny>
 			<texturefocus>-</texturefocus>
@@ -50,6 +50,7 @@
 			<texturesliderbar>osd_slider_bg_2.png</texturesliderbar>
 			<textureslidernib>osd_slider_nibNF.png</textureslidernib>
 			<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+			<orientation>horizontal</orientation>
 			<onup>11</onup>
 			<ondown>11</ondown>
 			<onleft>11</onleft>

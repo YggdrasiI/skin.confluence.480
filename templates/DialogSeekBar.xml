@@ -302,6 +302,7 @@
 				<texturesliderbar>seekslider.png</texturesliderbar>
 				<textureslidernib>osd_slider_nib.png</textureslidernib>
 				<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+				<orientation>horizontal</orientation>
 				<visible>Player.Seeking</visible>
 			</control>
 		</control>

@@ -12,8 +12,8 @@
 				<width>{{ScaleX('120')}}</width>
 				<height>{{ScaleY('35')}}</height>
 				<texture>black-back.png</texture>
-				<bordertexture border="3">NoCover_1.png</bordertexture>
-				<bordersize>5</bordersize>
+				<bordertexture border="{{ScaleBorder('3')}}">NoCover_1.png</bordertexture>
+				<bordersize>{{ScaleBorder('5')}}</bordersize>
 			</control>
 			<control type="label">
 				<description>paused label</description>

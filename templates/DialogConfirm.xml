@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<coordinates>
-		<left>{{ScaleX({{ 315 - ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/2 }})}}</left>
+		<left>{{ScaleX({{ 315 - ({DialogExtraWidth})/2 }})}}</left>
 		<top>{{ScaleY('220')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<depth>DepthDialog+</depth>
 	<controls>
 		<include content="DialogBackgroundCommons">
-			<param name="DialogBackgroundWidth" value="{{ScaleX({{ 650 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
+			<param name="DialogBackgroundWidth" value="{{ScaleX({{ 650 + {DialogExtraWidth} }})}}" />
 			<param name="DialogBackgroundHeight" value="{{ScaleY('260')}}" />
-			<param name="DialogHeaderWidth" value="{{ScaleX({{ 570 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
+			<param name="DialogHeaderWidth" value="{{ScaleX({{ 570 + {DialogExtraWidth} }})}}" />
 			<param name="DialogHeaderLabel" value="" />
 			<param name="DialogHeaderId" value="1" />
-			<param name="CloseButtonLeft" value="{{ScaleX({{ 560 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
+			<param name="CloseButtonLeft" value="{{ScaleX({{ 560 + {DialogExtraWidth} }})}}" />
 			<param name="CloseButtonNav" value="9000" />
 		</include>
 		<control type="textbox" id="9">
 			<description>text</description>
 			<left>{{ScaleX('30')}}</left>
 			<top>{{ScaleY('62')}}</top>
-			<width>{{ScaleX('{{ 590 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
+			<width>{{ScaleX('{{ 590 + {DialogExtraWidth} }}')}}</width>
 			<height>{{ScaleY('98')}}</height>
 			<align>left</align>
 			<label>-</label>
@@ -31,21 +31,21 @@
 			<description>Progressbar</description>
 			<left>{{ScaleX('30')}}</left>
 			<top>{{ScaleY('168')}}</top>
-			<width>{{ScaleX('{{ 590 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
+			<width>{{ScaleX('{{ 590 + {DialogExtraWidth} }}')}}</width>
 			<height>{{ScaleY('16')}}</height>
 			<info>System.Progressbar</info>
 		</control>
 		<control type="grouplist" id="9000">
 			<left>{{ScaleX('25')}}</left>
 			<top>{{ScaleY('195')}}</top>
-			<width>{{ScaleX('{{ 600 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
+			<width>{{ScaleX('{{ 600 + {DialogExtraWidth} }}')}}</width>
 			<height>{{ScaleY('40')}}</height>
 			<align>center</align>
 			<itemgap>0</itemgap>
 			<orientation>horizontal</orientation>
 			<control type="button" id="11">
 				<description>OK button</description>
-				<width>{{ScaleX('{{ 200 + ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/3 }}')}}</width>
+				<width>{{ScaleX('{{ 200 + ({DialogExtraWidth})/3 }}')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<label>107</label>
 				<font>font12_title</font>
@@ -55,7 +55,7 @@
 			</control>
 			<control type="button" id="10">
 				<description>Cancel button</description>
-				<width>{{ScaleX('{{ 200 + ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/3 }}')}}</width>
+				<width>{{ScaleX('{{ 200 + ({DialogExtraWidth})/3 }}')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<label>106</label>
 				<font>font12_title</font>
@@ -65,7 +65,7 @@
 			</control>
 			<control type="button" id="12">
 				<description>Custom button</description>
-				<width>{{ScaleX('{{ 200 + ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/3 }}')}}</width>
+				<width>{{ScaleX('{{ 200 + ({DialogExtraWidth})/3 }}')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<label>106</label>
 				<font>font12_title</font>
