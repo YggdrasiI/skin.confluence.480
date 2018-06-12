@@ -3,7 +3,7 @@
 	<animation effect="fade" start="0" end="100" time="150">WindowOpen</animation>
 	<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
 	<coordinates>
-		<left>{{ScaleX('860')}}</left>
+		<left>{{ScaleX('{{ 860 - ({DialogNotificationExtraWidth})/2 }}')}}</left>
 		<top>{{ScaleY('640')}}</top>
 	</coordinates>
 	<controls>
@@ -13,7 +13,7 @@
 			<control type="image">
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('400')}}</width>
+				<width>{{ScaleX('{{ 400 + {DialogNotificationExtraWidth} }}')}}</width>
 				<height>{{ScaleY('70')}}</height>
 				<colordiffuse>EEFFFFFF</colordiffuse>
 				<texture border="{{ScaleBorder('12')}}">OverlayDialogBackground.png</texture>
@@ -30,7 +30,7 @@
 				<description>Line 1 Label</description>
 				<left>{{ScaleX('75')}}</left>
 				<top>{{ScaleY('15')}}</top>
-				<width>{{ScaleX('310')}}</width>
+				<width>{{ScaleX('{{ 310 + {DialogNotificationExtraWidth} }}')}}</width>
 				<height>{{ScaleY('18')}}</height>
 				<font>font12_title</font>
 				<textcolor>white</textcolor>
@@ -43,7 +43,7 @@
 				<description>Line 2 Label</description>
 				<left>{{ScaleX('75')}}</left>
 				<top>{{ScaleY('35')}}</top>
-				<width>{{ScaleX('310')}}</width>
+				<width>{{ScaleX('{{ 310 + {DialogNotificationExtraWidth} }}')}}</width>
 				<height>{{ScaleY('20')}}</height>
 				<font>font12_title</font>
 				<textcolor>grey2</textcolor>

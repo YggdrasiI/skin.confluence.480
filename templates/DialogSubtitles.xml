@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
 	<coordinates>
-		<left>{{ScaleX('380')}}</left>
+		<left>{{ScaleX('{{ 380 - ({DialogExtraWidth})/2 }}')}}</left>
 		<top>{{ScaleY('0')}}</top>
 	</coordinates>
 	<controls>
@@ -13,7 +13,7 @@
 			</animation>
 			<control type="button" id="8999">
 				<description>Fake button for mouse control</description>
-				<left>{{ScaleX('880')}}</left>
+				<left>{{ScaleX('{{ 880 + {DialogExtraWidth} }}')}}</left>
 				<top>{{ScaleY('0')}}</top>
 				<width>{{ScaleX('80')}}</width>
 				<height>{{ScaleY('720')}}</height>
@@ -55,7 +55,7 @@
 					<description>header label</description>
 					<left>{{ScaleX('330')}}</left>
 					<top>{{ScaleY('80')}}</top>
-					<width>{{ScaleX('550')}}</width>
+					<width>{{ScaleX('{{ 550 + {DialogExtraWidth}/2 }}')}}</width>
 					<height>{{ScaleY('30')}}</height>
 					<font>font30_title</font>
 					<align>right</align>
@@ -67,7 +67,7 @@
 					<description>Video label</description>
 					<left>{{ScaleX('255')}}</left>
 					<top>{{ScaleY('110')}}</top>
-					<width>{{ScaleX('625')}}</width>
+					<width>{{ScaleX('{{ 625 + {DialogExtraWidth} }}')}}</width>
 					<height>{{ScaleY('30')}}</height>
 					<font>font13_title</font>
 					<label>$INFO[Player.Filename]</label>
@@ -80,7 +80,7 @@
 				<control type="image">
 					<left>{{ScaleX('30')}}</left>
 					<top>{{ScaleY('140')}}</top>
-					<width>{{ScaleX('820')}}</width>
+					<width>{{ScaleX('{{ 820 + {DialogExtraWidth} }}')}}</width>
 					<height>{{ScaleY('4')}}</height>
 					<texture>separator.png</texture>
 				</control>
@@ -96,7 +96,7 @@
 					<description>textarea</description>
 					<left>{{ScaleX('50')}}</left>
 					<top>{{ScaleY('140')}}</top>
-					<width>{{ScaleX('780')}}</width>
+					<width>{{ScaleX('{{ 780 + {DialogExtraWidth} }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<textcolor>white</textcolor>
@@ -107,7 +107,7 @@
 				<control type="image">
 					<left>{{ScaleX('30')}}</left>
 					<top>{{ScaleY('176')}}</top>
-					<width>{{ScaleX('820')}}</width>
+					<width>{{ScaleX('{{ 820 + {DialogExtraWidth} }}')}}</width>
 					<height>{{ScaleY('4')}}</height>
 					<texture>separator.png</texture>
 				</control>
@@ -116,7 +116,7 @@
 				<control type="list" id="120">
 					<left>{{ScaleX('50')}}</left>
 					<top>{{ScaleY('206')}}</top>
-					<width>{{ScaleX('800')}}</width>
+					<width>{{ScaleX('{{ 800 + {DialogExtraWidth} }}')}}</width>
 					<height>{{ScaleY('434')}}</height>
 					<onleft>121</onleft>
 					<onright>150</onright>
@@ -125,11 +125,11 @@
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>121</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<itemlayout width="{{ScaleX('800')}}" height="{{ScaleY('36')}}">
+					<itemlayout width="{{ScaleX('{{ 800 + {DialogExtraWidth} }}')}}" height="{{ScaleY('36')}}">
 						<control type="image">
 							<left>{{ScaleX('0')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('780')}}</width>
+							<width>{{ScaleX('{{ 780 + {DialogExtraWidth} }}')}}</width>
 							<height>{{ScaleY('38')}}</height>
 							<texture>MenuItemNF.png</texture>
 						</control>
@@ -172,7 +172,7 @@
 						<control type="label">
 							<left>{{ScaleX('205')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('495')}}</width>
+							<width>{{ScaleX('{{ 495 + {DialogExtraWidth} }}')}}</width>
 							<height>{{ScaleY('38')}}</height>
 							<font>font13</font>
 							<aligny>center</aligny>
@@ -190,18 +190,18 @@
 							<aspectratio>keep</aspectratio>
 						</control>
 					</itemlayout>
-					<focusedlayout width="{{ScaleX('800')}}" height="{{ScaleY('36')}}">
+					<focusedlayout width="{{ScaleX('{{ 800 + {DialogExtraWidth} }}')}}" height="{{ScaleY('36')}}">
 						<control type="image">
 							<left>{{ScaleX('0')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('780')}}</width>
+							<width>{{ScaleX('{{ 780 + {DialogExtraWidth} }}')}}</width>
 							<height>{{ScaleY('38')}}</height>
 							<texture>MenuItemNF.png</texture>
 						</control>
 						<control type="image">
 							<left>{{ScaleX('0')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('780')}}</width>
+							<width>{{ScaleX('{{ 780 + {DialogExtraWidth} }}')}}</width>
 							<height>{{ScaleY('38')}}</height>
 							<texture>MenuItemFO.png</texture>
 							<visible>Control.HasFocus(120)</visible>
@@ -245,7 +245,7 @@
 						<control type="label">
 							<left>{{ScaleX('205')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('495')}}</width>
+							<width>{{ScaleX('{{ 495 + {DialogExtraWidth} }}')}}</width>
 							<height>{{ScaleY('38')}}</height>
 							<font>font13</font>
 							<aligny>center</aligny>
@@ -255,7 +255,7 @@
 							<info>ListItem.Label2</info>
 						</control>
 						<control type="image">
-							<left>{{ScaleX('710')}}</left>
+							<left>{{ScaleX('{{ 710 + {DialogExtraWidth} }}')}}</left>
 							<top>{{ScaleY('11')}}</top>
 							<width>{{ScaleX('90')}}</width>
 							<height>{{ScaleY('17')}}</height>
@@ -266,7 +266,7 @@
 				</control>
 				<control type="spincontrol" id="121">
 					<description>Next page button</description>
-					<left>{{ScaleX('808')}}</left>
+					<left>{{ScaleX('{{ 808 + {DialogExtraWidth} }}')}}</left>
 					<top>{{ScaleY('664')}}</top>
 					<width>{{ScaleX('20')}}</width>
 					<height>{{ScaleY('20')}}</height>
@@ -291,7 +291,7 @@
 					<control type="grouplist">
 						<left>{{ScaleX('50')}}</left>
 						<top>{{ScaleY('659')}}</top>
-						<width>{{ScaleX('605')}}</width>
+						<width>{{ScaleX('{{ 605 + {DialogExtraWidth} }}')}}</width>
 						<height>{{ScaleY('30')}}</height>
 						<orientation>horizontal</orientation>
 						<itemgap>5</itemgap>
@@ -302,7 +302,7 @@
 						</control>
 						<control type="label">
 							<description>notification</description>
-							<width min="{{ScaleX('10')}}" max="{{ScaleX('560')}}">{{ScaleX('auto')}}</width>
+							<width min="{{ScaleX('10')}}" max="{{ScaleX('{{ 560 + {DialogExtraWidth} }}')}}">{{ScaleX('auto')}}</width>
 							<height>{{ScaleY('30')}}</height>
 							<font>font13</font>
 							<textcolor>white</textcolor>
@@ -312,7 +312,7 @@
 					</control>
 				</control>
 				<control type="image">
-					<left>{{ScaleX('866')}}</left>
+					<left>{{ScaleX('{{ 866 + {DialogExtraWidth} }}')}}</left>
 					<top>{{ScaleY('348')}}</top>
 					<width>{{ScaleX('24')}}</width>
 					<height>{{ScaleY('24')}}</height>
@@ -330,7 +330,7 @@
 					<animation effect="rotate" start="0" end="90" center="{{ScaleBorder2('auto')}}" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="label">
-					<left>{{ScaleX('905')}}</left>
+					<left>{{ScaleX('{{ 905 + {DialogExtraWidth} }}')}}</left>
 					<top>{{ScaleY('150')}}</top>
 					<width>{{ScaleX('240')}}</width>
 					<height>{{ScaleY('26')}}</height>
@@ -344,14 +344,14 @@
 				</control>
 				<control type="image">
 					<description>separator</description>
-					<left>{{ScaleX('900')}}</left>
+					<left>{{ScaleX('{{ 900 + {DialogExtraWidth} }}')}}</left>
 					<top>{{ScaleY('176')}}</top>
 					<width>{{ScaleX('240')}}</width>
 					<height>{{ScaleY('4')}}</height>
 					<texture>separator.png</texture>
 				</control>
 				<control type="list" id="150">
-					<left>{{ScaleX('900')}}</left>
+					<left>{{ScaleX('{{ 900 + {DialogExtraWidth} }}')}}</left>
 					<top>{{ScaleY('206')}}</top>
 					<width>{{ScaleX('250')}}</width>
 					<height>{{ScaleY('399')}}</height>
@@ -361,18 +361,18 @@
 					<ondown>160</ondown>
 					<viewtype label="535">list</viewtype>
 					<scrolltime>200</scrolltime>
-					<itemlayout width="{{ScaleX('400')}}" height="{{ScaleY('36')}}">
+					<itemlayout width="{{ScaleX('{{ 400 + {DialogExtraWidth}/2 }}')}}" height="{{ScaleY('36')}}">
 						<control type="image">
 							<left>{{ScaleX('0')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('230')}}</width>
+							<width>{{ScaleX('{{ 230 + {DialogExtraWidth}/2 }}')}}</width>
 							<height>{{ScaleY('38')}}</height>
 							<texture>MenuItemNF.png</texture>
 						</control>
 						<control type="label">
 							<left>{{ScaleX('40')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('230')}}</width>
+							<width>{{ScaleX('{{ 230 + {DialogExtraWidth}/2 }}')}}</width>
 							<height>{{ScaleY('38')}}</height>
 							<font>font13</font>
 							<aligny>center</aligny>
@@ -382,18 +382,18 @@
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
-					<focusedlayout width="{{ScaleX('400')}}" height="{{ScaleY('36')}}">
+					<focusedlayout width="{{ScaleX('{{ 400 + {DialogExtraWidth}/2 }}')}}" height="{{ScaleY('36')}}">
 						<control type="image">
 							<left>{{ScaleX('0')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('230')}}</width>
+							<width>{{ScaleX('{{ 230 + {DialogExtraWidth}/2 }}')}}</width>
 							<height>{{ScaleY('38')}}</height>
 							<texture>MenuItemNF.png</texture>
 						</control>
 						<control type="image">
 							<left>{{ScaleX('10')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('230')}}</width>
+							<width>{{ScaleX('{{ 230 + {DialogExtraWidth}/2 }}')}}</width>
 							<height>{{ScaleY('38')}}</height>
 							<texture>MenuItemFO.png</texture>
 							<visible>Control.HasFocus(150)</visible>
@@ -401,7 +401,7 @@
 						<control type="label">
 							<left>{{ScaleX('40')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('230')}}</width>
+							<width>{{ScaleX('{{ 230 + {DialogExtraWidth}/2 }}')}}</width>
 							<height>{{ScaleY('38')}}</height>
 							<font>font13</font>
 							<aligny>center</aligny>
@@ -414,9 +414,9 @@
 				</control>
 				<control type="button" id="160">
 					<description>Manual search button</description>
-					<left>{{ScaleX('925')}}</left>
+					<left>{{ScaleX('{{ 925 + {DialogExtraWidth}/2 }}')}}</left>
 					<top>{{ScaleY('640')}}</top>
-					<width>{{ScaleX('200')}}</width>
+					<width>{{ScaleX('{{ 200+ {DialogExtraWidth}/2 }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<onleft>120</onleft>
 					<onright>120</onright>
@@ -427,7 +427,7 @@
 					<textcolor>white</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<align>center</align>
-					<hitrect x="{{ScaleX('925')}}" y="{{ScaleY('605')}}" w="{{ScaleX('200')}}" h="{{ScaleY('100')}}" />
+					<hitrect x="{{ScaleX('{{ 925 + {DialogExtraWidth}/2 }}')}}" y="{{ScaleY('605')}}" w="{{ScaleX('{{ 200+ {DialogExtraWidth}/2 }}')}}" h="{{ScaleY('100')}}" />
 				</control>
 			</control>
 		</control>

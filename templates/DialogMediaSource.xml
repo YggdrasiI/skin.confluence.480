@@ -2,15 +2,15 @@
 <window>
 	<defaultcontrol>10</defaultcontrol>
 	<coordinates>
-		<left>{{ScaleX('{{ 240 - ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/2 }}')}}</left>
+		<left>{{ScaleX('{{ 240 - ({DialogExtraWidth})/2 }}')}}</left>
 		<top>{{ScaleY('100')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
 		<include content="DialogBackgroundCommons">
-			<param name="DialogBackgroundWidth" value="{{ScaleX({{ 800 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
+			<param name="DialogBackgroundWidth" value="{{ScaleX({{ 800 + {DialogExtraWidth} }})}}" />
 			<param name="DialogBackgroundHeight" value="{{ScaleY('500')}}" />
-			<param name="DialogHeaderWidth" value="{{ScaleX({{ 720 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
+			<param name="DialogHeaderWidth" value="{{ScaleX({{ 720 + {DialogExtraWidth} }})}}" />
 			<param name="DialogHeaderLabel" value="$LOCALIZE[13406]" />
 			<param name="DialogHeaderId" value="2" />
 			<param name="CloseButtonLeft" value="{{ScaleX({{ 710 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
@@ -20,7 +20,7 @@
 			<description>path label</description>
 			<left>{{ScaleX('20')}}</left>
 			<top>{{ScaleY('65')}}</top>
-			<width>{{ScaleX('{{ 760 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
+			<width>{{ScaleX('{{ 760 + {DialogExtraWidth} }}')}}</width>
 			<height>{{ScaleY('30')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
@@ -32,7 +32,7 @@
 		<control type="list" id="10">
 			<left>{{ScaleX('30')}}</left>
 			<top>{{ScaleY('105')}}</top>
-			<width>{{ScaleX('{{ 525 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
+			<width>{{ScaleX('{{ 525 + {DialogExtraWidth} }}')}}</width>
 			<height>{{ScaleY('225')}}</height>
 			<onup>9001</onup>
 			<onleft>9000</onleft>
@@ -44,14 +44,14 @@
 				<control type="image">
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('{{ 525 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
+					<width>{{ScaleX('{{ 525 + {DialogExtraWidth} }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 				</control>
 				<control type="label">
 					<left>{{ScaleX('10')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('{{ 490 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
+					<width>{{ScaleX('{{ 490 + {DialogExtraWidth} }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>left</align>
@@ -65,7 +65,7 @@
 				<control type="image">
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('{{ 525 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
+					<width>{{ScaleX('{{ 525 + {DialogExtraWidth} }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<visible>!Control.HasFocus(10)</visible>
 					<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
@@ -73,7 +73,7 @@
 				<control type="image">
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('{{ 525 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
+					<width>{{ScaleX('{{ 525 + {DialogExtraWidth} }}')}}</width>
 					<height>{{ScaleY('41')}}</height>
 					<visible>Control.HasFocus(10)</visible>
 					<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
@@ -81,7 +81,7 @@
 				<control type="label">
 					<left>{{ScaleX('10')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('{{ 490 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
+					<width>{{ScaleX('{{ 490 + {DialogExtraWidth} }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>left</align>
@@ -92,7 +92,7 @@
 			</focusedlayout>
 		</control>
 		<control type="scrollbar" id="60">
-			<left>{{ScaleX('{{ 555 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
+			<left>{{ScaleX('{{ 555 + {DialogExtraWidth} }}')}}</left>
 			<top>{{ScaleY('105')}}</top>
 			<width>{{ScaleX('25')}}</width>
 			<height>{{ScaleY('225')}}</height>
@@ -107,7 +107,7 @@
 			<orientation>vertical</orientation>
 		</control>
 		<control type="group" id="9000">
-			<left>{{ScaleX('{{ 580 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
+			<left>{{ScaleX('{{ 580 + {DialogExtraWidth} }}')}}</left>
 			<top>{{ScaleY('105')}}</top>
 			<control type="button" id="11">
 				<description>Browse Button</description>

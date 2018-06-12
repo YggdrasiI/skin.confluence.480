@@ -249,9 +249,9 @@
 				<itemlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(TVShows) + !Container.Content(Sets)" height="{{ScaleY('{{ 186 + {ThumbnailViewItemExtraHeight} }}')}}" width="{{ScaleX('{{ 216 + {ThumbnailViewItemExtraWidth} }}')}}">
 					<control type="image">
 						<left>{{ScaleX('{{ 1 + ({ThumbnailViewItemExtraWidth} - {ThumbnailViewItemExtraHeight})/2 }}')}}</left>
-						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('214')}}</width>
-						<height>{{ScaleY('160')}}</height>
+						<top>{{ScaleY('{{ 0 + 10 }}')}}</top>
+						<width>{{ScaleX('{{ 214 + {ThumbnailViewItemExtraHeight} }}')}}</width>
+						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} - 20 }}')}}</height>
 						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
 						<bordersize>{{ScaleBorder('5')}}</bordersize>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
@@ -260,9 +260,9 @@
 					</control>
 					<control type="image">
 						<left>{{ScaleX('{{ 1 + ({ThumbnailViewItemExtraWidth} - {ThumbnailViewItemExtraHeight})/2 }}')}}</left>
-						<top>{{ScaleY('0')}}</top>
+						<top>{{ScaleY('{{ 0 + 10 }}')}}</top>
 						<width>{{ScaleX('{{ 214 + {ThumbnailViewItemExtraHeight} }}')}}</width>
-						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} }}')}}</height>
+						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} - 20 }}')}}</height>
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="{{ScaleBorder('5')}}">button-nofocus.png</bordertexture>
 						<bordersize>{{ScaleBorder('5')}}</bordersize>
@@ -293,9 +293,9 @@
 				<focusedlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(TVShows) + !Container.Content(Sets)" height="{{ScaleY('{{ 186 + {ThumbnailViewItemExtraHeight} }}')}}" width="{{ScaleX('{{ 216 + {ThumbnailViewItemExtraWidth} }}')}}">
 					<control type="image">
 						<left>{{ScaleX('{{ 1 + ({ThumbnailViewItemExtraWidth} - {ThumbnailViewItemExtraHeight})/2 }}')}}</left>
-						<top>{{ScaleY('0')}}</top>
+						<top>{{ScaleY('{{ 0 + 10 }}')}}</top>
 						<width>{{ScaleX('{{ 214 + {ThumbnailViewItemExtraHeight} }}')}}</width>
-						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} }}')}}</height>
+						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} - 20 }}')}}</height>
 						<bordertexture border="{{ScaleBorder('5')}}">folder-focus.png</bordertexture>
 						<bordersize>{{ScaleBorder('5')}}</bordersize>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
@@ -304,9 +304,9 @@
 					</control>
 					<control type="image">
 						<left>{{ScaleX('{{ 1 + ({ThumbnailViewItemExtraWidth} - {ThumbnailViewItemExtraHeight})/2 }}')}}</left>
-						<top>{{ScaleY('0')}}</top>
+						<top>{{ScaleY('{{ 0 + 10 }}')}}</top>
 						<width>{{ScaleX('{{ 214 + {ThumbnailViewItemExtraHeight} }}')}}</width>
-						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} }}')}}</height>
+						<height>{{ScaleY('{{ 160 + {ThumbnailViewItemExtraHeight} - 20 }}')}}</height>
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="{{ScaleBorder('5')}}">folder-focus.png</bordertexture>
 						<bordersize>{{ScaleBorder('5')}}</bordersize>
@@ -366,7 +366,7 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="{{ScaleY('{{ScaleY('{{ 279 + {ThumbnailViewItemExtraHeight} }}')}}')}}" width="{{ScaleX('{{ 216 + {ThumbnailViewItemExtraWidth} }}')}}">
+				<focusedlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="{{ScaleY('{{ 279 + {ThumbnailViewItemExtraHeight} }}')}}" width="{{ScaleX('{{ 216 + {ThumbnailViewItemExtraWidth} }}')}}">
 					<control type="image">
 						<left>{{ScaleX('{{ 1 + ({ThumbnailViewItemExtraWidth} - {ThumbnailViewItemExtraHeight})/2 }}')}}</left>
 						<top>{{ScaleY('0')}}</top>

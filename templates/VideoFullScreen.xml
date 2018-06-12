@@ -312,9 +312,10 @@
 						</control>
 						<control type="label" id="1">
 							<left>{{ScaleX('38')}}</left>
-							<top>{{ScaleY('2')}}</top>
-							<width>{{ScaleX('{{ 47 + {FullScreenExtraIconDim} }}')}}</width>
-							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
+							<top>{{ScaleY('{{ 2 - 10 }}')}}</top>
+							<aligny>bottom</aligny>
+							<width min="{{ScaleX('{{ 47 + {FullScreenExtraIconDim} }}')}}" max="{{ScaleX('{{ 47 + {FullScreenExtraIconDim} + 20 }}')}}">auto</width>
+							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} + 10 }}')}}</height>
 							<font>font13</font>
 							<align>left</align>
 							<label>$INFO[VideoPlayer.AudioLanguage]</label>
@@ -334,9 +335,10 @@
 						</control>
 						<control type="label" id="1">
 							<left>{{ScaleX('38')}}</left>
-							<top>{{ScaleY('2')}}</top>
-							<width>{{ScaleX('{{ 47 + {FullScreenExtraIconDim} }}')}}</width>
-							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
+							<top>{{ScaleY('{{ 2 - 10 }}')}}</top>
+							<aligny>bottom</aligny>
+							<width min="{{ScaleX('{{ 47 + {FullScreenExtraIconDim} }}')}}" max="{{ScaleX('{{ 47 + {FullScreenExtraIconDim} + 20 }}')}}">auto</width>
+							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} + 10 }}')}}</height>
 							<font>font13</font>
 							<align>left</align>
 							<label>$INFO[VideoPlayer.SubtitlesLanguage]</label>
