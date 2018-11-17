@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -126,7 +126,7 @@ msgstr "Akce"
 
 msgctxt "#31040"
 msgid "Now playing"
-msgstr "Přehrává se"
+msgstr "Nyní je přehráváno"
 
 msgctxt "#31042"
 msgid "PLAYING"
@@ -158,11 +158,11 @@ msgstr "Čas ukončení"
 
 msgctxt "#31050"
 msgid "Sort: Ascending"
-msgstr "Řazení: Vzestupně"
+msgstr "Řazení: vzestupně"
 
 msgctxt "#31051"
 msgid "Sort: Descending"
-msgstr "Řazení: Sestupně"
+msgstr "Řazení: sestupně"
 
 msgctxt "#31055"
 msgid "Open playlist"
@@ -218,7 +218,7 @@ msgstr "Skrýt tlačítka hlavní nabídky"
 
 msgctxt "#31109"
 msgid "Enable custom background"
-msgstr "Povolit vlastní pozadí"
+msgstr "Zapnout vlastní pozadí"
 
 msgctxt "#31110"
 msgid "Background path:"
@@ -239,10 +239,6 @@ msgstr "Zobrazit nedávno přidaná alba"
 msgctxt "#31117"
 msgid "Show recently added videos"
 msgstr "Zobrazit nedávno přidaná videa"
-
-msgctxt "#31118"
-msgid "Home page programs submenu"
-msgstr "Podnabídka domovské stránky „Programy“"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
@@ -370,7 +366,7 @@ msgstr "Nedávno přidané"
 
 msgctxt "#31329"
 msgid "[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]"
-msgstr "[B]Časovač nastaven![/B] [COLOR=grey2] - Systém se automaticky vypne za[/COLOR]"
+msgstr "[B]Časovač nastaven![/B] [COLOR=grey2] – systém se automaticky vypne za[/COLOR]"
 
 msgctxt "#31330"
 msgid "Click button to play[CR][CR]movie trailer"
@@ -576,10 +572,6 @@ msgctxt "#31956"
 msgid "MUSIC"
 msgstr "HUDBA"
 
-msgctxt "#31957"
-msgid "PROGRAMS"
-msgstr "PROGRAMY"
-
 msgctxt "#31958"
 msgid "PLAY DISC"
 msgstr "PŘEHRÁT DISK"
@@ -591,3 +583,19 @@ msgstr "SYSTÉM"
 msgctxt "#31960"
 msgid "RADIO"
 msgstr "RÁDIO"
+
+msgctxt "#31961"
+msgid "Timeshift"
+msgstr "Časový posun"
+
+msgctxt "#31962"
+msgid "Choose kind of profile identification"
+msgstr "Zvolte typ identifikace profilu"
+
+msgctxt "#31963"
+msgid "Profile name"
+msgstr "Název profilu"
+
+msgctxt "#31964"
+msgid "Profile avatar"
+msgstr "Avatar profilu"
