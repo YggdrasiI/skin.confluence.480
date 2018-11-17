@@ -11,7 +11,7 @@ Currently, only the main controls was changed.
 The following changes was made:
   • General downscaling of GUI from 720p to 480p.
   • Increase font size to made text more readable.
-  • Add VT323 font. Looks vintage, eh?
+  • Add VT323 font.
   • Increase width of many GUI elements to reflect the
     styling issues due big fonts for the confluence theme.
     Note that scrolling of text consume a lot of CPU/GPU time.
