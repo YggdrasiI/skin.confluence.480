@@ -270,7 +270,7 @@
 						<selected>Skin.HasSetting(HideEPGwithRDS)</selected>
 					</control>
 					<control type="button" id="117">
-						<width>{{ScaleX('750')}}</width>
+						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31962</label>
@@ -285,7 +285,7 @@
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
-						<label>Kiosk Mode (Disables severeal slideout menus)</label>
+						<label>Kiosk Mode (Disables several slideout menus)</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
