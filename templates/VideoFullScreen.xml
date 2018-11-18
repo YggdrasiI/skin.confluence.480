@@ -410,7 +410,7 @@
 						<width>{{ScaleX({OSDSeekSliderWidth})}}</width>
 						<height>{{ScaleY('16')}}</height>
 						<info>PVR.TimeshiftProgressBufferEnd</info>
-						<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
+						<midtexture border="{{ScaleBorder('6,0,6,0')}}">OSDProgressMidLight.png</midtexture>
 						<visible>PVR.IsTimeShift</visible>
 					</control>
 					<control type="progress" id="1">
@@ -431,7 +431,7 @@
 						<width>{{ScaleX({OSDSeekSliderWidth})}}</width>
 						<height>{{ScaleY('16')}}</height>
 						<info>Player.ProgressCache</info>
-						<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
+						<midtexture border="{{ScaleBorder('6,0,6,0')}}">OSDProgressMidLight.png</midtexture>
 						<visible>!Player.ChannelPreviewActive</visible>
 					</control>
 					<control type="progress" id="1">

@@ -285,7 +285,7 @@
 					<width>{{ScaleX({{ {DialogSeekBarWidth2} }})}}</width>
 					<height>{{ScaleY('15')}}</height>
 					<info>PVR.TimeshiftProgressBufferEnd </info>
-					<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
+					<midtexture border="{{ScaleBorder('6,0,6,0')}}">OSDProgressMidLight.png</midtexture>
 					<visible>PVR.IsTimeShift</visible>
 				</control>
 				<control type="progress" id="23">
@@ -344,7 +344,7 @@
 					<width>{{ScaleX({{ {DialogSeekBarWidth2} }})}}</width>
 					<height>{{ScaleY('15')}}</height>
 					<info>Player.ProgressCache</info>
-					<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
+					<midtexture border="{{ScaleBorder('6,0,6,0')}}">OSDProgressMidLight.png</midtexture>
 					<visible>true</visible>
 				</control>
 				<control type="progress" id="23">
