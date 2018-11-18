@@ -59,7 +59,7 @@
 		<top>{{ScaleY('325')}}</top>
 		<texturebg border="6,0,6,0">OSDProgressBack.png</texturebg>
 		<lefttexture></lefttexture>
-		<midtexture border="6,0,6,0">OSDProgressMid.png</midtexture>
+		<midtexture border="{{ScaleBorder('6,0,6,0')}}">OSDProgressMid.png</midtexture>
 		<righttexture></righttexture>
 		<overlaytexture></overlaytexture>
 	</default>

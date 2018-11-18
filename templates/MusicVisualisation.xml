@@ -171,68 +171,6 @@
 						</control>
 					</control>
 				</control>
-
-				<control type="grouplist">
-					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY('60')}}</top>
-					<width>{{ScaleX('910')}}</width>
-					<height>{{ScaleY('35')}}</height>
-					<itemgap>5</itemgap>
-					<orientation>horizontal</orientation>
-					<visible>system.getbool(audiooutput.dspaddonsenabled)</visible>
-					<control type="label">
-						<width min="{{ScaleX('10')}}" max="{{ScaleX('557')}}">{{ScaleX('auto')}}</width>
-						<height>{{ScaleY('20')}}</height>
-						<font>font30</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[Player.Title]</label>
-						<textcolor>orange</textcolor>
-						<scroll>true</scroll>
-					</control>
-					<control type="image">
-						<description>ADSP Master Mode Image</description>
-						<width>{{ScaleX('81')}}</width>
-						<height>{{ScaleY('29')}}</height>
-						<visible>![String.IsEmpty(ADSP.MasterOwnIcon) | Player.ChannelPreviewActive]</visible>
-						<texture>$INFO[ADSP.MasterOwnIcon]</texture>
-					</control>
-					<control type="image">
-						<description>Audio Codec Image</description>
-						<width>{{ScaleX('81')}}</width>
-						<height>{{ScaleY('29')}}</height>
-						<visible>String.IsEmpty(ADSP.MasterOverrideIcon) + !Player.ChannelPreviewActive</visible>
-						<texture>$INFO[MusicPlayer.Codec,flagging/audio/,.png]</texture>
-					</control>
-					<control type="image">
-						<description>ADSP Audio Codec Override Image</description>
-						<width>{{ScaleX('81')}}</width>
-						<height>{{ScaleY('29')}}</height>
-						<visible>![String.IsEmpty(ADSP.MasterOwnIcon) | Player.ChannelPreviewActive]</visible>
-						<texture>$INFO[ADSP.MasterOverrideIcon]</texture>
-					</control>
-					<control type="group">
-						<description>Rating</description>
-						<width>{{ScaleX('172')}}</width>
-						<height>{{ScaleY('29')}}</height>
-						<control type="image">
-							<description>rating back</description>
-							<left>{{ScaleX('0')}}</left>
-							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('172')}}</width>
-							<height>{{ScaleY('29')}}</height>
-							<texture border="{{ScaleBorder('5')}}">flagging/blank.png</texture>
-						</control>
-						<control type="image">
-							<description>User Rating</description>
-							<left>{{ScaleX('2')}}</left>
-							<top>{{ScaleY('5')}}</top>
-							<width>{{ScaleX('168')}}</width>
-							<height>{{ScaleY('21')}}</height>
-							<texture fallback="ratings/0.png">$INFO[MusicPlayer.UserRating,ratings/,.png]</texture>
-						</control>
-					</control>
-				</control>
 				<control type="label">
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('65r')}}</top>

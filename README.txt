@@ -32,7 +32,7 @@ How to build (long):
   • Use `./buildPackage.py` to export the data for a release of the skin.
     Add `--pack` to compress the images with Kodi's TexturePacker. If not installed,
     you could compile the tool with ./TexturePackerBuild.sh.
-    See ./buildPackage --help for more information.
+    See ./buildPackage.py --help for more information.
 
 
 Notes for developers:
@@ -74,7 +74,7 @@ Notes for developers:
       This step required manually work, especially if new xml files was added.
       Run './parseTemplates.py --force' to check if templates are still valid.
 
-   6. Build new package ( ./buildPackage --dest /dev/shm -t -p -f )
+   6. Build new package ( ./buildPackage.py --dest /dev/shm -t -p -f )
 
    7. Zip result, .i.e.    
       cd /dev/shm ; zip -r skin.confluence.480.zip skin.confluence.480

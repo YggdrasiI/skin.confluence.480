@@ -427,7 +427,7 @@
 					<textcolor>white</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<align>center</align>
-					<hitrect x="{{ScaleX('{{ 925 + {DialogExtraWidth}/2 }}')}}" y="{{ScaleY('605')}}" w="{{ScaleX('{{ 200+ {DialogExtraWidth}/2 }}')}}" h="{{ScaleY('100')}}" />
+					<hitrect x="{{ScaleX('{{ 925 + {DialogExtraWidth}/2 }}')}}" y="{{ScaleY('605')}}" w="{{ScaleX('{{ 200 + {DialogExtraWidth}/2 }}')}}" h="{{ScaleY('100')}}" />
 				</control>
 			</control>
 		</control>
