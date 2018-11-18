@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.confluence.480" version="4.5.3" name="Confluence Low Resolution" provider-name="YggdrasiI">
+<addon id="skin.confluence.480" version="4.5.4" name="Confluence Low Resolution" provider-name="YggdrasiI">
 	<requires>
 		<import addon="xbmc.gui" version="5.13.0"/>
 	</requires>
