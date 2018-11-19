@@ -20,7 +20,7 @@
 			<left>{{ScaleX('20')}}</left>
 			<top>{{ScaleY('30')}}</top>
 			<width>{{ScaleX({{ 300 + {DialogButtonExtraWidth} }})}}</width>
-			<height max="670">auto</height>
+			<height max="{{ScaleY('670')}}">auto</height>
 			<itemgap>2</itemgap>
 		</control>
 		<control type="button">
