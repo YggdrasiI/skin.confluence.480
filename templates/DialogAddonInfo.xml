@@ -284,7 +284,7 @@
 				<itemgap>2</itemgap>
 				<control type="button" id="11">
 					<description>What's New button</description>
-					<width>{{ScaleX('220')}}</width>
+					<width>{{ScaleX({{ 220 + {SettingPanelExtraWidthL} }})}}</width>
 					<height>{{ScaleY('43')}}</height>
 					<label>$VAR[AddonInfoButtonLabel]</label>
 					<align>center</align>
@@ -343,7 +343,7 @@
 				</control>
 				<control type="button" id="10">
 					<description>Dependencies button</description>
-					<width>{{ScaleX('220')}}</width>
+					<width>{{ScaleX({{ 220 + {SettingPanelExtraWidthL} }})}}</width>
 					<height>{{ScaleY('43')}}</height>
 					<label>39024</label>
 					<align>center</align>

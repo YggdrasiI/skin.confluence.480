@@ -147,14 +147,14 @@
 			<control type="grouplist" id="9001">
 				<top>{{ScaleY('535')}}</top>
 				<left>{{ScaleX('95')}}</left>
-				<width>{{ScaleX('660')}}</width>
+				<width>{{ScaleX('{{ 660 + {DialogExtraWidth} }}')}}</width>
 				<align>center</align>
 				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>
 				<control type="button" id="28">
 					<description>OK Button</description>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('{{ 200 + ({DialogExtraWidth})/3 }}')}}</width>
+					<width>{{ScaleX('{{ 200 + int({DialogExtraWidth}/3) }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -168,7 +168,7 @@
 					<description>Cancel Button</description>
 					<!--<left>{{ScaleX('{{ 210 + ({DialogExtraWidth})/3 }}')}}</left>-->
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('{{ 200 + ({DialogExtraWidth})/3 }}')}}</width>
+					<width>{{ScaleX('{{ 200 + int({DialogExtraWidth}/3) }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -183,7 +183,7 @@
 					<description>Settings Button</description>
 					<!--<left>{{ScaleX('{{ 2*210 + 2*({DialogExtraWidth})/3 }}')}}</left>-->
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('{{ 200 + ({DialogExtraWidth})/3 }}')}}</width>
+					<width>{{ScaleX('{{ 200 + int({DialogExtraWidth}/3) }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
