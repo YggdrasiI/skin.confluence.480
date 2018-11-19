@@ -98,7 +98,7 @@
 			</control>
 			<control type="group">
 				<left>{{ScaleX('330')}}</left>
-				<top>{{ScaleY('{{ 185 + {MusicVisualisationExtraHeight} }}r')}}</top>
+				<top>{{ScaleY('185r')}}</top>
 				<control type="label" id="1">
 					<description>Heading label</description>
 					<left>{{ScaleX('0')}}</left>
@@ -126,62 +126,14 @@
 				</control>
 				<control type="grouplist">
 					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY('{{ 62 + {MusicVisualisationExtraHeight}/2 }}')}}</top>
+					<top>{{ScaleY('62')}}</top>
 					<width>{{ScaleX('910')}}</width>
-					<height>{{ScaleY('{{ 35 + {MusicVisualisationExtraHeight}/3 }}')}}</height>
+					<height>{{ScaleY('35')}}</height>
 					<itemgap>5</itemgap>
 					<orientation>horizontal</orientation>
 					<visible>!system.getbool(audiooutput.dspaddonsenabled)</visible>
 					<control type="label">
 						<width min="{{ScaleX('10')}}" max="{{ScaleX('638')}}">{{ScaleX('auto')}}</width>
-						<height>{{ScaleY('{{ 20 + {MusicVisualisationExtraHeight}/3 }}')}}</height>
-						<font>font30</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[Player.Title]</label>
-						<textcolor>orange</textcolor>
-						<scroll>true</scroll>
-					</control>
-					<control type="image">
-						<description>Audio Codec Image</description>
-						<width>{{ScaleX('81')}}</width>
-						<height>{{ScaleY('{{ 29 + {MusicVisualisationExtraHeight}/3 }}')}}</height>
-						<texture>$INFO[MusicPlayer.Codec,flagging/audio/,.png]</texture>
-						<visible>!Player.ChannelPreviewActive</visible>
-					</control>
-					<control type="group">
-						<description>Rating</description>
-						<width>{{ScaleX('{{ 172 + 172/29 * {MusicVisualisationExtraHeight}/3 }}')}}</width>
-						<height>{{ScaleY('{{ 29 + {MusicVisualisationExtraHeight}/3 }}')}}</height>
-						<control type="image">
-							<description>rating back</description>
-							<left>{{ScaleX('0')}}</left>
-							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('{{ 172 + 172/29 * {MusicVisualisationExtraHeight}/3 }}')}}</width>
-							<height>{{ScaleY('{{ 29 + {MusicVisualisationExtraHeight}/3 }}')}}</height>
-							<texture border="{{ScaleBorder('5')}}">flagging/blank.png</texture>
-						</control>
-						<control type="image">
-							<description>User Rating</description>
-							<left>{{ScaleX('2')}}</left>
-							<top>{{ScaleY('5')}}</top>
-							<width>{{ScaleX('{{ 168 + 172/29 * {MusicVisualisationExtraHeight}/3 }}')}}</width>
-							<height>{{ScaleY('{{ 21 + {MusicVisualisationExtraHeight}/3 }}')}}</height>
-							<texture fallback="ratings/0.png">$INFO[MusicPlayer.UserRating,ratings/,.png]</texture>
-						</control>
-					</control>
-				</control>
-
-				<control type="grouplist">
-					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY('60')}}</top>
-					<width>{{ScaleX('910')}}</width>
-					<height>{{ScaleY('35')}}</height>
-					<itemgap>5</itemgap>
-					<orientation>horizontal</orientation>
-					<visible>system.getbool(audiooutput.dspaddonsenabled)</visible>
-					<control type="label">
-						<width min="{{ScaleX('10')}}" max="{{ScaleX('557')}}">{{ScaleX('auto')}}</width>
 						<height>{{ScaleY('20')}}</height>
 						<font>font30</font>
 						<align>left</align>
@@ -191,25 +143,11 @@
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
-						<description>ADSP Master Mode Image</description>
-						<width>{{ScaleX('81')}}</width>
-						<height>{{ScaleY('29')}}</height>
-						<visible>![String.IsEmpty(ADSP.MasterOwnIcon) | Player.ChannelPreviewActive]</visible>
-						<texture>$INFO[ADSP.MasterOwnIcon]</texture>
-					</control>
-					<control type="image">
 						<description>Audio Codec Image</description>
 						<width>{{ScaleX('81')}}</width>
 						<height>{{ScaleY('29')}}</height>
-						<visible>String.IsEmpty(ADSP.MasterOverrideIcon) + !Player.ChannelPreviewActive</visible>
 						<texture>$INFO[MusicPlayer.Codec,flagging/audio/,.png]</texture>
-					</control>
-					<control type="image">
-						<description>ADSP Audio Codec Override Image</description>
-						<width>{{ScaleX('81')}}</width>
-						<height>{{ScaleY('29')}}</height>
-						<visible>![String.IsEmpty(ADSP.MasterOwnIcon) | Player.ChannelPreviewActive]</visible>
-						<texture>$INFO[ADSP.MasterOverrideIcon]</texture>
+						<visible>!Player.ChannelPreviewActive</visible>
 					</control>
 					<control type="group">
 						<description>Rating</description>
@@ -235,9 +173,9 @@
 				</control>
 				<control type="label">
 					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('65r')}}</top>
+					<top>{{ScaleY('120')}}</top>
 					<width>{{ScaleX('910')}}</width>
-					<height>{{ScaleY('{{ 25 + {MusicVisualisationExtraHeight}/3 }}')}}</height>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[19031]: $INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -254,7 +192,7 @@
 				<control type="label">
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</width>
+					<width>{{ScaleX('100')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>left</align>
@@ -263,16 +201,16 @@
 				</control>
 				<control type="progress">
 					<description>Progressbar</description>
-					<left>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</left>
+					<left>{{ScaleX('100')}}</left>
 					<top>{{ScaleY('15')}}</top>
-					<width>{{ScaleX({OSDSeekSliderWidth})}}</width>
+					<width>{{ScaleX('720')}}</width>
 					<height>{{ScaleY('16')}}</height>
 					<info>Player.Progress</info>
 				</control>
 				<control type="label">
-					<left>{{ScaleX({{ int(820 + ({OSDSeekSliderWidth} - 720)/2) }})}}</left>
+					<left>{{ScaleX('820')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</width>
+					<width>{{ScaleX('100')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>right</align>

@@ -3,6 +3,7 @@
 	<defaultcontrol>1</defaultcontrol>
 	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo</visible>
 	<visible>!Player.HasGame</visible>
+	<visible>!Player.FrameAdvance</visible>
 	<animation effect="fade" start="0" end="100" time="150">WindowOpen</animation>
 	<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
 	<depth>DepthOSD</depth>
@@ -53,13 +54,13 @@
 			<control type="image">
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX({DialogSeekBarWidth})}}</width>
-				<height>{{ScaleY({DialogSeekBarHeight})}}</height>
+				<width>{{ScaleX('370')}}</width>
+				<height>{{ScaleY('70')}}</height>
 				<colordiffuse>EEFFFFFF</colordiffuse>
 				<texture border="{{ScaleBorder('12')}}">OverlayDialogBackground.png</texture>
 			</control>
 			<control type="group">
-				<left>{{ScaleX({{ {DialogSeekBarWidth} - 110 }})}}</left>
+				<left>{{ScaleX('260')}}</left>
 				<top>{{ScaleY('10')}}</top>
 				<control type="image">
 					<left>{{ScaleX('10')}}</left>
@@ -241,70 +242,131 @@
 				<description>Seekbar Label</description>
 				<left>{{ScaleX('20')}}</left>
 				<top>{{ScaleY('7')}}</top>
-				<width>{{ScaleX({{ {DialogSeekBarWidth} - 130 }})}}</width>
-				<height>{{ScaleY({{ int(20 + ({DialogSeekBarHeight}-70)/2) }})}}</height>
+				<width>{{ScaleX('240')}}</width>
+				<height>{{ScaleY('20')}}</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font10_title</font>
 				<textcolor>blue</textcolor>
 				<label>$VAR[SeekLabel]</label>
 			</control>
-			<control type="label">
-				<description>Elapsed Time Label</description>
-				<left>{{ScaleX('20')}}</left>
-				<top>{{ScaleY({{ int(23 + ({DialogSeekBarHeight}-70)/2) }})}}</top>
-				<width>{{ScaleX({{ {DialogSeekBarWidth} - 130 }})}}</width>
-				<height>{{ScaleY({{ int(20 + ({DialogSeekBarHeight}-70)/2) }})}}</height>
-				<font>font13_title</font>
-				<textcolor>white</textcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[Player.Time] - $INFO[Player.Duration]</label>
-				<visible>!Player.Seeking</visible>
+			<control type="group">
+				<visible>[VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
+				<control type="label">
+					<description>Elapsed Time Label</description>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('23')}}</top>
+					<width>{{ScaleX('240')}}</width>
+					<height>{{ScaleY('20')}}</height>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[PVR.EpgEventElapsedTime] - $INFO[PVR.EpgEventDuration]</label>
+					<visible>!Player.Seeking</visible>
+				</control>
+				<control type="label">
+					<description>Seek Time Label</description>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('23')}}</top>
+					<width>{{ScaleX('240')}}</width>
+					<height>{{ScaleY('20')}}</height>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[PVR.EpgEventSeekTime] - $INFO[PVR.EpgEventDuration]</label>
+					<visible>Player.Seeking</visible>
+				</control>
+				<control type="progress">
+					<description>ProgressbarTimeshift</description>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('45')}}</top>
+					<width>{{ScaleX('240')}}</width>
+					<height>{{ScaleY('15')}}</height>
+					<info>PVR.TimeshiftProgressBufferEnd </info>
+					<midtexture border="{{ScaleBorder('6,0,6,0')}}">OSDProgressMidLight.png</midtexture>
+					<visible>PVR.IsTimeShift</visible>
+				</control>
+				<control type="progress" id="23">
+					<description>Progressbar</description>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('45')}}</top>
+					<width>{{ScaleX('240')}}</width>
+					<height>{{ScaleY('15')}}</height>
+					<info>PVR.EpgEventProgress</info>
+					<visible>true</visible>
+				</control>
+				<control type="slider" id="403">
+					<description>Seek Slider</description>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('42')}}</top>
+					<width>{{ScaleX('240')}}</width>
+					<height>{{ScaleY('12')}}</height>
+					<texturesliderbar>seekslider.png</texturesliderbar>
+					<textureslidernib>osd_slider_nib.png</textureslidernib>
+					<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					<visible>Player.Seeking</visible>
+				</control>
 			</control>
-			<control type="label">
-				<description>Seek Time Label</description>
-				<left>{{ScaleX('20')}}</left>
-				<top>{{ScaleY({{ int(23 + ({DialogSeekBarHeight}-70)/2) }})}}</top>
-				<width>{{ScaleX({{ {DialogSeekBarWidth} - 130 }})}}</width>
-				<height>{{ScaleY({{ int(20 + ({DialogSeekBarHeight}-70)/2) }})}}</height>
-				<font>font13_title</font>
-				<textcolor>white</textcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[Player.SeekTime] - $INFO[Player.Duration]</label>
-				<visible>Player.Seeking</visible>
-			</control>
-			<control type="progress">
-				<description>ProgressbarCache</description>
-				<left>{{ScaleX('20')}}</left>
-				<top>{{ScaleY({{ 43 + ({DialogSeekBarHeight}-70) }})}}</top>
-				<width>{{ScaleX({{ {DialogSeekBarWidth2} }})}}</width>
-				<height>{{ScaleY('15')}}</height>
-				<info>Player.ProgressCache</info>
-				<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
-				<visible>true</visible>
-			</control>
-			<control type="progress" id="23">
-				<description>Progressbar</description>
-				<left>{{ScaleX('20')}}</left>
-				<top>{{ScaleY({{ 43 + ({DialogSeekBarHeight}-70) }})}}</top>
-				<width>{{ScaleX({{ {DialogSeekBarWidth2} }})}}</width>
-				<height>{{ScaleY('15')}}</height>
-				<info>Player.Progress</info>
-				<visible>true</visible>
-			</control>
-			<control type="slider" id="401">
-				<description>Seek Slider</description>
-				<left>{{ScaleX('20')}}</left>
-				<top>{{ScaleY({{ 40 + ({DialogSeekBarHeight}-70) }})}}</top>
-				<width>{{ScaleX({{ {DialogSeekBarWidth2} }})}}</width>
-				<height>{{ScaleY('12')}}</height>
-				<texturesliderbar>seekslider.png</texturesliderbar>
-				<textureslidernib>osd_slider_nib.png</textureslidernib>
-				<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
-				<orientation>horizontal</orientation>
-				<visible>Player.Seeking</visible>
+			<control type="group">
+				<visible>![VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
+				<control type="label">
+					<description>Elapsed Time Label</description>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('23')}}</top>
+					<width>{{ScaleX('240')}}</width>
+					<height>{{ScaleY('20')}}</height>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Player.Time] - $INFO[Player.Duration]</label>
+					<visible>!Player.Seeking</visible>
+				</control>
+				<control type="label">
+					<description>Seek Time Label</description>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('23')}}</top>
+					<width>{{ScaleX('240')}}</width>
+					<height>{{ScaleY('20')}}</height>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Player.SeekTime] - $INFO[Player.Duration]</label>
+					<visible>Player.Seeking</visible>
+				</control>
+				<control type="progress">
+					<description>ProgressbarCache</description>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('45')}}</top>
+					<width>{{ScaleX('240')}}</width>
+					<height>{{ScaleY('15')}}</height>
+					<info>Player.ProgressCache</info>
+					<midtexture border="{{ScaleBorder('6,0,6,0')}}">OSDProgressMidLight.png</midtexture>
+					<visible>true</visible>
+				</control>
+				<control type="progress" id="23">
+					<description>Progressbar</description>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('45')}}</top>
+					<width>{{ScaleX('240')}}</width>
+					<height>{{ScaleY('15')}}</height>
+					<info>Player.Progress</info>
+					<visible>true</visible>
+				</control>
+				<control type="slider" id="401">
+					<description>Seek Slider</description>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('42')}}</top>
+					<width>{{ScaleX('240')}}</width>
+					<height>{{ScaleY('12')}}</height>
+					<texturesliderbar>seekslider.png</texturesliderbar>
+					<textureslidernib>osd_slider_nib.png</textureslidernib>
+					<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					<visible>Player.Seeking</visible>
+				</control>
 			</control>
 		</control>
 	</controls>

@@ -123,9 +123,20 @@
 				<visible>Control.IsVisible(506)</visible>
 				<left>{{ScaleX('910')}}</left>
 				<top>{{ScaleY('80')}}</top>
-				<control type="image">
+				<control type="label">
 					<left>{{ScaleX('10')}}</left>
 					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('20')}}</height>
+					<label>$LOCALIZE[544]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="image">
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('20')}}</top>
 					<width>{{ScaleX('290')}}</width>
 					<height>{{ScaleY('290')}}</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
@@ -136,14 +147,14 @@
 				</control>
 				<control type="label">
 					<left>{{ScaleX('10')}}</left>
-					<top>{{ScaleY('300')}}</top>
+					<top>{{ScaleY('315')}}</top>
 					<width>{{ScaleX('290')}}</width>
-					<height>{{ScaleY('25')}}</height>
-					<label>$INFO[ListItem.Artist]</label>
+					<height>{{ScaleY('45')}}</height>
+					<label>$INFO[listitem.TrackNumber,,. ]$INFO[ListItem.Title]</label>
+					<wrapmultiline>true</wrapmultiline>
 					<scroll>true</scroll>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font24_title</font>
+					<align>left</align>
+					<font>font13_title</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -151,95 +162,295 @@
 					<left>{{ScaleX('10')}}</left>
 					<top>{{ScaleY('360')}}</top>
 					<width>{{ScaleX('290')}}</width>
-					<height>{{ScaleY('25')}}</height>
-					<label>$INFO[ListItem.Album]</label>
+					<height>{{ScaleY('45')}}</height>
+					<label>$INFO[listitem.Artist]</label>
 					<wrapmultiline>true</wrapmultiline>
-					<align>center</align>
-					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<align>left</align>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('415')}}</top>
+					<width>{{ScaleX('168')}}</width>
+					<height>{{ScaleY('20')}}</height>
+					<texture fallback="ratings/0.png">$VAR[MusicRating,ratings/,.png]</texture>
+				</control>
+				<control type="label">
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('440')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('45')}}</height>
+					<label>$INFO[ListItem.Album]$INFO[ListItem.DiscNumber, - $LOCALIZE[427] ]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<scroll>false</scroll>
+					<scrolltime>200</scrolltime>
+					<align>left</align>
 					<font>font13</font>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<left>{{ScaleX('10')}}</left>
-					<top>{{ScaleY('420')}}</top>
+					<top>{{ScaleY('485')}}</top>
 					<width>{{ScaleX('290')}}</width>
-					<height>{{ScaleY('25')}}</height>
-					<label>$INFO[ListItem.Title]</label>
-					<scroll>true</scroll>
-					<align>center</align>
-					<aligny>top</aligny>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
+					<height>{{ScaleY('20')}}</height>
+					<label>$INFO[listitem.Year,, | ]$INFO[ListItem.Genre]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<scroll>false</scroll>
+					<scrolltime>200</scrolltime>
+					<align>left</align>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
-					<visible>!Container.Content(Albums)</visible>
 				</control>
 				<control type="label">
-					<left>{{ScaleX('10')}}</left>
-					<top>{{ScaleY('420')}}</top>
-					<width>{{ScaleX('290')}}</width>
-					<height>{{ScaleY('25')}}</height>
-					<label>$INFO[ListItem.Genre]</label>
-					<scroll>true</scroll>
-					<align>center</align>
-					<aligny>top</aligny>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<wrapmultiline>true</wrapmultiline>
-					<visible>Container.Content(Albums)</visible>
-				</control>
-				<control type="label">
-					<description>Trackno txt</description>
-					<left>{{ScaleX('10')}}</left>
-					<top>{{ScaleY('480')}}</top>
-					<width>{{ScaleX('290')}}</width>
-					<height>{{ScaleY('25')}}</height>
-					<label>$INFO[listitem.TrackNumber,[COLOR=blue]$LOCALIZE[31310]: [/COLOR]]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font13</font>
-					<textcolor>white</textcolor>
-					<visible>!Container.Content(Albums)</visible>
-				</control>
-				<control type="label">
-					<description>Year txt</description>
-					<left>{{ScaleX('10')}}</left>
-					<top>{{ScaleY('505')}}</top>
-					<width>{{ScaleX('290')}}</width>
-					<height>{{ScaleY('25')}}</height>
-					<label>$INFO[listitem.Year,[COLOR=blue]$LOCALIZE[345]: [/COLOR]]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font13</font>
-					<textcolor>white</textcolor>
-				</control>
-				<control type="label">
-					<description>Rating txt</description>
 					<left>{{ScaleX('10')}}</left>
 					<top>{{ScaleY('530')}}</top>
 					<width>{{ScaleX('290')}}</width>
-					<height>{{ScaleY('25')}}</height>
-					<label>$INFO[ListItem.Rating,[COLOR=blue]$LOCALIZE[563]: [/COLOR]]</label>
+					<height>{{ScaleY('20')}}</height>
+					<label>$LOCALIZE[180]: $INFO[ListItem.Duration(mm:ss)]</label>
+					<align>left</align>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="NowPlaying">
+		<control type="group">
+			<visible>Control.IsVisible(507)</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="list" id="507">
+				<left>{{ScaleX('70')}}</left>
+				<top>{{ScaleY('75')}}</top>
+				<width>{{ScaleX('780')}}</width>
+				<height>{{ScaleY('561')}}</height>
+				<onleft>2</onleft>
+				<onright>60</onright>
+				<onup>507</onup>
+				<ondown>507</ondown>
+				<viewtype label="$LOCALIZE[31040]">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<visible>Window.IsVisible(MusicPlaylist) | Window.IsVisible(10502)</visible>
+				<itemlayout height="{{ScaleY('40')}}" width="{{ScaleX('780')}}">
+					<control type="image">
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('780')}}</width>
+						<height>{{ScaleY('41')}}</height>
+						<texture border="{{ScaleBorder('0,2,0,2')}}">MenuItemNF.png</texture>
+					</control>
+					<control type="label">
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('730')}}</width>
+						<height>{{ScaleY('40')}}</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>{{ScaleX('60')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('700')}}</width>
+						<height>{{ScaleY('40')}}</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="{{ScaleY('40')}}" width="{{ScaleX('760')}}">
+					<control type="image">
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('760')}}</width>
+						<height>{{ScaleY('41')}}</height>
+						<texture border="{{ScaleBorder('0,2,0,2')}}">MenuItemNF.png</texture>
+						<visible>!Control.HasFocus(507)</visible>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="image">
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('780')}}</width>
+						<height>{{ScaleY('41')}}</height>
+						<texture border="{{ScaleBorder('0,2,0,2')}}">MenuItemFO.png</texture>
+						<visible>Control.HasFocus(507)</visible>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="image">
+						<left>{{ScaleX('580')}}</left>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('200')}}</width>
+						<height>{{ScaleY('31')}}</height>
+						<texture border="{{ScaleBorder('0,0,14,0')}}">MediaItemDetailBG.png</texture>
+						<visible>Control.HasFocus(507) + !String.IsEmpty(ListItem.Label2)</visible>
+					</control>
+					<control type="label">
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('730')}}</width>
+						<height>{{ScaleY('40')}}</height>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>{{ScaleX('60')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('700')}}</width>
+						<height>{{ScaleY('40')}}</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>{{ScaleX('850')}}</left>
+				<top>{{ScaleY('78')}}</top>
+				<width>{{ScaleX('25')}}</width>
+				<height>{{ScaleY('560')}}</height>
+				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="{{ScaleBorder('2,16,2,16')}}">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="{{ScaleBorder('2,16,2,16')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft>506</onleft>
+				<onright>2</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(507)</visible>
+			</control>
+			<control type="group">
+				<visible>Control.IsVisible(507)</visible>
+				<left>{{ScaleX('910')}}</left>
+				<top>{{ScaleY('80')}}</top>
+				<control type="label">
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('20')}}</height>
+					<label>$LOCALIZE[31040]</label>
+					<visible>!Player.HasAudio</visible>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font13</font>
 					<textcolor>white</textcolor>
-					<visible>Container.Content(Albums)</visible>
 				</control>
 				<control type="label">
-					<description>UserRating txt</description>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('20')}}</height>
+					<label>$LOCALIZE[31040]$INFO[musicplayer.Playlistposition,: ]$INFO[musicplayer.Playlistlength,/]</label>
+					<visible>Player.HasAudio</visible>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="image">
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('20')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('290')}}</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[Player.Art(thumb)]</texture>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
+				</control>
+				<control type="label">
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('315')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('45')}}</height>
+					<label>$INFO[MusicPlayer.Title]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<scroll>true</scroll>
+					<align>left</align>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('360')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('45')}}</height>
+					<label>$INFO[MusicPlayer.Artist]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<scroll>true</scroll>
+					<align>left</align>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('415')}}</top>
+					<width>{{ScaleX('168')}}</width>
+					<height>{{ScaleY('20')}}</height>
+					<texture fallback="ratings/0.png">$INFO[MusicPlayer.UserRating,ratings/,.png]</texture>
+					<visible>Player.HasAudio</visible>
+				</control>
+				<control type="label">
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('440')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('45')}}</height>
+					<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.DiscNumber, - $LOCALIZE[427] ]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<scroll>false</scroll>
+					<scrolltime>200</scrolltime>
+					<align>left</align>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('485')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('20')}}</height>
+					<label>$INFO[MusicPlayer.Year,, | ]$INFO[MusicPlayer.Genre]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<scroll>false</scroll>
+					<scrolltime>200</scrolltime>
+					<align>left</align>
+					<font>font13</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label">
 					<left>{{ScaleX('10')}}</left>
 					<top>{{ScaleY('530')}}</top>
 					<width>{{ScaleX('290')}}</width>
-					<height>{{ScaleY('25')}}</height>
-					<label>$INFO[ListItem.UserRating,[COLOR=blue]$LOCALIZE[38018]: [/COLOR]]</label>
-					<align>center</align>
-					<aligny>center</aligny>
+					<height>{{ScaleY('20')}}</height>
+					<label>$LOCALIZE[31016]: $INFO[Player.Time(mm:ss]$INFO[Player.Duration(mm:ss),/]</label>
+					<align>left</align>
 					<font>font13</font>
 					<textcolor>white</textcolor>
-					<visible>Container.Content(Songs)</visible>
+					<visible>Player.HasAudio</visible>
 				</control>
 			</control>
 		</control>

@@ -2,25 +2,25 @@
 <window>
 	<defaultcontrol always="true">9</defaultcontrol>
 	<coordinates>
-		<left>{{ScaleX('{{ 210 - ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/2 }}')}}</left>
+		<left>{{ScaleX('210')}}</left>
 		<top>{{ScaleY('65')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
 		<include content="DialogBackgroundCommons">
-			<param name="DialogBackgroundWidth" value="{{ScaleX({{ 865 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
-			<param name="DialogBackgroundHeight" value="{{ScaleY('605')}}" />
-			<param name="DialogHeaderWidth" value="{{ScaleX({{ 785 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
+			<param name="DialogBackgroundWidth" value="865" />
+			<param name="DialogBackgroundHeight" value="605" />
+			<param name="DialogHeaderWidth" value="785" />
 			<param name="DialogHeaderLabel" value="$LOCALIZE[19142]" />
 			<param name="DialogHeaderId" value="2" />
-			<param name="CloseButtonLeft" value="{{ScaleX({{ 775 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
+			<param name="CloseButtonLeft" value="775" />
 			<param name="CloseButtonNav" value="3" />
 		</include>
 		<control type="label">
 			<description>Search string</description>
 			<left>{{ScaleX('30')}}</left>
 			<top>{{ScaleY('60')}}</top>
-			<width>{{ScaleX('{{ 320 + {SettingPanelExtraWidthL} }}')}}</width>
+			<width>{{ScaleX('320')}}</width>
 			<height>{{ScaleY('40')}}</height>
 			<font>font13</font>
 			<label>$LOCALIZE[19133]</label>

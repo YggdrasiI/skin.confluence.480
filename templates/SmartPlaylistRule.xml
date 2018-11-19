@@ -2,25 +2,25 @@
 <window>
 	<defaultcontrol always="true">9001</defaultcontrol>
 	<coordinates>
-		<left>{{ScaleX('{{ 240 - ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/2 }}')}}</left>
+		<left>{{ScaleX('240')}}</left>
 		<top>{{ScaleY('220')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
 		<include content="DialogBackgroundCommons">
-			<param name="DialogBackgroundWidth" value="{{ScaleX({{ 800 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
-			<param name="DialogBackgroundHeight" value="{{ScaleY('280')}}" />
-			<param name="DialogHeaderWidth" value="{{ScaleX({{ 720 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
+			<param name="DialogBackgroundWidth" value="800" />
+			<param name="DialogBackgroundHeight" value="280" />
+			<param name="DialogHeaderWidth" value="720" />
 			<param name="DialogHeaderLabel" value="$LOCALIZE[21421]" />
 			<param name="DialogHeaderId" value="2" />
-			<param name="CloseButtonLeft" value="{{ScaleX({{ 710 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
+			<param name="CloseButtonLeft" value="710" />
 			<param name="CloseButtonNav" value="9001" />
 		</include>
 		<control type="label">
 			<description>Rule match label</description>
 			<left>{{ScaleX('40')}}</left>
 			<top>{{ScaleY('60')}}</top>
-			<width>{{ScaleX('{{ 720 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
+			<width>{{ScaleX('720')}}</width>
 			<height>{{ScaleY('35')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
@@ -34,7 +34,7 @@
 				<description>Rule Field</description>
 				<left>{{ScaleX('30')}}</left>
 				<top>{{ScaleY('100')}}</top>
-				<width>{{ScaleX('{{ 365 + {SettingPanelExtraWidthL} }}')}}</width>
+				<width>{{ScaleX('365')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<font>font13</font>
 				<texturefocus border="{{ScaleBorder('3')}}">button-focus2.png</texturefocus>
@@ -46,9 +46,9 @@
 			</control>
 			<control type="button" id="16">
 				<description>Rule operator</description>
-				<left>{{ScaleX('{{ 405 + {SettingPanelExtraWidthL} }}')}}</left>
+				<left>{{ScaleX('405')}}</left>
 				<top>{{ScaleY('100')}}</top>
-				<width>{{ScaleX('{{ 365 + {SettingPanelExtraWidthR} }}')}}</width>
+				<width>{{ScaleX('365')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<font>font13</font>
 				<texturefocus border="{{ScaleBorder('3')}}">button-focus2.png</texturefocus>

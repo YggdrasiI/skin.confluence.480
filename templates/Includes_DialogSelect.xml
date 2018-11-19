@@ -2,7 +2,7 @@
 <includes>
 	<include name="DefaultDialogSelectLayout">
 		<control type="group">
-			<left>{{ScaleX('{{ 235 - ({DialogExtraWidth})/2 }}')}}</left>
+			<left>{{ScaleX('235')}}</left>
 			<top>{{ScaleY('75')}}</top>
 			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,46')}}" time="0" condition="[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,4)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,2)]">Conditional</animation>
 			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,46')}}" time="0" condition="[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,6)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,3)]">Conditional</animation>
@@ -11,7 +11,7 @@
 				<description>background image</description>
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('{{ 850 + {DialogExtraWidth} }}')}}</width>
+				<width>{{ScaleX('850')}}</width>
 				<height>{{ScaleY('550')}}</height>
 				<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
 				<visible>[Control.IsVisible(3) + Integer.IsGreater(Container(3).NumItems,8)] | [Control.IsVisible(6) + Integer.IsGreater(Container(6).NumItems,4)]</visible>
@@ -20,7 +20,7 @@
 				<description>background image</description>
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('{{ 850 + {DialogExtraWidth} }}')}}</width>
+				<width>{{ScaleX('850')}}</width>
 				<height>{{ScaleY('458')}}</height>
 				<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
 				<visible>[Control.IsVisible(3) + Integer.IsGreater(Container(3).NumItems,6) + !Integer.IsGreater(Container(3).NumItems,8)] | [Control.IsVisible(6) + Integer.IsGreater(Container(6).NumItems,3) + !Integer.IsGreater(Container(6).NumItems,4)]</visible>
@@ -29,7 +29,7 @@
 				<description>background image</description>
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('{{ 850 + {DialogExtraWidth} }}')}}</width>
+				<width>{{ScaleX('850')}}</width>
 				<height>{{ScaleY('366')}}</height>
 				<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
 				<visible>[Control.IsVisible(3) + Integer.IsGreater(Container(3).NumItems,4) + !Integer.IsGreater(Container(3).NumItems,6)] | [Control.IsVisible(6) + Integer.IsGreater(Container(6).NumItems,2) + !Integer.IsGreater(Container(6).NumItems,3)]</visible>
@@ -38,7 +38,7 @@
 				<description>background image</description>
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('{{ 850 + {DialogExtraWidth} }}')}}</width>
+				<width>{{ScaleX('850')}}</width>
 				<height>{{ScaleY('274')}}</height>
 				<texture border="{{ScaleBorder('40')}}">$VAR[SelectBack]</texture>
 				<visible>[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,4)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,2)]</visible>
@@ -47,7 +47,7 @@
 				<description>Dialog Header image</description>
 				<left>{{ScaleX('40')}}</left>
 				<top>{{ScaleY('16')}}</top>
-				<width>{{ScaleX('{{ 770 + {DialogExtraWidth} }}')}}</width>
+				<width>{{ScaleX('770')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<texture>dialogheader.png</texture>
 			</control>
@@ -55,7 +55,7 @@
 				<description>header label</description>
 				<left>{{ScaleX('40')}}</left>
 				<top>{{ScaleY('20')}}</top>
-				<width>{{ScaleX('{{ 770 + {DialogExtraWidth} }}')}}</width>
+				<width>{{ScaleX('770')}}</width>
 				<height>{{ScaleY('30')}}</height>
 				<font>font13_title</font>
 				<label>$LOCALIZE[13406]</label>
@@ -68,13 +68,13 @@
 				<description>No Settings Label</description>
 				<left>{{ScaleX('20')}}</left>
 				<top>{{ScaleY('120')}}</top>
-				<width>{{ScaleX('{{ 550 + {DialogExtraWidth} }}')}}</width>
+				<width>{{ScaleX('550')}}</width>
 				<align>center</align>
 				<font>font13</font>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>{{ScaleX('{{ 760 + {DialogExtraWidth} }}')}}</left>
+				<left>{{ScaleX('760')}}</left>
 				<top>{{ScaleY('15')}}</top>
 				<width>{{ScaleX('64')}}</width>
 				<height>{{ScaleY('32')}}</height>
@@ -88,7 +88,7 @@
 			<control type="list" id="3">
 				<left>{{ScaleX('20')}}</left>
 				<top>{{ScaleY('67')}}</top>
-				<width>{{ScaleX('{{ 550 + {DialogExtraWidth} }}')}}</width>
+				<width>{{ScaleX('550')}}</width>
 				<height>{{ScaleY('460')}}</height>
 				<onup>3</onup>
 				<ondown>3</ondown>
@@ -96,18 +96,18 @@
 				<onright>61</onright>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="{{ScaleY('46')}}" width="{{ScaleX('{{ 550 + {DialogExtraWidth} }}')}}">
+				<itemlayout height="{{ScaleY('46')}}" width="{{ScaleX('550')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('{{ 550 + {DialogExtraWidth} }}')}}</width>
+						<width>{{ScaleX('550')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('20')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('{{ 510 + {DialogExtraWidth} }}')}}</width>
+						<width>{{ScaleX('510')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -117,11 +117,11 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="{{ScaleY('46')}}" width="{{ScaleX('{{ 550 + {DialogExtraWidth} }}')}}">
+				<focusedlayout height="{{ScaleY('46')}}" width="{{ScaleX('550')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('{{ 550 + {DialogExtraWidth} }}')}}</width>
+						<width>{{ScaleX('550')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 						<visible>!Control.HasFocus(3)</visible>
@@ -130,7 +130,7 @@
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('{{ 550 + {DialogExtraWidth} }}')}}</width>
+						<width>{{ScaleX('550')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
 						<visible>Control.HasFocus(3)</visible>
@@ -139,7 +139,7 @@
 					<control type="label">
 						<left>{{ScaleX('20')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('{{ 510 + {DialogExtraWidth} }}')}}</width>
+						<width>{{ScaleX('510')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
@@ -153,7 +153,7 @@
 			<control type="list" id="6">
 				<left>{{ScaleX('20')}}</left>
 				<top>{{ScaleY('67')}}</top>
-				<width>{{ScaleX('{{ 550 + {DialogExtraWidth} }}')}}</width>
+				<width>{{ScaleX('550')}}</width>
 				<height>{{ScaleY('460')}}</height>
 				<onup>6</onup>
 				<ondown>6</ondown>
@@ -161,11 +161,11 @@
 				<onright>61</onright>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="{{ScaleY('92')}}" width="{{ScaleX('{{ 550 + {DialogExtraWidth} }}')}}">
+				<itemlayout height="{{ScaleY('92')}}" width="{{ScaleX('550')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('{{ 550 + {DialogExtraWidth} }}')}}</width>
+						<width>{{ScaleX('550')}}</width>
 						<height>{{ScaleY('86')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 					</control>
@@ -182,7 +182,7 @@
 					<control type="label">
 						<left>{{ScaleX('90')}}</left>
 						<top>{{ScaleY('2')}}</top>
-						<width>{{ScaleX('{{ 450 + {DialogExtraWidth} }}')}}</width>
+						<width>{{ScaleX('450')}}</width>
 						<height>{{ScaleY('30')}}</height>
 						<font>font13</font>
 						<textcolor>grey</textcolor>
@@ -194,7 +194,7 @@
 					<control type="textbox">
 						<left>{{ScaleX('90')}}</left>
 						<top>{{ScaleY('34')}}</top>
-						<width>{{ScaleX('{{ 450 + {DialogExtraWidth} }}')}}</width>
+						<width>{{ScaleX('450')}}</width>
 						<height>{{ScaleY('48')}}</height>
 						<font>font12</font>
 						<textcolor>grey</textcolor>
@@ -203,11 +203,11 @@
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="{{ScaleY('92')}}" width="{{ScaleX('{{ 550 + {DialogExtraWidth} }}')}}">
+				<focusedlayout height="{{ScaleY('92')}}" width="{{ScaleX('550')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('{{ 550 + {DialogExtraWidth} }}')}}</width>
+						<width>{{ScaleX('550')}}</width>
 						<height>{{ScaleY('86')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 						<visible>!Control.HasFocus(6)</visible>
@@ -216,7 +216,7 @@
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('{{ 550 + {DialogExtraWidth} }}')}}</width>
+						<width>{{ScaleX('550')}}</width>
 						<height>{{ScaleY('86')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
 						<visible>Control.HasFocus(6)</visible>
@@ -235,7 +235,7 @@
 					<control type="label">
 						<left>{{ScaleX('90')}}</left>
 						<top>{{ScaleY('2')}}</top>
-						<width>{{ScaleX('{{ 450 + {DialogExtraWidth} }}')}}</width>
+						<width>{{ScaleX('450')}}</width>
 						<height>{{ScaleY('30')}}</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
@@ -247,7 +247,7 @@
 					<control type="textbox">
 						<left>{{ScaleX('90')}}</left>
 						<top>{{ScaleY('34')}}</top>
-						<width>{{ScaleX('{{ 450 + {DialogExtraWidth} }}')}}</width>
+						<width>{{ScaleX('450')}}</width>
 						<height>{{ScaleY('48')}}</height>
 						<font>font12</font>
 						<textcolor>grey</textcolor>
@@ -258,7 +258,7 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="61">
-				<left>{{ScaleX('{{ 570 + {DialogExtraWidth} }}')}}</left>
+				<left>{{ScaleX('570')}}</left>
 				<top>{{ScaleY('65')}}</top>
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('464')}}</height>
@@ -292,7 +292,7 @@
 					<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,-92')}}" time="0" condition="[Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,8)] | [Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,4)]">Conditional</animation>
 				</control>
 				<control type="grouplist" id="90">
-					<left>{{ScaleX('{{ 612 + {DialogExtraWidth} }}')}}</left>
+					<left>{{ScaleX('612')}}</left>
 					<top>{{ScaleY('100')}}</top>
 					<onleft condition="Control.IsVisible(3)">3</onleft>
 					<onleft condition="Control.IsVisible(6)">6</onleft>
@@ -401,6 +401,7 @@
 						<height>{{ScaleY('150')}}</height>
 						<viewmode>$INFO[ListItem.Property(game.viewmode)]</viewmode>
 						<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
+						<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('7')}}</left>
@@ -429,6 +430,7 @@
 						<height>{{ScaleY('150')}}</height>
 						<viewmode>$INFO[ListItem.Property(game.viewmode)]</viewmode>
 						<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
+						<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('7')}}</left>

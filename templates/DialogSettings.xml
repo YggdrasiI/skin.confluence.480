@@ -2,8 +2,8 @@
 <window>
 	<defaultcontrol always="true">5</defaultcontrol>
 	<coordinates>
-		<left>{{ScaleX('{{ 240 - ({DialogExtraWidth})/2 }}')}}</left>
-		<top>{{ScaleY('{{ 142 - {DialogSettingsExtraHeight}/2 }}')}}</top>
+		<left>{{ScaleX('240')}}</left>
+		<top>{{ScaleY('142')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -12,11 +12,11 @@
 			<animation effect="fade" start="100" end="0" time="300" condition="[Window.Is(osdaudiosettings) | Window.Is(osdvideosettings)] + [Window.IsVisible(SliderDialog) | Window.IsVisible(OSDAudioDSPSettings) |  Window.IsVisible(FileBrowser)]">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="400" condition="Window.Is(osdaudiodspsettings) + Window.IsVisible(SliderDialog)">Conditional</animation>
 			<include content="DialogBackgroundCommons">
-				<param name="DialogBackgroundWidth" value="{{ScaleX({{ 800 + {DialogExtraWidth} }})}}" />
-				<param name="DialogBackgroundHeight" value="{{ 485 + {DialogSettingsExtraHeight} }}')}}" />
-				<param name="DialogHeaderWidth" value="{{ScaleX({{ 720 + {DialogExtraWidth} }})}}" />
+				<param name="DialogBackgroundWidth" value="800" />
+				<param name="DialogBackgroundHeight" value="458" />
+				<param name="DialogHeaderWidth" value="720" />
 				<param name="DialogHeaderId" value="2" />
-				<param name="CloseButtonLeft" value="{{ScaleX({{ 710 + {DialogExtraWidth} }})}}" />
+				<param name="CloseButtonLeft" value="710" />
 				<param name="CloseButtonNav" value="10" />
 			</include>
 			<control type="grouplist" id="5">
@@ -24,8 +24,8 @@
 				<description>control area</description>
 				<left>{{ScaleX('35')}}</left>
 				<top>{{ScaleY('70')}}</top>
-				<width>{{ScaleX('{{ 730 + {DialogExtraWidth} }}')}}</width>
-				<height>{{ScaleY('{{ 308 + {DialogSettingsExtraHeight} }}')}}</height>
+				<width>{{ScaleX('730')}}</width>
+				<height>{{ScaleY('308')}}</height>
 				<itemgap>4</itemgap>
 				<pagecontrol>60</pagecontrol>
 				<onup>9001</onup>
@@ -34,10 +34,10 @@
 				<onright>60</onright>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>{{ScaleX('{{ 758 + {DialogExtraWidth} }}')}}</left>
+				<left>{{ScaleX('758')}}</left>
 				<top>{{ScaleY('70')}}</top>
 				<width>{{ScaleX('25')}}</width>
-				<height>{{ScaleY('{{ 308 + {DialogSettingsExtraHeight} }}')}}</height>
+				<height>{{ScaleY('308')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -107,15 +107,15 @@
 			</control>
 			<control type="grouplist" id="9001">
 				<left>{{ScaleX('170')}}</left>
-				<top>{{ScaleY('{{ 393 + {DialogSettingsExtraHeight} }}')}}</top>
-				<width>{{ScaleX('{{ 460 + {DialogExtraWidth} }}')}}</width>
+				<top>{{ScaleY('393')}}</top>
+				<width>{{ScaleX('460')}}</width>
 				<align>center</align>
 				<itemgap>20</itemgap>
 				<orientation>horizontal</orientation>
 				<control type="button" id="28">
 					<description>OK Button</description>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('{{ 200 + {DialogExtraWidth}/3 }}')}}</width>
+					<width>{{ScaleX('200')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -128,7 +128,7 @@
 				<control type="button" id="29">
 					<description>Cancel Button</description>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('{{ 200 + {DialogExtraWidth}/3 }}')}}</width>
+					<width>{{ScaleX('200')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -142,7 +142,7 @@
 				<control type="button" id="30">
 					<description>Settings Button</description>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('{{ 200 + {DialogExtraWidth}/3 }}')}}</width>
+					<width>{{ScaleX('200')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>

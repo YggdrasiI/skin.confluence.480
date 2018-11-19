@@ -6,7 +6,6 @@
 			<description>Normal Default Background Image</description>
 			<include>BackgroundDimensions</include>
 			<aspectratio>scale</aspectratio>
-			<texture fallback="backgrounds/SKINDEFAULT.jpg">$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
 			<texture fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
 			<visible>![Skin.HasSetting(UseCustomBackground) + !String.IsEmpty(Skin.String(CustomBackgroundPath))]</visible>
 			<include>VisibleFadeEffect</include>
@@ -131,7 +130,7 @@
 			</control>
 			<control type="group">
 				<include>VisibleFadeEffect</include>
-				<visible>Control.IsVisible(551) | Control.IsVisible(560) | Control.IsVisible(511) | Control.IsVisible(506) | Control.IsVisible(513)</visible>
+				<visible>Control.IsVisible(551) | Control.IsVisible(560) | Control.IsVisible(511) | Control.IsVisible(506) | Control.IsVisible(507) | Control.IsVisible(513)</visible>
 				<control type="image">
 					<left>{{ScaleX('50')}}</left>
 					<top>{{ScaleY('60')}}</top>

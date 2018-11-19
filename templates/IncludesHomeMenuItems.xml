@@ -147,7 +147,6 @@
 			<texture border="{{ScaleBorder('0,0,0,3')}}" flipx="true">HomeSubEnd.png</texture>
 		</control>
 		<control type="button" id="90112">
-			<width>{{ScaleX('{{ 50 + {HomeSubMenuWidth} }}')}}</width>
 			<include>ButtonHomeSubCommonValues</include>
 			<label>$INFO[Container(90110).ListItemNoWrap(0).Label]</label>
 			<onclick>ActivateWindow(Music,$INFO[Container(90110).ListItemNoWrap(0).FileNameAndPath],return)</onclick>
@@ -497,6 +496,43 @@
 			<icon>$INFO[system.addonicon(Skin.String(HomeProgramButton5))]</icon>
 			<thumb></thumb>
 			<visible>!String.IsEmpty(Skin.String(HomeProgramButton5))</visible>
+		</item>
+	</include>
+	<include name="HomeAddonItemsGames">
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeGameButton1))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeGameButton1)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeGameButton1))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeGameButton1))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeGameButton2))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeGameButton2)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeGameButton2))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeGameButton2))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeGameButton3))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeGameButton3)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeGameButton3))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeGameButton3))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeGameButton4))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeGameButton4)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeGameButton4))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeGameButton4))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeGameButton5))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeGameButton5)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeGameButton5))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeGameButton5))</visible>
 		</item>
 	</include>
 </includes>
