@@ -170,12 +170,12 @@
 						<label>$INFO[ListItem.Property(Outlook)]</label>
 					</control>
 				</focusedlayout>
-				<itemlayout height="{{ScaleY('135')}}" width="{{ScaleX('600')}}" condition="!String.IsEmpty(Window.Property(Daily.IsFetched))">
+				<itemlayout height="{{ScaleY('{{ 135 + {WeatherItemExtraHeight} }}')}}" width="{{ScaleX('600')}}" condition="!String.IsEmpty(Window.Property(Daily.IsFetched))">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('600')}}</width>
-						<height>{{ScaleY('136')}}</height>
+						<height>{{ScaleY('{{ 136 + {WeatherItemExtraHeight} }}')}}</height>
 						<texture border="{{ScaleBorder('0,5,0,5')}}">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
@@ -214,7 +214,7 @@
 						<left>{{ScaleX('5')}}</left>
 						<top>{{ScaleY('82')}}</top>
 						<width>{{ScaleX('590')}}</width>
-						<height>{{ScaleY('48')}}</height>
+						<height>{{ScaleY('{{ 48 + {WeatherItemExtraHeight} }}')}}</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -222,12 +222,12 @@
 						<label>$INFO[ListItem.ActualIcon]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="{{ScaleY('135')}}" width="{{ScaleX('600')}}" condition="!String.IsEmpty(Window.Property(Daily.IsFetched))">
+				<focusedlayout height="{{ScaleY('{{ 135 + {WeatherItemExtraHeight} }}')}}" width="{{ScaleX('600')}}" condition="!String.IsEmpty(Window.Property(Daily.IsFetched))">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('600')}}</width>
-						<height>{{ScaleY('136')}}</height>
+						<height>{{ScaleY('{{ 136 + {WeatherItemExtraHeight} }}')}}</height>
 						<texture border="{{ScaleBorder('0,2,0,2')}}">MenuItemNF.png</texture>
 						<visible>!Control.HasFocus(51)</visible>
 						<include>VisibleFadeEffect</include>
@@ -236,7 +236,7 @@
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
 						<width>{{ScaleX('600')}}</width>
-						<height>{{ScaleY('136')}}</height>
+						<height>{{ScaleY('{{ 136 + {WeatherItemExtraHeight} }}')}}</height>
 						<texture border="{{ScaleBorder('10')}}">button-focus2.png</texture>
 						<visible>Control.HasFocus(51)</visible>
 						<include>VisibleFadeEffect</include>
@@ -277,7 +277,7 @@
 						<left>{{ScaleX('5')}}</left>
 						<top>{{ScaleY('82')}}</top>
 						<width>{{ScaleX('590')}}</width>
-						<height>{{ScaleY('48')}}</height>
+						<height>{{ScaleY('{{ 48 + {WeatherItemExtraHeight} }}')}}</height>
 						<font>font12</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
