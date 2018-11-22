@@ -165,49 +165,140 @@
 				</control>
 				<control type="group">
 					<visible>!String.IsEmpty(ListItem.AddonDisclaimer)</visible>
-					<control type="label">
-						<description>Description Page Count</description>
-						<left>{{ScaleX({{ 310 + {SettingPanelExtraWidthR} }})}}</left>
-						<top>{{ScaleY('140')}}</top>
-						<width>{{ScaleX('300')}}</width>
-						<height>{{ScaleY('25')}}</height>
-						<label>$INFO[Container(400).CurrentPage, $LOCALIZE[31024] [COLOR=blue]([/COLOR]]$INFO[Container(400).NumPages,/,[COLOR=blue])[/COLOR]]</label>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>font12</font>
-						<textcolor>grey</textcolor>
+					<control type="group">
+						<!-- Size in this group depends on height of disclaimer -->
+						<visible>Container(2012).HasNext</visible>
+						<control type="label">
+							<description>Description Page Count</description>
+							<left>{{ScaleX({{ 310 + {SettingPanelExtraWidthR} }})}}</left>
+							<top>{{ScaleY('140')}}</top>
+							<width>{{ScaleX('300')}}</width>
+							<height>{{ScaleY('25')}}</height>
+							<label>$INFO[Container(400).CurrentPage, $LOCALIZE[31024] [COLOR=blue]([/COLOR]]$INFO[Container(400).NumPages,/,[COLOR=blue])[/COLOR]]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>grey</textcolor>
+						</control>
+						<control type="textbox" id="400">
+							<description>Description</description>
+							<left>{{ScaleX('10')}}</left>
+							<top>{{ScaleY('167')}}</top>
+							<width>{{ScaleX({{ 600 + {SettingPanelExtraWidthR} }})}}</width>
+							<height>{{ScaleY('{{ 218 + (-1)*{AddonTextboxLineHeight} }}')}}</height>
+							<font>font13</font>
+							<align>justify</align>
+							<textcolor>white</textcolor>
+							<label>$VAR[AddonInfoDescription]</label>
+							<pagecontrol>60</pagecontrol>
+						</control>
+						<control type="scrollbar" id="60">
+							<left>{{ScaleX({{ 610 + {SettingPanelExtraWidthR} }})}}</left>
+							<top>{{ScaleY('165')}}</top>
+							<width>{{ScaleX('25')}}</width>
+							<height>{{ScaleY('{{ 190 + 20 + (-1)*{AddonTextboxLineHeight} }}')}}</height>
+							<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
+							<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+							<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+							<textureslidernib>ScrollBarNib.png</textureslidernib>
+							<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+							<onleft>9000</onleft>
+							<onright>1061</onright>
+							<showonepage>false</showonepage>
+							<orientation>vertical</orientation>
+						</control>
 					</control>
-					<control type="textbox" id="400">
-						<description>Description</description>
-						<left>{{ScaleX('10')}}</left>
-						<top>{{ScaleY('167')}}</top>
-						<width>{{ScaleX({{ 600 + {SettingPanelExtraWidthR} }})}}</width>
-						<height>{{ScaleY('218')}}</height>
-						<font>font13</font>
-						<align>justify</align>
-						<textcolor>white</textcolor>
-						<label>$VAR[AddonInfoDescription]</label>
-						<pagecontrol>60</pagecontrol>
+					<control type="group">
+						<visible>Container(2013).HasNext + !Container(2012).HasNext</visible>
+						<!-- Size in this group depends on height of disclaimer -->
+						<control type="label">
+							<description>Description Page Count</description>
+							<left>{{ScaleX({{ 310 + {SettingPanelExtraWidthR} }})}}</left>
+							<top>{{ScaleY('140')}}</top>
+							<width>{{ScaleX('300')}}</width>
+							<height>{{ScaleY('25')}}</height>
+							<label>$INFO[Container(401).CurrentPage, $LOCALIZE[31024] [COLOR=blue]([/COLOR]]$INFO[Container(401).NumPages,/,[COLOR=blue])[/COLOR]]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>grey</textcolor>
+						</control>
+						<control type="textbox" id="401">
+							<description>Description</description>
+							<left>{{ScaleX('10')}}</left>
+							<top>{{ScaleY('167')}}</top>
+							<width>{{ScaleX({{ 600 + {SettingPanelExtraWidthR} }})}}</width>
+							<height>{{ScaleY('{{ 218 + 0*{AddonTextboxLineHeight} }}')}}</height>
+							<font>font13</font>
+							<align>justify</align>
+							<textcolor>white</textcolor>
+							<label>$VAR[AddonInfoDescription]</label>
+							<pagecontrol>1061</pagecontrol>
+						</control>
+						<control type="scrollbar" id="1061">
+							<left>{{ScaleX({{ 610 + {SettingPanelExtraWidthR} }})}}</left>
+							<top>{{ScaleY('165')}}</top>
+							<width>{{ScaleX('25')}}</width>
+							<height>{{ScaleY('{{ 190 + 20 + 0*{AddonTextboxLineHeight} }}')}}</height>
+							<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
+							<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+							<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+							<textureslidernib>ScrollBarNib.png</textureslidernib>
+							<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+							<onleft>9000</onleft>
+							<onright>1062</onright>
+							<showonepage>false</showonepage>
+							<orientation>vertical</orientation>
+						</control>
 					</control>
-					<control type="scrollbar" id="60">
-						<left>{{ScaleX({{ 610 + {SettingPanelExtraWidthR} }})}}</left>
-						<top>{{ScaleY('165')}}</top>
-						<width>{{ScaleX('25')}}</width>
-						<height>{{ScaleY('190')}}</height>
-						<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
-						<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
-						<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-						<textureslidernib>ScrollBarNib.png</textureslidernib>
-						<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-						<onleft>9000</onleft>
-						<onright>61</onright>
-						<showonepage>false</showonepage>
-						<orientation>vertical</orientation>
+					<control type="group">
+						<visible>!Container(2013).HasNext</visible>
+						<!-- Size in this group depends on height of disclaimer -->
+						<control type="label">
+							<description>Description Page Count</description>
+							<left>{{ScaleX({{ 310 + {SettingPanelExtraWidthR} }})}}</left>
+							<top>{{ScaleY('140')}}</top>
+							<width>{{ScaleX('300')}}</width>
+							<height>{{ScaleY('25')}}</height>
+							<label>$INFO[Container(402).CurrentPage, $LOCALIZE[31024] [COLOR=blue]([/COLOR]]$INFO[Container(402).NumPages,/,[COLOR=blue])[/COLOR]]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>grey</textcolor>
+						</control>
+						<control type="textbox" id="402">
+							<description>Description</description>
+							<left>{{ScaleX('10')}}</left>
+							<top>{{ScaleY('167')}}</top>
+							<width>{{ScaleX({{ 600 + {SettingPanelExtraWidthR} }})}}</width>
+							<height>{{ScaleY('{{ 218 + 1*{AddonTextboxLineHeight} }}')}}</height>
+							<font>font13</font>
+							<align>justify</align>
+							<textcolor>white</textcolor>
+							<label>$VAR[AddonInfoDescription]</label>
+							<pagecontrol>1062</pagecontrol>
+						</control>
+						<control type="scrollbar" id="1062">
+							<left>{{ScaleX({{ 610 + {SettingPanelExtraWidthR} }})}}</left>
+							<top>{{ScaleY('165')}}</top>
+							<width>{{ScaleX('25')}}</width>
+							<height>{{ScaleY('{{ 190 + 20 + 1*{AddonTextboxLineHeight} }}')}}</height>
+							<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
+							<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
+							<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+							<textureslidernib>ScrollBarNib.png</textureslidernib>
+							<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+							<onleft>9000</onleft>
+							<onright>61</onright>
+							<showonepage>false</showonepage>
+							<orientation>vertical</orientation>
+						</control>
 					</control>
+					<!-- Three different positions. <top> depends on following textbox height. -->
 					<control type="label">
 						<description>Disclaimer txt</description>
 						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('400')}}</top>
+						<top>{{ScaleY('{{ 400 + (-1)*{AddonTextboxLineHeight} }}')}}</top>
 						<width>{{ScaleX({{ 600 + {SettingPanelExtraWidthR} }})}}</width>
 						<height>{{ScaleY('25')}}</height>
 						<label>$LOCALIZE[24052]</label>
@@ -215,18 +306,86 @@
 						<aligny>center</aligny>
 						<font>font13</font>
 						<textcolor>orange</textcolor>
+						<visible>Container(2012).HasNext</visible>
 					</control>
-					<control type="textbox">
+					<control type="label">
+						<description>Disclaimer txt</description>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('{{ 400 + 0*{AddonTextboxLineHeight} }}')}}</top>
+						<width>{{ScaleX({{ 600 + {SettingPanelExtraWidthR} }})}}</width>
+						<height>{{ScaleY('25')}}</height>
+						<label>$LOCALIZE[24052]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<textcolor>orange</textcolor>
+						<visible>Container(2013).HasNext + !Container(2012).HasNext</visible>
+					</control>
+					<control type="label">
+						<description>Disclaimer txt</description>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('{{ 400 + 1*{AddonTextboxLineHeight} }}')}}</top>
+						<width>{{ScaleX({{ 600 + {SettingPanelExtraWidthR} }})}}</width>
+						<height>{{ScaleY('25')}}</height>
+						<label>$LOCALIZE[24052]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<textcolor>orange</textcolor>
+						<visible>!Container(2013).HasNext</visible>
+					</control>
+					<!-- Four textboxes with same content Visibility depends on height of content.-->
+					<control type="textbox" id="2010">
 						<description>Disclaimer</description>
 						<left>{{ScaleX('10')}}</left>
-						<top>{{ScaleY('427')}}</top>
+						<top>{{ScaleY('395')}}</top>
 						<width>{{ScaleX({{ 600 + {SettingPanelExtraWidthR} }})}}</width>
-						<height>{{ScaleY('64')}}</height>
+						<height>{{ScaleY('{{ 64 + 1*{AddonTextboxLineHeight} }}')}}</height>
 						<font>font12</font>
 						<align>left</align>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.AddonDisclaimer]</label>
 						<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+						<visible>Container(2011).HasNext</visible>
+					</control>
+					<control type="textbox" id="2011">
+						<description>Disclaimer</description>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('395')}}</top>
+						<width>{{ScaleX({{ 600 + {SettingPanelExtraWidthR} }})}}</width>
+						<height>{{ScaleY('{{ 64 + 1*{AddonTextboxLineHeight} }}')}}</height>
+						<font>font12</font>
+						<align>left</align>
+						<textcolor>white</textcolor>
+						<label>$INFO[ListItem.AddonDisclaimer]</label>
+						<autoscroll time="2000" delay="3000" repeat="5000">false</autoscroll>
+						<visible>Container(2012).HasNext + !Container(2011).HasNext</visible>
+					</control>
+					<control type="textbox" id="2012">
+						<description>Disclaimer</description>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('427')}}</top>
+						<width>{{ScaleX({{ 600 + {SettingPanelExtraWidthR} }})}}</width>
+						<height>{{ScaleY('{{ 64 + 0*{AddonTextboxLineHeight} }}')}}</height>
+						<font>font12</font>
+						<align>left</align>
+						<textcolor>white</textcolor>
+						<label>$INFO[ListItem.AddonDisclaimer]</label>
+						<autoscroll time="2000" delay="3000" repeat="5000">false</autoscroll>
+						<visible>Container(2013).HasNext + !Container(2012).HasNext</visible>
+					</control>
+					<control type="textbox" id="2013">
+						<description>Disclaimer</description>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('459')}}</top>
+						<width>{{ScaleX({{ 600 + {SettingPanelExtraWidthR} }})}}</width>
+						<height>{{ScaleY('{{ 64 + (-1)*{AddonTextboxLineHeight} }}')}}</height>
+						<font>font12</font>
+						<align>left</align>
+						<textcolor>white</textcolor>
+						<label>$INFO[ListItem.AddonDisclaimer]</label>
+						<autoscroll time="2000" delay="3000" repeat="5000">false</autoscroll>
+						<visible>!Container(2013).HasNext</visible>
 					</control>
 				</control>
 				<control type="group">

@@ -95,6 +95,9 @@ substitutions = {
     "ThumbnailViewItemColumns": 3,
 
     "MusicVisualisationExtraHeight": 75,
+
+    # Height for each line in disclaimer/description textbox
+    "AddonTextboxLineHeight": 32,
     }
 
 substitutions["OSDBookmarksItemWidth"] = int(
