@@ -13,11 +13,11 @@
 			<top>{{ScaleY('-16')}}</top>
 			<width>{{ScaleX('4')}}</width>
 			<height>{{ScaleY('4')}}</height>
-			<label></label>
-			<font></font>
+			<label/>
+			<font/>
 			<onfocus>down</onfocus>
-			<texturefocus></texturefocus>
-			<texturenofocus></texturenofocus>
+			<texturefocus/>
+			<texturenofocus/>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
 			<onup>9000</onup>
@@ -58,8 +58,8 @@
 					<top>{{ScaleY('5')}}</top>
 					<width>{{ScaleX('64')}}</width>
 					<height>{{ScaleY('32')}}</height>
-					<label></label>
-					<font></font>
+					<label/>
+					<font/>
 					<onclick>PreviousMenu</onclick>
 					<texturefocus>DialogCloseButton-focus.png</texturefocus>
 					<texturenofocus>DialogCloseButton.png</texturenofocus>

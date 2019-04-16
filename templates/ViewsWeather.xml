@@ -287,8 +287,8 @@
 				</focusedlayout>
 				<content>
 					<item>
-						<label></label>
-						<icon></icon>
+						<label/>
+						<icon/>
 						<visible>!Weather.IsFetched</visible>
 					</item>
 					<include content="WeatherDefaultItem">
@@ -437,8 +437,8 @@
 				<top>{{ScaleY('-20')}}</top>
 				<width>{{ScaleX('1')}}</width>
 				<height>{{ScaleY('1')}}</height>
-				<texturenofocus></texturenofocus>
-				<texturefocus></texturefocus>
+				<texturenofocus/>
+				<texturefocus/>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 			</control>
@@ -659,8 +659,8 @@
 				<top>{{ScaleY('-20')}}</top>
 				<width>{{ScaleX('1')}}</width>
 				<height>{{ScaleY('1')}}</height>
-				<texturenofocus></texturenofocus>
-				<texturefocus></texturefocus>
+				<texturenofocus/>
+				<texturefocus/>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 			</control>
@@ -1140,7 +1140,7 @@
 				<top>{{ScaleY('565')}}</top>
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('25')}}</height>
-				<label></label>
+				<label/>
 				<texturefocus>scroll-right-focus.png</texturefocus>
 				<texturenofocus>scroll-right.png</texturenofocus>
 				<onleft>991</onleft>
@@ -1152,7 +1152,7 @@
 				<top>{{ScaleY('565')}}</top>
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('25')}}</height>
-				<label></label>
+				<label/>
 				<texturefocus>scroll-left-focus.png</texturefocus>
 				<texturenofocus>scroll-left.png</texturenofocus>
 				<onleft>9000</onleft>
@@ -1281,8 +1281,8 @@
 				<top>{{ScaleY('-20')}}</top>
 				<width>{{ScaleX('1')}}</width>
 				<height>{{ScaleY('1')}}</height>
-				<texturenofocus></texturenofocus>
-				<texturefocus></texturefocus>
+				<texturenofocus/>
+				<texturefocus/>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 			</control>

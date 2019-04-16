@@ -43,7 +43,7 @@
 			<top>{{ScaleY('260')}}</top>
 			<width>{{ScaleX('200')}}</width>
 			<height>{{ScaleY('200')}}</height>
-			<font></font>
+			<font/>
 			<onclick>play</onclick>
 			<texturefocus>arrow-big-right.png</texturefocus>
 			<texturenofocus>arrow-big-right.png</texturenofocus>

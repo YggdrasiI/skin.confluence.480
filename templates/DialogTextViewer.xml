@@ -19,8 +19,8 @@
 				<top>{{ScaleY('0')}}</top>
 				<width>{{ScaleX('64')}}</width>
 				<height>{{ScaleY('32')}}</height>
-				<label></label>
-				<font></font>
+				<label/>
+				<font/>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -51,7 +51,7 @@
 					<top>{{ScaleY('92')}}</top>
 					<width>{{ScaleX('1000')}}</width>
 					<height>{{ScaleY('598')}}</height>
-					<label></label>
+					<label/>
 					<font>font13</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>
