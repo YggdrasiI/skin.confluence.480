@@ -1,6 +1,6 @@
 This skin based on skin.confluence.
 
-Newest supported skin version for Kodi 18.x (Leia): 4.4.2 (=> master branch).
+Newest supported skin version for Kodi 18.x (Leia): 4.6.4 (=> master branch).
 Newest supported skin version for Kodi 17.x (Krypton): 3.1.6 (=> release_3.1.6 branch)
 Older skin version for Kodi 15.2-16.x: See release_0.8 branch.
 

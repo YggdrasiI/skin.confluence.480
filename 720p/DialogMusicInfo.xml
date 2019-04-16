@@ -20,8 +20,8 @@
 				<top>0</top>
 				<width>64</width>
 				<height>32</height>
-				<label></label>
-				<font></font>
+				<label/>
+				<font/>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -70,13 +70,13 @@
 						<onright>49</onright>
 						<onup>9000</onup>
 						<ondown>50</ondown>
-						<pagecontrol></pagecontrol>
+						<pagecontrol/>
 						<scrolltime>200</scrolltime>
 						<itemlayout height="30">
 							<control type="label">
 								<left>0</left>
 								<top>0</top>
-								<width>140</width>
+								<width>160</width>
 								<height>30</height>
 								<font>font13</font>
 								<align>right</align>
@@ -86,9 +86,9 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>150</left>
+								<left>170</left>
 								<top>0</top>
-								<width>610</width>
+								<width>590</width>
 								<height>30</height>
 								<font>font13</font>
 								<align>left</align>
@@ -111,7 +111,7 @@
 							<control type="label">
 								<left>0</left>
 								<top>0</top>
-								<width>140</width>
+								<width>160</width>
 								<height>30</height>
 								<font>font13</font>
 								<align>right</align>
@@ -121,9 +121,9 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>150</left>
+								<left>170</left>
 								<top>0</top>
-								<width>610</width>
+								<width>590</width>
 								<height>30</height>
 								<font>font13</font>
 								<align>left</align>
@@ -199,22 +199,22 @@
 					<control type="button" id="6">
 						<description>Refresh</description>
 						<include>ButtonInfoDialogsCommonValues</include>
-						<label></label>
+						<label/>
 					</control>
 					<control type="button" id="10">
 						<description>Get Thumb</description>
 						<include>ButtonInfoDialogsCommonValues</include>
-						<label></label>
+						<label/>
 					</control>
 					<control type="button" id="12">
 						<description>Get Fanart / Album info</description>
 						<include>ButtonInfoDialogsCommonValues</include>
-						<label></label>
+						<label/>
 					</control>
 					<control type="button" id="7">
 						<description>Set my rating</description>
 						<include>ButtonInfoDialogsCommonValues</include>
-						<label></label>
+						<label/>
 					</control>
 				</control>
 			</control>
