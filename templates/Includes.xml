@@ -66,7 +66,7 @@
 	</variable>
 	<variable name="GameSelectHeader">
 		<value condition="Window.IsActive(gamevideofilter)">$LOCALIZE[230]</value>
-		<value condition="Window.IsActive(gameviewmode)">$LOCALIZE[35233]</value>
+		<value condition="Window.IsActive(gamestretchmode)">$LOCALIZE[35233]</value>
 		<value condition="Window.IsActive(gamevideorotation)">$LOCALIZE[35227]</value>
 	</variable>
 	<variable name="DurationInMinutes">
@@ -445,6 +445,23 @@
 		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="Container.Content(Songs)">$INFO[ListItem.Comment]</value>
 	</variable>
+	<variable name="MusicInfoListViewLabel">
+		<value condition="Control.IsVisible(506)">$LOCALIZE[544]</value>
+		<value condition="Control.IsVisible(507) + !Player.HasAudio">$LOCALIZE[31040]</value>
+		<value condition="Control.IsVisible(507) + Player.HasAudio">$LOCALIZE[31040]$INFO[musicplayer.Playlistposition,: ]$INFO[musicplayer.Playlistlength,/]</value>
+	</variable>
+	<variable name="MusicInfoListViewPanel">
+		<value condition="Control.IsVisible(506)">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title,,[CR]]$INFO[ListItem.Artist,,[CR]]$INFO[ListItem.Album,[COLOR grey2],[/COLOR][CR]]$INFO[ListItem.DiscNumber,[COLOR grey2]$LOCALIZE[427] ,[/COLOR][CR]]$INFO[ListItem.Year,[COLOR grey2], | [/COLOR]]$INFO[ListItem.Genre,[COLOR grey2],[/COLOR][CR]]$INFO[ListItem.PlayCount,$LOCALIZE[567]: ,[CR]]$INFO[ListItem.Time,$LOCALIZE[180]: ,/]$INFO[ListItem.Duration,,[CR]]</value>
+		<value condition="Control.IsVisible(507) + Player.HasAudio">$INFO[MusicPlayer.TrackNumber,,. ]$INFO[MusicPlayer.Title,,[CR]]$INFO[MusicPlayer.Artist,,[CR]]$INFO[MusicPlayer.Album,[COLOR grey2],[/COLOR][CR]]$INFO[MusicPlayer.DiscNumber,[COLOR grey2]$LOCALIZE[427] ,[/COLOR][CR]]$INFO[MusicPlayer.Year,[COLOR grey2], | [/COLOR]]$INFO[MusicPlayer.Genre,[COLOR grey2],[/COLOR][CR]]$INFO[MusicPlayer.PlayCount,$LOCALIZE[567]: ,[CR]]$INFO[MusicPlayer.Time,$LOCALIZE[31016]: ,/]$INFO[MusicPlayer.Duration,,[CR]]</value>
+	</variable>
+	<variable name="MusicInfoListViewtRating">
+		<value condition="Control.IsVisible(506)">$INFO[ListItem.UserRating,ratings/,.png]</value>
+		<value condition="Control.IsVisible(507) + Player.HasAudio">$INFO[MusicPlayer.UserRating,ratings/,.png]</value>
+	</variable>
+	<variable name="MusicInfoListViewThumb">
+		<value condition="Control.IsVisible(506)">$INFO[ListItem.Icon]</value>
+		<value condition="Control.IsVisible(507)">$INFO[Player.Art(thumb)]</value>
+	</variable>
 	<variable name="MusicInfoListThumb">
 		<value condition="Container.Content(Artists) + !String.IsEmpty(Container(50).Listitem.Icon)">$INFO[Container(50).Listitem.Icon]</value>
 		<value condition="[Container.Content(Albums) | Container.Content(Songs)] + !String.IsEmpty(Container.Art(artist.thumb))">$INFO[Container.Art(artist.thumb)]</value>
@@ -498,8 +515,13 @@
 		<value condition="String.Contains(Listitem.mpaa,Rated NR)">mpaa_notrated</value>
 		<value condition="String.Contains(Listitem.mpaa,Not Rated)">mpaa_notrated</value>
 	</variable>
+	<variable name="audiocodec">
+		<value condition="String.StartsWith(ListItem.AudioCodec,mp3)">mp3</value>
+		<value>$INFO[ListItem.AudioCodec]</value>
+	</variable>
 	<variable name="videocodec">
 		<value condition="[String.StartsWith(ListItem.VideoCodec,div) | String.IsEqual(ListItem.VideoCodec,dx50)]">divx</value>
+		<value condition="String.Contains(ListItem.VideoCodec,mpeg4)">mpeg4</value>
 		<value>$INFO[ListItem.VideoCodec]</value>
 	</variable>
 	<variable name="SeekLabel">
@@ -1939,6 +1961,26 @@
 			<label>$LOCALIZE[21898]:</label>
 			<label2>$INFO[ListItem.Property(Artist_YearsActive)]</label2>
 			<visible>!String.IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[39027]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Sortname)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Sortname))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[467]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Type)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Type))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[39025]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Gender)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Gender))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[39026]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Disambiguation)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Disambiguation))</visible>
 		</item>
 	</include>
 	<include name="MusicInfoAlbumInfo">
