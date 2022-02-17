@@ -123,6 +123,14 @@
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
 					</control>
+					<control type="image">
+						<left>{{ScaleX('5')}}</left>
+						<top>{{ScaleY('35')}}</top>
+						<width>{{ScaleX('20')}}</width>
+						<height>{{ScaleY('20')}}</height>
+						<texture>PVR-HasArchive.png</texture>
+						<visible>!ListItem.IsRecording + ListItem.HasArchive</visible>
+					</control>
 					<control type="label">
 						<left>{{ScaleX('50')}}</left>
 						<top>{{ScaleY('0')}}</top>
@@ -242,6 +250,14 @@
 						<height>{{ScaleY('20')}}</height>
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="image">
+						<left>{{ScaleX('5')}}</left>
+						<top>{{ScaleY('35')}}</top>
+						<width>{{ScaleX('20')}}</width>
+						<height>{{ScaleY('20')}}</height>
+						<texture>PVR-HasArchive.png</texture>
+						<visible>!ListItem.IsRecording + ListItem.HasArchive</visible>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('50')}}</left>

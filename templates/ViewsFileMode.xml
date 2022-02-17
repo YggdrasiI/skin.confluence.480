@@ -522,7 +522,7 @@
 						<top>{{ScaleY('4')}}</top>
 						<width>{{ScaleX('40')}}</width>
 						<height>{{ScaleY('32')}}</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$VAR[PosterThumb]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
@@ -623,7 +623,7 @@
 						<top>{{ScaleY('4')}}</top>
 						<width>{{ScaleX('40')}}</width>
 						<height>{{ScaleY('32')}}</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$VAR[PosterThumb]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">

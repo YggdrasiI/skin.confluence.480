@@ -4,8 +4,8 @@
 	<onload>ClearProperty(WhatsNew,home)</onload>
 	<coordinates>
 		<left>{{ScaleX('185')}}</left>
-		<top>{{ScaleY('40')}}</top>
-		<origin x="185" y="10">!String.IsEmpty(ListItem.AddonBroken)</origin>
+		<top>{{ScaleY('18')}}</top>
+		<origin x="{{ScaleX('185')}}" y="{{ScaleY('5')}}">!String.IsEmpty(ListItem.AddonBroken)</origin>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -14,7 +14,7 @@
 			<visible>!Window.isVisible(AddonSettings) + !Window.IsActive(TextViewer)</visible>
 			<include content="DialogBackgroundCommons">
 				<param name="DialogBackgroundWidth" value="920" />
-				<param name="DialogBackgroundHeight" value="639" />
+				<param name="DialogBackgroundHeight" value="684" />
 				<param name="DialogHeaderWidth" value="840" />
 				<param name="DialogHeaderLabel" value="$LOCALIZE[24003]" />
 				<param name="DialogHeaderId" value="2" />
@@ -182,7 +182,7 @@
 						<left>{{ScaleX('10')}}</left>
 						<top>{{ScaleY('167')}}</top>
 						<width>{{ScaleX('600')}}</width>
-						<height>{{ScaleY('218')}}</height>
+						<height>{{ScaleY('263')}}</height>
 						<font>font13</font>
 						<align>justify</align>
 						<textcolor>white</textcolor>
@@ -193,7 +193,7 @@
 						<left>{{ScaleX('610')}}</left>
 						<top>{{ScaleY('165')}}</top>
 						<width>{{ScaleX('25')}}</width>
-						<height>{{ScaleY('190')}}</height>
+						<height>{{ScaleY('235')}}</height>
 						<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
 						<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
 						<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -207,7 +207,7 @@
 					<control type="label">
 						<description>Disclaimer txt</description>
 						<left>{{ScaleX('0')}}</left>
-						<top>{{ScaleY('400')}}</top>
+						<top>{{ScaleY('445')}}</top>
 						<width>{{ScaleX('600')}}</width>
 						<height>{{ScaleY('25')}}</height>
 						<label>$LOCALIZE[24052]</label>
@@ -219,7 +219,7 @@
 					<control type="textbox">
 						<description>Disclaimer</description>
 						<left>{{ScaleX('10')}}</left>
-						<top>{{ScaleY('427')}}</top>
+						<top>{{ScaleY('472')}}</top>
 						<width>{{ScaleX('600')}}</width>
 						<height>{{ScaleY('64')}}</height>
 						<font>font12</font>
@@ -248,7 +248,7 @@
 						<left>{{ScaleX('10')}}</left>
 						<top>{{ScaleY('177')}}</top>
 						<width>{{ScaleX('600')}}</width>
-						<height>{{ScaleY('288')}}</height>
+						<height>{{ScaleY('333')}}</height>
 						<font>font13</font>
 						<align>left</align>
 						<textcolor>white</textcolor>
@@ -259,7 +259,7 @@
 						<left>{{ScaleX('610')}}</left>
 						<top>{{ScaleY('175')}}</top>
 						<width>{{ScaleX('25')}}</width>
-						<height>{{ScaleY('260')}}</height>
+						<height>{{ScaleY('305')}}</height>
 						<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
 						<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
 						<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -276,7 +276,7 @@
 				<left>{{ScaleX('30')}}</left>
 				<top>{{ScaleY('300')}}</top>
 				<width>{{ScaleX('220')}}</width>
-				<height>{{ScaleY('313')}}</height>
+				<height>{{ScaleY('358')}}</height>
 				<onleft>60</onleft>
 				<onright>60</onright>
 				<onup>9000</onup>
@@ -301,6 +301,14 @@
 					<align>center</align>
 					<font>font12_title</font>
 				</control>
+				<control type="button" id="12">
+					<description>Launch Addon button</description>
+					<width>{{ScaleX('220')}}</width>
+					<height>{{ScaleY('43')}}</height>
+					<label>518</label>
+					<align>center</align>
+					<font>font12_title</font>
+				</control>
 				<control type="button" id="8">
 					<description>Update Addon button</description>
 					<width>{{ScaleX('220')}}</width>
@@ -317,11 +325,11 @@
 					<align>center</align>
 					<font>font12_title</font>
 				</control>
-				<control type="button" id="12">
-					<description>Launch Addon button</description>
+				<control type="button" id="14">
+					<description>Versions button</description>
 					<width>{{ScaleX('220')}}</width>
 					<height>{{ScaleY('43')}}</height>
-					<label>518</label>
+					<label>24069</label>
 					<align>center</align>
 					<font>font12_title</font>
 				</control>
@@ -353,28 +361,28 @@
 			<control type="group">
 				<visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
 				<left>{{ScaleX('0')}}</left>
-				<top>{{ScaleY('600')}}</top>
+				<top>{{ScaleY('635')}}</top>
 				<control type="image">
 					<description>background image</description>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
 					<width>{{ScaleX('920')}}</width>
-					<height>{{ScaleY('100')}}</height>
+					<height>{{ScaleY('80')}}</height>
 					<texture border="{{ScaleBorder('20')}}">OverlayDialogBackground.png</texture>
 				</control>
 				<control type="image">
 					<description>Icon image</description>
-					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY('20')}}</top>
-					<width>{{ScaleX('60')}}</width>
-					<height>{{ScaleY('60')}}</height>
+					<left>{{ScaleX('18')}}</left>
+					<top>{{ScaleY('18')}}</top>
+					<width>{{ScaleX('44')}}</width>
+					<height>{{ScaleY('44')}}</height>
 					<texture>DefaultIconError.png</texture>
 				</control>
 				<control type="label">
 					<description>header label</description>
-					<left>{{ScaleX('100')}}</left>
+					<left>{{ScaleX('75')}}</left>
 					<top>{{ScaleY('15')}}</top>
-					<width>{{ScaleX('800')}}</width>
+					<width>{{ScaleX('825')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<font>font12_title</font>
 					<label>24096</label>
@@ -385,11 +393,11 @@
 				</control>
 				<control type="textbox">
 					<description>Reason label</description>
-					<left>{{ScaleX('100')}}</left>
+					<left>{{ScaleX('75')}}</left>
 					<top>{{ScaleY('37')}}</top>
-					<width>{{ScaleX('800')}}</width>
+					<width>{{ScaleX('825')}}</width>
 					<height>{{ScaleY('48')}}</height>
-					<font>font13</font>
+					<font>font12</font>
 					<label>$INFO[ListItem.AddonBroken]</label>
 					<align>left</align>
 					<textcolor>white</textcolor>
