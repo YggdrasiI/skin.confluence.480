@@ -84,14 +84,14 @@
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('75')}}</top>
 						<width>{{ScaleX('310')}}</width>
-						<height>{{ScaleY('460')}}</height>
+						<height>{{ScaleY('550')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 					</control>
 					<control type="list" id="13">
 						<left>{{ScaleX('5')}}</left>
 						<top>{{ScaleY('80')}}</top>
 						<width>{{ScaleX('300')}}</width>
-						<height>{{ScaleY('450')}}</height>
+						<height>{{ScaleY('540')}}</height>
 						<onup>13</onup>
 						<ondown>13</ondown>
 						<onleft>9000</onleft>
@@ -106,10 +106,18 @@
 								<height>{{ScaleY('40')}}</height>
 								<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 							</control>
+							<control type="image">
+								<width>{{ScaleX('32')}}</width>
+								<height>{{ScaleY('32')}}</height>
+								<left>{{ScaleX('5')}}</left>
+								<top>{{ScaleY('4')}}</top>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<aspectratio>keep</aspectratio>
+							</control>
 							<control type="label">
-								<left>{{ScaleX('10')}}</left>
+								<left>{{ScaleX('40')}}</left>
 								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('280')}}</width>
+								<width>{{ScaleX('250')}}</width>
 								<height>{{ScaleY('40')}}</height>
 								<font>font12</font>
 								<align>left</align>
@@ -136,10 +144,18 @@
 								<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
 								<visible>Control.HasFocus(13)</visible>
 							</control>
+							<control type="image">
+								<width>{{ScaleX('32')}}</width>
+								<height>{{ScaleY('32')}}</height>
+								<left>{{ScaleX('5')}}</left>
+								<top>{{ScaleY('4')}}</top>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<aspectratio>keep</aspectratio>
+							</control>
 							<control type="label">
-								<left>{{ScaleX('10')}}</left>
+								<left>{{ScaleX('40')}}</left>
 								<top>{{ScaleY('0')}}</top>
-								<width>{{ScaleX('280')}}</width>
+								<width>{{ScaleX('250')}}</width>
 								<height>{{ScaleY('40')}}</height>
 								<font>font12</font>
 								<align>left</align>
@@ -154,7 +170,7 @@
 						<left>{{ScaleX('305')}}</left>
 						<top>{{ScaleY('75')}}</top>
 						<width>{{ScaleX('25')}}</width>
-						<height>{{ScaleY('460')}}</height>
+						<height>{{ScaleY('550')}}</height>
 						<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
 						<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
 						<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -187,14 +203,14 @@
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('75')}}</top>
 						<width>{{ScaleX('310')}}</width>
-						<height>{{ScaleY('460')}}</height>
+						<height>{{ScaleY('550')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 					</control>
 					<control type="list" id="11">
 						<left>{{ScaleX('5')}}</left>
 						<top>{{ScaleY('85')}}</top>
 						<width>{{ScaleX('300')}}</width>
-						<height>{{ScaleY('450')}}</height>
+						<height>{{ScaleY('540')}}</height>
 						<onup>11</onup>
 						<ondown>11</ondown>
 						<onleft>73</onleft>
@@ -273,7 +289,7 @@
 						<left>{{ScaleX('305')}}</left>
 						<top>{{ScaleY('75')}}</top>
 						<width>{{ScaleX('25')}}</width>
-						<height>{{ScaleY('460')}}</height>
+						<height>{{ScaleY('550')}}</height>
 						<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
 						<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
 						<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -306,14 +322,14 @@
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('75')}}</top>
 						<width>{{ScaleX('310')}}</width>
-						<height>{{ScaleY('460')}}</height>
+						<height>{{ScaleY('550')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 					</control>
 					<control type="list" id="12">
 						<left>{{ScaleX('5')}}</left>
 						<top>{{ScaleY('85')}}</top>
 						<width>{{ScaleX('300')}}</width>
-						<height>{{ScaleY('450')}}</height>
+						<height>{{ScaleY('540')}}</height>
 						<onup>12</onup>
 						<ondown>12</ondown>
 						<onleft>71</onleft>
@@ -392,7 +408,7 @@
 						<left>{{ScaleX('305')}}</left>
 						<top>{{ScaleY('75')}}</top>
 						<width>{{ScaleX('25')}}</width>
-						<height>{{ScaleY('460')}}</height>
+						<height>{{ScaleY('550')}}</height>
 						<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
 						<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
 						<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -410,9 +426,8 @@
 					<left>{{ScaleX('1070')}}</left>
 					<top>{{ScaleY('165')}}</top>
 					<width>{{ScaleX('200')}}</width>
-					<height>{{ScaleY('225')}}</height>
+					<height>{{ScaleY('315')}}</height>
 					<itemgap>5</itemgap>
-					<align>center</align>
 					<orientation>vertical</orientation>
 					<onleft>12</onleft>
 					<onright>13</onright>
@@ -442,6 +457,12 @@
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>31505</label>
 					</control>
+					<control type="button" id="35">
+						<description>Regenerate Group Thumbnails</description>
+						<width>{{ScaleX('200')}}</width>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>13315</label>
+					</control>
 					<control type="togglebutton" id="34">
 						<description>TV/Radio toggle</description>
 						<width>{{ScaleX('200')}}</width>
@@ -459,7 +480,7 @@
 				</control>
 				<control type="group">
 					<left>{{ScaleX('1065')}}</left>
-					<top>{{ScaleY('405')}}</top>
+					<top>{{ScaleY('495')}}</top>
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
@@ -484,6 +505,15 @@
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[Container(12).ListItem.Icon]</texture>
 						<visible>Control.HasFocus(12) | Control.HasFocus(72)</visible>
+					</control>
+					<control type="image">
+						<left>{{ScaleX('5')}}</left>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('200')}}</width>
+						<height>{{ScaleY('200')}}</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">$INFO[Container(13).ListItem.Icon]</texture>
+						<visible>Control.HasFocus(13) | Control.HasFocus(73)</visible>
 					</control>
 				</control>
 			</control>

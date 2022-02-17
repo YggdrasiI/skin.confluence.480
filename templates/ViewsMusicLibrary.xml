@@ -4,19 +4,37 @@
 		<control type="group">
 			<visible>Control.IsVisible(506)</visible>
 			<include>VisibleFadeEffect</include>
-			<control type="list" id="506">
+			<include content="CommonInfoListView">
+				<param name="control_id" value="506" />
+				<param name="view_label" value="$LOCALIZE[544]" />
+				<param name="visible" value="Container.Content(Files) | Window.IsVisible(MusicPlaylist) |  Container.Content(Songs) | Container.Content(Albums)" />
+			</include>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(507)</visible>
+			<include>VisibleFadeEffect</include>
+			<include content="CommonInfoListView">
+				<param name="control_id" value="507" />
+				<param name="view_label" value="$LOCALIZE[31040]" />
+				<param name="visible" value="Window.IsVisible(MusicPlaylist) | Window.IsVisible(10502)" />
+			</include>
+		</control>
+	</include>
+	<include name="CommonInfoListView">
+		<definition>
+			<control type="list" id="$PARAM[control_id]">
 				<left>{{ScaleX('70')}}</left>
 				<top>{{ScaleY('75')}}</top>
 				<width>{{ScaleX('780')}}</width>
 				<height>{{ScaleY('561')}}</height>
 				<onleft>2</onleft>
 				<onright>60</onright>
-				<onup>506</onup>
-				<ondown>506</ondown>
-				<viewtype label="$LOCALIZE[544]">list</viewtype>
+				<onup>$PARAM[control_id]</onup>
+				<ondown>$PARAM[control_id]</ondown>
+				<viewtype label="$PARAM[view_label]">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<visible>Container.Content(Files) | Window.IsVisible(MusicPlaylist) |  Container.Content(Songs) | Container.Content(Albums)</visible>
+				<visible>$PARAM[visible]</visible>
 				<itemlayout height="{{ScaleY('40')}}" width="{{ScaleX('780')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
@@ -57,7 +75,7 @@
 						<width>{{ScaleX('760')}}</width>
 						<height>{{ScaleY('41')}}</height>
 						<texture border="{{ScaleBorder('0,2,0,2')}}">MenuItemNF.png</texture>
-						<visible>!Control.HasFocus(506)</visible>
+						<visible>!Control.HasFocus($PARAM[control_id])</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
@@ -66,7 +84,7 @@
 						<width>{{ScaleX('780')}}</width>
 						<height>{{ScaleY('41')}}</height>
 						<texture border="{{ScaleBorder('0,2,0,2')}}">MenuItemFO.png</texture>
-						<visible>Control.HasFocus(506)</visible>
+						<visible>Control.HasFocus($PARAM[control_id])</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
@@ -75,7 +93,7 @@
 						<width>{{ScaleX('200')}}</width>
 						<height>{{ScaleY('31')}}</height>
 						<texture border="{{ScaleBorder('0,0,14,0')}}">MediaItemDetailBG.png</texture>
-						<visible>Control.HasFocus(506) + !String.IsEmpty(ListItem.Label2)</visible>
+						<visible>Control.HasFocus($PARAM[control_id]) + !String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<left>{{ScaleX('10')}}</left>
@@ -113,16 +131,17 @@
 				<texturesliderbarfocus border="{{ScaleBorder('2,16,2,16')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-				<onleft>506</onleft>
+				<onleft>$PARAM[control_id]</onleft>
 				<onright>2</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-				<visible>Control.IsVisible(506)</visible>
+				<visible>Control.IsVisible($PARAM[control_id])</visible>
 			</control>
 			<control type="group">
-				<visible>Control.IsVisible(506)</visible>
+				<visible>Control.IsVisible($PARAM[control_id])</visible>
 				<left>{{ScaleX('910')}}</left>
 				<top>{{ScaleY('80')}}</top>
+<<<<<<< HEAD
 				<control type="label">
 					<left>{{ScaleX('10')}}</left>
 					<top>{{ScaleY('0')}}</top>
@@ -155,13 +174,24 @@
 					<scroll>true</scroll>
 					<align>left</align>
 					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
+=======
 				<control type="label">
 					<left>{{ScaleX('10')}}</left>
-					<top>{{ScaleY('360')}}</top>
+					<top>{{ScaleY('0')}}</top>
 					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('20')}}</height>
+					<label>$VAR[MusicInfoListViewLabel]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+>>>>>>> unstable
+					<textcolor>white</textcolor>
+				</control>
+				<control type="image">
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('20')}}</top>
+					<width>{{ScaleX('290')}}</width>
+<<<<<<< HEAD
 					<height>{{ScaleY('45')}}</height>
 					<label>$INFO[listitem.Artist]</label>
 					<wrapmultiline>true</wrapmultiline>
@@ -191,9 +221,18 @@
 					<font>font13</font>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
+=======
+					<height>{{ScaleY('290')}}</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture fallback="DefaultAlbumCover.png" background="true">$VAR[MusicInfoListViewThumb]</texture>
+					<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
+					<bordersize>{{ScaleBorder('8')}}</bordersize>
+>>>>>>> unstable
 				</control>
-				<control type="label">
+				<control type="image">
 					<left>{{ScaleX('10')}}</left>
+<<<<<<< HEAD
 					<top>{{ScaleY('485')}}</top>
 					<width>{{ScaleX('290')}}</width>
 					<height>{{ScaleY('20')}}</height>
@@ -452,8 +491,28 @@
 					<textcolor>white</textcolor>
 					<visible>Player.HasAudio</visible>
 				</control>
+=======
+					<top>{{ScaleY('315')}}</top>
+					<width>{{ScaleX('168')}}</width>
+					<height>{{ScaleY('20')}}</height>
+					<texture fallback="ratings/0.png">$VAR[MusicInfoListViewtRating]</texture>
+				</control>				
+				<control type="label">
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('340')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('200')}}</height>
+					<label>$VAR[MusicInfoListViewPanel]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<scroll>true</scroll>
+					<align>left</align>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>				
+>>>>>>> unstable
 			</control>
-		</control>
+		</definition>
 	</include>
 	<include name="AlbumWrapView2_Fanart">
 		<control type="group">
@@ -703,7 +762,7 @@
 					<height>{{ScaleY('144')}}</height>
 					<font>font13</font>
 					<align>justify</align>
-					<pagecontrol></pagecontrol>
+					<pagecontrol/>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Property(Album_Description)]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
@@ -1114,7 +1173,7 @@
 						<top>{{ScaleY('30')}}</top>
 						<width>{{ScaleX('350')}}</width>
 						<height>{{ScaleY('25')}}</height>
-						<label fallback="416">$INFO[ListItem.Property(Artist_Genre)]</label>
+						<label fallback="10005">$INFO[ListItem.Property(Artist_Genre)]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>font13</font>
@@ -1297,7 +1356,7 @@
 					<height>{{ScaleY('298')}}</height>
 					<font>font13</font>
 					<align>justify</align>
-					<pagecontrol></pagecontrol>
+					<pagecontrol/>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Property(Album_Description)]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>

@@ -14,7 +14,7 @@
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 			<include>VisibleFadeEffect</include>
-			<visible>System.HasAddon(resource.images.weatherfanart.multi)</visible>
+			<visible>System.AddonIsEnabled(resource.images.weatherfanart.multi)</visible>
 			<animation effect="fade" time="150">WindowClose</animation>
 		</control>
 		<include content="CommonWindowHeader">
@@ -197,7 +197,7 @@
 						<description>current feels like label</description>
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 170 + {WeatherLeftExtraW} }})}}</width>
+						<width>{{ScaleX('170')}}</width>
 						<height>{{ScaleY('28')}}</height>
 						<font>font13</font>
 						<align>right</align>
@@ -211,7 +211,7 @@
 						<description>current dew label</description>
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 170 + {WeatherLeftExtraW} }})}}</width>
+						<width>{{ScaleX('170')}}</width>
 						<height>{{ScaleY('28')}}</height>
 						<font>font13</font>
 						<align>right</align>
@@ -225,7 +225,7 @@
 						<description>current humidity label</description>
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 170 + {WeatherLeftExtraW} }})}}</width>
+						<width>{{ScaleX('170')}}</width>
 						<height>{{ScaleY('28')}}</height>
 						<font>font13</font>
 						<align>right</align>
@@ -239,7 +239,7 @@
 						<description>current UV Index label</description>
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 170 + {WeatherLeftExtraW} }})}}</width>
+						<width>{{ScaleX('170')}}</width>
 						<height>{{ScaleY('28')}}</height>
 						<font>font13</font>
 						<align>right</align>
@@ -253,7 +253,7 @@
 						<description>current Precipitation label</description>
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 170 + {WeatherLeftExtraW} }})}}</width>
+						<width>{{ScaleX('170')}}</width>
 						<height>{{ScaleY('28')}}</height>
 						<font>font13</font>
 						<align>right</align>
@@ -267,7 +267,7 @@
 						<description>current Wind label</description>
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 170 + {WeatherLeftExtraW} }})}}</width>
+						<width>{{ScaleX('170')}}</width>
 						<height>{{ScaleY('28')}}</height>
 						<font>font13</font>
 						<align>right</align>
@@ -288,7 +288,7 @@
 						<description>current feels like Value</description>
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 300 - {WeatherLeftExtraW} }})}}</width>
+						<width>{{ScaleX('300')}}</width>
 						<height>{{ScaleY('28')}}</height>
 						<font>font13</font>
 						<align>left</align>
@@ -302,7 +302,7 @@
 						<description>current dew Value</description>
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 300 - {WeatherLeftExtraW} }})}}</width>
+						<width>{{ScaleX('300')}}</width>
 						<height>{{ScaleY('28')}}</height>
 						<font>font13</font>
 						<align>left</align>
@@ -316,7 +316,7 @@
 						<description>current humidity Value</description>
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 300 - {WeatherLeftExtraW} }})}}</width>
+						<width>{{ScaleX('300')}}</width>
 						<height>{{ScaleY('28')}}</height>
 						<font>font13</font>
 						<align>left</align>
@@ -330,7 +330,7 @@
 						<description>current UV Index Value</description>
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 300 - {WeatherLeftExtraW} }})}}</width>
+						<width>{{ScaleX('300')}}</width>
 						<height>{{ScaleY('28')}}</height>
 						<font>font13</font>
 						<align>left</align>
@@ -344,7 +344,7 @@
 						<description>current Precipitation Value</description>
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 300 - {WeatherLeftExtraW} }})}}</width>
+						<width>{{ScaleX('300')}}</width>
 						<height>{{ScaleY('28')}}</height>
 						<font>font13</font>
 						<align>left</align>
@@ -442,13 +442,12 @@
 		</control>
 		<include>MainWindowMouseButtons</include>
 		<control type="group">
-			<visible>!Skin.HasSetting(Kiosk)</visible>
-			<left>{{ScaleX({{ -250 - {SideBladeExtraWidth} }})}}</left>
+			<left>{{ScaleX('-250')}}</left>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('60')}}</top>
-				<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
+				<width>{{ScaleX('250')}}</width>
 				<height>{{ScaleY('650')}}</height>
 				<onleft>9000</onleft>
 				<onright>50</onright>
@@ -457,7 +456,7 @@
 				<onback>50</onback>
 				<itemgap>0</itemgap>
 				<control type="label" id="200">
-					<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
+					<width>{{ScaleX('250')}}</width>
 					<height>{{ScaleY('35')}}</height>
 					<font>font12</font>
 					<label>31006</label>
@@ -466,13 +465,13 @@
 					<aligny>center</aligny>
 				</control>
 				<control type="group" id="300">
-					<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
+					<width>{{ScaleX('250')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<control type="spincontrolex" id="3">
 						<description>change location button</description>
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<font></font>
+						<font/>
 						<include>ButtonCommonValues</include>
 						<onleft>50</onleft>
 						<onright>50</onright>
@@ -483,7 +482,7 @@
 					<control type="label" id="301">
 						<left>{{ScaleX('10')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX({{ 200 + {SideBladeExtraWidth} }})}}</width>
+						<width>{{ScaleX('200')}}</width>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31027</label>
@@ -494,7 +493,7 @@
 				</control>
 				<control type="button" id="302">
 					<description>Daily forcast button</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>31904</label>
 					<onfocus>ClearProperty(Weather.CurrentView)</onfocus>
@@ -502,7 +501,7 @@
 				</control>
 				<control type="button" id="303">
 					<description>36 hour forcast button</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>31901</label>
 					<onfocus>SetProperty(Weather.CurrentView,36hour)</onfocus>
@@ -510,7 +509,7 @@
 				</control>
 				<control type="button" id="304">
 					<description>Weekend forcast button</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>31903</label>
 					<onfocus>SetProperty(Weather.CurrentView,weekend)</onfocus>
@@ -518,7 +517,7 @@
 				</control>
 				<control type="button" id="305">
 					<description>Hourly forcast button</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>31902</label>
 					<onfocus>SetProperty(Weather.CurrentView,hourly)</onfocus>
@@ -526,7 +525,7 @@
 				</control>
 				<control type="button" id="306">
 					<description>Maps button</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>31910</label>
 					<onfocus>SetProperty(Weather.CurrentView,map)</onfocus>
@@ -534,14 +533,14 @@
 				</control>
 				<control type="button" id="307">
 					<description>Alerts button</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>33050</label>
 					<onfocus>SetProperty(Weather.CurrentView,alerts)</onfocus>
 					<visible>!String.IsEmpty(Window.Property(Alerts.IsFetched))</visible>
 				</control>
 				<control type="label" id="201">
-					<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
+					<width>{{ScaleX('250')}}</width>
 					<height>{{ScaleY('35')}}</height>
 					<font>font12</font>
 					<label>31026</label>
@@ -551,7 +550,7 @@
 				</control>
 				<control type="button" id="2">
 					<description>Refresh button</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>103</label>
 				</control>
@@ -559,7 +558,7 @@
 					<description>Settings button</description>
 					<label>5</label>
 					<onclick>ActivateWindow(servicesettings,weather)</onclick>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 				</control>
 				<include>CommonNowPlaying_Controls</include>

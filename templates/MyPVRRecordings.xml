@@ -283,7 +283,9 @@
 					<top>{{ScaleY('548')}}</top>
 					<width>{{ScaleX('290')}}</width>
 					<height>{{ScaleY('12')}}</height>
-					<info>PVR.backenddiskspaceprogr</info><visible>!Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible></control>
+					<info>PVR.backenddiskspaceprogr</info>
+					<visible>!Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible>
+				</control>
 			</control>
 		</control>
 		<control type="group">

@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">11</defaultcontrol>
 	<coordinates>
-		<left>{{ScaleX('{{ 780 - {DialogPVRExtraWidth} }}')}}</left>
+		<left>{{ScaleX('780')}}</left>
 		<top>{{ScaleY('30')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
@@ -12,18 +12,18 @@
 				<description>background image</description>
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('{{ 480 + {DialogPVRExtraWidth} }}')}}</width>
-				<height>{{ScaleY('{{ 660 + 1 * {DialogPVRExtraHeight} }}')}}</height>
+				<width>{{ScaleX('480')}}</width>
+				<height>{{ScaleY('660')}}</height>
 				<texture border="{{ScaleBorder('40')}}">DialogBack2.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>{{ScaleX('{{ 390 + {DialogPVRExtraWidth} }}')}}</left>
+				<left>{{ScaleX('390')}}</left>
 				<top>{{ScaleY('15')}}</top>
 				<width>{{ScaleX('64')}}</width>
 				<height>{{ScaleY('32')}}</height>
-				<label></label>
-				<font></font>
+				<label/>
+				<font/>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -37,7 +37,7 @@
 				<description>Dialog Header image</description>
 				<left>{{ScaleX('40')}}</left>
 				<top>{{ScaleY('16')}}</top>
-				<width>{{ScaleX('{{ 400 + {DialogPVRExtraWidth} }}')}}</width>
+				<width>{{ScaleX('400')}}</width>
 				<height>{{ScaleY('50')}}</height>
 				<texture>dialogheader.png</texture>
 			</control>
@@ -45,9 +45,9 @@
 				<description>header label</description>
 				<left>{{ScaleX('40')}}</left>
 				<top>{{ScaleY('16')}}</top>
-				<width>{{ScaleX('{{ 430 + {DialogPVRExtraWidth} }}')}}</width>
+				<width>{{ScaleX('430')}}</width>
 				<height>{{ScaleY('40')}}</height>
-				<font>font14_title</font>
+				<font>font12_title</font>
 				<label>$LOCALIZE[19023] - $INFO[VideoPlayer.ChannelGroup]</label>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -59,9 +59,9 @@
 				<description>header label</description>
 				<left>{{ScaleX('40')}}</left>
 				<top>{{ScaleY('16')}}</top>
-				<width>{{ScaleX('{{ 430 + {DialogPVRExtraWidth} }}')}}</width>
+				<width>{{ScaleX('430')}}</width>
 				<height>{{ScaleY('40')}}</height>
-				<font>font14_title</font>
+				<font>font12_title</font>
 				<label>$LOCALIZE[19024] - $INFO[MusicPlayer.ChannelGroup]</label>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -72,10 +72,10 @@
 			<control type="label">
 				<description>header label</description>
 				<left>{{ScaleX('40')}}</left>
-				<top>{{ScaleY('5')}}</top>
-				<width>{{ScaleX('{{ 430 + {DialogPVRExtraWidth} }}')}}</width>
+				<top>{{ScaleY('-7')}}</top>
+				<width>{{ScaleX('430')}}</width>
 				<height>{{ScaleY('120')}}</height>
-				<font>font12_title</font>
+				<font>font10_title</font>
 				<label>$INFO[System.Date(DDD)], $INFO[System.Date(d)] $INFO[System.Date(mmm)] $INFO[System.Date(yyyy)] • $INFO[System.Time]</label>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -84,9 +84,9 @@
 			</control>
 			<control type="list" id="11">
 				<left>{{ScaleX('30')}}</left>
-				<top>{{ScaleY('85')}}</top>
-				<width>{{ScaleX('{{ 410 + {DialogPVRExtraWidth} }}')}}</width>
-				<height>{{ScaleY('{{ 520 + 1 * {DialogPVRExtraHeight} }}')}}</height>
+				<top>{{ScaleY('70')}}</top>
+				<width>{{ScaleX('410')}}</width>
+				<height>{{ScaleY('520')}}</height>
 				<onleft>PreviousChannelGroup</onleft>
 				<onright>60</onright>
 				<onup>11</onup>
@@ -94,12 +94,12 @@
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="{{ScaleY('{{ 70 + {DialogPVRItemExtraHeight} }}')}}" width="{{ScaleX('{{ 410 + {DialogPVRExtraWidth} }}')}}">
+				<itemlayout height="{{ScaleY('70')}}" width="{{ScaleX('410')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('{{ 410 + {DialogPVRExtraWidth} }}')}}</width>
-						<height>{{ScaleY('{{ 65 + {DialogPVRItemExtraHeight} }}')}}</height>
+						<width>{{ScaleX('410')}}</width>
+						<height>{{ScaleY('65')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 						<include>VisibleFadeEffect</include>
 					</control>
@@ -123,11 +123,19 @@
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
 					</control>
+					<control type="image">
+						<left>{{ScaleX('5')}}</left>
+						<top>{{ScaleY('35')}}</top>
+						<width>{{ScaleX('20')}}</width>
+						<height>{{ScaleY('20')}}</height>
+						<texture>PVR-HasArchive.png</texture>
+						<visible>!ListItem.IsRecording + ListItem.HasArchive</visible>
+					</control>
 					<control type="label">
 						<left>{{ScaleX('50')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('{{ 350 + {DialogPVRExtraWidth} }}')}}</width>
-						<height>{{ScaleY('{{ 25 + 0.5 * {DialogPVRItemExtraHeight} }}')}}</height>
+						<width>{{ScaleX('350')}}</width>
+						<height>{{ScaleY('25')}}</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -137,9 +145,9 @@
 					</control>
 					<control type="label">
 						<left>{{ScaleX('50')}}</left>
-						<top>{{ScaleY('{{ 25 + 0.5 * {DialogPVRItemExtraHeight} }}')}}</top>
-						<width>{{ScaleX('{{ 350 + {DialogPVRExtraWidth} }}')}}</width>
-						<height>{{ScaleY('{{ 20 + 0.5 * {DialogPVRItemExtraHeight} }}')}}</height>
+						<top>{{ScaleY('25')}}</top>
+						<width>{{ScaleX('350')}}</width>
+						<height>{{ScaleY('20')}}</height>
 						<font>font12</font>
 						<textcolor>grey</textcolor>
 						<selectedcolor>grey</selectedcolor>
@@ -150,9 +158,9 @@
 					</control>
 					<control type="label">
 						<left>{{ScaleX('50')}}</left>
-						<top>{{ScaleY('{{ 25 + 0.5 * {DialogPVRItemExtraHeight} }}')}}</top>
-						<width>{{ScaleX('{{ 300 + 0.65 * {DialogPVRExtraWidth} }}')}}</width>
-						<height>{{ScaleY('{{ 20 + 0.5 * {DialogPVRItemExtraHeight} }}')}}</height>
+						<top>{{ScaleY('25')}}</top>
+						<width>{{ScaleX('300')}}</width>
+						<height>{{ScaleY('20')}}</height>
 						<font>font12</font>
 						<textcolor>grey</textcolor>
 						<selectedcolor>grey</selectedcolor>
@@ -163,8 +171,8 @@
 					</control>
 					<control type="label">
 						<left>{{ScaleX('50')}}</left>
-						<top>{{ScaleY('{{ 44 + {DialogPVRItemExtraHeight} }}')}}</top>
-						<width>{{ScaleX('{{ 60 + 0.0 * {DialogPVRExtraWidth} }}')}}</width>
+						<top>{{ScaleY('44')}}</top>
+						<width>{{ScaleX('60')}}</width>
 						<height>{{ScaleY('20')}}</height>
 						<font>font10_title</font>
 						<textcolor>blue</textcolor>
@@ -176,18 +184,17 @@
 					<control type="progress">
 						<description>Progressbar</description>
 						<left>{{ScaleX('110')}}</left>
-						<top>{{ScaleY('{{ 53 + {DialogPVRItemExtraHeight} }}')}}</top>
-						<width>{{ScaleX('{{ 230 + 1.0 * {DialogPVRExtraWidth} }}')}}</width>
+						<top>{{ScaleY('53')}}</top>
+						<width>{{ScaleX('230')}}</width>
 						<height>{{ScaleY('6')}}</height>
 						<colordiffuse>88FFFFFF</colordiffuse>
 						<info>ListItem.Progress</info>
 						<visible>ListItem.HasEpg</visible>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('{{ 355 + 1.0 * {DialogPVRExtraWidth} }}')}}</left>
-						<top>{{ScaleY('{{ 44 + {DialogPVRItemExtraHeight} }}')}}</top>
+						<left>{{ScaleX('355')}}</left>
+						<top>{{ScaleY('44')}}</top>
 						<width>{{ScaleX('60')}}</width>
-						<width>{{ScaleX('{{ 60 + 0.0 * {DialogPVRExtraWidth} }}')}}</width>
 						<height>{{ScaleY('20')}}</height>
 						<font>font10_title</font>
 						<textcolor>blue</textcolor>
@@ -197,7 +204,7 @@
 						<visible>ListItem.HasEpg</visible>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('{{ 360 + {DialogPVRExtraWidth} }}')}}</left>
+						<left>{{ScaleX('360')}}</left>
 						<top>{{ScaleY('4')}}</top>
 						<width>{{ScaleX('40')}}</width>
 						<height>{{ScaleY('40')}}</height>
@@ -205,12 +212,12 @@
 						<aspectratio>keep</aspectratio>
 					</control>
 				</itemlayout>
-				<focusedlayout height="{{ScaleY('{{ 70 + {DialogPVRItemExtraHeight} }}')}}" width="{{ScaleX('{{ 410 + {DialogPVRExtraWidth} }}')}}">
+				<focusedlayout height="{{ScaleY('70')}}" width="{{ScaleX('410')}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('{{ 410 + {DialogPVRExtraWidth} }}')}}</width>
-						<height>{{ScaleY('{{ 65 + {DialogPVRItemExtraHeight} }}')}}</height>
+						<width>{{ScaleX('410')}}</width>
+						<height>{{ScaleY('65')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 						<visible>!Control.HasFocus(11)</visible>
 						<include>VisibleFadeEffect</include>
@@ -218,8 +225,8 @@
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('{{ 410 + {DialogPVRExtraWidth} }}')}}</width>
-						<height>{{ScaleY('{{ 65 + {DialogPVRItemExtraHeight} }}')}}</height>
+						<width>{{ScaleX('410')}}</width>
+						<height>{{ScaleY('65')}}</height>
 						<texture border="{{ScaleBorder('5')}}">button-focus2.png</texture>
 						<visible>Control.HasFocus(11)</visible>
 						<include>VisibleFadeEffect</include>
@@ -244,11 +251,19 @@
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
 					</control>
+					<control type="image">
+						<left>{{ScaleX('5')}}</left>
+						<top>{{ScaleY('35')}}</top>
+						<width>{{ScaleX('20')}}</width>
+						<height>{{ScaleY('20')}}</height>
+						<texture>PVR-HasArchive.png</texture>
+						<visible>!ListItem.IsRecording + ListItem.HasArchive</visible>
+					</control>
 					<control type="label">
 						<left>{{ScaleX('50')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('{{ 350 + {DialogPVRExtraWidth} }}')}}</width>
-						<height>{{ScaleY('{{ 25 + 0.5 * {DialogPVRItemExtraHeight} }}')}}</height>
+						<width>{{ScaleX('350')}}</width>
+						<height>{{ScaleY('25')}}</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -258,9 +273,9 @@
 					</control>
 					<control type="label">
 						<left>{{ScaleX('50')}}</left>
-						<top>{{ScaleY('{{ 25 + 0.5 * {DialogPVRItemExtraHeight} }}')}}</top>
-						<width>{{ScaleX('{{ 350 + {DialogPVRExtraWidth} }}')}}</width>
-						<height>{{ScaleY('{{ 20 + 0.5 * {DialogPVRItemExtraHeight} }}')}}</height>
+						<top>{{ScaleY('25')}}</top>
+						<width>{{ScaleX('350')}}</width>
+						<height>{{ScaleY('20')}}</height>
 						<font>font12</font>
 						<textcolor>grey</textcolor>
 						<selectedcolor>grey</selectedcolor>
@@ -271,9 +286,9 @@
 					</control>
 					<control type="label">
 						<left>{{ScaleX('50')}}</left>
-						<top>{{ScaleY('{{ 25 + 0.5 * {DialogPVRItemExtraHeight} }}')}}</top>
-						<width>{{ScaleX('{{ 300 + {DialogPVRExtraWidth} }}')}}</width>
-						<height>{{ScaleY('{{ 20 + 0.5 * {DialogPVRItemExtraHeight} }}')}}</height>
+						<top>{{ScaleY('25')}}</top>
+						<width>{{ScaleX('300')}}</width>
+						<height>{{ScaleY('20')}}</height>
 						<font>font12</font>
 						<textcolor>grey</textcolor>
 						<selectedcolor>grey</selectedcolor>
@@ -284,8 +299,8 @@
 					</control>
 					<control type="label">
 						<left>{{ScaleX('50')}}</left>
-						<top>{{ScaleY('{{ 44 + {DialogPVRItemExtraHeight} }}')}}</top>
-						<width>{{ScaleX('{{ 60 + 0.0 * {DialogPVRExtraWidth} }}')}}</width>
+						<top>{{ScaleY('44')}}</top>
+						<width>{{ScaleX('60')}}</width>
 						<height>{{ScaleY('20')}}</height>
 						<font>font10_title</font>
 						<textcolor>blue</textcolor>
@@ -297,17 +312,17 @@
 					<control type="progress">
 						<description>Progressbar</description>
 						<left>{{ScaleX('110')}}</left>
-						<top>{{ScaleY('{{ 53 + {DialogPVRItemExtraHeight} }}')}}</top>
-						<width>{{ScaleX('{{ 230 + 1.0 * {DialogPVRExtraWidth} }}')}}</width>
+						<top>{{ScaleY('53')}}</top>
+						<width>{{ScaleX('230')}}</width>
 						<height>{{ScaleY('6')}}</height>
 						<colordiffuse>88FFFFFF</colordiffuse>
 						<info>ListItem.Progress</info>
 						<visible>ListItem.HasEpg</visible>
 					</control>
 					<control type="label">
-						<left>{{ScaleX('{{ 355 + 1.0 * {DialogPVRExtraWidth} }}')}}</left>
-						<top>{{ScaleY('{{ 44 + {DialogPVRItemExtraHeight} }}')}}</top>
-						<width>{{ScaleX('{{ 60 + 0.0 * {DialogPVRExtraWidth} }}')}}</width>
+						<left>{{ScaleX('355')}}</left>
+						<top>{{ScaleY('44')}}</top>
+						<width>{{ScaleX('60')}}</width>
 						<height>{{ScaleY('20')}}</height>
 						<font>font10_title</font>
 						<textcolor>blue</textcolor>
@@ -317,7 +332,7 @@
 						<visible>ListItem.HasEpg</visible>
 					</control>
 					<control type="image">
-						<left>{{ScaleX('{{ 360 + {DialogPVRExtraWidth} }}')}}</left>
+						<left>{{ScaleX('360')}}</left>
 						<top>{{ScaleY('4')}}</top>
 						<width>{{ScaleX('40')}}</width>
 						<height>{{ScaleY('40')}}</height>
@@ -327,10 +342,10 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>{{ScaleX('{{ 440 + {DialogPVRExtraWidth} }}')}}</left>
+				<left>{{ScaleX('440')}}</left>
 				<top>{{ScaleY('70')}}</top>
 				<width>{{ScaleX('25')}}</width>
-				<height>{{ScaleY('{{ 520 + 1 * {DialogPVRExtraHeight} }}')}}</height>
+				<height>{{ScaleY('520')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -346,8 +361,8 @@
 			<control type="label">
 				<description>Page Count Label</description>
 				<left>{{ScaleX('50')}}</left>
-				<top>{{ScaleY('{{ 610 + 1 * {DialogPVRExtraHeight} }}')}}</top>
-				<width>{{ScaleX('{{ 400 + {DialogPVRExtraWidth} }}')}}</width>
+				<top>{{ScaleY('610')}}</top>
+				<width>{{ScaleX('400')}}</width>
 				<height>{{ScaleY('20')}}</height>
 				<font>font12</font>
 				<textcolor>grey</textcolor>

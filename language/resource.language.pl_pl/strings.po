@@ -80,6 +80,14 @@ msgctxt "#31015"
 msgid "Minute"
 msgstr "Chwila"
 
+msgctxt "#31016"
+msgid "Elapsed time"
+msgstr "Czas, który upłynął"
+
+msgctxt "#31017"
+msgid "Unavailable"
+msgstr "Niedostępny"
+
 msgctxt "#31023"
 msgid "Playing"
 msgstr "Odtwarzanie"
@@ -232,6 +240,18 @@ msgctxt "#31112"
 msgid "Options"
 msgstr "Opcje"
 
+msgctxt "#31113"
+msgid "Background path Master:"
+msgstr "Ścieżki w tle głównego profilu:"
+
+msgctxt "#31114"
+msgid "System"
+msgstr "Systemowe"
+
+msgctxt "#31115"
+msgid "Main button playlists"
+msgstr "Listy odtwarzania głównego przycisku"
+
 msgctxt "#31116"
 msgid "Show recently added albums"
 msgstr "Pokazuj albumy ostatnio dodane"
@@ -240,9 +260,17 @@ msgctxt "#31117"
 msgid "Show recently added videos"
 msgstr "Pokazuj wideo ostatnio dodane"
 
+msgctxt "#31118"
+msgid "Home page \"Add-ons\" submenu"
+msgstr "Podmenu \"Dodatki\" ekranu startowego"
+
 msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "Nie używaj fototapet w roli tła"
+
+msgctxt "#31120"
+msgid "Home page \"Games\" submenu"
+msgstr "Podmenu \"Gry\" ekranu startowego"
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
@@ -288,6 +316,18 @@ msgctxt "#31142"
 msgid "Settings level"
 msgstr "Poziom ustawień"
 
+msgctxt "#31143"
+msgid "Use"
+msgstr "Użyj"
+
+msgctxt "#31144"
+msgid "playlist"
+msgstr "lista odtwarzania"
+
+msgctxt "#31145"
+msgid "playlist path"
+msgstr "ścieżka listy odtwarzania"
+
 msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "Skróty"
@@ -311,6 +351,10 @@ msgstr "Znajdź więcej pozycji"
 msgctxt "#31208"
 msgid "Upcoming episodes"
 msgstr "Odcinki wkrótce na antenie"
+
+msgctxt "#31209"
+msgid "Hide Master profile main menu buttons"
+msgstr "Ukryj przyciski menu profilu głównego"
 
 msgctxt "#31300"
 msgid "Current temperature"
@@ -572,6 +616,10 @@ msgctxt "#31956"
 msgid "MUSIC"
 msgstr "MUZYKA"
 
+msgctxt "#31957"
+msgid "ADD-ONS"
+msgstr "DODATKI"
+
 msgctxt "#31958"
 msgid "PLAY DISC"
 msgstr "DYSK"
@@ -588,6 +636,14 @@ msgctxt "#31961"
 msgid "Timeshift"
 msgstr "Przesunięcie czasowe"
 
+msgctxt "#31962"
+msgid "Choose kind of profile identification"
+msgstr "Wybierz rodzaj identyfikacji profilu"
+
 msgctxt "#31963"
 msgid "Profile name"
 msgstr "Nazwa profilu"
+
+msgctxt "#31964"
+msgid "Profile avatar"
+msgstr "Awatar profilu"

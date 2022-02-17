@@ -66,7 +66,7 @@
 	</variable>
 	<variable name="GameSelectHeader">
 		<value condition="Window.IsActive(gamevideofilter)">$LOCALIZE[230]</value>
-		<value condition="Window.IsActive(gameviewmode)">$LOCALIZE[35233]</value>
+		<value condition="Window.IsActive(gamestretchmode)">$LOCALIZE[35233]</value>
 		<value condition="Window.IsActive(gamevideorotation)">$LOCALIZE[35227]</value>
 	</variable>
 	<variable name="DurationInMinutes">
@@ -445,6 +445,23 @@
 		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="Container.Content(Songs)">$INFO[ListItem.Comment]</value>
 	</variable>
+	<variable name="MusicInfoListViewLabel">
+		<value condition="Control.IsVisible(506)">$LOCALIZE[544]</value>
+		<value condition="Control.IsVisible(507) + !Player.HasAudio">$LOCALIZE[31040]</value>
+		<value condition="Control.IsVisible(507) + Player.HasAudio">$LOCALIZE[31040]$INFO[musicplayer.Playlistposition,: ]$INFO[musicplayer.Playlistlength,/]</value>
+	</variable>
+	<variable name="MusicInfoListViewPanel">
+		<value condition="Control.IsVisible(506)">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title,,[CR]]$INFO[ListItem.Artist,,[CR]]$INFO[ListItem.Album,[COLOR grey2],[/COLOR][CR]]$INFO[ListItem.DiscNumber,[COLOR grey2]$LOCALIZE[427] ,[/COLOR][CR]]$INFO[ListItem.Year,[COLOR grey2], | [/COLOR]]$INFO[ListItem.Genre,[COLOR grey2],[/COLOR][CR]]$INFO[ListItem.PlayCount,$LOCALIZE[567]: ,[CR]]$INFO[ListItem.Time,$LOCALIZE[180]: ,/]$INFO[ListItem.Duration,,[CR]]</value>
+		<value condition="Control.IsVisible(507) + Player.HasAudio">$INFO[MusicPlayer.TrackNumber,,. ]$INFO[MusicPlayer.Title,,[CR]]$INFO[MusicPlayer.Artist,,[CR]]$INFO[MusicPlayer.Album,[COLOR grey2],[/COLOR][CR]]$INFO[MusicPlayer.DiscNumber,[COLOR grey2]$LOCALIZE[427] ,[/COLOR][CR]]$INFO[MusicPlayer.Year,[COLOR grey2], | [/COLOR]]$INFO[MusicPlayer.Genre,[COLOR grey2],[/COLOR][CR]]$INFO[MusicPlayer.PlayCount,$LOCALIZE[567]: ,[CR]]$INFO[MusicPlayer.Time,$LOCALIZE[31016]: ,/]$INFO[MusicPlayer.Duration,,[CR]]</value>
+	</variable>
+	<variable name="MusicInfoListViewtRating">
+		<value condition="Control.IsVisible(506)">$INFO[ListItem.UserRating,ratings/,.png]</value>
+		<value condition="Control.IsVisible(507) + Player.HasAudio">$INFO[MusicPlayer.UserRating,ratings/,.png]</value>
+	</variable>
+	<variable name="MusicInfoListViewThumb">
+		<value condition="Control.IsVisible(506)">$INFO[ListItem.Icon]</value>
+		<value condition="Control.IsVisible(507)">$INFO[Player.Art(thumb)]</value>
+	</variable>
 	<variable name="MusicInfoListThumb">
 		<value condition="Container.Content(Artists) + !String.IsEmpty(Container(50).Listitem.Icon)">$INFO[Container(50).Listitem.Icon]</value>
 		<value condition="[Container.Content(Albums) | Container.Content(Songs)] + !String.IsEmpty(Container.Art(artist.thumb))">$INFO[Container.Art(artist.thumb)]</value>
@@ -483,11 +500,13 @@
 		<value>DialogBack2.png</value>
 	</variable>
 	<variable name="typehackflagging">
-		<value condition="[String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,brrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50)]">bluray</value>
+		<value condition="[String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,brrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50) | String.Contains(ListItem.FilenameAndPath,remux)]">bluray</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,hddvd)">hddvd</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,dvd)">dvd</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,uhd)">uhd</value>
 		<value condition="[String.Contains(ListItem.FilenameAndPath,pdtv) | String.Contains(ListItem.FilenameAndPath,hdtv) | String.Contains(ListItem.FilenameAndPath,dsr)]">TV</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,vhs)">vhs</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,webdl) | String.Contains(ListItem.FilenameAndPath,web-dl) | String.Contains(ListItem.FilenameAndPath,webrip)">web</value>
 	</variable>
 	<variable name="rating">
 		<value condition="String.Contains(listitem.mpaa,Rated G)">mpaa_general</value>
@@ -511,7 +530,7 @@
 		<value condition="Player.IsTempo + String.StartsWith(Player.PlaySpeed,0.)">$LOCALIZE[31045]</value>
 		<value condition="Player.IsTempo + String.StartsWith(Player.PlaySpeed,1.)">$LOCALIZE[31044]</value>
 		<value condition="Player.Playing + !Player.Seeking + !Player.DisplayAfterSeek">$LOCALIZE[31042]</value>
-		<value condition="[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek">$LOCALIZE[31043]</value>
+		<value condition="[Player.Paused + !Player.Caching] + !Player.Seeking">$LOCALIZE[31043]</value>
 		<value condition="[Player.Paused + Player.Caching] + !Player.Seeking">$LOCALIZE[15107] $INFO[Player.CacheLevel]%</value>
 		<value condition="!String.IsEmpty(Player.SeekStepSize) + ![player.forwarding | player.rewinding]">$LOCALIZE[31046][COLOR=grey] $INFO[Player.SeekStepSize][/COLOR]</value>
 		<value condition="Player.DisplayAfterSeek + ![player.forwarding | player.rewinding]">$LOCALIZE[31046][COLOR=grey] $INFO[Player.SeekOffset][/COLOR]</value>
@@ -537,6 +556,7 @@
 	</variable>
 	<variable name="PVRTimerIcon">
 		<value condition="ListItem.IsRecording">PVR-IsRecording.png</value>
+		<value condition="ListItem.HasReminder">PVR-HasReminder.png</value>
 		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasError">PVR-HasTimerScheduleError.png</value>
 		<value condition="ListItem.HasTimer + ListItem.TimerHasError">PVR-HasTimerError.png</value>
 		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasConflict">PVR-HasTimerScheduleConflict.png</value>
@@ -546,6 +566,7 @@
 		<value condition="ListItem.HasTimer + !ListItem.TimerIsActive">PVR-HasTimerDisabled.png</value>
 		<value condition="ListItem.HasTimerSchedule">PVR-HasTimerSchedule.png</value>
 		<value condition="ListItem.HasTimer">PVR-HasTimer.png</value>
+		<value condition="ListItem.IsPlayable">PVR-HasArchive.png</value>
 	</variable>
 	<variable name="PVRTimerLabel">
 		<value condition="ListItem.IsRecording">$LOCALIZE[19043]</value>
@@ -719,9 +740,9 @@
 	</include>
 	<include name="ButtonCommonValues">
 		<height>{{ScaleY('40')}}</height>
-		<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} - 10 }})}}</width>
+		<width>{{ScaleX('250')}}</width>
 		<textoffsetx>{{ScaleX('10')}}</textoffsetx>
-		<textwidth>{{ 200 + {SideBladeExtraWidth} - 10 }}</textwidth>
+		<textwidth>200</textwidth>
 		<aligny>center</aligny>
 		<font>font13</font>
 		<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
@@ -730,9 +751,9 @@
 	</include>
 	<include name="ButtonMediaSubCommonValues">
 		<height>{{ScaleY('40')}}</height>
-		<width>{{ScaleX({HomeSubMenuWidth})}}</width>
+		<width>{{ScaleX('221')}}</width>
 		<textoffsetx>{{ScaleX('20')}}</textoffsetx>
-		<textwidth>{{ScaleX('{{ 15 + {HomeSubMenuWidth} }}')}}</textwidth>
+		<textwidth>195</textwidth>
 		<aligny>center</aligny>
 		<font>font12_title</font>
 		<texturefocus border="{{ScaleBorder('5')}}">button-focus.png</texturefocus>
@@ -741,8 +762,8 @@
 	</include>
 	<include name="ButtonHomeSubCommonValues">
 		<height>{{ScaleY('35')}}</height>
-		<width>{{ScaleX('{HomeSubMenuWidth}')}}</width>
-		<textwidth>{{ScaleX('{{ 15 + {HomeSubMenuWidth} }}')}}</textwidth>
+		<width>{{ScaleX('180')}}</width>
+		<textwidth>195</textwidth>
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>font12</font>
@@ -779,15 +800,15 @@
 	</include>
 	<include name="SideBladeLeft">
 		<depth>DepthSideBlade</depth>
-		<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('{{ 250 + {SideBladeExtraWidth} }},0')}}" time="300" tween="quadratic" easing="out" condition="[ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)] + ![Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRadioRDSInfo)]">Conditional</animation>
-		<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('{{ -300 - {SideBladeExtraWidth} }},0')}}" time="300" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001)">WindowClose</animation>
+		<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('250,0')}}" time="300" tween="quadratic" easing="out" condition="[ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)] + ![Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRadioRDSInfo)]">Conditional</animation>
+		<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-300,0')}}" time="300" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001)">WindowClose</animation>
 		<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-50,0')}}" time="225" tween="quadratic" easing="out" condition="![ControlGroup(9000).HasFocus | Control.HasFocus(9001)]">WindowClose</animation>
 		<animation effect="slide" start="{{ScaleBorder2('-50,0')}}" end="{{ScaleBorder2('0,0')}}" time="225" tween="quadratic" easing="out">WindowOpen</animation>
 		<control type="button" id="8999">
 			<description>Fake button for mouse control</description>
 			<left>{{ScaleX('0')}}</left>
 			<top>{{ScaleY('0')}}</top>
-			<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
+			<width>{{ScaleX('250')}}</width>
 			<height>{{ScaleY('720')}}</height>
 			<label/>
 			<font/>
@@ -796,7 +817,7 @@
 			<visible>true</visible>
 		</control>
 		<control type="button" id="9001">
-			<left>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</left>
+			<left>{{ScaleX('250')}}</left>
 			<top>{{ScaleY('260')}}</top>
 			<width>{{ScaleX('42')}}</width>
 			<height>{{ScaleY('128')}}</height>
@@ -807,7 +828,7 @@
 		<control type="image">
 			<left>{{ScaleX('-20')}}</left>
 			<top>{{ScaleY('0')}}</top>
-			<width>{{ScaleX({{ 280 + {SideBladeExtraWidth} }})}}</width>
+			<width>{{ScaleX('280')}}</width>
 			<height>{{ScaleY('720')}}</height>
 			<texture border="{{ScaleBorder('0,0,10,0')}}">MediaBladeSub.png</texture>
 		</control>
@@ -913,9 +934,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('60r')}}</top>
+				<top>{{ScaleY('53r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
+				<height>{{ScaleY('20')}}</height>
 				<label>$INFO[Player.Title] - ([COLOR=blue]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -939,9 +960,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('25r')}}</top>
+				<top>{{ScaleY('32r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
+				<height>{{ScaleY('20')}}</height>
 				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -952,9 +973,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('25r')}}</top>
+				<top>{{ScaleY('30r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
+				<height>{{ScaleY('20')}}</height>
 				<label>$INFO[VideoPlayer.Studio]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -965,9 +986,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('25r')}}</top>
+				<top>{{ScaleY('30r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
+				<height>{{ScaleY('20')}}</height>
 				<label>$INFO[VideoPlayer.TVShowTitle]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -978,9 +999,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('25r')}}</top>
+				<top>{{ScaleY('30r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
+				<height>{{ScaleY('20')}}</height>
 				<label>$INFO[VideoPlayer.Artist]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -991,9 +1012,9 @@
 			</control>
 			<control type="label">
 				<left>{{ScaleX('85')}}</left>
-				<top>{{ScaleY('25r')}}</top>
+				<top>{{ScaleY('30r')}}</top>
 				<width>{{ScaleX('700')}}</width>
-				<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
+				<height>{{ScaleY('20')}}</height>
 				<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, - ([COLOR=blue],[/COLOR])]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -1842,7 +1863,7 @@
 		<animation effect="fade" time="225">Hidden</animation>
 	</include>
 	<include name="KeyboardButton">
-		<width>{{ScaleX({VirtualKeyboardKeyWidth})}}</width>
+		<width>{{ScaleX('50')}}</width>
 		<height>{{ScaleY('50')}}</height>
 		<texturenofocus border="{{ScaleBorder('3')}}">KeyboardKeyNF.png</texturenofocus>
 		<texturefocus border="{{ScaleBorder('5')}}">KeyboardKey.png</texturefocus>
@@ -1945,6 +1966,26 @@
 			<label2>$INFO[ListItem.Property(Artist_YearsActive)]</label2>
 			<visible>!String.IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
 		</item>
+		<item>
+			<label>$LOCALIZE[39027]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Sortname)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Sortname))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[467]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Type)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Type))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[39025]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Gender)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Gender))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[39026]:</label>
+			<label2>$INFO[ListItem.Property(Artist_Disambiguation)]</label2>
+			<visible>!String.IsEmpty(ListItem.Property(Artist_Disambiguation))</visible>
+		</item>
 	</include>
 	<include name="MusicInfoAlbumInfo">
 		<item>
@@ -1996,6 +2037,11 @@
 			<label>$LOCALIZE[562]:</label>
 			<label2>$INFO[ListItem.Year]</label2>
 			<visible>!String.IsEmpty(ListItem.Year)</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[15311]</label>
+			<label2>$INFO[ListItem.FilenameAndPath]</label2>
+			<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
 		</item>
 	</include>
 	<include name="MusicInfoSongInfo">
@@ -2088,6 +2134,11 @@
 			<label>$LOCALIZE[38041]:</label>
 			<label2>$INFO[ListItem.Property(Role.Mixer)]</label2>
 			<visible>!String.IsEmpty(ListItem.Property(Role.Mixer))</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[15311]</label>
+			<label2>$INFO[ListItem.FilenameAndPath]</label2>
+			<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
 		</item>
 	</include>
 </includes>

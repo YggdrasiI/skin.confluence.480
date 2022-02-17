@@ -80,6 +80,14 @@ msgctxt "#31015"
 msgid "Minute"
 msgstr "Minuut"
 
+msgctxt "#31016"
+msgid "Elapsed time"
+msgstr "Verstreken tijd"
+
+msgctxt "#31017"
+msgid "Unavailable"
+msgstr "Niet beschikbaar"
+
 msgctxt "#31023"
 msgid "Playing"
 msgstr "Afspelen"
@@ -232,6 +240,18 @@ msgctxt "#31112"
 msgid "Options"
 msgstr "Opties"
 
+msgctxt "#31113"
+msgid "Background path Master:"
+msgstr "Master achtergrondpad:"
+
+msgctxt "#31114"
+msgid "System"
+msgstr "Systeem"
+
+msgctxt "#31115"
+msgid "Main button playlists"
+msgstr "Hoofdknop afspeellijsten"
+
 msgctxt "#31116"
 msgid "Show recently added albums"
 msgstr "Toon recent toegevoegde albums"
@@ -240,9 +260,17 @@ msgctxt "#31117"
 msgid "Show recently added videos"
 msgstr "Toon recent toegevoegde video`s"
 
+msgctxt "#31118"
+msgid "Home page \"Add-ons\" submenu"
+msgstr "Beginpagina \"Add-ons\" submenu"
+
 msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "Fanart achtergronden verbergen"
+
+msgctxt "#31120"
+msgid "Home page \"Games\" submenu"
+msgstr "Beginpagina \"Spellen\" submenu"
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
@@ -288,6 +316,18 @@ msgctxt "#31142"
 msgid "Settings level"
 msgstr "Instellingsniveau"
 
+msgctxt "#31143"
+msgid "Use"
+msgstr "Gebruik"
+
+msgctxt "#31144"
+msgid "playlist"
+msgstr "afspeellijst"
+
+msgctxt "#31145"
+msgid "playlist path"
+msgstr "afspeellijstpad"
+
 msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "Snelkoppelingen"
@@ -311,6 +351,10 @@ msgstr "Vind meer items"
 msgctxt "#31208"
 msgid "Upcoming episodes"
 msgstr "Aankomende afleveringen"
+
+msgctxt "#31209"
+msgid "Hide Master profile main menu buttons"
+msgstr "Verberg hoofdmenutoetsen van het masterprofiel"
 
 msgctxt "#31300"
 msgid "Current temperature"
@@ -571,6 +615,10 @@ msgstr "TV-SERIES"
 msgctxt "#31956"
 msgid "MUSIC"
 msgstr "MUZIEK"
+
+msgctxt "#31957"
+msgid "ADD-ONS"
+msgstr "ADD-ONS"
 
 msgctxt "#31958"
 msgid "PLAY DISC"

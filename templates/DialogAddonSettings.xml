@@ -2,28 +2,27 @@
 <window>
 	<defaultcontrol always="true">3</defaultcontrol>
 	<coordinates>
-		<left>{{ScaleX({{ 215 - ({DialogExtraWidth})/2 }})}}</left>
+		<left>{{ScaleX('215')}}</left>
 		<top>{{ScaleY('60')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150" condition="Window.Is(contentsettings) + Window.IsActive(AddonSettings)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" time="300" condition="[Window.Is(osdaudiosettings) | Window.Is(osdvideosettings)] + [Window.IsVisible(SliderDialog) | Window.IsVisible(OSDAudioDSPSettings) |  Window.IsVisible(FileBrowser)]">Conditional</animation>
-			<animation effect="fade" start="100" end="0" time="400" condition="Window.Is(osdaudiodspsettings) + Window.IsVisible(SliderDialog)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="300" condition="[Window.Is(osdaudiosettings) | Window.Is(osdvideosettings)] + [Window.IsVisible(SliderDialog) |  Window.IsVisible(FileBrowser)]">Conditional</animation>
 			<include content="DialogBackgroundCommons">
-				<param name="DialogBackgroundWidth" value="{{ScaleX({{ 850 + {DialogExtraWidth} }})}}" />
-				<param name="DialogBackgroundHeight" value="{{ScaleY('600')}}" />
-				<param name="DialogHeaderWidth" value="{{ScaleX({{ 720 + {DialogExtraWidth} }})}}" />
+				<param name="DialogBackgroundWidth" value="850" />
+				<param name="DialogBackgroundHeight" value="600" />
+				<param name="DialogHeaderWidth" value="720" />
 				<param name="DialogHeaderId" value="2" />
-				<param name="CloseButtonLeft" value="{{ScaleX({{ 760 + {DialogExtraWidth} }})}}" />
+				<param name="CloseButtonLeft" value="760" />
 				<param name="CloseButtonNav" value="10" />
 			</include>
 			<control type="grouplist" id="3">
 				<description>Categories Area</description>
 				<left>{{ScaleX('45')}}</left>
 				<top>{{ScaleY('70')}}</top>
-				<width>{{ScaleX('{{ 759 + {DialogExtraWidth} }}')}}</width>
+				<width>{{ScaleX('759')}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<itemgap>5</itemgap>
 				<align>center</align>
@@ -54,7 +53,7 @@
 			</control>
 			<control type="image">
 				<description>Has Next</description>
-				<left>{{ScaleX('{{ 805 + {DialogExtraWidth} }}')}}</left>
+				<left>{{ScaleX('805')}}</left>
 				<top>{{ScaleY('80')}}</top>
 				<width>{{ScaleX('20')}}</width>
 				<height>{{ScaleY('20')}}</height>
@@ -65,7 +64,7 @@
 				<description>control area</description>
 				<left>{{ScaleX('40')}}</left>
 				<top>{{ScaleY('120')}}</top>
-				<width>{{ScaleX('{{ 770 + {DialogExtraWidth} }}')}}</width>
+				<width>{{ScaleX('770')}}</width>
 				<height>{{ScaleY('380')}}</height>
 				<itemgap>5</itemgap>
 				<pagecontrol>60</pagecontrol>
@@ -75,7 +74,7 @@
 				<onright>60</onright>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>{{ScaleX('{{ 815 + {DialogExtraWidth} }}')}}</left>
+				<left>{{ScaleX('815')}}</left>
 				<top>{{ScaleY('120')}}</top>
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('380')}}</height>
@@ -99,7 +98,7 @@
 				<description>Default RadioButton</description>
 				<height>{{ScaleY('40')}}</height>
 				<font>font13</font>
-				<textwidth>{{ScaleX('{{ 695 + {DialogExtraWidth} }}')}}</textwidth>
+				<textwidth>695</textwidth>
 				<texturefocus border="{{ScaleBorder('5')}}">button-focus2.png</texturefocus>
 			</control>
 			<control type="spincontrolex" id="9">
@@ -146,50 +145,54 @@
 			</control>
 			<control type="grouplist" id="9001">
 				<top>{{ScaleY('535')}}</top>
-				<left>{{ScaleX('95')}}</left>
-				<width>{{ScaleX('{{ 660 + {DialogExtraWidth} }}')}}</width>
+				<left>{{ScaleX('40')}}</left>
+				<width>{{ScaleX('{{ 770 + {DialogExtraWidth} }}')}}</width>
 				<align>center</align>
-				<itemgap>10</itemgap>
+				<itemgap>5</itemgap>
 				<orientation>horizontal</orientation>
 				<control type="button" id="28">
 					<description>OK Button</description>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('{{ 200 + int({DialogExtraWidth}/3) }}')}}</width>
+					<width>{{ScaleX('{{ 186 + int({DialogExtraWidth}/3) }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
-					<onleft>30</onleft>
-					<onright>29</onright>
 					<onup>5</onup>
 					<ondown>5</ondown>
 				</control>
 				<control type="button" id="29">
 					<description>Cancel Button</description>
-					<!--<left>{{ScaleX('{{ 210 + ({DialogExtraWidth})/3 }}')}}</left>-->
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('{{ 200 + int({DialogExtraWidth}/3) }}')}}</width>
+					<width>{{ScaleX('{{ 186 + int({DialogExtraWidth}/3) }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
 					<label/>
-					<onleft>28</onleft>
-					<onright>30</onright>
 					<onup>5</onup>
 					<ondown>5</ondown>
 				</control>
 				<control type="button" id="30">
-					<description>Settings Button</description>
-					<!--<left>{{ScaleX('{{ 2*210 + 2*({DialogExtraWidth})/3 }}')}}</left>-->
+					<description>Defaults Button</description>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('{{ 200 + int({DialogExtraWidth}/3) }}')}}</width>
+					<width>{{ScaleX('186')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
-					<onleft>29</onleft>
-					<onright>28</onright>
+					<onup>5</onup>
+					<ondown>5</ondown>
+				</control>
+				<control type="button" id="20">
+					<description>Settings Level Button</description>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('{{ 186 + int({DialogExtraWidth}/3) }}')}}</width>
+					<height>{{ScaleY('40')}}</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<onclick>SettingsLevelChange</onclick>
 					<onup>5</onup>
 					<ondown>5</ondown>
 				</control>

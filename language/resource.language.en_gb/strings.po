@@ -16,14 +16,6 @@ msgstr ""
 "Language: en_GB\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#[Consistency] Make terms, settings names, brands and other minutiae, consistent throughout file.
-#[Capitalization] Avoid capitalizing every second word. See http://grammarist.com/capitalization/
-#For example, prefer wording as "This new string" instead of "This New String".
-#[Referencing] If a suitable string already exists, reuse it, making a note of where it's used!
-#[Description / location] For example, "#. Description of some setting" used on "#: xbmc/addons/guidialogaddoninfo.cpp"
-#When writing a description or setting, refer to a setting name in quotes. See existing entries for guidance.
-#For example, "Press \"OK\" for \"All seasons\"" instead of "Press OK for All seasons" after first word.
-
 msgctxt "#31000"
 msgid "Change your"
 msgstr ""
@@ -92,7 +84,11 @@ msgctxt "#31016"
 msgid "Elapsed time"
 msgstr ""
 
-#empty strings from id 31017 to 31022
+msgctxt "#31017"
+msgid "Unavailable"
+msgstr ""
+
+#empty strings from id 31018 to 31022
 
 msgctxt "#31023"
 msgid "Playing"
@@ -113,8 +109,6 @@ msgstr ""
 msgctxt "#31027"
 msgid "Location"
 msgstr ""
-
-#View Type labels
 
 msgctxt "#31028"
 msgid "Poster wrap"
@@ -143,8 +137,6 @@ msgstr ""
 msgctxt "#31039"
 msgid "Actions"
 msgstr ""
-
-#Extra labels
 
 msgctxt "#31040"
 msgid "Now playing"
@@ -191,7 +183,6 @@ msgid "Sort: Descending"
 msgstr ""
 
 #empty strings from id 31052 to 31054
-#Playlist Editor labels
 
 msgctxt "#31055"
 msgid "Open playlist"
@@ -220,7 +211,6 @@ msgid "Current selected"
 msgstr ""
 
 #empty strings from id 31062 to 31100
-#Skin Settings labels
 
 msgctxt "#31101"
 msgid "Home screen options"
@@ -268,7 +258,17 @@ msgctxt "#31112"
 msgid "Options"
 msgstr ""
 
-#empty strings from id 31113 to 31115
+msgctxt "#31113"
+msgid "Background path Master:"
+msgstr ""
+
+msgctxt "#31114"
+msgid "System"
+msgstr ""
+
+msgctxt "#31115"
+msgid "Main button playlists"
+msgstr ""
 
 msgctxt "#31116"
 msgid "Show recently added albums"
@@ -353,8 +353,31 @@ msgctxt "#31142"
 msgid "Settings level"
 msgstr ""
 
-#empty strings from id 31143 to 31199
-#Script labels
+msgctxt "#31143"
+msgid "Use"
+msgstr ""
+
+msgctxt "#31144"
+msgid "playlist"
+msgstr ""
+
+msgctxt "#31145"
+msgid "playlist path"
+msgstr ""
+
+msgctxt "#31146"
+msgid "Hide home screen buttons"
+msgstr ""
+
+msgctxt "#31147"
+msgid "Hide - Favourites"
+msgstr ""\
+
+msgctxt "#31148"
+msgid "Hide - Search"
+msgstr ""
+
+#empty strings from id 31149 to 31199
 
 msgctxt "#31200"
 msgid "Shortcuts"
@@ -384,8 +407,11 @@ msgctxt "#31208"
 msgid "Upcoming episodes"
 msgstr ""
 
-#empty strings from id 31209 to 31299
-#Extra labels
+msgctxt "#31209"
+msgid "Hide Master profile main menu buttons"
+msgstr ""
+
+#empty strings from id 31210 to 31299
 
 msgctxt "#31300"
 msgid "Current temperature"
@@ -462,7 +488,6 @@ msgid "Album details"
 msgstr ""
 
 #empty strings from id 31332 to 31350
-#Video and Music OSD Labels
 
 msgctxt "#31351"
 msgid "Pause"
@@ -620,7 +645,6 @@ msgid "Channel options"
 msgstr ""
 
 #empty strings from id 31512 to 31900
-#Weather plugin
 
 msgctxt "#31901"
 msgid "36-hour forecast"

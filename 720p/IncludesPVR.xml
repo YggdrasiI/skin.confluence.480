@@ -165,13 +165,13 @@
 					<description>Channel Groups</description>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
-					<label></label>
+					<label/>
 				</control>
 				<control type="button" id="2">
 					<description>View As button</description>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
-					<label></label>
+					<label/>
 					<!-- <visible>Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)</visible> -->
 				</control>
 				<control type="button" id="3">
@@ -183,7 +183,7 @@
 					<description>Sort asc</description>
 					<include>ButtonCommonValues</include>
 					<alttexturefocus border="5">button-focus.png</alttexturefocus>
-					<alttexturenofocus></alttexturenofocus>
+					<alttexturenofocus/>
 					<label>31051</label>
 					<altlabel>31050</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
@@ -248,4 +248,18 @@
 			</control>
 		</control>
 	</include>
+	<variable name="PVRGuideControlsHelpTextVar">
+		<value condition="Control.HasFocus(600)">$LOCALIZE[19063]</value>
+		<value condition="Control.HasFocus(601)">$LOCALIZE[19317]</value>
+		<value condition="Control.HasFocus(602)">$LOCALIZE[19070]</value>
+		<value condition="Control.HasFocus(603)">$LOCALIZE[19318]</value>
+		<value condition="Control.HasFocus(604)">$LOCALIZE[19064]</value>
+		<value condition="Control.HasFocus(605)">$LOCALIZE[19288]</value>
+		<value condition="Control.HasFocus(606)">$LOCALIZE[19322]</value>
+		<value condition="Control.HasFocus(607)">$LOCALIZE[19323]</value>
+		<value condition="Control.HasFocus(608)">$LOCALIZE[19324]</value>
+		<value condition="Control.HasFocus(609)">$LOCALIZE[19319]</value>
+		<value condition="Control.HasFocus(610)">$LOCALIZE[19320]</value>
+		<value condition="Control.HasFocus(611)">$LOCALIZE[19321]</value>
+	</variable>
 </includes>

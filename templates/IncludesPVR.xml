@@ -82,20 +82,19 @@
 	</include>
 	<include name="PVRSideBlade">
 		<control type="group">
-			<visible>!Skin.HasSetting(Kiosk)</visible>
-			<left>{{ScaleX({{ -250 - {SideBladeExtraWidth} }})}}</left>
+			<left>{{ScaleX('-250')}}</left>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('55')}}</top>
-				<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
+				<width>{{ScaleX('250')}}</width>
 				<onleft>9000</onleft>
 				<onright>50</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<itemgap>0</itemgap>
 				<control type="label" id="200">
-					<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
+					<width>{{ScaleX('250')}}</width>
 					<height>{{ScaleY('35')}}</height>
 					<font>font13</font>
 					<label>33063</label>
@@ -105,7 +104,7 @@
 				</control>
 				<control type="button" id="100">
 					<description>Channels</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>19019</label>
 					<onclick condition="Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)">NextChannelGroup</onclick>
@@ -114,7 +113,7 @@
 				</control>
 				<control type="button" id="101">
 					<description>TV Guide</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>22020</label>
 					<onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
@@ -123,7 +122,7 @@
 				</control>
 				<control type="button" id="102">
 					<description>Recordings</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>19163</label>
 					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
@@ -131,7 +130,7 @@
 				</control>
 				<control type="button" id="105">
 					<description>Timer Rules</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>19138</label>
 					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimerRules)</onclick>
@@ -139,7 +138,7 @@
 				</control>
 				<control type="button" id="103">
 					<description>Timers</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>19040</label>
 					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
@@ -147,14 +146,14 @@
 				</control>
 				<control type="button" id="104">
 					<description>Search</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>137</label>
 					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
 					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
 				</control>
 				<control type="label" id="201">
-					<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
+					<width>{{ScaleX('250')}}</width>
 					<height>{{ScaleY('35')}}</height>
 					<font>font12</font>
 					<label>31006</label>
@@ -164,15 +163,15 @@
 				</control>
 				<control type="button" id="28">
 					<description>Channel Groups</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
-					<label></label>
+					<label/>
 				</control>
 				<control type="button" id="2">
 					<description>View As button</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
-					<label></label>
+					<label/>
 					<!-- <visible>Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)</visible> -->
 				</control>
 				<control type="button" id="3">
@@ -184,14 +183,14 @@
 					<description>Sort asc</description>
 					<include>ButtonCommonValues</include>
 					<alttexturefocus border="{{ScaleBorder('5')}}">button-focus.png</alttexturefocus>
-					<alttexturenofocus></alttexturenofocus>
+					<alttexturenofocus/>
 					<label>31051</label>
 					<altlabel>31050</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
 				</control>
 				<control type="radiobutton" id="31">
 					<description>Filter</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>587</label>
 					<selected>Container.Filtered</selected>
@@ -200,7 +199,7 @@
 				</control>
 				<!-- Misc Options (ID is completely arbitrary) -->
 				<control type="label" id="205">
-					<width>{{ScaleX({{ 250 + {SideBladeExtraWidth} }})}}</width>
+					<width>{{ScaleX('250')}}</width>
 					<height>{{ScaleY('35')}}</height>
 					<font>font12</font>
 					<label>31026</label>
@@ -218,28 +217,28 @@
 				</control>
 				<control type="radiobutton" id="5">
 					<description>Group recording items by folder structure</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>19270</label>
 					<visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
 				</control>
 				<control type="radiobutton" id="6">
 					<description>Show hidden channels</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>19051</label>
 					<visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
 				</control>
 				<control type="radiobutton" id="7">
 					<description>Show deleted recordings</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>19184</label>
 					<visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
 				</control>
 				<control type="radiobutton" id="8">
 					<description>Hide disabled timers</description>
-					<textwidth>{{ 235 + {SideBladeExtraWidth} }}</textwidth>
+					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>19077</label>
 					<visible>Window.IsActive(TVTimers) | Window.IsActive(RadioTimers) | Window.IsActive(TVTimerRules) | Window.IsActive(RadioTimerRules)</visible>
@@ -249,4 +248,18 @@
 			</control>
 		</control>
 	</include>
+	<variable name="PVRGuideControlsHelpTextVar">
+		<value condition="Control.HasFocus(600)">$LOCALIZE[19063]</value>
+		<value condition="Control.HasFocus(601)">$LOCALIZE[19317]</value>
+		<value condition="Control.HasFocus(602)">$LOCALIZE[19070]</value>
+		<value condition="Control.HasFocus(603)">$LOCALIZE[19318]</value>
+		<value condition="Control.HasFocus(604)">$LOCALIZE[19064]</value>
+		<value condition="Control.HasFocus(605)">$LOCALIZE[19288]</value>
+		<value condition="Control.HasFocus(606)">$LOCALIZE[19322]</value>
+		<value condition="Control.HasFocus(607)">$LOCALIZE[19323]</value>
+		<value condition="Control.HasFocus(608)">$LOCALIZE[19324]</value>
+		<value condition="Control.HasFocus(609)">$LOCALIZE[19319]</value>
+		<value condition="Control.HasFocus(610)">$LOCALIZE[19320]</value>
+		<value condition="Control.HasFocus(611)">$LOCALIZE[19321]</value>
+	</variable>
 </includes>

@@ -256,7 +256,7 @@ def ScaleGeneral(sX, base_dim, out_dim):
     # x = float(int(1000 * x * out_dim / base_dim))/1000
 
     # Omit return of 0 for non-zero inputs.
-    if x is 0 and sign is not 0:
+    if x == 0 and sign != 0:
         x = sign
 
     if bRight:

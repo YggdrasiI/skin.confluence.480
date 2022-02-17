@@ -80,6 +80,14 @@ msgctxt "#31015"
 msgid "Minute"
 msgstr "Минута"
 
+msgctxt "#31016"
+msgid "Elapsed time"
+msgstr "Прошедшее время"
+
+msgctxt "#31017"
+msgid "Unavailable"
+msgstr "Недоступно"
+
 msgctxt "#31023"
 msgid "Playing"
 msgstr "Воспроизведение"
@@ -232,6 +240,18 @@ msgctxt "#31112"
 msgid "Options"
 msgstr "Параметры"
 
+msgctxt "#31113"
+msgid "Background path Master:"
+msgstr "Фоновый путь мастера:"
+
+msgctxt "#31114"
+msgid "System"
+msgstr "Система"
+
+msgctxt "#31115"
+msgid "Main button playlists"
+msgstr "Основные кнопки плейлистов "
+
 msgctxt "#31116"
 msgid "Show recently added albums"
 msgstr "Показывать последние добавленные альбомы"
@@ -240,9 +260,17 @@ msgctxt "#31117"
 msgid "Show recently added videos"
 msgstr "Показывать последнее добавленное видео"
 
+msgctxt "#31118"
+msgid "Home page \"Add-ons\" submenu"
+msgstr "Страница \"Дополнений\" подменю"
+
 msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "Скрыть фоновый фанарт"
+
+msgctxt "#31120"
+msgid "Home page \"Games\" submenu"
+msgstr "Страница \"Игры\" подменю"
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
@@ -288,6 +316,18 @@ msgctxt "#31142"
 msgid "Settings level"
 msgstr "Уровень настроек"
 
+msgctxt "#31143"
+msgid "Use"
+msgstr "Использовать"
+
+msgctxt "#31144"
+msgid "playlist"
+msgstr "плейлист"
+
+msgctxt "#31145"
+msgid "playlist path"
+msgstr "путь к плейлисту"
+
 msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "Ярлыки"
@@ -311,6 +351,10 @@ msgstr "Найти ещё"
 msgctxt "#31208"
 msgid "Upcoming episodes"
 msgstr "Следующие серии"
+
+msgctxt "#31209"
+msgid "Hide Master profile main menu buttons"
+msgstr "Скрыть кнопки главного меню главного профиля"
 
 msgctxt "#31300"
 msgid "Current temperature"
@@ -571,6 +615,10 @@ msgstr "СЕРИАЛЫ"
 msgctxt "#31956"
 msgid "MUSIC"
 msgstr "МУЗЫКА"
+
+msgctxt "#31957"
+msgid "ADD-ONS"
+msgstr "Дополнения"
 
 msgctxt "#31958"
 msgid "PLAY DISC"

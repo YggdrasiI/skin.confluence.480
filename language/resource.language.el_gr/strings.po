@@ -76,6 +76,10 @@ msgctxt "#31015"
 msgid "Minute"
 msgstr "Λεπτό"
 
+msgctxt "#31017"
+msgid "Unavailable"
+msgstr "Μη διαθέσιμο"
+
 msgctxt "#31023"
 msgid "Playing"
 msgstr "Αναπαραγωγή"
@@ -228,6 +232,10 @@ msgctxt "#31112"
 msgid "Options"
 msgstr "Επιλογές"
 
+msgctxt "#31114"
+msgid "System"
+msgstr "Σύστημα"
+
 msgctxt "#31116"
 msgid "Show recently added albums"
 msgstr "Εμφάνιση πρόσφατων προσθέσεων άλμπουμ"
@@ -262,7 +270,7 @@ msgstr "Απόκρυψη fanart σε πλήρης οθόνη απτικοποί�
 
 msgctxt "#31132"
 msgid "Lyrics add-on"
-msgstr "Add-on στοίχων"
+msgstr "Πρόσθετο στίχων"
 
 msgctxt "#31134"
 msgid "Home page \"Videos\" submenu"
@@ -283,6 +291,10 @@ msgstr "Aπεικόνιση οθόνης (OSD) Μουσικής"
 msgctxt "#31142"
 msgid "Settings level"
 msgstr "Επίπεδο ρυθμίσεων"
+
+msgctxt "#31143"
+msgid "Use"
+msgstr "Χρήση"
 
 msgctxt "#31200"
 msgid "Shortcuts"
@@ -454,7 +466,7 @@ msgstr "Προγραμματισμένη Ώρα"
 
 msgctxt "#31502"
 msgid "TV"
-msgstr "Τηλεόραση"
+msgstr "TV"
 
 msgctxt "#31503"
 msgid "Add group"
@@ -522,7 +534,7 @@ msgstr "ΕΙΚΟΝΕΣ"
 
 msgctxt "#31952"
 msgid "TV"
-msgstr "Τηλεόραση"
+msgstr "TV"
 
 msgctxt "#31953"
 msgid "VIDEOS"

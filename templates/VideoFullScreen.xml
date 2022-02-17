@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol></defaultcontrol>
+	<defaultcontrol/>
 	<controls>
 		<!-- view mode, sizing, screen resolution -->
 		<control type="group" id="0">
@@ -25,7 +25,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font12</font>
-				<label></label>
+				<label/>
 			</control>
 			<control type="label" id="11">
 				<description>row 2 label</description>
@@ -36,7 +36,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font12</font>
-				<label></label>
+				<label/>
 			</control>
 			<control type="label" id="12">
 				<description>row 3 label</description>
@@ -47,13 +47,13 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font12</font>
-				<label></label>
+				<label/>
 			</control>
 		</control>
 		<!-- media infos -->
 		<control type="group" id="1">
 			<depth>DepthOSD</depth>
-			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] + ![Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(SliderDialog)]</visible>
+			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] + ![Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(SliderDialog)]</visible>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<control type="image" id="1">
 				<left>{{ScaleX('-20')}}</left>
@@ -107,9 +107,9 @@
 			</control>
 			<control type="image" id="1">
 				<left>{{ScaleX('-20')}}</left>
-				<top>{{ScaleY('{{ 230 + {FullScreenExtraHeight} }}r')}}</top>
+				<top>{{ScaleY('230r')}}</top>
 				<width>{{ScaleX('1320')}}</width>
-				<height>{{ScaleY({{ 230 + {FullScreenExtraHeight} }})}}</height>
+				<height>{{ScaleY('230')}}</height>
 				<texture border="{{ScaleBorder('1')}}">HomeNowPlayingBack.png</texture>
 			</control>
 			<control type="image" id="1">
@@ -132,7 +132,7 @@
 				<top>{{ScaleY('350r')}}</top>
 				<width>{{ScaleX('300')}}</width>
 				<height>{{ScaleY('330')}}</height>
-				<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+				<texture fallback="DefaultVideoCover.png">$VAR[NowPlayingThumb]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<bordertexture border="{{ScaleBorder('8')}}">ThumbShadow.png</bordertexture>
 				<bordersize>{{ScaleBorder('8')}}</bordersize>
@@ -150,8 +150,8 @@
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="group" id="1">
-				<left>{{ScaleX('{{ 330 - {FullScreenExtraWidth} }}')}}</left>
-				<top>{{ScaleY('{{ 185 + 20 + {FullScreenExtraHeight} }}r')}}</top>
+				<left>{{ScaleX('330')}}</left>
+				<top>{{ScaleY('185r')}}</top>
 				<control type="label" id="1">
 					<description>Heading label</description>
 					<left>{{ScaleX('0')}}</left>
@@ -164,7 +164,7 @@
 					<label>$LOCALIZE[31040]</label>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<visible>![VideoPlayer.Content(LiveTV) + PVR.IsRecordingPlayingChannel]</visible>
+					<visible>![VideoPlayer.Content(LiveTV) + [PVR.IsRecordingPlayingChannel | PVR.IsPlayingActiveRecording]]</visible>
 					<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,25')}}" time="0" condition="!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV) + !PVR.IsPlayingRecording">conditional</animation>
 				</control>
 				<control type="image" id="1">
@@ -173,7 +173,7 @@
 					<height>{{ScaleY('25')}}</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture>PVR-IsRecording.png</texture>
-					<visible>VideoPlayer.Content(LiveTV) + PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive</visible>
+					<visible>VideoPlayer.Content(LiveTV) + [[PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive] | PVR.IsPlayingActiveRecording]</visible>
 				</control>
 				<control type="label" id="1">
 					<description>Heading label</description>
@@ -187,12 +187,12 @@
 					<label>$LOCALIZE[19158]</label>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(LiveTV) + PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive</visible>
+					<visible>VideoPlayer.Content(LiveTV) + [[PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive] | PVR.IsPlayingActiveRecording]</visible>
 				</control>
 				<control type="label" id="1">
 					<description>Studio label</description>
 					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY({{ 30 + int(1*{FullScreenExtraHeight}/3) }})}}</top>
+					<top>{{ScaleY('30')}}</top>
 					<width>{{ScaleX('910')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<align>left</align>
@@ -205,7 +205,7 @@
 				<control type="label" id="1">
 					<description>TV Show label</description>
 					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY({{ 30 + int(1*{FullScreenExtraHeight}/3) }})}}</top>
+					<top>{{ScaleY('30')}}</top>
 					<width>{{ScaleX('910')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<align>left</align>
@@ -218,7 +218,7 @@
 				<control type="label" id="1">
 					<description>Music Info label</description>
 					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY({{ 30 + int(1*{FullScreenExtraHeight}/3) }})}}</top>
+					<top>{{ScaleY('30')}}</top>
 					<width>{{ScaleX('910')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<align>left</align>
@@ -231,7 +231,7 @@
 				<control type="label" id="1">
 					<description>LiveTV Info label</description>
 					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY({{ 30 + int(1*{FullScreenExtraHeight}/3) }})}}</top>
+					<top>{{ScaleY('30')}}</top>
 					<width>{{ScaleX('910')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<align>left</align>
@@ -243,14 +243,14 @@
 				</control>
 				<control type="grouplist" id="1">
 					<left>{{ScaleX('20')}}</left>
-					<top>{{ScaleY({{ 60 + {FullScreenExtraHeight} }})}}</top>
+					<top>{{ScaleY('60')}}</top>
 					<width>{{ScaleX('910')}}</width>
-					<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
+					<height>{{ScaleY('35')}}</height>
 					<itemgap>5</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="label" id="1">
 						<width min="{{ScaleX('10')}}" max="{{ScaleX('520')}}">{{ScaleX('auto')}}</width>
-						<height>{{ScaleY('{{ 20 + {FullScreenExtraIconDim} }}')}}</height>
+						<height>{{ScaleY('30')}}</height>
 						<font>font30</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -260,46 +260,45 @@
 					</control>
 					<control type="image" id="1">
 						<description>Video Resolution Image</description>
-						<width>{{ScaleX('{{ 50 + {FullScreenExtraIconDim} }}')}}</width>
-						<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
+						<width>{{ScaleX('50')}}</width>
+						<height>{{ScaleY('35')}}</height>
 						<aspectratio align="center">keep</aspectratio>
 						<texture>$INFO[VideoPlayer.VideoResolution,flagging/video/,.png]</texture>
 						<visible>!Player.ChannelPreviewActive</visible>
 					</control>
 					<control type="image" id="1">
 						<description>Audio Codec Image</description>
-						<width>{{ScaleX('{{ 85 + {FullScreenExtraIconDim} }}')}}</width>
-						<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
+						<width>{{ScaleX('85')}}</width>
+						<height>{{ScaleY('35')}}</height>
 						<aspectratio align="center">keep</aspectratio>
 						<visible>!Player.ChannelPreviewActive</visible>
 						<texture>$INFO[VideoPlayer.AudioCodec,flagging/audio/,.png]</texture>
 					</control>
 					<control type="image" id="1">
 						<description>Audio Channels Image</description>
-						<width>{{ScaleX('{{ 50 + {FullScreenExtraIconDim} }}')}}</width>
-						<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
+						<width>{{ScaleX('50')}}</width>
+						<height>{{ScaleY('35')}}</height>
 						<aspectratio align="center">keep</aspectratio>
 						<texture>$INFO[VideoPlayer.AudioChannels,flagging/audio/,.png]</texture>
 						<visible>!Player.ChannelPreviewActive</visible>
 					</control>
 					<control type="group" id="1">
-						<width>{{ScaleX('{{ 85 + {FullScreenExtraIconDim} }}')}}</width>
-						<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
+						<width>{{ScaleX('85')}}</width>
+						<height>{{ScaleY('35')}}</height>
 						<visible>![String.IsEmpty(VideoPlayer.AudioLanguage) | Player.ChannelPreviewActive]</visible>
 						<control type="image" id="1">
 							<left>{{ScaleX('5')}}</left>
 							<top>{{ScaleY('0')}}</top>
 							<description>Audio Language Image</description>
-							<width>{{ScaleX('{{ 80 + {FullScreenExtraIconDim} }}')}}</width>
-							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
+							<width>{{ScaleX('80')}}</width>
+							<height>{{ScaleY('35')}}</height>
 							<texture>flagging/AudioLang.png</texture>
 						</control>
 						<control type="label" id="1">
 							<left>{{ScaleX('38')}}</left>
-							<top>{{ScaleY('{{ 2 - 10 }}')}}</top>
-							<aligny>bottom</aligny>
-							<width min="{{ScaleX('{{ 47 + {FullScreenExtraIconDim} }}')}}" max="{{ScaleX('{{ 47 + {FullScreenExtraIconDim} + 20 }}')}}">auto</width>
-							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} + 10 }}')}}</height>
+							<top>{{ScaleY('2')}}</top>
+							<width>{{ScaleX('47')}}</width>
+							<height>{{ScaleY('35')}}</height>
 							<font>font13</font>
 							<align>left</align>
 							<label>$INFO[VideoPlayer.AudioLanguage]</label>
@@ -307,22 +306,21 @@
 						</control>
 					</control>
 					<control type="group" id="1">
-						<width>{{ScaleX('{{ 85 + {FullScreenExtraIconDim} }}')}}</width>
-						<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
-						<visible>![String.IsEmpty(VideoPlayer.SubtitlesLanguage) | Player.ChannelPreviewActive]</visible>
+						<width>{{ScaleX('85')}}</width>
+						<height>{{ScaleY('35')}}</height>
+						<visible>![String.IsEmpty(VideoPlayer.SubtitlesLanguage) | Player.ChannelPreviewActive] + VideoPlayer.SubtitlesEnabled</visible>
 						<control type="image" id="1">
 							<left>{{ScaleX('5')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('{{ 80 + {FullScreenExtraIconDim} }}')}}</width>
-							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
+							<width>{{ScaleX('80')}}</width>
+							<height>{{ScaleY('35')}}</height>
 							<texture>flagging/SubLang.png</texture>
 						</control>
 						<control type="label" id="1">
 							<left>{{ScaleX('38')}}</left>
-							<top>{{ScaleY('{{ 2 - 10 }}')}}</top>
-							<aligny>bottom</aligny>
-							<width min="{{ScaleX('{{ 47 + {FullScreenExtraIconDim} }}')}}" max="{{ScaleX('{{ 47 + {FullScreenExtraIconDim} + 20 }}')}}">auto</width>
-							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} + 10 }}')}}</height>
+							<top>{{ScaleY('2')}}</top>
+							<width>{{ScaleX('47')}}</width>
+							<height>{{ScaleY('35')}}</height>
 							<font>font13</font>
 							<align>left</align>
 							<label>$INFO[VideoPlayer.SubtitlesLanguage]</label>
@@ -332,8 +330,7 @@
 				</control>
 				<control type="label" id="1">
 					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('65r')}}</top>
-					<!--<top>{{ScaleY({{ 120 + {FullScreenExtraHeight} }})}}</top>-->
+					<top>{{ScaleY('120')}}</top>
 					<width>{{ScaleX('910')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[31049] $INFO[Player.FinishTime]</label>
@@ -342,13 +339,12 @@
 					<font>font12</font>
 					<textcolor>grey</textcolor>
 					<scroll>true</scroll>
-					<visible>!Window.IsVisible(VideoOSD) + !VideoPlayer.Content(LiveTV)</visible>
+					<visible>[Player.ShowInfo | Window.IsVisible(VideoOSD)] + !VideoPlayer.Content(LiveTV)</visible>
 					<animation effect="fade" time="150">VisibleChange</animation>
 				</control>
 				<control type="label" id="1">
 					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('65r')}}</top>
-					<!--<top>{{ScaleY({{ 120 + {FullScreenExtraHeight} }})}}</top>-->
+					<top>{{ScaleY('120')}}</top>
 					<width>{{ScaleX('910')}}</width>
 					<height>{{ScaleY('25')}}</height>
 					<label>$INFO[VideoPlayer.NextTitle,[B]$LOCALIZE[19031]: [/B]]</label>
@@ -383,7 +379,7 @@
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</width>
+					<width>{{ScaleX('100')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>left</align>
@@ -394,7 +390,7 @@
 					<visible>VideoPlayer.Content(LiveTV)</visible>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</width>
+					<width>{{ScaleX('100')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>left</align>
@@ -445,9 +441,9 @@
 				</control>
 				<control type="label" id="1">
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
-					<left>{{ScaleX({{ int(820 + ({OSDSeekSliderWidth} - 720)/2) }})}}</left>
+					<left>{{ScaleX('820')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</width>
+					<width>{{ScaleX('100')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>right</align>
@@ -456,14 +452,28 @@
 				</control>
 				<control type="label" id="1">
 					<visible>VideoPlayer.Content(LiveTV)</visible>
-					<left>{{ScaleX({{ int(820 + ({OSDSeekSliderWidth} - 720)/2) }})}}</left>
+					<left>{{ScaleX('820')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</width>
+					<width>{{ScaleX('100')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>$INFO[VideoPlayer.EndTime]</label>
+<<<<<<< HEAD
+=======
+				</control>
+				<control type="ranges" id="1">
+					<description>Chapters</description>
+					<left>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</left>
+					<top>{{ScaleY('15')}}</top>
+					<width>{{ScaleX({OSDSeekSliderWidth})}}</width>
+					<height>{{ScaleY('16')}}</height>
+					<info>Player.Chapters</info>
+					<texturebg border="{{ScaleBorder('6,0,6,0')}}" colordiffuse="00FFFFFF">OSDProgressBack.png</texturebg>
+					<righttexture border="{{ScaleBorder('2,4,2,4')}}">OSDProgressNib.png</righttexture>
+					<visible>true</visible>
+>>>>>>> unstable
 				</control>
 			</control>
 		</control>

@@ -31,8 +31,8 @@
 				<top>{{ScaleY('15')}}</top>
 				<width>{{ScaleX('64')}}</width>
 				<height>{{ScaleY('32')}}</height>
-				<label></label>
-				<font></font>
+				<label/>
+				<font/>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -138,7 +138,7 @@
 				<left>{{ScaleX('570')}}</left>
 				<top>{{ScaleY('420')}}</top>
 				<subtype>page</subtype>
-				<font></font>
+				<font/>
 				<onleft>110</onleft>
 				<onright>110</onright>
 				<ondown>110</ondown>
@@ -225,7 +225,7 @@
 				<left>{{ScaleX('570')}}</left>
 				<top>{{ScaleY('420')}}</top>
 				<subtype>page</subtype>
-				<font></font>
+				<font/>
 				<onleft>120</onleft>
 				<onright>120</onright>
 				<ondown>120</ondown>

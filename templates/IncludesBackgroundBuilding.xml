@@ -6,7 +6,6 @@
 			<description>Normal Default Background Image</description>
 			<include>BackgroundDimensions</include>
 			<aspectratio>scale</aspectratio>
-			<texture fallback="backgrounds/SKINDEFAULT.jpg">$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
 			<texture fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
 			<visible>![Skin.HasSetting(UseCustomBackground) + !String.IsEmpty(Skin.String(CustomBackgroundPath))]</visible>
 			<include>VisibleFadeEffect</include>
@@ -17,7 +16,16 @@
 			<include>BackgroundDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture>$INFO[Skin.String(CustomBackgroundPath)]</texture>
-			<visible>Skin.HasSetting(UseCustomBackground) + !String.IsEmpty(Skin.String(CustomBackgroundPath))</visible>
+			<visible>!System.IsMaster + Skin.HasSetting(UseCustomBackground) + !String.IsEmpty(Skin.String(CustomBackgroundPath))</visible>
+			<include>VisibleFadeEffect</include>
+		</control>
+		<control type="image">
+			<depth>DepthBackground</depth>
+			<description>User Set Background Image Master</description>
+			<include>BackgroundDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<texture fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Skin.String(MasterCustomBackgroundPath)]</texture>
+			<visible>System.IsMaster + Skin.HasSetting(UseCustomBackground) + !String.IsEmpty(Skin.String(MasterCustomBackgroundPath))</visible>
 			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="image">
@@ -68,7 +76,7 @@
 		<control type="image">
 			<depth>DepthFloor</depth>
 			<left>{{ScaleX('-20')}}</left>
-			<top></top>
+			<top/>
 			<bottom>0</bottom>
 			<width>{{ScaleX('1320')}}</width>
 			<height>{{ScaleY('100')}}</height>

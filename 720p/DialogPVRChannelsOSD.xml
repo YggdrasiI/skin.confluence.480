@@ -22,8 +22,8 @@
 				<top>15</top>
 				<width>64</width>
 				<height>32</height>
-				<label></label>
-				<font></font>
+				<label/>
+				<font/>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -122,6 +122,14 @@
 						<height>20</height>
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="image">
+						<left>5</left>
+						<top>35</top>
+						<width>20</width>
+						<height>20</height>
+						<texture>PVR-HasArchive.png</texture>
+						<visible>!ListItem.IsRecording + ListItem.HasArchive</visible>
 					</control>
 					<control type="label">
 						<left>50</left>
@@ -242,6 +250,14 @@
 						<height>20</height>
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="image">
+						<left>5</left>
+						<top>35</top>
+						<width>20</width>
+						<height>20</height>
+						<texture>PVR-HasArchive.png</texture>
+						<visible>!ListItem.IsRecording + ListItem.HasArchive</visible>
 					</control>
 					<control type="label">
 						<left>50</left>

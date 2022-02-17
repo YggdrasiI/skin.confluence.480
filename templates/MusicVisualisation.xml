@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol></defaultcontrol>
+	<defaultcontrol/>
 	<controls>
 		<control type="visualisation" id="2">
 			<!-- FIX ME Music Visualization needs to have an id of 2 in this window to be able to lock or change preset -->
@@ -26,7 +26,7 @@
 		<control type="group">
 			<depth>DepthOSD</depth>
 			<animation effect="fade" time="150">VisibleChange</animation>
-			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
+			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(Addon)]</visible>
 			<control type="image">
 				<left>{{ScaleX('-20')}}</left>
 				<top>{{ScaleY('-150')}}</top>
@@ -98,7 +98,7 @@
 			</control>
 			<control type="group">
 				<left>{{ScaleX('330')}}</left>
-				<top>{{ScaleY('{{ 185 + {MusicVisualisationExtraHeight} }}r')}}</top>
+				<top>{{ScaleY('185r')}}</top>
 				<control type="label" id="1">
 					<description>Heading label</description>
 					<left>{{ScaleX('0')}}</left>
@@ -110,7 +110,30 @@
 					<label>$LOCALIZE[31040]</label>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
+					<visible>![MusicPlayer.Content(LiveTV) + [PVR.IsRecordingPlayingChannel | PVR.IsPlayingActiveRecording]]</visible>
 					<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,25')}}" time="0" condition="String.IsEmpty(MusicPlayer.Artist) + String.IsEmpty(MusicPlayer.Album)">conditional</animation>
+				</control>
+				<control type="image" id="1">
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('50')}}</width>
+					<height>{{ScaleY('25')}}</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>PVR-IsRecording.png</texture>
+					<visible>MusicPlayer.Content(LiveTV) + [[PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive] | PVR.IsPlayingActiveRecording]</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Heading label</description>
+					<left>{{ScaleX('50')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('860')}}</width>
+					<height>{{ScaleY('25')}}</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<label>$LOCALIZE[19158]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>MusicPlayer.Content(LiveTV) + [[PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive] | PVR.IsPlayingActiveRecording]</visible>
 				</control>
 				<control type="label" id="1">
 					<description>Artist label</description>
@@ -173,9 +196,9 @@
 				</control>
 				<control type="label">
 					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('65r')}}</top>
+					<top>{{ScaleY('120')}}</top>
 					<width>{{ScaleX('910')}}</width>
-					<height>{{ScaleY('{{ 25 + {MusicVisualisationExtraHeight}/3 }}')}}</height>
+					<height>{{ScaleY('25')}}</height>
 					<label>$LOCALIZE[19031]: $INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -192,7 +215,7 @@
 				<control type="label">
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</width>
+					<width>{{ScaleX('100')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>left</align>
@@ -201,16 +224,16 @@
 				</control>
 				<control type="progress">
 					<description>Progressbar</description>
-					<left>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</left>
+					<left>{{ScaleX('100')}}</left>
 					<top>{{ScaleY('15')}}</top>
-					<width>{{ScaleX({OSDSeekSliderWidth})}}</width>
+					<width>{{ScaleX('720')}}</width>
 					<height>{{ScaleY('16')}}</height>
 					<info>Player.Progress</info>
 				</control>
 				<control type="label">
-					<left>{{ScaleX({{ int(820 + ({OSDSeekSliderWidth} - 720)/2) }})}}</left>
+					<left>{{ScaleX('820')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX({{ int(100 - ({OSDSeekSliderWidth} - 720)/2) }})}}</width>
+					<width>{{ScaleX('100')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<font>font13</font>
 					<align>right</align>

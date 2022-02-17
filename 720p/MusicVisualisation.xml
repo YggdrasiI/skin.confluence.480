@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol></defaultcontrol>
+	<defaultcontrol/>
 	<controls>
 		<control type="visualisation" id="2">
 			<!-- FIX ME Music Visualization needs to have an id of 2 in this window to be able to lock or change preset -->
@@ -26,7 +26,7 @@
 		<control type="group">
 			<depth>DepthOSD</depth>
 			<animation effect="fade" time="150">VisibleChange</animation>
-			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
+			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(Addon)]</visible>
 			<control type="image">
 				<left>-20</left>
 				<top>-150</top>
@@ -110,7 +110,30 @@
 					<label>$LOCALIZE[31040]</label>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
+					<visible>![MusicPlayer.Content(LiveTV) + [PVR.IsRecordingPlayingChannel | PVR.IsPlayingActiveRecording]]</visible>
 					<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(MusicPlayer.Artist) + String.IsEmpty(MusicPlayer.Album)">conditional</animation>
+				</control>
+				<control type="image" id="1">
+					<top>0</top>
+					<width>50</width>
+					<height>25</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>PVR-IsRecording.png</texture>
+					<visible>MusicPlayer.Content(LiveTV) + [[PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive] | PVR.IsPlayingActiveRecording]</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Heading label</description>
+					<left>50</left>
+					<top>0</top>
+					<width>860</width>
+					<height>25</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<label>$LOCALIZE[19158]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>MusicPlayer.Content(LiveTV) + [[PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive] | PVR.IsPlayingActiveRecording]</visible>
 				</control>
 				<control type="label" id="1">
 					<description>Artist label</description>
@@ -131,7 +154,6 @@
 					<height>35</height>
 					<itemgap>5</itemgap>
 					<orientation>horizontal</orientation>
-					<visible>!system.getbool(audiooutput.dspaddonsenabled)</visible>
 					<control type="label">
 						<width min="10" max="638">auto</width>
 						<height>20</height>
