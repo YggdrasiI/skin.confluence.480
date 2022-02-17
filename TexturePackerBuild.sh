@@ -9,7 +9,9 @@ REQUIRED_LIBS="libgif-dev libjpeg-dev liblzo2-dev"
 if [ -d "/usr/include/libpng12" ] ; then
 REQUIRED_LIBS="${REQUIRED_LIBS} libpng12-dev"
 else
-REQUIRED_LIBS="${REQUIRED_LIBS} libpng16-dev"
+# REQUIRED_LIBS="${REQUIRED_LIBS} libpng16-dev"
+# 2022: Package was renamed 
+REQUIRED_LIBS="${REQUIRED_LIBS} libpng-dev"
 fi
 
 cd "${ROOT_DIR}" && mkdir TexturePackerBuild; cd TexturePackerBuild
