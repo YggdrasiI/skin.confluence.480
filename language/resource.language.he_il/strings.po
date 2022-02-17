@@ -7,22 +7,15 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-11-13 17:52+0200\n"
-"Last-Translator: A. Dambledore\n"
-"Language-Team: Eng2Heb\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Hebrew (Israel) (http://www.transifex.com/projects/p/kodi-main/language/he_IL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he_IL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-# [Consistency] Make terms, settings names, brands and other minutiae, consistent throughout file.
-# [Capitalization] Avoid capitalizing every second word. See http://grammarist.com/capitalization/
-# For example, prefer wording as "This new string" instead of "This New String".
-# [Referencing] If a suitable string already exists, reuse it, making a note of where it's used!
-# [Description / location] For example, "#. Description of some setting" used on "#: xbmc/addons/guidialogaddoninfo.cpp"
-# When writing a description or setting, refer to a setting name in quotes. See existing entries for guidance.
-# For example, "Press \"OK\" for \"All seasons\"" instead of "Press OK for All seasons" after first word.
 msgctxt "#31000"
 msgid "Change your"
 msgstr "שינוי"
@@ -33,11 +26,11 @@ msgstr "משחקים"
 
 msgctxt "#31002"
 msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
-msgstr "[B]הגדרות המשחק[/B][CR][CR]קביעת תצורה, תמיכה בהרצה לאחור ואפשרויות ·  קביעת תצורה של מספר שחקנים, מקלדת ושימוש במקלדת"
+msgstr "[B]הגדרות משחק[/B][CR][CR]הגדר חזרה לאחור תמיכה ואפשרויות · קביעת תצורה של לוח המקשים ומספר נגני המקלדת"
 
 msgctxt "#31003"
 msgid "Power options"
-msgstr "אפשרויות כיבוי"
+msgstr "אפשרויות חשמל"
 
 msgctxt "#31004"
 msgid "Working..."
@@ -49,7 +42,7 @@ msgstr "הסתר פרטים"
 
 msgctxt "#31006"
 msgid "View options"
-msgstr "הצג אפשרויות"
+msgstr "אפשרויות תצוגה"
 
 msgctxt "#31007"
 msgid "Video process information"
@@ -61,7 +54,7 @@ msgstr "מסך מלא"
 
 msgctxt "#31009"
 msgid "Total duration"
-msgstr "משך כולל"
+msgstr "אורך כולל"
 
 msgctxt "#31010"
 msgid "Hardware decoding"
@@ -87,14 +80,21 @@ msgctxt "#31015"
 msgid "Minute"
 msgstr "דקה"
 
-# empty strings from id 31016 to 31022
+msgctxt "#31016"
+msgid "Elapsed time"
+msgstr "זמן שחלף"
+
+msgctxt "#31017"
+msgid "Unavailable"
+msgstr "לא זמין"
+
 msgctxt "#31023"
 msgid "Playing"
 msgstr "מנגן"
 
 msgctxt "#31024"
 msgid "Page"
-msgstr "דף"
+msgstr "עמוד"
 
 msgctxt "#31025"
 msgid "Items"
@@ -108,7 +108,6 @@ msgctxt "#31027"
 msgid "Location"
 msgstr "מיקום"
 
-# View Type labels
 msgctxt "#31028"
 msgid "Poster wrap"
 msgstr "רצועת פוסטרים"
@@ -117,7 +116,6 @@ msgctxt "#31029"
 msgid "Fanart"
 msgstr "פאנארט"
 
-# empty string with id 31030
 msgctxt "#31031"
 msgid "Pic thumbs"
 msgstr "תמונות ממוזערות"
@@ -130,24 +128,21 @@ msgctxt "#31033"
 msgid "Info"
 msgstr "פרטים"
 
-# empty strings from id 31034 to 31038
 msgctxt "#31039"
 msgid "Actions"
 msgstr "פעולות"
 
-# Extra labels
 msgctxt "#31040"
 msgid "Now playing"
-msgstr "מנגן עכשיו"
+msgstr "מנגן כעת"
 
-# empty string with id 31041
 msgctxt "#31042"
 msgid "PLAYING"
-msgstr "משחקים"
+msgstr "מנגן"
 
 msgctxt "#31043"
 msgid "PAUSED"
-msgstr "הפסקה"
+msgstr "מושהה"
 
 msgctxt "#31044"
 msgid "FAST FORWARD"
@@ -155,20 +150,19 @@ msgstr "הרצה קדימה"
 
 msgctxt "#31045"
 msgid "REWIND"
-msgstr "הרצה אחורה "
+msgstr "הרצה אחורה"
 
 msgctxt "#31046"
 msgid "SEEKING"
-msgstr "מחפש"
+msgstr "מעביר"
 
-# empty string with id 31047
 msgctxt "#31048"
 msgid "Visualisation presets"
-msgstr "‎הגדרות חיזוי קבועות מראש"
+msgstr "קביעוני חיזוי"
 
 msgctxt "#31049"
 msgid "End time"
-msgstr "אחרית הימים"
+msgstr "זמן סיום"
 
 msgctxt "#31050"
 msgid "Sort: Ascending"
@@ -178,19 +172,17 @@ msgctxt "#31051"
 msgid "Sort: Descending"
 msgstr "סדר מיון: יורד"
 
-# empty strings from id 31052 to 31054
-# Playlist Editor labels
 msgctxt "#31055"
 msgid "Open playlist"
-msgstr "פתח רשימת ניגון"
+msgstr "פתיחת רשימת ניגון"
 
 msgctxt "#31056"
 msgid "Save playlist"
-msgstr "שמור רשימת ניגון"
+msgstr "שמירת רשימת ניגון"
 
 msgctxt "#31057"
 msgid "Close playlist"
-msgstr "סגור רשימת ניגון"
+msgstr "סגירת רשימת ניגון"
 
 msgctxt "#31058"
 msgid "System music files"
@@ -198,15 +190,12 @@ msgstr "קבצי מוזיקת מערכת"
 
 msgctxt "#31059"
 msgid "Current playlist"
-msgstr "‎רשימת השמעה נוכחית"
+msgstr "רשימת ניגון נוכחית"
 
-# empty string with id 31060
 msgctxt "#31061"
 msgid "Current selected"
-msgstr "בחירה נוכחית"
+msgstr "כרגע מסומנים"
 
-# empty strings from id 31062 to 31100
-# Skin Settings labels
 msgctxt "#31101"
 msgid "Home screen options"
 msgstr "אפשרויות מסך הבית"
@@ -223,7 +212,6 @@ msgctxt "#31104"
 msgid "Play trailers in a window [COLOR=grey3](Video information dialogue only)[/COLOR]"
 msgstr "נגן קדימונים בחלון [COLOR=grey3](דיאלוג פרטי וידאו בלבד)[/COLOR]"
 
-# empty string with id 31105
 msgctxt "#31106"
 msgid "Miscellaneous options"
 msgstr "אפשרויות שונות"
@@ -234,7 +222,7 @@ msgstr "הסתר סימון \"נצפה\" משמות קבצי וידאו [COLOR=g
 
 msgctxt "#31108"
 msgid "Hide main menu buttons"
-msgstr "הסתר לחצני תפריט ראשי"
+msgstr "הסתר כפתורי תפריט ראשי"
 
 msgctxt "#31109"
 msgid "Enable custom background"
@@ -252,7 +240,18 @@ msgctxt "#31112"
 msgid "Options"
 msgstr "אפשרויות"
 
-# empty strings from id 31113 to 31115
+msgctxt "#31113"
+msgid "Background path Master:"
+msgstr "נתיב לרקע של הראשי:"
+
+msgctxt "#31114"
+msgid "System"
+msgstr "מערכת"
+
+msgctxt "#31115"
+msgid "Main button playlists"
+msgstr "רשימות נגינה כפתור ראשי"
+
 msgctxt "#31116"
 msgid "Show recently added albums"
 msgstr "הצג אלבומים שנוספו לאחרונה"
@@ -261,47 +260,42 @@ msgctxt "#31117"
 msgid "Show recently added videos"
 msgstr "הצג וידאו שנוסף לאחרונה"
 
-#. In main language strings its used as submenu
 msgctxt "#31118"
-msgid "Home page programs submenu"
-msgstr "תת תפריט תוכנות במסך הבית"
+msgid "Home page \"Add-ons\" submenu"
+msgstr "תת־תפריט „הרחבות” בדף הבית"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "נטרל הצגת פאנארט כרקע"
 
-# empty strings from id 31120 to 31121
-#. Boolean settings value
-#: system/settings/settings.xml
+msgctxt "#31120"
+msgid "Home page \"Games\" submenu"
+msgstr "תת־תפריט „משחקים” בדף הבית"
+
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
 msgstr "הסתר לוח שידורים מחלון ערוץ אם זמין מידע RDS"
 
-# empty string with id 31123
 msgctxt "#31124"
 msgid "Show background \"Now playing\" video"
-msgstr "הצג וידאו \"מנגן כעת \" כרקע"
+msgstr "הצג וידאו \"מנגן כעת\" כרקע"
 
 msgctxt "#31125"
 msgid "Show background \"Now playing\" visualisation"
-msgstr "הצג חיזוי \"מנגן כעת \" כרקע"
+msgstr "הצג חיזוי \"מנגן כעת\" כרקע"
 
-# empty strings from id 31126 to 31127
 msgctxt "#31128"
 msgid "Lyrics"
-msgstr "מילות שירים"
+msgstr "מילות שיר"
 
 msgctxt "#31129"
 msgid "Hide fanart in full screen visualisation"
 msgstr "הסתר פאנארט כאשר חיזוי מוצג במסך מלא"
 
-# empty strings from id 31130 to 31131
 msgctxt "#31132"
 msgid "Lyrics add-on"
 msgstr "הרחבת מילות שירים"
 
-# empty string with id 31133
-#. In main language strings its used as submenu
 msgctxt "#31134"
 msgid "Home page \"Videos\" submenu"
 msgstr "תת תפריט וידאו במסך הבית"
@@ -314,31 +308,37 @@ msgctxt "#31136"
 msgid "Home page \"Pictures\" submenu"
 msgstr "תת תפריט תמונות במסך הבית"
 
-# empty strings from id 31137 to 31139
 msgctxt "#31140"
 msgid "Music OSD"
-msgstr "מסך תצוגת מוזיקה"
+msgstr "מוזיקה - תפריט צף (OSD)"
 
-# empty string with id 31141
 msgctxt "#31142"
 msgid "Settings level"
 msgstr "רמת הגדרות"
 
-# empty strings from id 31143 to 31199
-# Script labels
+msgctxt "#31143"
+msgid "Use"
+msgstr "שימוש"
+
+msgctxt "#31144"
+msgid "playlist"
+msgstr "רשימת נגינה"
+
+msgctxt "#31145"
+msgid "playlist path"
+msgstr "נתיב רשימת נגינה"
+
 msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "קיצורי דרך"
 
-# empty strings from id 31201 to 31202
 msgctxt "#31203"
 msgid "Choose your song"
 msgstr "בחירת השיר"
 
-# empty string with id 31204
 msgctxt "#31205"
 msgid "Lyrics source"
-msgstr "מקור למילים של השיר"
+msgstr "מקור מילות שיר"
 
 msgctxt "#31206"
 msgid "Found"
@@ -346,55 +346,52 @@ msgstr "נמצא"
 
 msgctxt "#31207"
 msgid "Find more items"
-msgstr "מצא פריטים נוספים"
+msgstr "מציאת פריטים נוספים"
 
 msgctxt "#31208"
 msgid "Upcoming episodes"
 msgstr "הפרקים הקרובים"
 
-# empty strings from id 31209 to 31299
-# Extra labels
+msgctxt "#31209"
+msgid "Hide Master profile main menu buttons"
+msgstr "הסתרת כפתורי התפריט הראשי בפרופיל הראשי"
+
 msgctxt "#31300"
 msgid "Current temperature"
-msgstr "טמפרטורה נוכחית"
+msgstr "טמפ' נוכחית"
 
 msgctxt "#31301"
 msgid "Last updated"
 msgstr "עודכן לאחרונה"
 
-# empty string with id 31302
 msgctxt "#31303"
 msgid "Data provider"
 msgstr "ספק מידע"
 
-# empty strings from id 31304 to 31307
 msgctxt "#31308"
 msgid "Movie details"
 msgstr "פרטי סרט"
 
 msgctxt "#31309"
 msgid "Memory used:"
-msgstr "‎זיכרון בשימוש:"
+msgstr "זכרון בשימוש:"
 
 msgctxt "#31310"
 msgid "Track number"
-msgstr "מספר הרצועה"
+msgstr "מספר רצועה"
 
-# empty strings from id 31311 to 31318
 msgctxt "#31319"
 msgid "Selected profile"
 msgstr "משתמש נבחר"
 
 msgctxt "#31320"
 msgid "Last logged in"
-msgstr "התחברות אחרונה"
+msgstr "חובר לאחרונה"
 
-# empty string with id 31321
 msgctxt "#31322"
 msgid "Aired"
-msgstr "משודר"
+msgstr "שודר"
 
-# empty strings from id 31323 to 31324
 msgctxt "#31325"
 msgid "Playlist options"
 msgstr "אפשרויות רשימת ניגון"
@@ -405,11 +402,11 @@ msgstr "נוצר"
 
 msgctxt "#31327"
 msgid "Resolution"
-msgstr "רזולוציה"
+msgstr "אבחנה"
 
 msgctxt "#31328"
 msgid "Recently added"
-msgstr "‎נוספו לאחרונה"
+msgstr "נוסף לאחרונה"
 
 msgctxt "#31329"
 msgid "[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]"
@@ -423,8 +420,6 @@ msgctxt "#31331"
 msgid "Album details"
 msgstr "פרטי אלבום"
 
-# empty strings from id 31332 to 31350
-# Video and Music OSD Labels
 msgctxt "#31351"
 msgid "Pause"
 msgstr "השהיה"
@@ -435,7 +430,7 @@ msgstr "עצירה"
 
 msgctxt "#31353"
 msgid "Fast forward"
-msgstr "הרץ קדימה"
+msgstr "הרצה קדימה"
 
 msgctxt "#31354"
 msgid "Rewind"
@@ -449,8 +444,6 @@ msgctxt "#31356"
 msgid "Download subtitles"
 msgstr "הורדת כתוביות"
 
-# empty strings from id 31357 to 31359
-# Stereoscopic labels
 msgctxt "#31360"
 msgid "Watch as 2D"
 msgstr "צפייה כ־2D"
@@ -463,7 +456,6 @@ msgctxt "#31362"
 msgid "Enabled"
 msgstr "פעיל"
 
-# empty strings from id 31363 to 31389
 msgctxt "#31390"
 msgid "Skin default"
 msgstr "ברירת מחדל של המעטפת"
@@ -474,9 +466,8 @@ msgstr "ברירת מחדל של המעטפת ללא רישיות"
 
 msgctxt "#31392"
 msgid "Arial based"
-msgstr "מבוסס אריאל"
+msgstr "מבוסס Arial"
 
-# empty strings from id 31393 to 31410
 msgctxt "#31411"
 msgid "First run help..."
 msgstr "סיוע היכרות..."
@@ -489,14 +480,13 @@ msgctxt "#31413"
 msgid "Local subtitle available"
 msgstr "כתובית מקומית זמינה"
 
-# empty strings from id 31414 to 31419
 msgctxt "#31420"
 msgid "Login"
 msgstr "כניסה"
 
 msgctxt "#31421"
 msgid "Select your Kodi user profile[CR]to login and continue"
-msgstr "יש לבחור חשבון משתמש בקודי[CR]להתחבר ולהמשיך"
+msgstr "יש לבחור חשבון משתמש Kodi[CR]להתחברות והמשך"
 
 msgctxt "#31422"
 msgid "Show or hide the login screen at startup."
@@ -506,59 +496,37 @@ msgctxt "#31423"
 msgid "Select the profile that will be used at startup when the login screen is disabled."
 msgstr "יש לבחור משתמש שיחובר כברירת מחדל בעת ההפעלה כאשר מסך כניסה מנוטרל."
 
-# empty strings from id 31424 to 31429
 msgctxt "#31430"
 msgid "[B]PLAYER SETTINGS[/B][CR][CR]Configure actions that can be used during playback · Configure how media content is played"
 msgstr "[B]הגדרות נגן[/B][CR][CR] הגדרת פעולות שיכולות להיות בשימוש במהלך ניגון · הגדר איך תוכן מדיה מנוגן"
 
 msgctxt "#31431"
 msgid "[B]LIBRARY SETTINGS[/B][CR][CR]Configure how the library/file views display media content ·  Configure how library lists/views are navigated · Configure the media database options"
-msgstr ""
-"[B]הגדרות ספריה[/B][CR][CR]\n"
-"הגדר איך מוצג תוכן של ספריה/קובץ\n"
-"הגדרך איך רשימה/תצוגה של ספרייה מנווטת\n"
-"הגדר אפשרויות של מאגר המידע של המדיה"
+msgstr "[B]הגדרות ספריה[/B][CR][CR]\nהגדר איך מוצג תוכן של ספריה/קובץ\nהגדרך איך רשימה/תצוגה של ספרייה מנווטת\nהגדר אפשרויות של מאגר המידע של המדיה"
 
 msgctxt "#31432"
 msgid "[B]PVR SETTINGS[/B][CR][CR]Configure how the channels & guide are managed  · Configure how Live TV and recordings are managed"
-msgstr ""
-"[B]הגדרות מקליט וידאו אישי[/B][CR][CR]\n"
-"הגדר איך מנוהלים ערוצים ולוח שידורים\n"
-"הגדר איך מנוהלים טלוויזיה חיה והקלטות "
+msgstr "[B]הגדרות מקליט וידאו אישי[/B][CR][CR]\nהגדר איך מנוהלים ערוצים ולוח שידורים\nהגדר איך מנוהלים טלוויזיה חיה והקלטות "
 
 msgctxt "#31433"
 msgid "[B]ADD-ONS SETTINGS[/B][CR][CR]Configure your installed add-ons · Browse for and install add-ons from kodi.tv"
-msgstr ""
-"[B]הגדרת הרחבות[/B][CR][CR]\n"
-"הגדר את ההרחבות המותקנות שלך\n"
-"נווט והתקן הרחבות מ kodi.tv"
+msgstr "[B]הגדרת הרחבות[/B][CR][CR]\nהגדר את ההרחבות המותקנות שלך\nנווט והתקן הרחבות מ kodi.tv"
 
 msgctxt "#31434"
 msgid "[B]SERVICES SETTINGS[/B][CR][CR]Configure & manage media sharing services · Configure web server · Configure & manage the weather service"
-msgstr ""
-"[B]הגדרות שירותים[/B][CR][CR]\n"
-"הגדר ונהל שרותי שיתוף מדיה\n"
-"הגדר שרת אינטרנט\n"
-"הגדר ונהל שרות מזג אוויר"
+msgstr "[B]הגדרות שירותים[/B][CR][CR]\nהגדר ונהל שרותי שיתוף מדיה\nהגדר שרת אינטרנט\nהגדר ונהל שרות מזג אוויר"
 
 msgctxt "#31435"
 msgid "[B]SYSTEM SETTINGS[/B][CR][CR]Configure display · Configure audio · Configure internet access · Configure power saving· Configure logging"
-msgstr ""
-"[B]הגדרות מערכת[/B][CR][CR]\n"
-"הגדר מסכים\n"
-"הגדר אודיו\n"
-"הגדר גישה לאינטרנט\n"
-"הגדר חיסכון בחשמל\n"
-"הגדר רישום"
+msgstr "[B]הגדרות מערכת[/B][CR][CR]\nהגדר מסכים\nהגדר אודיו\nהגדר גישה לאינטרנט\nהגדר חיסכון בחשמל\nהגדר רישום"
 
 msgctxt "#31436"
 msgid "[B]INTERFACE SETTINGS[/B][CR][CR]Configure skin · Configure region · Configure control · Configure screensaver · Configure master lock"
 msgstr "[B]הגדרות ממשק[/B][CR][CR]הגדרת מעטפת · הגדרת אזור · הגדרת בקרה · הגדרת שומר מסך  · הגדרת נעילה מרכזית"
 
-# empty strings from id 31437 to 31500
 msgctxt "#31501"
 msgid "Scheduled time"
-msgstr "זמן מתוזמן"
+msgstr "זמן מתוכנן"
 
 msgctxt "#31502"
 msgid "TV"
@@ -566,46 +534,43 @@ msgstr "טלוויזיה"
 
 msgctxt "#31503"
 msgid "Add group"
-msgstr "הוסף קבוצה"
+msgstr "הוספת קבוצה"
 
 msgctxt "#31504"
 msgid "Rename group"
-msgstr "שנה שם קבוצה"
+msgstr "שינוי שם קבוצה"
 
 msgctxt "#31505"
 msgid "Delete group"
-msgstr "משתמש חסר"
+msgstr "מחיקת קבוצה"
 
 msgctxt "#31506"
 msgid "Available[CR]Groups"
 msgstr "קבוצות[CR]זמינות"
 
-# empty strings from id 31507 to 31508
 msgctxt "#31509"
 msgid "Channel group"
 msgstr "קבוצת ערוצים"
 
 msgctxt "#31510"
 msgid "Timer set"
-msgstr "נקבע שעון עצר"
+msgstr "תזמון נקבע"
 
 msgctxt "#31511"
 msgid "Channel options"
-msgstr "אפשרויות ערוצים"
+msgstr "אפשרויות ערוץ"
 
-# empty strings from id 31512 to 31900
-# Weather plugin
 msgctxt "#31901"
 msgid "36-hour forecast"
 msgstr "תחזית ל־36 שעות"
 
 msgctxt "#31902"
 msgid "Hourly forecast"
-msgstr "תחזית לשעה הקרובה"
+msgstr "תחזית לפי שעה"
 
 msgctxt "#31903"
 msgid "Weekend forecast"
-msgstr "תחזית לסוף השבוע"
+msgstr "תחזית לסופ\"ש"
 
 msgctxt "#31904"
 msgid "Daily forecast"
@@ -615,7 +580,6 @@ msgctxt "#31905"
 msgid "Forecast"
 msgstr "תחזית"
 
-# empty strings from id 31906 to 31908
 msgctxt "#31909"
 msgid "Fetching forecast info..."
 msgstr "משיג פרטי תחזית..."
@@ -624,10 +588,9 @@ msgctxt "#31910"
 msgid "Maps"
 msgstr "מפות"
 
-# empty strings from id 31911 to 31949
 msgctxt "#31950"
 msgid "WEATHER"
-msgstr "מזג אויר"
+msgstr "מזג אוויר"
 
 msgctxt "#31951"
 msgid "PICTURES"
@@ -635,11 +598,11 @@ msgstr "תמונות"
 
 msgctxt "#31952"
 msgid "TV"
-msgstr "סדרות"
+msgstr "טלוויזיה"
 
 msgctxt "#31953"
 msgid "VIDEOS"
-msgstr "סרטונים"
+msgstr "וידאו"
 
 msgctxt "#31954"
 msgid "MOVIES"
@@ -653,9 +616,13 @@ msgctxt "#31956"
 msgid "MUSIC"
 msgstr "מוזיקה"
 
+msgctxt "#31957"
+msgid "ADD-ONS"
+msgstr "הרחבות"
+
 msgctxt "#31958"
 msgid "PLAY DISC"
-msgstr "נגן תקליטור"
+msgstr "נגן דיסק"
 
 msgctxt "#31959"
 msgid "SYSTEM"
@@ -669,6 +636,14 @@ msgctxt "#31961"
 msgid "Timeshift"
 msgstr "הסט זמן"
 
+msgctxt "#31962"
+msgid "Choose kind of profile identification"
+msgstr "לבחור סוג של זיהוי פרופיל"
+
 msgctxt "#31963"
 msgid "Profile name"
 msgstr "שם משתמש"
+
+msgctxt "#31964"
+msgid "Profile avatar"
+msgstr "דמות מייצגת לפרופיל"
