@@ -216,7 +216,7 @@
 			<description>Default RadioButton</description>
 			<left>{{ScaleX('0')}}</left>
 			<top>{{ScaleY('0')}}</top>
-			<height>{{ScaleY('40')}}</height>
+			<height>{{ScaleY('{{ 40 + {SettingsExtraLineheight}  }}')}}</height>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -227,7 +227,7 @@
 			<description>Default SpinControlex</description>
 			<left>{{ScaleX('0')}}</left>
 			<top>{{ScaleY('0')}}</top>
-			<height>{{ScaleY('40')}}</height>
+			<height>{{ScaleY('{{ 40 + {SettingsExtraLineheight}  }}')}}</height>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -240,7 +240,7 @@
 			<description>Default Slider</description>
 			<posx>{{ScaleX('0')}}</posx>
 			<posy>{{ScaleY('0')}}</posy>
-			<height>{{ScaleY('40')}}</height>
+			<height>{{ScaleY('{{ 40 + {SettingsExtraLineheight}  }}')}}</height>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -257,7 +257,7 @@
 			<description>Default Label</description>
 			<left>{{ScaleX('0')}}</left>
 			<top>{{ScaleY('0')}}</top>
-			<height>{{ScaleY('30')}}</height>
+			<height>{{ScaleY('{{ 30 + {SettingsExtraLineheight}  }}')}}</height>
 			<label/>
 			<align>center</align>
 			<aligny>bottom</aligny>

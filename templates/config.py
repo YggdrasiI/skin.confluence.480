@@ -41,6 +41,8 @@ substitutions = {
     "SettingProfileExtraWidth": 260,  # 0
     "SideBladeExtraWidth": 300,  # 0
 
+    "SettingsExtraLineheight": 10,  # 0
+
     "WeatherLeftExtraW": 100,  # 0
     "WeatherLeftExtraW2": 60,  # 0
     "WeatherListExtraH": 26,  # 0, increases width between Wind and Sunset

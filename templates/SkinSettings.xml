@@ -211,6 +211,7 @@
 					</control>
 					<control type="radiobutton" id="101">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>20189</label>
@@ -223,6 +224,7 @@
 					</control>
 					<control type="radiobutton" id="102">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31103</label>
@@ -235,6 +237,7 @@
 					</control>
 					<control type="radiobutton" id="112">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31104</label>
@@ -247,6 +250,7 @@
 					</control>
 					<control type="radiobutton" id="113">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31107</label>
@@ -259,6 +263,7 @@
 					</control>
 					<control type="radiobutton" id="116">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31122</label>
@@ -271,6 +276,7 @@
 					</control>
 					<control type="button" id="117">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31962</label>
@@ -283,6 +289,7 @@
 					</control>
 					<control type="radiobutton" id="1010">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>Kiosk Mode (Disables several slideout menus)</label>
@@ -336,6 +343,7 @@
 					<control type="radiobutton" id="202">
 						<description>enable video info</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -349,6 +357,7 @@
 					<control type="radiobutton" id="203">
 						<description>enable music info</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -362,6 +371,7 @@
 					<control type="radiobutton" id="204">
 						<description>enable weather info</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -376,6 +386,7 @@
 					<control type="radiobutton" id="205">
 						<description>Show Recently added Video info</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -389,6 +400,7 @@
 					<control type="radiobutton" id="206">
 						<description>Show Recently added info</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -402,6 +414,7 @@
 					<!-- Home screen buttons -->				
 					<control type="label" id="210">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('45')}}</height>
 						<font>font13_title</font>
 						<label>31146</label>
@@ -413,6 +426,7 @@
 					<control type="radiobutton" id="211">
 						<description>Show Search button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -426,6 +440,7 @@
 					<control type="radiobutton" id="212">
 						<description>Show Search button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -450,6 +465,7 @@
 					<control type="radiobutton" id="221">
 						<description>Hide Videos Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -463,6 +479,7 @@
 					<control type="radiobutton" id="222">
 						<description>Hide Movies Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -477,6 +494,7 @@
 					<control type="radiobutton" id="223">
 						<description>Hide TV Shows Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -491,6 +509,7 @@
 					<control type="radiobutton" id="224">
 						<description>Hide Music Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -504,6 +523,7 @@
 					<control type="radiobutton" id="225">
 						<description>Hide Pictures Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -517,6 +537,7 @@
 					<control type="radiobutton" id="226">
 						<description>Hide Programs Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -530,6 +551,7 @@
 					<control type="radiobutton" id="228">
 						<description>Hide Weather Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -543,6 +565,7 @@
 					<control type="radiobutton" id="229">
 						<description>Hide Games Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -556,6 +579,7 @@
 					<control type="radiobutton" id="240">
 						<description>Hide Settings Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -580,6 +604,7 @@
 					<control type="radiobutton" id="241">
 						<description>Use Movies playlist</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -593,6 +618,7 @@
 					</control>
 					<control type="button" id="242">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>- $LOCALIZE[20342] $LOCALIZE[31145]: </label>
@@ -607,6 +633,7 @@
 					<control type="radiobutton" id="243">
 						<description>Use TV Shows playlist</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -620,6 +647,7 @@
 					</control>
 					<control type="button" id="244">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>- $LOCALIZE[20343] $LOCALIZE[31145]: </label>
@@ -634,6 +662,7 @@
 					<control type="radiobutton" id="245">
 						<description>Use Music playlist</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -646,6 +675,7 @@
 					</control>
 					<control type="button" id="246">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>- $LOCALIZE[2] $LOCALIZE[31145]: </label>
@@ -671,6 +701,7 @@
 					<control type="radiobutton" id="231">
 						<description>Hide Videos Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -684,6 +715,7 @@
 					<control type="radiobutton" id="232">
 						<description>Hide Movies Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -698,6 +730,7 @@
 					<control type="radiobutton" id="233">
 						<description>Hide TV Shows Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -712,6 +745,7 @@
 					<control type="radiobutton" id="234">
 						<description>Hide Music Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -725,6 +759,7 @@
 					<control type="radiobutton" id="235">
 						<description>Hide Pictures Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -738,6 +773,7 @@
 					<control type="radiobutton" id="236">
 						<description>Hide Programs Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -751,6 +787,7 @@
 					<control type="radiobutton" id="238">
 						<description>Hide Weather Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -764,6 +801,7 @@
 					<control type="radiobutton" id="239">
 						<description>Hide Games Button</description>
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -815,6 +853,7 @@
 					</control>
 					<control type="radiobutton" id="301">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31119</label>
@@ -827,6 +866,7 @@
 					</control>
 					<control type="radiobutton" id="302">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31129</label>
@@ -839,6 +879,7 @@
 					</control>
 					<control type="radiobutton" id="303">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31124</label>
@@ -851,6 +892,7 @@
 					</control>
 					<control type="radiobutton" id="304">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31125</label>
@@ -873,6 +915,7 @@
 					</control>
 					<control type="radiobutton" id="311">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>31109</label>
@@ -885,6 +928,7 @@
 					</control>
 					<control type="button" id="312">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>- $LOCALIZE[31110]</label>
@@ -898,6 +942,7 @@
 					</control>
 					<control type="button" id="313">
 						<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 						<height>{{ScaleY('40')}}</height>
 						<font>font13</font>
 						<label>- $LOCALIZE[31113]</label>
@@ -935,6 +980,7 @@
 						</control>
 						<control type="button" id="401">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[31132]</label>
@@ -947,6 +993,7 @@
 						</control>
 						<control type="button" id="402">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>- $LOCALIZE[24020]</label>
@@ -969,6 +1016,7 @@
 						</control>
 						<control type="button" id="411">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]1[/B]</label>
@@ -981,6 +1029,7 @@
 						</control>
 						<control type="button" id="412">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]2[/B]</label>
@@ -993,6 +1042,7 @@
 						</control>
 						<control type="button" id="413">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]3[/B]</label>
@@ -1005,6 +1055,7 @@
 						</control>
 						<control type="button" id="414">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]4[/B]</label>
@@ -1017,6 +1068,7 @@
 						</control>
 						<control type="button" id="415">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]5[/B]</label>
@@ -1039,6 +1091,7 @@
 						</control>
 						<control type="button" id="421">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]1[/B]</label>
@@ -1051,6 +1104,7 @@
 						</control>
 						<control type="button" id="422">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]2[/B]</label>
@@ -1063,6 +1117,7 @@
 						</control>
 						<control type="button" id="423">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]3[/B]</label>
@@ -1075,6 +1130,7 @@
 						</control>
 						<control type="button" id="424">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]4[/B]</label>
@@ -1087,6 +1143,7 @@
 						</control>
 						<control type="button" id="425">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]5[/B]</label>
@@ -1109,6 +1166,7 @@
 						</control>
 						<control type="button" id="431">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]1[/B]</label>
@@ -1121,6 +1179,7 @@
 						</control>
 						<control type="button" id="432">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]2[/B]</label>
@@ -1133,6 +1192,7 @@
 						</control>
 						<control type="button" id="433">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]3[/B]</label>
@@ -1145,6 +1205,7 @@
 						</control>
 						<control type="button" id="434">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]4[/B]</label>
@@ -1157,6 +1218,7 @@
 						</control>
 						<control type="button" id="435">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]5[/B]</label>
@@ -1179,6 +1241,7 @@
 						</control>
 						<control type="button" id="441">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]1[/B]</label>
@@ -1191,6 +1254,7 @@
 						</control>
 						<control type="button" id="442">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]2[/B]</label>
@@ -1203,6 +1267,7 @@
 						</control>
 						<control type="button" id="443">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]3[/B]</label>
@@ -1215,6 +1280,7 @@
 						</control>
 						<control type="button" id="444">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]4[/B]</label>
@@ -1227,6 +1293,7 @@
 						</control>
 						<control type="button" id="445">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]5[/B]</label>
@@ -1249,6 +1316,7 @@
 						</control>
 						<control type="button" id="451">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]1[/B]</label>
@@ -1261,6 +1329,7 @@
 						</control>
 						<control type="button" id="452">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]2[/B]</label>
@@ -1273,6 +1342,7 @@
 						</control>
 						<control type="button" id="453">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]3[/B]</label>
@@ -1285,6 +1355,7 @@
 						</control>
 						<control type="button" id="454">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]4[/B]</label>
@@ -1297,6 +1368,7 @@
 						</control>
 						<control type="button" id="455">
 							<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
+						<textwidth>{{ScaleX({{ 680 + {SettingPanelExtraWidthR} }})}}</textwidth>
 							<height>{{ScaleY('40')}}</height>
 							<font>font13</font>
 							<label>$LOCALIZE[24000] [B]5[/B]</label>
