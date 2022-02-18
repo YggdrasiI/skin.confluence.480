@@ -2,7 +2,7 @@
 Define substitutions dict here with all defined variables for the templates.
 Notes:
     • The value after  # was the standard value.
-    • Pixel sizes are related to input resolution.
+    • Dimensions are relative to input resolution.
     • Currently, most <textwidth>-Tags will not be scaled. The factor
       GlobalFontScaling would be a good basis if you want change that.
 """

@@ -299,7 +299,7 @@
 							<top>{{ScaleY('2')}}</top>
 							<width>{{ScaleX('47')}}</width>
 							<height>{{ScaleY('35')}}</height>
-							<font>font13</font>
+							<font>font12</font>
 							<align>left</align>
 							<label>$INFO[VideoPlayer.AudioLanguage]</label>
 							<textcolor>grey</textcolor>

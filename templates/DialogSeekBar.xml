@@ -10,13 +10,13 @@
 	<controls>
 		<control type="group">
 			<visible>Window.IsVisible(FullscreenVideo) + ![Player.HasGame | VideoPlayer.HasEpg]</visible>
-			<left>{{ScaleX('850r')}}</left>
+			<left>{{ScaleX('200r')}}</left>
 			<top>{{ScaleY('-6')}}</top>
 			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('150')}}</width>
+				<width>{{ScaleX({{ 150 + 30  }})}}</width>
 				<height>{{ScaleY('70')}}</height>
 				<colordiffuse>EEFFFFFF</colordiffuse>
 				<texture border="{{ScaleBorder('12')}}">OverlayDialogBackground.png</texture>
@@ -25,11 +25,11 @@
 				<description>End time label</description>
 				<left>{{ScaleX('20')}}</left>
 				<top>{{ScaleY('10')}}</top>
-				<width>{{ScaleX('110')}}</width>
+				<width>{{ScaleX({{ 110 + 30  }})}}</width>
 				<height>{{ScaleY('20')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>font12_title</font>
+				<font>font10_title</font>
 				<textcolor>blue</textcolor>
 				<scroll>true</scroll>
 				<label>$LOCALIZE[31049]</label>
@@ -38,7 +38,7 @@
 				<description>End time from infolabel</description>
 				<left>{{ScaleX('20')}}</left>
 				<top>{{ScaleY('30')}}</top>
-				<width>{{ScaleX('110')}}</width>
+				<width>{{ScaleX({{ 110 + 30  }})}}</width>
 				<height>{{ScaleY('20')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>

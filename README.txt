@@ -80,3 +80,11 @@ Notes for developers:
       cd /dev/shm ; zip -r skin.confluence.480.zip skin.confluence.480
 
    8. Copy skin-zip to media center and resolve errors.
+
+
+
+	• Testing:
+	```
+	./parseTemplates.py -f --out ~/.kodi/addons/skin.confluence.480/out/
+	 kodi-send --action="ReloadSkin()"
+	```
