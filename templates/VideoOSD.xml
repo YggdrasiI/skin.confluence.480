@@ -28,9 +28,9 @@
 		<control type="slider" id="87">
 			<depth>DepthOSD+</depth>
 			<description>Seek Slider</description>
-			<left>{{ScaleX('430')}}</left>
+			<left>{{ScaleX({{ int( 430 - ({OSDSeekSliderWidth}-720)/2) }})}}</left>
 			<top>{{ScaleY('82r')}}</top>
-			<width>{{ScaleX('720')}}</width>
+			<width>{{ScaleX({OSDSeekSliderWidth})}}</width>
 			<height>{{ScaleY('16')}}</height>
 			<onup>702</onup>
 			<ondown>26</ondown>
@@ -38,6 +38,7 @@
 			<texturesliderbar>seekslider2.png</texturesliderbar>
 			<textureslidernib>osd_slider_nibNF.png</textureslidernib>
 			<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+			<orientation>horizontal</orientation>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV)]</visible>
 		</control>
@@ -265,7 +266,7 @@
 		<control type="button" id="410">
 			<description>Fake button for mouse control</description>
 			<right>{{ScaleX('145')}}</right>
-			<bottom>60</bottom>
+			<bottom>{{ScaleY('60')}}</bottom>
 			<width>{{ScaleX('256')}}</width>
 			<height>{{ScaleY('250')}}</height>
 			<label/>
@@ -277,9 +278,9 @@
 		</control>
 		<control type="button" id="520">
 			<description>Fake button for mouse control</description>
-			<right>{{ScaleX('200')}}</right>
-			<bottom>60</bottom>
-			<width>{{ScaleX('256')}}</width>
+			<right>{{ScaleX({{ {OSDSubtitleMenuWidth} - 56 }})}}</right>
+			<bottom>{{ScaleY('60')}}</bottom>
+			<width>{{ScaleX({{ {OSDSubtitleMenuWidth} }})}}</width>
 			<height>{{ScaleY('210')}}</height>
 			<label/>
 			<font/>
@@ -294,9 +295,9 @@
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('55,0')}}" time="0" condition="![VideoPlayer.HasMenu | VideoPlayer.Content(LiveTV)]">Conditional</animation>
 			<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('55,0')}}" time="0" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
-			<right>{{ScaleX('200')}}</right>
-			<bottom>45</bottom>
-			<width>{{ScaleX('256')}}</width>
+			<right>{{ScaleX({{ {OSDSubtitleMenuWidth} - 56 }})}}</right>
+			<bottom>{{ScaleY('45')}}</bottom>
+			<width>{{ScaleX({{ {OSDSubtitleMenuWidth} }})}}</width>
 			<height>{{ScaleY('220')}}</height>
 			<itemgap>0</itemgap>
 			<onleft>100</onleft>
@@ -307,20 +308,20 @@
 			<include>VisibleFadeEffect</include>
 			<control type="group">
 				<description>Header</description>
-				<width>{{ScaleX('256')}}</width>
+				<width>{{ScaleX({{ {OSDSubtitleMenuWidth} }})}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<control type="image">
 					<description>Header</description>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('256')}}</width>
+					<width>{{ScaleX({{ {OSDSubtitleMenuWidth} }})}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<texture border="{{ScaleBorder('20,18,20,0')}}">SubMenuBack-Header.png</texture>
 				</control>
 				<control type="label">
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('20')}}</top>
-					<width>{{ScaleX('256')}}</width>
+					<width>{{ScaleX({{ {OSDSubtitleMenuWidth} }})}}</width>
 					<height>{{ScaleY('15')}}</height>
 					<font>font12</font>
 					<label>36501</label>
@@ -331,12 +332,12 @@
 			</control>
 			<control type="radiobutton" id="503">
 				<height>{{ScaleY('40')}}</height>
-				<width>{{ScaleX('256')}}</width>
+				<width>{{ScaleX({{ {OSDSubtitleMenuWidth} }})}}</width>
 				<textoffsetx>{{ScaleX('30')}}</textoffsetx>
 				<aligny>center</aligny>
 				<font>font13</font>
 				<label>31362</label>
-				<radioposx>{{ScaleX('200')}}</radioposx>
+				<radioposx>{{ScaleX({{ {OSDSubtitleMenuWidth} - 56 }})}}</radioposx>
 				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
 				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
 				<onclick>ToggleStereoMode</onclick>
@@ -345,7 +346,7 @@
 			</control>
 			<control type="button" id="502">
 				<height>{{ScaleY('40')}}</height>
-				<width>{{ScaleX('256')}}</width>
+				<width>{{ScaleX({{ {OSDSubtitleMenuWidth} }})}}</width>
 				<aligny>center</aligny>
 				<font>font13</font>
 				<textoffsetx>{{ScaleX('30')}}</textoffsetx>
@@ -357,12 +358,12 @@
 			</control>
 			<control type="radiobutton" id="501">
 				<height>{{ScaleY('40')}}</height>
-				<width>{{ScaleX('256')}}</width>
+				<width>{{ScaleX({{ {OSDSubtitleMenuWidth} }})}}</width>
 				<textoffsetx>{{ScaleX('30')}}</textoffsetx>
 				<aligny>center</aligny>
 				<font>font13</font>
 				<label>31360</label>
-				<radioposx>{{ScaleX('200')}}</radioposx>
+				<radioposx>{{ScaleX({{ {OSDSubtitleMenuWidth} - 56 }})}}</radioposx>
 				<texturefocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleFO.png</texturefocus>
 				<texturenofocus border="{{ScaleBorder('25,5,25,5')}}">SubMenuBack-MiddleNF.png</texturenofocus>
 				<onclick>StereoModeToMono</onclick>
@@ -371,7 +372,7 @@
 			</control>
 			<control type="image" id="549">
 				<description>Footer</description>
-				<width>{{ScaleX('256')}}</width>
+				<width>{{ScaleX({{ {OSDSubtitleMenuWidth} }})}}</width>
 				<height>{{ScaleY('52')}}</height>
 				<texture border="{{ScaleBorder('20,0,20,50')}}">SubMenuBack-Footer.png</texture>
 			</control>

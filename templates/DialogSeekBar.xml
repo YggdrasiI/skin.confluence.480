@@ -93,13 +93,13 @@
 			<control type="image">
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('370')}}</width>
-				<height>{{ScaleY('70')}}</height>
+				<width>{{ScaleX({DialogSeekBarWidth})}}</width>
+				<height>{{ScaleY({DialogSeekBarHeight})}}</height>
 				<colordiffuse>EEFFFFFF</colordiffuse>
 				<texture border="{{ScaleBorder('12')}}">OverlayDialogBackground.png</texture>
 			</control>
 			<control type="group">
-				<left>{{ScaleX('260')}}</left>
+				<left>{{ScaleX({{ {DialogSeekBarWidth} - 110 }})}}</left>
 				<top>{{ScaleY('10')}}</top>
 				<control type="image">
 					<left>{{ScaleX('10')}}</left>
@@ -281,8 +281,8 @@
 				<description>Seekbar Label</description>
 				<left>{{ScaleX('20')}}</left>
 				<top>{{ScaleY('7')}}</top>
-				<width>{{ScaleX('240')}}</width>
-				<height>{{ScaleY('20')}}</height>
+				<width>{{ScaleX({{ {DialogSeekBarWidth} - 130 }})}}</width>
+				<height>{{ScaleY({{ int(20 + ({DialogSeekBarHeight}-70)/2) }})}}</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font10_title</font>

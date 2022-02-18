@@ -21,7 +21,7 @@
 				<control type="image">
 					<left>{{ScaleX('50')}}</left>
 					<top>{{ScaleY('60')}}</top>
-					<width>{{ScaleX('450')}}</width>
+					<width>{{ScaleX({{ 450 + {MyPVRChannelsLeftExtraWidth} }})}}</width>
 					<height>{{ScaleY('600')}}</height>
 					<texture border="{{ScaleBorder('15')}}">ContentPanel.png</texture>
 				</control>
@@ -29,21 +29,21 @@
 			<control type="image">
 				<left>{{ScaleX('50')}}</left>
 				<top>{{ScaleY('652')}}</top>
-				<width>{{ScaleX('450')}}</width>
+				<width>{{ScaleX({{ 450 + {MyPVRChannelsLeftExtraWidth} }})}}</width>
 				<height>{{ScaleY('64')}}</height>
 				<texture border="{{ScaleBorder('15')}}">ContentPanelMirror.png</texture>
 			</control>
 			<control type="image">
-				<left>{{ScaleX('510')}}</left>
+				<left>{{ScaleX({{ 510 + {MyPVRChannelsLeftExtraWidth} }})}}</left>
 				<top>{{ScaleY('60')}}</top>
-				<width>{{ScaleX('730')}}</width>
+				<width>{{ScaleX({{ 730 - {MyPVRChannelsLeftExtraWidth} }})}}</width>
 				<height>{{ScaleY('600')}}</height>
 				<texture border="{{ScaleBorder('15')}}">ContentPanel.png</texture>
 			</control>
 			<control type="image">
-				<left>{{ScaleX('510')}}</left>
+				<left>{{ScaleX({{ 510 + {MyPVRChannelsLeftExtraWidth} }})}}</left>
 				<top>{{ScaleY('652')}}</top>
-				<width>{{ScaleX('730')}}</width>
+				<width>{{ScaleX({{ 730 - {MyPVRChannelsLeftExtraWidth} }})}}</width>
 				<height>{{ScaleY('64')}}</height>
 				<texture border="{{ScaleBorder('15')}}">ContentPanelMirror.png</texture>
 			</control>
@@ -52,21 +52,21 @@
 		<include>PVRHeader</include>
 		<control type="group">
 			<description>Small Media Window</description>
-			<left>{{ScaleX('530')}}</left>
+			<left>{{ScaleX({{ 530 + {MyPVRChannelsLeftExtraWidth} }})}}</left>
 			<top>{{ScaleY('80')}}</top>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
 			<control type="image">
 				<left>{{ScaleX('0')}}</left>
 				<top>{{ScaleY('0')}}</top>
-				<width>{{ScaleX('690')}}</width>
-				<height>{{ScaleY('400')}}</height>
+				<width>{{ScaleX({{ 690 - {MyPVRChannelsLeftExtraWidth} }})}}</width>
+				<height>{{ScaleY({{ {MyPVRChannelsPreviewHeight} - 0 }})}}</height>
 				<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 			</control>
 			<control type="button" id="61">
 				<left>{{ScaleX('-1')}}</left>
 				<top>{{ScaleY('-1')}}</top>
-				<width>{{ScaleX('692')}}</width>
+				<width>{{ScaleX({{ 692 - {MyPVRChannelsLeftExtraWidth} }})}}</width>
 				<height>{{ScaleY('402')}}</height>
 				<texturefocus border="{{ScaleBorder('3')}}">VideoWindowFO.png</texturefocus>
 				<texturenofocus/>
@@ -79,8 +79,8 @@
 			<control type="image">
 				<left>{{ScaleX('5')}}</left>
 				<top>{{ScaleY('5')}}</top>
-				<width>{{ScaleX('680')}}</width>
-				<height>{{ScaleY('390')}}</height>
+				<width>{{ScaleX({{ 680 - {MyPVRChannelsLeftExtraWidth} }})}}</width>
+				<height>{{ScaleY({{ {MyPVRChannelsPreviewHeight} - 10 }})}}</height>
 				<texture>special://skin/backgrounds/tv.jpg</texture>
 				<include>VisibleFadeEffect</include>
 				<visible>!Player.HasVideo</visible>
@@ -88,8 +88,8 @@
 			<control type="videowindow">
 				<left>{{ScaleX('5')}}</left>
 				<top>{{ScaleY('5')}}</top>
-				<width>{{ScaleX('680')}}</width>
-				<height>{{ScaleY('390')}}</height>
+				<width>{{ScaleX({{ 680 - {MyPVRChannelsLeftExtraWidth} }})}}</width>
+				<height>{{ScaleY({{ {MyPVRChannelsPreviewHeight} - 10 }})}}</height>
 				<visible>Player.HasVideo</visible>
 				<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-2000,0')}}" time="0">WindowClose</animation>
 			</control>
@@ -99,13 +99,13 @@
 			<description>TV Channels group</description>
 			<include>VisibleFadeEffect</include>
 			<control type="group">
-				<left>{{ScaleX('530')}}</left>
-				<top>{{ScaleY('490')}}</top>
+				<left>{{ScaleX({{ 530 + {MyPVRChannelsLeftExtraWidth} }})}}</left>
+				<top>{{ScaleY({{ 90 + {MyPVRChannelsPreviewHeight} - {MyPVRChannelsRightExtraHeight} }})}}</top>
 				<visible>![Control.IsVisible(50) + !String.IsEmpty(Window.Property(IsRadio)) + System.GetBool(PVRPlayback.EnableRadioRDS) + !Skin.HasSetting(HideEPGwithRDS) + RDS.HasRDS]</visible>
 				<control type="label">
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('690')}}</width>
+					<width>{{ScaleX({{ 690 - {MyPVRChannelsLeftExtraWidth} }})}}</width>
 					<height>{{ScaleY('20')}}</height>
 					<font>font13</font>
 					<textcolor>white</textcolor>
@@ -131,13 +131,13 @@
 					<description>Progressbar</description>
 					<left>{{ScaleX('85')}}</left>
 					<top>{{ScaleY('30')}}</top>
-					<width>{{ScaleX('510')}}</width>
+					<width>{{ScaleX({{ 510 - {MyPVRChannelsLeftExtraWidth} }})}}</width>
 					<height>{{ScaleY('8')}}</height>
 					<visible>Container(50).ListItem.HasEpg</visible>
 					<info>Container(50).ListItem.Progress</info>
 				</control>
 				<control type="label">
-					<left>{{ScaleX('600')}}</left>
+					<left>{{ScaleX({{ 600 - {MyPVRChannelsLeftExtraWidth} }})}}</left>
 					<top>{{ScaleY('22')}}</top>
 					<width>{{ScaleX('80')}}</width>
 					<height>{{ScaleY('20')}}</height>
@@ -152,8 +152,8 @@
 					<description>Plot Value for TVShow</description>
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('52')}}</top>
-					<width>{{ScaleX('690')}}</width>
-					<height>{{ScaleY('72')}}</height>
+					<width>{{ScaleX({{ 690 - {MyPVRChannelsLeftExtraWidth} }})}}</width>
+					<height>{{ScaleY({{ 72 + (400 - {MyPVRChannelsPreviewHeight}) + {MyPVRChannelsRightExtraHeight} }})}}</height>
 					<font>font13</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>
@@ -164,8 +164,8 @@
 				</control>
 				<control type="label">
 					<left>{{ScaleX('0')}}</left>
-					<top>{{ScaleY('140')}}</top>
-					<width>{{ScaleX('690')}}</width>
+					<top>{{ScaleY({{ 140 + (400 - {MyPVRChannelsPreviewHeight}) + {MyPVRChannelsRightExtraHeight} }})}}</top>
+					<width>{{ScaleX({{ 690 - {MyPVRChannelsLeftExtraWidth} }})}}</width>
 					<height>{{ScaleY('20')}}</height>
 					<font>font12</font>
 					<textcolor>grey2</textcolor>
@@ -180,7 +180,7 @@
 				<control type="list" id="50">
 					<left>{{ScaleX('70')}}</left>
 					<top>{{ScaleY('85')}}</top>
-					<width>{{ScaleX('390')}}</width>
+					<width>{{ScaleX({{ 390 + {MyPVRChannelsLeftExtraWidth} }})}}</width>
 					<height>{{ScaleY('541')}}</height>
 					<onleft>100</onleft>
 					<onright>70</onright>
@@ -189,12 +189,12 @@
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>70</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="{{ScaleY('60')}}" width="{{ScaleX('390')}}">
+					<itemlayout height="{{ScaleY({MyPVRChannelsLeftItemHeight})}}" width="{{ScaleX({{ 390 + {MyPVRChannelsLeftExtraWidth} }})}}">
 						<control type="image">
 							<left>{{ScaleX('0')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('390')}}</width>
-							<height>{{ScaleY('61')}}</height>
+							<width>{{ScaleX({{ 390 + {MyPVRChannelsLeftExtraWidth} }})}}</width>
+							<height>{{ScaleY({{ 1 + {MyPVRChannelsLeftItemHeight} }})}}</height>
 							<texture border="{{ScaleBorder('2')}}">MenuItemNF.png</texture>
 							<include>VisibleFadeEffect</include>
 						</control>
@@ -213,7 +213,7 @@
 						<control type="label">
 							<left>{{ScaleX('50')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('270')}}</width>
+							<width>{{ScaleX({{ 270 + {MyPVRChannelsLeftExtraWidth} }})}}</width>
 							<height>{{ScaleY('25')}}</height>
 							<font>font13</font>
 							<textcolor>white</textcolor>
@@ -224,8 +224,8 @@
 						</control>
 						<control type="label">
 							<left>{{ScaleX('50')}}</left>
-							<top>{{ScaleY('25')}}</top>
-							<width>{{ScaleX('330')}}</width>
+							<top>{{ScaleY({{ int(25 + 1*({MyPVRChannelsLeftItemHeight}-60)/2 ) }})}}</top>
+							<width>{{ScaleX({{ 330 + {MyPVRChannelsLeftExtraWidth} }})}}</width>
 							<height>{{ScaleY('20')}}</height>
 							<font>font12</font>
 							<textcolor>grey</textcolor>
@@ -237,8 +237,8 @@
 						</control>
 						<control type="label">
 							<left>{{ScaleX('50')}}</left>
-							<top>{{ScaleY('25')}}</top>
-							<width>{{ScaleX('280')}}</width>
+							<top>{{ScaleY({{ int(25 + 1*({MyPVRChannelsLeftItemHeight}-60)/2 ) }})}}</top>
+							<width>{{ScaleX({{ 280 + {MyPVRChannelsLeftExtraWidth} }})}}</width>
 							<height>{{ScaleY('20')}}</height>
 							<font>font12</font>
 							<textcolor>grey</textcolor>
@@ -251,8 +251,8 @@
 						<control type="progress">
 							<description>Progressbar</description>
 							<left>{{ScaleX('50')}}</left>
-							<top>{{ScaleY('48')}}</top>
-							<width>{{ScaleX('280')}}</width>
+							<top>{{ScaleY({{ int(48 - 3 + 2*({MyPVRChannelsLeftItemHeight}-60)/2 ) }})}}</top>
+							<width>{{ScaleX({{ 280 + {MyPVRChannelsLeftExtraWidth} }})}}</width>
 							<height>{{ScaleY('6')}}</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
 							<visible>ListItem.HasEpg</visible>
@@ -268,9 +268,9 @@
 						</control>
 						<control type="image">
 							<left>{{ScaleX('5')}}</left>
-							<top>{{ScaleY('37')}}</top>
-							<width>{{ScaleX('16')}}</width>
-							<height>{{ScaleY('16')}}</height>
+							<top>{{ScaleY({{ int(37 + 1*({MyPVRChannelsLeftItemHeight}-60)/2 ) }})}}</top>
+							<width>{{ScaleX({{ 16 + 14 }})}}</width>
+							<height>{{ScaleY({{ 16 + 4 }})}}</height>
 							<texture>PVR-IsRecording.png</texture>
 							<visible>ListItem.IsRecording</visible>
 						</control>
@@ -283,12 +283,12 @@
 							<visible>!ListItem.IsRecording + ListItem.HasArchive</visible>
 						</control>
 					</itemlayout>
-					<focusedlayout height="{{ScaleY('60')}}" width="{{ScaleX('390')}}">
+					<focusedlayout height="{{ScaleY({MyPVRChannelsLeftItemHeight})}}" width="{{ScaleX({{ 390 +{MyPVRChannelsLeftExtraWidth} }})}}">
 						<control type="image">
 							<left>{{ScaleX('0')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('390')}}</width>
-							<height>{{ScaleY('61')}}</height>
+							<width>{{ScaleX({{ 390 + {MyPVRChannelsLeftExtraWidth} }})}}</width>
+							<height>{{ScaleY({{ 1 + {MyPVRChannelsLeftItemHeight} }})}}</height>
 							<texture border="{{ScaleBorder('2')}}">MenuItemNF.png</texture>
 							<visible>!Control.HasFocus(50)</visible>
 							<include>VisibleFadeEffect</include>
@@ -296,8 +296,8 @@
 						<control type="image">
 							<left>{{ScaleX('0')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('390')}}</width>
-							<height>{{ScaleY('61')}}</height>
+							<width>{{ScaleX({{ 390 + {MyPVRChannelsLeftExtraWidth} }})}}</width>
+							<height>{{ScaleY({{ 1 + {MyPVRChannelsLeftItemHeight} }})}}</height>
 							<texture border="{{ScaleBorder('2')}}">MenuItemFO.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeEffect</include>
@@ -317,7 +317,7 @@
 						<control type="label">
 							<left>{{ScaleX('50')}}</left>
 							<top>{{ScaleY('0')}}</top>
-							<width>{{ScaleX('270')}}</width>
+						<width>{{ScaleX({{ 270 + {MyPVRChannelsLeftExtraWidth} }})}}</width>
 							<height>{{ScaleY('25')}}</height>
 							<font>font13</font>
 							<textcolor>white</textcolor>
@@ -328,8 +328,8 @@
 						</control>
 						<control type="label">
 							<left>{{ScaleX('50')}}</left>
-							<top>{{ScaleY('25')}}</top>
-							<width>{{ScaleX('330')}}</width>
+							<top>{{ScaleY({{ int(25 + 1*({MyPVRChannelsLeftItemHeight}-60)/2 ) }})}}</top>
+							<width>{{ScaleX({{ 330 + {MyPVRChannelsLeftExtraWidth} }})}}</width>
 							<height>{{ScaleY('20')}}</height>
 							<font>font12</font>
 							<textcolor>grey</textcolor>
@@ -341,8 +341,8 @@
 						</control>
 						<control type="label">
 							<left>{{ScaleX('50')}}</left>
-							<top>{{ScaleY('25')}}</top>
-							<width>{{ScaleX('280')}}</width>
+							<top>{{ScaleY({{ int(25 + 1*({MyPVRChannelsLeftItemHeight}-60)/2 ) }})}}</top>
+							<width>{{ScaleX({{ 280 + {MyPVRChannelsLeftExtraWidth} }})}}</width>
 							<height>{{ScaleY('20')}}</height>
 							<font>font12</font>
 							<textcolor>grey</textcolor>
@@ -355,8 +355,8 @@
 						<control type="progress">
 							<description>Progressbar</description>
 							<left>{{ScaleX('50')}}</left>
-							<top>{{ScaleY('48')}}</top>
-							<width>{{ScaleX('280')}}</width>
+							<top>{{ScaleY({{ int(48 - 3 + 2*({MyPVRChannelsLeftItemHeight}-60)/2 ) }})}}</top>
+							<width>{{ScaleX({{ 280 + {MyPVRChannelsLeftExtraWidth} }})}}</width>
 							<height>{{ScaleY('6')}}</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
 							<visible>ListItem.HasEpg</visible>
@@ -372,9 +372,9 @@
 						</control>
 						<control type="image">
 							<left>{{ScaleX('5')}}</left>
-							<top>{{ScaleY('37')}}</top>
-							<width>{{ScaleX('16')}}</width>
-							<height>{{ScaleY('16')}}</height>
+							<top>{{ScaleY({{ int(37 + 1*({MyPVRChannelsLeftItemHeight}-60)/2 ) }})}}</top>
+							<width>{{ScaleX({{ 16 + 14 }})}}</width>
+							<height>{{ScaleY({{ 16 + 4 }})}}</height>
 							<texture>PVR-IsRecording.png</texture>
 							<visible>ListItem.IsRecording</visible>
 						</control>
@@ -389,7 +389,7 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="70">
-					<left>{{ScaleX('465')}}</left>
+					<left>{{ScaleX({{ 465 + {MyPVRChannelsLeftExtraWidth} }})}}</left>
 					<top>{{ScaleY('85')}}</top>
 					<width>{{ScaleX('25')}}</width>
 					<height>{{ScaleY('540')}}</height>
@@ -408,9 +408,9 @@
 					<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-90,0')}}" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 					<description>Page Count Label</description>
 					<right>{{ScaleX('40')}}</right>
-					<top>{{ScaleY('53r')}}</top>
+					<top>{{ScaleY('{{ 53 + 3}}r')}}</top>
 					<width>{{ScaleX('500')}}</width>
-					<height>{{ScaleY('20')}}</height>
+					<height>{{ScaleY('{{ 20 + 5 }}')}}</height>
 					<font>font12</font>
 					<textcolor>grey</textcolor>
 					<scroll>false</scroll>

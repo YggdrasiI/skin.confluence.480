@@ -77,7 +77,7 @@
 			<depth>DepthFloor</depth>
 			<left>{{ScaleX('-20')}}</left>
 			<top/>
-			<bottom>0</bottom>
+			<bottom>{{ScaleY('0')}}</bottom>
 			<width>{{ScaleX('1320')}}</width>
 			<height>{{ScaleY('100')}}</height>
 			<texture>floor.png</texture>

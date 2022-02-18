@@ -19,10 +19,10 @@ substitutions = {
     "VT323FontScaling": 1.2,
 
     # Horizontal HomeMenu dimensions
-    "HomeMenuItemWidth": 400,  # 300
+    "HomeMenuItemExtraWidth": 100,  # 0, (300 => 400)
 
     # HomeSubMenu width
-    "HomeSubMenuWidth": 250,  # 180
+    "HomeSubMenuExtraWidth": 70,  # 0, (180 => 250)
 
     # Home controls menu
     "HomeControlPanelExtraWidth": 400,  # 0
@@ -50,14 +50,14 @@ substitutions = {
     "DialogButtonExtraWidth": 170,  # 0
 
     "LogoScale": 2,  # 1
-    "FavoritesBladeWidth": 650,  # 400
+    "FavouritesBladeExtraWidth": 250,  # 0 (400 => 650)
 
     # 1+16 Cols. Shift width = 1+4 Cols
-    "VirtualKeyboardWidth": 17*60+50,  # 860
-    "VirtualKeyboardKeyWidth": 60,  # 50
+    "VirtualKeyboardWidth": 17*(50+10)+10,  # 860
+    "VirtualKeyboardKeyExtraWidth": 10,  # 0 (50 => 60)
     "VirtualNumpadWidth": 450,  # 380
 
-    "OSDBookmarksWidth": 1000,  # 800
+    "OSDBookmarksExtraWidth": 200,  # 0 (800 => 1000)
     "OSDBookmarksItemHeight": 238,  # 215
     "OSDSettingsWidth": 1000,  # 800
     "OSDSeekSliderWidth": 670,  # 720
@@ -99,6 +99,9 @@ substitutions = {
     # Height for each line in disclaimer/description textbox
     "AddonTextboxLineHeight": 32,
     }
+
+substitutions["OSDBookmarksWidth"] =\
+    800 + substitutions["OSDBookmarksExtraWidth"]
 
 substitutions["OSDBookmarksItemWidth"] = int(
     (substitutions["OSDBookmarksWidth"] - 2*40)/3)

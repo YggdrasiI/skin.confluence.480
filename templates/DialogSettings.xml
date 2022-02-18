@@ -2,8 +2,8 @@
 <window>
 	<defaultcontrol always="true">5</defaultcontrol>
 	<coordinates>
-		<left>{{ScaleX('240')}}</left>
-		<top>{{ScaleY('142')}}</top>
+		<left>{{ScaleX('{{ 240 - ({DialogExtraWidth})/2 }}')}}</left>
+		<top>{{ScaleY('{{ 142 - {DialogSettingsExtraHeight}/2 }}')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -15,7 +15,7 @@
 				<param name="DialogBackgroundHeight" value="{{ScaleY('458')}}" />
 				<param name="DialogHeaderWidth" value="{{ScaleX('720')}}" />
 				<param name="DialogHeaderId" value="2" />
-				<param name="CloseButtonLeft" value="{{ScaleX('710')}}" />
+				<param name="CloseButtonLeft" value="{{ScaleX({{ 710 + {DialogExtraWidth} }})}}" />
 				<param name="CloseButtonNav" value="10" />
 			</include>
 			<control type="grouplist" id="5">
@@ -23,8 +23,8 @@
 				<description>control area</description>
 				<left>{{ScaleX('35')}}</left>
 				<top>{{ScaleY('70')}}</top>
-				<width>{{ScaleX('730')}}</width>
-				<height>{{ScaleY('308')}}</height>
+				<width>{{ScaleX('{{ 730 + {DialogExtraWidth} }}')}}</width>
+				<height>{{ScaleY('{{ 308 + {DialogSettingsExtraHeight} }}')}}</height>
 				<itemgap>4</itemgap>
 				<pagecontrol>60</pagecontrol>
 				<onup>9001</onup>
@@ -33,10 +33,10 @@
 				<onright>60</onright>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>{{ScaleX('758')}}</left>
+				<left>{{ScaleX('{{ 758 + {DialogExtraWidth} }}')}}</left>
 				<top>{{ScaleY('70')}}</top>
 				<width>{{ScaleX('25')}}</width>
-				<height>{{ScaleY('308')}}</height>
+				<height>{{ScaleY('{{ 308 + {DialogSettingsExtraHeight} }}')}}</height>
 				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -106,15 +106,15 @@
 			</control>
 			<control type="grouplist" id="9001">
 				<left>{{ScaleX('170')}}</left>
-				<top>{{ScaleY('393')}}</top>
-				<width>{{ScaleX('460')}}</width>
+				<top>{{ScaleY('{{ 393 + {DialogSettingsExtraHeight} }}')}}</top>
+				<width>{{ScaleX('{{ 460 + {DialogExtraWidth} }}')}}</width>
 				<align>center</align>
 				<itemgap>20</itemgap>
 				<orientation>horizontal</orientation>
 				<control type="button" id="28">
 					<description>OK Button</description>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('200')}}</width>
+					<width>{{ScaleX('{{ 200 + {DialogExtraWidth}/3 }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -127,7 +127,7 @@
 				<control type="button" id="29">
 					<description>Cancel Button</description>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('200')}}</width>
+					<width>{{ScaleX('{{ 200 + {DialogExtraWidth}/3 }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -141,7 +141,7 @@
 				<control type="button" id="30">
 					<description>Settings Button</description>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('200')}}</width>
+					<width>{{ScaleX('{{ 200 + {DialogExtraWidth}/3 }}')}}</width>
 					<height>{{ScaleY('40')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>

@@ -2,24 +2,24 @@
 <window>
 	<defaultcontrol always="true">7</defaultcontrol>
 	<coordinates>
-		<left>{{ScaleX('225')}}</left>
+		<left>{{ScaleX('{{ 225 - ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/2 }}')}}</left>
 		<top>{{ScaleY('30')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
 		<include content="DialogBackgroundCommons">
-			<param name="DialogBackgroundWidth" value="{{ScaleX('830')}}" />
+			<param name="DialogBackgroundWidth" value="{{ScaleX({{ 830 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
 			<param name="DialogBackgroundHeight" value="{{ScaleY('660')}}" />
-			<param name="DialogHeaderWidth" value="{{ScaleX('750')}}" />
+			<param name="DialogHeaderWidth" value="{{ScaleX({{ 750 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
 			<param name="DialogHeaderLabel" value="$INFO[ListItem.Title]" />
 			<param name="DialogHeaderId" value="2" />
-			<param name="CloseButtonLeft" value="{{ScaleX('740')}}" />
+			<param name="CloseButtonLeft" value="{{ScaleX({{ 740 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}" />
 			<param name="CloseButtonNav" value="10" />
 		</include>
 		<control type="list" id="49">
 			<left>{{ScaleX('40')}}</left>
 			<top>{{ScaleY('80')}}</top>
-			<width>{{ScaleX('640')}}</width>
+			<width>{{ScaleX('{{ 640 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 			<height>{{ScaleY('330')}}</height>
 			<onleft>49</onleft>
 			<onright>49</onright>
@@ -43,7 +43,7 @@
 				<control type="label">
 					<left>{{ScaleX('175')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('465')}}</width>
+					<width>{{ScaleX('{{ 465 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 					<height>{{ScaleY('30')}}</height>
 					<font>font13</font>
 					<align>left</align>
@@ -57,7 +57,7 @@
 				<control type="image">
 					<left>{{ScaleX('0')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('640')}}</width>
+					<width>{{ScaleX('{{ 640 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 					<height>{{ScaleY('30')}}</height>
 					<visible>Control.HasFocus(49)</visible>
 					<texture>MenuItemFO.png</texture>
@@ -78,7 +78,7 @@
 				<control type="label">
 					<left>{{ScaleX('175')}}</left>
 					<top>{{ScaleY('0')}}</top>
-					<width>{{ScaleX('465')}}</width>
+					<width>{{ScaleX('{{ 465 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 					<height>{{ScaleY('30')}}</height>
 					<font>font13</font>
 					<align>left</align>
@@ -140,8 +140,8 @@
 		</control>
 		<control type="label">
 			<left>{{ScaleX('310')}}</left>
-			<top>{{ScaleY('370')}}</top>
-			<width>{{ScaleX('400')}}</width>
+			<top>{{ScaleY({{ 370 - {DialogPVRGuideInfoExtraHeight} }})}}</top>
+			<width>{{ScaleX('{{ 400 + {SettingPanelExtraWidthL} }}')}}</width>
 			<height>{{ScaleY('30')}}</height>
 			<font>font12</font>
 			<textcolor>grey</textcolor>
@@ -153,8 +153,8 @@
 		</control>
 		<control type="spincontrol" id="60">
 			<description>Next page button</description>
-			<left>{{ScaleX('720')}}</left>
-			<top>{{ScaleY('375')}}</top>
+			<left>{{ScaleX('{{ 720 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</left>
+			<top>{{ScaleY({{ 375 - {DialogPVRGuideInfoExtraHeight} }})}}</top>
 			<subtype>page</subtype>
 			<font/>
 			<onleft>60</onleft>
@@ -167,9 +167,9 @@
 		<control type="textbox" id="400">
 			<description>PLOT</description>
 			<left>{{ScaleX('40')}}</left>
-			<top>{{ScaleY('402')}}</top>
-			<width>{{ScaleX('750')}}</width>
-			<height>{{ScaleY('178')}}</height>
+			<top>{{ScaleY({{ 402 - {DialogPVRGuideInfoExtraHeight} }})}}</top>
+			<width>{{ScaleX('{{ 750 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
+			<height>{{ScaleY({{ 178 + {DialogPVRGuideInfoExtraHeight} }})}}</height>
 			<font>font13</font>
 			<align>justify</align>
 			<pagecontrol>60</pagecontrol>
@@ -178,7 +178,7 @@
 		<control type="grouplist" id="9000">
 			<left>{{ScaleX('40')}}</left>
 			<top>{{ScaleY('590')}}</top>
-			<width>{{ScaleX('740')}}</width>
+			<width>{{ScaleX('{{ 740 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }}')}}</width>
 			<height>{{ScaleY('40')}}</height>
 			<itemgap>5</itemgap>
 			<align>center</align>
