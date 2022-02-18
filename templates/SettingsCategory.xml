@@ -12,7 +12,7 @@
 			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="group">
-			<left>{{ScaleX('90')}}</left>
+			<left>{{ScaleX({{ int(90 - ({SettingPanelExtraWidthL} + {SettingPanelExtraWidthR})/2) }})}}</left>
 			<top>{{ScaleY('30')}}</top>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="{{ScaleBorder2('640,360')}}" easing="out" tween="back" time="225" />
@@ -25,20 +25,20 @@
 			<control type="image">
 				<left>{{ScaleX('5')}}</left>
 				<top>{{ScaleY('5')}}</top>
-				<width>{{ScaleX('1090')}}</width>
+				<width>{{ScaleX({{ 1090 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('630')}}</height>
 				<texture border="{{ScaleBorder('15')}}">ContentPanel.png</texture>
 			</control>
 			<control type="image">
 				<left>{{ScaleX('5')}}</left>
 				<top>{{ScaleY('625')}}</top>
-				<width>{{ScaleX('1090')}}</width>
+				<width>{{ScaleX({{ 1090 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('64')}}</height>
 				<texture border="{{ScaleBorder('15')}}">ContentPanelMirror.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<left>{{ScaleX('980')}}</left>
+				<left>{{ScaleX({{ 980 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}</left>
 				<top>{{ScaleY('11')}}</top>
 				<width>{{ScaleX('64')}}</width>
 				<height>{{ScaleY('32')}}</height>
@@ -58,7 +58,7 @@
 				<description>LOGO</description>
 				<left>{{ScaleX('30')}}</left>
 				<top>{{ScaleY('15')}}</top>
-				<width>{{ScaleX('220')}}</width>
+				<width>{{ScaleX({{ 220 + {SettingPanelExtraWidthL} }})}}</width>
 				<height>{{ScaleY('80')}}</height>
 				<aspectratio>keep</aspectratio>
 				<texture>Confluence_Logo.png</texture>
@@ -67,7 +67,7 @@
 				<description>button area</description>
 				<left>{{ScaleX('10')}}</left>
 				<top>{{ScaleY('90')}}</top>
-				<width>{{ScaleX('260')}}</width>
+				<width>{{ScaleX({{ 260 + {SettingPanelExtraWidthL} }})}}</width>
 				<height>{{ScaleY('481')}}</height>
 				<itemgap>-1</itemgap>
 				<onleft>5</onleft>
@@ -80,7 +80,7 @@
 				<left>{{ScaleX('10')}}</left>
 				<top>{{ScaleY('562')}}</top>
 				<height>{{ScaleY('60')}}</height>
-				<width>{{ScaleX('260')}}</width>
+				<width>{{ScaleX({{ 260 + {SettingPanelExtraWidthL} }})}}</width>
 				<label>10037</label>
 				<textoffsetx>{{ScaleX('20')}}</textoffsetx>
 				<textoffsety>{{ScaleY('28')}}</textoffsety>
@@ -102,7 +102,7 @@
 				<left>{{ScaleX('20')}}</left>
 				<top>{{ScaleY('566')}}</top>
 				<height>{{ScaleY('25')}}</height>
-				<width>{{ScaleX('230')}}</width>
+				<width>{{ScaleX({{ 230 + {SettingPanelExtraWidthL} }})}}</width>
 				<label>31142</label>
 				<font>font13_title</font>
 				<textcolor>white</textcolor>
@@ -110,24 +110,24 @@
 				<aligny>center</aligny>
 			</control>
 			<control type="image">
-				<left>{{ScaleX('268')}}</left>
+				<left>{{ScaleX({{ 268 + {SettingPanelExtraWidthL} }})}}</left>
 				<top>{{ScaleY('10')}}</top>
-				<width>{{ScaleX('790')}}</width>
+				<width>{{ScaleX({{ 790 + 26 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('618')}}</height>
 				<texture border="{{ScaleBorder('5')}}">black-back2.png</texture>
 			</control>
 			<control type="image">
-				<left>{{ScaleX('268')}}</left>
+				<left>{{ScaleX({{ 268 + {SettingPanelExtraWidthL} }})}}</left>
 				<top>{{ScaleY('10')}}</top>
-				<width>{{ScaleX('790')}}</width>
+				<width>{{ScaleX({{ 790 + 26 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('52')}}</height>
 				<texture>dialogheader.png</texture>
 			</control>
 			<control type="label">
 				<description>header label</description>
-				<left>{{ScaleX('300')}}</left>
+				<left>{{ScaleX({{ 300 + {SettingPanelExtraWidthL} }})}}</left>
 				<top>{{ScaleY('20')}}</top>
-				<width>{{ScaleX('726')}}</width>
+				<width>{{ScaleX({{ 726 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('30')}}</height>
 				<font>font16</font>
 				<label>$INFO[Control.GetLabel(2)] - $LOCALIZE[5]</label>
@@ -138,9 +138,9 @@
 			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>
-				<left>{{ScaleX('290')}}</left>
+				<left>{{ScaleX({{ 290 + {SettingPanelExtraWidthL} }})}}</left>
 				<top>{{ScaleY('70')}}</top>
-				<width>{{ScaleX('750')}}</width>
+				<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('435')}}</height>
 				<itemgap>-1</itemgap>
 				<pagecontrol>60</pagecontrol>
@@ -150,7 +150,7 @@
 				<ondown>5</ondown>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>{{ScaleX('1060')}}</left>
+			  <left>{{ScaleX({{1060 + {SettingPanelExtraWidthL} + {SettingPanelExtraWidthR} }})}}</left>
 				<top>{{ScaleY('60')}}</top>
 				<width>{{ScaleX('25')}}</width>
 				<height>{{ScaleY('435')}}</height>
@@ -166,18 +166,18 @@
 			</control>
 			<control type="image">
 				<description>separator image</description>
-				<left>{{ScaleX('290')}}</left>
+				<left>{{ScaleX({{ 290 + {SettingPanelExtraWidthL} }})}}</left>
 				<top>{{ScaleY('525')}}</top>
-				<width>{{ScaleX('750')}}</width>
+				<width>{{ScaleX({{ 750 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('2')}}</height>
 				<texture>separator2.png</texture>
 				<colordiffuse>40FFFFFF</colordiffuse>
 			</control>
 			<control type="textbox" id="6">
 				<description>description area</description>
-				<left>{{ScaleX('297')}}</left>
+				<left>{{ScaleX({{ 297 + {SettingPanelExtraWidthL} }})}}</left>
 				<top>{{ScaleY('532')}}</top>
-				<width>{{ScaleX('736')}}</width>
+				<width>{{ScaleX({{ 736 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('83')}}</height>
 				<font>font12</font>
 				<align>justify</align>
@@ -189,7 +189,7 @@
 		<control type="button" id="10">
 			<description>Default Category Button</description>
 			<height>{{ScaleY('60')}}</height>
-			<width>{{ScaleX('260')}}</width>
+			<width>{{ScaleX({{ 260 + {SettingPanelExtraWidthL} }})}}</width>
 			<textoffsetx>{{ScaleX('20')}}</textoffsetx>
 			<align>right</align>
 			<aligny>center</aligny>

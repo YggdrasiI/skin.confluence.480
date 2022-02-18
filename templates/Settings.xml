@@ -98,7 +98,7 @@
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
-						<width>{{ScaleX('260')}}</width>
+						<width>{{ScaleX({{ 260 + {SettingPanelExtraWidthL} }})}}</width>
 						<height>{{ScaleY('55')}}</height>
 						<texture border="{{ScaleBorder('5')}}">MenuItemFO.png</texture>
 					</control>
@@ -169,14 +169,14 @@
 			<control type="image">
 				<left>{{ScaleX({{ 268 + {SettingPanelExtraWidthL} }})}}</left>
 				<top>{{ScaleY('10')}}</top>
-				<width>{{ScaleX({{ 804 + {SettingPanelExtraWidthR} }})}}</width>
+				<width>{{ScaleX({{ 804 + 12 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('50')}}</height>
 				<texture border="{{ScaleBorder('5')}}">black-back2.png</texture>
 			</control>
 			<control type="image">
 				<left>{{ScaleX({{ 268 + {SettingPanelExtraWidthL} }})}}</left>
 				<top>{{ScaleY('10')}}</top>
-				<width>{{ScaleX({{ 804 + {SettingPanelExtraWidthR} }})}}</width>
+				<width>{{ScaleX({{ 804 + 12 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('54')}}</height>
 				<texture>dialogheader.png</texture>
 			</control>
@@ -196,14 +196,14 @@
 			<control type="image">
 				<left>{{ScaleX({{ 270 + {SettingPanelExtraWidthL} }})}}</left>
 				<top>{{ScaleY('60')}}</top>
-				<width>{{ScaleX({{ 800 + {SettingPanelExtraWidthR} }})}}</width>
+				<width>{{ScaleX({{ 800 + 8 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY({{450 - {SettingDescExtraHeight} }})}}</height>
 				<texture border="{{ScaleBorder('5')}}">button-nofocus.png</texture>
 			</control>
 			<control type="image">
 				<left>{{ScaleX({{ 272 + {SettingPanelExtraWidthL} }})}}</left>
 				<top>{{ScaleY('62')}}</top>
-				<width>{{ScaleX({{ 796 + {SettingPanelExtraWidthR} }})}}</width>
+				<width>{{ScaleX({{ 796 + 8 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY({{446 - {SettingDescExtraHeight} }})}}</height>
 				<aspectratio>stretch</aspectratio>
 				<fadetime>600</fadetime>
@@ -212,7 +212,7 @@
 			<control type="image">
 				<left>{{ScaleX({{ 272 + {SettingPanelExtraWidthL} }})}}</left>
 				<top>{{ScaleY('62')}}</top>
-				<width>{{ScaleX({{ 800 + {SettingPanelExtraWidthR} }})}}</width>
+				<width>{{ScaleX({{ 800 + 8 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY('340')}}</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>GlassOverlay.png</texture>
@@ -221,7 +221,7 @@
 			<control type="image">
 				<left>{{ScaleX({{ 268 + {SettingPanelExtraWidthL} }})}}</left>
 				<top>{{ScaleY({{510 - {SettingDescExtraHeight} }})}}</top>
-				<width>{{ScaleX({{ 804 + {SettingPanelExtraWidthR} }})}}</width>
+				<width>{{ScaleX({{ 804 + 12 + {SettingPanelExtraWidthR} }})}}</width>
 				<height>{{ScaleY({{118 + {SettingDescExtraHeight} }})}}</height>
 				<texture border="{{ScaleBorder('5')}}">black-back2.png</texture>
 			</control>

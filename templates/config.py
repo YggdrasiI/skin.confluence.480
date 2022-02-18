@@ -22,7 +22,7 @@ substitutions = {
     "HomeMenuItemExtraWidth": 100,  # 0, (300 => 400)
 
     # HomeSubMenu width
-    "HomeSubMenuExtraWidth": 70,  # 0, (180 => 250)
+    "HomeSubMenuExtraWidth": 100,  # 0, (180 => 280)
 
     # Home controls menu
     "HomeControlPanelExtraWidth": 400,  # 0

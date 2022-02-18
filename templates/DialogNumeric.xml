@@ -19,13 +19,13 @@
 			<description>Dialog Header image</description>
 			<left>{{ScaleX('40')}}</left>
 			<top>{{ScaleY('18')}}</top>
-			<width>{{ScaleX({{ (50 + {VirtualKeyboardKeyExtraWidth}) - 80 }})}}</width>
+			<width>{{ScaleX({{ (50 + 4*{VirtualKeyboardKeyExtraWidth}) - 80 }})}}</width>
 			<height>{{ScaleY('50')}}</height>
 			<texture>dialogheader.png</texture>
 		</control>
 		<control type="button">
 			<description>Close Window button</description>
-			<left>{{ScaleX({{ (50 + {VirtualKeyboardKeyExtraWidth}) - 90 }})}}</left>
+			<left>{{ScaleX({{ {VirtualNumpadWidth} - 64 - 26 }})}}</left>
 			<top>{{ScaleY('15')}}</top>
 			<width>{{ScaleX('64')}}</width>
 			<height>{{ScaleY('32')}}</height>
@@ -40,7 +40,7 @@
 			<description>dialog Heading</description>
 			<left>{{ScaleX('20')}}</left>
 			<top>{{ScaleY('28')}}</top>
-			<width>{{ScaleX({{ (50 + {VirtualKeyboardKeyExtraWidth}) - 40 }})}}</width>
+			<width>{{ScaleX({{ 340 + 4*{VirtualKeyboardKeyExtraWidth} }})}}</width>
 			<height>{{ScaleY('35')}}</height>
 			<font>font12_title</font>
 			<textcolor>selected</textcolor>
@@ -52,7 +52,7 @@
 		<control type="image">
 			<left>{{ScaleX('30')}}</left>
 			<top>{{ScaleY('70')}}</top>
-			<width>{{ScaleX({{ (50 + {VirtualKeyboardKeyExtraWidth}) - 60 }})}}</width>
+			<width>{{ScaleX({{ 320 + 4*{VirtualKeyboardKeyExtraWidth} }})}}</width>
 			<height>{{ScaleY('50')}}</height>
 			<aspectratio>stretch</aspectratio>
 			<texture border="{{ScaleBorder('20')}}">KeyboardEditArea.png</texture>
@@ -61,7 +61,7 @@
 			<description>Edit Text</description>
 			<left>{{ScaleX('35')}}</left>
 			<top>{{ScaleY('70')}}</top>
-			<width>{{ScaleX({{ (50 + {VirtualKeyboardKeyExtraWidth}) - 70 }})}}</width>
+			<width>{{ScaleX({{ 310 + 4*{VirtualKeyboardKeyExtraWidth} }})}}</width>
 			<height>{{ScaleY('50')}}</height>
 			<font>font13</font>
 			<textcolor>selected</textcolor>
@@ -72,7 +72,7 @@
 		<control type="image">
 			<left>{{ScaleX('40')}}</left>
 			<top>{{ScaleY('120')}}</top>
-			<width>{{ScaleX({{ (50 + {VirtualKeyboardKeyExtraWidth}) - 80 }})}}</width>
+			<width>{{ScaleX({{ 300 + 4*{VirtualKeyboardKeyExtraWidth} }})}}</width>
 			<height>{{ScaleY('30')}}</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>dialogheader.png</texture>
