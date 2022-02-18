@@ -57,7 +57,7 @@
 	<default type="progress">
 		<left>{{ScaleX('100')}}</left>
 		<top>{{ScaleY('325')}}</top>
-		<texturebg border="6,0,6,0">OSDProgressBack.png</texturebg>
+		<texturebg border="{{ScaleBorder('6,0,6,0')}}">OSDProgressBack.png</texturebg>
 		<lefttexture/>
 		<midtexture border="{{ScaleBorder('6,0,6,0')}}">OSDProgressMid.png</midtexture>
 		<righttexture/>

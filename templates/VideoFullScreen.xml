@@ -468,8 +468,8 @@
 					<width>{{ScaleX('720')}}</width>
 					<height>{{ScaleY('16')}}</height>
 					<info>Player.Chapters</info>
-					<texturebg border="6,0,6,0" colordiffuse="00FFFFFF">OSDProgressBack.png</texturebg>
-					<righttexture border="2,4,2,4">OSDProgressNib.png</righttexture>
+					<texturebg border="{{ScaleBorder('6,0,6,0')}}" colordiffuse="00FFFFFF">OSDProgressBack.png</texturebg>
+					<righttexture border="{{ScaleBorder('2,4,2,4')}}">OSDProgressNib.png</righttexture>
 					<visible>true</visible>
 				</control>
 			</control>

@@ -12,12 +12,12 @@
 			<include>VisibleFadeEffect</include>
 			<visible>!Window.IsVisible(numericinput)</visible>
 			<include content="DialogBackgroundCommons">
-				<param name="DialogBackgroundWidth" value="860" />
-				<param name="DialogBackgroundHeight" value="430" />
-				<param name="DialogHeaderWidth" value="780" />
+				<param name="DialogBackgroundWidth" value="{{ScaleX('860')}}" />
+				<param name="DialogBackgroundHeight" value="{{ScaleY('430')}}" />
+				<param name="DialogHeaderWidth" value="{{ScaleX('780')}}" />
 				<param name="DialogHeaderLabel" value="" />
 				<param name="DialogHeaderId" value="311" />
-				<param name="CloseButtonLeft" value="770" />
+				<param name="CloseButtonLeft" value="{{ScaleX('770')}}" />
 				<param name="CloseButtonNav" value="3" />
 			</include>
 			<control type="group">
