@@ -8,12 +8,12 @@
 	<include>dialogeffect</include>
 	<controls>
 		<include content="DialogBackgroundCommons">
-			<param name="DialogBackgroundWidth" value="830" />
-			<param name="DialogBackgroundHeight" value="660" />
-			<param name="DialogHeaderWidth" value="750" />
+			<param name="DialogBackgroundWidth" value="{{ScaleX('830')}}" />
+			<param name="DialogBackgroundHeight" value="{{ScaleY('660')}}" />
+			<param name="DialogHeaderWidth" value="{{ScaleX('750')}}" />
 			<param name="DialogHeaderLabel" value="$INFO[ListItem.Title]" />
 			<param name="DialogHeaderId" value="2" />
-			<param name="CloseButtonLeft" value="740" />
+			<param name="CloseButtonLeft" value="{{ScaleX('740')}}" />
 			<param name="CloseButtonNav" value="10" />
 		</include>
 		<control type="list" id="49">

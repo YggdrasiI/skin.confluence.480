@@ -13,12 +13,12 @@
 			<include>VisibleFadeEffect</include>
 			<visible>!Window.isVisible(AddonSettings) + !Window.IsActive(TextViewer)</visible>
 			<include content="DialogBackgroundCommons">
-				<param name="DialogBackgroundWidth" value="920" />
-				<param name="DialogBackgroundHeight" value="684" />
-				<param name="DialogHeaderWidth" value="840" />
+				<param name="DialogBackgroundWidth" value="{{ScaleX('920')}}" />
+				<param name="DialogBackgroundHeight" value="{{ScaleY('684')}}" />
+				<param name="DialogHeaderWidth" value="{{ScaleX('840')}}" />
 				<param name="DialogHeaderLabel" value="$LOCALIZE[24003]" />
 				<param name="DialogHeaderId" value="2" />
-				<param name="CloseButtonLeft" value="830" />
+				<param name="CloseButtonLeft" value="{{ScaleX('830')}}" />
 				<param name="CloseButtonNav" value="3" />
 			</include>
 			<control type="image">
