@@ -6,4 +6,4 @@ Usage:
 ./runSubstitutions.sh *.sed
 
 Note: 
-Do not run accidently the sed script accidentally twice on the same file.
+Do not run the sed script accidentally twice on the same file.

@@ -24,6 +24,8 @@ settings = {
                          "themes",
                          "tmp",
                          "xml",
+                         "build.bat",
+                         "buildPackage.py",
                          "TexturePacker*",
                          "__pycache__", "*.pyc",
                          ],
