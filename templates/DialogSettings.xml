@@ -11,9 +11,9 @@
 			<animation effect="fade" start="100" end="0" time="150" condition="Window.Is(contentsettings) + Window.IsActive(AddonSettings)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="300" condition="[Window.Is(osdaudiosettings) | Window.Is(osdvideosettings) | Window.Is(osdsubtitlesettings)] + [Window.IsVisible(SliderDialog) |  Window.IsVisible(FileBrowser)]">Conditional</animation>
 			<include content="DialogBackgroundCommons">
-				<param name="DialogBackgroundWidth" value="{{ScaleX('800')}}" />
-				<param name="DialogBackgroundHeight" value="{{ScaleY('458')}}" />
-				<param name="DialogHeaderWidth" value="{{ScaleX('720')}}" />
+				<param name="DialogBackgroundWidth" value="{{ScaleX({{ 800 + {DialogExtraWidth} }})}}" />
+				<param name="DialogBackgroundHeight" value="{{ScaleY({{ 458 + {DialogSettingsExtraHeight} }})}}" />
+				<param name="DialogHeaderWidth" value="{{ScaleX({{ 720 + {DialogExtraWidth} }})}}" />
 				<param name="DialogHeaderId" value="2" />
 				<param name="CloseButtonLeft" value="{{ScaleX({{ 710 + {DialogExtraWidth} }})}}" />
 				<param name="CloseButtonNav" value="10" />

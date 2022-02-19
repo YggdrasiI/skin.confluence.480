@@ -2,8 +2,8 @@
 <window>
 	<defaultcontrol always="true">3</defaultcontrol>
 	<coordinates>
-		<left>{{ScaleX('215')}}</left>
-		<top>{{ScaleY('60')}}</top>
+		<left>{{ScaleX('{{ 215 - ({DialogExtraWidth})/2 }}')}}</left>
+		<top>{{ScaleY('{{ 60 - {DialogAddonSettingsExtraHeight}/2 }}')}}</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -11,18 +11,18 @@
 			<animation effect="fade" start="100" end="0" time="150" condition="Window.Is(contentsettings) + Window.IsActive(AddonSettings)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="300" condition="[Window.Is(osdaudiosettings) | Window.Is(osdvideosettings)] + [Window.IsVisible(SliderDialog) |  Window.IsVisible(FileBrowser)]">Conditional</animation>
 			<include content="DialogBackgroundCommons">
-				<param name="DialogBackgroundWidth" value="{{ScaleX('850')}}" />
-				<param name="DialogBackgroundHeight" value="{{ScaleY('600')}}" />
-				<param name="DialogHeaderWidth" value="{{ScaleX('720')}}" />
+				<param name="DialogBackgroundWidth" value="{{ScaleX({{ 850 + {DialogExtraWidth} }})}}" />
+				<param name="DialogBackgroundHeight" value="{{ScaleY({{ 600 + {DialogAddonSettingsExtraHeight} }})}}" />
+				<param name="DialogHeaderWidth" value="{{ScaleX({{ 720 + {DialogExtraWidth} }})}}" />
 				<param name="DialogHeaderId" value="2" />
-				<param name="CloseButtonLeft" value="{{ScaleX('760')}}" />
+				<param name="CloseButtonLeft" value="{{ScaleX({{ 760 + {DialogExtraWidth} }})}}" />
 				<param name="CloseButtonNav" value="10" />
 			</include>
 			<control type="grouplist" id="3">
 				<description>Categories Area</description>
 				<left>{{ScaleX('45')}}</left>
 				<top>{{ScaleY('70')}}</top>
-				<width>{{ScaleX('759')}}</width>
+				<width>{{ScaleX({{ 759 + {DialogExtraWidth} }})}}</width>
 				<height>{{ScaleY('40')}}</height>
 				<itemgap>5</itemgap>
 				<align>center</align>
@@ -53,7 +53,7 @@
 			</control>
 			<control type="image">
 				<description>Has Next</description>
-				<left>{{ScaleX('805')}}</left>
+				<left>{{ScaleX({{ 805 + {DialogExtraWidth} }})}}</left>
 				<top>{{ScaleY('80')}}</top>
 				<width>{{ScaleX('20')}}</width>
 				<height>{{ScaleY('20')}}</height>
@@ -64,8 +64,8 @@
 				<description>control area</description>
 				<left>{{ScaleX('40')}}</left>
 				<top>{{ScaleY('120')}}</top>
-				<width>{{ScaleX('770')}}</width>
-				<height>{{ScaleY('380')}}</height>
+				<width>{{ScaleX({{ 770 + {DialogExtraWidth} }})}}</width>
+				<height>{{ScaleY({{ 380 + {DialogAddonSettingsExtraHeight} }})}}</height>
 				<itemgap>5</itemgap>
 				<pagecontrol>60</pagecontrol>
 				<onup>3</onup>
@@ -74,10 +74,10 @@
 				<onright>60</onright>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>{{ScaleX('815')}}</left>
+				<left>{{ScaleX({{ 815 + {DialogExtraWidth} }})}}</left>
 				<top>{{ScaleY('120')}}</top>
 				<width>{{ScaleX('25')}}</width>
-				<height>{{ScaleY('380')}}</height>
+				<height>{{ScaleY({{ 380 + {DialogAddonSettingsExtraHeight} }})}}</height>
 				<texturesliderbackground border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="{{ScaleBorder('0,14,0,14')}}">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -144,7 +144,7 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="grouplist" id="9001">
-				<top>{{ScaleY('535')}}</top>
+				<top>{{ScaleY({{535 + {DialogAddonSettingsExtraHeight} }})}}</top>
 				<left>{{ScaleX('40')}}</left>
 				<width>{{ScaleX('{{ 770 + {DialogExtraWidth} }}')}}</width>
 				<align>center</align>

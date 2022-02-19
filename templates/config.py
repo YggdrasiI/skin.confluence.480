@@ -80,6 +80,7 @@ substitutions = {
 
     "DialogSliderExtraWidth": 300,  # 0 Used in DialogSlider
     "DialogSettingsExtraHeight": 200,  # 0 Used in DialogSettings
+    "DialogAddonSettingsExtraHeight": 0,  # 0 Used in DialogAddonSettings
 
     "FullScreenExtraHeight": 44,  # 0
     "FullScreenExtraWidth": 32,  # 0

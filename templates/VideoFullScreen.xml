@@ -284,23 +284,23 @@
 					</control>
 					<control type="group" id="1">
 						<width>{{ScaleX('{{ 85 + {FullScreenExtraIconDim} }}')}}</width>
-						<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
+						<height>{{ScaleY('{{ 35 + 0*{FullScreenExtraIconDim} }}')}}</height>
 						<visible>![String.IsEmpty(VideoPlayer.AudioLanguage) | Player.ChannelPreviewActive]</visible>
 						<control type="image" id="1">
 							<left>{{ScaleX('5')}}</left>
 							<top>{{ScaleY('0')}}</top>
 							<description>Audio Language Image</description>
 							<width>{{ScaleX('{{ 80 + {FullScreenExtraIconDim} }}')}}</width>
-							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
+							<height>{{ScaleY('{{ 35 + 0*{FullScreenExtraIconDim} }}')}}</height>
 							<texture>flagging/AudioLang.png</texture>
 						</control>
 						<control type="label" id="1">
 							<left>{{ScaleX('38')}}</left>
-							<top>{{ScaleY('{{ 2 - 10 }}')}}</top>
+							<top>{{ScaleY('2')}}</top>
 							<aligny>bottom</aligny>
 							<width min="{{ScaleX('{{ 47 + {FullScreenExtraIconDim} }}')}}" max="{{ScaleX('{{ 47 + {FullScreenExtraIconDim} + 20 }}')}}">auto</width>
-							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} + 10 }}')}}</height>
-							<font>font13</font>
+							<height>{{ScaleY('{{ 35 + {FullScreenExtraIconDim} }}')}}</height>
+							<font>font12</font>
 							<align>left</align>
 							<label>$INFO[VideoPlayer.AudioLanguage]</label>
 							<textcolor>grey</textcolor>
