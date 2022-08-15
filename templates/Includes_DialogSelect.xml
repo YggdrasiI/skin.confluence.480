@@ -174,7 +174,7 @@
 						<top>{{ScaleY('3')}}</top>
 						<width>{{ScaleX('80')}}</width>
 						<height>{{ScaleY('80')}}</height>
-						<texture>$INFO[Listitem.Icon]</texture>
+						<texture>$VAR[DialogSelectImage]</texture>
 						<aspectratio>keep</aspectratio>
 						<bordertexture border="{{ScaleBorder('3')}}">black-back2.png</bordertexture>
 						<bordersize>{{ScaleBorder('2')}}</bordersize>
@@ -227,7 +227,7 @@
 						<top>{{ScaleY('3')}}</top>
 						<width>{{ScaleX('80')}}</width>
 						<height>{{ScaleY('80')}}</height>
-						<texture>$INFO[Listitem.Icon]</texture>
+						<texture>$VAR[DialogSelectImage]</texture>
 						<aspectratio>keep</aspectratio>
 						<bordertexture border="{{ScaleBorder('3')}}">black-back2.png</bordertexture>
 						<bordersize>{{ScaleBorder('2')}}</bordersize>
