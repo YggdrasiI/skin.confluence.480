@@ -74,7 +74,7 @@
 				<ondown>9000</ondown>
 				<pagecontrol/>
 				<scrolltime>300</scrolltime>
-				<itemlayout height="{{ScaleY('54')}}" width="{{ScaleX('260')}}">
+				<itemlayout height="{{ScaleY('54')}}" width="{{ScaleX({{ 260 + {SettingPanelExtraWidthL} }})}}">
 					<control type="image">
 						<left>{{ScaleX('0')}}</left>
 						<top>{{ScaleY('0')}}</top>
