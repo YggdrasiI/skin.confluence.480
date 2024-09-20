@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="skin.confluence.480" version="4.7.15" name="Confluence Low Resolution" provider-name="YggdrasiI">
 	<requires>
-		<import addon="xbmc.gui" version="5.15.0"/>
+		<import addon="xbmc.gui" version="5.17.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false" effectslowdown="1.0">
 		<res width="720" height="480" aspect="16:9" default="true" folder="out" />
